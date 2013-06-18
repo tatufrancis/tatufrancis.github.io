@@ -6818,12 +6818,14 @@ label, .label {
   padding: 0.4em 0.2em;
 }
 
-input, .input, textarea, .select, .textarea {
+input, .input, textarea, select, .select, .textarea {
   display: block;
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0.4em;
   font-family: monospace;
+  font-size: 1em;
   line-height: 1.5;
   height: 2.25em;
   background: white;
@@ -6834,7 +6836,7 @@ input, .input, textarea, .select, .textarea {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-input[size], [size].input, textarea[size], [size].select, [size].textarea {
+input[size], [size].input, textarea[size], select[size], [size].select, [size].textarea {
   height: auto;
 }
 
@@ -6881,53 +6883,6 @@ textarea, .textarea {
   color: white;
   background: #468847;
   border-color: #468847;
-}
-
-.select-wrap {
-  display: block;
-  color: gray;
-  background: white;
-  border: 1px solid #dddddd;
-  position: relative;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-.select-wrap:after {
-  content: '...';
-  display: block;
-  width: 1.5em;
-  text-align: center;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  font-size: 1.5em;
-  line-height: 1.25;
-  top: 0;
-  right: 0;
-  background: #dfdfdf;
-}
-
-.select-wrap select, .select-wrap .select {
-  -ms-appearance: none;
-  -o-appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  background: none;
-  padding: 0.4em;
-  font-family: monospace;
-  line-height: 1.5;
-  height: 2.25em;
-  padding-right: 2.5em;
-  position: relative;
-  z-index: 2;
-}
-.select-wrap select.unselected, .select-wrap .unselected.select {
-  color: #999;
 }
 
 .radio-list {

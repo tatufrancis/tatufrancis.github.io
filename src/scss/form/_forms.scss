@@ -25,9 +25,11 @@
 %field {
   display:block;
   width:100%;
+  max-width: 100%;
   margin:0;
   padding:0.4em;
   font-family:monospace;
+  font-size: 1em;
   line-height:1.5;
   height:2.25em;
   background:white;
@@ -82,49 +84,6 @@
   border-color:$success-color;
 }
 
-%select-wrap {
-  display:block;
-  color:gray;
-  background:white;
-  border:1px solid $border-color;
-  position:relative;
-  @include rounded($radius);
-  &:after {
-    content:'...';
-    display:block;
-    width:1.5em;
-    text-align:center;
-    height:100%;
-    position:absolute;
-    z-index:1;
-    font-size:1.5em;
-    line-height:1.25;
-    top:0;
-    right:0;
-    background:darken(white, 12.5%);
-  }
-}
-
-%custom-select {
-  -ms-appearance:none;
-  -o-appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  appearance:none;
-  border:none;
-  background:none;
-  padding:0.4em;
-  font-family:monospace;
-  line-height:1.5;
-  height:2.25em;
-  padding-right:2.5em;
-  position:relative;
-  z-index:2;
-  &.unselected {
-    color:#999;
-  }
-}
-
 %radio-list {
   list-style:none;
   margin:0;
@@ -176,14 +135,8 @@
 			}
 		}
 	}
-
-  @if $classes {
-    .select-wrap {
-      @extend %select-wrap;
-      select {
-        @extend %custom-select;
-      }
-    }
+  select {
+    @extend %field;
   }
 }
 
@@ -221,12 +174,6 @@
   }
   .textarea {
     @extend %textarea;
-  }
-  .select-wrap {
-    @extend %select-wrap;
-    .select {
-      @extend %custom-select;
-    }
   }
   .radio-list {
     @extend %radio-list;
