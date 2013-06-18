@@ -28,7 +28,7 @@
   &.pull-left   { float:left; }
   &:first-child {
     margin-left:0;
-    a  {
+    a, a:visited {
       &:before {
         display:none;
       }
@@ -221,6 +221,9 @@
       background:none;
       [role~=tab] {
         @extend %tab;
+        a, a:visited {
+          @extend %tab-link;
+        }
       }
     }
     [role~=tabpanel] {

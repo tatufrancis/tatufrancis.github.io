@@ -5204,11 +5204,11 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
 .tabs > ul li:first-child, .tabs > ol li:first-child, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child {
   margin-left: 0;
 }
-.tabs > ul li:first-child a:before, .tabs > ol li:first-child a:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:before {
+.tabs > ul li:first-child a:before, .tabs > ol li:first-child a:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:before, .tabs > ul li:first-child a:visited:before, .tabs > ol li:first-child a:visited:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:visited:before {
   display: none;
 }
 
-.tabs > ul li a, .tabs > ul li a:visited, .tabs > ol li a, .tabs > ol li a:visited {
+.tabs > ul li a, .tabs > ul li a:visited, .tabs > ol li a, .tabs > ol li a:visited, [role~=tabpanel] [role~=tablist] [role~=tab] a, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited {
   display: block;
   position: relative;
   width: 100%;
@@ -5235,31 +5235,31 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.tabs > ul li a:hover, .tabs > ol li a:hover, .tabs > ul li a:focus, .tabs > ol li a:focus {
+.tabs > ul li a:hover, .tabs > ol li a:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover, .tabs > ul li a:focus, .tabs > ol li a:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   text-decoration: none;
 }
-.tabs > ul li a:hover:before, .tabs > ol li a:hover:before, .tabs > ul li a:focus:before, .tabs > ol li a:focus:before {
+.tabs > ul li a:hover:before, .tabs > ol li a:hover:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover:before, .tabs > ul li a:focus:before, .tabs > ol li a:focus:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a:hover:after, .tabs > ol li a:hover:after, .tabs > ul li a:focus:after, .tabs > ol li a:focus:after {
+.tabs > ul li a:hover:after, .tabs > ol li a:hover:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover:after, .tabs > ul li a:focus:after, .tabs > ol li a:focus:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.active, .tabs > ol li a.active, .tabs > ul li a.active:hover, .tabs > ol li a.active:hover, .tabs > ul li a.active:focus, .tabs > ol li a.active:focus {
+.tabs > ul li a.active, .tabs > ol li a.active, [role~=tabpanel] [role~=tablist] [role~=tab] a.active, .tabs > ul li a.active:hover, .tabs > ol li a.active:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:hover, .tabs > ul li a.active:focus, .tabs > ol li a.active:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:focus {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   z-index: 2;
 }
-.tabs > ul li a.active:before, .tabs > ol li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ol li a.active:hover:before, .tabs > ul li a.active:focus:before, .tabs > ol li a.active:focus:before {
+.tabs > ul li a.active:before, .tabs > ol li a.active:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:before, .tabs > ul li a.active:hover:before, .tabs > ol li a.active:hover:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:hover:before, .tabs > ul li a.active:focus:before, .tabs > ol li a.active:focus:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a.active:after, .tabs > ol li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ol li a.active:hover:after, .tabs > ul li a.active:focus:after, .tabs > ol li a.active:focus:after {
+.tabs > ul li a.active:after, .tabs > ol li a.active:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:after, .tabs > ul li a.active:hover:after, .tabs > ol li a.active:hover:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:hover:after, .tabs > ul li a.active:focus:after, .tabs > ol li a.active:focus:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.disabled, .tabs > ol li a.disabled {
+.tabs > ul li a.disabled, .tabs > ol li a.disabled, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -5268,7 +5268,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   outline: none;
   border-bottom-color: #57c1cb !important;
 }
-.tabs > ul li a.disabled:hover, .tabs > ol li a.disabled:hover, .tabs > ul li a.disabled:focus, .tabs > ol li a.disabled:focus, .tabs > ul li a.disabled:visited, .tabs > ol li a.disabled:visited {
+.tabs > ul li a.disabled:hover, .tabs > ol li a.disabled:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:hover, .tabs > ul li a.disabled:focus, .tabs > ol li a.disabled:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:focus, .tabs > ul li a.disabled:visited, .tabs > ol li a.disabled:visited, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -5276,26 +5276,26 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   text-decoration: none;
   outline: none;
 }
-.tabs > ul li a.disabled:before, .tabs > ol li a.disabled:before {
+.tabs > ul li a.disabled:before, .tabs > ol li a.disabled:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:before {
   box-shadow: 2px 1px 0 #57c1cb;
 }
-.tabs > ul li a.disabled:after, .tabs > ol li a.disabled:after {
+.tabs > ul li a.disabled:after, .tabs > ol li a.disabled:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:after {
   box-shadow: -2px 1px 0 #57c1cb;
 }
-.tabs > ul li a:before, .tabs > ol li a:before, .tabs > ul li a:after, .tabs > ol li a:after {
+.tabs > ul li a:before, .tabs > ol li a:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:before, .tabs > ul li a:after, .tabs > ol li a:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:after {
   position: absolute;
   bottom: -1px;
   width: 6px;
   height: 6px;
   content: '';
 }
-.tabs > ul li a:before, .tabs > ol li a:before {
+.tabs > ul li a:before, .tabs > ol li a:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:before {
   left: -6px;
   border-bottom-right-radius: 6px;
   border-width: 0 1px 1px 0;
   box-shadow: 2px 1px 0 #1dabb8;
 }
-.tabs > ul li a:after, .tabs > ol li a:after {
+.tabs > ul li a:after, .tabs > ol li a:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:after {
   right: -6px;
   border-bottom-left-radius: 6px;
   border-width: 0 0 1px 1px;
