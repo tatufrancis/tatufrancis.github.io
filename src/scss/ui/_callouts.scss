@@ -13,7 +13,7 @@
   background:$button-color;
   border:1px solid $button-active;
   color:$button-text;
-  margin-bottom:15px;
+  margin-bottom: $gutter;
   @include rounded($radius);
   // content overrides
   h1, h2, h3, h4, h5, h6, p {
