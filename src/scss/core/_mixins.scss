@@ -192,7 +192,7 @@
 // ====================
 
 // font stacks
-@mixin font-stack($primaryFont:"", $secondaryFont:"", $fallbackFonts:"Arial, Helvetica, Geneva, sans-serif") {
+@mixin font-stack($primaryFont:"", $secondaryFont:"", $fallbackFonts: $font-family) {
   /* might add inline-font-files() at some point */
   @if $secondaryFont != "" {
     font-family:#{$primaryFont}, #{$secondaryFont}, #{$fallbackFonts};
