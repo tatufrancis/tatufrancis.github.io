@@ -65,7 +65,7 @@ html(class='no-js', lang='en')
   body
     header.white.band.padded
       .container
-        h2
+        h2.AverageSans
           | GroundworkCSS
         nav.inline.menu.gap-top
           ul
@@ -73,7 +73,7 @@ html(class='no-js', lang='en')
               a(href='./home.html')
                 i.icon-home
             li.menu
-              a(href='#') Example Templates
+              a(href='#') Example Layouts
               ul
                 li
                   a(href='./layout-1.html') Layout 1
@@ -90,15 +90,39 @@ html(class='no-js', lang='en')
                 li
                   a(href='./layout-7.html') Ecommerce
             li
-              a(href='./kitchen-sink.html') Kitchen Sink
+              a(href='./kitchen-sink.html') The Kitchen Sink
 
     block content
     
-    footer.footer.align-center
-      p
-        | GroundworkCSS is 100% free and open source. 
-        a(href='mailto:groundwork@sidereel.com') Give a shout out 
-        | if you find it extremely useful or have any feedback.
+    footer.footer
+      .container.padded
+        .green.callout
+          .row
+            .three.fourths.small-tablet
+              p
+                | GroundworkCSS is 
+                b 100% free
+                |  and 
+                b open source
+                |. 
+                a.orange.button(href='mailto:groundwork@sidereel.com')
+                  | Give me a shout 
+                  i.icon-envelope-alt
+                |  if you find it useful and have any feedback.
+              p
+                | Find a bug? Let me know by 
+                a.red.button(href="https://github.com/groundworkcss/groundwork/issues", target="_blank")
+                  | filing an issue 
+                  i.icon-github
+                |  on Github.
+            .one.fourth.small-tablet
+              p.large.align-right
+                a.large.gapped.tooltip(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
+                  i.icon-twitter
+                a.large.gapped.tooltip(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
+                  i.icon-github
+                a.large.gapped.tooltip(href="mailto:groundwork@sidereel.com", title="groundwork@sidereel.com", style="text-decoration:none;")
+                  i.icon-envelope-alt
 
     // scripts
     script(type='text/javascript', src='../js/plugins/jquery.cycle2.js')

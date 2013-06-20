@@ -3300,7 +3300,7 @@ ul.icons li [class*=" icon-"] {
 
 .AverageSans {
   /* might add inline-font-files() at some point */
-  font-family: AverageSans, Arial, Helvetica, Geneva, sans-serif;
+  font-family: AverageSans, Helvetica, Arial, Geneva, sans-serif;
 }
 
 @font-face {
@@ -3313,7 +3313,7 @@ ul.icons li [class*=" icon-"] {
 
 .AmericanTypewriter {
   /* might add inline-font-files() at some point */
-  font-family: AmericanTypewriter, Arial, Helvetica, Geneva, sans-serif;
+  font-family: AmericanTypewriter, Helvetica, Arial, Geneva, sans-serif;
 }
 
 /* vertical rhythm */
