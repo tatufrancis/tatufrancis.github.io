@@ -3774,7 +3774,7 @@ ol.list li.asphalt:before {
   display: none;
 }
 
-@media only screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
   .hide-on-desktop {
     display: none !important;
   }
@@ -3852,7 +3852,7 @@ ol.list li.asphalt:before {
     margin: 0 !important;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .ipad-only {
     display: inline-block !important;
   }
@@ -3938,7 +3938,7 @@ ol.list li.asphalt:before {
     margin: 0 !important;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .extend-third:not(.small-tablet):not(.mobile), .extend-fifths:not(.small-tablet):not(.mobile), .half:not(.small-tablet):not(.mobile), .halves:not(.small-tablet):not(.mobile), .third:not(.small-tablet):not(.mobile), .thirds:not(.small-tablet):not(.mobile), .fourth:not(.small-tablet):not(.mobile), .fourths:not(.small-tablet):not(.mobile), .fifth:not(.small-tablet):not(.mobile), .fifths:not(.small-tablet):not(.mobile), .sixth:not(.small-tablet):not(.mobile), .sixths:not(.small-tablet):not(.mobile), .seventh:not(.small-tablet):not(.mobile), .sevenths:not(.small-tablet):not(.mobile), .eighth:not(.small-tablet):not(.mobile), .eighths:not(.small-tablet):not(.mobile), .ninth:not(.small-tablet):not(.mobile), .ninths:not(.small-tablet):not(.mobile), .tenth:not(.small-tablet):not(.mobile), .tenths:not(.small-tablet):not(.mobile), .eleventh:not(.small-tablet):not(.mobile), .elevenths:not(.small-tablet):not(.mobile), .twelfth:not(.small-tablet):not(.mobile), .twelfths:not(.small-tablet):not(.mobile) {
     width: 100% !important;
     float: none;
@@ -4209,7 +4209,7 @@ ol.list li.asphalt:before {
     border-radius: 4px 4px 0 0;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .extend-third:not(.mobile), .extend-fifths:not(.mobile), .half:not(.mobile), .halves:not(.mobile), .third:not(.mobile), .thirds:not(.mobile), .fourth:not(.mobile), .fourths:not(.mobile), .fifth:not(.mobile), .fifths:not(.mobile), .sixth:not(.mobile), .sixths:not(.mobile), .seventh:not(.mobile), .sevenths:not(.mobile), .eighth:not(.mobile), .eighths:not(.mobile), .ninth:not(.mobile), .ninths:not(.mobile), .tenth:not(.mobile), .tenths:not(.mobile), .eleventh:not(.mobile), .elevenths:not(.mobile), .twelfth:not(.mobile), .twelfths:not(.mobile) {
     width: 100% !important;
     float: none;
