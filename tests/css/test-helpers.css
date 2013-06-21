@@ -51,6 +51,546 @@ img, a img, .img {
   border: none;
 }
 
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.clear, .clearfix, .row {
+  clear: both;
+}
+.clear:after, .clearfix:after, .row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.padded, .extend-padded {
+  padding: 10px;
+}
+.padded.double, .padded.extend-pad-top.extend-double, .padded.extend-pad-right.extend-double, .padded.extend-pad-bottom.extend-double, .padded.extend-pad-left.extend-double, .padded.extend-gapped.extend-double, .padded.extend-gap-top.extend-double, .padded.extend-gap-right.extend-double, .padded.extend-gap-bottom.extend-double, .padded.extend-gap-left.extend-double, .pad-top.double.extend-padded, .pad-right.double.extend-padded, .pad-bottom.double.extend-padded, .pad-left.double.extend-padded, .gapped.double.extend-padded, .gap-top.double.extend-padded, .gap-right.double.extend-padded, .gap-bottom.double.extend-padded, .gap-left.double.extend-padded, .extend-padded.extend-double {
+  padding: 20px;
+}
+.padded.triple, .padded.extend-pad-top.extend-triple, .padded.extend-pad-right.extend-triple, .padded.extend-pad-bottom.extend-triple, .padded.extend-pad-left.extend-triple, .padded.extend-gapped.extend-triple, .padded.extend-gap-top.extend-triple, .padded.extend-gap-right.extend-triple, .padded.extend-gap-bottom.extend-triple, .padded.extend-gap-left.extend-triple, .pad-top.triple.extend-padded, .pad-right.triple.extend-padded, .pad-bottom.triple.extend-padded, .pad-left.triple.extend-padded, .gapped.triple.extend-padded, .gap-top.triple.extend-padded, .gap-right.triple.extend-padded, .gap-bottom.triple.extend-padded, .gap-left.triple.extend-padded, .extend-padded.extend-triple {
+  padding: 30px;
+}
+
+.pad-top, .extend-pad-top {
+  padding-top: 10px;
+}
+.padded.double.extend-pad-top, .pad-top.double, .pad-top.extend-padded.extend-double, .pad-top.extend-pad-right.extend-double, .pad-top.extend-pad-bottom.extend-double, .pad-top.extend-pad-left.extend-double, .pad-top.extend-gapped.extend-double, .pad-top.extend-gap-top.extend-double, .pad-top.extend-gap-right.extend-double, .pad-top.extend-gap-bottom.extend-double, .pad-top.extend-gap-left.extend-double, .pad-right.double.extend-pad-top, .pad-bottom.double.extend-pad-top, .pad-left.double.extend-pad-top, .gapped.double.extend-pad-top, .gap-top.double.extend-pad-top, .gap-right.double.extend-pad-top, .gap-bottom.double.extend-pad-top, .gap-left.double.extend-pad-top, .extend-pad-top.extend-double {
+  padding-top: 20px;
+}
+.padded.triple.extend-pad-top, .pad-top.triple, .pad-top.extend-padded.extend-triple, .pad-top.extend-pad-right.extend-triple, .pad-top.extend-pad-bottom.extend-triple, .pad-top.extend-pad-left.extend-triple, .pad-top.extend-gapped.extend-triple, .pad-top.extend-gap-top.extend-triple, .pad-top.extend-gap-right.extend-triple, .pad-top.extend-gap-bottom.extend-triple, .pad-top.extend-gap-left.extend-triple, .pad-right.triple.extend-pad-top, .pad-bottom.triple.extend-pad-top, .pad-left.triple.extend-pad-top, .gapped.triple.extend-pad-top, .gap-top.triple.extend-pad-top, .gap-right.triple.extend-pad-top, .gap-bottom.triple.extend-pad-top, .gap-left.triple.extend-pad-top, .extend-pad-top.extend-triple {
+  padding-top: 30px;
+}
+
+.pad-right, .extend-pad-right {
+  padding-right: 10px;
+}
+.padded.double.extend-pad-right, .pad-top.double.extend-pad-right, .pad-right.double, .pad-right.extend-padded.extend-double, .pad-right.extend-pad-top.extend-double, .pad-right.extend-pad-bottom.extend-double, .pad-right.extend-pad-left.extend-double, .pad-right.extend-gapped.extend-double, .pad-right.extend-gap-top.extend-double, .pad-right.extend-gap-right.extend-double, .pad-right.extend-gap-bottom.extend-double, .pad-right.extend-gap-left.extend-double, .pad-bottom.double.extend-pad-right, .pad-left.double.extend-pad-right, .gapped.double.extend-pad-right, .gap-top.double.extend-pad-right, .gap-right.double.extend-pad-right, .gap-bottom.double.extend-pad-right, .gap-left.double.extend-pad-right, .extend-pad-right.extend-double {
+  padding-right: 20px;
+}
+.padded.triple.extend-pad-right, .pad-top.triple.extend-pad-right, .pad-right.triple, .pad-right.extend-padded.extend-triple, .pad-right.extend-pad-top.extend-triple, .pad-right.extend-pad-bottom.extend-triple, .pad-right.extend-pad-left.extend-triple, .pad-right.extend-gapped.extend-triple, .pad-right.extend-gap-top.extend-triple, .pad-right.extend-gap-right.extend-triple, .pad-right.extend-gap-bottom.extend-triple, .pad-right.extend-gap-left.extend-triple, .pad-bottom.triple.extend-pad-right, .pad-left.triple.extend-pad-right, .gapped.triple.extend-pad-right, .gap-top.triple.extend-pad-right, .gap-right.triple.extend-pad-right, .gap-bottom.triple.extend-pad-right, .gap-left.triple.extend-pad-right, .extend-pad-right.extend-triple {
+  padding-right: 30px;
+}
+
+.pad-bottom, .extend-pad-bottom {
+  padding-bottom: 10px;
+}
+.padded.double.extend-pad-bottom, .pad-top.double.extend-pad-bottom, .pad-right.double.extend-pad-bottom, .pad-bottom.double, .pad-bottom.extend-padded.extend-double, .pad-bottom.extend-pad-top.extend-double, .pad-bottom.extend-pad-right.extend-double, .pad-bottom.extend-pad-left.extend-double, .pad-bottom.extend-gapped.extend-double, .pad-bottom.extend-gap-top.extend-double, .pad-bottom.extend-gap-right.extend-double, .pad-bottom.extend-gap-bottom.extend-double, .pad-bottom.extend-gap-left.extend-double, .pad-left.double.extend-pad-bottom, .gapped.double.extend-pad-bottom, .gap-top.double.extend-pad-bottom, .gap-right.double.extend-pad-bottom, .gap-bottom.double.extend-pad-bottom, .gap-left.double.extend-pad-bottom, .extend-pad-bottom.extend-double {
+  padding-bottom: 20px;
+}
+.padded.triple.extend-pad-bottom, .pad-top.triple.extend-pad-bottom, .pad-right.triple.extend-pad-bottom, .pad-bottom.triple, .pad-bottom.extend-padded.extend-triple, .pad-bottom.extend-pad-top.extend-triple, .pad-bottom.extend-pad-right.extend-triple, .pad-bottom.extend-pad-left.extend-triple, .pad-bottom.extend-gapped.extend-triple, .pad-bottom.extend-gap-top.extend-triple, .pad-bottom.extend-gap-right.extend-triple, .pad-bottom.extend-gap-bottom.extend-triple, .pad-bottom.extend-gap-left.extend-triple, .pad-left.triple.extend-pad-bottom, .gapped.triple.extend-pad-bottom, .gap-top.triple.extend-pad-bottom, .gap-right.triple.extend-pad-bottom, .gap-bottom.triple.extend-pad-bottom, .gap-left.triple.extend-pad-bottom, .extend-pad-bottom.extend-triple {
+  padding-bottom: 30px;
+}
+
+.pad-left, .extend-pad-left {
+  padding-left: 10px;
+}
+.padded.double.extend-pad-left, .pad-top.double.extend-pad-left, .pad-right.double.extend-pad-left, .pad-bottom.double.extend-pad-left, .pad-left.double, .pad-left.extend-padded.extend-double, .pad-left.extend-pad-top.extend-double, .pad-left.extend-pad-right.extend-double, .pad-left.extend-pad-bottom.extend-double, .pad-left.extend-gapped.extend-double, .pad-left.extend-gap-top.extend-double, .pad-left.extend-gap-right.extend-double, .pad-left.extend-gap-bottom.extend-double, .pad-left.extend-gap-left.extend-double, .gapped.double.extend-pad-left, .gap-top.double.extend-pad-left, .gap-right.double.extend-pad-left, .gap-bottom.double.extend-pad-left, .gap-left.double.extend-pad-left, .extend-pad-left.extend-double {
+  padding-left: 20px;
+}
+.padded.triple.extend-pad-left, .pad-top.triple.extend-pad-left, .pad-right.triple.extend-pad-left, .pad-bottom.triple.extend-pad-left, .pad-left.triple, .pad-left.extend-padded.extend-triple, .pad-left.extend-pad-top.extend-triple, .pad-left.extend-pad-right.extend-triple, .pad-left.extend-pad-bottom.extend-triple, .pad-left.extend-gapped.extend-triple, .pad-left.extend-gap-top.extend-triple, .pad-left.extend-gap-right.extend-triple, .pad-left.extend-gap-bottom.extend-triple, .pad-left.extend-gap-left.extend-triple, .gapped.triple.extend-pad-left, .gap-top.triple.extend-pad-left, .gap-right.triple.extend-pad-left, .gap-bottom.triple.extend-pad-left, .gap-left.triple.extend-pad-left, .extend-pad-left.extend-triple {
+  padding-left: 30px;
+}
+
+.gapped, .extend-gapped {
+  margin: 10px;
+}
+.padded.double.extend-gapped, .pad-top.double.extend-gapped, .pad-right.double.extend-gapped, .pad-bottom.double.extend-gapped, .pad-left.double.extend-gapped, .gapped.double, .gapped.extend-padded.extend-double, .gapped.extend-pad-top.extend-double, .gapped.extend-pad-right.extend-double, .gapped.extend-pad-bottom.extend-double, .gapped.extend-pad-left.extend-double, .gapped.extend-gap-top.extend-double, .gapped.extend-gap-right.extend-double, .gapped.extend-gap-bottom.extend-double, .gapped.extend-gap-left.extend-double, .gap-top.double.extend-gapped, .gap-right.double.extend-gapped, .gap-bottom.double.extend-gapped, .gap-left.double.extend-gapped, .extend-gapped.extend-double {
+  margin: 20px;
+}
+.padded.triple.extend-gapped, .pad-top.triple.extend-gapped, .pad-right.triple.extend-gapped, .pad-bottom.triple.extend-gapped, .pad-left.triple.extend-gapped, .gapped.triple, .gapped.extend-padded.extend-triple, .gapped.extend-pad-top.extend-triple, .gapped.extend-pad-right.extend-triple, .gapped.extend-pad-bottom.extend-triple, .gapped.extend-pad-left.extend-triple, .gapped.extend-gap-top.extend-triple, .gapped.extend-gap-right.extend-triple, .gapped.extend-gap-bottom.extend-triple, .gapped.extend-gap-left.extend-triple, .gap-top.triple.extend-gapped, .gap-right.triple.extend-gapped, .gap-bottom.triple.extend-gapped, .gap-left.triple.extend-gapped, .extend-gapped.extend-triple {
+  margin: 30px;
+}
+
+.gap-top, .extend-gap-top {
+  margin-top: 10px;
+}
+.padded.double.extend-gap-top, .pad-top.double.extend-gap-top, .pad-right.double.extend-gap-top, .pad-bottom.double.extend-gap-top, .pad-left.double.extend-gap-top, .gapped.double.extend-gap-top, .gap-top.double, .gap-top.extend-padded.extend-double, .gap-top.extend-pad-top.extend-double, .gap-top.extend-pad-right.extend-double, .gap-top.extend-pad-bottom.extend-double, .gap-top.extend-pad-left.extend-double, .gap-top.extend-gapped.extend-double, .gap-top.extend-gap-right.extend-double, .gap-top.extend-gap-bottom.extend-double, .gap-top.extend-gap-left.extend-double, .gap-right.double.extend-gap-top, .gap-bottom.double.extend-gap-top, .gap-left.double.extend-gap-top, .extend-gap-top.extend-double {
+  margin-top: 20px;
+}
+.padded.triple.extend-gap-top, .pad-top.triple.extend-gap-top, .pad-right.triple.extend-gap-top, .pad-bottom.triple.extend-gap-top, .pad-left.triple.extend-gap-top, .gapped.triple.extend-gap-top, .gap-top.triple, .gap-top.extend-padded.extend-triple, .gap-top.extend-pad-top.extend-triple, .gap-top.extend-pad-right.extend-triple, .gap-top.extend-pad-bottom.extend-triple, .gap-top.extend-pad-left.extend-triple, .gap-top.extend-gapped.extend-triple, .gap-top.extend-gap-right.extend-triple, .gap-top.extend-gap-bottom.extend-triple, .gap-top.extend-gap-left.extend-triple, .gap-right.triple.extend-gap-top, .gap-bottom.triple.extend-gap-top, .gap-left.triple.extend-gap-top, .extend-gap-top.extend-triple {
+  margin-top: 30px;
+}
+
+.gap-right, .extend-gap-right {
+  margin-right: 10px;
+}
+.padded.double.extend-gap-right, .pad-top.double.extend-gap-right, .pad-right.double.extend-gap-right, .pad-bottom.double.extend-gap-right, .pad-left.double.extend-gap-right, .gapped.double.extend-gap-right, .gap-top.double.extend-gap-right, .gap-right.double, .gap-right.extend-padded.extend-double, .gap-right.extend-pad-top.extend-double, .gap-right.extend-pad-right.extend-double, .gap-right.extend-pad-bottom.extend-double, .gap-right.extend-pad-left.extend-double, .gap-right.extend-gapped.extend-double, .gap-right.extend-gap-top.extend-double, .gap-right.extend-gap-bottom.extend-double, .gap-right.extend-gap-left.extend-double, .gap-bottom.double.extend-gap-right, .gap-left.double.extend-gap-right, .extend-gap-right.extend-double {
+  margin-right: 20px;
+}
+.padded.triple.extend-gap-right, .pad-top.triple.extend-gap-right, .pad-right.triple.extend-gap-right, .pad-bottom.triple.extend-gap-right, .pad-left.triple.extend-gap-right, .gapped.triple.extend-gap-right, .gap-top.triple.extend-gap-right, .gap-right.triple, .gap-right.extend-padded.extend-triple, .gap-right.extend-pad-top.extend-triple, .gap-right.extend-pad-right.extend-triple, .gap-right.extend-pad-bottom.extend-triple, .gap-right.extend-pad-left.extend-triple, .gap-right.extend-gapped.extend-triple, .gap-right.extend-gap-top.extend-triple, .gap-right.extend-gap-bottom.extend-triple, .gap-right.extend-gap-left.extend-triple, .gap-bottom.triple.extend-gap-right, .gap-left.triple.extend-gap-right, .extend-gap-right.extend-triple {
+  margin-right: 30px;
+}
+
+.gap-bottom, .extend-gap-bottom {
+  margin-bottom: 10px;
+}
+.padded.double.extend-gap-bottom, .pad-top.double.extend-gap-bottom, .pad-right.double.extend-gap-bottom, .pad-bottom.double.extend-gap-bottom, .pad-left.double.extend-gap-bottom, .gapped.double.extend-gap-bottom, .gap-top.double.extend-gap-bottom, .gap-right.double.extend-gap-bottom, .gap-bottom.double, .gap-bottom.extend-padded.extend-double, .gap-bottom.extend-pad-top.extend-double, .gap-bottom.extend-pad-right.extend-double, .gap-bottom.extend-pad-bottom.extend-double, .gap-bottom.extend-pad-left.extend-double, .gap-bottom.extend-gapped.extend-double, .gap-bottom.extend-gap-top.extend-double, .gap-bottom.extend-gap-right.extend-double, .gap-bottom.extend-gap-left.extend-double, .gap-left.double.extend-gap-bottom, .extend-gap-bottom.extend-double {
+  margin-bottom: 20px;
+}
+.padded.triple.extend-gap-bottom, .pad-top.triple.extend-gap-bottom, .pad-right.triple.extend-gap-bottom, .pad-bottom.triple.extend-gap-bottom, .pad-left.triple.extend-gap-bottom, .gapped.triple.extend-gap-bottom, .gap-top.triple.extend-gap-bottom, .gap-right.triple.extend-gap-bottom, .gap-bottom.triple, .gap-bottom.extend-padded.extend-triple, .gap-bottom.extend-pad-top.extend-triple, .gap-bottom.extend-pad-right.extend-triple, .gap-bottom.extend-pad-bottom.extend-triple, .gap-bottom.extend-pad-left.extend-triple, .gap-bottom.extend-gapped.extend-triple, .gap-bottom.extend-gap-top.extend-triple, .gap-bottom.extend-gap-right.extend-triple, .gap-bottom.extend-gap-left.extend-triple, .gap-left.triple.extend-gap-bottom, .extend-gap-bottom.extend-triple {
+  margin-bottom: 30px;
+}
+
+.gap-left, .extend-gap-left {
+  margin-left: 10px;
+}
+.padded.double.extend-gap-left, .pad-top.double.extend-gap-left, .pad-right.double.extend-gap-left, .pad-bottom.double.extend-gap-left, .pad-left.double.extend-gap-left, .gapped.double.extend-gap-left, .gap-top.double.extend-gap-left, .gap-right.double.extend-gap-left, .gap-bottom.double.extend-gap-left, .gap-left.double, .gap-left.extend-padded.extend-double, .gap-left.extend-pad-top.extend-double, .gap-left.extend-pad-right.extend-double, .gap-left.extend-pad-bottom.extend-double, .gap-left.extend-pad-left.extend-double, .gap-left.extend-gapped.extend-double, .gap-left.extend-gap-top.extend-double, .gap-left.extend-gap-right.extend-double, .gap-left.extend-gap-bottom.extend-double, .extend-gap-left.extend-double {
+  margin-left: 20px;
+}
+.padded.triple.extend-gap-left, .pad-top.triple.extend-gap-left, .pad-right.triple.extend-gap-left, .pad-bottom.triple.extend-gap-left, .pad-left.triple.extend-gap-left, .gapped.triple.extend-gap-left, .gap-top.triple.extend-gap-left, .gap-right.triple.extend-gap-left, .gap-bottom.triple.extend-gap-left, .gap-left.triple, .gap-left.extend-padded.extend-triple, .gap-left.extend-pad-top.extend-triple, .gap-left.extend-pad-right.extend-triple, .gap-left.extend-pad-bottom.extend-triple, .gap-left.extend-pad-left.extend-triple, .gap-left.extend-gapped.extend-triple, .gap-left.extend-gap-top.extend-triple, .gap-left.extend-gap-right.extend-triple, .gap-left.extend-gap-bottom.extend-triple, .extend-gap-left.extend-triple {
+  margin-left: 30px;
+}
+
+.stick {
+  position: fixed;
+  z-index: 1;
+}
+.stick.top {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.stick.right {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+}
+.stick.bottom {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+}
+.stick.left {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+}
+.stick.middle {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+}
+.center.stick, .stick.extend-center {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+}
+
+.inline, .extend-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.block, .extend-block {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.small, sup, .sup, sub, .sub, small {
+  font-size: 0.8em;
+}
+
+big, .big, .large, big, .big {
+  font-size: 1.5em;
+}
+
+.zero, .extend-zero {
+  margin: 0;
+  padding: 0;
+}
+
+.pull-right, .extend-pull-right {
+  float: right;
+}
+
+.pull-left, .extend-pull-left {
+  float: left;
+}
+
+.bordered, .extend-bordered {
+  border: 1px solid #dddddd;
+}
+
+.border-top, .extend-border-top {
+  border-top: 1px solid #dddddd;
+}
+
+.border-right, .extend-border-right {
+  border-right: 1px solid #dddddd;
+}
+
+.border-bottom, .extend-border-bottom {
+  border-bottom: 1px solid #dddddd;
+}
+
+.border-left, .extend-border-left {
+  border-left: 1px solid #dddddd;
+}
+
+.align-top, .extend-align-top {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.align-right, .extend-align-right {
+  text-align: right;
+}
+
+.align-bottom, .extend-align-bottom {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.align-left, .extend-align-left {
+  text-align: left;
+}
+
+.align-center, .extend-align-center {
+  text-align: center;
+}
+
+.justify, .extend-justify {
+  text-align: justify;
+}
+
+.truncate, .js .responsive:not(table), .extend-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.center, .stick.center, .extend-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.spacer, .extend-spacer {
+  height: 10px;
+}
+
+.square {
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.round, .extend-round {
+  -ms-border-radius: 9999px;
+  -o-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  -webkit-border-radius: 9999px;
+  border-radius: 9999px;
+}
+
+.disabled, .extend-disabled {
+  color: #d9d9d9;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.disabled:hover, .extend-disabled:hover, .disabled:focus, .extend-disabled:focus, .disabled:visited, .extend-disabled:visited {
+  color: #d9d9d9;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.rotate-90, .extend-rotate-90 {
+  display: inline-block;
+  width: auto;
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rotate-180, .extend-rotate-180 {
+  display: inline-block;
+  width: auto;
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rotate-270, .extend-rotate-270 {
+  display: inline-block;
+  width: auto;
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.rotate-90-ctr, .extend-rotate-90-ctr {
+  display: inline-block;
+  width: auto;
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.rotate-180-ctr, .extend-rotate-180-ctr {
+  display: inline-block;
+  width: auto;
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.rotate-270-ctr, .extend-rotate-270-ctr {
+  display: inline-block;
+  width: auto;
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+}
+
+.spin, .extend-spin {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: spin 2s linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-once, .extend-spin-once {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: 1;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: spin 2s linear;
+  animation-iteration-count: 1;
+}
+
+.spin-twice, .extend-spin-twice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: 2;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: 2;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: 2;
+  animation: spin 2s linear;
+  animation-iteration-count: 2;
+}
+
+.spin-thrice, .extend-spin-thrice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: 3;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: 3;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: 3;
+  animation: spin 2s linear;
+  animation-iteration-count: 3;
+}
+
+.spin-fast, .extend-spin-fast {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: spin 1s linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-fast-once, .extend-spin-fast-once {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: 1;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: spin 1s linear;
+  animation-iteration-count: 1;
+}
+
+.spin-fast-twice, .extend-spin-fast-twice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: 2;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: 2;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: 2;
+  animation: spin 1s linear;
+  animation-iteration-count: 2;
+}
+
+.spin-fast-thrice, .extend-spin-fast-thrice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: 3;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: 3;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: 3;
+  animation: spin 1s linear;
+  animation-iteration-count: 3;
+}
+
+.spin-slow, .extend-spin-slow {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: spin 5s linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-slow-once, .extend-spin-slow-once {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: 1;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: spin 5s linear;
+  animation-iteration-count: 1;
+}
+
+.spin-slow-twice, .extend-spin-slow-twice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: 2;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: 2;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: 2;
+  animation: spin 5s linear;
+  animation-iteration-count: 2;
+}
+
+.spin-slow-thrice, .extend-spin-slow-thrice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: 3;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: 3;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: 3;
+  animation: spin 5s linear;
+  animation-iteration-count: 3;
+}
+
+.clear:after, .clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1326,7 +1866,13 @@ img, a img, .img {
   margin-left: 91.66667%;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
+  .one-up-small-tablet {
+    width: 100% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
   .two-up-small-tablet {
     width: 50% !important;
     clear: none !important;
@@ -1351,7 +1897,13 @@ img, a img, .img {
     float: left !important;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
+  .one-up-mobile {
+    width: 100% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
   .two-up-mobile {
     width: 50% !important;
     clear: none !important;
@@ -1376,546 +1928,48 @@ img, a img, .img {
     float: left !important;
   }
 }
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
+@media (max-width: 767px) and (min-width: 481px) {
+  .one-up-small-tablet:nth-child(2) {
+    clear: both !important;
   }
 
-  100% {
-    -moz-transform: rotate(359deg);
-  }
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
+  .two-up-small-tablet:nth-child(3) {
+    clear: both !important;
   }
 
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-@-o-keyframes spin {
-  0% {
-    -o-transform: rotate(0deg);
+  .three-up-small-tablet:nth-child(4) {
+    clear: both !important;
   }
 
-  100% {
-    -o-transform: rotate(359deg);
-  }
-}
-
-@-ms-keyframes spin {
-  0% {
-    -ms-transform: rotate(0deg);
+  .four-up-small-tablet:nth-child(5) {
+    clear: both !important;
   }
 
-  100% {
-    -ms-transform: rotate(359deg);
+  .five-up-small-tablet:nth-child(6) {
+    clear: both !important;
   }
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .one-up-mobile:nth-child(2) {
+    clear: both !important;
   }
 
-  100% {
-    transform: rotate(359deg);
+  .two-up-mobile:nth-child(3) {
+    clear: both !important;
+  }
+
+  .three-up-mobile:nth-child(4) {
+    clear: both !important;
+  }
+
+  .four-up-mobile:nth-child(5) {
+    clear: both !important;
+  }
+
+  .five-up-mobile:nth-child(6) {
+    clear: both !important;
   }
 }
-
-.row, .clear, .clearfix {
-  clear: both;
-}
-.row:after, .clear:after, .clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.padded, .extend-padded {
-  padding: 10px;
-}
-.padded.double, .padded.extend-pad-top.extend-double, .padded.extend-pad-right.extend-double, .padded.extend-pad-bottom.extend-double, .padded.extend-pad-left.extend-double, .padded.extend-gapped.extend-double, .padded.extend-gap-top.extend-double, .padded.extend-gap-right.extend-double, .padded.extend-gap-bottom.extend-double, .padded.extend-gap-left.extend-double, .pad-top.double.extend-padded, .pad-right.double.extend-padded, .pad-bottom.double.extend-padded, .pad-left.double.extend-padded, .gapped.double.extend-padded, .gap-top.double.extend-padded, .gap-right.double.extend-padded, .gap-bottom.double.extend-padded, .gap-left.double.extend-padded, .extend-padded.extend-double {
-  padding: 20px;
-}
-.padded.triple, .padded.extend-pad-top.extend-triple, .padded.extend-pad-right.extend-triple, .padded.extend-pad-bottom.extend-triple, .padded.extend-pad-left.extend-triple, .padded.extend-gapped.extend-triple, .padded.extend-gap-top.extend-triple, .padded.extend-gap-right.extend-triple, .padded.extend-gap-bottom.extend-triple, .padded.extend-gap-left.extend-triple, .pad-top.triple.extend-padded, .pad-right.triple.extend-padded, .pad-bottom.triple.extend-padded, .pad-left.triple.extend-padded, .gapped.triple.extend-padded, .gap-top.triple.extend-padded, .gap-right.triple.extend-padded, .gap-bottom.triple.extend-padded, .gap-left.triple.extend-padded, .extend-padded.extend-triple {
-  padding: 30px;
-}
-
-.pad-top, .extend-pad-top {
-  padding-top: 10px;
-}
-.padded.double.extend-pad-top, .pad-top.double, .pad-top.extend-padded.extend-double, .pad-top.extend-pad-right.extend-double, .pad-top.extend-pad-bottom.extend-double, .pad-top.extend-pad-left.extend-double, .pad-top.extend-gapped.extend-double, .pad-top.extend-gap-top.extend-double, .pad-top.extend-gap-right.extend-double, .pad-top.extend-gap-bottom.extend-double, .pad-top.extend-gap-left.extend-double, .pad-right.double.extend-pad-top, .pad-bottom.double.extend-pad-top, .pad-left.double.extend-pad-top, .gapped.double.extend-pad-top, .gap-top.double.extend-pad-top, .gap-right.double.extend-pad-top, .gap-bottom.double.extend-pad-top, .gap-left.double.extend-pad-top, .extend-pad-top.extend-double {
-  padding-top: 20px;
-}
-.padded.triple.extend-pad-top, .pad-top.triple, .pad-top.extend-padded.extend-triple, .pad-top.extend-pad-right.extend-triple, .pad-top.extend-pad-bottom.extend-triple, .pad-top.extend-pad-left.extend-triple, .pad-top.extend-gapped.extend-triple, .pad-top.extend-gap-top.extend-triple, .pad-top.extend-gap-right.extend-triple, .pad-top.extend-gap-bottom.extend-triple, .pad-top.extend-gap-left.extend-triple, .pad-right.triple.extend-pad-top, .pad-bottom.triple.extend-pad-top, .pad-left.triple.extend-pad-top, .gapped.triple.extend-pad-top, .gap-top.triple.extend-pad-top, .gap-right.triple.extend-pad-top, .gap-bottom.triple.extend-pad-top, .gap-left.triple.extend-pad-top, .extend-pad-top.extend-triple {
-  padding-top: 30px;
-}
-
-.pad-right, .extend-pad-right {
-  padding-right: 10px;
-}
-.padded.double.extend-pad-right, .pad-top.double.extend-pad-right, .pad-right.double, .pad-right.extend-padded.extend-double, .pad-right.extend-pad-top.extend-double, .pad-right.extend-pad-bottom.extend-double, .pad-right.extend-pad-left.extend-double, .pad-right.extend-gapped.extend-double, .pad-right.extend-gap-top.extend-double, .pad-right.extend-gap-right.extend-double, .pad-right.extend-gap-bottom.extend-double, .pad-right.extend-gap-left.extend-double, .pad-bottom.double.extend-pad-right, .pad-left.double.extend-pad-right, .gapped.double.extend-pad-right, .gap-top.double.extend-pad-right, .gap-right.double.extend-pad-right, .gap-bottom.double.extend-pad-right, .gap-left.double.extend-pad-right, .extend-pad-right.extend-double {
-  padding-right: 20px;
-}
-.padded.triple.extend-pad-right, .pad-top.triple.extend-pad-right, .pad-right.triple, .pad-right.extend-padded.extend-triple, .pad-right.extend-pad-top.extend-triple, .pad-right.extend-pad-bottom.extend-triple, .pad-right.extend-pad-left.extend-triple, .pad-right.extend-gapped.extend-triple, .pad-right.extend-gap-top.extend-triple, .pad-right.extend-gap-right.extend-triple, .pad-right.extend-gap-bottom.extend-triple, .pad-right.extend-gap-left.extend-triple, .pad-bottom.triple.extend-pad-right, .pad-left.triple.extend-pad-right, .gapped.triple.extend-pad-right, .gap-top.triple.extend-pad-right, .gap-right.triple.extend-pad-right, .gap-bottom.triple.extend-pad-right, .gap-left.triple.extend-pad-right, .extend-pad-right.extend-triple {
-  padding-right: 30px;
-}
-
-.pad-bottom, .extend-pad-bottom {
-  padding-bottom: 10px;
-}
-.padded.double.extend-pad-bottom, .pad-top.double.extend-pad-bottom, .pad-right.double.extend-pad-bottom, .pad-bottom.double, .pad-bottom.extend-padded.extend-double, .pad-bottom.extend-pad-top.extend-double, .pad-bottom.extend-pad-right.extend-double, .pad-bottom.extend-pad-left.extend-double, .pad-bottom.extend-gapped.extend-double, .pad-bottom.extend-gap-top.extend-double, .pad-bottom.extend-gap-right.extend-double, .pad-bottom.extend-gap-bottom.extend-double, .pad-bottom.extend-gap-left.extend-double, .pad-left.double.extend-pad-bottom, .gapped.double.extend-pad-bottom, .gap-top.double.extend-pad-bottom, .gap-right.double.extend-pad-bottom, .gap-bottom.double.extend-pad-bottom, .gap-left.double.extend-pad-bottom, .extend-pad-bottom.extend-double {
-  padding-bottom: 20px;
-}
-.padded.triple.extend-pad-bottom, .pad-top.triple.extend-pad-bottom, .pad-right.triple.extend-pad-bottom, .pad-bottom.triple, .pad-bottom.extend-padded.extend-triple, .pad-bottom.extend-pad-top.extend-triple, .pad-bottom.extend-pad-right.extend-triple, .pad-bottom.extend-pad-left.extend-triple, .pad-bottom.extend-gapped.extend-triple, .pad-bottom.extend-gap-top.extend-triple, .pad-bottom.extend-gap-right.extend-triple, .pad-bottom.extend-gap-bottom.extend-triple, .pad-bottom.extend-gap-left.extend-triple, .pad-left.triple.extend-pad-bottom, .gapped.triple.extend-pad-bottom, .gap-top.triple.extend-pad-bottom, .gap-right.triple.extend-pad-bottom, .gap-bottom.triple.extend-pad-bottom, .gap-left.triple.extend-pad-bottom, .extend-pad-bottom.extend-triple {
-  padding-bottom: 30px;
-}
-
-.pad-left, .extend-pad-left {
-  padding-left: 10px;
-}
-.padded.double.extend-pad-left, .pad-top.double.extend-pad-left, .pad-right.double.extend-pad-left, .pad-bottom.double.extend-pad-left, .pad-left.double, .pad-left.extend-padded.extend-double, .pad-left.extend-pad-top.extend-double, .pad-left.extend-pad-right.extend-double, .pad-left.extend-pad-bottom.extend-double, .pad-left.extend-gapped.extend-double, .pad-left.extend-gap-top.extend-double, .pad-left.extend-gap-right.extend-double, .pad-left.extend-gap-bottom.extend-double, .pad-left.extend-gap-left.extend-double, .gapped.double.extend-pad-left, .gap-top.double.extend-pad-left, .gap-right.double.extend-pad-left, .gap-bottom.double.extend-pad-left, .gap-left.double.extend-pad-left, .extend-pad-left.extend-double {
-  padding-left: 20px;
-}
-.padded.triple.extend-pad-left, .pad-top.triple.extend-pad-left, .pad-right.triple.extend-pad-left, .pad-bottom.triple.extend-pad-left, .pad-left.triple, .pad-left.extend-padded.extend-triple, .pad-left.extend-pad-top.extend-triple, .pad-left.extend-pad-right.extend-triple, .pad-left.extend-pad-bottom.extend-triple, .pad-left.extend-gapped.extend-triple, .pad-left.extend-gap-top.extend-triple, .pad-left.extend-gap-right.extend-triple, .pad-left.extend-gap-bottom.extend-triple, .pad-left.extend-gap-left.extend-triple, .gapped.triple.extend-pad-left, .gap-top.triple.extend-pad-left, .gap-right.triple.extend-pad-left, .gap-bottom.triple.extend-pad-left, .gap-left.triple.extend-pad-left, .extend-pad-left.extend-triple {
-  padding-left: 30px;
-}
-
-.gapped, .extend-gapped {
-  margin: 10px;
-}
-.padded.double.extend-gapped, .pad-top.double.extend-gapped, .pad-right.double.extend-gapped, .pad-bottom.double.extend-gapped, .pad-left.double.extend-gapped, .gapped.double, .gapped.extend-padded.extend-double, .gapped.extend-pad-top.extend-double, .gapped.extend-pad-right.extend-double, .gapped.extend-pad-bottom.extend-double, .gapped.extend-pad-left.extend-double, .gapped.extend-gap-top.extend-double, .gapped.extend-gap-right.extend-double, .gapped.extend-gap-bottom.extend-double, .gapped.extend-gap-left.extend-double, .gap-top.double.extend-gapped, .gap-right.double.extend-gapped, .gap-bottom.double.extend-gapped, .gap-left.double.extend-gapped, .extend-gapped.extend-double {
-  margin: 20px;
-}
-.padded.triple.extend-gapped, .pad-top.triple.extend-gapped, .pad-right.triple.extend-gapped, .pad-bottom.triple.extend-gapped, .pad-left.triple.extend-gapped, .gapped.triple, .gapped.extend-padded.extend-triple, .gapped.extend-pad-top.extend-triple, .gapped.extend-pad-right.extend-triple, .gapped.extend-pad-bottom.extend-triple, .gapped.extend-pad-left.extend-triple, .gapped.extend-gap-top.extend-triple, .gapped.extend-gap-right.extend-triple, .gapped.extend-gap-bottom.extend-triple, .gapped.extend-gap-left.extend-triple, .gap-top.triple.extend-gapped, .gap-right.triple.extend-gapped, .gap-bottom.triple.extend-gapped, .gap-left.triple.extend-gapped, .extend-gapped.extend-triple {
-  margin: 30px;
-}
-
-.gap-top, .extend-gap-top {
-  margin-top: 10px;
-}
-.padded.double.extend-gap-top, .pad-top.double.extend-gap-top, .pad-right.double.extend-gap-top, .pad-bottom.double.extend-gap-top, .pad-left.double.extend-gap-top, .gapped.double.extend-gap-top, .gap-top.double, .gap-top.extend-padded.extend-double, .gap-top.extend-pad-top.extend-double, .gap-top.extend-pad-right.extend-double, .gap-top.extend-pad-bottom.extend-double, .gap-top.extend-pad-left.extend-double, .gap-top.extend-gapped.extend-double, .gap-top.extend-gap-right.extend-double, .gap-top.extend-gap-bottom.extend-double, .gap-top.extend-gap-left.extend-double, .gap-right.double.extend-gap-top, .gap-bottom.double.extend-gap-top, .gap-left.double.extend-gap-top, .extend-gap-top.extend-double {
-  margin-top: 20px;
-}
-.padded.triple.extend-gap-top, .pad-top.triple.extend-gap-top, .pad-right.triple.extend-gap-top, .pad-bottom.triple.extend-gap-top, .pad-left.triple.extend-gap-top, .gapped.triple.extend-gap-top, .gap-top.triple, .gap-top.extend-padded.extend-triple, .gap-top.extend-pad-top.extend-triple, .gap-top.extend-pad-right.extend-triple, .gap-top.extend-pad-bottom.extend-triple, .gap-top.extend-pad-left.extend-triple, .gap-top.extend-gapped.extend-triple, .gap-top.extend-gap-right.extend-triple, .gap-top.extend-gap-bottom.extend-triple, .gap-top.extend-gap-left.extend-triple, .gap-right.triple.extend-gap-top, .gap-bottom.triple.extend-gap-top, .gap-left.triple.extend-gap-top, .extend-gap-top.extend-triple {
-  margin-top: 30px;
-}
-
-.gap-right, .extend-gap-right {
-  margin-right: 10px;
-}
-.padded.double.extend-gap-right, .pad-top.double.extend-gap-right, .pad-right.double.extend-gap-right, .pad-bottom.double.extend-gap-right, .pad-left.double.extend-gap-right, .gapped.double.extend-gap-right, .gap-top.double.extend-gap-right, .gap-right.double, .gap-right.extend-padded.extend-double, .gap-right.extend-pad-top.extend-double, .gap-right.extend-pad-right.extend-double, .gap-right.extend-pad-bottom.extend-double, .gap-right.extend-pad-left.extend-double, .gap-right.extend-gapped.extend-double, .gap-right.extend-gap-top.extend-double, .gap-right.extend-gap-bottom.extend-double, .gap-right.extend-gap-left.extend-double, .gap-bottom.double.extend-gap-right, .gap-left.double.extend-gap-right, .extend-gap-right.extend-double {
-  margin-right: 20px;
-}
-.padded.triple.extend-gap-right, .pad-top.triple.extend-gap-right, .pad-right.triple.extend-gap-right, .pad-bottom.triple.extend-gap-right, .pad-left.triple.extend-gap-right, .gapped.triple.extend-gap-right, .gap-top.triple.extend-gap-right, .gap-right.triple, .gap-right.extend-padded.extend-triple, .gap-right.extend-pad-top.extend-triple, .gap-right.extend-pad-right.extend-triple, .gap-right.extend-pad-bottom.extend-triple, .gap-right.extend-pad-left.extend-triple, .gap-right.extend-gapped.extend-triple, .gap-right.extend-gap-top.extend-triple, .gap-right.extend-gap-bottom.extend-triple, .gap-right.extend-gap-left.extend-triple, .gap-bottom.triple.extend-gap-right, .gap-left.triple.extend-gap-right, .extend-gap-right.extend-triple {
-  margin-right: 30px;
-}
-
-.gap-bottom, .extend-gap-bottom {
-  margin-bottom: 10px;
-}
-.padded.double.extend-gap-bottom, .pad-top.double.extend-gap-bottom, .pad-right.double.extend-gap-bottom, .pad-bottom.double.extend-gap-bottom, .pad-left.double.extend-gap-bottom, .gapped.double.extend-gap-bottom, .gap-top.double.extend-gap-bottom, .gap-right.double.extend-gap-bottom, .gap-bottom.double, .gap-bottom.extend-padded.extend-double, .gap-bottom.extend-pad-top.extend-double, .gap-bottom.extend-pad-right.extend-double, .gap-bottom.extend-pad-bottom.extend-double, .gap-bottom.extend-pad-left.extend-double, .gap-bottom.extend-gapped.extend-double, .gap-bottom.extend-gap-top.extend-double, .gap-bottom.extend-gap-right.extend-double, .gap-bottom.extend-gap-left.extend-double, .gap-left.double.extend-gap-bottom, .extend-gap-bottom.extend-double {
-  margin-bottom: 20px;
-}
-.padded.triple.extend-gap-bottom, .pad-top.triple.extend-gap-bottom, .pad-right.triple.extend-gap-bottom, .pad-bottom.triple.extend-gap-bottom, .pad-left.triple.extend-gap-bottom, .gapped.triple.extend-gap-bottom, .gap-top.triple.extend-gap-bottom, .gap-right.triple.extend-gap-bottom, .gap-bottom.triple, .gap-bottom.extend-padded.extend-triple, .gap-bottom.extend-pad-top.extend-triple, .gap-bottom.extend-pad-right.extend-triple, .gap-bottom.extend-pad-bottom.extend-triple, .gap-bottom.extend-pad-left.extend-triple, .gap-bottom.extend-gapped.extend-triple, .gap-bottom.extend-gap-top.extend-triple, .gap-bottom.extend-gap-right.extend-triple, .gap-bottom.extend-gap-left.extend-triple, .gap-left.triple.extend-gap-bottom, .extend-gap-bottom.extend-triple {
-  margin-bottom: 30px;
-}
-
-.gap-left, .extend-gap-left {
-  margin-left: 10px;
-}
-.padded.double.extend-gap-left, .pad-top.double.extend-gap-left, .pad-right.double.extend-gap-left, .pad-bottom.double.extend-gap-left, .pad-left.double.extend-gap-left, .gapped.double.extend-gap-left, .gap-top.double.extend-gap-left, .gap-right.double.extend-gap-left, .gap-bottom.double.extend-gap-left, .gap-left.double, .gap-left.extend-padded.extend-double, .gap-left.extend-pad-top.extend-double, .gap-left.extend-pad-right.extend-double, .gap-left.extend-pad-bottom.extend-double, .gap-left.extend-pad-left.extend-double, .gap-left.extend-gapped.extend-double, .gap-left.extend-gap-top.extend-double, .gap-left.extend-gap-right.extend-double, .gap-left.extend-gap-bottom.extend-double, .extend-gap-left.extend-double {
-  margin-left: 20px;
-}
-.padded.triple.extend-gap-left, .pad-top.triple.extend-gap-left, .pad-right.triple.extend-gap-left, .pad-bottom.triple.extend-gap-left, .pad-left.triple.extend-gap-left, .gapped.triple.extend-gap-left, .gap-top.triple.extend-gap-left, .gap-right.triple.extend-gap-left, .gap-bottom.triple.extend-gap-left, .gap-left.triple, .gap-left.extend-padded.extend-triple, .gap-left.extend-pad-top.extend-triple, .gap-left.extend-pad-right.extend-triple, .gap-left.extend-pad-bottom.extend-triple, .gap-left.extend-pad-left.extend-triple, .gap-left.extend-gapped.extend-triple, .gap-left.extend-gap-top.extend-triple, .gap-left.extend-gap-right.extend-triple, .gap-left.extend-gap-bottom.extend-triple, .extend-gap-left.extend-triple {
-  margin-left: 30px;
-}
-
-.stick {
-  position: fixed;
-  z-index: 1;
-}
-.stick.top {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-}
-.stick.right {
-  position: fixed;
-  z-index: 1;
-  right: 0;
-}
-.stick.bottom {
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-}
-.stick.left {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-}
-.stick.middle {
-  position: fixed;
-  z-index: 1;
-  top: 50%;
-}
-.center.stick, .stick.extend-center {
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-}
-
-.inline, .extend-inline {
-  display: inline-block;
-  width: auto;
-}
-
-.block, .extend-block {
-  display: block;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.small, sup, .sup, sub, .sub, small {
-  font-size: 0.8em;
-}
-
-big, .big, .large, big, .big {
-  font-size: 1.5em;
-}
-
-.zero, .extend-zero {
-  margin: 0;
-  padding: 0;
-}
-
-.pull-right, .extend-pull-right {
-  float: right;
-}
-
-.pull-left, .extend-pull-left {
-  float: left;
-}
-
-.bordered, .extend-bordered {
-  border: 1px solid #dddddd;
-}
-
-.border-top, .extend-border-top {
-  border-top: 1px solid #dddddd;
-}
-
-.border-right, .extend-border-right {
-  border-right: 1px solid #dddddd;
-}
-
-.border-bottom, .extend-border-bottom {
-  border-bottom: 1px solid #dddddd;
-}
-
-.border-left, .extend-border-left {
-  border-left: 1px solid #dddddd;
-}
-
-.align-top, .extend-align-top {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.align-right, .extend-align-right {
-  text-align: right;
-}
-
-.align-bottom, .extend-align-bottom {
-  display: table-cell;
-  vertical-align: bottom;
-}
-
-.align-left, .extend-align-left {
-  text-align: left;
-}
-
-.align-center, .extend-align-center {
-  text-align: center;
-}
-
-.justify, .extend-justify {
-  text-align: justify;
-}
-
-.truncate, .js .responsive:not(table), .extend-truncate {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.center, .stick.center, .extend-center {
-  display: block;
-  margin: 0 auto;
-}
-
-.spacer, .extend-spacer {
-  height: 10px;
-}
-
-.square {
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-
-.round, .extend-round {
-  -ms-border-radius: 9999px;
-  -o-border-radius: 9999px;
-  -moz-border-radius: 9999px;
-  -webkit-border-radius: 9999px;
-  border-radius: 9999px;
-}
-
-.disabled, .extend-disabled {
-  color: #d9d9d9;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-.disabled:hover, .extend-disabled:hover, .disabled:focus, .extend-disabled:focus, .disabled:visited, .extend-disabled:visited {
-  color: #d9d9d9;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-
-.rotate-90, .extend-rotate-90 {
-  display: inline-block;
-  width: auto;
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.rotate-180, .extend-rotate-180 {
-  display: inline-block;
-  width: auto;
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.rotate-270, .extend-rotate-270 {
-  display: inline-block;
-  width: auto;
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg);
-}
-
-.rotate-90-ctr, .extend-rotate-90-ctr {
-  display: inline-block;
-  width: auto;
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
-.rotate-180-ctr, .extend-rotate-180-ctr {
-  display: inline-block;
-  width: auto;
-  -ms-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.rotate-270-ctr, .extend-rotate-270-ctr {
-  display: inline-block;
-  width: auto;
-  -ms-transform: rotate(-270deg);
-  -o-transform: rotate(-270deg);
-  -moz-transform: rotate(-270deg);
-  -webkit-transform: rotate(-270deg);
-  transform: rotate(-270deg);
-}
-
-.spin, .extend-spin {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 2s linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: spin 2s linear;
-  -o-animation-iteration-count: infinite;
-  -webkit-animation: spin 2s linear;
-  -webkit-animation-iteration-count: infinite;
-  animation: spin 2s linear;
-  animation-iteration-count: infinite;
-}
-
-.spin-once, .extend-spin-once {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 2s linear;
-  -moz-animation-iteration-count: 1;
-  -o-animation: spin 2s linear;
-  -o-animation-iteration-count: 1;
-  -webkit-animation: spin 2s linear;
-  -webkit-animation-iteration-count: 1;
-  animation: spin 2s linear;
-  animation-iteration-count: 1;
-}
-
-.spin-twice, .extend-spin-twice {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 2s linear;
-  -moz-animation-iteration-count: 2;
-  -o-animation: spin 2s linear;
-  -o-animation-iteration-count: 2;
-  -webkit-animation: spin 2s linear;
-  -webkit-animation-iteration-count: 2;
-  animation: spin 2s linear;
-  animation-iteration-count: 2;
-}
-
-.spin-thrice, .extend-spin-thrice {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 2s linear;
-  -moz-animation-iteration-count: 3;
-  -o-animation: spin 2s linear;
-  -o-animation-iteration-count: 3;
-  -webkit-animation: spin 2s linear;
-  -webkit-animation-iteration-count: 3;
-  animation: spin 2s linear;
-  animation-iteration-count: 3;
-}
-
-.spin-fast, .extend-spin-fast {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 1s linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: spin 1s linear;
-  -o-animation-iteration-count: infinite;
-  -webkit-animation: spin 1s linear;
-  -webkit-animation-iteration-count: infinite;
-  animation: spin 1s linear;
-  animation-iteration-count: infinite;
-}
-
-.spin-fast-once, .extend-spin-fast-once {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 1s linear;
-  -moz-animation-iteration-count: 1;
-  -o-animation: spin 1s linear;
-  -o-animation-iteration-count: 1;
-  -webkit-animation: spin 1s linear;
-  -webkit-animation-iteration-count: 1;
-  animation: spin 1s linear;
-  animation-iteration-count: 1;
-}
-
-.spin-fast-twice, .extend-spin-fast-twice {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 1s linear;
-  -moz-animation-iteration-count: 2;
-  -o-animation: spin 1s linear;
-  -o-animation-iteration-count: 2;
-  -webkit-animation: spin 1s linear;
-  -webkit-animation-iteration-count: 2;
-  animation: spin 1s linear;
-  animation-iteration-count: 2;
-}
-
-.spin-fast-thrice, .extend-spin-fast-thrice {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 1s linear;
-  -moz-animation-iteration-count: 3;
-  -o-animation: spin 1s linear;
-  -o-animation-iteration-count: 3;
-  -webkit-animation: spin 1s linear;
-  -webkit-animation-iteration-count: 3;
-  animation: spin 1s linear;
-  animation-iteration-count: 3;
-}
-
-.spin-slow, .extend-spin-slow {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 5s linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: spin 5s linear;
-  -o-animation-iteration-count: infinite;
-  -webkit-animation: spin 5s linear;
-  -webkit-animation-iteration-count: infinite;
-  animation: spin 5s linear;
-  animation-iteration-count: infinite;
-}
-
-.spin-slow-once, .extend-spin-slow-once {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 5s linear;
-  -moz-animation-iteration-count: 1;
-  -o-animation: spin 5s linear;
-  -o-animation-iteration-count: 1;
-  -webkit-animation: spin 5s linear;
-  -webkit-animation-iteration-count: 1;
-  animation: spin 5s linear;
-  animation-iteration-count: 1;
-}
-
-.spin-slow-twice, .extend-spin-slow-twice {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 5s linear;
-  -moz-animation-iteration-count: 2;
-  -o-animation: spin 5s linear;
-  -o-animation-iteration-count: 2;
-  -webkit-animation: spin 5s linear;
-  -webkit-animation-iteration-count: 2;
-  animation: spin 5s linear;
-  animation-iteration-count: 2;
-}
-
-.spin-slow-thrice, .extend-spin-slow-thrice {
-  display: inline-block;
-  width: auto;
-  -moz-animation: spin 5s linear;
-  -moz-animation-iteration-count: 3;
-  -o-animation: spin 5s linear;
-  -o-animation-iteration-count: 3;
-  -webkit-animation: spin 5s linear;
-  -webkit-animation-iteration-count: 3;
-  animation: spin 5s linear;
-  animation-iteration-count: 3;
-}
-
-.clear:after, .clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 /*
  *  Font Awesome 3.0.2b (customized for use with Groundwork)
  *  the iconic font designed for use with Twitter Bootstrap
@@ -3242,7 +3296,7 @@ ul.icons li [class*=" icon-"] {
 
 .AverageSans {
   /* might add inline-font-files() at some point */
-  font-family: AverageSans, Arial, Helvetica, Geneva, sans-serif;
+  font-family: AverageSans, Helvetica, Arial, Geneva, sans-serif;
 }
 
 @font-face {
@@ -3255,7 +3309,7 @@ ul.icons li [class*=" icon-"] {
 
 .AmericanTypewriter {
   /* might add inline-font-files() at some point */
-  font-family: AmericanTypewriter, Arial, Helvetica, Geneva, sans-serif;
+  font-family: AmericanTypewriter, Helvetica, Arial, Geneva, sans-serif;
 }
 
 /* vertical rhythm */

@@ -37,11 +37,18 @@
 // $gutter:              10px;       // gutter spacing
 // $grid:                12;          // number of columns, max 12
 
-// break points
-// $mobile:              "only screen and (max-width:480px)";
-// $small-tablet:        "only screen and (max-width:767px)";
-// $ipad:                "only screen and (min-width:768px) and (max-width:1024px)";
-// $desktop:             "only screen and (min-width:1025px)";
+// breakpoints
+// $small-mobile:        "(max-width: 319px)";
+// $iphone:              "(min-device-width: 320px) and (max-device-width: 480px)";
+// $iphone5:             "(min-device-width: 320px) and (max-device-width: 568px)";
+// $mobile:              "(max-width:480px)";
+// $not-mobile:          "(min-width:481px)";
+// $small-tablet:        "(max-width:767px)";
+// $tablet:              "(min-width: 768px)";
+// $ipad:                "(min-width:768px) and (max-width:1024px)";
+// $not-desktop:         "(max-width:1024px)";
+// $desktop:             "(min-width:1025px)";
+// $retina:              "(-webkit-min-device-pixel-ratio: 2)";
 
 
 

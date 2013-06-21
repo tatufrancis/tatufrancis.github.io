@@ -46,6 +46,8 @@ module.exports = (grunt) ->
           'templates/layout-3.html':      ['src/jade/layout-3.jade']
           'templates/layout-4.html':      ['src/jade/layout-4.jade']
           'templates/layout-5.html':      ['src/jade/layout-5.jade']
+          'templates/layout-6.html':      ['src/jade/layout-6.jade']
+          'templates/layout-7.html':      ['src/jade/layout-7.jade']
         options:
           pretty: true
       tests:
