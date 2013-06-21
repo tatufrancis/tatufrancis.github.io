@@ -1922,7 +1922,7 @@ big, .big, .large, big, .big {
   margin-left: 91.66667%;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .one-up-small-tablet {
     width: 100% !important;
     clear: none !important;
@@ -1953,7 +1953,7 @@ big, .big, .large, big, .big {
     float: left !important;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .one-up-mobile {
     width: 100% !important;
     clear: none !important;
@@ -1984,7 +1984,7 @@ big, .big, .large, big, .big {
     float: left !important;
   }
 }
-@media only screen and (max-width: 767px) and (min-width: 481px) {
+@media (max-width: 767px) and (min-width: 481px) {
   .one-up-small-tablet:nth-child(2) {
     clear: both !important;
   }
@@ -2005,7 +2005,7 @@ big, .big, .large, big, .big {
     clear: both !important;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .one-up-mobile:nth-child(2) {
     clear: both !important;
   }

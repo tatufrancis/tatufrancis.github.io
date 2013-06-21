@@ -129,7 +129,7 @@ $adapters: $one-whole $one-half $one-third $one-fourth $one-fifth;
   }
 }
 
-@media #{$small-tablet}#{$and-not-mobile} {
+@media #{$small-tablet} and #{$not-mobile} {
   @for $i from 1 through length($adapters) {
     .#{nth($numbers, ($i))}-up-small-tablet {
       &:nth-child(#{$i + 1}) {

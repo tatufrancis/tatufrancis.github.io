@@ -36,12 +36,18 @@ $boxsizing_path:      '/js/libs/boxsizing.htc' !default;  // path to box sizing 
 $max-width:           1200px !default;     // max container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing
 
-// break points
-$mobile:              "only screen and (max-width:480px)" !default;
-$and-not-mobile:      " and (min-width:481px)" !default;
-$small-tablet:        "only screen and (max-width:767px)" !default;
-$ipad:                "only screen and (min-width:768px) and (max-width:1024px)" !default;
-$desktop:             "only screen and (min-width:1025px)" !default;
+// breakpoints
+$small-mobile:        "(max-width: 319px)" !default;
+$iphone:              "(min-device-width: 320px) and (max-device-width: 480px)" !default;
+$iphone5:             "(min-device-width: 320px) and (max-device-width: 568px)" !default;
+$mobile:              "(max-width:480px)" !default;
+$not-mobile:          "(min-width:481px)" !default;
+$small-tablet:        "(max-width:767px)" !default;
+$tablet:              "(min-width: 768px)" !default;
+$ipad:                "(min-width:768px) and (max-width:1024px)" !default;
+$not-desktop:         "(max-width:1024px)" !default;
+$desktop:             "(min-width:1025px)" !default;
+$retina:              "(-webkit-min-device-pixel-ratio: 2)" !default;
 
 
 
