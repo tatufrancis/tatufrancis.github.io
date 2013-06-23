@@ -9,7 +9,7 @@
   position:relative;
   padding:5px 15px;
   background:$button-color;
-  border:1px solid $border-color;
+  border:1px solid $button-border-color;
   @include rounded($radius);
   @include drop-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
   font-size:13px;
@@ -63,7 +63,7 @@
   z-index:101;
   padding:5px 15px;
   background:$button-color;
-  border:1px solid $border-color;
+  border:1px solid $button-border-color;
   @include rounded($radius);
   @include drop-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
   font-size:13px;
@@ -128,7 +128,7 @@
       right:10px;
       bottom:-7px;
       left:auto;
-      border-top:6px solid $border-color;
+      border-top:6px solid $button-border-color;
       border-right:8px solid transparent;
       border-left:8px solid transparent;
     }
@@ -148,7 +148,7 @@
       right:auto;
       bottom:-7px;
       left:10px;
-      border-top:6px solid $border-color;
+      border-top:6px solid $button-border-color;
       border-right:8px solid transparent;
       border-left:8px solid transparent;
     }
@@ -169,7 +169,7 @@
       bottom:auto;
       left:auto;
       border-right:8px solid transparent;
-      border-bottom:6px solid $border-color;
+      border-bottom:6px solid $button-border-color;
       border-left:8px solid transparent;
     }
   }
@@ -189,7 +189,7 @@
       bottom:auto;
       left:10px;
       border-right:8px solid transparent;
-      border-bottom:6px solid $border-color;
+      border-bottom:6px solid $button-border-color;
       border-left:8px solid transparent;
     }
   }
