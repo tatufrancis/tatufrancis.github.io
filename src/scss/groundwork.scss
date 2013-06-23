@@ -5,18 +5,18 @@
 
 
 // custom settings
-@import "settings";         // customizable settings
+@import "settings";                   // customizable settings
 
-// core (required)
-@import "core/all";         // constants, defaults, mixins
-@import "base/all";         // reset, globals, grid, helpers, animations
+// core
+@import "core/all-core";              // constants, defaults, mixins
+@import "base/all-base";              // reset, globals, grid, helpers, animations
 
 // components
-@import "type/all";         // typography, font awesome, web fonts
-@import "nav/all";          // buttons, navigation, tabs
-@import "ui/all";           // messages, callouts, tables, tooltips, popovers, modals
-@import "form/all";         // forms, tiles
-@import "misc/all";         // social icons
+@import "type/all-type";        // typography, web fonts
+@import "nav/all-nav";                // buttons, navigation, tabs
+@import "ui/all-ui";                  // messages, callouts, tables, tooltips, popovers, modals
+@import "form/all-form";              // forms, tiles
+@import "icons/all-icons";            // font awesome, social icons
 
 // responsive adjustments
-@import "responsive/all";   // responsive navigation, tabs
+@import "responsive/all-responsive";  // responsive navigation, tabs
