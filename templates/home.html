@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]>   <html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]>   <html class="no-js ie ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><html class="no-js ie ie10"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
   <!--<![endif]-->
   <head>
     <meta charset="utf-8">
@@ -24,8 +26,7 @@
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
     <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]>
-    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]--><!--[if IE 7]>
-    <link type="text/css" rel="stylesheet" href="../css/font-awesome-ie7.min.css"><![endif]-->
+    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]-->
     <script type="text/javascript">
       // extend Modernizr to have datauri test
       (function(){
@@ -84,13 +85,15 @@
       </div>
     </header>
     <div class="container">
-      <h2 class="AverageSans zero">Example Layouts to Get You Going</h2>
-      <p>These are really just to introduce you how things can be done and (hopefully) spark your imagination.</p>
-      <div class="info callout">
-        <p><em>NOTE:</em> The very first thing you should do when using Groundwork is change the color code in the <code>`$button-color`</code> variable in <code>`src/scss/_settings`</code>.</p>
-      </div>
-      <div class="error callout">
-        <p>If I see <b>ugly teal buttons and nav menus</b> on thousands of websites in a year I will be the saddest panda. If you're terrible at design or don't know how to pick nice colors then just go to <b><a href="http://www.colourlovers.com/palettes" target="_blank">Colour Lovers</a></b> and pick from the gazillion beautiful palettes people have put together for you.</p>
+      <div class="padded">
+        <h2 class="AverageSans zero">Example Layouts to Get You Going</h2>
+        <p>These are really just to introduce you how things can be done and (hopefully) spark your imagination.</p>
+        <div class="info callout">
+          <p><em>NOTE:</em> The very first thing you should do when using Groundwork is change the color code in the <code>`$button-color`</code> variable in <code>`src/scss/_settings`</code>.</p>
+        </div>
+        <div class="error callout">
+          <p>If I see <b>ugly teal buttons and nav menus</b> on thousands of websites in a year I will be the saddest panda. If you're terrible at design or don't know how to pick nice colors then just go to <b><a href="http://www.colourlovers.com/palettes" target="_blank">Colour Lovers</a></b> and pick from the gazillion beautiful palettes people have put together for you.</p>
+        </div>
       </div>
       <div class="row">
         <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-1.html">
@@ -131,12 +134,12 @@
       <div class="container padded">
         <div class="green callout">
           <div class="row">
-            <div class="three fourths small-tablet">
+            <div class="three fourths padded">
               <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
               <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
             </div>
-            <div class="one fourth small-tablet">
-              <p class="large align-right"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large gapped tooltip"><i class="icon-twitter"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large gapped tooltip"><i class="icon-github"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large gapped tooltip"><i class="icon-envelope-alt"></i></a></p>
+            <div class="one fourth padded">
+              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
             </div>
           </div>
         </div>

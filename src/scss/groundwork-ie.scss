@@ -1,14 +1,11 @@
 /* =============================================
- *                 IE hacks
- *          Last Updated:2013-4-24
+ *             Legacy IE Support
+ *          Last Updated:2013-6-23
  * ===========================================*/
 
 
-// custom settings
-@import "settings";     // optional
-
-// core
-@import "core/all";         // required
+@import "settings";
+@import "core/all-core";
 
 
 
@@ -71,6 +68,7 @@ html {
     }
   }
   &.lt-ie8 {
+    @import "icons/font-awesome-ie7";
     // navigation
     nav {
       &.inline {

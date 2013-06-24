@@ -1,9 +1,11 @@
 !!! 5
-//\[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]
-//\[if IE 7]>   <html class="no-js lt-ie9 lt-ie8"><![endif]
-//\[if IE 8]>   <html class="no-js lt-ie9"><![endif]
-//\[if gt IE 8]><!
-html(class='no-js', lang='en')
+//\[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]
+//\[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]
+//\[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]
+//\[if IE 9]>   <html class="no-js ie ie9 lt-ie10"><![endif]
+//\[if gt IE 9]><html class="no-js ie ie10"><![endif]
+//\[if !IE]><!
+html.no-js
   //\<![endif]
 
   head
@@ -28,8 +30,6 @@ html(class='no-js', lang='en')
       link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
     //if lt IE 9
       script(type='text/javascript', src='../js/libs/html5shiv.min.js')
-    //if IE 7
-      link(type='text/css', rel='stylesheet', href='../css/font-awesome-ie7.min.css')
     script(type='text/javascript')
       // extend Modernizr to have datauri test
       (function(){
@@ -98,7 +98,7 @@ html(class='no-js', lang='en')
       .container.padded
         .green.callout
           .row
-            .three.fourths.small-tablet
+            .three.fourths.padded
               p
                 | GroundworkCSS is 
                 b 100% free
@@ -115,14 +115,14 @@ html(class='no-js', lang='en')
                   | filing an issue 
                   i.icon-github
                 |  on Github.
-            .one.fourth.small-tablet
-              p.large.align-right
-                a.large.gapped.tooltip(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
-                  i.icon-twitter
-                a.large.gapped.tooltip(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
-                  i.icon-github
-                a.large.gapped.tooltip(href="mailto:groundwork@sidereel.com", title="groundwork@sidereel.com", style="text-decoration:none;")
-                  i.icon-envelope-alt
+            .one.fourth.padded
+              p.large.padded.align-center
+                a.large.inline.gapped.tooltip(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
+                  i.icon-twitter-sign
+                a.large.inline.gapped.tooltip(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
+                  i.icon-github-sign
+                a.large.inline.gapped.tooltip(href="mailto:groundwork@sidereel.com", title="groundwork@sidereel.com", style="text-decoration:none;")
+                  i.icon-envelope
 
     // scripts
     script(type='text/javascript', src='../js/plugins/jquery.cycle2.js')
