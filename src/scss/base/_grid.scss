@@ -111,8 +111,8 @@ $adapters: $one-whole $one-half $one-third $one-fourth $one-fifth;
   @for $i from 1 through length($selectors) {
     @for $j from 2 through $grid {
       @if $both {
-        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile)"), comma);
-        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile)"), comma);
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)"), comma);
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)"), comma);
         @for $right-left-skip from 1 through $j - 1 {
           $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
           $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.small-tablet):not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
@@ -123,11 +123,14 @@ $adapters: $one-whole $one-half $one-third $one-fourth $one-fifth;
         }
       }
       @else {
-        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)"), comma);
-        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)"), comma);
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)"), comma);
+        $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)"), comma);
         @for $right-left-skip from 1 through $j - 1 {
+          $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
           $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)#{nth($selectors, $i)}right-#{nth($numbers, $right-left-skip)}"), comma);
           $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)#{nth($selectors, $i)}left-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)#{nth($selectors, $i)}left-#{nth($numbers, $right-left-skip)}"), comma);
+          $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($fractions, $j)}:not(.mobile)#{nth($selectors, $i)}skip-#{nth($numbers, $right-left-skip)}"), comma);
           $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($fractions-plural, $j)}:not(.mobile)#{nth($selectors, $i)}skip-#{nth($numbers, $right-left-skip)}"), comma);
         }
       }
