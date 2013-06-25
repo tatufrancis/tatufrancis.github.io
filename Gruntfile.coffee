@@ -67,12 +67,21 @@ module.exports = (grunt) ->
         options:
           config: 'tests/config.rb'
 
+    cssmin:
+      minify:
+        expand: true,
+        cwd: 'css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'css/',
+        ext: '.min.css'
+
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
 
   grunt.registerTask 'default',           ['watch']
-  grunt.registerTask 'build',             ['coffee', 'concat:groundwork', 'jade:groundwork', 'compass:groundwork']
+  grunt.registerTask 'build',             ['coffee', 'concat:groundwork', 'jade:groundwork', 'compass:groundwork', 'cssmin']
   grunt.registerTask "tests",             ['jade:tests', 'compass:tests']
