@@ -9,10 +9,10 @@ input[type=checkbox], input[type=radio] {
   display: inline-block;
   width: auto !important;
   height: auto !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
   border-radius: 0;
 }
 

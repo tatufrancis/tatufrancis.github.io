@@ -20,7 +20,7 @@
   %#{nth($web-font-names, $i)} {
     @include font-stack(#{nth($web-font-names, $i)});
   }
-  @if $classes {
+  @if $webfont-classes {
     .#{nth($web-font-names, $i)} {
       @extend %#{nth($web-font-names, $i)};
     }

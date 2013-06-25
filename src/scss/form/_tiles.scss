@@ -1,8 +1,7 @@
-// ===================================
-//         GroundworkCSS Squares
-// ===================================
-
-
+// =============================================
+//                   Tiles
+//          Last Updated:2013-6-25
+// =============================================
 
 
 %tiles {
@@ -24,7 +23,7 @@
   text-overflow:ellipsis;
   white-space:nowrap;
   @include transition(background-color 0.25s ease-out);
-  @include rounded($radius);
+  @include rounded($default-radius);
   cursor:pointer;
   &:hover, &:focus {
     text-decoration:none;
@@ -75,7 +74,7 @@
   }  
 }
 
-@if $classes {
+@if $tiles {
   .tiles {
     @extend %tiles;
     .tile {
@@ -83,10 +82,9 @@
       i {
         @extend %tile-icon;
       }
-      $modifiers: on active small large square round disabled;
-      @for $i from 1 through length($modifiers) {
-        &.#{nth($modifiers, $i)} {
-          @extend %tile-#{nth($modifiers, $i)};
+      @for $i from 1 through length($tile-modifiers) {
+        &.#{nth($tile-modifiers, $i)} {
+          @extend %tile-#{nth($tile-modifiers, $i)};
         }
       }
       // modifier colors

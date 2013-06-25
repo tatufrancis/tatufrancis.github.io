@@ -121,6 +121,8 @@ block content
               span.error Error
               br
               span.success Success
+              br
+              span.disabled Disabled
           .one.third.padded
             ul.list
               li.yellow Styled list item
@@ -206,10 +208,6 @@ block content
                 a(href="#") Styled ordered link list item 1
               li
                 a(href="#") Styled ordered link list item 2
-        h4.AverageSans Link States
-        .row
-          .one.whole.padded
-            a.disabled(href="#") Disabled link item
         hr
         br
         h2.AmericanTypewriter Web Fonts Usage
@@ -906,7 +904,21 @@ block content
             p.alert.message This is an alert message.
             p.warning.message This is a warning message.
             p.error.message This is an error message.
-            hr
+            p.disabled.message This is a disabled message.
+            p.dismissible.message This is a dismissible message.
+          .one.half
+            h4.AverageSans Colors
+            p.dismissible.yellow.message This is a yellow message.
+            p.dismissible.orange.message This is an orange message.
+            p.dismissible.red.message This is a red message.
+            p.dismissible.pink.message This is a pink message.
+            p.dismissible.purple.message This is a purple message.
+            p.dismissible.asphalt.message This is an asphalt message.
+            p.dismissible.blue.message This is a blue message.
+            p.dismissible.turquoise.message This is a turquoise message.
+            p.dismissible.green.message This is a green message.
+        .row
+          .one.half.pad-right.no-pad-small-tablet
             h4.AverageSans Callout Boxes
             .callout
               h4 This is a default callout box
@@ -926,56 +938,53 @@ block content
             .error.callout
               h4 This is an error callout box
               p Use these to contain or call attention to special content.
-            hr
-            h4.AverageSans Square
+            .disabled.callout
+              h4 This is a disabled callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.callout
+              h4 This is a dismissible callout box
+              p Use these to contain or call attention to special content.
+          .one.half
+            h4.AverageSans Colors
+            .dismissible.yellow.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.orange.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.red.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.pink.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.purple.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.asphalt.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.blue.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.turquoise.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+            .dismissible.green.callout
+              h4 This is a callout box
+              p Use these to contain or call attention to special content.
+        .row
+          .one.half.pad-right.no-pad-small-tablet
+            h4.AverageSans Square Boxes
             p.info.message.square This is an info message.
             .info.callout.square
               h4 This is an info callout box
               p Use these to contain or call attention to special content.
-            hr
-            h4.AverageSans Round
-            p.info.message.round This is an info message.
-            .info.callout.round
-              h4 This is an info callout box
-              p Use these to contain or call attention to special content.
           .one.half
-            h4.AverageSans Colors
-            p.yellow.message This is an error message.
-            p.orange.message This is an error message.
-            p.red.message This is an error message.
-            p.pink.message This is an error message.
-            p.purple.message This is an error message.
-            p.asphalt.message This is an error message.
-            p.blue.message This is an error message.
-            p.turquoise.message This is an error message.
-            p.green.message This is an error message.
-            hr
-            .yellow.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .orange.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .red.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .pink.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .purple.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .asphalt.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .blue.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .turquoise.callout
-              h4 This is a callout box
-              p Use these to contain or call attention to special content.
-            .green.callout
-              h4 This is a callout box
+            h4.AverageSans Round Boxes
+            p.info.message.round.align-center This is a round info message.
+            .info.callout.round.align-center
+              h4 This is a round info callout box
               p Use these to contain or call attention to special content.
         hr
         br

@@ -1,6 +1,7 @@
-// ===================================
-//            Small Tablet
-// ===================================
+// =============================================
+//               Small Tablet
+//          Last Updated:2013-6-25
+// =============================================
 
 
 
@@ -25,6 +26,7 @@
 ///////////////////////
 //    small tablet   //
 ///////////////////////
+
 @include small-tablet {
   %nav-not-pagination {
     width:100%;
@@ -34,17 +36,17 @@
         width:100% !important;
         &:first-child {
           > a {
-            @include rounded($radius $radius 0 0);
+            @include rounded($default-radius $default-radius 0 0);
           }
         }
         &:last-child {
           > a {
-            @include rounded(0 0 $radius $radius);
+            @include rounded(0 0 $default-radius $default-radius);
           }
         }
         &:only-child {
           > a {
-            @include rounded($radius);
+            @include rounded($default-radius);
           }
         }
         a {
@@ -68,18 +70,18 @@
         }
         &:first-child {
           a {
-            @include rounded($radius $radius 0 0);
+            @include rounded($default-radius $default-radius 0 0);
           }
         }
         &:last-child {
           a {
-            @include rounded(0 0 $radius $radius);
+            @include rounded(0 0 $default-radius $default-radius);
           }
           ul {
             li {
               &:last-child {
                 a {
-                  @include rounded(0 0 $radius $radius);
+                  @include rounded(0 0 $default-radius $default-radius);
                 }
               }
             }
@@ -87,7 +89,7 @@
         }
         &:only-child {
           a {
-            @include rounded($radius);
+            @include rounded($default-radius);
           }
         }
       }
@@ -106,7 +108,7 @@
     background-color:$button-color;
     padding:$gutter;
     padding-bottom:0;
-    @include rounded($radius);
+    @include rounded($default-radius);
     .menu-toggle {
       display:inline-block !important;
       float:right;
@@ -134,7 +136,7 @@
         }
         &:last-child {
           a {
-            @include rounded(0 0 $radius $radius !important);
+            @include rounded(0 0 $default-radius $default-radius !important);
           }
         }
         ul {
@@ -162,18 +164,18 @@
           }
         }
         &:first-child a {
-          @include rounded($radius $radius 0 0);
+          @include rounded($default-radius $default-radius 0 0);
         }
       }
     }
   }
 
-  @if $tags {
+  @if $nav-tags {
     nav:not(.pagination) {
       @extend %nav-not-pagination;
     }
 
-    @if $classes {
+    @if $nav-classes {
       nav.inline {
         @extend %nav-not-pagination;
       }
@@ -182,13 +184,15 @@
       }
     }
   }
-  @if $classes {
+  @if $nav-classes {
     .nav, .nav.inline {
       @extend %nav-not-pagination;
     }
     .nav.menu {
       @extend %nav-menu-not-pagination;
     }
+  }
+  @if $tab-classes {
     .tabs:not(.small-tablet):not(.mobile):not(.vertical) {
       @extend %normal-tabs;
     }

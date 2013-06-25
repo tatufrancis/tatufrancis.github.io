@@ -22,7 +22,7 @@
   height:auto;
   text-align:center;
   @include transition(background-color 0.25s ease-out);
-  @include rounded($radius);
+  @include rounded($default-radius);
   &:hover, &:focus {
     background:$button-active;
     text-decoration:none;
@@ -155,8 +155,8 @@
   left:0;
   width:100%;
   z-index:10;
-  @include drop-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
-  @include rounded(0 0 $radius $radius);
+  @include box-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
+  @include rounded(0 0 $default-radius $default-radius);
 }
 
 %dropdown-list-item {
@@ -176,7 +176,7 @@
     }
   }
   &:last-child {
-    @include rounded(0 0 $radius $radius);
+    @include rounded(0 0 $default-radius $default-radius);
   }
 }
 
@@ -200,10 +200,10 @@
     margin:0;
     border-radius:0;
     &:first-child a {
-      border-radius:$radius 0 0 $radius;
+      border-radius:$default-radius 0 0 $default-radius;
     }
     &:last-child a {
-      border-radius:0 $radius $radius 0;
+      border-radius:0 $default-radius $default-radius 0;
     }
     a {
       display:block;
@@ -235,10 +235,9 @@
 }
 
 @mixin button_modifiers() {
-  $modifiers: small large on active disabled info alert warning error success square round block;
-  @for $i from 1 through length($modifiers) {
-    &.#{nth($modifiers, $i)} {
-      @extend %button-#{nth($modifiers, $i)};
+  @for $i from 1 through length($button-states) {
+    &.#{nth($button-states, $i)} {
+      @extend %button-#{nth($button-states, $i)};
     }
   }
   // modifier colors
@@ -249,14 +248,14 @@
   }
 }
 
-@if $tags {
+@if $button-tags {
   button,
   input[type=submit],
   input[type=button],
   input[type=reset] {
     @extend %button;
 
-    @if $classes {
+    @if $button-classes {
       @include button_modifiers;
     }
   }
@@ -284,7 +283,7 @@
 	}
 }
 
-@if $classes {
+@if $button-classes {
   .button,
   a.button,
   a.button:visited {
@@ -323,11 +322,11 @@
   }
 }
 
-@if $aria {
+@if $aria-selectors {
   [role~=button] {
     @extend %button;
 
-    @if $classes {
+    @if $button-classes {
       @include button_modifiers;
     }
   }

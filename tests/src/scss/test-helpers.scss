@@ -1,8 +1,8 @@
 $root_path: '../../';
 @import "../../../src/scss/core/all-core";
 @import "../../../src/scss/base/all-base";
-@import "../../../src/scss/type/all-type";
 @import "../../../src/scss/icons/all-icons";
+@import "../../../src/scss/type/all-type";
 // @import "../../../src/scss/nav/all-nav";
 // @import "../../../src/scss/ui/all-ui";
 // @import "../../../src/scss/form/all-form";
@@ -10,47 +10,57 @@ $root_path: '../../';
 @import "demo";
 
 
-$helpers: inline block 
-          zero 
-          pull-right pull-left 
-          bordered border-right border-left border-top border-bottom 
-          align-top align-right align-bottom align-left align-center justify 
-          truncate 
-          center 
-          disabled 
-          spacer 
-          round 
-          rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr 
-          spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
 
-@for $i from 1 through length($helpers) {
-  .extend-#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
-
-  // interpolated mixin/function calls not currently supported
-  // .include-#{nth($helpers, $i)} { @include _#{nth($helpers, $i)}; }
-
-  // proposed syntax with be something like: @call or @invoke
-  // .include-#{nth($helpers, $i)} { @call _#{nth($helpers, $i)}; }
+@for $i from 1 through length($layout-helpers) {
+  .extend-#{nth($layout-helpers, $i)} { @extend %#{nth($layout-helpers, $i)}; }
 }
-
-
-$spacers: padded pad-top pad-right pad-bottom pad-left 
-          gapped gap-top gap-right gap-bottom gap-left;
-$modifiers: double triple;
-
-@for $i from 1 through length($spacers) {
-  .extend-#{nth($spacers, $i)} {
-    @extend %#{nth($spacers, $i)};
-    @for $i from 1 through length($modifiers) {
-      &.extend-#{nth($modifiers, $i)} { @extend %#{nth($modifiers, $i)}; }
+@for $i from 1 through length($typography-helpers) {
+  .extend-#{nth($typography-helpers, $i)} { @extend %#{nth($typography-helpers, $i)}; }
+}
+@for $i from 1 through length($border-helpers) {
+  .extend-#{nth($border-helpers, $i)} { @extend %#{nth($border-helpers, $i)}; }
+}
+@for $i from 1 through length($radius-helpers) {
+  .extend-#{nth($radius-helpers, $i)} { @extend %#{nth($radius-helpers, $i)}; }
+}
+@for $i from 1 through length($rotation-helpers) {
+  .extend-#{nth($rotation-helpers, $i)} { @extend %#{nth($rotation-helpers, $i)}; }
+}
+@for $i from 1 through length($spin-helpers) {
+  .extend-#{nth($spin-helpers, $i)} { @extend %#{nth($spin-helpers, $i)}; }
+}
+@for $i from 1 through length($spacer-helpers) {
+  .extend-#{nth($spacer-helpers, $i)} {
+    @extend %#{nth($spacer-helpers, $i)};
+    @if $spacer-mod-classes {
+      @for $i from 1 through length($spacer-modifiers) {
+        &.#{nth($spacer-modifiers, $i)} { @extend %#{nth($spacer-modifiers, $i)}; }
+      }
     }
   }
-  // interpolated mixin/function calls not currently supported
-  // .include-#{nth($helpers, $i)} { @include _#{nth($helpers, $i)}; }
-
-  // proposed syntax with be something like: @call or @invoke
-  // .include-#{nth($helpers, $i)} { @call _#{nth($helpers, $i)}; }
 }
+.extend-clear,
+.extend-clearfix            { @extend %clear;
+  &:after                   { content:''; display:block; clear:both; }
+}
+.extend-stick,
+.extend-fixed               { @extend %fixed;
+  &.top                     { @extend %fixed-top; }
+  &.right                   { @extend %fixed-right; }
+  &.bottom                  { @extend %fixed-bottom; }
+  &.left                    { @extend %fixed-left; }
+  &.middle                  { @extend %fixed-middle; }
+  &.center                  { @extend %fixed-center; }
+}
+.extend-absolute            { @extend %absolute;
+  &.top                     { @extend %absolute-top; }
+  &.right                   { @extend %absolute-right; }
+  &.bottom                  { @extend %absolute-bottom; }
+  &.left                    { @extend %absolute-left; }
+  &.middle                  { @extend %absolute-middle; }
+  &.center                  { @extend %absolute-center; }
+}
+.extend-static              { @extend %static; }
 
 
 // manual @include testing since interpolated mixin/function calls are not yet supported
@@ -97,61 +107,70 @@ $modifiers: double triple;
 .include-gap-left-double    { @include _gap-left(2); }
 .include-gap-left-triple    { @include _gap-left(3); }
 
-.include-inline           { @include _inline; }
-.include-block            { @include _block; }
+.include-stick              { @include _fixed; }
+.include-stick-top          { @include _fixed(top); }
+.include-stick-right        { @include _fixed(right); }
+.include-stick-bottom       { @include _fixed(bottom); }
+.include-stick-left         { @include _fixed(left); }
+.include-stick-middle       { @include _fixed(middle); }
+.include-stick-center       { @include _fixed(center); }
 
-.include-zero             { @include _zero; }
+.include-absolute           { @include _absolute; }
+.include-absolute-top       { @include _absolute(top); }
+.include-absolute-right     { @include _absolute(right); }
+.include-absolute-bottom    { @include _absolute(bottom); }
+.include-absolute-left      { @include _absolute(left); }
+.include-absolute-middle    { @include _absolute(middle); }
+.include-absolute-center    { @include _absolute(center); }
 
-.include-pull-right       { @include _pull-right; }
-.include-pull-left        { @include _pull-left; }
+.include-static             { @include _static; }
 
-.include-bordered         { @include _bordered; }
-.include-border-top       { @include _border-top; }
-.include-border-right     { @include _border-right; }
-.include-border-bottom    { @include _border-bottom; }
-.include-border-left      { @include _border-left; }
+.include-inline             { @include _inline; }
+.include-block              { @include _block; }
+.include-hidden             { @include _hidden; }
 
-.include-align-top        { @include _align-top; }
-.include-align-right      { @include _align-right; }
-.include-align-bottom     { @include _align-bottom; }
-.include-align-left       { @include _align-left; }
-.include-align-center     { @include _align-center; }   
-.include-justify          { @include _justify; }
+.include-zero               { @include _zero; }
 
-.include-truncate         { @include _truncate; }
+.include-pull-right         { @include _pull-right; }
+.include-pull-left          { @include _pull-left; }
 
-.include-center           { @include _center; }
+.include-bordered           { @include _bordered; }
+.include-border-top         { @include _border-top; }
+.include-border-right       { @include _border-right; }
+.include-border-bottom      { @include _border-bottom; }
+.include-border-left        { @include _border-left; }
 
-.include-spacer           { @include _spacer; }
+.include-align-top          { @include _align-top; }
+.include-align-right        { @include _align-right; }
+.include-align-bottom       { @include _align-bottom; }
+.include-align-left         { @include _align-left; }
+.include-align-center       { @include _align-center; }   
+.include-justify            { @include _justify; }
 
-.include-round            { @include _round; }
+.include-truncate           { @include _truncate; }
 
-.include-disabled         { @include _disabled; }
+.include-center             { @include _center; }
 
-.include-rotate-90        { @include _rotate-90; }
-.include-rotate-180       { @include _rotate-180; }
-.include-rotate-270       { @include _rotate-270; }
-.include-rotate-90-ctr    { @include _rotate-90-ctr; }
-.include-rotate-180-ctr   { @include _rotate-180-ctr; }
-.include-rotate-270-ctr   { @include _rotate-270-ctr; }
+.include-round              { @include _round; }
 
-.include-spin             { @include _spin; }
-.include-spin-once        { @include _spin-once; }
-.include-spin-twice       { @include _spin-twice; }
-.include-spin-thrice      { @include _spin-thrice; }
-.include-spin-fast        { @include _spin-fast; }
-.include-spin-fast-once   { @include _spin-fast-once; }
-.include-spin-fast-twice  { @include _spin-fast-twice; }
-.include-spin-fast-thrice { @include _spin-fast-thrice; }
-.include-spin-slow        { @include _spin-slow; }
-.include-spin-slow-once   { @include _spin-slow-once; }
-.include-spin-slow-twice  { @include _spin-slow-twice; }
-.include-spin-slow-thrice { @include _spin-slow-thrice; }
+.include-disabled           { @include _disabled; }
 
-.include-stick            { @include _stick; }
-.include-stick-top        { @include _stick(top); }
-.include-stick-right      { @include _stick(right); }
-.include-stick-bottom     { @include _stick(bottom); }
-.include-stick-left       { @include _stick(left); }
-.include-stick-middle     { @include _stick(middle); }
-.include-stick-center     { @include _stick(center); }
+.include-rotate-90          { @include _rotate-90; }
+.include-rotate-180         { @include _rotate-180; }
+.include-rotate-270         { @include _rotate-270; }
+.include-rotate-90-ctr      { @include _rotate-90-ctr; }
+.include-rotate-180-ctr     { @include _rotate-180-ctr; }
+.include-rotate-270-ctr     { @include _rotate-270-ctr; }
+
+.include-spin               { @include _spin; }
+.include-spin-once          { @include _spin-once; }
+.include-spin-twice         { @include _spin-twice; }
+.include-spin-thrice        { @include _spin-thrice; }
+.include-spin-fast          { @include _spin-fast; }
+.include-spin-fast-once     { @include _spin-fast-once; }
+.include-spin-fast-twice    { @include _spin-fast-twice; }
+.include-spin-fast-thrice   { @include _spin-fast-thrice; }
+.include-spin-slow          { @include _spin-slow; }
+.include-spin-slow-once     { @include _spin-slow-once; }
+.include-spin-slow-twice    { @include _spin-slow-twice; }
+.include-spin-slow-thrice   { @include _spin-slow-thrice; }
