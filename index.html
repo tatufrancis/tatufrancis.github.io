@@ -44,13 +44,16 @@
       };
       datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
     })();
-    // fallback if SVG unsupported
-    Modernizr.load({
-      test: Modernizr.inlinesvg,
-      nope: [
-        './css/no-svg.css'
-      ]
-    });
+    // SVG support?
+      Modernizr.load({
+        test: Modernizr.inlinesvg,
+        yep: [
+          './css/social-icons-svg.css'
+        ],
+        nope: [
+          './css/social-icons-png.css'
+        ]
+      });
     // polyfill for HTML5 placeholders
     Modernizr.load({
       test: Modernizr.input.placeholder,

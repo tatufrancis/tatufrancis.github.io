@@ -43,18 +43,21 @@
         };
         datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
       })();
-      // fallback if SVG unsupported
+      // SVG support?
       Modernizr.load({
         test: Modernizr.inlinesvg,
+        yep: [
+          '../css/social-icons-svg.css'
+        ],
         nope: [
-          '../css/no-svg.css'
+          '../css/social-icons-png.css'
         ]
       });
       // polyfill for HTML5 placeholders
       Modernizr.load({
         test: Modernizr.input.placeholder,
         nope: [
-          '../css/placeholder_polyfill.css',
+          '../css/placeholder_polyfill.min.css',
           '../js/libs/placeholder_polyfill.jquery.js'
         ]
       });
