@@ -215,89 +215,75 @@ img, a img {
 .stick, .fixed, .extend-stick,
 .extend-fixed {
   position: fixed;
-  z-index: 1;
 }
 
 .stick.top, .fixed.top, .extend-stick.top,
 .extend-fixed.top {
   position: fixed;
-  z-index: 1;
   top: 0;
 }
 
 .stick.right, .fixed.right, .extend-stick.right,
 .extend-fixed.right {
   position: fixed;
-  z-index: 1;
   right: 0;
 }
 
 .stick.bottom, .fixed.bottom, .extend-stick.bottom,
 .extend-fixed.bottom {
   position: fixed;
-  z-index: 1;
   bottom: 0;
 }
 
 .stick.left, .fixed.left, .extend-stick.left,
 .extend-fixed.left {
   position: fixed;
-  z-index: 1;
   left: 0;
 }
 
 .stick.middle, .fixed.middle, .extend-stick.middle,
 .extend-fixed.middle {
   position: fixed;
-  z-index: 1;
   top: 50%;
 }
 
 .stick.center, .fixed.center, .extend-stick.center,
 .extend-fixed.center {
   position: fixed;
-  z-index: 1;
   left: 50%;
 }
 
 .absolute, .extend-absolute {
   position: absolute;
-  z-index: 1;
 }
 
 .absolute.top, .extend-absolute.top {
   position: absolute;
-  z-index: 1;
   top: 0;
 }
 
 .absolute.right, .extend-absolute.right {
   position: absolute;
-  z-index: 1;
   right: 0;
 }
 
 .absolute.bottom, .extend-absolute.bottom {
   position: absolute;
-  z-index: 1;
   bottom: 0;
 }
 
 .absolute.left, .extend-absolute.left {
   position: absolute;
-  z-index: 1;
   left: 0;
 }
 
 .absolute.middle, .extend-absolute.middle {
   position: absolute;
-  z-index: 1;
   top: 50%;
 }
 
 .absolute.center, .extend-absolute.center {
   position: absolute;
-  z-index: 1;
   left: 50%;
 }
 
@@ -4408,83 +4394,69 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 
 .include-stick {
   position: fixed;
-  z-index: 1;
 }
 
 .include-stick-top {
   position: fixed;
-  z-index: 1;
   top: 0;
 }
 
 .include-stick-right {
   position: fixed;
-  z-index: 1;
   right: 0;
 }
 
 .include-stick-bottom {
   position: fixed;
-  z-index: 1;
   bottom: 0;
 }
 
 .include-stick-left {
   position: fixed;
-  z-index: 1;
   left: 0;
 }
 
 .include-stick-middle {
   position: fixed;
-  z-index: 1;
   top: 50%;
 }
 
 .include-stick-center {
   position: fixed;
-  z-index: 1;
   left: 50%;
 }
 
 .include-absolute {
   position: absolute;
-  z-index: 1;
 }
 
 .include-absolute-top {
   position: absolute;
-  z-index: 1;
   top: 0;
 }
 
 .include-absolute-right {
   position: absolute;
-  z-index: 1;
   right: 0;
 }
 
 .include-absolute-bottom {
   position: absolute;
-  z-index: 1;
   bottom: 0;
 }
 
 .include-absolute-left {
   position: absolute;
-  z-index: 1;
   left: 0;
 }
 
 .include-absolute-middle {
   position: absolute;
-  z-index: 1;
   top: 50%;
 }
 
 .include-absolute-center {
   position: absolute;
-  z-index: 1;
   left: 50%;
 }
 

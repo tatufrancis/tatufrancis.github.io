@@ -216,83 +216,69 @@ img, a img {
 
 .stick, .fixed {
   position: fixed;
-  z-index: 1;
 }
 
 .stick.top, .fixed.top {
   position: fixed;
-  z-index: 1;
   top: 0;
 }
 
 .stick.right, .fixed.right {
   position: fixed;
-  z-index: 1;
   right: 0;
 }
 
 .stick.bottom, .fixed.bottom {
   position: fixed;
-  z-index: 1;
   bottom: 0;
 }
 
 .stick.left, .fixed.left {
   position: fixed;
-  z-index: 1;
   left: 0;
 }
 
 .stick.middle, .fixed.middle {
   position: fixed;
-  z-index: 1;
   top: 50%;
 }
 
 .stick.center, .fixed.center {
   position: fixed;
-  z-index: 1;
   left: 50%;
 }
 
 .absolute {
   position: absolute;
-  z-index: 1;
 }
 
 .absolute.top {
   position: absolute;
-  z-index: 1;
   top: 0;
 }
 
 .absolute.right {
   position: absolute;
-  z-index: 1;
   right: 0;
 }
 
 .absolute.bottom {
   position: absolute;
-  z-index: 1;
   bottom: 0;
 }
 
 .absolute.left {
   position: absolute;
-  z-index: 1;
   left: 0;
 }
 
 .absolute.middle {
   position: absolute;
-  z-index: 1;
   top: 50%;
 }
 
 .absolute.center {
   position: absolute;
-  z-index: 1;
   left: 50%;
 }
 

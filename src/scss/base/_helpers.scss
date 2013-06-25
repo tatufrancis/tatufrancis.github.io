@@ -30,7 +30,6 @@
 
 @mixin _fixed($position: null) {
   position: fixed;
-  z-index: 1;
   @each $anchor in top, right, bottom, left {
     @if $position == $anchor {#{$position}: 0;}
   }
@@ -40,7 +39,6 @@
 
 @mixin _absolute($position: null) {
   position: absolute;
-  z-index: 1;
   @each $anchor in top, right, bottom, left {
     @if $position == $anchor {#{$position}: 0;}
   }
@@ -48,9 +46,7 @@
   @if $position == center {left: 50%;}
 }
 
-@mixin _static                    {
-  position: static;
-}
+@mixin _static                    { position: static; }
 
 @mixin _inline                    { display:inline-block; width:auto; }
 @mixin _block                     { display:block; }
