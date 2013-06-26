@@ -42,11 +42,14 @@
         };
         datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
       })();
-      // fallback if SVG unsupported
+      // SVG support?
       Modernizr.load({
         test: Modernizr.inlinesvg,
+        yep: [
+          '../css/social-icons-svg.css'
+        ],
         nope: [
-          '../css/no-svg.css'
+          '../css/social-icons-png.css'
         ]
       });
       // polyfill for HTML5 placeholders

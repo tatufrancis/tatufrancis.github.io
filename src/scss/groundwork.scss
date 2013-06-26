@@ -1,6 +1,6 @@
-/* =============================================
+/*! ============================================
  *       GroundworkCSS by Gary Hepting
- *          Last Updated:2013-4-24
+ *          Last Updated:2013-6-25
  * ===========================================*/
 
 
@@ -12,11 +12,11 @@
 @import "base/all-base";              // reset, globals, grid, helpers, animations
 
 // components
-@import "type/all-type";        // typography, web fonts
+@import "type/all-type";              // typography, web fonts
+@import "icons/all-icons";            // font awesome
 @import "nav/all-nav";                // buttons, navigation, tabs
 @import "ui/all-ui";                  // messages, callouts, tables, tooltips, popovers, modals
 @import "form/all-form";              // forms, tiles
-@import "icons/all-icons";            // font awesome, social icons
 
 // responsive adjustments
 @import "responsive/all-responsive";  // responsive navigation, tabs

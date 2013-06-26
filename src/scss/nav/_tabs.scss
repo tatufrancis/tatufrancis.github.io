@@ -1,6 +1,7 @@
-// ===================================
-//         GroundworkCSS Tabs
-// ===================================
+// =============================================
+//                   Tabs
+//          Last Updated:2013-6-25
+// =============================================
 
 
 
@@ -52,7 +53,7 @@
   line-height:1.5;
   height:2em;
   @include transition(background-color 0.25s ease-out);
-  @include rounded($radius $radius 0 0);
+  @include rounded($default-radius $default-radius 0 0);
   &:hover, &:focus {
     background:$button-active;
     border:1px solid $button-active;
@@ -111,7 +112,7 @@
   display:none;
   padding:$gutter * 2;
   background:$background-color;
-  @include rounded(0 0 $radius $radius);
+  @include rounded(0 0 $default-radius $default-radius);
   *:first-child {
     margin-top:0;
   }
@@ -129,14 +130,14 @@
   width:20%;
   background:$button-active;
   border-bottom:1px solid $button-active;
-  @include rounded($radius 0 0 $radius);
+  @include rounded($default-radius 0 0 $default-radius);
 }
 %vertical-tabs {
   float:none;
   margin:0 -1px 0 0;
   &:first-child {
     a  {
-      @include rounded($radius 0 0 0);
+      @include rounded($default-radius 0 0 0);
     }
   }
 }
@@ -162,58 +163,56 @@
   position:relative;
   left:20%;
   width:80%;
-  @include rounded(0 $radius $radius 0);
+  @include rounded(0 $default-radius $default-radius 0);
 }
 
-@if $classes {
+@if $tab-classes {
   .tabs {
     @extend %tabs;
-
-    @if $tags {
+    
+    > ul, > ol {
+      @extend %tablist;
+      li {
+        @extend %tab;
+        a, a:visited {
+          @extend %tab-link;
+        }
+      }
+    }
+    > div {
+      @extend %tabpanel;
+    }
+    &.vertical {
+      @extend %vertical-tabs;
       > ul, > ol {
-        @extend %tablist;
+        @extend %vertical-tablist;
         li {
-          @extend %tab;
+          @extend %vertical-tabs;
           a, a:visited {
-            @extend %tab-link;
+            @extend %vertical-tab-link;
           }
         }
       }
       > div {
-        @extend %tabpanel;
+        @extend %vertical-tabpanel;
       }
-      &.vertical {
-        @extend %vertical-tabs;
-        > ul, > ol {
-          @extend %vertical-tablist;
-          li {
-            @extend %vertical-tabs;
-            a, a:visited {
-              @extend %vertical-tab-link;
-            }
-          }
-        }
-        > div {
-          @extend %vertical-tabpanel;
-        }
 
-        @if $aria {
-          [role~=tablist] {
-            @extend %vertical-tablist;
-            [role~=tab] {
-              @extend %vertical-tabs;
-            }
+      @if $aria-selectors {
+        [role~=tablist] {
+          @extend %vertical-tablist;
+          [role~=tab] {
+            @extend %vertical-tabs;
           }
-          [role~=tabpanel] {
-            @extend %vertical-tabpanel;
-          }
+        }
+        [role~=tabpanel] {
+          @extend %vertical-tabpanel;
         }
       }
     }
   }
 }
 
-@if $aria {
+@if $aria-selectors {
   [role~=tabpanel] {
     @extend %tabs;
     [role~=tablist] {

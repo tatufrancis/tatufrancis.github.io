@@ -43,18 +43,21 @@
         };
         datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
       })();
-      // fallback if SVG unsupported
+      // SVG support?
       Modernizr.load({
         test: Modernizr.inlinesvg,
+        yep: [
+          '../css/social-icons-svg.css'
+        ],
         nope: [
-          '../css/no-svg.css'
+          '../css/social-icons-png.css'
         ]
       });
       // polyfill for HTML5 placeholders
       Modernizr.load({
         test: Modernizr.input.placeholder,
         nope: [
-          '../css/placeholder_polyfill.css',
+          '../css/placeholder_polyfill.min.css',
           '../js/libs/placeholder_polyfill.jquery.js'
         ]
       });
@@ -175,7 +178,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="one third padded"><b><span class="info">Info</span><br><span class="alert">Alert</span><br><span class="warning">Warning</span><br><span class="error">Error</span><br><span class="success">Success</span></b></div>
+            <div class="one third padded"><b><span class="info">Info</span><br><span class="alert">Alert</span><br><span class="warning">Warning</span><br><span class="error">Error</span><br><span class="success">Success</span><br><span class="disabled">Disabled</span></b></div>
             <div class="one third padded">
               <ul class="list">
                 <li class="yellow">Styled list item</li>
@@ -241,10 +244,6 @@
                 <li><a href="#">Styled ordered link list item 2</a></li>
               </ol>
             </div>
-          </div>
-          <h4 class="AverageSans">Link States</h4>
-          <div class="row">
-            <div class="one whole padded"><a href="#" class="disabled">Disabled link item</a></div>
           </div>
           <hr><br>
           <h2 class="AmericanTypewriter">Web Fonts Usage</h2>
@@ -909,7 +908,24 @@
               <p class="alert message">This is an alert message.</p>
               <p class="warning message">This is a warning message.</p>
               <p class="error message">This is an error message.</p>
-              <hr>
+              <p class="disabled message">This is a disabled message.</p>
+              <p class="dismissible message">This is a dismissible message.</p>
+            </div>
+            <div class="one half">
+              <h4 class="AverageSans">Colors</h4>
+              <p class="dismissible yellow message">This is a yellow message.</p>
+              <p class="dismissible orange message">This is an orange message.</p>
+              <p class="dismissible red message">This is a red message.</p>
+              <p class="dismissible pink message">This is a pink message.</p>
+              <p class="dismissible purple message">This is a purple message.</p>
+              <p class="dismissible asphalt message">This is an asphalt message.</p>
+              <p class="dismissible blue message">This is a blue message.</p>
+              <p class="dismissible turquoise message">This is a turquoise message.</p>
+              <p class="dismissible green message">This is a green message.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one half pad-right no-pad-small-tablet">
               <h4 class="AverageSans">Callout Boxes</h4>
               <div class="callout">
                 <h4>This is a default callout box</h4>
@@ -935,67 +951,69 @@
                 <h4>This is an error callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <hr>
-              <h4 class="AverageSans">Square</h4>
-              <p class="info message square">This is an info message.</p>
-              <div class="info callout square">
-                <h4>This is an info callout box</h4>
+              <div class="disabled callout">
+                <h4>This is a disabled callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <hr>
-              <h4 class="AverageSans">Round</h4>
-              <p class="info message round">This is an info message.</p>
-              <div class="info callout round">
-                <h4>This is an info callout box</h4>
+              <div class="dismissible callout">
+                <h4>This is a dismissible callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
             </div>
             <div class="one half">
               <h4 class="AverageSans">Colors</h4>
-              <p class="yellow message">This is an error message.</p>
-              <p class="orange message">This is an error message.</p>
-              <p class="red message">This is an error message.</p>
-              <p class="pink message">This is an error message.</p>
-              <p class="purple message">This is an error message.</p>
-              <p class="asphalt message">This is an error message.</p>
-              <p class="blue message">This is an error message.</p>
-              <p class="turquoise message">This is an error message.</p>
-              <p class="green message">This is an error message.</p>
-              <hr>
-              <div class="yellow callout">
+              <div class="dismissible yellow callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="orange callout">
+              <div class="dismissible orange callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="red callout">
+              <div class="dismissible red callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="pink callout">
+              <div class="dismissible pink callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="purple callout">
+              <div class="dismissible purple callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="asphalt callout">
+              <div class="dismissible asphalt callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="blue callout">
+              <div class="dismissible blue callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="turquoise callout">
+              <div class="dismissible turquoise callout">
                 <h4>This is a callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
-              <div class="green callout">
+              <div class="dismissible green callout">
                 <h4>This is a callout box</h4>
+                <p>Use these to contain or call attention to special content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one half pad-right no-pad-small-tablet">
+              <h4 class="AverageSans">Square Boxes</h4>
+              <p class="info message square">This is an info message.</p>
+              <div class="info callout square">
+                <h4>This is an info callout box</h4>
+                <p>Use these to contain or call attention to special content.</p>
+              </div>
+            </div>
+            <div class="one half">
+              <h4 class="AverageSans">Round Boxes</h4>
+              <p class="info message round align-center">This is a round info message.</p>
+              <div class="info callout round align-center">
+                <h4>This is a round info callout box</h4>
                 <p>Use these to contain or call attention to special content.</p>
               </div>
             </div>
@@ -2781,6 +2799,29 @@
               <h5><span title=".twitter.social-icon" class="social-icon twitter tooltip"></span> Example of avatar embedded in a level 5 heading</h5>
               <h6><span title=".twitter.social-icon" class="social-icon twitter tooltip"></span> Example of avatar embedded in a level 6 heading</h6>
               <p><span title=".twitter.social-icon" class="social-icon twitter tooltip"></span> Example of avatar embedded in a paragraph</p>
+            </div>
+          </div>
+          <hr><br>
+          <h2 class="AmericanTypewriter">Helpers</h2>
+          <div class="row">
+            <div class="one half small-tablet">
+              <h4>Spin</h4>
+              <p>
+                <button class="spin large round">Spin</button>
+                <button class="spin-slow large round">Slow</button>
+                <button class="spin-fast large round">Fast</button><br><br>
+              </p>
+            </div>
+            <div class="one half small-tablet">
+              <h4>Conditional Content</h4>
+              <p class="desktop-only">Desktop only</p>
+              <p class="hide-on-desktop">Hide on desktop</p>
+              <p class="ipad-only">iPad only</p>
+              <p class="hide-on-ipad">Hide on iPad</p>
+              <p class="small-tablet-only">Small-tablet only</p>
+              <p class="hide-on-small-tablet">Hide on small-tablet</p>
+              <p class="mobile-only">Mobile only</p>
+              <p class="hide-on-mobile">Hide on mobile</p>
             </div>
           </div>
           <hr><br>

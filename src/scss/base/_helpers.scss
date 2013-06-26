@@ -1,15 +1,15 @@
 // =============================================
 //              Layout Helpers
-//          Last Updated:2013-4-24
+//          Last Updated:2013-6-23
 // =============================================
 
 
-@import "animations";   // required
+@import "animations"; // required for spin helpers
 
 
-// ================================
-//             mixins
-// ================================
+///////////////////////
+//       mixins      //
+///////////////////////
 
 @mixin _clear                     { clear: both;
   &:after                         { content:''; display:block; clear:both; }
@@ -28,15 +28,25 @@
 @mixin _gap-bottom($multiple: 1)  { margin-bottom: $gutter * $multiple; }
 @mixin _gap-left($multiple: 1)    { margin-left: $gutter * $multiple; }
 
-@mixin _stick($position: null) {
+@mixin _fixed($position: null) {
   position: fixed;
-  z-index: 1;
   @each $anchor in top, right, bottom, left {
     @if $position == $anchor {#{$position}: 0;}
   }
   @if $position == middle {top: 50%;}
   @if $position == center {left: 50%;}
 }
+
+@mixin _absolute($position: null) {
+  position: absolute;
+  @each $anchor in top, right, bottom, left {
+    @if $position == $anchor {#{$position}: 0;}
+  }
+  @if $position == middle {top: 50%;}
+  @if $position == center {left: 50%;}
+}
+
+@mixin _static                    { position: static; }
 
 @mixin _inline                    { display:inline-block; width:auto; }
 @mixin _block                     { display:block; }
@@ -67,10 +77,8 @@
 
 @mixin _center                    { @include _block; margin:0 auto; }
 
-@mixin _spacer                    { height:$gutter; }
-
-@mixin _square                    { @include rounded(0); }
-@mixin _round                     { @include rounded(9999px); }
+@mixin _square                    { @include border-radius(0); }
+@mixin _round                     { @include rounded(9999em); }
 
 @mixin _disabled                  { @include state(disabled,textOnly); }
 
@@ -97,9 +105,9 @@
 
 
 
-// ================================
-//          placeholders
-// ================================
+///////////////////////
+//    placeholders   //
+///////////////////////
 
 %clear, %clearfix { @include _clear;}
 
@@ -145,14 +153,23 @@
   &%triple        { @include _gap-left(3); }
 }
 
-%stick            { @include _stick;
-  &%top           { @include _stick(top); }
-  &%right         { @include _stick(right); }
-  &%bottom        { @include _stick(bottom); }
-  &%left          { @include _stick(left); }
-  &%middle        { @include _stick(middle); }
-  &%center        { @include _stick(center); }
-}
+%fixed            { @include _fixed; }
+%fixed-top        { @include _fixed(top); }
+%fixed-right      { @include _fixed(right); }
+%fixed-bottom     { @include _fixed(bottom); }
+%fixed-left       { @include _fixed(left); }
+%fixed-middle     { @include _fixed(middle); }
+%fixed-center     { @include _fixed(center); }
+
+%absolute         { @include _absolute; }
+%absolute-top     { @include _absolute(top); }
+%absolute-right   { @include _absolute(right); }
+%absolute-bottom  { @include _absolute(bottom); }
+%absolute-left    { @include _absolute(left); }
+%absolute-middle  { @include _absolute(middle); }
+%absolute-center  { @include _absolute(center); }
+
+%static           { @include _static; }
 
 %inline           { @include _inline; }
 %block            { @include _block; }
@@ -183,8 +200,6 @@
 
 %center           { @include _center; }
 
-%spacer           { @include _spacer; }
-
 %square           { @include _square; }
 %round            { @include _round; }
 
@@ -213,42 +228,76 @@
 
 
 
-// ================================
-//            classes
-// ================================
+///////////////////////
+//      classes      //
+///////////////////////
 
-@if $classes {
-
-  // function to generate the simple helpers
-  $helpers: inline block hidden small large zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer square round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
-  @for $i from 1 through length($helpers) {
-    .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
+@if $layout-classes {
+  @for $i from 1 through length($layout-helpers) {
+    .#{nth($layout-helpers, $i)} { @extend %#{nth($layout-helpers, $i)}; }
   }
-
-  // function to generate the spacers (with nested modifiers)
-  $spacers: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left;
-  $modifiers: double triple;
-  @for $i from 1 through length($spacers) {
-    .#{nth($spacers, $i)} {
-      @extend %#{nth($spacers, $i)};
-      @for $i from 1 through length($modifiers) {
-        &.#{nth($modifiers, $i)} { @extend %#{nth($modifiers, $i)}; }
-      }
-    }
-  }
-
-  // manual declaration of the more complex helpers
   .clear, .clearfix { @extend %clear;
     &:after         { content:''; display:block; clear:both; }
   }
-  .disabled         { @extend %disabled; }
-  .stick            { @extend %stick;
-    &.top           { @extend %top; }
-    &.right         { @extend %right; }
-    &.bottom        { @extend %bottom; }
-    &.left          { @extend %left; }
-    &.middle        { @extend %middle; }
-    &.center        { @extend %center; }
+}
+@if $positioning-classes {
+  .stick, .fixed    { @extend %fixed;
+    &.top           { @extend %fixed-top; }
+    &.right         { @extend %fixed-right; }
+    &.bottom        { @extend %fixed-bottom; }
+    &.left          { @extend %fixed-left; }
+    &.middle        { @extend %fixed-middle; }
+    &.center        { @extend %fixed-center; }
   }
-
+  .absolute         { @extend %absolute;
+    &.top           { @extend %absolute-top; }
+    &.right         { @extend %absolute-right; }
+    &.bottom        { @extend %absolute-bottom; }
+    &.left          { @extend %absolute-left; }
+    &.middle        { @extend %absolute-middle; }
+    &.center        { @extend %absolute-center; }
+  }
+  .static           { @extend %static; }
+}
+@if $typography-classes {
+  @for $i from 1 through length($typography-helpers) {
+    .#{nth($typography-helpers, $i)} { @extend %#{nth($typography-helpers, $i)}; }
+  }
+}
+@if $size-classes {
+  @for $i from 1 through length($size-helpers) {
+    .#{nth($size-helpers, $i)} { @extend %#{nth($size-helpers, $i)}; }
+  }
+}
+@if $border-classes {
+  @for $i from 1 through length($border-helpers) {
+    .#{nth($border-helpers, $i)} { @extend %#{nth($border-helpers, $i)}; }
+  }
+}
+@if $radius-classes {
+  @for $i from 1 through length($radius-helpers) {
+    .#{nth($radius-helpers, $i)} { @extend %#{nth($radius-helpers, $i)}; }
+  }
+}
+@if $rotation-classes {
+  @for $i from 1 through length($rotation-helpers) {
+    .#{nth($rotation-helpers, $i)} { @extend %#{nth($rotation-helpers, $i)}; }
+  }
+}
+@if $spin-classes {
+  @for $i from 1 through length($spin-helpers) {
+    .#{nth($spin-helpers, $i)} { @extend %#{nth($spin-helpers, $i)}; }
+  }
+}
+@if $spacer-classes {
+  @for $i from 1 through length($spacer-helpers) {
+    .#{nth($spacer-helpers, $i)} {
+      @extend %#{nth($spacer-helpers, $i)};
+      @if $spacer-mod-classes {
+        @for $i from 1 through length($spacer-modifiers) {
+          &.#{nth($spacer-modifiers, $i)} { @extend %#{nth($spacer-modifiers, $i)}; }
+        }
+      }
+    }
+  }
 }

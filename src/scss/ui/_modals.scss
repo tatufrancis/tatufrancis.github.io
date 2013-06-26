@@ -345,7 +345,7 @@ button::-moz-focus-inner {
 // Image content type
 @if $include-image-type {
 
-  /* Main image in popup */
+  // Main image in popup
   img.mfp-img {
     width: auto;
     max-width: 100%;
@@ -359,7 +359,7 @@ button::-moz-focus-inner {
     margin: 0 auto;
   }
 
-  /* The shadow behind the image */
+  // The shadow behind the image
   .mfp-figure:after {
     content: '';
     position: absolute;
@@ -409,9 +409,7 @@ button::-moz-focus-inner {
   @if $include-mobile-layout-for-image {
 
       @media screen and (max-width: 800px) and (orientation:landscape), screen and (max-height: 300px) {
-        /**
-         * Remove all paddings around the image on small screen
-         */
+        // Remove all paddings around the image on small screen
         .mfp-img-mobile .mfp-image-holder {
           padding-left: 0;
           padding-right: 0;
@@ -419,7 +417,7 @@ button::-moz-focus-inner {
         .mfp-img-mobile img.mfp-img {
           padding: 0;
         }
-        /* The shadow behind the image */
+        // The shadow behind the image
         .mfp-img-mobile .mfp-figure:after {
           top: 0;
           bottom: 0;
@@ -527,11 +525,11 @@ button::-moz-focus-inner {
 
 .mfp-content {
   max-width: $max-width;
-  @include rounded($radius);
+  @include rounded($default-radius);
 }
 
 .mfp-iframe {
-  @include rounded($radius);
+  @include rounded($default-radius);
 }
 
 .mfp-iframe-holder {

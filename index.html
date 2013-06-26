@@ -18,9 +18,9 @@
   <!-- jQuery -->
   <script type="text/javascript" src="./js/libs/jquery-1.9.1.min.js"></script>
   <!-- GroundworkCSS -->
-  <link type="text/css" rel="stylesheet" href="./css/groundwork.css">
+  <link type="text/css" rel="stylesheet" href="./css/groundwork.min.css">
   <!--[if IE]>
-  <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.css">
+  <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.min.css">
   <![endif]-->
   <!--[if lt IE 9]>
   <script type="text/javascript" src="./js/libs/html5shiv.min.js"></script>
@@ -28,37 +28,6 @@
   <!--[if IE 7]>
   <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
   <![endif]-->
-  <script type="text/javascript">
-    // extend Modernizr to have datauri test
-    (function(){
-      var datauri = new Image();
-      datauri.onerror = function() {
-          Modernizr.addTest('datauri', function () { return false; });
-      };
-      datauri.onload = function() {
-          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
-          Modernizr.load({
-            test: Modernizr.datauri,
-            nope: './css/no-datauri.css'
-          });
-      };
-      datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-    })();
-    // fallback if SVG unsupported
-    Modernizr.load({
-      test: Modernizr.inlinesvg,
-      nope: [
-        './css/no-svg.css'
-      ]
-    });
-    // polyfill for HTML5 placeholders
-    Modernizr.load({
-      test: Modernizr.input.placeholder,
-      nope: [
-        './css/placeholder_polyfill.css',
-        './js/libs/placeholder_polyfill.jquery.js'
-      ]
-    });
   </script>
 </head>
 <body>
@@ -70,9 +39,6 @@
       background:#333 url('./images/black_linen_v2.png') center repeat;
       overflow:hidden;
       color:#fff;
-    }
-    .container {
-      max-width:480px;
     }
     #resizerFrame {
       width:100%;
@@ -157,18 +123,14 @@
       return url;
     }
     $(document).ready(function() {
-      $('#resizerFrame').each(function() {
-        $(this).css('max-width',$(window).width());
-        $(this).css('max-height',$(window).height());
-      });
       $('a[data-viewport-width]').on('click', function(e) {
         if($(this).attr('data-viewport-width') == '100%') {
-          newWidth = $(window).width();
+          newWidth = '100%';
         }else{
           newWidth = $(this).attr('data-viewport-width');
         }
         if($(this).attr('data-viewport-height') == '100%') {
-          newHeight = $(window).height();
+          newHeight = '100%';
         }else{
           newHeight = $(this).attr('data-viewport-height');
         }
@@ -212,12 +174,6 @@
         var stateObj = { resizer: 'resizer' };
         history.pushState(stateObj, url, href);
       });
-    });
-    $(window).resize(function() {
-      if($('#resizer li:first-child a').hasClass('active')) {
-        $('#resizerFrame').css('max-width', $(window).width());
-        $('#resizerFrame').css('max-height', $(window).height());
-      }
     });
   </script>
   <div style="position:fixed;top:0;z-index:99;width:100%;">

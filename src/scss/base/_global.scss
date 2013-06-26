@@ -1,14 +1,9 @@
 // =============================================
 //               Global Styles
-//          Last Updated:2013-4-24
+//          Last Updated:2013-6-23
 // =============================================
 
 
-
-
-///////////////////////
-//   global styles   //
-///////////////////////
 %html {
   width:100%;
   height:100%;
@@ -34,13 +29,11 @@
   border:none;
 }
 
-@if $tags {
+@if $global-tags {
   $elements: html hr img;
   @for $i from 1 through length($elements) {
-		@if not index($tag-elements, nth($elements, $i)) == false {
-			#{nth($elements, $i)} {
-				@extend %#{nth($elements, $i)};
-			}
+		#{nth($elements, $i)} {
+			@extend %#{nth($elements, $i)};
 		}
   }
   html, body {
@@ -49,16 +42,4 @@
   a img {
     @extend %img;
   }
-}
-
-@if $classes {
-  $names: html document hr img;
-  @for $i from 1 through length($names) {
-    .#{nth($names, $i)} {
-      @extend %#{nth($names, $i)};
-    }
-  }
-	.html, .body {
-		@extend %document;
-	}
 }

@@ -1,8 +1,11 @@
-// =============================================
-//        Social icons by Gary Hepting 
-//           Last Updated:2013-1-18
-// =============================================
+/*! ============================================
+ *               Social Icons
+ *          Last Updated:2013-6-25
+ * ===========================================*/
 
+
+@import "settings";
+@import "core/all-core";
 
 
 
@@ -16,7 +19,7 @@
   @include rounded(2px);
   margin-bottom: 3px;
   vertical-align: bottom;
-  @include drop-shadow(rgba(0,0,0,0.2), 5px, 0, 0); // color, alpha, blur, x, y
+  @include box-shadow(rgba(0,0,0,0.2), 5px, 0, 0);
   &.small {
     width: 20px;
     height: 20px;

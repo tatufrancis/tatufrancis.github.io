@@ -1,46 +1,46 @@
 // =============================================
-//                  CSS Reset
-//          Last Updated:2013-4-24
+//            GroundworkCSS Reset
+//          Last Updated:2013-6-25
 // =============================================
 
 
 
 
-// =======================================================
-//               the better box model
-// =======================================================
-//
-//
-//     E   L   E   M   E   N   T      W   I   D   T   H
-//  |----------------------------------------------------|
-//  |                  B  O  R  D  E  R                  |
-//  |   |--------------------------------------------|   |
-//  | B |               P A D D I N G                | B |
-//  |   |   |------------------------------------|   |   |
-//  | O | P |                                    | P | O |
-//  |   | A |                                    | A |   |
-//  | R | D |                                    | D | R |
-//  |   | D |           C O N T E N T            | D |   |
-//  | D | I |                                    | I | D |
-//  |   | N |                                    | N |   |
-//  | E | G |                                    | G | E |
-//  |   |   |------------------------------------|   |   |
-//  | R |               P A D D I N G                | R |
-//  |   |--------------------------------------------|   |
-//  |                  B  O  R  D  E  R                  |
-//  | ---------------------------------------------------|
-//
-//  NOTE: Padding and border are calculated within an
-//        element's specified width instead of its total
-//        width being increased by these properties
-//
-//
-// =======================================================
-
-
 %everything {
   @include box-sizing(border-box);
   *behavior: url($boxsizing_path);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
+  //
+  // =======================================================
+  //               the better box model
+  // =======================================================
+  //
+  //
+  //     E   L   E   M   E   N   T      W   I   D   T   H
+  //  |----------------------------------------------------|
+  //  |                  B  O  R  D  E  R                  |
+  //  |   |--------------------------------------------|   |
+  //  | B |               P A D D I N G                | B |
+  //  |   |   |------------------------------------|   |   |
+  //  | O | P |                                    | P | O |
+  //  |   | A |                                    | A |   |
+  //  | R | D |                                    | D | R |
+  //  |   | D |           C O N T E N T            | D |   |
+  //  | D | I |                                    | I | D |
+  //  |   | N |                                    | N |   |
+  //  | E | G |                                    | G | E |
+  //  |   |   |------------------------------------|   |   |
+  //  | R |               P A D D I N G                | R |
+  //  |   |--------------------------------------------|   |
+  //  |                  B  O  R  D  E  R                  |
+  //  | ---------------------------------------------------|
+  //
+  //  NOTE: Padding and border are calculated within an
+  //        element's specified width instead of its total
+  //        width being increased by these properties
+  //
+  //
+  // =======================================================
+  //
 }
 
 %document {

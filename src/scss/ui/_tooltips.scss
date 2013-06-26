@@ -1,6 +1,7 @@
-// ===================================
-//             Tooltips
-// ===================================
+// =============================================
+//                 Tooltips
+//          Last Updated:2013-6-25
+// =============================================
 
 
 
@@ -10,8 +11,8 @@
   padding:5px 15px;
   background:$button-color;
   border:1px solid $button-border-color;
-  @include rounded($radius);
-  @include drop-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
+  @include rounded($default-radius);
+  @include box-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px);
   font-size:13px;
   color:$button-text;
   &:after {
@@ -49,7 +50,7 @@
     background:white;
     text-decoration:none;
     font-size:12px;
-    @include rounded($radius / 2);
+    @include rounded($default-radius / 2);
     i {
       color:inherit;
     }
@@ -64,8 +65,8 @@
   padding:5px 15px;
   background:$button-color;
   border:1px solid $button-border-color;
-  @include rounded($radius);
-  @include drop-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
+  @include rounded($default-radius);
+  @include box-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px);
   font-size:13px;
   text-transform:normal;
   color:$button-text;

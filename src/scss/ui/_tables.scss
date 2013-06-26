@@ -1,6 +1,7 @@
-// ===================================
-//             Tables
-// ===================================
+// =============================================
+//                  Tables
+//          Last Updated:2013-6-25
+// =============================================
 
 
 
@@ -77,7 +78,7 @@
   font-size:0.8em;
 }
 
-@if $tags {
+@if $table-tags {
   table {
     @extend %table;
     th, td {
@@ -122,7 +123,7 @@
       }
     }
 
-    @if $classes {
+    @if $table-classes {
       &.align-center {
         th, td {
           @extend %center-table;

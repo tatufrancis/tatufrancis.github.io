@@ -1,4 +1,4 @@
-/* =============================================
+/* ============================================
  *             Legacy IE Support
  *          Last Updated:2013-6-23
  * ===========================================*/
@@ -9,10 +9,10 @@ input[type=checkbox], input[type=radio] {
   display: inline-block;
   width: auto !important;
   height: auto !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
@@ -50,33 +50,6 @@ html.lt-ie9 div.modal .close, html.lt-ie9 div.modal .fullscreen {
 html.lt-ie9 div.modal .fullscreen {
   right: auto;
   left: 2px;
-}
-html.lt-ie8 {
-  /*
-   *  Font Awesome 3.2.1
-   *  the iconic font designed for Bootstrap
-   *  ------------------------------------------------------------------------------
-   *  The full suite of pictographic icons, examples, and documentation can be
-   *  found at http://fontawesome.io.  Stay up to date on Twitter at
-   *  http://twitter.com/fontawesome.
-   *
-   *  License
-   *  ------------------------------------------------------------------------------
-   *  - The Font Awesome font is licensed under SIL OFL 1.1 -
-   *    http://scripts.sil.org/OFL
-   *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
-   *    http://opensource.org/licenses/mit-license.html
-   *  - Font Awesome documentation licensed under CC BY 3.0 -
-   *    http://creativecommons.org/licenses/by/3.0/
-   *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
-   *    "Font Awesome by Dave Gandy - http://fontawesome.io"
-   *
-   *  Author - Dave Gandy
-   *  ------------------------------------------------------------------------------
-   *  Email: dave@fontawesome.io
-   *  Twitter: http://twitter.com/byscuits
-   *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
-   */
 }
 html.lt-ie8 .icon-large {
   font-size: 1.33333em;

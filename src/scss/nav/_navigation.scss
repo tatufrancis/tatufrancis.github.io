@@ -1,6 +1,7 @@
-// ===================================
-//             Navigation
-// ===================================
+// =============================================
+//                 Navigation
+//          Last Updated:2013-6-25
+// =============================================
 
 
 
@@ -10,7 +11,7 @@
 }
 %menu-open {
   display:block;
-  @include filter-shadow(rgba(0,0,0,0.25), 5px, 0, 0); // color, blur, x, y
+  @include filter-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
 }
 
 %nav {
@@ -73,12 +74,8 @@
             display:inline-block;
             width:1.1em;
             margin-left:0.25em;
-            font-family:FontAwesome;
-            font-weight:normal;
-            font-style:normal;
+            @include icon-FontAwesome();
             font-size:1.1em;
-            text-decoration:inherit;
-            -webkit-font-smoothing:antialiased;
             line-height:normal;
             vertical-align:baseline;
             background-image:none;
@@ -99,17 +96,17 @@
       }
       &:first-child {
         a {
-          @include rounded($radius $radius 0 0);
+          @include rounded($default-radius $default-radius 0 0);
         }
       }
       &:last-child {
         a {
-          @include rounded(0 0 $radius $radius);
+          @include rounded(0 0 $default-radius $default-radius);
         }
       }
       &:only-child {
         a {
-          @include rounded($radius);
+          @include rounded($default-radius);
         }
       }
     }
@@ -136,17 +133,17 @@
         &:first-child {
           a {
             border-top:none;
-            @include rounded(0 $radius 0 0);
+            @include rounded(0 $default-radius 0 0);
           }
         }
         &:last-child {
           a {
-            @include rounded(0 0 $radius $radius);
+            @include rounded(0 0 $default-radius $default-radius);
           }
         }
         &:only-child {
           a {
-            @include rounded(0 $radius $radius 0);
+            @include rounded(0 $default-radius $default-radius 0);
           }
         }
       }
@@ -162,17 +159,17 @@
         &:first-child {
           a {
             border-left:none;
-            @include rounded($radius 0 0 $radius);
+            @include rounded($default-radius 0 0 $default-radius);
           }
         }
         &:last-child {
           a {
-            @include rounded(0 $radius $radius 0);
+            @include rounded(0 $default-radius $default-radius 0);
           }
         }
         &:only-child {
           a {
-            @include rounded($radius);
+            @include rounded($default-radius);
           }
         }
       }
@@ -196,7 +193,7 @@
           }
           &:last-child {
             a {
-              @include rounded(0 0 $radius $radius);
+              @include rounded(0 0 $default-radius $default-radius);
             }
           }
         }
@@ -220,17 +217,17 @@
         &:first-child {
           a {
             border-left:none;
-            @include rounded($radius 0 0 $radius);
+            @include rounded($default-radius 0 0 $default-radius);
           }
         }
         &:last-child {
           a {
-            @include rounded(0 $radius $radius 0);
+            @include rounded(0 $default-radius $default-radius 0);
           }
         }
         &:only-child {
           a {
-            @include rounded($radius);
+            @include rounded($default-radius);
           }
         }
         ul {
@@ -255,7 +252,7 @@
             }
             &:last-child {
               a {
-                @include rounded(0 0 $radius $radius);
+                @include rounded(0 0 $default-radius $default-radius);
               }
             }
           }
@@ -279,7 +276,7 @@
     list-style-type:none;
     li {
       display:inline-block;
-      @include rounded($radius);
+      @include rounded($default-radius);
       padding:0 3px 0 2px;
       min-width:29px;
       a, a:visited {
@@ -293,7 +290,7 @@
         text-decoration:none;
         text-align:center;
         padding:0 3px;
-        @include rounded($radius);
+        @include rounded($default-radius);
         &:hover, &:focus {
           background:$button-active;
           color:$button-text;
@@ -324,12 +321,12 @@
       }
       &:first-child {
         a {
-          @include rounded($radius);
+          @include rounded($default-radius);
         }
       }
       &:last-child {
         a {
-          @include rounded($radius);
+          @include rounded($default-radius);
         }
       }
     }
@@ -381,13 +378,13 @@
   }
 }
 
-@if $tags {
+@if $nav-tags {
   nav {
     @extend %nav;
   }
 }
 
-@if $classes {
+@if $nav-classes {
   .nav {
     @extend %nav;
   }
