@@ -40,9 +40,6 @@
       overflow:hidden;
       color:#fff;
     }
-    .container {
-      max-width:480px;
-    }
     #resizerFrame {
       width:100%;
       max-width:100%;
@@ -126,10 +123,6 @@
       return url;
     }
     $(document).ready(function() {
-      $('#resizerFrame').each(function() {
-        $(this).css('max-width',$(window).width());
-        $(this).css('max-height',$(window).height());
-      });
       $('a[data-viewport-width]').on('click', function(e) {
         if($(this).attr('data-viewport-width') == '100%') {
           newWidth = '100%';
