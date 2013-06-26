@@ -56,11 +56,13 @@
   -moz-filter: drop-shadow($x $y $blur $color);                         // Firefox
   -webkit-filter: drop-shadow($x $y $blur $color);                      // Webkit (Safari, Chrome, other)
   filter: drop-shadow($x $y $blur $color);
-  -ms-transform: translateZ(0);                                         // make filter nice and crisp on retina devices
-  -o-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  @media #{$retina} {
+    -ms-transform: translateZ(0);                                       // make filter nice and crisp on retina devices
+    -o-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 // inner box shadow

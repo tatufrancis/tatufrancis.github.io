@@ -5676,11 +5676,15 @@ nav ul li.menu.on > ul, .nav ul li.menu.on > ul, .no-js nav ul li.menu ul, .no-j
   -moz-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
   -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  nav ul li.menu.on > ul, .nav ul li.menu.on > ul, .no-js nav ul li.menu ul, .no-js .nav ul li.menu ul {
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 nav:not(.inline):not(.pagination) > ul:not(.row), .nav:not(.inline):not(.pagination) > ul:not(.row) {
