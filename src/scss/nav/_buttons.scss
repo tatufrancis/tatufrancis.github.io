@@ -28,6 +28,9 @@
     text-decoration:none;
     color:$button-active-text;
   }
+  .block {
+    @extend %button-block;
+  }
 }
 
 %button-on {
@@ -238,6 +241,11 @@
   @for $i from 1 through length($button-states) {
     &.#{nth($button-states, $i)} {
       @extend %button-#{nth($button-states, $i)};
+    }
+  }
+  @for $i from 1 through length($button-modifiers) {
+    &.#{nth($button-modifiers, $i)} {
+      @extend %button-#{nth($button-modifiers, $i)};
     }
   }
   // modifier colors

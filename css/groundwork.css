@@ -5089,6 +5089,20 @@ ol.button-list li a.disabled.success:visited, [role~=button].disabled.success:vi
   outline: none;
 }
 
+button .block,
+input[type=submit] .block,
+input[type=button] .block,
+input[type=reset] .block, .button .block, [role~=button] .block, nav.menu .menu-toggle .block, .menu.nav .menu-toggle .block, button.block,
+input[type=submit].block,
+input[type=button].block,
+input[type=reset].block, .button.block,
+a.button.block,
+a.button.block:visited, ul.button-list li a.block,
+ol.button-list li a.block, [role~=button].block {
+  display: block;
+  width: 100%;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
