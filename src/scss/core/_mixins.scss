@@ -79,6 +79,8 @@
   @if $color == "default" {
     @if $state == "disabled" {
       $color: $disabled-color;
+    }@else if $state == "info" {
+      $color: $info-color;
     }@else if $state == "success" {
       $color: $success-color;
     }@else if $state == "warning" {
