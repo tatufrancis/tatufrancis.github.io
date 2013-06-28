@@ -88,7 +88,7 @@
       -o-transition: all 0.15s linear;
       transition: all 0.15s linear;
     }
-    .rotate-90-ctr    {
+    .landscape:before {
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -141,9 +141,9 @@
         return false;
       });
       $('a.rotate').on('click', function(e) {
-        $(this).children('i[class*=icon]').toggleClass('rotate-90-ctr');
+        $(this).children('i[class*=icon]').toggleClass('landscape');
         $('a[data-rotate=true]').each(function() {
-          $(this).children('i[class*=icon]').toggleClass('rotate-90-ctr');
+          $(this).children('i[class*=icon]').toggleClass('landscape');
           width = $(this).attr('data-viewport-width');
           height = $(this).attr('data-viewport-height');
           // shuffle values
