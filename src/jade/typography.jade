@@ -1,0 +1,247 @@
+extends template
+
+block title
+  title GroundworkCSS &hearts; Typography
+
+block content
+  .container
+    .pad-left.pad-right
+      h1.AverageSans.zero Typography
+      p Example usage of typography elements such as headings, paragraphs, lists, blockquotes, code and web fonts
+    .row
+      .one.whole.padded
+        h4.AverageSans Text Elements
+        .row
+          .one.third.padded
+            h1 Heading 1
+            h2 Heading 2
+            h3 Heading 3
+            h4 Heading 4
+            h5 Heading 5
+            h6 Heading 6
+          .one.third.padded
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            p
+              | Paragraph with 
+              sup superscript
+            p
+              | Paragraph with 
+              sub subscript
+            p
+              | Paragraph with 
+              small small text
+            p
+              | Paragraph with 
+              big large text
+            p
+              | Paragraph with 
+              em emphasized text
+            p
+              | Paragraph with 
+              b bold text
+            p
+              | Paragraph with 
+              del deleted text
+            p
+              | Paragraph with 
+              abbr.tooltip(title='Abreviated') abbr
+              |  text
+          .one.third.padded
+            ul.unstyled
+              li Unstyled list item 1
+              li Unstyled list item 2
+            ol.unstyled
+              li Unstyled ordered list item 1
+              li Unstyled ordered list item 2
+            ul
+              li Normal list item 1
+              li Normal list item 2
+            ol
+              li Ordered list item 1
+              li Ordered list item 2
+            ul.list
+              li Styled list item 1
+              li Styled list item 2
+            ol.list
+              li Styled ordered list item 1
+              li Styled ordered list item 2
+        h4.AverageSans Colors
+        .row
+          .one.third.padded
+            b
+              span.yellow Yellow
+              br
+              span.orange Orange
+              br
+              span.red Red
+              br
+              span.pink Pink
+              br
+              span.purple Purple
+              br
+              span.asphalt Asphalt
+              br
+              span.blue Blue
+              br
+              span.turquoise Turquoise
+              br
+              span.green Green
+          .one.third.padded
+            ul
+              li.yellow Normal list item
+              li.orange Normal list item
+              li.red Normal list item
+              li.pink Normal list item
+              li.purple Normal list item
+              li.asphalt Normal list item
+              li.blue Normal list item
+              li.turquoise Normal list item
+              li.green Normal list item
+          .one.third.padded
+            ol
+              li.yellow Ordered list item
+              li.orange Ordered list item
+              li.red Ordered list item
+              li.pink Ordered list item
+              li.purple Ordered list item
+              li.asphalt Ordered list item
+              li.blue Ordered list item
+              li.turquoise Ordered list item
+              li.green Ordered list item
+        .row
+          .one.third.padded
+            b
+              span.info Info
+              br
+              span.alert Alert
+              br
+              span.warning Warning
+              br
+              span.error Error
+              br
+              span.success Success
+              br
+              span.disabled Disabled
+          .one.third.padded
+            ul.list
+              li.yellow Styled list item
+              li.orange Styled list item
+              li.red Styled list item
+              li.pink Styled list item
+              li.purple Styled list item
+              li.asphalt Styled list item
+              li.blue Styled list item
+              li.turquoise Styled list item
+              li.green Styled list item
+          .one.third.padded
+            ol.list
+              li.yellow Styled ordered list item
+              li.orange Styled ordered list item
+              li.red Styled ordered list item
+              li.pink Styled ordered list item
+              li.purple Styled ordered list item
+              li.asphalt Styled ordered list item
+              li.blue Styled ordered list item
+              li.turquoise Styled ordered list item
+              li.green Styled ordered list item
+        h4.AverageSans Links
+        .row
+          .one.third.padded
+            h1
+              a(href="#") Heading 1 link
+            h2
+              a(href="#") Heading 2 link
+            h3
+              a(href="#") Heading 3 link
+            h4
+              a(href="#") Heading 4 link
+            h5
+              a(href="#") Heading 5 link
+            h6
+              a(href="#") Heading 6 link
+          .one.third.padded
+            p
+              a(href="#") Paragraph link
+            p
+              a(href="#")
+                | Paragraph link with 
+                sup superscript
+            p
+              a(href="#")
+                | Paragraph link with 
+                sub subscript
+            p
+              a(href="#")
+                | Paragraph link with 
+                small small text
+            p
+              a(href="#")
+                | Paragraph link with 
+                big large text
+            p
+              a(href="#")
+                | Paragraph link with 
+                em emphasized text
+            p
+              a(href="#")
+                | Paragraph link with 
+                b bold text
+          .one.third.padded
+            ul
+              li
+                a(href="#") Normal list link item 1
+              li
+                a(href="#") Normal list link item 2
+            ol
+              li
+                a(href="#") Ordered list link item 1
+              li
+                a(href="#") Ordered list link item 2
+            ul.list
+              li
+                a(href="#") Styled list link item 1
+              li
+                a(href="#") Styled list link item 2
+            ol.list
+              li
+                a(href="#") Styled ordered link list item 1
+              li
+                a(href="#") Styled ordered link list item 2
+        hr
+        br
+        h2.AmericanTypewriter Web Fonts Usage
+        .row
+          .one.whole.padded
+            h5.AverageSans Average Sans webfont
+            h5.AmericanTypewriter American Typewriter webfont
+        hr
+        br
+        h2.AmericanTypewriter Quotes
+        blockquote
+          | A computer once beat me at chess, but it was no match for me at kick boxing.
+          cite
+            | Emo Phillips
+        br
+        h2.AmericanTypewriter Code
+        h4.AverageSans Blocks
+        pre
+          code
+            | $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;
+          code
+            | @for $i from 1 through length($names) {
+          code
+            |   .\#{nth($names, $i)} {
+          code
+            |     @extend %\#{nth($names, $i)};
+          code
+            |   }
+          code
+            | }
+        br
+        h4.AverageSans Inline
+        p
+          | This is some text with some
+          code inline code
+          | automatic
+        hr
+        br

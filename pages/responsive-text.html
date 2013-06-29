@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>GroundworkCSS &hearts;</title>
+    <title>GroundworkCSS &hearts; Responsive Text Components</title>
     <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
     <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
@@ -82,55 +82,38 @@
                 <li><a href="./layout-7.html">Ecommerce</a></li>
               </ul>
             </li>
-            <li><a href="./kitchen-sink.html">The Kitchen Sink</a></li>
+            <li class="menu"><a href="#">Example Components Usage</a>
+              <ul>
+                <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
+                <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
+                <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
+                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
+                <li><a href="./ui-elements.html" title="Tabs, message &amp; callout boxes, tables and tooltips">UI Elements</a></li>
+                <li><a href="./forms.html" title="Form elements, tiles">Form Elements</a></li>
+                <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
+                <li><a href="./social-icons.html">Social Icons</a></li>
+                <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
+                <li><a href="./modals.html" title="Magnific Popup modals">Modals</a></li>
+                <li><a href="./cycle2.html" title="Cycle2 sliders">Sliders</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container">
-      <div class="padded">
-        <h2 class="AverageSans zero">Example Layouts to Get You Going</h2>
-        <p>These are really just to introduce you how things can be done and (hopefully) spark your imagination.</p>
-        <div class="info callout">
-          <p><em>NOTE:</em> The very first thing you should do when using Groundwork is change the color code in the <code>`$button-color`</code> variable in <code>`src/scss/_settings`</code>.</p>
-        </div>
-        <div class="error callout">
-          <p>If I see <b>ugly teal buttons and nav menus</b> on thousands of websites in a year I will be the saddest panda. If you're terrible at design or don't know how to pick nice colors then just go to <b><a href="http://www.colourlovers.com/palettes" target="_blank">Colour Lovers</a></b> and pick from the gazillion beautiful palettes people have put together for you.</p>
-        </div>
+      <div class="pad-left pad-right">
+        <h1 class="AverageSans zero">Responsive Text</h1>
+        <p>Example usage of responsiveText and truncateLines components</p>
       </div>
       <div class="row">
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-1.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-1.gif">
-              <div class="green button">Layout 1</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-2.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-2.gif">
-              <div class="green button">Layout 2</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-3.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-3.gif">
-              <div class="green button">Layout 3</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-4.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-4.gif">
-              <div class="green button">Layout 4</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-5.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-5.gif">
-              <div class="green button">Layout 5</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-6.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-6.gif">
-              <div class="green button">Image Gallery</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./layout-7.html">
-            <h5 class="asphalt callout align-center"><img src="../images/layout-7.gif">
-              <div class="green button">Ecommerce</div>
-            </h5></a></div>
-        <div class="one small-tablet fourth two-up-small-tablet padded"><a href="./kitchen-sink.html">
-            <h5 class="info callout align-center"><img src="../images/kitchen-sink.gif" class="round">
-              <div class="green button">The Kitchen Sink</div>
-            </h5></a></div>
+        <div class="one whole padded">
+          <h2 class="AmericanTypewriter">Responsive Text Components</h2>
+          <h4 class="AverageSans">Truncated Text Blocks</h4>
+          <h4 data-truncate="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+          <p data-truncate="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
       </div>
     </div>
     <footer class="footer">

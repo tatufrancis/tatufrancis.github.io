@@ -170,7 +170,7 @@
       }
       $('#resizerFrame').on('load', function() {
         var url = basename(this.contentWindow.location.href);
-        var href = updateQueryStringParameter(document.location.href, 'url', 'templates/'+url);
+        var href = updateQueryStringParameter(document.location.href, 'url', 'pages/'+url);
         var stateObj = { resizer: 'resizer' };
         history.pushState(stateObj, url, href);
       });
@@ -188,10 +188,10 @@
         <li><a class="tooltip <?php echo $_REQUEST['size'] == 'iPhone' ? 'active' : '' ?>" title="iPhone" href="#" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone" style="font-size:0.9em;"></i></a></li>
         <li><a class="tooltip rotate <?php echo $_REQUEST['orientation'] == 'landscape' ? 'rotate-90-ctr' : '' ?>" title="Toggle Landscape/Portrait" href="#"><i class="icon-refresh"></i></a></li>
       </ul>
-      <a id="closeResizer" class="pull-left" title="Close Resizer" href="./templates/home.html"><i class="icon-remove"></i></a>
+      <a id="closeResizer" class="pull-left" title="Close Resizer" href="./pages/home.html"><i class="icon-remove"></i></a>
     </div>
   </div>
-  <iframe id="resizerFrame" src="./templates/home.html" frameborder="0"></iframe>
+  <iframe id="resizerFrame" src="./pages/home.html" frameborder="0"></iframe>
   <!-- scripts -->
   <script type="text/javascript" src="./js/plugins/jquery.cycle2.js"></script>
   <script type="text/javascript" src="./js/plugins/jquery.magnific-popup.js"></script>
