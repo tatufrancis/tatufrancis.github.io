@@ -7825,7 +7825,11 @@ textarea {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .ipad-only {
-    display: inline-block !important;
+    display: block !important;
+  }
+
+  span.ipad-only {
+    display: inline !important;
   }
 
   .hide-on-ipad {
@@ -7926,7 +7930,11 @@ textarea {
   }
 
   .small-tablet-only {
-    display: inline-block !important;
+    display: block !important;
+  }
+
+  span.small-tablet-only {
+    display: inline !important;
   }
 
   .hide-on-small-tablet {
@@ -8200,7 +8208,11 @@ textarea {
   }
 
   .mobile-only {
-    display: inline-block !important;
+    display: block !important;
+  }
+
+  span.mobile-only {
+    display: inline !important;
   }
 
   .hide-on-mobile {
