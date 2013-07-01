@@ -5386,6 +5386,20 @@ nav ul li:last-child a, .nav ul li:last-child a {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav ul li:last-child ul li a, .nav ul li:last-child ul li a {
+  -webkit-border-radius: 0 0 0 0 !important;
+  -moz-border-radius: 0 0 0 0 !important;
+  -ms-border-radius: 0 0 0 0 !important;
+  -o-border-radius: 0 0 0 0 !important;
+  border-radius: 0 0 0 0 !important;
+}
+nav ul li:last-child ul li:last-child a, .nav ul li:last-child ul li:last-child a {
+  -webkit-border-radius: 0 0 4px 4px !important;
+  -moz-border-radius: 0 0 4px 4px !important;
+  -ms-border-radius: 0 0 4px 4px !important;
+  -o-border-radius: 0 0 4px 4px !important;
+  border-radius: 0 0 4px 4px !important;
+}
 nav ul li:only-child a, .nav ul li:only-child a {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -8059,12 +8073,19 @@ textarea {
     -o-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
+  nav:not(.pagination) ul li:last-child ul li a, nav.inline ul li:last-child ul li a, .nav ul li:last-child ul li a, nav:not(.pagination) ul.row li:last-child ul li a, nav.inline ul.row li:last-child ul li a, .nav ul.row li:last-child ul li a {
+    -webkit-border-radius: 0 0 0 0 !important;
+    -moz-border-radius: 0 0 0 0 !important;
+    -ms-border-radius: 0 0 0 0 !important;
+    -o-border-radius: 0 0 0 0 !important;
+    border-radius: 0 0 0 0 !important;
+  }
   nav:not(.pagination) ul li:last-child ul li:last-child a, nav.inline ul li:last-child ul li:last-child a, .nav ul li:last-child ul li:last-child a, nav:not(.pagination) ul.row li:last-child ul li:last-child a, nav.inline ul.row li:last-child ul li:last-child a, .nav ul.row li:last-child ul li:last-child a {
-    -webkit-border-radius: 0 0 4px 4px;
-    -moz-border-radius: 0 0 4px 4px;
-    -ms-border-radius: 0 0 4px 4px;
-    -o-border-radius: 0 0 4px 4px;
-    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    -ms-border-radius: 0 0 4px 4px !important;
+    -o-border-radius: 0 0 4px 4px !important;
+    border-radius: 0 0 4px 4px !important;
   }
   nav:not(.pagination) ul li:only-child a, nav.inline ul li:only-child a, .nav ul li:only-child a, nav:not(.pagination) ul.row li:only-child a, nav.inline ul.row li:only-child a, .nav ul.row li:only-child a {
     -webkit-border-radius: 4px;

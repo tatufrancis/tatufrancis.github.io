@@ -5382,6 +5382,20 @@ nav ul li:last-child a, .nav ul li:last-child a {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav ul li:last-child ul li a, .nav ul li:last-child ul li a {
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
+}
+nav ul li:last-child ul li:last-child a, .nav ul li:last-child ul li:last-child a {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
 nav ul li:only-child a, .nav ul li:only-child a {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;

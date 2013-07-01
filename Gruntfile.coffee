@@ -38,6 +38,8 @@ module.exports = (grunt) ->
 
     jade:
       groundwork:
+        # files:
+        #   'pages/': ['src/jade/*.jade']
         files:
           'pages/home.html':              ['src/jade/home.jade']
           'pages/kitchen-sink.html':      ['src/jade/kitchen-sink.jade']
@@ -54,7 +56,11 @@ module.exports = (grunt) ->
           'pages/buttons.html':           ['src/jade/buttons.jade']
           'pages/navigation.html':        ['src/jade/navigation.jade']
           'pages/ui-elements.html':       ['src/jade/ui-elements.jade']
+          'pages/tables.html':            ['src/jade/tables.jade']
+          'pages/tabs.html':              ['src/jade/tabs.jade']
+          'pages/tooltips.html':          ['src/jade/tooltips.jade']
           'pages/forms.html':             ['src/jade/forms.jade']
+          'pages/tiles.html':             ['src/jade/tiles.jade']
           'pages/icons.html':             ['src/jade/icons.jade']
           'pages/social-icons.html':      ['src/jade/social-icons.jade']
           'pages/responsive-text.html':   ['src/jade/responsive-text.jade']

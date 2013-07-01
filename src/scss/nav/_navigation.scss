@@ -103,6 +103,18 @@
         a {
           @include rounded(0 0 $default-radius $default-radius);
         }
+        ul {
+          li {
+            a {
+              @include rounded(0 0 0 0 !important);
+            }
+            &:last-child {
+              a {
+                @include rounded(0 0 $default-radius $default-radius !important);
+              }
+            }
+          }
+        }
       }
       &:only-child {
         a {

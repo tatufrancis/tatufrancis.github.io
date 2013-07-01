@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>GroundworkCSS &hearts; Responsive Text</title>
+    <title>GroundworkCSS &hearts; Tooltips</title>
     <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
     <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
@@ -107,19 +107,37 @@
     </header>
     <div class="container">
       <div class="pad-left pad-right">
-        <h1 class="AverageSans zero">Responsive Text</h1>
-        <p>Example usage of responsiveText and truncateLines components</p>
+        <h2 class="AverageSans">Tooltips</h2>
+        <p>Responsive tooltips with smart positioning, resizing with window resize and smart repositioning on window scroll.</p>
       </div>
       <div class="row">
         <div class="one whole padded">
-          <h4 class="AverageSans">Truncated Text Blocks</h4>
-          <h5 data-truncate="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
-          <p data-truncate="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <hr>
-          <h4 class="AverageSans">Responsive Text</h4>
-          <h1 data-compression="8.4" class="AverageSans responsive">Responsive Heading</h1>
-          <h1 data-compression="11.5" data-min="20" data-max="170" class="AverageSans responsive">Longer Responsive Heading</h1>
-          <h1 class="AverageSans responsive">Scrolling Responsive Heading with Overflowing Text</h1>
+          <h2 class="AverageSans">Tooltips</h2>
+          <p><a href="#" title="This tooltip comes from the `title` attribute of this link" class="tooltip">Show me a tooltip!</a></p>
+          <p>
+            <input placeholder="Name" title="This tooltip comes from the `title` attribute of this input field" class="inline tooltip">
+          </p>
+          <p>
+            <button title="This tooltip comes from the `title` attribute of this button" class="tooltip">Show me a tooltip!</button>
+          </p>
+          <p style="line-height: 2.5;">
+            <button title="This tooltip inherits the `info` styles of this button" class="tooltip info">Info tooltip</button> 
+            <button title="This tooltip inherits the `alert` styles of this button" class="tooltip alert">Alert tooltip</button> 
+            <button title="This tooltip inherits the `warning` styles of this button" class="tooltip warning">Warning tooltip</button> 
+            <button title="This tooltip inherits the `error` styles of this button" class="tooltip error">Error tooltip</button> 
+            <button title="This tooltip inherits the `success` styles of this button" class="tooltip success">Success tooltip</button>
+          </p>
+          <p style="line-height: 2.5;">
+            <button title="This tooltip inherits the `yellow` styles of this button" class="tooltip yellow">Yellow tooltip</button> 
+            <button title="This tooltip inherits the `orange` styles of this button" class="tooltip orange">Orange tooltip</button> 
+            <button title="This tooltip inherits the `red` styles of this button" class="tooltip red">Red tooltip</button> 
+            <button title="This tooltip inherits the `pink` styles of this button" class="tooltip pink">Pink tooltip</button> 
+            <button title="This tooltip inherits the `purple` styles of this button" class="tooltip purple">Purple tooltip</button> 
+            <button title="This tooltip inherits the `asphalt` styles of this button" class="tooltip asphalt">Asphalt tooltip</button> 
+            <button title="This tooltip inherits the `blue` styles of this button" class="tooltip blue">Blue tooltip</button> 
+            <button title="This tooltip inherits the `turquoise` styles of this button" class="tooltip turquoise">Turquoise tooltip</button> 
+            <button title="This tooltip inherits the `green` styles of this button" class="tooltip green">Green tooltip</button>
+          </p>
         </div>
       </div>
     </div>
