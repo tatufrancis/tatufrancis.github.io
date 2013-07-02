@@ -214,6 +214,56 @@ img, a img {
   margin-left: 30px;
 }
 
+.offset {
+  margin: -10px;
+}
+.offset.double {
+  margin: -20px;
+}
+.offset.triple {
+  margin: -30px;
+}
+
+.offset-top {
+  margin-top: -10px;
+}
+.offset-top.double {
+  margin-top: -20px;
+}
+.offset-top.triple {
+  margin-top: -30px;
+}
+
+.offset-right {
+  margin-right: -10px;
+}
+.offset-right.double {
+  margin-right: -20px;
+}
+.offset-right.triple {
+  margin-right: -30px;
+}
+
+.offset-bottom {
+  margin-bottom: -10px;
+}
+.offset-bottom.double {
+  margin-bottom: -20px;
+}
+.offset-bottom.triple {
+  margin-bottom: -30px;
+}
+
+.offset-left {
+  margin-left: -10px;
+}
+.offset-left.double {
+  margin-left: -20px;
+}
+.offset-left.triple {
+  margin-left: -30px;
+}
+
 .stick, .fixed {
   position: fixed;
 }

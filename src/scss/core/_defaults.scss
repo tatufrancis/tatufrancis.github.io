@@ -82,7 +82,8 @@ $spin-helpers:        spin spin-once spin-twice spin-thrice
 // spacers
 $spacer-classes:      true !default;       // enable output of spacer helpers     (recommended)
 $spacer-helpers:      padded pad-top pad-right pad-bottom pad-left
-                      gapped gap-top gap-right gap-bottom gap-left !default;
+                      gapped gap-top gap-right gap-bottom gap-left
+                      offset offset-top offset-right offset-bottom offset-left !default;
 
 // spacer multipliers
 $spacer-mod-classes:  true !default;       // enable output of spacer modifiers   (optional)
