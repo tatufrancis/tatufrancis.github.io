@@ -1958,30 +1958,40 @@ big, .large, big {
     width: 100% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 
   .two-up-small-tablet {
     width: 50% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 
   .three-up-small-tablet {
     width: 33.33333% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 
   .four-up-small-tablet {
     width: 25% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 
   .five-up-small-tablet {
     width: 20% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 }
 @media (max-width: 767px) and (min-width: 481px) {
@@ -2010,6 +2020,8 @@ big, .large, big {
     width: 100% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .one-up-mobile:nth-child(2) {
     clear: both !important;
@@ -2019,6 +2031,8 @@ big, .large, big {
     width: 50% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .two-up-mobile:nth-child(3) {
     clear: both !important;
@@ -2028,6 +2042,8 @@ big, .large, big {
     width: 33.33333% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .three-up-mobile:nth-child(4) {
     clear: both !important;
@@ -2037,6 +2053,8 @@ big, .large, big {
     width: 25% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .four-up-mobile:nth-child(5) {
     clear: both !important;
@@ -2046,6 +2064,8 @@ big, .large, big {
     width: 20% !important;
     clear: none !important;
     float: left !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .five-up-mobile:nth-child(6) {
     clear: both !important;
@@ -2093,6 +2113,46 @@ big, .large, big {
     clear: both !important;
   }
 }
+.flex-wrapper {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex-box {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  width: 100%;
+  /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.vertical-center {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-pack: center;
+  display: box;
+  box-orient: vertical;
+  box-pack: center;
+}
+
 @font-face {
   font-family: "AverageSans";
   font-style: normal;
@@ -7784,15 +7844,15 @@ textarea {
 }
 
 .ipad-only {
-  display: none;
+  display: none !important;
 }
 
 .small-tablet-only {
-  display: none;
+  display: none !important;
 }
 
 .mobile-only {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 1025px) {
@@ -8263,6 +8323,22 @@ textarea {
 
   span.mobile-only {
     display: inline !important;
+  }
+
+  .hide-on-small-tablet {
+    display: block !important;
+  }
+
+  span.hide-on-small-tablet {
+    display: inline !important;
+  }
+
+  .small-tablet-only {
+    display: none !important;
+  }
+
+  span.small-tablet-only {
+    display: none !important;
   }
 
   .hide-on-mobile {

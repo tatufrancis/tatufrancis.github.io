@@ -2,27 +2,32 @@ extends template
 
 block title
   title GroundworkCSS &hearts; Helpers
+  style(type="text/css")
+    .desktop-only,
+    .hide-on-desktop,
+    .ipad-only,
+    .hide-on-ipad,
+    .small-tablet-only,
+    .hide-on-small-tablet,
+    .mobile-only,
+    .hide-on-mobile {
+      padding: 0.25em;
+      color: #fff;
+    }
 
 block content
   .container
     .pad-left.pad-right
-      h2.AverageSans Helpers
+      h1.AverageSans.zero Conditional Content Helpers
+      p Conditionally show and hide elements for specific viewport sizes.
       .row
-        .one.half.small-tablet
-          h4 Spin
-          p
-            button.spin.large.round Spin
-            button.spin-slow.large.round Slow
-            button.spin-fast.large.round Fast
-            br
-            br
-        .one.half.small-tablet
-          h4 Conditional Content
-          p.desktop-only Desktop only
-          p.hide-on-desktop Hide on desktop
-          p.ipad-only iPad only
-          p.hide-on-ipad Hide on iPad
-          p.small-tablet-only Small-tablet only
-          p.hide-on-small-tablet Hide on small-tablet
-          p.mobile-only Mobile only
-          p.hide-on-mobile Hide on mobile
+        .one.whole.padded
+          ol.list.large
+            li.green.desktop-only Desktop only
+            li.blue.hide-on-desktop Hide on desktop
+            li.green.ipad-only iPad only
+            li.blue.hide-on-ipad Hide on iPad
+            li.green.small-tablet-only Small-tablet only
+            li.blue.hide-on-small-tablet Hide on small-tablet
+            li.green.mobile-only Mobile only
+            li.blue.hide-on-mobile Hide on mobile

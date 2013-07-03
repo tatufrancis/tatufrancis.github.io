@@ -13,6 +13,10 @@
     // conditional helpers
     .mobile-only { display: block !important; }
     span.mobile-only { display: inline !important; }
+    .hide-on-small-tablet { display: block !important; }
+    span.hide-on-small-tablet { display: inline !important; }
+    .small-tablet-only { display: none !important; }
+    span.small-tablet-only { display: none !important; }
     .hide-on-mobile { display: none !important; }
     .desktop-only { display: none !important; }
     // spacer overrides
