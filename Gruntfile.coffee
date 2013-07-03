@@ -38,16 +38,34 @@ module.exports = (grunt) ->
 
     jade:
       groundwork:
+        # files:
+        #   'pages/': ['src/jade/*.jade']
         files:
-          'templates/home.html':          ['src/jade/home.jade']
-          'templates/kitchen-sink.html':  ['src/jade/kitchen-sink.jade']
-          'templates/layout-1.html':      ['src/jade/layout-1.jade']
-          'templates/layout-2.html':      ['src/jade/layout-2.jade']
-          'templates/layout-3.html':      ['src/jade/layout-3.jade']
-          'templates/layout-4.html':      ['src/jade/layout-4.jade']
-          'templates/layout-5.html':      ['src/jade/layout-5.jade']
-          'templates/layout-6.html':      ['src/jade/layout-6.jade']
-          'templates/layout-7.html':      ['src/jade/layout-7.jade']
+          'pages/home.html':              ['src/jade/home.jade']
+          'pages/kitchen-sink.html':      ['src/jade/kitchen-sink.jade']
+          'pages/layout-1.html':          ['src/jade/layout-1.jade']
+          'pages/layout-2.html':          ['src/jade/layout-2.jade']
+          'pages/layout-3.html':          ['src/jade/layout-3.jade']
+          'pages/layout-4.html':          ['src/jade/layout-4.jade']
+          'pages/layout-5.html':          ['src/jade/layout-5.jade']
+          'pages/layout-6.html':          ['src/jade/layout-6.jade']
+          'pages/layout-7.html':          ['src/jade/layout-7.jade']
+          'pages/grid.html':              ['src/jade/grid.jade']
+          'pages/helpers.html':           ['src/jade/helpers.jade']
+          'pages/typography.html':        ['src/jade/typography.jade']
+          'pages/buttons.html':           ['src/jade/buttons.jade']
+          'pages/navigation.html':        ['src/jade/navigation.jade']
+          'pages/ui-elements.html':       ['src/jade/ui-elements.jade']
+          'pages/tables.html':            ['src/jade/tables.jade']
+          'pages/tabs.html':              ['src/jade/tabs.jade']
+          'pages/tooltips.html':          ['src/jade/tooltips.jade']
+          'pages/forms.html':             ['src/jade/forms.jade']
+          'pages/tiles.html':             ['src/jade/tiles.jade']
+          'pages/icons.html':             ['src/jade/icons.jade']
+          'pages/social-icons.html':      ['src/jade/social-icons.jade']
+          'pages/responsive-text.html':   ['src/jade/responsive-text.jade']
+          'pages/modals.html':            ['src/jade/modals.jade']
+          'pages/cycle2.html':            ['src/jade/cycle2.jade']
         options:
           pretty: true
       tests:

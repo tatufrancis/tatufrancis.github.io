@@ -39,6 +39,10 @@ $grid-adapters:       $one-whole $one-half $one-third $one-fourth $one-fifth !de
 $max-width:           1200px !default;     // maximum container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing (used by padded/gapped helpers, elements with padding, etc.)
 
+// flexbox settings
+$flexbox-classes:    true !default;       // enable output of flexbox classes    (optional)
+$flexbox-helpers:    flex-wrapper flex-box vertical-center !default;
+
 // helper settings
 $layout-classes:      true !default;       // enable output of layout helpers     (recommended)
 $layout-helpers:      inline block
@@ -78,7 +82,8 @@ $spin-helpers:        spin spin-once spin-twice spin-thrice
 // spacers
 $spacer-classes:      true !default;       // enable output of spacer helpers     (recommended)
 $spacer-helpers:      padded pad-top pad-right pad-bottom pad-left
-                      gapped gap-top gap-right gap-bottom gap-left !default;
+                      gapped gap-top gap-right gap-bottom gap-left
+                      offset offset-top offset-right offset-bottom offset-left !default;
 
 // spacer multipliers
 $spacer-mod-classes:  true !default;       // enable output of spacer modifiers   (optional)

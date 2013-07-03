@@ -9,7 +9,7 @@
 @mixin desktop {
   @media #{$desktop} {
     // conditional helpers
-    .hide-on-desktop { display:none !important; }
+    .hide-on-desktop { display: none !important; }
     // spacer overrides
     .zero-desktop { @include helper_reset(); }
     .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }

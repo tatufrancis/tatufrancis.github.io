@@ -11,9 +11,10 @@
     // responsive grid
     @include grid-responsive();
     // conditional helpers
-    .small-tablet-only { display:inline-block !important; }
-    .hide-on-small-tablet { display:none !important; }
-    .desktop-only { display:none !important; }
+    .small-tablet-only { display: block !important; }
+    span.small-tablet-only { display: inline !important; }
+    .hide-on-small-tablet { display: none !important; }
+    .desktop-only { display: none !important; }
     // spacer overrides
     .zero-small-tablet { @include helper_reset(); }
     .no-padding-small-tablet, .no-pad-small-tablet { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
@@ -79,9 +80,12 @@
           }
           ul {
             li {
+              a {
+                @include rounded(0 0 0 0 !important);
+              }
               &:last-child {
                 a {
-                  @include rounded(0 0 $default-radius $default-radius);
+                  @include rounded(0 0 $default-radius $default-radius !important);
                 }
               }
             }

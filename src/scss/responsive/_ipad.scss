@@ -9,9 +9,10 @@
 @mixin ipad {
   @media #{$ipad} {
     // conditional helpers
-    .ipad-only { display:inline-block !important; }
-    .hide-on-ipad { display:none !important; }
-    .desktop-only { display:none !important; }
+    .ipad-only { display: block !important; }
+    span.ipad-only { display: inline !important; }
+    .hide-on-ipad { display: none !important; }
+    .desktop-only { display: none !important; }
     // spacer overrides
     .zero-ipad { @include helper_reset(); }
     .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }

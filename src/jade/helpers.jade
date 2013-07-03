@@ -1,0 +1,28 @@
+extends template
+
+block title
+  title GroundworkCSS &hearts; Helpers
+
+block content
+  .container
+    .pad-left.pad-right
+      h2.AverageSans Helpers
+      .row
+        .one.half.small-tablet
+          h4 Spin
+          p
+            button.spin.large.round Spin
+            button.spin-slow.large.round Slow
+            button.spin-fast.large.round Fast
+            br
+            br
+        .one.half.small-tablet
+          h4 Conditional Content
+          p.desktop-only Desktop only
+          p.hide-on-desktop Hide on desktop
+          p.ipad-only iPad only
+          p.hide-on-ipad Hide on iPad
+          p.small-tablet-only Small-tablet only
+          p.hide-on-small-tablet Hide on small-tablet
+          p.mobile-only Mobile only
+          p.hide-on-mobile Hide on mobile

@@ -11,22 +11,28 @@
 //       mixins      //
 ///////////////////////
 
-@mixin _clear                     { clear: both;
-  &:after                         { content:''; display:block; clear:both; }
+@mixin _clear                       { clear: both;
+  &:after                           { content:''; display:block; clear:both; }
 }
-@mixin _clearfix                  { @include _clear; } // alias
+@mixin _clearfix                    { @include _clear; } // alias
 
-@mixin _padded($multiple: 1)      { padding: $gutter * $multiple; }
-@mixin _pad-top($multiple: 1)     { padding-top: $gutter * $multiple; }
-@mixin _pad-right($multiple: 1)   { padding-right: $gutter * $multiple; }
-@mixin _pad-bottom($multiple: 1)  { padding-bottom: $gutter * $multiple; }
-@mixin _pad-left($multiple: 1)    { padding-left: $gutter * $multiple; }
+@mixin _padded($multiple: 1)        { padding: $gutter * $multiple; }
+@mixin _pad-top($multiple: 1)       { padding-top: $gutter * $multiple; }
+@mixin _pad-right($multiple: 1)     { padding-right: $gutter * $multiple; }
+@mixin _pad-bottom($multiple: 1)    { padding-bottom: $gutter * $multiple; }
+@mixin _pad-left($multiple: 1)      { padding-left: $gutter * $multiple; }
 
-@mixin _gapped($multiple: 1)      { margin: $gutter * $multiple; }
-@mixin _gap-top($multiple: 1)     { margin-top: $gutter * $multiple; }
-@mixin _gap-right($multiple: 1)   { margin-right: $gutter * $multiple; }
-@mixin _gap-bottom($multiple: 1)  { margin-bottom: $gutter * $multiple; }
-@mixin _gap-left($multiple: 1)    { margin-left: $gutter * $multiple; }
+@mixin _gapped($multiple: 1)        { margin: $gutter * $multiple; }
+@mixin _gap-top($multiple: 1)       { margin-top: $gutter * $multiple; }
+@mixin _gap-right($multiple: 1)     { margin-right: $gutter * $multiple; }
+@mixin _gap-bottom($multiple: 1)    { margin-bottom: $gutter * $multiple; }
+@mixin _gap-left($multiple: 1)      { margin-left: $gutter * $multiple; }
+
+@mixin _offset($multiple: 1)        { margin: (-$gutter * $multiple); }
+@mixin _offset-top($multiple: 1)    { margin-top: (-$gutter * $multiple); }
+@mixin _offset-right($multiple: 1)  { margin-right: (-$gutter * $multiple); }
+@mixin _offset-bottom($multiple: 1) { margin-bottom: (-$gutter * $multiple); }
+@mixin _offset-left($multiple: 1)   { margin-left: (-$gutter * $multiple); }
 
 @mixin _fixed($position: null) {
   position: fixed;
@@ -151,6 +157,27 @@
 %gap-left         { @include _gap-left;
   &%double        { @include _gap-left(2); }
   &%triple        { @include _gap-left(3); }
+}
+
+%offset           { @include _offset;
+  &%double        { @include _offset(2); }
+  &%triple        { @include _offset(3); }
+}
+%offset-top       { @include _offset-top;
+  &%double        { @include _offset-top(2); }
+  &%triple        { @include _offset-top(3); }
+}
+%offset-right     { @include _offset-right;
+  &%double        { @include _offset-right(2); }
+  &%triple        { @include _offset-right(3); }
+}
+%offset-bottom    { @include _offset-bottom;
+  &%double        { @include _offset-bottom(2); }
+  &%triple        { @include _offset-bottom(3); }
+}
+%offset-left      { @include _offset-left;
+  &%double        { @include _offset-left(2); }
+  &%triple        { @include _offset-left(3); }
 }
 
 %fixed            { @include _fixed; }

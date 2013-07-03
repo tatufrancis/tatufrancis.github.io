@@ -82,6 +82,8 @@ $selectors: if($grid-classes, "%" ".", "%");
       width: nth($grid-adapters, $i) !important;
       clear: none !important;
       float: left !important;
+      left: 0 !important;
+      right: 0 !important;
     }
   }
 }
@@ -102,6 +104,8 @@ $selectors: if($grid-classes, "%" ".", "%");
       width: nth($grid-adapters, $i) !important;
       clear: none !important;
       float: left !important;
+      left: 0 !important;
+      right: 0 !important;
       &:nth-child(#{$i + 1}) {
         clear: both !important;
       }

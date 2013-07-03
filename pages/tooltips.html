@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>GroundworkCSS Layouts: Image Gallery</title>
+    <title>GroundworkCSS &hearts; Tooltips</title>
     <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
     <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
@@ -68,7 +68,7 @@
         <h2 class="AverageSans">GroundworkCSS</h2>
         <nav class="inline menu gap-top">
           <ul>
-            <li><a href="./home.html"><i class="icon-home"></i></a></li>
+            <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
             <li class="menu"><a href="#">Example Layouts</a>
               <ul>
                 <li><a href="./layout-1.html">Layout 1</a></li>
@@ -80,40 +80,64 @@
                 <li><a href="./layout-7.html">Ecommerce</a></li>
               </ul>
             </li>
-            <li><a href="./kitchen-sink.html">The Kitchen Sink</a></li>
+            <li class="menu"><a href="#">Example Components Usage</a>
+              <ul>
+                <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
+                <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
+                <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
+                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
+                <li><a href="./ui-elements.html" title="Message &amp; callout boxes">UI Elements</a></li>
+                <li><a href="./tooltips.html" title="Tooltips">Tooltips</a></li>
+                <li><a href="./tables.html" title="Tabs, message &amp; callout boxes, tables and tooltips">Tables</a></li>
+                <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
+                <li><a href="./tiles.html" title="Tiles">Tiles</a></li>
+                <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
+                <li><a href="./social-icons.html">Social Icons</a></li>
+                <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
+                <li><a href="./modals.html" title="Magnific Popup modals">Magnific Popup</a></li>
+                <li><a href="./cycle2.html" title="Cycle2 Slideshows">Cycle2</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-    <div class="container modal gallery">
+    <div class="container">
       <div class="pad-left pad-right">
-        <h1 class="AverageSans zero">Example Layouts: Image Gallery</h1>
-        <p>An adaptive image gallery layout</p>
+        <h2 class="AverageSans">Tooltips</h2>
+        <p>Responsive tooltips with smart positioning, resizing with window resize and smart repositioning on window scroll.</p>
       </div>
-      <article class="row">
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/2ecc71/ffffff/&amp;text=Image+1" title="View Larger Image" class="block green tooltip"><img src="http://placehold.it/300x300/2ecc71/ffffff/&amp;text=Image+1" alt="Image 1" class="round"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/3498db/ffffff/&amp;text=Image+2" title="View Larger Image" class="block blue tooltip"><img src="http://placehold.it/300x300/3498db/ffffff/&amp;text=Image+2" alt="Image 2"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/9b59b6/ffffff/&amp;text=Image+3" title="View Larger Image" class="block purple tooltip"><img src="http://placehold.it/300x300/9b59b6/ffffff/&amp;text=Image+3" alt="Image 3"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/f1c40f/ffffff/&amp;text=Image+4" title="View Larger Image" class="block yellow tooltip"><img src="http://placehold.it/300x300/f1c40f/ffffff/&amp;text=Image+4" alt="Image 4"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/e67e22/ffffff/&amp;text=Image+5" title="View Larger Image" class="block orange tooltip"><img src="http://placehold.it/300x300/e67e22/ffffff/&amp;text=Image+5" alt="Image 5"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/e74c3c/ffffff/&amp;text=Image+6" title="View Larger Image" class="block red tooltip"><img src="http://placehold.it/300x300/e74c3c/ffffff/&amp;text=Image+6" alt="Image 6"></a></div>
-      </article>
-      <article class="row">
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/f02475/ffffff/&amp;text=Image+7" title="View Larger Image" class="block pink tooltip"><img src="http://placehold.it/300x300/f02475/ffffff/&amp;text=Image+7" alt="Image 7"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/1abc9c/ffffff/&amp;text=Image+8" title="View Larger Image" class="block turquoise tooltip"><img src="http://placehold.it/300x300/1abc9c/ffffff/&amp;text=Image+8" alt="Image 8"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/34495e/ffffff/&amp;text=Image+9" title="View Larger Image" class="block asphalt tooltip"><img src="http://placehold.it/300x300/34495e/ffffff/&amp;text=Image+9" alt="Image 9"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/2ecc71/ffffff/&amp;text=Image+10" title="View Larger Image" class="block green tooltip"><img src="http://placehold.it/300x300/2ecc71/ffffff/&amp;text=Image+10" alt="Image 10"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/3498db/ffffff/&amp;text=Image+11" title="View Larger Image" class="block blue tooltip"><img src="http://placehold.it/300x300/3498db/ffffff/&amp;text=Image+11" alt="Image 11"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/9b59b6/ffffff/&amp;text=Image+12" title="View Larger Image" class="block purple tooltip"><img src="http://placehold.it/300x300/9b59b6/ffffff/&amp;text=Image+12" alt="Image 12"></a></div>
-      </article>
-      <article class="row">
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/f1c40f/ffffff/&amp;text=Image+13" title="View Larger Image" class="block yellow tooltip"><img src="http://placehold.it/300x300/f1c40f/ffffff/&amp;text=Image+13" alt="Image 13"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/e67e22/ffffff/&amp;text=Image+14" title="View Larger Image" class="block orange tooltip"><img src="http://placehold.it/300x300/e67e22/ffffff/&amp;text=Image+14" alt="Image 14"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/e74c3c/ffffff/&amp;text=Image+15" title="View Larger Image" class="block red tooltip"><img src="http://placehold.it/300x300/e74c3c/ffffff/&amp;text=Image+15" alt="Image 15"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/f02475/ffffff/&amp;text=Image+16" title="View Larger Image" class="block pink tooltip"><img src="http://placehold.it/300x300/f02475/ffffff/&amp;text=Image+16" alt="Image 16"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/1abc9c/ffffff/&amp;text=Image+17" title="View Larger Image" class="block turquoise tooltip"><img src="http://placehold.it/300x300/1abc9c/ffffff/&amp;text=Image+17" alt="Image 17"></a></div>
-        <div class="one sixth three-up-small-tablet two-up-mobile padded"><a href="http://placehold.it/900x500/34495e/ffffff/&amp;text=Image+18" title="View Larger Image" class="block asphalt tooltip"><img src="http://placehold.it/300x300/34495e/ffffff/&amp;text=Image+18" alt="Image 18"></a></div>
-      </article>
+      <div class="row">
+        <div class="one whole padded">
+          <h2 class="AverageSans">Tooltips</h2>
+          <p><a href="#" title="This tooltip comes from the `title` attribute of this link" class="tooltip">Show me a tooltip!</a></p>
+          <p>
+            <input placeholder="Name" title="This tooltip comes from the `title` attribute of this input field" class="inline tooltip">
+          </p>
+          <p>
+            <button title="This tooltip comes from the `title` attribute of this button" class="tooltip">Show me a tooltip!</button>
+          </p>
+          <p style="line-height: 2.5;">
+            <button title="This tooltip inherits the `info` styles of this button" class="tooltip info">Info tooltip</button> 
+            <button title="This tooltip inherits the `alert` styles of this button" class="tooltip alert">Alert tooltip</button> 
+            <button title="This tooltip inherits the `warning` styles of this button" class="tooltip warning">Warning tooltip</button> 
+            <button title="This tooltip inherits the `error` styles of this button" class="tooltip error">Error tooltip</button> 
+            <button title="This tooltip inherits the `success` styles of this button" class="tooltip success">Success tooltip</button>
+          </p>
+          <p style="line-height: 2.5;">
+            <button title="This tooltip inherits the `yellow` styles of this button" class="tooltip yellow">Yellow tooltip</button> 
+            <button title="This tooltip inherits the `orange` styles of this button" class="tooltip orange">Orange tooltip</button> 
+            <button title="This tooltip inherits the `red` styles of this button" class="tooltip red">Red tooltip</button> 
+            <button title="This tooltip inherits the `pink` styles of this button" class="tooltip pink">Pink tooltip</button> 
+            <button title="This tooltip inherits the `purple` styles of this button" class="tooltip purple">Purple tooltip</button> 
+            <button title="This tooltip inherits the `asphalt` styles of this button" class="tooltip asphalt">Asphalt tooltip</button> 
+            <button title="This tooltip inherits the `blue` styles of this button" class="tooltip blue">Blue tooltip</button> 
+            <button title="This tooltip inherits the `turquoise` styles of this button" class="tooltip turquoise">Turquoise tooltip</button> 
+            <button title="This tooltip inherits the `green` styles of this button" class="tooltip green">Green tooltip</button>
+          </p>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="container padded">

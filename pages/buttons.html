@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]>   <html class="no-js ie ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><html class="no-js ie ie10"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>GroundworkCSS &hearts; Buttons</title>
+    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!-- Modernizr -->
+    <script src="../js/libs/modernizr-2.6.2.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/libs/jquery-1.9.1.min.js"></script>
+    <!-- framework css -->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
+    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]>
+    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      // extend Modernizr to have datauri test
+      (function(){
+        var datauri = new Image();
+        datauri.onerror = function() {
+          Modernizr.addTest('datauri', function () { return false; });
+        };
+        datauri.onload = function() {
+          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
+          Modernizr.load({
+            test: Modernizr.datauri,
+            nope: '../css/no-datauri.css'
+          });
+        };
+        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+      })();
+      // SVG support?
+      Modernizr.load({
+        test: Modernizr.inlinesvg,
+        yep: [
+          '../css/social-icons-svg.css'
+        ],
+        nope: [
+          '../css/social-icons-png.css'
+        ]
+      });
+      // polyfill for HTML5 placeholders
+      Modernizr.load({
+        test: Modernizr.input.placeholder,
+        nope: [
+          '../css/placeholder_polyfill.min.css',
+          '../js/libs/placeholder_polyfill.jquery.js'
+        ]
+      });
+      
+    </script>
+  </head>
+  <body>
+    <header class="white band padded">
+      <div class="container">
+        <h2 class="AverageSans">GroundworkCSS</h2>
+        <nav class="inline menu gap-top">
+          <ul>
+            <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
+            <li class="menu"><a href="#">Example Layouts</a>
+              <ul>
+                <li><a href="./layout-1.html">Layout 1</a></li>
+                <li><a href="./layout-2.html">Layout 2</a></li>
+                <li><a href="./layout-3.html">Layout 3</a></li>
+                <li><a href="./layout-4.html">Layout 4</a></li>
+                <li><a href="./layout-5.html">Layout 5</a></li>
+                <li><a href="./layout-6.html">Image Gallery</a></li>
+                <li><a href="./layout-7.html">Ecommerce</a></li>
+              </ul>
+            </li>
+            <li class="menu"><a href="#">Example Components Usage</a>
+              <ul>
+                <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
+                <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
+                <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
+                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
+                <li><a href="./ui-elements.html" title="Message &amp; callout boxes">UI Elements</a></li>
+                <li><a href="./tooltips.html" title="Tooltips">Tooltips</a></li>
+                <li><a href="./tables.html" title="Tabs, message &amp; callout boxes, tables and tooltips">Tables</a></li>
+                <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
+                <li><a href="./tiles.html" title="Tiles">Tiles</a></li>
+                <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
+                <li><a href="./social-icons.html">Social Icons</a></li>
+                <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
+                <li><a href="./modals.html" title="Magnific Popup modals">Magnific Popup</a></li>
+                <li><a href="./cycle2.html" title="Cycle2 Slideshows">Cycle2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="pad-left pad-right">
+        <h1 class="AverageSans zero">Buttons</h1>
+        <p>Clean, accessible and easy to customize buttons.</p>
+      </div>
+      <div class="row">
+        <div class="one whole padded">
+          <h2 class="AmericanTypewriter">Buttons</h2>
+          <div class="row">
+            <div class="one third padded">
+              <h4 class="AverageSans">Button Sizes</h4>
+              <p>
+                <button class="small">Small Button</button>
+              </p>
+              <p>
+                <button>Medium Button</button>
+              </p>
+              <p>
+                <button class="large">Large Button</button>
+              </p>
+            </div>
+            <div class="one third padded">
+              <h4 class="AverageSans">Button Types</h4>
+              <p>
+                <button>Normal Button</button>
+              </p>
+              <p>
+                <button class="info">Info Button</button>
+              </p>
+              <p>
+                <button class="success">Success Button</button>
+              </p>
+              <p>
+                <button class="alert">Alert Button</button>
+              </p>
+              <p>
+                <button class="warning">Warning Button</button>
+              </p>
+              <p>
+                <button class="error">Error Button</button>
+              </p>
+            </div>
+            <div class="one third padded">
+              <h4 class="AverageSans">Button Styles</h4>
+              <p>
+                <button>Normal Button</button>
+              </p>
+              <p>
+                <button class="square">Square Button</button>
+              </p>
+              <p>
+                <button class="round">Round Button</button>
+              </p>
+              <p>
+                <button class="block">Block Button</button>
+              </p>
+            </div>
+          </div>
+          <h2 class="AmericanTypewriter">Button States</h2>
+          <div class="row">
+            <div class="one third padded">
+              <h4 class="AverageSans">Disabled</h4>
+              <p>
+                <button tabindex="-1" class="disabled">Disabled Button</button>
+              </p>
+              <p>
+                <button class="info disabled">Disabled Info</button>
+              </p>
+              <p>
+                <button class="success disabled">Disabled Success</button>
+              </p>
+              <p>
+                <button class="alert disabled">Disabled Alert</button>
+              </p>
+              <p>
+                <button class="warning disabled">Disabled Warning</button>
+              </p>
+              <p>
+                <button class="error disabled">Disabled Error</button>
+              </p>
+            </div>
+            <div class="one third padded">
+              <h4 class="AverageSans">Active</h4>
+              <p>
+                <button class="active">Active Button</button>
+              </p>
+              <p>
+                <button class="info active">Active Info</button>
+              </p>
+              <p>
+                <button class="success active">Active Success</button>
+              </p>
+              <p>
+                <button class="alert active">Active Alert</button>
+              </p>
+              <p>
+                <button class="warning active">Active Warning</button>
+              </p>
+              <p>
+                <button class="error active">Active Error</button>
+              </p>
+            </div>
+            <div class="one third padded">
+              <h4 class="AverageSans">Colors</h4>
+              <p>
+                <button class="yellow">Yellow Button</button>
+              </p>
+              <p>
+                <button class="orange">Orange Button</button>
+              </p>
+              <p>
+                <button class="red">Red Button</button>
+              </p>
+              <p>
+                <button class="pink">Pink Button</button>
+              </p>
+              <p>
+                <button class="purple">Purple Button</button>
+              </p>
+              <p>
+                <button class="asphalt">Asphalt Button</button>
+              </p>
+              <p>
+                <button class="blue">Blue Button</button>
+              </p>
+              <p>
+                <button class="turquoise">Turquoise Button</button>
+              </p>
+              <p>
+                <button class="green">Green Button</button>
+              </p>
+            </div>
+          </div>
+          <h2 class="AmericanTypewriter">Button Lists & Dropdowns</h2>
+          <div class="row">
+            <div class="one third padded">
+              <ul class="button-list">
+                <li><a href="#">Button 1</a></li>
+                <li><a href="#">Button 2</a></li>
+                <li><a href="#">Button 3</a></li>
+              </ul><br>
+              <ul class="button-list">
+                <li><a href="#" class="blue">Button 1</a></li>
+                <li><a href="#" class="turquoise">Button 2</a></li>
+                <li><a href="#" class="green">Button 3</a></li>
+              </ul><br>
+            </div>
+            <div class="one third padded">
+              <ul class="button-list">
+                <li><a href="#"><i class="icon-github-alt"></i></a></li>
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin-sign"></i></a></li>
+                <li><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li><a href="#"><i class="icon-facebook-sign"></i></a></li>
+                <li><a href="#"><i class="icon-pinterest"></i></a></li>
+              </ul><br>
+              <ul class="button-list">
+                <li><a href="#" class="yellow"><i class="icon-github-alt"></i></a></li>
+                <li><a href="#" class="orange"><i class="icon-twitter"></i></a></li>
+                <li><a href="#" class="red"><i class="icon-linkedin-sign"></i></a></li>
+                <li><a href="#" class="pink"><i class="icon-google-plus"></i></a></li>
+                <li><a href="#" class="purple"><i class="icon-facebook-sign"></i></a></li>
+                <li><a href="#" class="asphalt"><i class="icon-pinterest"></i></a></li>
+              </ul><br>
+            </div>
+            <div class="one third padded">
+              <div class="dropdown">
+                <button>Dropdown Menu Button</button>
+                <ul>
+                  <li><a href="#"><i class="icon-home"></i> Example Menu Item 1</a></li>
+                  <li><a href="#"><i class="icon-envelope-alt"></i> Example Menu Item 2</a></li>
+                  <li>
+                    <hr>
+                  </li>
+                  <li><a href="#"><i class="icon-heart"></i> Seperated Menu Item</a></li>
+                </ul>
+              </div><br>
+              <div class="dropdown gap-top">
+                <button class="blue">Dropdown Menu Button</button>
+                <ul>
+                  <li><a href="#"><i class="icon-home"></i> Example Menu Item 1</a></li>
+                  <li><a href="#"><i class="icon-envelope-alt"></i> Example Menu Item 2</a></li>
+                  <li>
+                    <hr>
+                  </li>
+                  <li><a href="#"><i class="icon-heart"></i> Seperated Menu Item</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container padded">
+        <div class="green callout">
+          <div class="row">
+            <div class="three fourths padded">
+              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
+              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
+            </div>
+            <div class="one fourth padded">
+              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- scripts-->
+    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../js/groundwork.all.js"></script>
+    <!-- google analytics-->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+    </script>
+  </body>
+</html>

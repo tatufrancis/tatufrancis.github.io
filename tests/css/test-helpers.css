@@ -212,6 +212,56 @@ img, a img {
   margin-left: 30px;
 }
 
+.offset, .extend-offset {
+  margin: -10px;
+}
+.offset.double, .extend-offset.double {
+  margin: -20px;
+}
+.offset.triple, .extend-offset.triple {
+  margin: -30px;
+}
+
+.offset-top, .extend-offset-top {
+  margin-top: -10px;
+}
+.offset-top.double, .extend-offset-top.double {
+  margin-top: -20px;
+}
+.offset-top.triple, .extend-offset-top.triple {
+  margin-top: -30px;
+}
+
+.offset-right, .extend-offset-right {
+  margin-right: -10px;
+}
+.offset-right.double, .extend-offset-right.double {
+  margin-right: -20px;
+}
+.offset-right.triple, .extend-offset-right.triple {
+  margin-right: -30px;
+}
+
+.offset-bottom, .extend-offset-bottom {
+  margin-bottom: -10px;
+}
+.offset-bottom.double, .extend-offset-bottom.double {
+  margin-bottom: -20px;
+}
+.offset-bottom.triple, .extend-offset-bottom.triple {
+  margin-bottom: -30px;
+}
+
+.offset-left, .extend-offset-left {
+  margin-left: -10px;
+}
+.offset-left.double, .extend-offset-left.double {
+  margin-left: -20px;
+}
+.offset-left.triple, .extend-offset-left.triple {
+  margin-left: -30px;
+}
+
 .stick, .fixed, .extend-stick,
 .extend-fixed {
   position: fixed;
