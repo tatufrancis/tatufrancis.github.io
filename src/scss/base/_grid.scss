@@ -115,47 +115,44 @@ $selectors: if($grid-classes, "%" ".", "%");
 
 // grid classes responsive
 @mixin grid-responsive($both: true) {
-  $responsive-grid: ();
-  $responsive-grid-right: ();
-  $responsive-grid-left: ();
-  $responsive-grid-skip: ();
-  $nots: ''; // $nots must be defined for loop to work
-  @for $i from 1 through length($selectors) {
-    @for $j from 2 through length($numerators) {
-      @if $both {
-        $nots: ':not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)';
-      }
-      @else {
-        $nots: ':not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)';
-      }
-      $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($denominators, $j) + $nots}"), comma);
-      $responsive-grid: join($responsive-grid, unquote("#{nth($selectors, $i) + nth($denominators-plural, $j) + $nots}"), comma);
-      @for $right-left-skip from 1 through $j - 1 {
-        $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($denominators, $j) + $nots + nth($selectors, $i)}right-#{nth($numerators, $right-left-skip)}"), comma);
-        $responsive-grid-right: join($responsive-grid-right, unquote("#{nth($selectors, $i) + nth($denominators-plural, $j) + $nots + nth($selectors, $i)}right-#{nth($numerators, $right-left-skip)}"), comma);
-        $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($denominators, $j) + $nots + nth($selectors, $i)}left-#{nth($numerators, $right-left-skip)}"), comma);
-        $responsive-grid-left: join($responsive-grid-left, unquote("#{nth($selectors, $i) + nth($denominators-plural, $j) + $nots + nth($selectors, $i)}left-#{nth($numerators, $right-left-skip)}"), comma);
-        $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($denominators, $j) + $nots + nth($selectors, $i)}skip-#{nth($numerators, $right-left-skip)}"), comma);
-        $responsive-grid-skip: join($responsive-grid-skip, unquote("#{nth($selectors, $i) + nth($denominators-plural, $j) + $nots + nth($selectors, $i)}skip-#{nth($numerators, $right-left-skip)}"), comma);
-      }
-    }
-  }
-  #{$responsive-grid} {
+  $nots: ':not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile)'; // set up mobile $nots
+  %responsive-grid#{$both} { // reset grid
     width:100% !important;
     float:none;
     clear:both;
   }
-  // reset push
-  #{$responsive-grid-right} {
+  %responsive-grid-right#{$both} { // reset push
     left: 0;
   }
-  // reset pull
-  #{$responsive-grid-left} {
+  %responsive-grid-left#{$both} { // reset pull
     right: 0;
   }
-  // reset offset
-  #{$responsive-grid-skip} {
+  %responsive-grid-skip#{$both} { // reset offset
     margin-left: 0;
+  }
+  @for $i from 1 through length($selectors) {
+    @for $j from 2 through length($numerators) {
+      @if $both {
+        $nots: ':not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet)'; // setup tablet $nots
+      }
+      #{nth($selectors, $i) + nth($denominators, $j) + $nots},
+      #{nth($selectors, $i) + nth($denominators-plural, $j) + $nots} {
+        @extend %responsive-grid#{$both};
+        @for $width from 1 through $j {
+          @if $width < $j {
+            &#{nth($selectors, $i) + "left-" + nth($numerators, $width)} {
+              @extend %responsive-grid-left#{$both};
+            }
+            &#{nth($selectors, $i) + "right-" + nth($numerators, $width)} {
+              @extend %responsive-grid-right#{$both};
+            }
+            &#{nth($selectors, $i) + "skip-" + nth($numerators, $width)} {
+              @extend %responsive-grid-skip#{$both};
+            }
+          }
+        }
+      }
+    }
   }
 }
 
