@@ -13,12 +13,17 @@
     // conditional helpers
     .mobile-only { display: block !important; }
     span.mobile-only { display: inline !important; }
+    .hide-on-small-tablet { display: block !important; }
+    span.hide-on-small-tablet { display: inline !important; }
+    .small-tablet-only { display: none !important; }
+    span.small-tablet-only { display: none !important; }
     .hide-on-mobile { display: none !important; }
     .desktop-only { display: none !important; }
     // spacer overrides
     .zero-mobile { @include helper_reset(); }
     .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
     .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    .no-border-mobile { border: 0; }
     @content;
   }
 }

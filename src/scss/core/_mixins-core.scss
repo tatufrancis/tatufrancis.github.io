@@ -47,6 +47,19 @@
 // gradient
 @mixin gradient($startColor: $white, $endColor: $gray-2, $direction: "top") {
   @include background-image(linear-gradient($direction, $startColor, $endColor));
+  @if $direction == "top" {
+    $direction: "to bottom";
+  } @elseif $direction == "bottom" {
+    $direction: "to top";
+  } @else {
+    @if $direction == "left" {
+      $direction: "to right";
+    } @else {
+      $direction: "to left";
+    }
+  }
+  -pie-background: linear-gradient($direction, $startColor, $endColor);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
+  *behavior: url($PIE_path);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
 }
 
 // filter drop shadow
@@ -124,6 +137,7 @@
     // no output if $default-radius is set to a zero value
   } @else {
     @include border-radius($radius);
+    *behavior: url($PIE_path);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
   }
 }
 

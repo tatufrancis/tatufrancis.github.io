@@ -8,73 +8,112 @@
  *
 ###
 
+delayedAdjust = []
+truncateIndex = 0
+
 class TruncatedLines
 
   constructor: (el) ->
     @el = el
-    $(@el).attr('data-text', $(@el).text())                 # store original text
-    @words = $(@el).attr('data-text').trim().split(" ")     # split string into array of words
+    @index = truncateIndex++
+    @text = $(@el).text()
+    $(@el).attr('data-text',@text)
+    @words = @text.trim().split(" ")                # store words in array
     @lines = parseInt($(@el).attr('data-truncate'))         # store maximum number of lines
     @truncate()
     @adjustOnResize()
 
   truncate: ->
-    @reset()
     @measure()
     @setContent()
 
   reset: ->
-    $(@el).text($(@el).attr('data-text')).css('max-height', 'none')
-        .attr('data-truncated', 'false')
+    $(@el).text(@text)
+      .css('max-height', 'none')
+      .attr('data-truncated', 'false')
 
   measure: ->
-    @empty()                                              # set element to have single line
-    $(@el).html(".")
+    @reset()                                              # reset element state
+    $(@el).html(".")                                      # set element to have single line
+    @singleLineHeight = $(@el).outerHeight()
     i = 1
     while i++ < @lines                                    # set element to have the maximum number of lines
       $(@el).append("<br>.")
-    @maxLinesHeight = $(@el).outerHeight()                  # store the height of the element when it is at the max number of lines
-    @empty()
-  
+    @maxLinesHeight = $(@el).outerHeight()                # store the height of the element when it is at the max number of lines
+
   empty: ->
-    $(@el).html("")                                         # clear the element
+    $(@el).html("")                                       # clear the element
 
   setContent: ->
-    i = 0
-    while i++ < @words.length                               # loop through all of the words
-      $(@el).append(" " + @words[i])                        # append word to element
-      if $(@el).outerHeight() > @maxLinesHeight              # see if word caused element to wrap past maximum number of lines
-        i = @words.length                                 # limit hit, stop looping
-        @finalWords = $(@el).text().trim().split(" ")       # store the words that will fit in the new space
-        @finalWords.pop()                                 # remove the last word that caused wrapping beyond the maxLinesHeight
-        # strip punctuation from end of last word
-        @finalWords[@finalWords.length - 1] = @finalWords[@finalWords.length - 1].replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]$/, '')
-        $(@el).html("")                                     # clear the element
-        j = 0
-        while j < @finalWords.length                      # append the final set of words to the element
-          $(@el).append(" " + @finalWords[j])
-          j++
-        $(@el).css('max-height', @maxLinesHeight + 'px')    # set the max height
-        $(@el).attr('data-truncated', 'true')               # set element truncation state
-      i++
+    @reset()                                              # reset element state
+    truncated = false                                     # reset truncated state
+    @addWords(@words.length)
+    if @tooBig()
+      # binary build-up the string -- Thanks @BananaNeil  :]
+      @addNumberWordsThatFit()
+      $(@el).css('max-height', @maxLinesHeight + 'px')    # set the max height
+      $(@el).attr('data-truncated', true)            # set element truncation state
+
+  addNumberWordsThatFit: ->
+    cant = @words.length
+    can = 0
+    mid = Math.floor(@words.length/2)
+    while can+1 != cant
+      @addWords(can + mid)
+      if @tooBig()
+        cant = can + mid
+      else
+        can = can + mid
+      mid = Math.floor(mid/2) || 1
+    @addWords(can)
+    $(@el).html( @trimTrailingPunctuation( $(@el).html() ) ) # trim trailing punctuation
+
+  addWords: (num) ->
+    $(@el).html(@words.slice(0,num).join(" "))
+
+  tooBig: ->
+    $(@el).outerHeight() > @maxLinesHeight
 
   adjustOnResize: ->
     $(window).on 'resize', =>
-      @truncate()
+      clearTimeout(delayedAdjust[@index])
+      delayedAdjust[@index] = setTimeout(=>
+        @truncate()
+      , 50)
+
+  trimTrailingPunctuation: (str) ->
+    str.replace(/(,$)|(\.$)|(\:$)|(\;$)|(\?$)|(\!$)/g, "")
 
 (($) ->
 
   truncateInitialized = false
+  truncatedThings = []
 
   $.fn.truncateLines = ->
+
     unless truncateInitialized
       # add CSS for the ellipsis (just so there are no additional file dependencies)
       $('head').append('<style type="text/css"> [data-truncated="true"] { overflow: hidden; } [data-truncated="true"]:after { content: "..."; position: absolute; } </style>')
 
     @each ->
-      new TruncatedLines(@)
+      truncatedThings.push( new TruncatedLines(@) )
 
 ) jQuery
 
+$(window).load ->
+  $("[data-truncate]").truncateLines()
+  # $('[data-truncated="true"]').on 'mouseenter', ->
+  #   $(this).html($(this).attr('data-text')).attr('data-truncated', 'false')
+  #   stopScrolling($(this))
+  #   $(this).animate(scrollTop: $(this)[0].scrollHeight, ($(this)[0].scrollHeight * 120))
+  # $('[data-truncated="true"]').on 'mouseleave', ->
+  #   $(this).stop().animate(scrollTop: 0, ($(this)[0].scrollHeight * 5), ->
+  #     $(this).truncateLines()
+  #   )
+  # $('[data-truncated="true"]').on 'mousedown', ->
+  #   stopScrolling($(this))
+  # $('[data-truncated="true"]').on 'mousewheel', ->
+  #   stopScrolling($(this))
 
-$("[data-truncate]").truncateLines()
+# stopScrolling = ($el) ->
+#   $el.stop().css('overflow','auto')

@@ -14,6 +14,7 @@ input[type=checkbox], input[type=radio] {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 html.lt-ie9 {

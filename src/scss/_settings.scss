@@ -13,12 +13,13 @@
 // $images_path:         "images/";  // path to images (relative from $root_path)
 // $fonts_path:          "fonts/";    // path to fonts (relative from $root_path)
 // $boxsizing_path:      "/js/libs/boxsizing.htc";  // path to box sizing polyfill (change to absolute path from HTML document root)
+// $PIE_path:            "/js/libs/PIE.htc" !default;  // path to IE CSS3 polyfill (change to absolute path from HTML document root)
 
 // build options
 // $reset:               true;       // enable CSS reset (recommended)
 // elements that will be reset (refine this to only include elements that you actually use in your markup patterns for optimal performance)
 // $reset-elements:      html body
-//                       div span header footer aside nav menu section article details
+//                       div span header footer aside nav menu main section article details
 //                       h1 h2 h3 h4 h5 h6 p
 //                       ol ul li dl dt dd
 //                       em small big strong b u i sub sup del strike
@@ -41,7 +42,7 @@
 
 // flexbox settings
 // $flexbox-classes:    true;       // enable output of flexbox classes    (optional)
-// $flexbox-helpers:    flex-wrapper flex-box vertical-center;
+// $flexbox-helpers:    flex-wrapper flex-box vertical-center; // for flexbox order use @include flex-order($val);
 
 // helper settings
 // $layout-classes:      true;       // enable output of layout helpers     (recommended)

@@ -390,8 +390,7 @@
     <script type="text/javascript" src="../js/libs/jquery-1.9.1.min.js"></script>
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]>
-    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
     <script type="text/javascript">
       // extend Modernizr to have datauri test
       (function(){
@@ -433,7 +432,7 @@
     <header class="white band padded">
       <div class="container">
         <h2 class="AverageSans">GroundworkCSS</h2>
-        <nav class="inline menu gap-top">
+        <nav class="nav inline menu gap-top">
           <ul>
             <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
             <li class="menu"><a href="#">Example Layouts</a>
@@ -479,14 +478,27 @@
         <div class="one whole padded">
           <h4 class="AverageSans">Grid Helpers</h4>
           <div class="row">
+            <div class="one fifth">
+              <p class="AverageSans">Desktop Grid (default)</p>
+            </div>
+            <div class="four fifths">
+              <div class="demo">
+                <div class="row">
+                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="row">
             <div class="one fifth small-tablet">
               <p class="AverageSans">Small-Tablet Grid</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one half small-tablet">1/2</div>
-                  <div class="one half small-tablet">1/2</div>
+                  <div title="class=&quot;one small-tablet half&quot;" class="one half small-tablet tooltip">1/2</div>
+                  <div title="class=&quot;one small-tablet half&quot;" class="one half small-tablet tooltip">1/2</div>
                 </div>
               </div>
             </div>
@@ -498,8 +510,8 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one half mobile">1/2</div>
-                  <div class="one half mobile">1/2</div>
+                  <div title="class=&quot;one mobile half&quot;" class="one half mobile tooltip">1/2</div>
+                  <div title="class=&quot;one mobile half&quot;" class="one half mobile tooltip">1/2</div>
                 </div>
               </div>
             </div>
@@ -513,10 +525,10 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
-                  <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
-                  <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
-                  <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
                 </div>
               </div>
             </div>
@@ -528,10 +540,10 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
-                  <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
-                  <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
-                  <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
                 </div>
               </div>
             </div>
@@ -543,12 +555,12 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
-                  <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
-                  <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
-                  <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
-                  <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
-                  <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
                 </div>
               </div>
             </div>
@@ -562,8 +574,8 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one half">1/2</div>
-                  <div class="one half">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
                 </div>
               </div>
             </div>
@@ -575,9 +587,9 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one third">1/3</div>
-                  <div class="one third">1/3</div>
-                  <div class="one third">1/3</div>
+                  <div title="class=&quot;one third&quot;" class="one third tooltip">1/3</div>
+                  <div title="class=&quot;one third&quot;" class="one third tooltip">1/3</div>
+                  <div title="class=&quot;one third&quot;" class="one third tooltip">1/3</div>
                 </div>
               </div>
             </div>
@@ -589,10 +601,10 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one fourth">1/4</div>
-                  <div class="one fourth">1/4</div>
-                  <div class="one fourth">1/4</div>
-                  <div class="one fourth">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
                 </div>
               </div>
             </div>
@@ -604,11 +616,11 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one fifth">1/5</div>
-                  <div class="one fifth">1/5</div>
-                  <div class="one fifth">1/5</div>
-                  <div class="one fifth">1/5</div>
-                  <div class="one fifth">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
                 </div>
               </div>
             </div>
@@ -620,12 +632,12 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one sixth">1/6</div>
-                  <div class="one sixth">1/6</div>
-                  <div class="one sixth">1/6</div>
-                  <div class="one sixth">1/6</div>
-                  <div class="one sixth">1/6</div>
-                  <div class="one sixth">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
                 </div>
               </div>
             </div>
@@ -637,13 +649,13 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one seventh">1/7</div>
-                  <div class="one seventh">1/7</div>
-                  <div class="one seventh">1/7</div>
-                  <div class="one seventh">1/7</div>
-                  <div class="one seventh">1/7</div>
-                  <div class="one seventh">1/7</div>
-                  <div class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
                 </div>
               </div>
             </div>
@@ -655,14 +667,14 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
-                  <div class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
                 </div>
               </div>
             </div>
@@ -674,15 +686,15 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
-                  <div class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
                 </div>
               </div>
             </div>
@@ -694,16 +706,16 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
-                  <div class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
                 </div>
               </div>
             </div>
@@ -715,17 +727,17 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
-                  <div class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
                 </div>
               </div>
             </div>
@@ -737,18 +749,18 @@
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
-                  <div class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
                 </div>
               </div>
             </div>

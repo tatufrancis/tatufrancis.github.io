@@ -1,3 +1,4 @@
+$type-classes: true;
 $root_path: '../../';
 @import "../../../src/scss/core/all-core";
 @import "../../../src/scss/base/all-base";
@@ -6,6 +7,7 @@ $root_path: '../../';
 // @import "../../../src/scss/nav/all-nav";
 // @import "../../../src/scss/ui/all-ui";
 // @import "../../../src/scss/form/all-form";
+// @import "../../../src/scss/responsive/all-responsive";
 
 @import "demo";
 

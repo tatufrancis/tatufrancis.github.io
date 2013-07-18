@@ -377,13 +377,22 @@ block content
       .one.whole.padded
         h4.AverageSans Grid Helpers
         .row
+          .one.fifth
+            p.AverageSans Desktop Grid (default)
+          .four.fifths
+            .demo
+              .row
+                .one.half.tooltip(title='class="one half"') 1/2
+                .one.half.tooltip(title='class="one half"') 1/2
+        br
+        .row
           .one.fifth.small-tablet
             p.AverageSans Small-Tablet Grid
           .four.fifths.small-tablet
             .demo
               .row
-                .one.half.small-tablet 1/2
-                .one.half.small-tablet 1/2
+                .one.half.small-tablet.tooltip(title='class="one small-tablet half"') 1/2
+                .one.half.small-tablet.tooltip(title='class="one small-tablet half"') 1/2
         br
         .row
           .one.fifth.small-tablet
@@ -391,8 +400,8 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.half.mobile 1/2
-                .one.half.mobile 1/2
+                .one.half.mobile.tooltip(title='class="one mobile half"') 1/2
+                .one.half.mobile.tooltip(title='class="one mobile half"') 1/2
         br
         hr
 
@@ -403,10 +412,10 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.fourth.two-up-small-tablet 1/4 to 2-up
-                .one.fourth.two-up-small-tablet 1/4 to 2-up
-                .one.fourth.two-up-small-tablet 1/4 to 2-up
-                .one.fourth.two-up-small-tablet 1/4 to 2-up
+                .one.fourth.two-up-small-tablet.tooltip(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
+                .one.fourth.two-up-small-tablet.tooltip(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
+                .one.fourth.two-up-small-tablet.tooltip(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
+                .one.fourth.two-up-small-tablet.tooltip(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
         br
         .row
           .one.fifth.small-tablet
@@ -414,10 +423,10 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
-                .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
-                .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
-                .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
+                .one.fourth.small-tablet.two-up-mobile.tooltip(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
+                .one.fourth.small-tablet.two-up-mobile.tooltip(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
+                .one.fourth.small-tablet.two-up-mobile.tooltip(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
+                .one.fourth.small-tablet.two-up-mobile.tooltip(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
         br
         .row
           .one.fifth.small-tablet
@@ -425,12 +434,12 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
-                .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
-                .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
-                .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
-                .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
-                .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+                .one.sixth.three-up-small-tablet.two-up-mobile.tooltip(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
+                .one.sixth.three-up-small-tablet.two-up-mobile.tooltip(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
+                .one.sixth.three-up-small-tablet.two-up-mobile.tooltip(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
+                .one.sixth.three-up-small-tablet.two-up-mobile.tooltip(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
+                .one.sixth.three-up-small-tablet.two-up-mobile.tooltip(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
+                .one.sixth.three-up-small-tablet.two-up-mobile.tooltip(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
         hr
         br
         h4.AverageSans Grid Fractions
@@ -440,8 +449,8 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.half 1/2
-                .one.half 1/2
+                .one.half.tooltip(title='class="one half"') 1/2
+                .one.half.tooltip(title='class="one half"') 1/2
         br
         .row
           .one.fifth.small-tablet
@@ -449,9 +458,9 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.third 1/3
-                .one.third 1/3
-                .one.third 1/3
+                .one.third.tooltip(title='class="one third"') 1/3
+                .one.third.tooltip(title='class="one third"') 1/3
+                .one.third.tooltip(title='class="one third"') 1/3
         br
         .row
           .one.fifth.small-tablet
@@ -459,10 +468,10 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.fourth 1/4
-                .one.fourth 1/4
-                .one.fourth 1/4
-                .one.fourth 1/4
+                .one.fourth.tooltip(title='class="one fourth"') 1/4
+                .one.fourth.tooltip(title='class="one fourth"') 1/4
+                .one.fourth.tooltip(title='class="one fourth"') 1/4
+                .one.fourth.tooltip(title='class="one fourth"') 1/4
         br
         .row
           .one.fifth.small-tablet
@@ -470,11 +479,11 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.fifth 1/5
-                .one.fifth 1/5
-                .one.fifth 1/5
-                .one.fifth 1/5
-                .one.fifth 1/5
+                .one.fifth.tooltip(title='class="one fifth"') 1/5
+                .one.fifth.tooltip(title='class="one fifth"') 1/5
+                .one.fifth.tooltip(title='class="one fifth"') 1/5
+                .one.fifth.tooltip(title='class="one fifth"') 1/5
+                .one.fifth.tooltip(title='class="one fifth"') 1/5
         br
         .row
           .one.fifth.small-tablet
@@ -482,12 +491,12 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.sixth 1/6
-                .one.sixth 1/6
-                .one.sixth 1/6
-                .one.sixth 1/6
-                .one.sixth 1/6
-                .one.sixth 1/6
+                .one.sixth.tooltip(title='class="one sixth"') 1/6
+                .one.sixth.tooltip(title='class="one sixth"') 1/6
+                .one.sixth.tooltip(title='class="one sixth"') 1/6
+                .one.sixth.tooltip(title='class="one sixth"') 1/6
+                .one.sixth.tooltip(title='class="one sixth"') 1/6
+                .one.sixth.tooltip(title='class="one sixth"') 1/6
         br
         .row
           .one.fifth.small-tablet
@@ -495,13 +504,13 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.seventh 1/7
-                .one.seventh 1/7
-                .one.seventh 1/7
-                .one.seventh 1/7
-                .one.seventh 1/7
-                .one.seventh 1/7
-                .one.seventh 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
+                .one.seventh.tooltip(title='class="one seventh"') 1/7
         br
         .row
           .one.fifth.small-tablet
@@ -509,14 +518,14 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.eighth 1/8
-                .one.eighth 1/8
-                .one.eighth 1/8
-                .one.eighth 1/8
-                .one.eighth 1/8
-                .one.eighth 1/8
-                .one.eighth 1/8
-                .one.eighth 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
+                .one.eighth.tooltip(title='class="one eighth"') 1/8
         br
         .row
           .one.fifth.small-tablet
@@ -524,15 +533,15 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
-                .one.ninth 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
+                .one.ninth.tooltip(title='class="one ninth"') 1/9
         br
         .row
           .one.fifth.small-tablet
@@ -540,16 +549,16 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
-                .one.tenth 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
+                .one.tenth.tooltip(title='class="one tenth"') 1/10
         br
         .row
           .one.fifth.small-tablet
@@ -557,17 +566,17 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
-                .one.eleventh 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
+                .one.eleventh.tooltip(title='class="one eleventh"') 1/11
         br
         .row
           .one.fifth.small-tablet
@@ -575,15 +584,15 @@ block content
           .four.fifths.small-tablet
             .demo
               .row
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
-                .one.twelfth 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12
+                .one.twelfth.tooltip(title='class="one twelfth"') 1/12

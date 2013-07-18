@@ -9,7 +9,7 @@ html, body {
   -webkit-text-size-adjust: none;
 }
 
-html, body, div, span, header, footer, aside, nav, menu, section, article, details, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, em, small, big, strong, b, u, i, sub, sup, del, strike, blockquote, cite, pre, code, time, address, a, img, center, hr, form, fieldset, legend, label, input, textarea, button, table, caption, tbody, thead, tfoot, tr, th, td, iframe, object, canvas, audio, video {
+html, body, div, span, header, footer, aside, nav, menu, main, section, article, details, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, em, small, big, strong, b, u, i, sub, sup, del, strike, blockquote, cite, pre, code, time, address, a, img, center, hr, form, fieldset, legend, label, input, textarea, button, table, caption, tbody, thead, tfoot, tr, th, td, iframe, object, canvas, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -345,11 +345,11 @@ img, a img {
   display: none !important;
 }
 
-.small, sup, sub, small, .extend-button.extend-small {
+.small, sup, sub, small {
   font-size: 0.8em;
 }
 
-big, .large, big, .extend-button.extend-large {
+big, .large, big {
   font-size: 1.5em;
 }
 
@@ -423,7 +423,7 @@ big, .large, big, .extend-button.extend-large {
   margin: 0 auto;
 }
 
-.square, .extend-button.extend-square {
+.square {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -431,12 +431,13 @@ big, .large, big, .extend-button.extend-large {
   border-radius: 0;
 }
 
-.round, .extend-button.extend-round {
+.round {
   -webkit-border-radius: 9999em;
   -moz-border-radius: 9999em;
   -ms-border-radius: 9999em;
   -o-border-radius: 9999em;
   border-radius: 9999em;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 .disabled {
@@ -2111,6 +2112,7 @@ big, .large, big, .extend-button.extend-large {
 }
 .flex-wrapper {
   display: -webkit-box;
+<<<<<<< HEAD
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
@@ -2135,6 +2137,21 @@ big, .large, big, .extend-button.extend-large {
   /* IE 10 */
   flex: 1;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+=======
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-box {
+  width: percent(1);
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+>>>>>>> c6ac23e7ff7d20cd1729cb9635872126a9c4496b
 }
 
 .vertical-center {
@@ -2314,6 +2331,7 @@ ol.list li:before {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 blockquote {
@@ -4337,6 +4355,7 @@ a.button:visited, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle,
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 button:hover,
 input[type=submit]:hover,
@@ -4379,6 +4398,55 @@ input[type=reset].active:focus, .button.active:focus, ul.button-list li a.active
 ol.button-list li a.active:focus, [role~=button].active:focus, .extend-button.extend-active:focus {
   background: #198d98;
   color: white;
+}
+
+button.small,
+input[type=submit].small,
+input[type=button].small,
+input[type=reset].small, .button.small,
+a.button.small,
+a.button.small:visited, ul.button-list li a.small,
+ol.button-list li a.small, [role~=button].small, .extend-button.extend-small {
+  font-size: 0.8em;
+}
+
+button.large,
+input[type=submit].large,
+input[type=button].large,
+input[type=reset].large, .button.large,
+a.button.large,
+a.button.large:visited, ul.button-list li a.large,
+ol.button-list li a.large, [role~=button].large, .extend-button.extend-large {
+  font-size: 1.5em;
+}
+
+button.square,
+input[type=submit].square,
+input[type=button].square,
+input[type=reset].square, .button.square,
+a.button.square,
+a.button.square:visited, ul.button-list li a.square,
+ol.button-list li a.square, [role~=button].square, .extend-button.extend-square {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+button.round,
+input[type=submit].round,
+input[type=button].round,
+input[type=reset].round, .button.round,
+a.button.round,
+a.button.round:visited, ul.button-list li a.round,
+ol.button-list li a.round, [role~=button].round, .extend-button.extend-round {
+  -webkit-border-radius: 9999em;
+  -moz-border-radius: 9999em;
+  -ms-border-radius: 9999em;
+  -o-border-radius: 9999em;
+  border-radius: 9999em;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 button.disabled,
@@ -5661,6 +5729,7 @@ ol.button-list li a.block, [role~=button].block, .extend-button.extend-block {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 .dropdown ul li {
@@ -5695,6 +5764,7 @@ ol.button-list li a.block, [role~=button].block, .extend-button.extend-block {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 .dropdown hr {
@@ -5900,6 +5970,7 @@ nav ul li:first-child a, .nav ul li:first-child a {
   -ms-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul li:last-child a, .nav ul li:last-child a {
   -webkit-border-radius: 0 0 4px 4px;
@@ -5907,6 +5978,7 @@ nav ul li:last-child a, .nav ul li:last-child a {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul li:last-child ul li a, .nav ul li:last-child ul li a {
   -webkit-border-radius: 0 0 0 0 !important;
@@ -5914,6 +5986,7 @@ nav ul li:last-child ul li a, .nav ul li:last-child ul li a {
   -ms-border-radius: 0 0 0 0 !important;
   -o-border-radius: 0 0 0 0 !important;
   border-radius: 0 0 0 0 !important;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul li:last-child ul li:last-child a, .nav ul li:last-child ul li:last-child a {
   -webkit-border-radius: 0 0 4px 4px !important;
@@ -5921,6 +5994,7 @@ nav ul li:last-child ul li:last-child a, .nav ul li:last-child ul li:last-child 
   -ms-border-radius: 0 0 4px 4px !important;
   -o-border-radius: 0 0 4px 4px !important;
   border-radius: 0 0 4px 4px !important;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul li:only-child a, .nav ul li:only-child a {
   -webkit-border-radius: 4px;
@@ -5928,6 +6002,7 @@ nav ul li:only-child a, .nav ul li:only-child a {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul ul, .nav ul ul {
   position: absolute;
@@ -5942,6 +6017,7 @@ nav ul ul li a, .nav ul ul li a, nav ul ul li a:visited, .nav ul ul li a:visited
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
   border: none;
   border-top: 1px solid #1dabb8;
   background: #20bfce;
@@ -5972,6 +6048,7 @@ nav ul ul li:first-child a, .nav ul ul li:first-child a {
   -ms-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul ul li:last-child a, .nav ul ul li:last-child a {
   -webkit-border-radius: 0 0 4px 4px;
@@ -5979,6 +6056,7 @@ nav ul ul li:last-child a, .nav ul ul li:last-child a {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul ul li:only-child a, .nav ul ul li:only-child a {
   -webkit-border-radius: 0 4px 4px 0;
@@ -5986,6 +6064,7 @@ nav ul ul li:only-child a, .nav ul ul li:only-child a {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul.row li a, .nav ul.row li a {
   border-left: 1px solid #198d98;
@@ -5995,6 +6074,7 @@ nav ul.row li a, .nav ul.row li a {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul.row li:first-child a, .nav ul.row li:first-child a {
   border-left: none;
@@ -6003,6 +6083,7 @@ nav ul.row li:first-child a, .nav ul.row li:first-child a {
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul.row li:last-child a, .nav ul.row li:last-child a {
   -webkit-border-radius: 0 4px 4px 0;
@@ -6010,6 +6091,7 @@ nav ul.row li:last-child a, .nav ul.row li:last-child a {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul.row li:only-child a, .nav ul.row li:only-child a {
   -webkit-border-radius: 4px;
@@ -6017,6 +6099,7 @@ nav ul.row li:only-child a, .nav ul.row li:only-child a {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul.row ul, .nav ul.row ul {
   position: absolute;
@@ -6031,6 +6114,7 @@ nav ul.row ul li a, .nav ul.row ul li a {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
   border-left: none;
   border-top: 1px solid #198d98;
 }
@@ -6040,6 +6124,7 @@ nav ul.row ul li:first-child a, .nav ul.row ul li:first-child a {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav ul.row ul li:last-child a, .nav ul.row ul li:last-child a {
   -webkit-border-radius: 0 0 4px 4px;
@@ -6047,6 +6132,7 @@ nav ul.row ul li:last-child a, .nav ul.row ul li:last-child a {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav.inline, .inline.nav {
   width: auto;
@@ -6071,6 +6157,7 @@ nav.inline ul li:first-child a, .inline.nav ul li:first-child a {
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav.inline ul li:last-child a, .inline.nav ul li:last-child a {
   -webkit-border-radius: 0 4px 4px 0;
@@ -6078,6 +6165,7 @@ nav.inline ul li:last-child a, .inline.nav ul li:last-child a {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav.inline ul li:only-child a, .inline.nav ul li:only-child a {
   -webkit-border-radius: 4px;
@@ -6085,6 +6173,7 @@ nav.inline ul li:only-child a, .inline.nav ul li:only-child a {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav.inline ul li ul, .inline.nav ul li ul {
   position: absolute;
@@ -6102,6 +6191,7 @@ nav.inline ul li ul li a, .inline.nav ul li ul li a {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
   border-left: none;
   border-top: 1px solid #198d98;
 }
@@ -6111,6 +6201,7 @@ nav.inline ul li ul li:first-child a, .inline.nav ul li ul li:first-child a {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav.inline ul li ul li:last-child a, .inline.nav ul li ul li:last-child a {
   -webkit-border-radius: 0 0 4px 4px;
@@ -6118,6 +6209,7 @@ nav.inline ul li ul li:last-child a, .inline.nav ul li ul li:last-child a {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: none;
@@ -6135,6 +6227,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
   padding: 0 3px 0 2px;
   min-width: 29px;
 }
@@ -6154,6 +6247,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 .pagination ul li a:hover, .pagination ul li a:focus, .pagination ul li a:visited:hover, .pagination ul li a:visited:focus {
   background: #198d98;
@@ -6221,6 +6315,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 .pagination ul li:last-child a {
   -webkit-border-radius: 4px;
@@ -6228,6 +6323,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 .no-js nav ul li.menu ul, .no-js .nav ul li.menu ul {
@@ -6324,6 +6420,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 .tabs > ul li a:hover, .tabs > ol li a:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover, .tabs > ul li a:focus, .tabs > ol li a:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus {
   background: #198d98;
@@ -6401,6 +6498,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 .tabs > div *:first-child, [role~=tabpanel] [role~=tabpanel] *:first-child {
   margin-top: 0;
@@ -6424,6 +6522,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 .tabs.vertical, .tabs.vertical > ul li, .tabs.vertical > ol li, .tabs.vertical [role~=tablist] [role~=tab] {
@@ -6436,6 +6535,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 4px 0 0 0;
   -o-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 .tabs.vertical > ul li a, .tabs.vertical > ul li a:visited, .tabs.vertical > ol li a, .tabs.vertical > ol li a:visited {
@@ -6446,6 +6546,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 .tabs.vertical > ul li a:before, .tabs.vertical > ol li a:before, .tabs.vertical > ul li a:after, .tabs.vertical > ol li a:after {
   display: none !important;
@@ -6470,6 +6571,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  *behavior: url("/js/libs/PIE.htc");
 }
 
 [role~=tabpanel] [role~=tablist] {

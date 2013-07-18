@@ -10,6 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>GroundworkCSS &hearts; Helpers</title>
+    <style type="text/css">
+      .desktop-only,
+      .hide-on-desktop,
+      .ipad-only,
+      .hide-on-ipad,
+      .small-tablet-only,
+      .hide-on-small-tablet,
+      .mobile-only,
+      .hide-on-mobile {
+        padding: 0.25em;
+        color: #fff;
+      }
+      
+    </style>
     <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
     <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
@@ -23,8 +37,7 @@
     <script type="text/javascript" src="../js/libs/jquery-1.9.1.min.js"></script>
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]>
-    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
     <script type="text/javascript">
       // extend Modernizr to have datauri test
       (function(){
@@ -66,7 +79,7 @@
     <header class="white band padded">
       <div class="container">
         <h2 class="AverageSans">GroundworkCSS</h2>
-        <nav class="inline menu gap-top">
+        <nav class="nav inline menu gap-top">
           <ul>
             <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
             <li class="menu"><a href="#">Example Layouts</a>
@@ -105,26 +118,20 @@
     </header>
     <div class="container">
       <div class="pad-left pad-right">
-        <h2 class="AverageSans">Helpers</h2>
+        <h1 class="AverageSans zero">Conditional Content Helpers</h1>
+        <p>Conditionally show and hide elements for specific viewport sizes.</p>
         <div class="row">
-          <div class="one half small-tablet">
-            <h4>Spin</h4>
-            <p>
-              <button class="spin large round">Spin</button>
-              <button class="spin-slow large round">Slow</button>
-              <button class="spin-fast large round">Fast</button><br><br>
-            </p>
-          </div>
-          <div class="one half small-tablet">
-            <h4>Conditional Content</h4>
-            <p class="desktop-only">Desktop only</p>
-            <p class="hide-on-desktop">Hide on desktop</p>
-            <p class="ipad-only">iPad only</p>
-            <p class="hide-on-ipad">Hide on iPad</p>
-            <p class="small-tablet-only">Small-tablet only</p>
-            <p class="hide-on-small-tablet">Hide on small-tablet</p>
-            <p class="mobile-only">Mobile only</p>
-            <p class="hide-on-mobile">Hide on mobile</p>
+          <div class="one whole padded">
+            <ol class="list large">
+              <li class="green desktop-only">Desktop only</li>
+              <li class="blue hide-on-desktop">Hide on desktop</li>
+              <li class="green ipad-only">iPad only</li>
+              <li class="blue hide-on-ipad">Hide on iPad</li>
+              <li class="green small-tablet-only">Small-tablet only</li>
+              <li class="blue hide-on-small-tablet">Hide on small-tablet</li>
+              <li class="green mobile-only">Mobile only</li>
+              <li class="blue hide-on-mobile">Hide on mobile</li>
+            </ol>
           </div>
         </div>
       </div>
