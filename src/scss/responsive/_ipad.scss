@@ -17,6 +17,7 @@
     .zero-ipad { @include helper_reset(); }
     .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
     .no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    .no-border-ipad { border: 0; }
     @content;
   }
 }

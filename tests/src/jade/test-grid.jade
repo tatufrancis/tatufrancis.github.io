@@ -6,7 +6,7 @@ html
     link(rel="stylesheet", href="css/test-grid.css")
     script(type='text/javascript', src='../js/libs/jquery-1.9.1.min.js')
     script(type='text/javascript', src='../js/components/equalizeColumns.js')
-  
+
   body
     .container
       .padded.align-center
@@ -15,9 +15,9 @@ html
         ul.list
           li Elements appear as they should regardless of whether classes or extends are used.
           li All grid elements behave responsively.
-    
+
       - var selectors = { class: "", extend: "extend-"}
-      
+
       .row.headings
         .one.whole Standard Grid
       each type, name in selectors
@@ -25,6 +25,42 @@ html
           div.demo(class="#{type}row")
             - for (var i = 1; i <= 3; i++) {
               div(class="#{type}one #{type}third") one third #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Small-Tablet Grid
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 3; i++) {
+              div(class="#{type}one #{type}third small-tablet") one third small-tablet #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Mobile Grid
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 3; i++) {
+              div(class="#{type}one #{type}third mobile") one third mobile #{name}
+            - }
+      br
+
+      .row.headings
+        .one.whole Grid Adapters
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 4; i++) {
+              div(class="#{type}one #{type}fourth two-up-small-tablet") one fourth two-up-small-tablet #{name}
+            - }
+      each type, name in selectors
+        div(class="#{type}container")
+          div.demo(class="#{type}row")
+            - for (var i = 1; i <= 4; i++) {
+              div(class="#{type}one #{type}fourth small-tablet two-up-mobile") one fourth small-tablet two-up-mobile #{name}
             - }
       br
 

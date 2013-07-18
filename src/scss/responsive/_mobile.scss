@@ -23,6 +23,7 @@
     .zero-mobile { @include helper_reset(); }
     .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
     .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    .no-border-mobile { border: 0; }
     @content;
   }
 }

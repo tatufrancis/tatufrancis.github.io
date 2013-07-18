@@ -14,6 +14,7 @@
     .zero-desktop { @include helper_reset(); }
     .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
     .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    .no-border-desktop { border: 0; }
     @content;
   }
 }

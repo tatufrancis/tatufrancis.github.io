@@ -44,10 +44,10 @@
   color:$button-active-text;
 }
 
-%button-small     { @extend %small; }
-%button-large     { @extend %large; }
-%button-square    { @extend %square; }
-%button-round     { @extend %round; }
+%button-small     { @include _small; }
+%button-large     { @include _large; }
+%button-square    { @include _square; }
+%button-round     { @include _round; }
 %button-disabled  { @include state(disabled,normal,desaturate($button-color,20%)); }
 
 @for $i from 1 through length($modifier-name) {
@@ -238,14 +238,14 @@
 }
 
 @mixin button_modifiers() {
-  @for $i from 1 through length($button-states) {
-    &.#{nth($button-states, $i)} {
-      @extend %button-#{nth($button-states, $i)};
-    }
-  }
   @for $i from 1 through length($button-modifiers) {
     &.#{nth($button-modifiers, $i)} {
       @extend %button-#{nth($button-modifiers, $i)};
+    }
+  }
+  @for $i from 1 through length($button-states) {
+    &.#{nth($button-states, $i)} {
+      @extend %button-#{nth($button-states, $i)};
     }
   }
   // modifier colors

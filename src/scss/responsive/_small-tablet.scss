@@ -19,6 +19,7 @@
     .zero-small-tablet { @include helper_reset(); }
     .no-padding-small-tablet, .no-pad-small-tablet { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
     .no-margin-small-tablet, .no-gap-small-tablet { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    .no-border-small-tablet { border: 0; }
     @content;
   }
 }

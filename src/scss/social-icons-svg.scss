@@ -36,7 +36,7 @@
     @include rounded(6px);
   }
   &.round {
-    @include rounded(50% 50%);
+    @include rounded();
   }
   &.disabled {
     -webkit-filter:grayscale(100%);
