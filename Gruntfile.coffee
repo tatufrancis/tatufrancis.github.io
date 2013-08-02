@@ -42,7 +42,6 @@ module.exports = (grunt) ->
         #   'pages/': ['src/jade/*.jade']
         files:
           'pages/home.html':              ['src/jade/home.jade']
-          'pages/kitchen-sink.html':      ['src/jade/kitchen-sink.jade']
           'pages/layout-1.html':          ['src/jade/layout-1.jade']
           'pages/layout-2.html':          ['src/jade/layout-2.jade']
           'pages/layout-3.html':          ['src/jade/layout-3.jade']
