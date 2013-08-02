@@ -2,19 +2,19 @@
 html
   head
     meta(charset="utf-8")
-    title Groundwork Tests: Grids
-    link(rel="stylesheet", href="css/test-grid.css")
+    title Groundwork Tests: Unresponsive grid
+    link(rel="stylesheet", href="css/test-unresponsive-grid.css")
     script(type='text/javascript', src='../js/libs/jquery-1.10.2.min.js')
     script(type='text/javascript', src='../js/components/equalizeColumns.js')
 
   body
     .container
       .padded.align-center
-        h1 Groundwork Test: Grids
+        h1 Groundwork Test: Unresponsive grid
         p This page generates grid elements using classes and extends. Things are good when:
         ul.list
-          li Elements appear as they should regardless of whether classes or extends are used.
-          li All grid elements behave responsively.
+          li The grid doesn't adjust when the viewport is resized (width 1200px).
+          li All grid elements are static in width.
 
       - var selectors = { class: "", extend: "extend-"}
 
