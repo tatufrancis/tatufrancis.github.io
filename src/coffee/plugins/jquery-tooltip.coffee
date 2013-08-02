@@ -122,3 +122,6 @@
             top: "+=10"
 
 ) jQuery
+
+$(document).ready ->
+  $('.tooltip[title]').tooltip()

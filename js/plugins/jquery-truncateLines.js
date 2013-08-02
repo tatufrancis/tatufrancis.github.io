@@ -1,6 +1,6 @@
 /*
  *
- *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/truncateLines
+ *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/jquery-truncate-lines
  *  
  *  Open source under the MIT License. 
  *
@@ -10,14 +10,14 @@
 
 
 (function() {
-  var TruncatedLines, delayedAdjust, truncateIndex;
+  var TruncateLines, delayedAdjustTruncation, truncateIndex;
 
-  delayedAdjust = [];
+  delayedAdjustTruncation = [];
 
   truncateIndex = 0;
 
-  TruncatedLines = (function() {
-    function TruncatedLines(el) {
+  TruncateLines = (function() {
+    function TruncateLines(el) {
       this.el = el;
       this.index = truncateIndex++;
       this.text = $(this.el).text();
@@ -28,16 +28,16 @@
       this.adjustOnResize();
     }
 
-    TruncatedLines.prototype.truncate = function() {
+    TruncateLines.prototype.truncate = function() {
       this.measure();
       return this.setContent();
     };
 
-    TruncatedLines.prototype.reset = function() {
+    TruncateLines.prototype.reset = function() {
       return $(this.el).text(this.text).css('max-height', 'none').attr('data-truncated', 'false');
     };
 
-    TruncatedLines.prototype.measure = function() {
+    TruncateLines.prototype.measure = function() {
       var i;
       this.reset();
       $(this.el).html(".");
@@ -49,11 +49,11 @@
       return this.maxLinesHeight = $(this.el).outerHeight();
     };
 
-    TruncatedLines.prototype.empty = function() {
+    TruncateLines.prototype.empty = function() {
       return $(this.el).html("");
     };
 
-    TruncatedLines.prototype.setContent = function() {
+    TruncateLines.prototype.setContent = function() {
       var truncated;
       this.reset();
       truncated = false;
@@ -65,7 +65,7 @@
       }
     };
 
-    TruncatedLines.prototype.addNumberWordsThatFit = function() {
+    TruncateLines.prototype.addNumberWordsThatFit = function() {
       var can, cant, mid;
       cant = this.words.length;
       can = 0;
@@ -83,42 +83,42 @@
       return $(this.el).html(this.trimTrailingPunctuation($(this.el).html()));
     };
 
-    TruncatedLines.prototype.addWords = function(num) {
+    TruncateLines.prototype.addWords = function(num) {
       return $(this.el).html(this.words.slice(0, num).join(" "));
     };
 
-    TruncatedLines.prototype.tooBig = function() {
+    TruncateLines.prototype.tooBig = function() {
       return $(this.el).outerHeight() > this.maxLinesHeight;
     };
 
-    TruncatedLines.prototype.adjustOnResize = function() {
+    TruncateLines.prototype.adjustOnResize = function() {
       var _this = this;
       return $(window).on('resize', function() {
-        clearTimeout(delayedAdjust[_this.index]);
-        return delayedAdjust[_this.index] = setTimeout(function() {
+        clearTimeout(delayedAdjustTruncation[_this.index]);
+        return delayedAdjustTruncation[_this.index] = setTimeout(function() {
           return _this.truncate();
-        }, 50);
+        }, 20);
       });
     };
 
-    TruncatedLines.prototype.trimTrailingPunctuation = function(str) {
+    TruncateLines.prototype.trimTrailingPunctuation = function(str) {
       return str.replace(/(,$)|(\.$)|(\:$)|(\;$)|(\?$)|(\!$)/g, "");
     };
 
-    return TruncatedLines;
+    return TruncateLines;
 
   })();
 
   (function($) {
-    var truncateInitialized, truncatedThings;
+    var truncateInitialized, truncatedLineElements;
     truncateInitialized = false;
-    truncatedThings = [];
+    truncatedLineElements = [];
     return $.fn.truncateLines = function() {
       if (!truncateInitialized) {
         $('head').append('<style type="text/css"> [data-truncated="true"] { overflow: hidden; } [data-truncated="true"]:after { content: "..."; position: absolute; } </style>');
       }
       return this.each(function() {
-        return truncatedThings.push(new TruncatedLines(this));
+        return truncatedLineElements.push(new TruncateLines(this));
       });
     };
   })(jQuery);

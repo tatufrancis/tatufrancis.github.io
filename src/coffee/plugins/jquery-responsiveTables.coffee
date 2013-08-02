@@ -1,6 +1,6 @@
 ###
  *
- *  jQuery ResponsiveTables by Gary Hepting - https://github.com/ghepting/responsiveTables
+ *  jQuery ResponsiveTables by Gary Hepting - https://github.com/ghepting/jquery-responsive-tables
  *  
  *  Open source under the MIT License. 
  *
@@ -8,54 +8,85 @@
  *
 ###
 
-(($) ->
-  elems = []
-  $.fn.responsiveTable = (options) ->
-    settings =
-      compressor: options.compressor or 10
-      minSize: options.minSize or Number.NEGATIVE_INFINITY
-      maxSize: options.maxSize or Number.POSITIVE_INFINITY
-      padding: 2
-      height: "auto" # '100%' will fit tables (and containers) to viewport height as well
-      adjust_parents: true # if height specified, force parent elements to be height 100%
-    
-    @each ->
-      elem = $(this)
-      elem.attr('data-compression',settings.compressor)
-      elem.attr('data-min',settings.minSize)
-      elem.attr('data-max',settings.maxSize)
-      elem.attr('data-padding',settings.padding)
-      # count columns
-      columns = $("tr", elem).first().children("th, td").length
-      # count rows
-      rows = $("tr", elem).length
-      unless settings.height is "auto"
-        # set height of table
-        $this.css "height", settings.height
-        # set height of each parent of table
-        if settings.adjust_parents
-          $this.parents().each ->
-            $(this).css "height", "100%"
-      # set column widths
-      $("tr th, tr td", elem).each ->
-        if $(this).attr('data-width') != ''
-          width = parseInt($(this).attr('data-width'))
-        else
-          width = Math.floor(100 / columns)
-        $(this).css "width", width + "%"
-      # set row heights
-      $("tr th, tr td", elem).css "height", Math.floor(100 / rows) + "%"
-      # set cell font sizes
-      fontSize = Math.floor(Math.max(Math.min((elem.width() / (settings.compressor)), parseFloat(settings.maxSize)), parseFloat(settings.minSize)))
-      $("tr th, tr td", elem).css "font-size", fontSize + "px"
-      # 
-      elems.push elem
+delayedAdjustTables = []
+responsiveTableIndex = 0
 
-  $(window).on "resize", ->
-    $(elems).each ->
-      elem = $(this)
-      # set cell font sizes
-      fontSize = Math.floor(Math.max(Math.min((elem.width() / (elem.attr('data-compression'))), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min'))))
-      $("tr th, tr td", elem).css "font-size", fontSize + "px"
+class ResponsiveTable
+
+  constructor: (el) ->
+    @index = responsiveTableIndex++
+    @el = el
+    @compression = $(@el).data('compression') || 5
+    @minFontSize = $(@el).data('min') || 10
+    @maxFontSize = $(@el).data('max') || Number.POSITIVE_INFINITY
+    @width = $(@el).data('width') || "100%"
+    @height = $(@el).data('height') || "auto"
+    @adjustParents = $(@el).data('adjust-parents') || true
+    @styled = $(@el).data('styled') || true
+    @columns = $('tbody tr', $(@el)).first().find('th, td').length
+    @rows = $('tbody tr', $(@el)).length
+    @init()
+
+  init: ->
+    @setupTable()
+    @adjustOnLoad()
+    @adjustOnResize()
+
+  fontSize: ->
+    if @height is "auto"
+      compressed = $('tbody td', $(@el)).first().width() / @compression
+    else
+      compressed = $(@el).height() / @rows / @compression
+    Math.min(@maxFontSize, Math.max(compressed, @minFontSize))
+
+  setupTable: ->
+    # setup table
+    $(@el).css('width', @width)
+    $(@el).css('height', @height) unless @height is "auto"
+    # set column widths
+    $("th, td", $(@el)).css('width', (100 / @columns) + "%")
+    if @styled
+      $(@el).addClass "responsiveTable"
+    unless @height is "auto"
+      # set row heights
+      $("th, td", $(@el)).css('height', (100 / @rows) + "%")
+      # set parent element heights
+      if @adjustParents
+        $(@el).parents().each ->
+          $(this).css('height', '100%')
+    $(@el).css('font-size', @fontSize())
+
+  resizeTable: ->
+    $(@el).css('font-size', @minFontSize).css('font-size', @fontSize())
+    # $('th, td', $(@el)).each ->
+    #   fontSize = $(@).width() / obj.compression
+    #   fontSize = Math.min(obj.maxFontSize, fontSize)
+    #   fontSize = Math.max(obj.minFontSize, fontSize)
+    #   console.log fontSize
+    #   $(@).css('font-size', fontSize)
+
+  adjustOnLoad: ->
+    $(window).on 'load', =>
+      @resizeTable()
+
+  adjustOnResize: ->
+    $(window).on 'resize', =>
+      clearTimeout(delayedAdjustTables[@index])
+      delayedAdjustTables[@index] = setTimeout(=>
+        @resizeTable()
+      , 20)
+
+
+(($) ->
+
+  responsiveTableElements = []
+
+  $.fn.responsiveTables = (options) ->
+
+    @each ->
+      responsiveTableElements.push( new ResponsiveTable(@) )
 
 ) jQuery
+
+$(document).ready ->
+  $("table.responsive").responsiveTables()

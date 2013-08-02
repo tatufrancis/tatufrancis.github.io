@@ -130,4 +130,8 @@
     };
   })(jQuery);
 
+  $(document).ready(function() {
+    return $('.tooltip[title]').tooltip();
+  });
+
 }).call(this);

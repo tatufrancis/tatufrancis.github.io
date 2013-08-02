@@ -1,5 +1,5 @@
 (function() {
-  var $window, TruncatedLines, delayedAdjust, equalizeColumns, limitPaginationItems, navSelector, truncateIndex;
+  var $window, ResponsiveTable, ResponsiveText, TruncateLines, delayedAdjustTables, delayedAdjustText, delayedAdjustTruncation, equalizeColumns, limitPaginationItems, navSelector, responsiveTableIndex, responsiveTextIndex, truncateIndex;
 
   $(function() {
     $('.disabled').each(function() {
@@ -366,73 +366,6 @@
     });
   };
 
-  /*
-   * Requires jquery.responsiveText.js
-  */
-
-
-  $(function() {
-    $('table.responsive').each(function(index, object) {
-      var $this, compression, max, min, padding;
-      $this = $(this);
-      compression = 30;
-      min = 8;
-      max = 13;
-      padding = 0;
-      compression = parseFloat($this.attr('data-compression') || compression);
-      min = parseFloat($this.attr('data-min') || min);
-      max = parseFloat($this.attr('data-max') || max);
-      padding = parseFloat($this.attr('data-padding') || padding);
-      $(object).responsiveTable({
-        compressor: compression,
-        minSize: min,
-        maxSize: max,
-        padding: padding
-      });
-    });
-  });
-
-  /*
-   * Requires jquery.responsiveText.js
-  */
-
-
-  $(function() {
-    $('.responsive').not('table').each(function(index, object) {
-      var $this, compression, max, min, scrollReset, scrollTime;
-      $this = $(this);
-      compression = 10;
-      min = 10;
-      max = 200;
-      scrollTime = 650;
-      scrollReset = 200;
-      compression = parseFloat($this.attr('data-compression') || compression);
-      min = parseFloat($this.attr('data-min') || min);
-      max = parseFloat($this.attr('data-max') || max);
-      $(object).responsiveText({
-        compressor: compression,
-        minSize: min,
-        maxSize: max
-      });
-      $this.hover((function() {
-        var difference;
-        difference = $this.get(0).scrollWidth - $this.width();
-        if (difference > scrollTime) {
-          scrollTime = difference;
-        }
-        if (difference > 0) {
-          return $this.stop().animate({
-            "text-indent": -difference
-          }, scrollTime);
-        }
-      }), function() {
-        return $this.stop().animate({
-          "text-indent": 0
-        }, scrollReset);
-      });
-    });
-  });
-
   $(function() {
     $('body').on('click', '.tabs > ul li a[href^=#], [role=tab] a', function(e) {
       var $this, tabs;
@@ -484,17 +417,114 @@
   });
 
   /*
-   * Requires jquery.tooltips.js
+   *
+   *  jQuery ResponsiveTables by Gary Hepting - https://github.com/ghepting/jquery-responsive-tables
+   *  
+   *  Open source under the MIT License. 
+   *
+   *  Copyright © 2013 Gary Hepting. All rights reserved.
+   *
   */
 
 
-  $(function() {
-    return $('.tooltip[title]').tooltip();
+  delayedAdjustTables = [];
+
+  responsiveTableIndex = 0;
+
+  ResponsiveTable = (function() {
+    function ResponsiveTable(el) {
+      this.index = responsiveTableIndex++;
+      this.el = el;
+      this.compression = $(this.el).data('compression') || 5;
+      this.minFontSize = $(this.el).data('min') || 10;
+      this.maxFontSize = $(this.el).data('max') || Number.POSITIVE_INFINITY;
+      this.width = $(this.el).data('width') || "100%";
+      this.height = $(this.el).data('height') || "auto";
+      this.adjustParents = $(this.el).data('adjust-parents') || true;
+      this.styled = $(this.el).data('styled') || true;
+      this.columns = $('tbody tr', $(this.el)).first().find('th, td').length;
+      this.rows = $('tbody tr', $(this.el)).length;
+      this.init();
+    }
+
+    ResponsiveTable.prototype.init = function() {
+      this.setupTable();
+      this.adjustOnLoad();
+      return this.adjustOnResize();
+    };
+
+    ResponsiveTable.prototype.fontSize = function() {
+      var compressed;
+      if (this.height === "auto") {
+        compressed = $('tbody td', $(this.el)).first().width() / this.compression;
+      } else {
+        compressed = $(this.el).height() / this.rows / this.compression;
+      }
+      return Math.min(this.maxFontSize, Math.max(compressed, this.minFontSize));
+    };
+
+    ResponsiveTable.prototype.setupTable = function() {
+      $(this.el).css('width', this.width);
+      if (this.height !== "auto") {
+        $(this.el).css('height', this.height);
+      }
+      $("th, td", $(this.el)).css('width', (100 / this.columns) + "%");
+      if (this.styled) {
+        $(this.el).addClass("responsiveTable");
+      }
+      if (this.height !== "auto") {
+        $("th, td", $(this.el)).css('height', (100 / this.rows) + "%");
+        if (this.adjustParents) {
+          $(this.el).parents().each(function() {
+            return $(this).css('height', '100%');
+          });
+        }
+      }
+      return $(this.el).css('font-size', this.fontSize());
+    };
+
+    ResponsiveTable.prototype.resizeTable = function() {
+      return $(this.el).css('font-size', this.minFontSize).css('font-size', this.fontSize());
+    };
+
+    ResponsiveTable.prototype.adjustOnLoad = function() {
+      var _this = this;
+      return $(window).on('load', function() {
+        return _this.resizeTable();
+      });
+    };
+
+    ResponsiveTable.prototype.adjustOnResize = function() {
+      var _this = this;
+      return $(window).on('resize', function() {
+        clearTimeout(delayedAdjustTables[_this.index]);
+        return delayedAdjustTables[_this.index] = setTimeout(function() {
+          return _this.resizeTable();
+        }, 20);
+      });
+    };
+
+    return ResponsiveTable;
+
+  })();
+
+  (function($) {
+    var responsiveTableElements;
+    responsiveTableElements = [];
+    return $.fn.responsiveTables = function(options) {
+      return this.each(function() {
+        return responsiveTableElements.push(new ResponsiveTable(this));
+      });
+    };
+  })(jQuery);
+
+  $(document).ready(function() {
+    return $("table.responsive").responsiveTables();
   });
 
   /*
    *
-   *  jQuery ResponsiveTables by Gary Hepting - https://github.com/ghepting/responsiveTables
+   *  jQuery ResponsiveText by Gary Hepting - https://github.com/ghepting/jquery-responsive-text
    *  
    *  Open source under the MIT License. 
    *
@@ -503,100 +533,97 @@
   */
 
 
-  (function($) {
-    var elems;
-    elems = [];
-    $.fn.responsiveTable = function(options) {
-      var settings;
-      settings = {
-        compressor: options.compressor || 10,
-        minSize: options.minSize || Number.NEGATIVE_INFINITY,
-        maxSize: options.maxSize || Number.POSITIVE_INFINITY,
-        padding: 2,
-        height: "auto",
-        adjust_parents: true
-      };
-      return this.each(function() {
-        var columns, elem, fontSize, rows;
-        elem = $(this);
-        elem.attr('data-compression', settings.compressor);
-        elem.attr('data-min', settings.minSize);
-        elem.attr('data-max', settings.maxSize);
-        elem.attr('data-padding', settings.padding);
-        columns = $("tr", elem).first().children("th, td").length;
-        rows = $("tr", elem).length;
-        if (settings.height !== "auto") {
-          $this.css("height", settings.height);
-          if (settings.adjust_parents) {
-            $this.parents().each(function() {
-              return $(this).css("height", "100%");
-            });
-          }
+  delayedAdjustText = [];
+
+  responsiveTextIndex = 0;
+
+  ResponsiveText = (function() {
+    function ResponsiveText(el) {
+      this.index = responsiveTextIndex++;
+      this.el = el;
+      this.compression = $(this.el).data('compression') || 10;
+      this.minFontSize = $(this.el).data('min') || Number.NEGATIVE_INFINITY;
+      this.maxFontSize = $(this.el).data('max') || Number.POSITIVE_INFINITY;
+      this.scrollable = $(this.el).data('scrollable') || false;
+      this.scrollSpeed = $(this.el).data('scrollspeed') || 650;
+      this.scrollReset = $(this.el).data('scrollreset') || 200;
+      this.init();
+    }
+
+    ResponsiveText.prototype.init = function() {
+      $(this.el).wrapInner('<span class="responsiveText-wrapper" />');
+      this.adjustOnLoad();
+      this.adjustOnResize();
+      if (this.scrollable) {
+        return this.scrollOnHover();
+      }
+    };
+
+    ResponsiveText.prototype.resizeText = function() {
+      return $(this.el).css("font-size", Math.floor(Math.max(Math.min($(this.el).width() / this.compression, this.maxFontSize), this.minFontSize)));
+    };
+
+    ResponsiveText.prototype.adjustOnLoad = function() {
+      var _this = this;
+      return $(window).on('load', function() {
+        return _this.resizeText();
+      });
+    };
+
+    ResponsiveText.prototype.adjustOnResize = function() {
+      var _this = this;
+      return $(window).on('resize', function() {
+        clearTimeout(delayedAdjustText[_this.index]);
+        return delayedAdjustText[_this.index] = setTimeout(function() {
+          return _this.resizeText();
+        }, 20);
+      });
+    };
+
+    ResponsiveText.prototype.scrollOnHover = function() {
+      var _this = this;
+      $(this.el).css({
+        'overflow': 'hidden',
+        'text-overflow': 'ellipsis',
+        'white-space': 'nowrap'
+      });
+      return $(this.el).hover(function() {
+        _this.difference = _this.el.scrollWidth - $(_this.el).width();
+        if (_this.difference > _this.scrollSpeed) {
+          _this.scrollSpeed = _this.difference;
         }
-        $("tr th, tr td", elem).each(function() {
-          var width;
-          if ($(this).attr('data-width') !== '') {
-            width = parseInt($(this).attr('data-width'));
-          } else {
-            width = Math.floor(100 / columns);
-          }
-          return $(this).css("width", width + "%");
-        });
-        $("tr th, tr td", elem).css("height", Math.floor(100 / rows) + "%");
-        fontSize = Math.floor(Math.max(Math.min(elem.width() / settings.compressor, parseFloat(settings.maxSize)), parseFloat(settings.minSize)));
-        $("tr th, tr td", elem).css("font-size", fontSize + "px");
-        return elems.push(elem);
+        if (_this.difference > 0) {
+          $(_this.el).css('cursor', 'e-resize');
+          return $(_this.el).stop().animate({
+            "text-indent": -_this.difference
+          }, _this.scrollSpeed, function() {
+            return $(_this.el).css('cursor', 'text');
+          });
+        }
+      }, function() {
+        return $(_this.el).stop().animate({
+          "text-indent": 0
+        }, _this.scrollReset);
       });
     };
-    return $(window).on("resize", function() {
-      return $(elems).each(function() {
-        var elem, fontSize;
-        elem = $(this);
-        fontSize = Math.floor(Math.max(Math.min(elem.width() / (elem.attr('data-compression')), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min'))));
-        return $("tr th, tr td", elem).css("font-size", fontSize + "px");
-      });
-    });
-  })(jQuery);
 
-  /*
-   *
-   *  jQuery ResponsiveText by Gary Hepting - https://github.com/ghepting/responsiveText
-   *  
-   *  Open source under the MIT License. 
-   *
-   *  Copyright © 2013 Gary Hepting. All rights reserved.
-   *
-  */
+    return ResponsiveText;
 
+  })();
 
   (function($) {
-    var elems;
-    elems = [];
-    $.fn.responsiveText = function(options) {
-      var settings;
-      settings = {
-        compressor: options.compressor || 10,
-        minSize: options.minSize || Number.NEGATIVE_INFINITY,
-        maxSize: options.maxSize || Number.POSITIVE_INFINITY
-      };
+    var responsiveTextElements;
+    responsiveTextElements = [];
+    return $.fn.responsiveText = function(options) {
       return this.each(function() {
-        var elem;
-        elem = $(this);
-        elem.attr('data-compression', settings.compressor);
-        elem.attr('data-min', settings.minSize);
-        elem.attr('data-max', settings.maxSize);
-        elem.css("font-size", Math.floor(Math.max(Math.min(elem.width() / settings.compressor, parseFloat(settings.maxSize)), parseFloat(settings.minSize))));
-        return elems.push(elem);
+        return responsiveTextElements.push(new ResponsiveText(this));
       });
     };
-    return $(window).on("resize", function() {
-      return $(elems).each(function() {
-        var elem;
-        elem = $(this);
-        return elem.css("font-size", Math.floor(Math.max(Math.min(elem.width() / (elem.attr('data-compression')), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min')))));
-      });
-    });
   })(jQuery);
+
+  $(document).ready(function() {
+    return $(".responsive").not('table').responsiveText();
+  });
 
   /*
    *
@@ -729,9 +756,13 @@
     };
   })(jQuery);
 
+  $(document).ready(function() {
+    return $('.tooltip[title]').tooltip();
+  });
+
   /*
    *
-   *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/truncateLines
+   *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/jquery-truncate-lines
    *  
    *  Open source under the MIT License. 
    *
@@ -740,12 +771,12 @@
   */
 
 
-  delayedAdjust = [];
+  delayedAdjustTruncation = [];
 
   truncateIndex = 0;
 
-  TruncatedLines = (function() {
-    function TruncatedLines(el) {
+  TruncateLines = (function() {
+    function TruncateLines(el) {
       this.el = el;
       this.index = truncateIndex++;
       this.text = $(this.el).text();
@@ -756,16 +787,16 @@
       this.adjustOnResize();
     }
 
-    TruncatedLines.prototype.truncate = function() {
+    TruncateLines.prototype.truncate = function() {
       this.measure();
       return this.setContent();
     };
 
-    TruncatedLines.prototype.reset = function() {
+    TruncateLines.prototype.reset = function() {
       return $(this.el).text(this.text).css('max-height', 'none').attr('data-truncated', 'false');
     };
 
-    TruncatedLines.prototype.measure = function() {
+    TruncateLines.prototype.measure = function() {
       var i;
       this.reset();
       $(this.el).html(".");
@@ -777,11 +808,11 @@
       return this.maxLinesHeight = $(this.el).outerHeight();
     };
 
-    TruncatedLines.prototype.empty = function() {
+    TruncateLines.prototype.empty = function() {
       return $(this.el).html("");
     };
 
-    TruncatedLines.prototype.setContent = function() {
+    TruncateLines.prototype.setContent = function() {
       var truncated;
       this.reset();
       truncated = false;
@@ -793,7 +824,7 @@
       }
     };
 
-    TruncatedLines.prototype.addNumberWordsThatFit = function() {
+    TruncateLines.prototype.addNumberWordsThatFit = function() {
       var can, cant, mid;
       cant = this.words.length;
       can = 0;
@@ -811,42 +842,42 @@
       return $(this.el).html(this.trimTrailingPunctuation($(this.el).html()));
     };
 
-    TruncatedLines.prototype.addWords = function(num) {
+    TruncateLines.prototype.addWords = function(num) {
       return $(this.el).html(this.words.slice(0, num).join(" "));
     };
 
-    TruncatedLines.prototype.tooBig = function() {
+    TruncateLines.prototype.tooBig = function() {
       return $(this.el).outerHeight() > this.maxLinesHeight;
     };
 
-    TruncatedLines.prototype.adjustOnResize = function() {
+    TruncateLines.prototype.adjustOnResize = function() {
       var _this = this;
       return $(window).on('resize', function() {
-        clearTimeout(delayedAdjust[_this.index]);
-        return delayedAdjust[_this.index] = setTimeout(function() {
+        clearTimeout(delayedAdjustTruncation[_this.index]);
+        return delayedAdjustTruncation[_this.index] = setTimeout(function() {
           return _this.truncate();
-        }, 50);
+        }, 20);
       });
     };
 
-    TruncatedLines.prototype.trimTrailingPunctuation = function(str) {
+    TruncateLines.prototype.trimTrailingPunctuation = function(str) {
       return str.replace(/(,$)|(\.$)|(\:$)|(\;$)|(\?$)|(\!$)/g, "");
     };
 
-    return TruncatedLines;
+    return TruncateLines;
 
   })();
 
   (function($) {
-    var truncateInitialized, truncatedThings;
+    var truncateInitialized, truncatedLineElements;
     truncateInitialized = false;
-    truncatedThings = [];
+    truncatedLineElements = [];
     return $.fn.truncateLines = function() {
       if (!truncateInitialized) {
         $('head').append('<style type="text/css"> [data-truncated="true"] { overflow: hidden; } [data-truncated="true"]:after { content: "..."; position: absolute; } </style>');
       }
       return this.each(function() {
-        return truncatedThings.push(new TruncatedLines(this));
+        return truncatedLineElements.push(new TruncateLines(this));
       });
     };
   })(jQuery);

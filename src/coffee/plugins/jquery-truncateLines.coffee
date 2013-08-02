@@ -1,6 +1,6 @@
 ###
  *
- *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/truncateLines
+ *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/jquery-truncate-lines
  *  
  *  Open source under the MIT License. 
  *
@@ -8,10 +8,10 @@
  *
 ###
 
-delayedAdjust = []
+delayedAdjustTruncation = []
 truncateIndex = 0
 
-class TruncatedLines
+class TruncateLines
 
   constructor: (el) ->
     @el = el
@@ -76,10 +76,10 @@ class TruncatedLines
 
   adjustOnResize: ->
     $(window).on 'resize', =>
-      clearTimeout(delayedAdjust[@index])
-      delayedAdjust[@index] = setTimeout(=>
+      clearTimeout(delayedAdjustTruncation[@index])
+      delayedAdjustTruncation[@index] = setTimeout(=>
         @truncate()
-      , 50)
+      , 20)
 
   trimTrailingPunctuation: (str) ->
     str.replace(/(,$)|(\.$)|(\:$)|(\;$)|(\?$)|(\!$)/g, "")
@@ -87,7 +87,7 @@ class TruncatedLines
 (($) ->
 
   truncateInitialized = false
-  truncatedThings = []
+  truncatedLineElements = []
 
   $.fn.truncateLines = ->
 
@@ -96,7 +96,7 @@ class TruncatedLines
       $('head').append('<style type="text/css"> [data-truncated="true"] { overflow: hidden; } [data-truncated="true"]:after { content: "..."; position: absolute; } </style>')
 
     @each ->
-      truncatedThings.push( new TruncatedLines(@) )
+      truncatedLineElements.push( new TruncateLines(@) )
 
 ) jQuery
 

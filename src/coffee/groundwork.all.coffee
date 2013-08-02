@@ -14,9 +14,9 @@
 
 # Plugins:
 
-# @codekit-append "plugins/jquery-modals.coffee"
 # @codekit-append "plugins/jquery-responsiveTables.coffee"
 # @codekit-append "plugins/jquery-responsiveText.coffee"
+# @codekit-append "plugins/jquery-truncateLines.coffee"
 # @codekit-append "plugins/jquery-tooltip.coffee"
 
 # Components:
@@ -27,8 +27,5 @@
 # @codekit-append "components/menus.coffee"
 # @codekit-append "components/modals.coffee"
 # @codekit-append "components/pagination.coffee"
-# @codekit-append "components/responsiveTables.coffee"
-# @codekit-append "components/responsiveText.coffee"
 # @codekit-append "components/tabs.coffee"
-# @codekit-append "components/tooltips.coffee"
 # @codekit-append "components/tiles.coffee"
