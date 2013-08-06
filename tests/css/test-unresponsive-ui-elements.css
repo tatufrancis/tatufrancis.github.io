@@ -676,7 +676,7 @@ big, .large, big {
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -1950,124 +1950,6 @@ big, .large, big {
   margin-left: 91.66667%;
 }
 
-@media (max-width: 767px) {
-  .one-up-small-tablet {
-    width: 100% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  .two-up-small-tablet {
-    width: 50% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  .three-up-small-tablet {
-    width: 33.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  .four-up-small-tablet {
-    width: 25% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  .five-up-small-tablet {
-    width: 20% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-}
-@media (max-width: 767px) and (min-width: 481px) {
-  .one-up-small-tablet:nth-child(2) {
-    clear: both !important;
-  }
-
-  .two-up-small-tablet:nth-child(3) {
-    clear: both !important;
-  }
-
-  .three-up-small-tablet:nth-child(4) {
-    clear: both !important;
-  }
-
-  .four-up-small-tablet:nth-child(5) {
-    clear: both !important;
-  }
-
-  .five-up-small-tablet:nth-child(6) {
-    clear: both !important;
-  }
-}
-@media (max-width: 480px) {
-  .one-up-mobile {
-    width: 100% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .one-up-mobile:nth-child(2) {
-    clear: both !important;
-  }
-
-  .two-up-mobile {
-    width: 50% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .two-up-mobile:nth-child(3) {
-    clear: both !important;
-  }
-
-  .three-up-mobile {
-    width: 33.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .three-up-mobile:nth-child(4) {
-    clear: both !important;
-  }
-
-  .four-up-mobile {
-    width: 25% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .four-up-mobile:nth-child(5) {
-    clear: both !important;
-  }
-
-  .five-up-mobile {
-    width: 20% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .five-up-mobile:nth-child(6) {
-    clear: both !important;
-  }
-}
 .flex-wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -4262,7 +4144,7 @@ input[type=submit],
 input[type=button],
 input[type=reset], .button,
 a.button,
-a.button:visited, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle, .extend-button {
+a.button:visited, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: inline-block;
   word-wrap: break-word;
   padding: 0.25em 1em;
@@ -4292,11 +4174,11 @@ button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
 input[type=reset]:hover, .button:hover,
-a.button:hover:visited, [role~=button]:hover, nav.menu .menu-toggle:hover, .menu.nav .menu-toggle:hover, .extend-button:hover, button:focus,
+a.button:hover:visited, [role~=button]:hover, nav.menu .menu-toggle:hover, .menu.nav .menu-toggle:hover, button:focus,
 input[type=submit]:focus,
 input[type=button]:focus,
 input[type=reset]:focus, .button:focus,
-a.button:focus:visited, [role~=button]:focus, nav.menu .menu-toggle:focus, .menu.nav .menu-toggle:focus, .extend-button:focus {
+a.button:focus:visited, [role~=button]:focus, nav.menu .menu-toggle:focus, .menu.nav .menu-toggle:focus {
   background: #198d98;
   text-decoration: none;
   color: white;
@@ -4320,17 +4202,17 @@ input[type=button].active,
 input[type=reset].active, .button.active,
 a.button.active,
 a.button.active:visited, ul.button-list li a.active,
-ol.button-list li a.active, [role~=button].active, .extend-button.extend-active, button.active:hover,
+ol.button-list li a.active, [role~=button].active, button.active:hover,
 input[type=submit].active:hover,
 input[type=button].active:hover,
 input[type=reset].active:hover, .button.active:hover,
 a.button.active:hover:visited, ul.button-list li a.active:hover,
-ol.button-list li a.active:hover, [role~=button].active:hover, .extend-button.extend-active:hover, button.active:focus,
+ol.button-list li a.active:hover, [role~=button].active:hover, button.active:focus,
 input[type=submit].active:focus,
 input[type=button].active:focus,
 input[type=reset].active:focus, .button.active:focus,
 a.button.active:focus:visited, ul.button-list li a.active:focus,
-ol.button-list li a.active:focus, [role~=button].active:focus, .extend-button.extend-active:focus {
+ol.button-list li a.active:focus, [role~=button].active:focus {
   background: #198d98;
   color: white;
 }
@@ -4341,7 +4223,7 @@ input[type=button].small,
 input[type=reset].small, .button.small,
 a.button.small,
 a.button.small:visited, ul.button-list li a.small,
-ol.button-list li a.small, [role~=button].small, .extend-button.extend-small {
+ol.button-list li a.small, [role~=button].small {
   font-size: 0.8em;
 }
 
@@ -4351,7 +4233,7 @@ input[type=button].large,
 input[type=reset].large, .button.large,
 a.button.large,
 a.button.large:visited, ul.button-list li a.large,
-ol.button-list li a.large, [role~=button].large, .extend-button.extend-large {
+ol.button-list li a.large, [role~=button].large {
   font-size: 1.5em;
 }
 
@@ -4361,7 +4243,7 @@ input[type=button].square,
 input[type=reset].square, .button.square,
 a.button.square,
 a.button.square:visited, ul.button-list li a.square,
-ol.button-list li a.square, [role~=button].square, .extend-button.extend-square {
+ol.button-list li a.square, [role~=button].square {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -4375,7 +4257,7 @@ input[type=button].round,
 input[type=reset].round, .button.round,
 a.button.round,
 a.button.round:visited, ul.button-list li a.round,
-ol.button-list li a.round, [role~=button].round, .extend-button.extend-round {
+ol.button-list li a.round, [role~=button].round {
   -webkit-border-radius: 9999em;
   -moz-border-radius: 9999em;
   -ms-border-radius: 9999em;
@@ -4390,7 +4272,7 @@ input[type=button].disabled,
 input[type=reset].disabled, .button.disabled,
 a.button.disabled,
 a.button.disabled:visited, ul.button-list li a.disabled,
-ol.button-list li a.disabled, [role~=button].disabled, .extend-button.extend-disabled {
+ol.button-list li a.disabled, [role~=button].disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4403,16 +4285,16 @@ input[type=submit].disabled:hover,
 input[type=button].disabled:hover,
 input[type=reset].disabled:hover, .button.disabled:hover,
 a.button.disabled:hover:visited, ul.button-list li a.disabled:hover,
-ol.button-list li a.disabled:hover, [role~=button].disabled:hover, .extend-button.extend-disabled:hover, button.disabled:focus,
+ol.button-list li a.disabled:hover, [role~=button].disabled:hover, button.disabled:focus,
 input[type=submit].disabled:focus,
 input[type=button].disabled:focus,
 input[type=reset].disabled:focus, .button.disabled:focus,
 a.button.disabled:focus:visited, ul.button-list li a.disabled:focus,
-ol.button-list li a.disabled:focus, [role~=button].disabled:focus, .extend-button.extend-disabled:focus, button.disabled:visited,
+ol.button-list li a.disabled:focus, [role~=button].disabled:focus, button.disabled:visited,
 input[type=submit].disabled:visited,
 input[type=button].disabled:visited,
 input[type=reset].disabled:visited, .button.disabled:visited, ul.button-list li a.disabled:visited,
-ol.button-list li a.disabled:visited, [role~=button].disabled:visited, .extend-button.extend-disabled:visited {
+ol.button-list li a.disabled:visited, [role~=button].disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4427,7 +4309,7 @@ input[type=button].green,
 input[type=reset].green, .button.green,
 a.button.green,
 a.button.green:visited, ul.button-list li a.green,
-ol.button-list li a.green, [role~=button].green, .extend-button.extend-green {
+ol.button-list li a.green, [role~=button].green {
   background-color: #2ecc71;
   color: white;
   border-color: #29b765;
@@ -4437,28 +4319,20 @@ input[type=submit].green:hover,
 input[type=button].green:hover,
 input[type=reset].green:hover, .button.green:hover,
 a.button.green:hover:visited, ul.button-list li a.green:hover,
-ol.button-list li a.green:hover, [role~=button].green:hover, .extend-button.extend-green:hover, button.green:focus,
+ol.button-list li a.green:hover, [role~=button].green:hover, button.green:focus,
 input[type=submit].green:focus,
 input[type=button].green:focus,
 input[type=reset].green:focus, .button.green:focus,
 a.button.green:focus:visited, ul.button-list li a.green:focus,
-ol.button-list li a.green:focus, [role~=button].green:focus, .extend-button.extend-green:focus {
+ol.button-list li a.green:focus, [role~=button].green:focus {
   background: #29b765;
   border-color: #25a25a;
 }
-button.disabled.green, button.disabled.extend-button.extend-green,
+button.disabled.green,
 input[type=submit].disabled.green,
-input[type=submit].disabled.extend-button.extend-green,
 input[type=button].disabled.green,
-input[type=button].disabled.extend-button.extend-green,
-input[type=reset].disabled.green,
-input[type=reset].disabled.extend-button.extend-green, button.green.extend-button.extend-disabled,
-input[type=submit].green.extend-button.extend-disabled,
-input[type=button].green.extend-button.extend-disabled,
-input[type=reset].green.extend-button.extend-disabled, .button.disabled.green, .button.disabled.extend-button.extend-green, .button.green.extend-button.extend-disabled, ul.button-list li a.disabled.green, ul.button-list li a.disabled.extend-button.extend-green,
-ol.button-list li a.disabled.green,
-ol.button-list li a.disabled.extend-button.extend-green, ul.button-list li a.green.extend-button.extend-disabled,
-ol.button-list li a.green.extend-button.extend-disabled, [role~=button].disabled.green, [role~=button].disabled.extend-button.extend-green, [role~=button].green.extend-button.extend-disabled, .extend-button.extend-green.extend-disabled {
+input[type=reset].disabled.green, .button.disabled.green, ul.button-list li a.disabled.green,
+ol.button-list li a.disabled.green, [role~=button].disabled.green {
   color: #c5e8d4;
   background: #7ccb9d;
   border-color: #47b375;
@@ -4466,43 +4340,19 @@ ol.button-list li a.green.extend-button.extend-disabled, [role~=button].disabled
   text-decoration: none;
   outline: none;
 }
-button.disabled.green:hover, button.disabled.extend-button.extend-green:hover,
+button.disabled.green:hover,
 input[type=submit].disabled.green:hover,
-input[type=submit].disabled.extend-button.extend-green:hover,
 input[type=button].disabled.green:hover,
-input[type=button].disabled.extend-button.extend-green:hover,
-input[type=reset].disabled.green:hover,
-input[type=reset].disabled.extend-button.extend-green:hover, button.green.extend-button.extend-disabled:hover,
-input[type=submit].green.extend-button.extend-disabled:hover,
-input[type=button].green.extend-button.extend-disabled:hover,
-input[type=reset].green.extend-button.extend-disabled:hover, .button.disabled.green:hover, .button.disabled.extend-button.extend-green:hover, .button.green.extend-button.extend-disabled:hover, ul.button-list li a.disabled.green:hover, ul.button-list li a.disabled.extend-button.extend-green:hover,
-ol.button-list li a.disabled.green:hover,
-ol.button-list li a.disabled.extend-button.extend-green:hover, ul.button-list li a.green.extend-button.extend-disabled:hover,
-ol.button-list li a.green.extend-button.extend-disabled:hover, [role~=button].disabled.green:hover, [role~=button].disabled.extend-button.extend-green:hover, [role~=button].green.extend-button.extend-disabled:hover, .extend-button.extend-green.extend-disabled:hover, button.disabled.green:focus, button.disabled.extend-button.extend-green:focus,
+input[type=reset].disabled.green:hover, .button.disabled.green:hover, ul.button-list li a.disabled.green:hover,
+ol.button-list li a.disabled.green:hover, [role~=button].disabled.green:hover, button.disabled.green:focus,
 input[type=submit].disabled.green:focus,
-input[type=submit].disabled.extend-button.extend-green:focus,
 input[type=button].disabled.green:focus,
-input[type=button].disabled.extend-button.extend-green:focus,
-input[type=reset].disabled.green:focus,
-input[type=reset].disabled.extend-button.extend-green:focus, button.green.extend-button.extend-disabled:focus,
-input[type=submit].green.extend-button.extend-disabled:focus,
-input[type=button].green.extend-button.extend-disabled:focus,
-input[type=reset].green.extend-button.extend-disabled:focus, .button.disabled.green:focus, .button.disabled.extend-button.extend-green:focus, .button.green.extend-button.extend-disabled:focus, ul.button-list li a.disabled.green:focus, ul.button-list li a.disabled.extend-button.extend-green:focus,
-ol.button-list li a.disabled.green:focus,
-ol.button-list li a.disabled.extend-button.extend-green:focus, ul.button-list li a.green.extend-button.extend-disabled:focus,
-ol.button-list li a.green.extend-button.extend-disabled:focus, [role~=button].disabled.green:focus, [role~=button].disabled.extend-button.extend-green:focus, [role~=button].green.extend-button.extend-disabled:focus, .extend-button.extend-green.extend-disabled:focus, button.disabled.green:visited, button.disabled.extend-button.extend-green:visited,
+input[type=reset].disabled.green:focus, .button.disabled.green:focus, ul.button-list li a.disabled.green:focus,
+ol.button-list li a.disabled.green:focus, [role~=button].disabled.green:focus, button.disabled.green:visited,
 input[type=submit].disabled.green:visited,
-input[type=submit].disabled.extend-button.extend-green:visited,
 input[type=button].disabled.green:visited,
-input[type=button].disabled.extend-button.extend-green:visited,
-input[type=reset].disabled.green:visited,
-input[type=reset].disabled.extend-button.extend-green:visited, button.green.extend-button.extend-disabled:visited,
-input[type=submit].green.extend-button.extend-disabled:visited,
-input[type=button].green.extend-button.extend-disabled:visited,
-input[type=reset].green.extend-button.extend-disabled:visited, .button.disabled.green:visited, .button.disabled.extend-button.extend-green:visited, .button.green.extend-button.extend-disabled:visited, ul.button-list li a.disabled.green:visited, ul.button-list li a.disabled.extend-button.extend-green:visited,
-ol.button-list li a.disabled.green:visited,
-ol.button-list li a.disabled.extend-button.extend-green:visited, ul.button-list li a.green.extend-button.extend-disabled:visited,
-ol.button-list li a.green.extend-button.extend-disabled:visited, [role~=button].disabled.green:visited, [role~=button].disabled.extend-button.extend-green:visited, [role~=button].green.extend-button.extend-disabled:visited, .extend-button.extend-green.extend-disabled:visited {
+input[type=reset].disabled.green:visited, .button.disabled.green:visited, ul.button-list li a.disabled.green:visited,
+ol.button-list li a.disabled.green:visited, [role~=button].disabled.green:visited {
   color: #c5e8d4;
   background: #7ccb9d;
   border-color: #47b375;
@@ -4517,7 +4367,7 @@ input[type=button].blue,
 input[type=reset].blue, .button.blue,
 a.button.blue,
 a.button.blue:visited, ul.button-list li a.blue,
-ol.button-list li a.blue, [role~=button].blue, .extend-button.extend-blue {
+ol.button-list li a.blue, [role~=button].blue {
   background-color: #3498db;
   color: white;
   border-color: #258cd1;
@@ -4527,28 +4377,20 @@ input[type=submit].blue:hover,
 input[type=button].blue:hover,
 input[type=reset].blue:hover, .button.blue:hover,
 a.button.blue:hover:visited, ul.button-list li a.blue:hover,
-ol.button-list li a.blue:hover, [role~=button].blue:hover, .extend-button.extend-blue:hover, button.blue:focus,
+ol.button-list li a.blue:hover, [role~=button].blue:hover, button.blue:focus,
 input[type=submit].blue:focus,
 input[type=button].blue:focus,
 input[type=reset].blue:focus, .button.blue:focus,
 a.button.blue:focus:visited, ul.button-list li a.blue:focus,
-ol.button-list li a.blue:focus, [role~=button].blue:focus, .extend-button.extend-blue:focus {
+ol.button-list li a.blue:focus, [role~=button].blue:focus {
   background: #258cd1;
   border-color: #217dbb;
 }
-button.disabled.blue, button.disabled.extend-button.extend-blue,
+button.disabled.blue,
 input[type=submit].disabled.blue,
-input[type=submit].disabled.extend-button.extend-blue,
 input[type=button].disabled.blue,
-input[type=button].disabled.extend-button.extend-blue,
-input[type=reset].disabled.blue,
-input[type=reset].disabled.extend-button.extend-blue, button.blue.extend-button.extend-disabled,
-input[type=submit].blue.extend-button.extend-disabled,
-input[type=button].blue.extend-button.extend-disabled,
-input[type=reset].blue.extend-button.extend-disabled, .button.disabled.blue, .button.disabled.extend-button.extend-blue, .button.blue.extend-button.extend-disabled, ul.button-list li a.disabled.blue, ul.button-list li a.disabled.extend-button.extend-blue,
-ol.button-list li a.disabled.blue,
-ol.button-list li a.disabled.extend-button.extend-blue, ul.button-list li a.blue.extend-button.extend-disabled,
-ol.button-list li a.blue.extend-button.extend-disabled, [role~=button].disabled.blue, [role~=button].disabled.extend-button.extend-blue, [role~=button].blue.extend-button.extend-disabled, .extend-button.extend-blue.extend-disabled {
+input[type=reset].disabled.blue, .button.disabled.blue, ul.button-list li a.disabled.blue,
+ol.button-list li a.disabled.blue, [role~=button].disabled.blue {
   color: #d2e4f0;
   background: #85b6d6;
   border-color: #4c93c3;
@@ -4556,43 +4398,19 @@ ol.button-list li a.blue.extend-button.extend-disabled, [role~=button].disabled.
   text-decoration: none;
   outline: none;
 }
-button.disabled.blue:hover, button.disabled.extend-button.extend-blue:hover,
+button.disabled.blue:hover,
 input[type=submit].disabled.blue:hover,
-input[type=submit].disabled.extend-button.extend-blue:hover,
 input[type=button].disabled.blue:hover,
-input[type=button].disabled.extend-button.extend-blue:hover,
-input[type=reset].disabled.blue:hover,
-input[type=reset].disabled.extend-button.extend-blue:hover, button.blue.extend-button.extend-disabled:hover,
-input[type=submit].blue.extend-button.extend-disabled:hover,
-input[type=button].blue.extend-button.extend-disabled:hover,
-input[type=reset].blue.extend-button.extend-disabled:hover, .button.disabled.blue:hover, .button.disabled.extend-button.extend-blue:hover, .button.blue.extend-button.extend-disabled:hover, ul.button-list li a.disabled.blue:hover, ul.button-list li a.disabled.extend-button.extend-blue:hover,
-ol.button-list li a.disabled.blue:hover,
-ol.button-list li a.disabled.extend-button.extend-blue:hover, ul.button-list li a.blue.extend-button.extend-disabled:hover,
-ol.button-list li a.blue.extend-button.extend-disabled:hover, [role~=button].disabled.blue:hover, [role~=button].disabled.extend-button.extend-blue:hover, [role~=button].blue.extend-button.extend-disabled:hover, .extend-button.extend-blue.extend-disabled:hover, button.disabled.blue:focus, button.disabled.extend-button.extend-blue:focus,
+input[type=reset].disabled.blue:hover, .button.disabled.blue:hover, ul.button-list li a.disabled.blue:hover,
+ol.button-list li a.disabled.blue:hover, [role~=button].disabled.blue:hover, button.disabled.blue:focus,
 input[type=submit].disabled.blue:focus,
-input[type=submit].disabled.extend-button.extend-blue:focus,
 input[type=button].disabled.blue:focus,
-input[type=button].disabled.extend-button.extend-blue:focus,
-input[type=reset].disabled.blue:focus,
-input[type=reset].disabled.extend-button.extend-blue:focus, button.blue.extend-button.extend-disabled:focus,
-input[type=submit].blue.extend-button.extend-disabled:focus,
-input[type=button].blue.extend-button.extend-disabled:focus,
-input[type=reset].blue.extend-button.extend-disabled:focus, .button.disabled.blue:focus, .button.disabled.extend-button.extend-blue:focus, .button.blue.extend-button.extend-disabled:focus, ul.button-list li a.disabled.blue:focus, ul.button-list li a.disabled.extend-button.extend-blue:focus,
-ol.button-list li a.disabled.blue:focus,
-ol.button-list li a.disabled.extend-button.extend-blue:focus, ul.button-list li a.blue.extend-button.extend-disabled:focus,
-ol.button-list li a.blue.extend-button.extend-disabled:focus, [role~=button].disabled.blue:focus, [role~=button].disabled.extend-button.extend-blue:focus, [role~=button].blue.extend-button.extend-disabled:focus, .extend-button.extend-blue.extend-disabled:focus, button.disabled.blue:visited, button.disabled.extend-button.extend-blue:visited,
+input[type=reset].disabled.blue:focus, .button.disabled.blue:focus, ul.button-list li a.disabled.blue:focus,
+ol.button-list li a.disabled.blue:focus, [role~=button].disabled.blue:focus, button.disabled.blue:visited,
 input[type=submit].disabled.blue:visited,
-input[type=submit].disabled.extend-button.extend-blue:visited,
 input[type=button].disabled.blue:visited,
-input[type=button].disabled.extend-button.extend-blue:visited,
-input[type=reset].disabled.blue:visited,
-input[type=reset].disabled.extend-button.extend-blue:visited, button.blue.extend-button.extend-disabled:visited,
-input[type=submit].blue.extend-button.extend-disabled:visited,
-input[type=button].blue.extend-button.extend-disabled:visited,
-input[type=reset].blue.extend-button.extend-disabled:visited, .button.disabled.blue:visited, .button.disabled.extend-button.extend-blue:visited, .button.blue.extend-button.extend-disabled:visited, ul.button-list li a.disabled.blue:visited, ul.button-list li a.disabled.extend-button.extend-blue:visited,
-ol.button-list li a.disabled.blue:visited,
-ol.button-list li a.disabled.extend-button.extend-blue:visited, ul.button-list li a.blue.extend-button.extend-disabled:visited,
-ol.button-list li a.blue.extend-button.extend-disabled:visited, [role~=button].disabled.blue:visited, [role~=button].disabled.extend-button.extend-blue:visited, [role~=button].blue.extend-button.extend-disabled:visited, .extend-button.extend-blue.extend-disabled:visited {
+input[type=reset].disabled.blue:visited, .button.disabled.blue:visited, ul.button-list li a.disabled.blue:visited,
+ol.button-list li a.disabled.blue:visited, [role~=button].disabled.blue:visited {
   color: #d2e4f0;
   background: #85b6d6;
   border-color: #4c93c3;
@@ -4607,7 +4425,7 @@ input[type=button].purple,
 input[type=reset].purple, .button.purple,
 a.button.purple,
 a.button.purple:visited, ul.button-list li a.purple,
-ol.button-list li a.purple, [role~=button].purple, .extend-button.extend-purple {
+ol.button-list li a.purple, [role~=button].purple {
   background-color: #9b59b6;
   color: white;
   border-color: #8f4bab;
@@ -4617,28 +4435,20 @@ input[type=submit].purple:hover,
 input[type=button].purple:hover,
 input[type=reset].purple:hover, .button.purple:hover,
 a.button.purple:hover:visited, ul.button-list li a.purple:hover,
-ol.button-list li a.purple:hover, [role~=button].purple:hover, .extend-button.extend-purple:hover, button.purple:focus,
+ol.button-list li a.purple:hover, [role~=button].purple:hover, button.purple:focus,
 input[type=submit].purple:focus,
 input[type=button].purple:focus,
 input[type=reset].purple:focus, .button.purple:focus,
 a.button.purple:focus:visited, ul.button-list li a.purple:focus,
-ol.button-list li a.purple:focus, [role~=button].purple:focus, .extend-button.extend-purple:focus {
+ol.button-list li a.purple:focus, [role~=button].purple:focus {
   background: #8f4bab;
   border-color: #804399;
 }
-button.disabled.purple, button.disabled.extend-button.extend-purple,
+button.disabled.purple,
 input[type=submit].disabled.purple,
-input[type=submit].disabled.extend-button.extend-purple,
 input[type=button].disabled.purple,
-input[type=button].disabled.extend-button.extend-purple,
-input[type=reset].disabled.purple,
-input[type=reset].disabled.extend-button.extend-purple, button.purple.extend-button.extend-disabled,
-input[type=submit].purple.extend-button.extend-disabled,
-input[type=button].purple.extend-button.extend-disabled,
-input[type=reset].purple.extend-button.extend-disabled, .button.disabled.purple, .button.disabled.extend-button.extend-purple, .button.purple.extend-button.extend-disabled, ul.button-list li a.disabled.purple, ul.button-list li a.disabled.extend-button.extend-purple,
-ol.button-list li a.disabled.purple,
-ol.button-list li a.disabled.extend-button.extend-purple, ul.button-list li a.purple.extend-button.extend-disabled,
-ol.button-list li a.purple.extend-button.extend-disabled, [role~=button].disabled.purple, [role~=button].disabled.extend-button.extend-purple, [role~=button].purple.extend-button.extend-disabled, .extend-button.extend-purple.extend-disabled {
+input[type=reset].disabled.purple, .button.disabled.purple, ul.button-list li a.disabled.purple,
+ol.button-list li a.disabled.purple, [role~=button].disabled.purple {
   color: #e3dbe6;
   background: #b49ebd;
   border-color: #91719e;
@@ -4646,43 +4456,19 @@ ol.button-list li a.purple.extend-button.extend-disabled, [role~=button].disable
   text-decoration: none;
   outline: none;
 }
-button.disabled.purple:hover, button.disabled.extend-button.extend-purple:hover,
+button.disabled.purple:hover,
 input[type=submit].disabled.purple:hover,
-input[type=submit].disabled.extend-button.extend-purple:hover,
 input[type=button].disabled.purple:hover,
-input[type=button].disabled.extend-button.extend-purple:hover,
-input[type=reset].disabled.purple:hover,
-input[type=reset].disabled.extend-button.extend-purple:hover, button.purple.extend-button.extend-disabled:hover,
-input[type=submit].purple.extend-button.extend-disabled:hover,
-input[type=button].purple.extend-button.extend-disabled:hover,
-input[type=reset].purple.extend-button.extend-disabled:hover, .button.disabled.purple:hover, .button.disabled.extend-button.extend-purple:hover, .button.purple.extend-button.extend-disabled:hover, ul.button-list li a.disabled.purple:hover, ul.button-list li a.disabled.extend-button.extend-purple:hover,
-ol.button-list li a.disabled.purple:hover,
-ol.button-list li a.disabled.extend-button.extend-purple:hover, ul.button-list li a.purple.extend-button.extend-disabled:hover,
-ol.button-list li a.purple.extend-button.extend-disabled:hover, [role~=button].disabled.purple:hover, [role~=button].disabled.extend-button.extend-purple:hover, [role~=button].purple.extend-button.extend-disabled:hover, .extend-button.extend-purple.extend-disabled:hover, button.disabled.purple:focus, button.disabled.extend-button.extend-purple:focus,
+input[type=reset].disabled.purple:hover, .button.disabled.purple:hover, ul.button-list li a.disabled.purple:hover,
+ol.button-list li a.disabled.purple:hover, [role~=button].disabled.purple:hover, button.disabled.purple:focus,
 input[type=submit].disabled.purple:focus,
-input[type=submit].disabled.extend-button.extend-purple:focus,
 input[type=button].disabled.purple:focus,
-input[type=button].disabled.extend-button.extend-purple:focus,
-input[type=reset].disabled.purple:focus,
-input[type=reset].disabled.extend-button.extend-purple:focus, button.purple.extend-button.extend-disabled:focus,
-input[type=submit].purple.extend-button.extend-disabled:focus,
-input[type=button].purple.extend-button.extend-disabled:focus,
-input[type=reset].purple.extend-button.extend-disabled:focus, .button.disabled.purple:focus, .button.disabled.extend-button.extend-purple:focus, .button.purple.extend-button.extend-disabled:focus, ul.button-list li a.disabled.purple:focus, ul.button-list li a.disabled.extend-button.extend-purple:focus,
-ol.button-list li a.disabled.purple:focus,
-ol.button-list li a.disabled.extend-button.extend-purple:focus, ul.button-list li a.purple.extend-button.extend-disabled:focus,
-ol.button-list li a.purple.extend-button.extend-disabled:focus, [role~=button].disabled.purple:focus, [role~=button].disabled.extend-button.extend-purple:focus, [role~=button].purple.extend-button.extend-disabled:focus, .extend-button.extend-purple.extend-disabled:focus, button.disabled.purple:visited, button.disabled.extend-button.extend-purple:visited,
+input[type=reset].disabled.purple:focus, .button.disabled.purple:focus, ul.button-list li a.disabled.purple:focus,
+ol.button-list li a.disabled.purple:focus, [role~=button].disabled.purple:focus, button.disabled.purple:visited,
 input[type=submit].disabled.purple:visited,
-input[type=submit].disabled.extend-button.extend-purple:visited,
 input[type=button].disabled.purple:visited,
-input[type=button].disabled.extend-button.extend-purple:visited,
-input[type=reset].disabled.purple:visited,
-input[type=reset].disabled.extend-button.extend-purple:visited, button.purple.extend-button.extend-disabled:visited,
-input[type=submit].purple.extend-button.extend-disabled:visited,
-input[type=button].purple.extend-button.extend-disabled:visited,
-input[type=reset].purple.extend-button.extend-disabled:visited, .button.disabled.purple:visited, .button.disabled.extend-button.extend-purple:visited, .button.purple.extend-button.extend-disabled:visited, ul.button-list li a.disabled.purple:visited, ul.button-list li a.disabled.extend-button.extend-purple:visited,
-ol.button-list li a.disabled.purple:visited,
-ol.button-list li a.disabled.extend-button.extend-purple:visited, ul.button-list li a.purple.extend-button.extend-disabled:visited,
-ol.button-list li a.purple.extend-button.extend-disabled:visited, [role~=button].disabled.purple:visited, [role~=button].disabled.extend-button.extend-purple:visited, [role~=button].purple.extend-button.extend-disabled:visited, .extend-button.extend-purple.extend-disabled:visited {
+input[type=reset].disabled.purple:visited, .button.disabled.purple:visited, ul.button-list li a.disabled.purple:visited,
+ol.button-list li a.disabled.purple:visited, [role~=button].disabled.purple:visited {
   color: #e3dbe6;
   background: #b49ebd;
   border-color: #91719e;
@@ -4697,7 +4483,7 @@ input[type=button].yellow,
 input[type=reset].yellow, .button.yellow,
 a.button.yellow,
 a.button.yellow:visited, ul.button-list li a.yellow,
-ol.button-list li a.yellow, [role~=button].yellow, .extend-button.extend-yellow {
+ol.button-list li a.yellow, [role~=button].yellow {
   background-color: #f1c40f;
   color: white;
   border-color: #dab10d;
@@ -4707,28 +4493,20 @@ input[type=submit].yellow:hover,
 input[type=button].yellow:hover,
 input[type=reset].yellow:hover, .button.yellow:hover,
 a.button.yellow:hover:visited, ul.button-list li a.yellow:hover,
-ol.button-list li a.yellow:hover, [role~=button].yellow:hover, .extend-button.extend-yellow:hover, button.yellow:focus,
+ol.button-list li a.yellow:hover, [role~=button].yellow:hover, button.yellow:focus,
 input[type=submit].yellow:focus,
 input[type=button].yellow:focus,
 input[type=reset].yellow:focus, .button.yellow:focus,
 a.button.yellow:focus:visited, ul.button-list li a.yellow:focus,
-ol.button-list li a.yellow:focus, [role~=button].yellow:focus, .extend-button.extend-yellow:focus {
+ol.button-list li a.yellow:focus, [role~=button].yellow:focus {
   background: #dab10d;
   border-color: #c29d0b;
 }
-button.disabled.yellow, button.disabled.extend-button.extend-yellow,
+button.disabled.yellow,
 input[type=submit].disabled.yellow,
-input[type=submit].disabled.extend-button.extend-yellow,
 input[type=button].disabled.yellow,
-input[type=button].disabled.extend-button.extend-yellow,
-input[type=reset].disabled.yellow,
-input[type=reset].disabled.extend-button.extend-yellow, button.yellow.extend-button.extend-disabled,
-input[type=submit].yellow.extend-button.extend-disabled,
-input[type=button].yellow.extend-button.extend-disabled,
-input[type=reset].yellow.extend-button.extend-disabled, .button.disabled.yellow, .button.disabled.extend-button.extend-yellow, .button.yellow.extend-button.extend-disabled, ul.button-list li a.disabled.yellow, ul.button-list li a.disabled.extend-button.extend-yellow,
-ol.button-list li a.disabled.yellow,
-ol.button-list li a.disabled.extend-button.extend-yellow, ul.button-list li a.yellow.extend-button.extend-disabled,
-ol.button-list li a.yellow.extend-button.extend-disabled, [role~=button].disabled.yellow, [role~=button].disabled.extend-button.extend-yellow, [role~=button].yellow.extend-button.extend-disabled, .extend-button.extend-yellow.extend-disabled {
+input[type=reset].disabled.yellow, .button.disabled.yellow, ul.button-list li a.disabled.yellow,
+ol.button-list li a.disabled.yellow, [role~=button].disabled.yellow {
   color: #f3e9bf;
   background: #e3cb69;
   border-color: #d8b528;
@@ -4736,43 +4514,19 @@ ol.button-list li a.yellow.extend-button.extend-disabled, [role~=button].disable
   text-decoration: none;
   outline: none;
 }
-button.disabled.yellow:hover, button.disabled.extend-button.extend-yellow:hover,
+button.disabled.yellow:hover,
 input[type=submit].disabled.yellow:hover,
-input[type=submit].disabled.extend-button.extend-yellow:hover,
 input[type=button].disabled.yellow:hover,
-input[type=button].disabled.extend-button.extend-yellow:hover,
-input[type=reset].disabled.yellow:hover,
-input[type=reset].disabled.extend-button.extend-yellow:hover, button.yellow.extend-button.extend-disabled:hover,
-input[type=submit].yellow.extend-button.extend-disabled:hover,
-input[type=button].yellow.extend-button.extend-disabled:hover,
-input[type=reset].yellow.extend-button.extend-disabled:hover, .button.disabled.yellow:hover, .button.disabled.extend-button.extend-yellow:hover, .button.yellow.extend-button.extend-disabled:hover, ul.button-list li a.disabled.yellow:hover, ul.button-list li a.disabled.extend-button.extend-yellow:hover,
-ol.button-list li a.disabled.yellow:hover,
-ol.button-list li a.disabled.extend-button.extend-yellow:hover, ul.button-list li a.yellow.extend-button.extend-disabled:hover,
-ol.button-list li a.yellow.extend-button.extend-disabled:hover, [role~=button].disabled.yellow:hover, [role~=button].disabled.extend-button.extend-yellow:hover, [role~=button].yellow.extend-button.extend-disabled:hover, .extend-button.extend-yellow.extend-disabled:hover, button.disabled.yellow:focus, button.disabled.extend-button.extend-yellow:focus,
+input[type=reset].disabled.yellow:hover, .button.disabled.yellow:hover, ul.button-list li a.disabled.yellow:hover,
+ol.button-list li a.disabled.yellow:hover, [role~=button].disabled.yellow:hover, button.disabled.yellow:focus,
 input[type=submit].disabled.yellow:focus,
-input[type=submit].disabled.extend-button.extend-yellow:focus,
 input[type=button].disabled.yellow:focus,
-input[type=button].disabled.extend-button.extend-yellow:focus,
-input[type=reset].disabled.yellow:focus,
-input[type=reset].disabled.extend-button.extend-yellow:focus, button.yellow.extend-button.extend-disabled:focus,
-input[type=submit].yellow.extend-button.extend-disabled:focus,
-input[type=button].yellow.extend-button.extend-disabled:focus,
-input[type=reset].yellow.extend-button.extend-disabled:focus, .button.disabled.yellow:focus, .button.disabled.extend-button.extend-yellow:focus, .button.yellow.extend-button.extend-disabled:focus, ul.button-list li a.disabled.yellow:focus, ul.button-list li a.disabled.extend-button.extend-yellow:focus,
-ol.button-list li a.disabled.yellow:focus,
-ol.button-list li a.disabled.extend-button.extend-yellow:focus, ul.button-list li a.yellow.extend-button.extend-disabled:focus,
-ol.button-list li a.yellow.extend-button.extend-disabled:focus, [role~=button].disabled.yellow:focus, [role~=button].disabled.extend-button.extend-yellow:focus, [role~=button].yellow.extend-button.extend-disabled:focus, .extend-button.extend-yellow.extend-disabled:focus, button.disabled.yellow:visited, button.disabled.extend-button.extend-yellow:visited,
+input[type=reset].disabled.yellow:focus, .button.disabled.yellow:focus, ul.button-list li a.disabled.yellow:focus,
+ol.button-list li a.disabled.yellow:focus, [role~=button].disabled.yellow:focus, button.disabled.yellow:visited,
 input[type=submit].disabled.yellow:visited,
-input[type=submit].disabled.extend-button.extend-yellow:visited,
 input[type=button].disabled.yellow:visited,
-input[type=button].disabled.extend-button.extend-yellow:visited,
-input[type=reset].disabled.yellow:visited,
-input[type=reset].disabled.extend-button.extend-yellow:visited, button.yellow.extend-button.extend-disabled:visited,
-input[type=submit].yellow.extend-button.extend-disabled:visited,
-input[type=button].yellow.extend-button.extend-disabled:visited,
-input[type=reset].yellow.extend-button.extend-disabled:visited, .button.disabled.yellow:visited, .button.disabled.extend-button.extend-yellow:visited, .button.yellow.extend-button.extend-disabled:visited, ul.button-list li a.disabled.yellow:visited, ul.button-list li a.disabled.extend-button.extend-yellow:visited,
-ol.button-list li a.disabled.yellow:visited,
-ol.button-list li a.disabled.extend-button.extend-yellow:visited, ul.button-list li a.yellow.extend-button.extend-disabled:visited,
-ol.button-list li a.yellow.extend-button.extend-disabled:visited, [role~=button].disabled.yellow:visited, [role~=button].disabled.extend-button.extend-yellow:visited, [role~=button].yellow.extend-button.extend-disabled:visited, .extend-button.extend-yellow.extend-disabled:visited {
+input[type=reset].disabled.yellow:visited, .button.disabled.yellow:visited, ul.button-list li a.disabled.yellow:visited,
+ol.button-list li a.disabled.yellow:visited, [role~=button].disabled.yellow:visited {
   color: #f3e9bf;
   background: #e3cb69;
   border-color: #d8b528;
@@ -4787,7 +4541,7 @@ input[type=button].orange,
 input[type=reset].orange, .button.orange,
 a.button.orange,
 a.button.orange:visited, ul.button-list li a.orange,
-ol.button-list li a.orange, [role~=button].orange, .extend-button.extend-orange {
+ol.button-list li a.orange, [role~=button].orange {
   background-color: #e67e22;
   color: white;
   border-color: #d67118;
@@ -4797,28 +4551,20 @@ input[type=submit].orange:hover,
 input[type=button].orange:hover,
 input[type=reset].orange:hover, .button.orange:hover,
 a.button.orange:hover:visited, ul.button-list li a.orange:hover,
-ol.button-list li a.orange:hover, [role~=button].orange:hover, .extend-button.extend-orange:hover, button.orange:focus,
+ol.button-list li a.orange:hover, [role~=button].orange:hover, button.orange:focus,
 input[type=submit].orange:focus,
 input[type=button].orange:focus,
 input[type=reset].orange:focus, .button.orange:focus,
 a.button.orange:focus:visited, ul.button-list li a.orange:focus,
-ol.button-list li a.orange:focus, [role~=button].orange:focus, .extend-button.extend-orange:focus {
+ol.button-list li a.orange:focus, [role~=button].orange:focus {
   background: #d67118;
   border-color: #bf6516;
 }
-button.disabled.orange, button.disabled.extend-button.extend-orange,
+button.disabled.orange,
 input[type=submit].disabled.orange,
-input[type=submit].disabled.extend-button.extend-orange,
 input[type=button].disabled.orange,
-input[type=button].disabled.extend-button.extend-orange,
-input[type=reset].disabled.orange,
-input[type=reset].disabled.extend-button.extend-orange, button.orange.extend-button.extend-disabled,
-input[type=submit].orange.extend-button.extend-disabled,
-input[type=button].orange.extend-button.extend-disabled,
-input[type=reset].orange.extend-button.extend-disabled, .button.disabled.orange, .button.disabled.extend-button.extend-orange, .button.orange.extend-button.extend-disabled, ul.button-list li a.disabled.orange, ul.button-list li a.disabled.extend-button.extend-orange,
-ol.button-list li a.disabled.orange,
-ol.button-list li a.disabled.extend-button.extend-orange, ul.button-list li a.orange.extend-button.extend-disabled,
-ol.button-list li a.orange.extend-button.extend-disabled, [role~=button].disabled.orange, [role~=button].disabled.extend-button.extend-orange, [role~=button].orange.extend-button.extend-disabled, .extend-button.extend-orange.extend-disabled {
+input[type=reset].disabled.orange, .button.disabled.orange, ul.button-list li a.disabled.orange,
+ol.button-list li a.disabled.orange, [role~=button].disabled.orange {
   color: #f1dcc9;
   background: #dda778;
   border-color: #cd803b;
@@ -4826,43 +4572,19 @@ ol.button-list li a.orange.extend-button.extend-disabled, [role~=button].disable
   text-decoration: none;
   outline: none;
 }
-button.disabled.orange:hover, button.disabled.extend-button.extend-orange:hover,
+button.disabled.orange:hover,
 input[type=submit].disabled.orange:hover,
-input[type=submit].disabled.extend-button.extend-orange:hover,
 input[type=button].disabled.orange:hover,
-input[type=button].disabled.extend-button.extend-orange:hover,
-input[type=reset].disabled.orange:hover,
-input[type=reset].disabled.extend-button.extend-orange:hover, button.orange.extend-button.extend-disabled:hover,
-input[type=submit].orange.extend-button.extend-disabled:hover,
-input[type=button].orange.extend-button.extend-disabled:hover,
-input[type=reset].orange.extend-button.extend-disabled:hover, .button.disabled.orange:hover, .button.disabled.extend-button.extend-orange:hover, .button.orange.extend-button.extend-disabled:hover, ul.button-list li a.disabled.orange:hover, ul.button-list li a.disabled.extend-button.extend-orange:hover,
-ol.button-list li a.disabled.orange:hover,
-ol.button-list li a.disabled.extend-button.extend-orange:hover, ul.button-list li a.orange.extend-button.extend-disabled:hover,
-ol.button-list li a.orange.extend-button.extend-disabled:hover, [role~=button].disabled.orange:hover, [role~=button].disabled.extend-button.extend-orange:hover, [role~=button].orange.extend-button.extend-disabled:hover, .extend-button.extend-orange.extend-disabled:hover, button.disabled.orange:focus, button.disabled.extend-button.extend-orange:focus,
+input[type=reset].disabled.orange:hover, .button.disabled.orange:hover, ul.button-list li a.disabled.orange:hover,
+ol.button-list li a.disabled.orange:hover, [role~=button].disabled.orange:hover, button.disabled.orange:focus,
 input[type=submit].disabled.orange:focus,
-input[type=submit].disabled.extend-button.extend-orange:focus,
 input[type=button].disabled.orange:focus,
-input[type=button].disabled.extend-button.extend-orange:focus,
-input[type=reset].disabled.orange:focus,
-input[type=reset].disabled.extend-button.extend-orange:focus, button.orange.extend-button.extend-disabled:focus,
-input[type=submit].orange.extend-button.extend-disabled:focus,
-input[type=button].orange.extend-button.extend-disabled:focus,
-input[type=reset].orange.extend-button.extend-disabled:focus, .button.disabled.orange:focus, .button.disabled.extend-button.extend-orange:focus, .button.orange.extend-button.extend-disabled:focus, ul.button-list li a.disabled.orange:focus, ul.button-list li a.disabled.extend-button.extend-orange:focus,
-ol.button-list li a.disabled.orange:focus,
-ol.button-list li a.disabled.extend-button.extend-orange:focus, ul.button-list li a.orange.extend-button.extend-disabled:focus,
-ol.button-list li a.orange.extend-button.extend-disabled:focus, [role~=button].disabled.orange:focus, [role~=button].disabled.extend-button.extend-orange:focus, [role~=button].orange.extend-button.extend-disabled:focus, .extend-button.extend-orange.extend-disabled:focus, button.disabled.orange:visited, button.disabled.extend-button.extend-orange:visited,
+input[type=reset].disabled.orange:focus, .button.disabled.orange:focus, ul.button-list li a.disabled.orange:focus,
+ol.button-list li a.disabled.orange:focus, [role~=button].disabled.orange:focus, button.disabled.orange:visited,
 input[type=submit].disabled.orange:visited,
-input[type=submit].disabled.extend-button.extend-orange:visited,
 input[type=button].disabled.orange:visited,
-input[type=button].disabled.extend-button.extend-orange:visited,
-input[type=reset].disabled.orange:visited,
-input[type=reset].disabled.extend-button.extend-orange:visited, button.orange.extend-button.extend-disabled:visited,
-input[type=submit].orange.extend-button.extend-disabled:visited,
-input[type=button].orange.extend-button.extend-disabled:visited,
-input[type=reset].orange.extend-button.extend-disabled:visited, .button.disabled.orange:visited, .button.disabled.extend-button.extend-orange:visited, .button.orange.extend-button.extend-disabled:visited, ul.button-list li a.disabled.orange:visited, ul.button-list li a.disabled.extend-button.extend-orange:visited,
-ol.button-list li a.disabled.orange:visited,
-ol.button-list li a.disabled.extend-button.extend-orange:visited, ul.button-list li a.orange.extend-button.extend-disabled:visited,
-ol.button-list li a.orange.extend-button.extend-disabled:visited, [role~=button].disabled.orange:visited, [role~=button].disabled.extend-button.extend-orange:visited, [role~=button].orange.extend-button.extend-disabled:visited, .extend-button.extend-orange.extend-disabled:visited {
+input[type=reset].disabled.orange:visited, .button.disabled.orange:visited, ul.button-list li a.disabled.orange:visited,
+ol.button-list li a.disabled.orange:visited, [role~=button].disabled.orange:visited {
   color: #f1dcc9;
   background: #dda778;
   border-color: #cd803b;
@@ -4877,7 +4599,7 @@ input[type=button].red,
 input[type=reset].red, .button.red,
 a.button.red,
 a.button.red:visited, ul.button-list li a.red,
-ol.button-list li a.red, [role~=button].red, .extend-button.extend-red {
+ol.button-list li a.red, [role~=button].red {
   background-color: #e74c3c;
   color: white;
   border-color: #e43725;
@@ -4887,28 +4609,20 @@ input[type=submit].red:hover,
 input[type=button].red:hover,
 input[type=reset].red:hover, .button.red:hover,
 a.button.red:hover:visited, ul.button-list li a.red:hover,
-ol.button-list li a.red:hover, [role~=button].red:hover, .extend-button.extend-red:hover, button.red:focus,
+ol.button-list li a.red:hover, [role~=button].red:hover, button.red:focus,
 input[type=submit].red:focus,
 input[type=button].red:focus,
 input[type=reset].red:focus, .button.red:focus,
 a.button.red:focus:visited, ul.button-list li a.red:focus,
-ol.button-list li a.red:focus, [role~=button].red:focus, .extend-button.extend-red:focus {
+ol.button-list li a.red:focus, [role~=button].red:focus {
   background: #e43725;
   border-color: #d62c1a;
 }
-button.disabled.red, button.disabled.extend-button.extend-red,
+button.disabled.red,
 input[type=submit].disabled.red,
-input[type=submit].disabled.extend-button.extend-red,
 input[type=button].disabled.red,
-input[type=button].disabled.extend-button.extend-red,
-input[type=reset].disabled.red,
-input[type=reset].disabled.extend-button.extend-red, button.red.extend-button.extend-disabled,
-input[type=submit].red.extend-button.extend-disabled,
-input[type=button].red.extend-button.extend-disabled,
-input[type=reset].red.extend-button.extend-disabled, .button.disabled.red, .button.disabled.extend-button.extend-red, .button.red.extend-button.extend-disabled, ul.button-list li a.disabled.red, ul.button-list li a.disabled.extend-button.extend-red,
-ol.button-list li a.disabled.red,
-ol.button-list li a.disabled.extend-button.extend-red, ul.button-list li a.red.extend-button.extend-disabled,
-ol.button-list li a.red.extend-button.extend-disabled, [role~=button].disabled.red, [role~=button].disabled.extend-button.extend-red, [role~=button].red.extend-button.extend-disabled, .extend-button.extend-red.extend-disabled {
+input[type=reset].disabled.red, .button.disabled.red, ul.button-list li a.disabled.red,
+ol.button-list li a.disabled.red, [role~=button].disabled.red {
   color: #f7e1df;
   background: #e1968e;
   border-color: #d15e52;
@@ -4916,43 +4630,19 @@ ol.button-list li a.red.extend-button.extend-disabled, [role~=button].disabled.r
   text-decoration: none;
   outline: none;
 }
-button.disabled.red:hover, button.disabled.extend-button.extend-red:hover,
+button.disabled.red:hover,
 input[type=submit].disabled.red:hover,
-input[type=submit].disabled.extend-button.extend-red:hover,
 input[type=button].disabled.red:hover,
-input[type=button].disabled.extend-button.extend-red:hover,
-input[type=reset].disabled.red:hover,
-input[type=reset].disabled.extend-button.extend-red:hover, button.red.extend-button.extend-disabled:hover,
-input[type=submit].red.extend-button.extend-disabled:hover,
-input[type=button].red.extend-button.extend-disabled:hover,
-input[type=reset].red.extend-button.extend-disabled:hover, .button.disabled.red:hover, .button.disabled.extend-button.extend-red:hover, .button.red.extend-button.extend-disabled:hover, ul.button-list li a.disabled.red:hover, ul.button-list li a.disabled.extend-button.extend-red:hover,
-ol.button-list li a.disabled.red:hover,
-ol.button-list li a.disabled.extend-button.extend-red:hover, ul.button-list li a.red.extend-button.extend-disabled:hover,
-ol.button-list li a.red.extend-button.extend-disabled:hover, [role~=button].disabled.red:hover, [role~=button].disabled.extend-button.extend-red:hover, [role~=button].red.extend-button.extend-disabled:hover, .extend-button.extend-red.extend-disabled:hover, button.disabled.red:focus, button.disabled.extend-button.extend-red:focus,
+input[type=reset].disabled.red:hover, .button.disabled.red:hover, ul.button-list li a.disabled.red:hover,
+ol.button-list li a.disabled.red:hover, [role~=button].disabled.red:hover, button.disabled.red:focus,
 input[type=submit].disabled.red:focus,
-input[type=submit].disabled.extend-button.extend-red:focus,
 input[type=button].disabled.red:focus,
-input[type=button].disabled.extend-button.extend-red:focus,
-input[type=reset].disabled.red:focus,
-input[type=reset].disabled.extend-button.extend-red:focus, button.red.extend-button.extend-disabled:focus,
-input[type=submit].red.extend-button.extend-disabled:focus,
-input[type=button].red.extend-button.extend-disabled:focus,
-input[type=reset].red.extend-button.extend-disabled:focus, .button.disabled.red:focus, .button.disabled.extend-button.extend-red:focus, .button.red.extend-button.extend-disabled:focus, ul.button-list li a.disabled.red:focus, ul.button-list li a.disabled.extend-button.extend-red:focus,
-ol.button-list li a.disabled.red:focus,
-ol.button-list li a.disabled.extend-button.extend-red:focus, ul.button-list li a.red.extend-button.extend-disabled:focus,
-ol.button-list li a.red.extend-button.extend-disabled:focus, [role~=button].disabled.red:focus, [role~=button].disabled.extend-button.extend-red:focus, [role~=button].red.extend-button.extend-disabled:focus, .extend-button.extend-red.extend-disabled:focus, button.disabled.red:visited, button.disabled.extend-button.extend-red:visited,
+input[type=reset].disabled.red:focus, .button.disabled.red:focus, ul.button-list li a.disabled.red:focus,
+ol.button-list li a.disabled.red:focus, [role~=button].disabled.red:focus, button.disabled.red:visited,
 input[type=submit].disabled.red:visited,
-input[type=submit].disabled.extend-button.extend-red:visited,
 input[type=button].disabled.red:visited,
-input[type=button].disabled.extend-button.extend-red:visited,
-input[type=reset].disabled.red:visited,
-input[type=reset].disabled.extend-button.extend-red:visited, button.red.extend-button.extend-disabled:visited,
-input[type=submit].red.extend-button.extend-disabled:visited,
-input[type=button].red.extend-button.extend-disabled:visited,
-input[type=reset].red.extend-button.extend-disabled:visited, .button.disabled.red:visited, .button.disabled.extend-button.extend-red:visited, .button.red.extend-button.extend-disabled:visited, ul.button-list li a.disabled.red:visited, ul.button-list li a.disabled.extend-button.extend-red:visited,
-ol.button-list li a.disabled.red:visited,
-ol.button-list li a.disabled.extend-button.extend-red:visited, ul.button-list li a.red.extend-button.extend-disabled:visited,
-ol.button-list li a.red.extend-button.extend-disabled:visited, [role~=button].disabled.red:visited, [role~=button].disabled.extend-button.extend-red:visited, [role~=button].red.extend-button.extend-disabled:visited, .extend-button.extend-red.extend-disabled:visited {
+input[type=reset].disabled.red:visited, .button.disabled.red:visited, ul.button-list li a.disabled.red:visited,
+ol.button-list li a.disabled.red:visited, [role~=button].disabled.red:visited {
   color: #f7e1df;
   background: #e1968e;
   border-color: #d15e52;
@@ -4989,12 +4679,8 @@ ol.button-list li a.pink:focus, [role~=button].pink:focus {
 button.disabled.pink,
 input[type=submit].disabled.pink,
 input[type=button].disabled.pink,
-input[type=reset].disabled.pink, button.pink.extend-button.extend-disabled,
-input[type=submit].pink.extend-button.extend-disabled,
-input[type=button].pink.extend-button.extend-disabled,
-input[type=reset].pink.extend-button.extend-disabled, .button.disabled.pink, .button.pink.extend-button.extend-disabled, ul.button-list li a.disabled.pink,
-ol.button-list li a.disabled.pink, ul.button-list li a.pink.extend-button.extend-disabled,
-ol.button-list li a.pink.extend-button.extend-disabled, [role~=button].disabled.pink, [role~=button].pink.extend-button.extend-disabled {
+input[type=reset].disabled.pink, .button.disabled.pink, ul.button-list li a.disabled.pink,
+ol.button-list li a.disabled.pink, [role~=button].disabled.pink {
   color: #f6d1df;
   background: #e57ba5;
   border-color: #d93b7a;
@@ -5005,28 +4691,16 @@ ol.button-list li a.pink.extend-button.extend-disabled, [role~=button].disabled.
 button.disabled.pink:hover,
 input[type=submit].disabled.pink:hover,
 input[type=button].disabled.pink:hover,
-input[type=reset].disabled.pink:hover, button.pink.extend-button.extend-disabled:hover,
-input[type=submit].pink.extend-button.extend-disabled:hover,
-input[type=button].pink.extend-button.extend-disabled:hover,
-input[type=reset].pink.extend-button.extend-disabled:hover, .button.disabled.pink:hover, .button.pink.extend-button.extend-disabled:hover, ul.button-list li a.disabled.pink:hover,
-ol.button-list li a.disabled.pink:hover, ul.button-list li a.pink.extend-button.extend-disabled:hover,
-ol.button-list li a.pink.extend-button.extend-disabled:hover, [role~=button].disabled.pink:hover, [role~=button].pink.extend-button.extend-disabled:hover, button.disabled.pink:focus,
+input[type=reset].disabled.pink:hover, .button.disabled.pink:hover, ul.button-list li a.disabled.pink:hover,
+ol.button-list li a.disabled.pink:hover, [role~=button].disabled.pink:hover, button.disabled.pink:focus,
 input[type=submit].disabled.pink:focus,
 input[type=button].disabled.pink:focus,
-input[type=reset].disabled.pink:focus, button.pink.extend-button.extend-disabled:focus,
-input[type=submit].pink.extend-button.extend-disabled:focus,
-input[type=button].pink.extend-button.extend-disabled:focus,
-input[type=reset].pink.extend-button.extend-disabled:focus, .button.disabled.pink:focus, .button.pink.extend-button.extend-disabled:focus, ul.button-list li a.disabled.pink:focus,
-ol.button-list li a.disabled.pink:focus, ul.button-list li a.pink.extend-button.extend-disabled:focus,
-ol.button-list li a.pink.extend-button.extend-disabled:focus, [role~=button].disabled.pink:focus, [role~=button].pink.extend-button.extend-disabled:focus, button.disabled.pink:visited,
+input[type=reset].disabled.pink:focus, .button.disabled.pink:focus, ul.button-list li a.disabled.pink:focus,
+ol.button-list li a.disabled.pink:focus, [role~=button].disabled.pink:focus, button.disabled.pink:visited,
 input[type=submit].disabled.pink:visited,
 input[type=button].disabled.pink:visited,
-input[type=reset].disabled.pink:visited, button.pink.extend-button.extend-disabled:visited,
-input[type=submit].pink.extend-button.extend-disabled:visited,
-input[type=button].pink.extend-button.extend-disabled:visited,
-input[type=reset].pink.extend-button.extend-disabled:visited, .button.disabled.pink:visited, .button.pink.extend-button.extend-disabled:visited, ul.button-list li a.disabled.pink:visited,
-ol.button-list li a.disabled.pink:visited, ul.button-list li a.pink.extend-button.extend-disabled:visited,
-ol.button-list li a.pink.extend-button.extend-disabled:visited, [role~=button].disabled.pink:visited, [role~=button].pink.extend-button.extend-disabled:visited {
+input[type=reset].disabled.pink:visited, .button.disabled.pink:visited, ul.button-list li a.disabled.pink:visited,
+ol.button-list li a.disabled.pink:visited, [role~=button].disabled.pink:visited {
   color: #f6d1df;
   background: #e57ba5;
   border-color: #d93b7a;
@@ -5063,12 +4737,8 @@ ol.button-list li a.turquoise:focus, [role~=button].turquoise:focus {
 button.disabled.turquoise,
 input[type=submit].disabled.turquoise,
 input[type=button].disabled.turquoise,
-input[type=reset].disabled.turquoise, button.turquoise.extend-button.extend-disabled,
-input[type=submit].turquoise.extend-button.extend-disabled,
-input[type=button].turquoise.extend-button.extend-disabled,
-input[type=reset].turquoise.extend-button.extend-disabled, .button.disabled.turquoise, .button.turquoise.extend-button.extend-disabled, ul.button-list li a.disabled.turquoise,
-ol.button-list li a.disabled.turquoise, ul.button-list li a.turquoise.extend-button.extend-disabled,
-ol.button-list li a.turquoise.extend-button.extend-disabled, [role~=button].disabled.turquoise, [role~=button].turquoise.extend-button.extend-disabled {
+input[type=reset].disabled.turquoise, .button.disabled.turquoise, ul.button-list li a.disabled.turquoise,
+ol.button-list li a.disabled.turquoise, [role~=button].disabled.turquoise {
   color: #a4e5d8;
   background: #54ceb6;
   border-color: #2fa78f;
@@ -5079,28 +4749,16 @@ ol.button-list li a.turquoise.extend-button.extend-disabled, [role~=button].disa
 button.disabled.turquoise:hover,
 input[type=submit].disabled.turquoise:hover,
 input[type=button].disabled.turquoise:hover,
-input[type=reset].disabled.turquoise:hover, button.turquoise.extend-button.extend-disabled:hover,
-input[type=submit].turquoise.extend-button.extend-disabled:hover,
-input[type=button].turquoise.extend-button.extend-disabled:hover,
-input[type=reset].turquoise.extend-button.extend-disabled:hover, .button.disabled.turquoise:hover, .button.turquoise.extend-button.extend-disabled:hover, ul.button-list li a.disabled.turquoise:hover,
-ol.button-list li a.disabled.turquoise:hover, ul.button-list li a.turquoise.extend-button.extend-disabled:hover,
-ol.button-list li a.turquoise.extend-button.extend-disabled:hover, [role~=button].disabled.turquoise:hover, [role~=button].turquoise.extend-button.extend-disabled:hover, button.disabled.turquoise:focus,
+input[type=reset].disabled.turquoise:hover, .button.disabled.turquoise:hover, ul.button-list li a.disabled.turquoise:hover,
+ol.button-list li a.disabled.turquoise:hover, [role~=button].disabled.turquoise:hover, button.disabled.turquoise:focus,
 input[type=submit].disabled.turquoise:focus,
 input[type=button].disabled.turquoise:focus,
-input[type=reset].disabled.turquoise:focus, button.turquoise.extend-button.extend-disabled:focus,
-input[type=submit].turquoise.extend-button.extend-disabled:focus,
-input[type=button].turquoise.extend-button.extend-disabled:focus,
-input[type=reset].turquoise.extend-button.extend-disabled:focus, .button.disabled.turquoise:focus, .button.turquoise.extend-button.extend-disabled:focus, ul.button-list li a.disabled.turquoise:focus,
-ol.button-list li a.disabled.turquoise:focus, ul.button-list li a.turquoise.extend-button.extend-disabled:focus,
-ol.button-list li a.turquoise.extend-button.extend-disabled:focus, [role~=button].disabled.turquoise:focus, [role~=button].turquoise.extend-button.extend-disabled:focus, button.disabled.turquoise:visited,
+input[type=reset].disabled.turquoise:focus, .button.disabled.turquoise:focus, ul.button-list li a.disabled.turquoise:focus,
+ol.button-list li a.disabled.turquoise:focus, [role~=button].disabled.turquoise:focus, button.disabled.turquoise:visited,
 input[type=submit].disabled.turquoise:visited,
 input[type=button].disabled.turquoise:visited,
-input[type=reset].disabled.turquoise:visited, button.turquoise.extend-button.extend-disabled:visited,
-input[type=submit].turquoise.extend-button.extend-disabled:visited,
-input[type=button].turquoise.extend-button.extend-disabled:visited,
-input[type=reset].turquoise.extend-button.extend-disabled:visited, .button.disabled.turquoise:visited, .button.turquoise.extend-button.extend-disabled:visited, ul.button-list li a.disabled.turquoise:visited,
-ol.button-list li a.disabled.turquoise:visited, ul.button-list li a.turquoise.extend-button.extend-disabled:visited,
-ol.button-list li a.turquoise.extend-button.extend-disabled:visited, [role~=button].disabled.turquoise:visited, [role~=button].turquoise.extend-button.extend-disabled:visited {
+input[type=reset].disabled.turquoise:visited, .button.disabled.turquoise:visited, ul.button-list li a.disabled.turquoise:visited,
+ol.button-list li a.disabled.turquoise:visited, [role~=button].disabled.turquoise:visited {
   color: #a4e5d8;
   background: #54ceb6;
   border-color: #2fa78f;
@@ -5115,7 +4773,7 @@ input[type=button].asphalt,
 input[type=reset].asphalt, .button.asphalt,
 a.button.asphalt,
 a.button.asphalt:visited, ul.button-list li a.asphalt,
-ol.button-list li a.asphalt, [role~=button].asphalt, .extend-button.extend-asphalt {
+ol.button-list li a.asphalt, [role~=button].asphalt {
   background-color: #34495e;
   color: white;
   border-color: #2b3c4e;
@@ -5125,28 +4783,20 @@ input[type=submit].asphalt:hover,
 input[type=button].asphalt:hover,
 input[type=reset].asphalt:hover, .button.asphalt:hover,
 a.button.asphalt:hover:visited, ul.button-list li a.asphalt:hover,
-ol.button-list li a.asphalt:hover, [role~=button].asphalt:hover, .extend-button.extend-asphalt:hover, button.asphalt:focus,
+ol.button-list li a.asphalt:hover, [role~=button].asphalt:hover, button.asphalt:focus,
 input[type=submit].asphalt:focus,
 input[type=button].asphalt:focus,
 input[type=reset].asphalt:focus, .button.asphalt:focus,
 a.button.asphalt:focus:visited, ul.button-list li a.asphalt:focus,
-ol.button-list li a.asphalt:focus, [role~=button].asphalt:focus, .extend-button.extend-asphalt:focus {
+ol.button-list li a.asphalt:focus, [role~=button].asphalt:focus {
   background: #2b3c4e;
   border-color: #222f3d;
 }
-button.disabled.asphalt, button.disabled.extend-button.extend-asphalt,
+button.disabled.asphalt,
 input[type=submit].disabled.asphalt,
-input[type=submit].disabled.extend-button.extend-asphalt,
 input[type=button].disabled.asphalt,
-input[type=button].disabled.extend-button.extend-asphalt,
-input[type=reset].disabled.asphalt,
-input[type=reset].disabled.extend-button.extend-asphalt, button.asphalt.extend-button.extend-disabled,
-input[type=submit].asphalt.extend-button.extend-disabled,
-input[type=button].asphalt.extend-button.extend-disabled,
-input[type=reset].asphalt.extend-button.extend-disabled, .button.disabled.asphalt, .button.disabled.extend-button.extend-asphalt, .button.asphalt.extend-button.extend-disabled, ul.button-list li a.disabled.asphalt, ul.button-list li a.disabled.extend-button.extend-asphalt,
-ol.button-list li a.disabled.asphalt,
-ol.button-list li a.disabled.extend-button.extend-asphalt, ul.button-list li a.asphalt.extend-button.extend-disabled,
-ol.button-list li a.asphalt.extend-button.extend-disabled, [role~=button].disabled.asphalt, [role~=button].disabled.extend-button.extend-asphalt, [role~=button].asphalt.extend-button.extend-disabled, .extend-button.extend-asphalt.extend-disabled {
+input[type=reset].disabled.asphalt, .button.disabled.asphalt, ul.button-list li a.disabled.asphalt,
+ol.button-list li a.disabled.asphalt, [role~=button].disabled.asphalt {
   color: #9aa2aa;
   background: #656f79;
   border-color: #43494f;
@@ -5154,43 +4804,19 @@ ol.button-list li a.asphalt.extend-button.extend-disabled, [role~=button].disabl
   text-decoration: none;
   outline: none;
 }
-button.disabled.asphalt:hover, button.disabled.extend-button.extend-asphalt:hover,
+button.disabled.asphalt:hover,
 input[type=submit].disabled.asphalt:hover,
-input[type=submit].disabled.extend-button.extend-asphalt:hover,
 input[type=button].disabled.asphalt:hover,
-input[type=button].disabled.extend-button.extend-asphalt:hover,
-input[type=reset].disabled.asphalt:hover,
-input[type=reset].disabled.extend-button.extend-asphalt:hover, button.asphalt.extend-button.extend-disabled:hover,
-input[type=submit].asphalt.extend-button.extend-disabled:hover,
-input[type=button].asphalt.extend-button.extend-disabled:hover,
-input[type=reset].asphalt.extend-button.extend-disabled:hover, .button.disabled.asphalt:hover, .button.disabled.extend-button.extend-asphalt:hover, .button.asphalt.extend-button.extend-disabled:hover, ul.button-list li a.disabled.asphalt:hover, ul.button-list li a.disabled.extend-button.extend-asphalt:hover,
-ol.button-list li a.disabled.asphalt:hover,
-ol.button-list li a.disabled.extend-button.extend-asphalt:hover, ul.button-list li a.asphalt.extend-button.extend-disabled:hover,
-ol.button-list li a.asphalt.extend-button.extend-disabled:hover, [role~=button].disabled.asphalt:hover, [role~=button].disabled.extend-button.extend-asphalt:hover, [role~=button].asphalt.extend-button.extend-disabled:hover, .extend-button.extend-asphalt.extend-disabled:hover, button.disabled.asphalt:focus, button.disabled.extend-button.extend-asphalt:focus,
+input[type=reset].disabled.asphalt:hover, .button.disabled.asphalt:hover, ul.button-list li a.disabled.asphalt:hover,
+ol.button-list li a.disabled.asphalt:hover, [role~=button].disabled.asphalt:hover, button.disabled.asphalt:focus,
 input[type=submit].disabled.asphalt:focus,
-input[type=submit].disabled.extend-button.extend-asphalt:focus,
 input[type=button].disabled.asphalt:focus,
-input[type=button].disabled.extend-button.extend-asphalt:focus,
-input[type=reset].disabled.asphalt:focus,
-input[type=reset].disabled.extend-button.extend-asphalt:focus, button.asphalt.extend-button.extend-disabled:focus,
-input[type=submit].asphalt.extend-button.extend-disabled:focus,
-input[type=button].asphalt.extend-button.extend-disabled:focus,
-input[type=reset].asphalt.extend-button.extend-disabled:focus, .button.disabled.asphalt:focus, .button.disabled.extend-button.extend-asphalt:focus, .button.asphalt.extend-button.extend-disabled:focus, ul.button-list li a.disabled.asphalt:focus, ul.button-list li a.disabled.extend-button.extend-asphalt:focus,
-ol.button-list li a.disabled.asphalt:focus,
-ol.button-list li a.disabled.extend-button.extend-asphalt:focus, ul.button-list li a.asphalt.extend-button.extend-disabled:focus,
-ol.button-list li a.asphalt.extend-button.extend-disabled:focus, [role~=button].disabled.asphalt:focus, [role~=button].disabled.extend-button.extend-asphalt:focus, [role~=button].asphalt.extend-button.extend-disabled:focus, .extend-button.extend-asphalt.extend-disabled:focus, button.disabled.asphalt:visited, button.disabled.extend-button.extend-asphalt:visited,
+input[type=reset].disabled.asphalt:focus, .button.disabled.asphalt:focus, ul.button-list li a.disabled.asphalt:focus,
+ol.button-list li a.disabled.asphalt:focus, [role~=button].disabled.asphalt:focus, button.disabled.asphalt:visited,
 input[type=submit].disabled.asphalt:visited,
-input[type=submit].disabled.extend-button.extend-asphalt:visited,
 input[type=button].disabled.asphalt:visited,
-input[type=button].disabled.extend-button.extend-asphalt:visited,
-input[type=reset].disabled.asphalt:visited,
-input[type=reset].disabled.extend-button.extend-asphalt:visited, button.asphalt.extend-button.extend-disabled:visited,
-input[type=submit].asphalt.extend-button.extend-disabled:visited,
-input[type=button].asphalt.extend-button.extend-disabled:visited,
-input[type=reset].asphalt.extend-button.extend-disabled:visited, .button.disabled.asphalt:visited, .button.disabled.extend-button.extend-asphalt:visited, .button.asphalt.extend-button.extend-disabled:visited, ul.button-list li a.disabled.asphalt:visited, ul.button-list li a.disabled.extend-button.extend-asphalt:visited,
-ol.button-list li a.disabled.asphalt:visited,
-ol.button-list li a.disabled.extend-button.extend-asphalt:visited, ul.button-list li a.asphalt.extend-button.extend-disabled:visited,
-ol.button-list li a.asphalt.extend-button.extend-disabled:visited, [role~=button].disabled.asphalt:visited, [role~=button].disabled.extend-button.extend-asphalt:visited, [role~=button].asphalt.extend-button.extend-disabled:visited, .extend-button.extend-asphalt.extend-disabled:visited {
+input[type=reset].disabled.asphalt:visited, .button.disabled.asphalt:visited, ul.button-list li a.disabled.asphalt:visited,
+ol.button-list li a.disabled.asphalt:visited, [role~=button].disabled.asphalt:visited {
   color: #9aa2aa;
   background: #656f79;
   border-color: #43494f;
@@ -5205,7 +4831,7 @@ input[type=button].info,
 input[type=reset].info, .button.info,
 a.button.info,
 a.button.info:visited, ul.button-list li a.info,
-ol.button-list li a.info, [role~=button].info, .extend-button.extend-info {
+ol.button-list li a.info, [role~=button].info {
   background-color: #309dd4;
   color: white;
   border-color: #27a1ba;
@@ -5215,27 +4841,19 @@ input[type=submit].info:hover,
 input[type=button].info:hover,
 input[type=reset].info:hover, .button.info:hover,
 a.button.info:hover:visited, ul.button-list li a.info:hover,
-ol.button-list li a.info:hover, [role~=button].info:hover, .extend-button.extend-info:hover, button.info:focus,
+ol.button-list li a.info:hover, [role~=button].info:hover, button.info:focus,
 input[type=submit].info:focus,
 input[type=button].info:focus,
 input[type=reset].info:focus, .button.info:focus,
 a.button.info:focus:visited, ul.button-list li a.info:focus,
-ol.button-list li a.info:focus, [role~=button].info:focus, .extend-button.extend-info:focus {
+ol.button-list li a.info:focus, [role~=button].info:focus {
   background: #2582b1;
 }
-button.disabled.info, button.disabled.extend-button.extend-info,
+button.disabled.info,
 input[type=submit].disabled.info,
-input[type=submit].disabled.extend-button.extend-info,
 input[type=button].disabled.info,
-input[type=button].disabled.extend-button.extend-info,
-input[type=reset].disabled.info,
-input[type=reset].disabled.extend-button.extend-info, button.info.extend-button.extend-disabled,
-input[type=submit].info.extend-button.extend-disabled,
-input[type=button].info.extend-button.extend-disabled,
-input[type=reset].info.extend-button.extend-disabled, .button.disabled.info, .button.disabled.extend-button.extend-info, .button.info.extend-button.extend-disabled, ul.button-list li a.disabled.info, ul.button-list li a.disabled.extend-button.extend-info,
-ol.button-list li a.disabled.info,
-ol.button-list li a.disabled.extend-button.extend-info, ul.button-list li a.info.extend-button.extend-disabled,
-ol.button-list li a.info.extend-button.extend-disabled, [role~=button].disabled.info, [role~=button].disabled.extend-button.extend-info, [role~=button].info.extend-button.extend-disabled, .extend-button.extend-info.extend-disabled {
+input[type=reset].disabled.info, .button.disabled.info, ul.button-list li a.disabled.info,
+ol.button-list li a.disabled.info, [role~=button].disabled.info {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -5243,43 +4861,19 @@ ol.button-list li a.info.extend-button.extend-disabled, [role~=button].disabled.
   text-decoration: none;
   outline: none;
 }
-button.disabled.info:hover, button.disabled.extend-button.extend-info:hover,
+button.disabled.info:hover,
 input[type=submit].disabled.info:hover,
-input[type=submit].disabled.extend-button.extend-info:hover,
 input[type=button].disabled.info:hover,
-input[type=button].disabled.extend-button.extend-info:hover,
-input[type=reset].disabled.info:hover,
-input[type=reset].disabled.extend-button.extend-info:hover, button.info.extend-button.extend-disabled:hover,
-input[type=submit].info.extend-button.extend-disabled:hover,
-input[type=button].info.extend-button.extend-disabled:hover,
-input[type=reset].info.extend-button.extend-disabled:hover, .button.disabled.info:hover, .button.disabled.extend-button.extend-info:hover, .button.info.extend-button.extend-disabled:hover, ul.button-list li a.disabled.info:hover, ul.button-list li a.disabled.extend-button.extend-info:hover,
-ol.button-list li a.disabled.info:hover,
-ol.button-list li a.disabled.extend-button.extend-info:hover, ul.button-list li a.info.extend-button.extend-disabled:hover,
-ol.button-list li a.info.extend-button.extend-disabled:hover, [role~=button].disabled.info:hover, [role~=button].disabled.extend-button.extend-info:hover, [role~=button].info.extend-button.extend-disabled:hover, .extend-button.extend-info.extend-disabled:hover, button.disabled.info:focus, button.disabled.extend-button.extend-info:focus,
+input[type=reset].disabled.info:hover, .button.disabled.info:hover, ul.button-list li a.disabled.info:hover,
+ol.button-list li a.disabled.info:hover, [role~=button].disabled.info:hover, button.disabled.info:focus,
 input[type=submit].disabled.info:focus,
-input[type=submit].disabled.extend-button.extend-info:focus,
 input[type=button].disabled.info:focus,
-input[type=button].disabled.extend-button.extend-info:focus,
-input[type=reset].disabled.info:focus,
-input[type=reset].disabled.extend-button.extend-info:focus, button.info.extend-button.extend-disabled:focus,
-input[type=submit].info.extend-button.extend-disabled:focus,
-input[type=button].info.extend-button.extend-disabled:focus,
-input[type=reset].info.extend-button.extend-disabled:focus, .button.disabled.info:focus, .button.disabled.extend-button.extend-info:focus, .button.info.extend-button.extend-disabled:focus, ul.button-list li a.disabled.info:focus, ul.button-list li a.disabled.extend-button.extend-info:focus,
-ol.button-list li a.disabled.info:focus,
-ol.button-list li a.disabled.extend-button.extend-info:focus, ul.button-list li a.info.extend-button.extend-disabled:focus,
-ol.button-list li a.info.extend-button.extend-disabled:focus, [role~=button].disabled.info:focus, [role~=button].disabled.extend-button.extend-info:focus, [role~=button].info.extend-button.extend-disabled:focus, .extend-button.extend-info.extend-disabled:focus, button.disabled.info:visited, button.disabled.extend-button.extend-info:visited,
+input[type=reset].disabled.info:focus, .button.disabled.info:focus, ul.button-list li a.disabled.info:focus,
+ol.button-list li a.disabled.info:focus, [role~=button].disabled.info:focus, button.disabled.info:visited,
 input[type=submit].disabled.info:visited,
-input[type=submit].disabled.extend-button.extend-info:visited,
 input[type=button].disabled.info:visited,
-input[type=button].disabled.extend-button.extend-info:visited,
-input[type=reset].disabled.info:visited,
-input[type=reset].disabled.extend-button.extend-info:visited, button.info.extend-button.extend-disabled:visited,
-input[type=submit].info.extend-button.extend-disabled:visited,
-input[type=button].info.extend-button.extend-disabled:visited,
-input[type=reset].info.extend-button.extend-disabled:visited, .button.disabled.info:visited, .button.disabled.extend-button.extend-info:visited, .button.info.extend-button.extend-disabled:visited, ul.button-list li a.disabled.info:visited, ul.button-list li a.disabled.extend-button.extend-info:visited,
-ol.button-list li a.disabled.info:visited,
-ol.button-list li a.disabled.extend-button.extend-info:visited, ul.button-list li a.info.extend-button.extend-disabled:visited,
-ol.button-list li a.info.extend-button.extend-disabled:visited, [role~=button].disabled.info:visited, [role~=button].disabled.extend-button.extend-info:visited, [role~=button].info.extend-button.extend-disabled:visited, .extend-button.extend-info.extend-disabled:visited {
+input[type=reset].disabled.info:visited, .button.disabled.info:visited, ul.button-list li a.disabled.info:visited,
+ol.button-list li a.disabled.info:visited, [role~=button].disabled.info:visited {
   color: #bed2dc;
   background: #7ca4b8;
   border-color: #517f96;
@@ -5294,7 +4888,7 @@ input[type=button].alert,
 input[type=reset].alert, .button.alert,
 a.button.alert,
 a.button.alert:visited, ul.button-list li a.alert,
-ol.button-list li a.alert, [role~=button].alert, .extend-button.extend-alert {
+ol.button-list li a.alert, [role~=button].alert {
   background-color: #e8ca2b;
   color: white;
   border-color: #ecb06f;
@@ -5304,27 +4898,19 @@ input[type=submit].alert:hover,
 input[type=button].alert:hover,
 input[type=reset].alert:hover, .button.alert:hover,
 a.button.alert:hover:visited, ul.button-list li a.alert:hover,
-ol.button-list li a.alert:hover, [role~=button].alert:hover, .extend-button.extend-alert:hover, button.alert:focus,
+ol.button-list li a.alert:hover, [role~=button].alert:hover, button.alert:focus,
 input[type=submit].alert:focus,
 input[type=button].alert:focus,
 input[type=reset].alert:focus, .button.alert:focus,
 a.button.alert:focus:visited, ul.button-list li a.alert:focus,
-ol.button-list li a.alert:focus, [role~=button].alert:focus, .extend-button.extend-alert:focus {
+ol.button-list li a.alert:focus, [role~=button].alert:focus {
   background: #e1c118;
 }
-button.disabled.alert, button.disabled.extend-button.extend-alert,
+button.disabled.alert,
 input[type=submit].disabled.alert,
-input[type=submit].disabled.extend-button.extend-alert,
 input[type=button].disabled.alert,
-input[type=button].disabled.extend-button.extend-alert,
-input[type=reset].disabled.alert,
-input[type=reset].disabled.extend-button.extend-alert, button.alert.extend-button.extend-disabled,
-input[type=submit].alert.extend-button.extend-disabled,
-input[type=button].alert.extend-button.extend-disabled,
-input[type=reset].alert.extend-button.extend-disabled, .button.disabled.alert, .button.disabled.extend-button.extend-alert, .button.alert.extend-button.extend-disabled, ul.button-list li a.disabled.alert, ul.button-list li a.disabled.extend-button.extend-alert,
-ol.button-list li a.disabled.alert,
-ol.button-list li a.disabled.extend-button.extend-alert, ul.button-list li a.alert.extend-button.extend-disabled,
-ol.button-list li a.alert.extend-button.extend-disabled, [role~=button].disabled.alert, [role~=button].disabled.extend-button.extend-alert, [role~=button].alert.extend-button.extend-disabled, .extend-button.extend-alert.extend-disabled {
+input[type=reset].disabled.alert, .button.disabled.alert, ul.button-list li a.disabled.alert,
+ol.button-list li a.disabled.alert, [role~=button].disabled.alert {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -5332,43 +4918,19 @@ ol.button-list li a.alert.extend-button.extend-disabled, [role~=button].disabled
   text-decoration: none;
   outline: none;
 }
-button.disabled.alert:hover, button.disabled.extend-button.extend-alert:hover,
+button.disabled.alert:hover,
 input[type=submit].disabled.alert:hover,
-input[type=submit].disabled.extend-button.extend-alert:hover,
 input[type=button].disabled.alert:hover,
-input[type=button].disabled.extend-button.extend-alert:hover,
-input[type=reset].disabled.alert:hover,
-input[type=reset].disabled.extend-button.extend-alert:hover, button.alert.extend-button.extend-disabled:hover,
-input[type=submit].alert.extend-button.extend-disabled:hover,
-input[type=button].alert.extend-button.extend-disabled:hover,
-input[type=reset].alert.extend-button.extend-disabled:hover, .button.disabled.alert:hover, .button.disabled.extend-button.extend-alert:hover, .button.alert.extend-button.extend-disabled:hover, ul.button-list li a.disabled.alert:hover, ul.button-list li a.disabled.extend-button.extend-alert:hover,
-ol.button-list li a.disabled.alert:hover,
-ol.button-list li a.disabled.extend-button.extend-alert:hover, ul.button-list li a.alert.extend-button.extend-disabled:hover,
-ol.button-list li a.alert.extend-button.extend-disabled:hover, [role~=button].disabled.alert:hover, [role~=button].disabled.extend-button.extend-alert:hover, [role~=button].alert.extend-button.extend-disabled:hover, .extend-button.extend-alert.extend-disabled:hover, button.disabled.alert:focus, button.disabled.extend-button.extend-alert:focus,
+input[type=reset].disabled.alert:hover, .button.disabled.alert:hover, ul.button-list li a.disabled.alert:hover,
+ol.button-list li a.disabled.alert:hover, [role~=button].disabled.alert:hover, button.disabled.alert:focus,
 input[type=submit].disabled.alert:focus,
-input[type=submit].disabled.extend-button.extend-alert:focus,
 input[type=button].disabled.alert:focus,
-input[type=button].disabled.extend-button.extend-alert:focus,
-input[type=reset].disabled.alert:focus,
-input[type=reset].disabled.extend-button.extend-alert:focus, button.alert.extend-button.extend-disabled:focus,
-input[type=submit].alert.extend-button.extend-disabled:focus,
-input[type=button].alert.extend-button.extend-disabled:focus,
-input[type=reset].alert.extend-button.extend-disabled:focus, .button.disabled.alert:focus, .button.disabled.extend-button.extend-alert:focus, .button.alert.extend-button.extend-disabled:focus, ul.button-list li a.disabled.alert:focus, ul.button-list li a.disabled.extend-button.extend-alert:focus,
-ol.button-list li a.disabled.alert:focus,
-ol.button-list li a.disabled.extend-button.extend-alert:focus, ul.button-list li a.alert.extend-button.extend-disabled:focus,
-ol.button-list li a.alert.extend-button.extend-disabled:focus, [role~=button].disabled.alert:focus, [role~=button].disabled.extend-button.extend-alert:focus, [role~=button].alert.extend-button.extend-disabled:focus, .extend-button.extend-alert.extend-disabled:focus, button.disabled.alert:visited, button.disabled.extend-button.extend-alert:visited,
+input[type=reset].disabled.alert:focus, .button.disabled.alert:focus, ul.button-list li a.disabled.alert:focus,
+ol.button-list li a.disabled.alert:focus, [role~=button].disabled.alert:focus, button.disabled.alert:visited,
 input[type=submit].disabled.alert:visited,
-input[type=submit].disabled.extend-button.extend-alert:visited,
 input[type=button].disabled.alert:visited,
-input[type=button].disabled.extend-button.extend-alert:visited,
-input[type=reset].disabled.alert:visited,
-input[type=reset].disabled.extend-button.extend-alert:visited, button.alert.extend-button.extend-disabled:visited,
-input[type=submit].alert.extend-button.extend-disabled:visited,
-input[type=button].alert.extend-button.extend-disabled:visited,
-input[type=reset].alert.extend-button.extend-disabled:visited, .button.disabled.alert:visited, .button.disabled.extend-button.extend-alert:visited, .button.alert.extend-button.extend-disabled:visited, ul.button-list li a.disabled.alert:visited, ul.button-list li a.disabled.extend-button.extend-alert:visited,
-ol.button-list li a.disabled.alert:visited,
-ol.button-list li a.disabled.extend-button.extend-alert:visited, ul.button-list li a.alert.extend-button.extend-disabled:visited,
-ol.button-list li a.alert.extend-button.extend-disabled:visited, [role~=button].disabled.alert:visited, [role~=button].disabled.extend-button.extend-alert:visited, [role~=button].alert.extend-button.extend-disabled:visited, .extend-button.extend-alert.extend-disabled:visited {
+input[type=reset].disabled.alert:visited, .button.disabled.alert:visited, ul.button-list li a.disabled.alert:visited,
+ol.button-list li a.disabled.alert:visited, [role~=button].disabled.alert:visited {
   color: #eae5db;
   background: #c5b59b;
   border-color: #a9926a;
@@ -5383,7 +4945,7 @@ input[type=button].warning,
 input[type=reset].warning, .button.warning,
 a.button.warning,
 a.button.warning:visited, ul.button-list li a.warning,
-ol.button-list li a.warning, [role~=button].warning, .extend-button.extend-warning {
+ol.button-list li a.warning, [role~=button].warning {
   background-color: #fa8600;
   color: white;
   border-color: #e67900;
@@ -5393,27 +4955,19 @@ input[type=submit].warning:hover,
 input[type=button].warning:hover,
 input[type=reset].warning:hover, .button.warning:hover,
 a.button.warning:hover:visited, ul.button-list li a.warning:hover,
-ol.button-list li a.warning:hover, [role~=button].warning:hover, .extend-button.extend-warning:hover, button.warning:focus,
+ol.button-list li a.warning:hover, [role~=button].warning:hover, button.warning:focus,
 input[type=submit].warning:focus,
 input[type=button].warning:focus,
 input[type=reset].warning:focus, .button.warning:focus,
 a.button.warning:focus:visited, ul.button-list li a.warning:focus,
-ol.button-list li a.warning:focus, [role~=button].warning:focus, .extend-button.extend-warning:focus {
+ol.button-list li a.warning:focus, [role~=button].warning:focus {
   background: #e07800;
 }
-button.disabled.warning, button.disabled.extend-button.extend-warning,
+button.disabled.warning,
 input[type=submit].disabled.warning,
-input[type=submit].disabled.extend-button.extend-warning,
 input[type=button].disabled.warning,
-input[type=button].disabled.extend-button.extend-warning,
-input[type=reset].disabled.warning,
-input[type=reset].disabled.extend-button.extend-warning, button.warning.extend-button.extend-disabled,
-input[type=submit].warning.extend-button.extend-disabled,
-input[type=button].warning.extend-button.extend-disabled,
-input[type=reset].warning.extend-button.extend-disabled, .button.disabled.warning, .button.disabled.extend-button.extend-warning, .button.warning.extend-button.extend-disabled, ul.button-list li a.disabled.warning, ul.button-list li a.disabled.extend-button.extend-warning,
-ol.button-list li a.disabled.warning,
-ol.button-list li a.disabled.extend-button.extend-warning, ul.button-list li a.warning.extend-button.extend-disabled,
-ol.button-list li a.warning.extend-button.extend-disabled, [role~=button].disabled.warning, [role~=button].disabled.extend-button.extend-warning, [role~=button].warning.extend-button.extend-disabled, .extend-button.extend-warning.extend-disabled {
+input[type=reset].disabled.warning, .button.disabled.warning, ul.button-list li a.disabled.warning,
+ol.button-list li a.disabled.warning, [role~=button].disabled.warning {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -5421,43 +4975,19 @@ ol.button-list li a.warning.extend-button.extend-disabled, [role~=button].disabl
   text-decoration: none;
   outline: none;
 }
-button.disabled.warning:hover, button.disabled.extend-button.extend-warning:hover,
+button.disabled.warning:hover,
 input[type=submit].disabled.warning:hover,
-input[type=submit].disabled.extend-button.extend-warning:hover,
 input[type=button].disabled.warning:hover,
-input[type=button].disabled.extend-button.extend-warning:hover,
-input[type=reset].disabled.warning:hover,
-input[type=reset].disabled.extend-button.extend-warning:hover, button.warning.extend-button.extend-disabled:hover,
-input[type=submit].warning.extend-button.extend-disabled:hover,
-input[type=button].warning.extend-button.extend-disabled:hover,
-input[type=reset].warning.extend-button.extend-disabled:hover, .button.disabled.warning:hover, .button.disabled.extend-button.extend-warning:hover, .button.warning.extend-button.extend-disabled:hover, ul.button-list li a.disabled.warning:hover, ul.button-list li a.disabled.extend-button.extend-warning:hover,
-ol.button-list li a.disabled.warning:hover,
-ol.button-list li a.disabled.extend-button.extend-warning:hover, ul.button-list li a.warning.extend-button.extend-disabled:hover,
-ol.button-list li a.warning.extend-button.extend-disabled:hover, [role~=button].disabled.warning:hover, [role~=button].disabled.extend-button.extend-warning:hover, [role~=button].warning.extend-button.extend-disabled:hover, .extend-button.extend-warning.extend-disabled:hover, button.disabled.warning:focus, button.disabled.extend-button.extend-warning:focus,
+input[type=reset].disabled.warning:hover, .button.disabled.warning:hover, ul.button-list li a.disabled.warning:hover,
+ol.button-list li a.disabled.warning:hover, [role~=button].disabled.warning:hover, button.disabled.warning:focus,
 input[type=submit].disabled.warning:focus,
-input[type=submit].disabled.extend-button.extend-warning:focus,
 input[type=button].disabled.warning:focus,
-input[type=button].disabled.extend-button.extend-warning:focus,
-input[type=reset].disabled.warning:focus,
-input[type=reset].disabled.extend-button.extend-warning:focus, button.warning.extend-button.extend-disabled:focus,
-input[type=submit].warning.extend-button.extend-disabled:focus,
-input[type=button].warning.extend-button.extend-disabled:focus,
-input[type=reset].warning.extend-button.extend-disabled:focus, .button.disabled.warning:focus, .button.disabled.extend-button.extend-warning:focus, .button.warning.extend-button.extend-disabled:focus, ul.button-list li a.disabled.warning:focus, ul.button-list li a.disabled.extend-button.extend-warning:focus,
-ol.button-list li a.disabled.warning:focus,
-ol.button-list li a.disabled.extend-button.extend-warning:focus, ul.button-list li a.warning.extend-button.extend-disabled:focus,
-ol.button-list li a.warning.extend-button.extend-disabled:focus, [role~=button].disabled.warning:focus, [role~=button].disabled.extend-button.extend-warning:focus, [role~=button].warning.extend-button.extend-disabled:focus, .extend-button.extend-warning.extend-disabled:focus, button.disabled.warning:visited, button.disabled.extend-button.extend-warning:visited,
+input[type=reset].disabled.warning:focus, .button.disabled.warning:focus, ul.button-list li a.disabled.warning:focus,
+ol.button-list li a.disabled.warning:focus, [role~=button].disabled.warning:focus, button.disabled.warning:visited,
 input[type=submit].disabled.warning:visited,
-input[type=submit].disabled.extend-button.extend-warning:visited,
 input[type=button].disabled.warning:visited,
-input[type=button].disabled.extend-button.extend-warning:visited,
-input[type=reset].disabled.warning:visited,
-input[type=reset].disabled.extend-button.extend-warning:visited, button.warning.extend-button.extend-disabled:visited,
-input[type=submit].warning.extend-button.extend-disabled:visited,
-input[type=button].warning.extend-button.extend-disabled:visited,
-input[type=reset].warning.extend-button.extend-disabled:visited, .button.disabled.warning:visited, .button.disabled.extend-button.extend-warning:visited, .button.warning.extend-button.extend-disabled:visited, ul.button-list li a.disabled.warning:visited, ul.button-list li a.disabled.extend-button.extend-warning:visited,
-ol.button-list li a.disabled.warning:visited,
-ol.button-list li a.disabled.extend-button.extend-warning:visited, ul.button-list li a.warning.extend-button.extend-disabled:visited,
-ol.button-list li a.warning.extend-button.extend-disabled:visited, [role~=button].disabled.warning:visited, [role~=button].disabled.extend-button.extend-warning:visited, [role~=button].warning.extend-button.extend-disabled:visited, .extend-button.extend-warning.extend-disabled:visited {
+input[type=reset].disabled.warning:visited, .button.disabled.warning:visited, ul.button-list li a.disabled.warning:visited,
+ol.button-list li a.disabled.warning:visited, [role~=button].disabled.warning:visited {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -5472,7 +5002,7 @@ input[type=button].error,
 input[type=reset].error, .button.error,
 a.button.error,
 a.button.error:visited, ul.button-list li a.error,
-ol.button-list li a.error, [role~=button].error, .extend-button.extend-error {
+ol.button-list li a.error, [role~=button].error {
   background-color: #b84c4c;
   color: white;
   border-color: #b14454;
@@ -5482,27 +5012,19 @@ input[type=submit].error:hover,
 input[type=button].error:hover,
 input[type=reset].error:hover, .button.error:hover,
 a.button.error:hover:visited, ul.button-list li a.error:hover,
-ol.button-list li a.error:hover, [role~=button].error:hover, .extend-button.extend-error:hover, button.error:focus,
+ol.button-list li a.error:hover, [role~=button].error:hover, button.error:focus,
 input[type=submit].error:focus,
 input[type=button].error:focus,
 input[type=reset].error:focus, .button.error:focus,
 a.button.error:focus:visited, ul.button-list li a.error:focus,
-ol.button-list li a.error:focus, [role~=button].error:focus, .extend-button.extend-error:focus {
+ol.button-list li a.error:focus, [role~=button].error:focus {
   background: #9a3d3d;
 }
-button.disabled.error, button.disabled.extend-button.extend-error,
+button.disabled.error,
 input[type=submit].disabled.error,
-input[type=submit].disabled.extend-button.extend-error,
 input[type=button].disabled.error,
-input[type=button].disabled.extend-button.extend-error,
-input[type=reset].disabled.error,
-input[type=reset].disabled.extend-button.extend-error, button.error.extend-button.extend-disabled,
-input[type=submit].error.extend-button.extend-disabled,
-input[type=button].error.extend-button.extend-disabled,
-input[type=reset].error.extend-button.extend-disabled, .button.disabled.error, .button.disabled.extend-button.extend-error, .button.error.extend-button.extend-disabled, ul.button-list li a.disabled.error, ul.button-list li a.disabled.extend-button.extend-error,
-ol.button-list li a.disabled.error,
-ol.button-list li a.disabled.extend-button.extend-error, ul.button-list li a.error.extend-button.extend-disabled,
-ol.button-list li a.error.extend-button.extend-disabled, [role~=button].disabled.error, [role~=button].disabled.extend-button.extend-error, [role~=button].error.extend-button.extend-disabled, .extend-button.extend-error.extend-disabled {
+input[type=reset].disabled.error, .button.disabled.error, ul.button-list li a.disabled.error,
+ol.button-list li a.disabled.error, [role~=button].disabled.error {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -5510,43 +5032,19 @@ ol.button-list li a.error.extend-button.extend-disabled, [role~=button].disabled
   text-decoration: none;
   outline: none;
 }
-button.disabled.error:hover, button.disabled.extend-button.extend-error:hover,
+button.disabled.error:hover,
 input[type=submit].disabled.error:hover,
-input[type=submit].disabled.extend-button.extend-error:hover,
 input[type=button].disabled.error:hover,
-input[type=button].disabled.extend-button.extend-error:hover,
-input[type=reset].disabled.error:hover,
-input[type=reset].disabled.extend-button.extend-error:hover, button.error.extend-button.extend-disabled:hover,
-input[type=submit].error.extend-button.extend-disabled:hover,
-input[type=button].error.extend-button.extend-disabled:hover,
-input[type=reset].error.extend-button.extend-disabled:hover, .button.disabled.error:hover, .button.disabled.extend-button.extend-error:hover, .button.error.extend-button.extend-disabled:hover, ul.button-list li a.disabled.error:hover, ul.button-list li a.disabled.extend-button.extend-error:hover,
-ol.button-list li a.disabled.error:hover,
-ol.button-list li a.disabled.extend-button.extend-error:hover, ul.button-list li a.error.extend-button.extend-disabled:hover,
-ol.button-list li a.error.extend-button.extend-disabled:hover, [role~=button].disabled.error:hover, [role~=button].disabled.extend-button.extend-error:hover, [role~=button].error.extend-button.extend-disabled:hover, .extend-button.extend-error.extend-disabled:hover, button.disabled.error:focus, button.disabled.extend-button.extend-error:focus,
+input[type=reset].disabled.error:hover, .button.disabled.error:hover, ul.button-list li a.disabled.error:hover,
+ol.button-list li a.disabled.error:hover, [role~=button].disabled.error:hover, button.disabled.error:focus,
 input[type=submit].disabled.error:focus,
-input[type=submit].disabled.extend-button.extend-error:focus,
 input[type=button].disabled.error:focus,
-input[type=button].disabled.extend-button.extend-error:focus,
-input[type=reset].disabled.error:focus,
-input[type=reset].disabled.extend-button.extend-error:focus, button.error.extend-button.extend-disabled:focus,
-input[type=submit].error.extend-button.extend-disabled:focus,
-input[type=button].error.extend-button.extend-disabled:focus,
-input[type=reset].error.extend-button.extend-disabled:focus, .button.disabled.error:focus, .button.disabled.extend-button.extend-error:focus, .button.error.extend-button.extend-disabled:focus, ul.button-list li a.disabled.error:focus, ul.button-list li a.disabled.extend-button.extend-error:focus,
-ol.button-list li a.disabled.error:focus,
-ol.button-list li a.disabled.extend-button.extend-error:focus, ul.button-list li a.error.extend-button.extend-disabled:focus,
-ol.button-list li a.error.extend-button.extend-disabled:focus, [role~=button].disabled.error:focus, [role~=button].disabled.extend-button.extend-error:focus, [role~=button].error.extend-button.extend-disabled:focus, .extend-button.extend-error.extend-disabled:focus, button.disabled.error:visited, button.disabled.extend-button.extend-error:visited,
+input[type=reset].disabled.error:focus, .button.disabled.error:focus, ul.button-list li a.disabled.error:focus,
+ol.button-list li a.disabled.error:focus, [role~=button].disabled.error:focus, button.disabled.error:visited,
 input[type=submit].disabled.error:visited,
-input[type=submit].disabled.extend-button.extend-error:visited,
 input[type=button].disabled.error:visited,
-input[type=button].disabled.extend-button.extend-error:visited,
-input[type=reset].disabled.error:visited,
-input[type=reset].disabled.extend-button.extend-error:visited, button.error.extend-button.extend-disabled:visited,
-input[type=submit].error.extend-button.extend-disabled:visited,
-input[type=button].error.extend-button.extend-disabled:visited,
-input[type=reset].error.extend-button.extend-disabled:visited, .button.disabled.error:visited, .button.disabled.extend-button.extend-error:visited, .button.error.extend-button.extend-disabled:visited, ul.button-list li a.disabled.error:visited, ul.button-list li a.disabled.extend-button.extend-error:visited,
-ol.button-list li a.disabled.error:visited,
-ol.button-list li a.disabled.extend-button.extend-error:visited, ul.button-list li a.error.extend-button.extend-disabled:visited,
-ol.button-list li a.error.extend-button.extend-disabled:visited, [role~=button].disabled.error:visited, [role~=button].disabled.extend-button.extend-error:visited, [role~=button].error.extend-button.extend-disabled:visited, .extend-button.extend-error.extend-disabled:visited {
+input[type=reset].disabled.error:visited, .button.disabled.error:visited, ul.button-list li a.disabled.error:visited,
+ol.button-list li a.disabled.error:visited, [role~=button].disabled.error:visited {
   color: #e3d1d1;
   background: #bd9291;
   border-color: #a06261;
@@ -5561,7 +5059,7 @@ input[type=button].success,
 input[type=reset].success, .button.success,
 a.button.success,
 a.button.success:visited, ul.button-list li a.success,
-ol.button-list li a.success, [role~=button].success, .extend-button.extend-success {
+ol.button-list li a.success, [role~=button].success {
   background-color: #67b646;
   color: white;
   border-color: #6da43f;
@@ -5571,27 +5069,19 @@ input[type=submit].success:hover,
 input[type=button].success:hover,
 input[type=reset].success:hover, .button.success:hover,
 a.button.success:hover:visited, ul.button-list li a.success:hover,
-ol.button-list li a.success:hover, [role~=button].success:hover, .extend-button.extend-success:hover, button.success:focus,
+ol.button-list li a.success:hover, [role~=button].success:hover, button.success:focus,
 input[type=submit].success:focus,
 input[type=button].success:focus,
 input[type=reset].success:focus, .button.success:focus,
 a.button.success:focus:visited, ul.button-list li a.success:focus,
-ol.button-list li a.success:focus, [role~=button].success:focus, .extend-button.extend-success:focus {
+ol.button-list li a.success:focus, [role~=button].success:focus {
   background: #549539;
 }
-button.disabled.success, button.disabled.extend-button.extend-success,
+button.disabled.success,
 input[type=submit].disabled.success,
-input[type=submit].disabled.extend-button.extend-success,
 input[type=button].disabled.success,
-input[type=button].disabled.extend-button.extend-success,
-input[type=reset].disabled.success,
-input[type=reset].disabled.extend-button.extend-success, button.success.extend-button.extend-disabled,
-input[type=submit].success.extend-button.extend-disabled,
-input[type=button].success.extend-button.extend-disabled,
-input[type=reset].success.extend-button.extend-disabled, .button.disabled.success, .button.disabled.extend-button.extend-success, .button.success.extend-button.extend-disabled, ul.button-list li a.disabled.success, ul.button-list li a.disabled.extend-button.extend-success,
-ol.button-list li a.disabled.success,
-ol.button-list li a.disabled.extend-button.extend-success, ul.button-list li a.success.extend-button.extend-disabled,
-ol.button-list li a.success.extend-button.extend-disabled, [role~=button].disabled.success, [role~=button].disabled.extend-button.extend-success, [role~=button].success.extend-button.extend-disabled, .extend-button.extend-success.extend-disabled {
+input[type=reset].disabled.success, .button.disabled.success, ul.button-list li a.disabled.success,
+ol.button-list li a.disabled.success, [role~=button].disabled.success {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -5599,43 +5089,19 @@ ol.button-list li a.success.extend-button.extend-disabled, [role~=button].disabl
   text-decoration: none;
   outline: none;
 }
-button.disabled.success:hover, button.disabled.extend-button.extend-success:hover,
+button.disabled.success:hover,
 input[type=submit].disabled.success:hover,
-input[type=submit].disabled.extend-button.extend-success:hover,
 input[type=button].disabled.success:hover,
-input[type=button].disabled.extend-button.extend-success:hover,
-input[type=reset].disabled.success:hover,
-input[type=reset].disabled.extend-button.extend-success:hover, button.success.extend-button.extend-disabled:hover,
-input[type=submit].success.extend-button.extend-disabled:hover,
-input[type=button].success.extend-button.extend-disabled:hover,
-input[type=reset].success.extend-button.extend-disabled:hover, .button.disabled.success:hover, .button.disabled.extend-button.extend-success:hover, .button.success.extend-button.extend-disabled:hover, ul.button-list li a.disabled.success:hover, ul.button-list li a.disabled.extend-button.extend-success:hover,
-ol.button-list li a.disabled.success:hover,
-ol.button-list li a.disabled.extend-button.extend-success:hover, ul.button-list li a.success.extend-button.extend-disabled:hover,
-ol.button-list li a.success.extend-button.extend-disabled:hover, [role~=button].disabled.success:hover, [role~=button].disabled.extend-button.extend-success:hover, [role~=button].success.extend-button.extend-disabled:hover, .extend-button.extend-success.extend-disabled:hover, button.disabled.success:focus, button.disabled.extend-button.extend-success:focus,
+input[type=reset].disabled.success:hover, .button.disabled.success:hover, ul.button-list li a.disabled.success:hover,
+ol.button-list li a.disabled.success:hover, [role~=button].disabled.success:hover, button.disabled.success:focus,
 input[type=submit].disabled.success:focus,
-input[type=submit].disabled.extend-button.extend-success:focus,
 input[type=button].disabled.success:focus,
-input[type=button].disabled.extend-button.extend-success:focus,
-input[type=reset].disabled.success:focus,
-input[type=reset].disabled.extend-button.extend-success:focus, button.success.extend-button.extend-disabled:focus,
-input[type=submit].success.extend-button.extend-disabled:focus,
-input[type=button].success.extend-button.extend-disabled:focus,
-input[type=reset].success.extend-button.extend-disabled:focus, .button.disabled.success:focus, .button.disabled.extend-button.extend-success:focus, .button.success.extend-button.extend-disabled:focus, ul.button-list li a.disabled.success:focus, ul.button-list li a.disabled.extend-button.extend-success:focus,
-ol.button-list li a.disabled.success:focus,
-ol.button-list li a.disabled.extend-button.extend-success:focus, ul.button-list li a.success.extend-button.extend-disabled:focus,
-ol.button-list li a.success.extend-button.extend-disabled:focus, [role~=button].disabled.success:focus, [role~=button].disabled.extend-button.extend-success:focus, [role~=button].success.extend-button.extend-disabled:focus, .extend-button.extend-success.extend-disabled:focus, button.disabled.success:visited, button.disabled.extend-button.extend-success:visited,
+input[type=reset].disabled.success:focus, .button.disabled.success:focus, ul.button-list li a.disabled.success:focus,
+ol.button-list li a.disabled.success:focus, [role~=button].disabled.success:focus, button.disabled.success:visited,
 input[type=submit].disabled.success:visited,
-input[type=submit].disabled.extend-button.extend-success:visited,
 input[type=button].disabled.success:visited,
-input[type=button].disabled.extend-button.extend-success:visited,
-input[type=reset].disabled.success:visited,
-input[type=reset].disabled.extend-button.extend-success:visited, button.success.extend-button.extend-disabled:visited,
-input[type=submit].success.extend-button.extend-disabled:visited,
-input[type=button].success.extend-button.extend-disabled:visited,
-input[type=reset].success.extend-button.extend-disabled:visited, .button.disabled.success:visited, .button.disabled.extend-button.extend-success:visited, .button.success.extend-button.extend-disabled:visited, ul.button-list li a.disabled.success:visited, ul.button-list li a.disabled.extend-button.extend-success:visited,
-ol.button-list li a.disabled.success:visited,
-ol.button-list li a.disabled.extend-button.extend-success:visited, ul.button-list li a.success.extend-button.extend-disabled:visited,
-ol.button-list li a.success.extend-button.extend-disabled:visited, [role~=button].disabled.success:visited, [role~=button].disabled.extend-button.extend-success:visited, [role~=button].success.extend-button.extend-disabled:visited, .extend-button.extend-success.extend-disabled:visited {
+input[type=reset].disabled.success:visited, .button.disabled.success:visited, ul.button-list li a.disabled.success:visited,
+ol.button-list li a.disabled.success:visited, [role~=button].disabled.success:visited {
   color: #b9c8b9;
   background: #809b80;
   border-color: #5b735b;
@@ -5647,13 +5113,13 @@ ol.button-list li a.success.extend-button.extend-disabled:visited, [role~=button
 button .block,
 input[type=submit] .block,
 input[type=button] .block,
-input[type=reset] .block, .button .block, [role~=button] .block, nav.menu .menu-toggle .block, .menu.nav .menu-toggle .block, .extend-button .block, button.block,
+input[type=reset] .block, .button .block, [role~=button] .block, nav.menu .menu-toggle .block, .menu.nav .menu-toggle .block, button.block,
 input[type=submit].block,
 input[type=button].block,
 input[type=reset].block, .button.block,
 a.button.block,
 a.button.block:visited, ul.button-list li a.block,
-ol.button-list li a.block, [role~=button].block, .extend-button.extend-block {
+ol.button-list li a.block, [role~=button].block {
   display: block;
   width: 100%;
 }
@@ -6541,6 +6007,1466 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
 
 [role~=tabpanel] [role~=tablist] {
   background: none;
+}
+
+.message, [role~=alert], .extend-message {
+  position: relative;
+  word-wrap: break-word;
+  padding: 0.25em 1em;
+  background: #1dabb8;
+  border: 1px solid #198d98;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
+}
+
+.message.small, [role~=alert].small, .extend-message.extend-small {
+  font-size: 0.8em;
+}
+
+.message.large, [role~=alert].large, .extend-message.extend-large {
+  font-size: 1.5em;
+}
+
+.message.square, [role~=alert].square, .extend-message.extend-square {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.message.round, [role~=alert].round, .extend-message.extend-round {
+  -webkit-border-radius: 9999em;
+  -moz-border-radius: 9999em;
+  -ms-border-radius: 9999em;
+  -o-border-radius: 9999em;
+  border-radius: 9999em;
+  *behavior: url("/js/libs/PIE.htc");
+}
+
+.message.disabled, [role~=alert].disabled, .extend-message.extend-disabled {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.disabled:hover, [role~=alert].disabled:hover, .extend-message.extend-disabled:hover, .message.disabled:focus, [role~=alert].disabled:focus, .extend-message.extend-disabled:focus, .message.disabled:visited, [role~=alert].disabled:visited, .extend-message.extend-disabled:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.message.info, [role~=alert].info, .extend-message.extend-info {
+  background-color: #d9edf7;
+  color: #3a87ad;
+  border-color: #bce8f1;
+}
+.message.disabled.info, .message.disabled.extend-message.extend-info, .message.info.extend-message.extend-disabled, [role~=alert].disabled.info, [role~=alert].disabled.extend-message.extend-info, [role~=alert].info.extend-message.extend-disabled, .extend-message.extend-info.extend-disabled {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.disabled.info:hover, .message.disabled.extend-message.extend-info:hover, .message.info.extend-message.extend-disabled:hover, [role~=alert].disabled.info:hover, [role~=alert].disabled.extend-message.extend-info:hover, [role~=alert].info.extend-message.extend-disabled:hover, .extend-message.extend-info.extend-disabled:hover, .message.disabled.info:focus, .message.disabled.extend-message.extend-info:focus, .message.info.extend-message.extend-disabled:focus, [role~=alert].disabled.info:focus, [role~=alert].disabled.extend-message.extend-info:focus, [role~=alert].info.extend-message.extend-disabled:focus, .extend-message.extend-info.extend-disabled:focus, .message.disabled.info:visited, .message.disabled.extend-message.extend-info:visited, .message.info.extend-message.extend-disabled:visited, [role~=alert].disabled.info:visited, [role~=alert].disabled.extend-message.extend-info:visited, [role~=alert].info.extend-message.extend-disabled:visited, .extend-message.extend-info.extend-disabled:visited {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.message.alert, [role~=alert].alert, .extend-message.extend-alert {
+  background-color: #fcf8e3;
+  color: #c09853;
+  border-color: #fbeee0;
+}
+.message.disabled.alert, .message.disabled.extend-message.extend-alert, .message.alert.extend-message.extend-disabled, [role~=alert].disabled.alert, [role~=alert].disabled.extend-message.extend-alert, [role~=alert].alert.extend-message.extend-disabled, .extend-message.extend-alert.extend-disabled {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.disabled.alert:hover, .message.disabled.extend-message.extend-alert:hover, .message.alert.extend-message.extend-disabled:hover, [role~=alert].disabled.alert:hover, [role~=alert].disabled.extend-message.extend-alert:hover, [role~=alert].alert.extend-message.extend-disabled:hover, .extend-message.extend-alert.extend-disabled:hover, .message.disabled.alert:focus, .message.disabled.extend-message.extend-alert:focus, .message.alert.extend-message.extend-disabled:focus, [role~=alert].disabled.alert:focus, [role~=alert].disabled.extend-message.extend-alert:focus, [role~=alert].alert.extend-message.extend-disabled:focus, .extend-message.extend-alert.extend-disabled:focus, .message.disabled.alert:visited, .message.disabled.extend-message.extend-alert:visited, .message.alert.extend-message.extend-disabled:visited, [role~=alert].disabled.alert:visited, [role~=alert].disabled.extend-message.extend-alert:visited, [role~=alert].alert.extend-message.extend-disabled:visited, .extend-message.extend-alert.extend-disabled:visited {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.message.warning, [role~=alert].warning, .extend-message.extend-warning {
+  background: #ffe5c7;
+  color: #ff971e;
+  border-color: #ffdbb3;
+}
+.message.disabled.warning, .message.disabled.extend-message.extend-warning, .message.warning.extend-message.extend-disabled, [role~=alert].disabled.warning, [role~=alert].disabled.extend-message.extend-warning, [role~=alert].warning.extend-message.extend-disabled, .extend-message.extend-warning.extend-disabled {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.disabled.warning:hover, .message.disabled.extend-message.extend-warning:hover, .message.warning.extend-message.extend-disabled:hover, [role~=alert].disabled.warning:hover, [role~=alert].disabled.extend-message.extend-warning:hover, [role~=alert].warning.extend-message.extend-disabled:hover, .extend-message.extend-warning.extend-disabled:hover, .message.disabled.warning:focus, .message.disabled.extend-message.extend-warning:focus, .message.warning.extend-message.extend-disabled:focus, [role~=alert].disabled.warning:focus, [role~=alert].disabled.extend-message.extend-warning:focus, [role~=alert].warning.extend-message.extend-disabled:focus, .extend-message.extend-warning.extend-disabled:focus, .message.disabled.warning:visited, .message.disabled.extend-message.extend-warning:visited, .message.warning.extend-message.extend-disabled:visited, [role~=alert].disabled.warning:visited, [role~=alert].disabled.extend-message.extend-warning:visited, [role~=alert].warning.extend-message.extend-disabled:visited, .extend-message.extend-warning.extend-disabled:visited {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.message.error, [role~=alert].error, .extend-message.extend-error {
+  background: #f2dede;
+  color: #b94a48;
+  border-color: #eed3d7;
+}
+.message.disabled.error, .message.disabled.extend-message.extend-error, .message.error.extend-message.extend-disabled, [role~=alert].disabled.error, [role~=alert].disabled.extend-message.extend-error, [role~=alert].error.extend-message.extend-disabled, .extend-message.extend-error.extend-disabled {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.disabled.error:hover, .message.disabled.extend-message.extend-error:hover, .message.error.extend-message.extend-disabled:hover, [role~=alert].disabled.error:hover, [role~=alert].disabled.extend-message.extend-error:hover, [role~=alert].error.extend-message.extend-disabled:hover, .extend-message.extend-error.extend-disabled:hover, .message.disabled.error:focus, .message.disabled.extend-message.extend-error:focus, .message.error.extend-message.extend-disabled:focus, [role~=alert].disabled.error:focus, [role~=alert].disabled.extend-message.extend-error:focus, [role~=alert].error.extend-message.extend-disabled:focus, .extend-message.extend-error.extend-disabled:focus, .message.disabled.error:visited, .message.disabled.extend-message.extend-error:visited, .message.error.extend-message.extend-disabled:visited, [role~=alert].disabled.error:visited, [role~=alert].disabled.extend-message.extend-error:visited, [role~=alert].error.extend-message.extend-disabled:visited, .extend-message.extend-error.extend-disabled:visited {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.message.success, [role~=alert].success, .extend-message.extend-success {
+  background: #dff0d8;
+  color: #468847;
+  border-color: #d6e9c6;
+}
+.message.disabled.success, .message.disabled.extend-message.extend-success, .message.success.extend-message.extend-disabled, [role~=alert].disabled.success, [role~=alert].disabled.extend-message.extend-success, [role~=alert].success.extend-message.extend-disabled, .extend-message.extend-success.extend-disabled {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.disabled.success:hover, .message.disabled.extend-message.extend-success:hover, .message.success.extend-message.extend-disabled:hover, [role~=alert].disabled.success:hover, [role~=alert].disabled.extend-message.extend-success:hover, [role~=alert].success.extend-message.extend-disabled:hover, .extend-message.extend-success.extend-disabled:hover, .message.disabled.success:focus, .message.disabled.extend-message.extend-success:focus, .message.success.extend-message.extend-disabled:focus, [role~=alert].disabled.success:focus, [role~=alert].disabled.extend-message.extend-success:focus, [role~=alert].success.extend-message.extend-disabled:focus, .extend-message.extend-success.extend-disabled:focus, .message.disabled.success:visited, .message.disabled.extend-message.extend-success:visited, .message.success.extend-message.extend-disabled:visited, [role~=alert].disabled.success:visited, [role~=alert].disabled.extend-message.extend-success:visited, [role~=alert].success.extend-message.extend-disabled:visited, .extend-message.extend-success.extend-disabled:visited {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.message.dismissible, [role~=alert].dismissible, .extend-message.extend-dismissible {
+  padding-right: 2em;
+}
+.message.dismissible:after, [role~=alert].dismissible:after, .extend-message.extend-dismissible:after {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f00d";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.3em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.message.green, [role~=alert].green {
+  border-color: #2ecc71;
+  background-color: #54d98c;
+  color: white;
+}
+
+.message.blue, [role~=alert].blue {
+  border-color: #3498db;
+  background-color: #5faee3;
+  color: white;
+}
+
+.message.purple, [role~=alert].purple {
+  border-color: #9b59b6;
+  background-color: #b07cc6;
+  color: white;
+}
+
+.message.yellow, [role~=alert].yellow {
+  border-color: #f1c40f;
+  background-color: #f4d03f;
+  color: white;
+}
+
+.message.orange, [role~=alert].orange {
+  border-color: #e67e22;
+  background-color: #eb9950;
+  color: white;
+}
+
+.message.red, [role~=alert].red {
+  border-color: #e74c3c;
+  background-color: #ed7669;
+  color: white;
+}
+
+.message.pink, [role~=alert].pink {
+  border-color: #f02475;
+  background-color: #f35493;
+  color: white;
+}
+
+.message.turquoise, [role~=alert].turquoise {
+  border-color: #1abc9c;
+  background-color: #28e1bd;
+  color: white;
+}
+
+.message.asphalt, [role~=alert].asphalt {
+  border-color: #34495e;
+  background-color: #46627f;
+  color: white;
+}
+
+.callout, [role~=status], .extend-callout {
+  position: relative;
+  word-wrap: break-word;
+  padding: 1em;
+  background: #1dabb8;
+  border: 1px solid #198d98;
+  color: white;
+  margin-bottom: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
+}
+.callout h1, [role~=status] h1, .extend-callout h1, .callout h2, [role~=status] h2, .extend-callout h2, .callout h3, [role~=status] h3, .extend-callout h3, .callout h4, [role~=status] h4, .extend-callout h4, .callout h5, [role~=status] h5, .extend-callout h5, .callout h6, [role~=status] h6, .extend-callout h6, .callout p, [role~=status] p, .extend-callout p {
+  color: inherit;
+}
+.callout *:last-child, [role~=status] *:last-child, .extend-callout *:last-child {
+  margin-bottom: 0;
+}
+
+.callout.small, [role~=status].small, .extend-callout.extend-small {
+  font-size: 0.8em;
+}
+
+.callout.large, [role~=status].large, .extend-callout.extend-large {
+  font-size: 1.5em;
+}
+
+.callout.square, [role~=status].square, .extend-callout.extend-square {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.callout.round, [role~=status].round, .extend-callout.extend-round {
+  -webkit-border-radius: 9999em;
+  -moz-border-radius: 9999em;
+  -ms-border-radius: 9999em;
+  -o-border-radius: 9999em;
+  border-radius: 9999em;
+  *behavior: url("/js/libs/PIE.htc");
+}
+
+.callout.disabled, [role~=status].disabled, .extend-callout.extend-disabled {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled:hover, [role~=status].disabled:hover, .extend-callout.extend-disabled:hover, .callout.disabled:focus, [role~=status].disabled:focus, .extend-callout.extend-disabled:focus, .callout.disabled:visited, [role~=status].disabled:visited, .extend-callout.extend-disabled:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.callout.info, [role~=status].info, .extend-callout.extend-info {
+  background-color: #d9edf7;
+  color: #3a87ad;
+  border-color: #bce8f1;
+}
+.callout.disabled.info, .callout.disabled.extend-callout.extend-info, .callout.info.extend-callout.extend-disabled, [role~=status].disabled.info, [role~=status].disabled.extend-callout.extend-info, [role~=status].info.extend-callout.extend-disabled, .extend-callout.extend-info.extend-disabled {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled.info:hover, .callout.disabled.extend-callout.extend-info:hover, .callout.info.extend-callout.extend-disabled:hover, [role~=status].disabled.info:hover, [role~=status].disabled.extend-callout.extend-info:hover, [role~=status].info.extend-callout.extend-disabled:hover, .extend-callout.extend-info.extend-disabled:hover, .callout.disabled.info:focus, .callout.disabled.extend-callout.extend-info:focus, .callout.info.extend-callout.extend-disabled:focus, [role~=status].disabled.info:focus, [role~=status].disabled.extend-callout.extend-info:focus, [role~=status].info.extend-callout.extend-disabled:focus, .extend-callout.extend-info.extend-disabled:focus, .callout.disabled.info:visited, .callout.disabled.extend-callout.extend-info:visited, .callout.info.extend-callout.extend-disabled:visited, [role~=status].disabled.info:visited, [role~=status].disabled.extend-callout.extend-info:visited, [role~=status].info.extend-callout.extend-disabled:visited, .extend-callout.extend-info.extend-disabled:visited {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.callout.alert, [role~=status].alert, .extend-callout.extend-alert {
+  background-color: #fcf8e3;
+  color: #c09853;
+  border-color: #fbeee0;
+}
+.callout.disabled.alert, .callout.disabled.extend-callout.extend-alert, .callout.alert.extend-callout.extend-disabled, [role~=status].disabled.alert, [role~=status].disabled.extend-callout.extend-alert, [role~=status].alert.extend-callout.extend-disabled, .extend-callout.extend-alert.extend-disabled {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled.alert:hover, .callout.disabled.extend-callout.extend-alert:hover, .callout.alert.extend-callout.extend-disabled:hover, [role~=status].disabled.alert:hover, [role~=status].disabled.extend-callout.extend-alert:hover, [role~=status].alert.extend-callout.extend-disabled:hover, .extend-callout.extend-alert.extend-disabled:hover, .callout.disabled.alert:focus, .callout.disabled.extend-callout.extend-alert:focus, .callout.alert.extend-callout.extend-disabled:focus, [role~=status].disabled.alert:focus, [role~=status].disabled.extend-callout.extend-alert:focus, [role~=status].alert.extend-callout.extend-disabled:focus, .extend-callout.extend-alert.extend-disabled:focus, .callout.disabled.alert:visited, .callout.disabled.extend-callout.extend-alert:visited, .callout.alert.extend-callout.extend-disabled:visited, [role~=status].disabled.alert:visited, [role~=status].disabled.extend-callout.extend-alert:visited, [role~=status].alert.extend-callout.extend-disabled:visited, .extend-callout.extend-alert.extend-disabled:visited {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.callout.warning, [role~=status].warning, .extend-callout.extend-warning {
+  background: #ffe5c7;
+  color: #ff971e;
+  border-color: #ffdbb3;
+}
+.callout.disabled.warning, .callout.disabled.extend-callout.extend-warning, .callout.warning.extend-callout.extend-disabled, [role~=status].disabled.warning, [role~=status].disabled.extend-callout.extend-warning, [role~=status].warning.extend-callout.extend-disabled, .extend-callout.extend-warning.extend-disabled {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled.warning:hover, .callout.disabled.extend-callout.extend-warning:hover, .callout.warning.extend-callout.extend-disabled:hover, [role~=status].disabled.warning:hover, [role~=status].disabled.extend-callout.extend-warning:hover, [role~=status].warning.extend-callout.extend-disabled:hover, .extend-callout.extend-warning.extend-disabled:hover, .callout.disabled.warning:focus, .callout.disabled.extend-callout.extend-warning:focus, .callout.warning.extend-callout.extend-disabled:focus, [role~=status].disabled.warning:focus, [role~=status].disabled.extend-callout.extend-warning:focus, [role~=status].warning.extend-callout.extend-disabled:focus, .extend-callout.extend-warning.extend-disabled:focus, .callout.disabled.warning:visited, .callout.disabled.extend-callout.extend-warning:visited, .callout.warning.extend-callout.extend-disabled:visited, [role~=status].disabled.warning:visited, [role~=status].disabled.extend-callout.extend-warning:visited, [role~=status].warning.extend-callout.extend-disabled:visited, .extend-callout.extend-warning.extend-disabled:visited {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.callout.error, [role~=status].error, .extend-callout.extend-error {
+  background: #f2dede;
+  color: #b94a48;
+  border-color: #eed3d7;
+}
+.callout.disabled.error, .callout.disabled.extend-callout.extend-error, .callout.error.extend-callout.extend-disabled, [role~=status].disabled.error, [role~=status].disabled.extend-callout.extend-error, [role~=status].error.extend-callout.extend-disabled, .extend-callout.extend-error.extend-disabled {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled.error:hover, .callout.disabled.extend-callout.extend-error:hover, .callout.error.extend-callout.extend-disabled:hover, [role~=status].disabled.error:hover, [role~=status].disabled.extend-callout.extend-error:hover, [role~=status].error.extend-callout.extend-disabled:hover, .extend-callout.extend-error.extend-disabled:hover, .callout.disabled.error:focus, .callout.disabled.extend-callout.extend-error:focus, .callout.error.extend-callout.extend-disabled:focus, [role~=status].disabled.error:focus, [role~=status].disabled.extend-callout.extend-error:focus, [role~=status].error.extend-callout.extend-disabled:focus, .extend-callout.extend-error.extend-disabled:focus, .callout.disabled.error:visited, .callout.disabled.extend-callout.extend-error:visited, .callout.error.extend-callout.extend-disabled:visited, [role~=status].disabled.error:visited, [role~=status].disabled.extend-callout.extend-error:visited, [role~=status].error.extend-callout.extend-disabled:visited, .extend-callout.extend-error.extend-disabled:visited {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.callout.success, [role~=status].success, .extend-callout.extend-success {
+  background: #dff0d8;
+  color: #468847;
+  border-color: #d6e9c6;
+}
+.callout.disabled.success, .callout.disabled.extend-callout.extend-success, .callout.success.extend-callout.extend-disabled, [role~=status].disabled.success, [role~=status].disabled.extend-callout.extend-success, [role~=status].success.extend-callout.extend-disabled, .extend-callout.extend-success.extend-disabled {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled.success:hover, .callout.disabled.extend-callout.extend-success:hover, .callout.success.extend-callout.extend-disabled:hover, [role~=status].disabled.success:hover, [role~=status].disabled.extend-callout.extend-success:hover, [role~=status].success.extend-callout.extend-disabled:hover, .extend-callout.extend-success.extend-disabled:hover, .callout.disabled.success:focus, .callout.disabled.extend-callout.extend-success:focus, .callout.success.extend-callout.extend-disabled:focus, [role~=status].disabled.success:focus, [role~=status].disabled.extend-callout.extend-success:focus, [role~=status].success.extend-callout.extend-disabled:focus, .extend-callout.extend-success.extend-disabled:focus, .callout.disabled.success:visited, .callout.disabled.extend-callout.extend-success:visited, .callout.success.extend-callout.extend-disabled:visited, [role~=status].disabled.success:visited, [role~=status].disabled.extend-callout.extend-success:visited, [role~=status].success.extend-callout.extend-disabled:visited, .extend-callout.extend-success.extend-disabled:visited {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.callout.dismissible, [role~=status].dismissible, .extend-callout.extend-dismissible {
+  padding-right: 3em;
+}
+.callout.dismissible:after, [role~=status].dismissible:after, .extend-callout.extend-dismissible:after {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "\f00d";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2em 0.3em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.callout.green, [role~=status].green {
+  border-color: #2ecc71;
+  background-color: #54d98c;
+  color: white;
+}
+
+.callout.blue, [role~=status].blue {
+  border-color: #3498db;
+  background-color: #5faee3;
+  color: white;
+}
+
+.callout.purple, [role~=status].purple {
+  border-color: #9b59b6;
+  background-color: #b07cc6;
+  color: white;
+}
+
+.callout.yellow, [role~=status].yellow {
+  border-color: #f1c40f;
+  background-color: #f4d03f;
+  color: white;
+}
+
+.callout.orange, [role~=status].orange {
+  border-color: #e67e22;
+  background-color: #eb9950;
+  color: white;
+}
+
+.callout.red, [role~=status].red {
+  border-color: #e74c3c;
+  background-color: #ed7669;
+  color: white;
+}
+
+.callout.pink, [role~=status].pink {
+  border-color: #f02475;
+  background-color: #f35493;
+  color: white;
+}
+
+.callout.turquoise, [role~=status].turquoise {
+  border-color: #1abc9c;
+  background-color: #28e1bd;
+  color: white;
+}
+
+.callout.asphalt, [role~=status].asphalt {
+  border-color: #34495e;
+  background-color: #46627f;
+  color: white;
+}
+
+table {
+  border: 1px solid #dddddd;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+}
+
+table.align-center th th, table.align-center td th, table.align-center th td, table.align-center td td {
+  text-align: center;
+}
+
+table.responsive {
+  table-layout: fixed;
+}
+
+table th, table td {
+  padding: 10px;
+  background: #fcfcfc;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+table td {
+  font-size: 0.9em;
+}
+
+table tr:nth-child(even) th, table tr:nth-child(even) td {
+  background: #f2f2f2;
+}
+
+table thead tr th {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+table thead tr th, table thead tr td {
+  background: #1dabb8;
+  color: white;
+}
+
+table.green thead tr th, table.green thead tr td {
+  background: #2ecc71;
+  color: white;
+}
+
+table.blue thead tr th, table.blue thead tr td {
+  background: #3498db;
+  color: white;
+}
+
+table.purple thead tr th, table.purple thead tr td {
+  background: #9b59b6;
+  color: white;
+}
+
+table.yellow thead tr th, table.yellow thead tr td {
+  background: #f1c40f;
+  color: white;
+}
+
+table.orange thead tr th, table.orange thead tr td {
+  background: #e67e22;
+  color: white;
+}
+
+table.red thead tr th, table.red thead tr td {
+  background: #e74c3c;
+  color: white;
+}
+
+table.pink thead tr th, table.pink thead tr td {
+  background: #f02475;
+  color: white;
+}
+
+table.turquoise thead tr th, table.turquoise thead tr td {
+  background: #1abc9c;
+  color: white;
+}
+
+table.asphalt thead tr th, table.asphalt thead tr td {
+  background: #34495e;
+  color: white;
+}
+
+table thead tr td {
+  font-weight: normal;
+}
+
+table tbody tr th {
+  font-size: 0.9em;
+}
+
+table tfoot tr th {
+  font-size: 1em;
+}
+
+table tfoot tr td {
+  background: #e0e0e0;
+  color: #5a5a5a;
+  font-size: 0.8em;
+}
+
+.tooltip:not([title]):not([role~=tooltip]) {
+  position: relative;
+  padding: 5px 15px;
+  background: #1dabb8;
+  border: 1px solid #16828c;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  font-size: 13px;
+  color: white;
+}
+.tooltip:not([title]):not([role~=tooltip]):after {
+  content: '';
+  display: block;
+  position: absolute;
+  margin-top: 5px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid #1dabb8;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+.tooltip:not([title]):not([role~=tooltip]):before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 12px;
+  border-top: 6px solid #dddddd;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
+}
+.tooltip:not([title]):not([role~=tooltip]) a.close {
+  display: block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  padding: 0;
+  margin: 0 -10px 5px 5px;
+  text-align: center;
+  float: right;
+  color: white;
+  border: 1px solid #41d4e1;
+  background: white;
+  text-decoration: none;
+  font-size: 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  *behavior: url("/js/libs/PIE.htc");
+}
+.tooltip:not([title]):not([role~=tooltip]) a.close i {
+  color: inherit;
+}
+
+#tooltip {
+  display: block;
+  max-width: 640px;
+  position: absolute;
+  z-index: 101;
+  padding: 5px 15px;
+  background: #1dabb8;
+  border: 1px solid #16828c;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  font-size: 13px;
+  text-transform: normal;
+  color: white;
+}
+#tooltip:after, #tooltip:before {
+  content: '';
+  position: absolute;
+  z-index: 101;
+  width: 0;
+  height: 0;
+}
+#tooltip:after {
+  z-index: 102;
+}
+#tooltip.info {
+  background-color: #3a87ad;
+  border-color: #2d6987;
+  color: white;
+}
+#tooltip.info.top.right:after, #tooltip.info.top.right:before, #tooltip.info.top.left:after, #tooltip.info.top.left:before {
+  border-top-color: #3a87ad;
+}
+#tooltip.info.bottom.right:after, #tooltip.info.bottom.right:before, #tooltip.info.bottom.left:after, #tooltip.info.bottom.left:before {
+  border-bottom-color: #3a87ad;
+}
+#tooltip.alert {
+  background-color: #c09853;
+  border-color: #a47e3c;
+  color: white;
+}
+#tooltip.alert.top.right:after, #tooltip.alert.top.right:before, #tooltip.alert.top.left:after, #tooltip.alert.top.left:before {
+  border-top-color: #c09853;
+}
+#tooltip.alert.bottom.right:after, #tooltip.alert.bottom.right:before, #tooltip.alert.bottom.left:after, #tooltip.alert.bottom.left:before {
+  border-bottom-color: #c09853;
+}
+#tooltip.warning {
+  background-color: #ff971e;
+  border-color: #ea7e00;
+  color: white;
+}
+#tooltip.warning.top.right:after, #tooltip.warning.top.right:before, #tooltip.warning.top.left:after, #tooltip.warning.top.left:before {
+  border-top-color: #ff971e;
+}
+#tooltip.warning.bottom.right:after, #tooltip.warning.bottom.right:before, #tooltip.warning.bottom.left:after, #tooltip.warning.bottom.left:before {
+  border-bottom-color: #ff971e;
+}
+#tooltip.error {
+  background-color: #b94a48;
+  border-color: #953b39;
+  color: white;
+}
+#tooltip.error.top.right:after, #tooltip.error.top.right:before, #tooltip.error.top.left:after, #tooltip.error.top.left:before {
+  border-top-color: #b94a48;
+}
+#tooltip.error.bottom.right:after, #tooltip.error.bottom.right:before, #tooltip.error.bottom.left:after, #tooltip.error.bottom.left:before {
+  border-bottom-color: #b94a48;
+}
+#tooltip.success {
+  background-color: #468847;
+  border-color: #356635;
+  color: white;
+}
+#tooltip.success.top.right:after, #tooltip.success.top.right:before, #tooltip.success.top.left:after, #tooltip.success.top.left:before {
+  border-top-color: #468847;
+}
+#tooltip.success.bottom.right:after, #tooltip.success.bottom.right:before, #tooltip.success.bottom.left:after, #tooltip.success.bottom.left:before {
+  border-bottom-color: #468847;
+}
+#tooltip.disabled {
+  background-color: gray;
+  border-color: #676767;
+  color: white;
+}
+#tooltip.disabled.top.right:after, #tooltip.disabled.top.right:before, #tooltip.disabled.top.left:after, #tooltip.disabled.top.left:before {
+  border-top-color: gray;
+}
+#tooltip.disabled.bottom.right:after, #tooltip.disabled.bottom.right:before, #tooltip.disabled.bottom.left:after, #tooltip.disabled.bottom.left:before {
+  border-bottom-color: gray;
+}
+#tooltip.green {
+  background-color: #2ecc71;
+  border-color: #25a25a;
+  color: white;
+}
+#tooltip.green.top.right:after, #tooltip.green.top.right:before, #tooltip.green.top.left:after, #tooltip.green.top.left:before {
+  border-top-color: #2ecc71;
+}
+#tooltip.green.bottom.right:after, #tooltip.green.bottom.right:before, #tooltip.green.bottom.left:after, #tooltip.green.bottom.left:before {
+  border-bottom-color: #2ecc71;
+}
+#tooltip.blue {
+  background-color: #3498db;
+  border-color: #217dbb;
+  color: white;
+}
+#tooltip.blue.top.right:after, #tooltip.blue.top.right:before, #tooltip.blue.top.left:after, #tooltip.blue.top.left:before {
+  border-top-color: #3498db;
+}
+#tooltip.blue.bottom.right:after, #tooltip.blue.bottom.right:before, #tooltip.blue.bottom.left:after, #tooltip.blue.bottom.left:before {
+  border-bottom-color: #3498db;
+}
+#tooltip.purple {
+  background-color: #9b59b6;
+  border-color: #804399;
+  color: white;
+}
+#tooltip.purple.top.right:after, #tooltip.purple.top.right:before, #tooltip.purple.top.left:after, #tooltip.purple.top.left:before {
+  border-top-color: #9b59b6;
+}
+#tooltip.purple.bottom.right:after, #tooltip.purple.bottom.right:before, #tooltip.purple.bottom.left:after, #tooltip.purple.bottom.left:before {
+  border-bottom-color: #9b59b6;
+}
+#tooltip.yellow {
+  background-color: #f1c40f;
+  border-color: #c29d0b;
+  color: white;
+}
+#tooltip.yellow.top.right:after, #tooltip.yellow.top.right:before, #tooltip.yellow.top.left:after, #tooltip.yellow.top.left:before {
+  border-top-color: #f1c40f;
+}
+#tooltip.yellow.bottom.right:after, #tooltip.yellow.bottom.right:before, #tooltip.yellow.bottom.left:after, #tooltip.yellow.bottom.left:before {
+  border-bottom-color: #f1c40f;
+}
+#tooltip.orange {
+  background-color: #e67e22;
+  border-color: #bf6516;
+  color: white;
+}
+#tooltip.orange.top.right:after, #tooltip.orange.top.right:before, #tooltip.orange.top.left:after, #tooltip.orange.top.left:before {
+  border-top-color: #e67e22;
+}
+#tooltip.orange.bottom.right:after, #tooltip.orange.bottom.right:before, #tooltip.orange.bottom.left:after, #tooltip.orange.bottom.left:before {
+  border-bottom-color: #e67e22;
+}
+#tooltip.red {
+  background-color: #e74c3c;
+  border-color: #d62c1a;
+  color: white;
+}
+#tooltip.red.top.right:after, #tooltip.red.top.right:before, #tooltip.red.top.left:after, #tooltip.red.top.left:before {
+  border-top-color: #e74c3c;
+}
+#tooltip.red.bottom.right:after, #tooltip.red.bottom.right:before, #tooltip.red.bottom.left:after, #tooltip.red.bottom.left:before {
+  border-bottom-color: #e74c3c;
+}
+#tooltip.pink {
+  background-color: #f02475;
+  border-color: #d30e5c;
+  color: white;
+}
+#tooltip.pink.top.right:after, #tooltip.pink.top.right:before, #tooltip.pink.top.left:after, #tooltip.pink.top.left:before {
+  border-top-color: #f02475;
+}
+#tooltip.pink.bottom.right:after, #tooltip.pink.bottom.right:before, #tooltip.pink.bottom.left:after, #tooltip.pink.bottom.left:before {
+  border-bottom-color: #f02475;
+}
+#tooltip.turquoise {
+  background-color: #1abc9c;
+  border-color: #148f77;
+  color: white;
+}
+#tooltip.turquoise.top.right:after, #tooltip.turquoise.top.right:before, #tooltip.turquoise.top.left:after, #tooltip.turquoise.top.left:before {
+  border-top-color: #1abc9c;
+}
+#tooltip.turquoise.bottom.right:after, #tooltip.turquoise.bottom.right:before, #tooltip.turquoise.bottom.left:after, #tooltip.turquoise.bottom.left:before {
+  border-bottom-color: #1abc9c;
+}
+#tooltip.asphalt {
+  background-color: #34495e;
+  border-color: #222f3d;
+  color: white;
+}
+#tooltip.asphalt.top.right:after, #tooltip.asphalt.top.right:before, #tooltip.asphalt.top.left:after, #tooltip.asphalt.top.left:before {
+  border-top-color: #34495e;
+}
+#tooltip.asphalt.bottom.right:after, #tooltip.asphalt.bottom.right:before, #tooltip.asphalt.bottom.left:after, #tooltip.asphalt.bottom.left:before {
+  border-bottom-color: #34495e;
+}
+#tooltip.top.right:after {
+  top: auto;
+  right: 12px;
+  bottom: -6px;
+  left: auto;
+  border-top: 6px solid #1dabb8;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+#tooltip.top.right:before {
+  top: auto;
+  right: 10px;
+  bottom: -7px;
+  left: auto;
+  border-top: 6px solid #16828c;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+#tooltip.top.left:after {
+  top: auto;
+  right: auto;
+  bottom: -6px;
+  left: 12px;
+  border-top: 6px solid #1dabb8;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+#tooltip.top.left:before {
+  top: auto;
+  right: auto;
+  bottom: -7px;
+  left: 10px;
+  border-top: 6px solid #16828c;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+#tooltip.bottom.right:after {
+  top: -6px;
+  right: 12px;
+  bottom: auto;
+  left: auto;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #1dabb8;
+  border-left: 6px solid transparent;
+}
+#tooltip.bottom.right:before {
+  top: -7px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  border-right: 8px solid transparent;
+  border-bottom: 6px solid #16828c;
+  border-left: 8px solid transparent;
+}
+#tooltip.bottom.left:after {
+  top: -6px;
+  right: auto;
+  bottom: auto;
+  left: 12px;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #1dabb8;
+  border-left: 6px solid transparent;
+}
+#tooltip.bottom.left:before {
+  top: -7px;
+  right: auto;
+  bottom: auto;
+  left: 10px;
+  border-right: 8px solid transparent;
+  border-bottom: 6px solid #16828c;
+  border-left: 8px solid transparent;
+}
+
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 502;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.mfp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 503;
+  position: fixed;
+  outline: none !important;
+  -webkit-backface-visibility: hidden;
+}
+
+.mfp-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mfp-container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.mfp-align-top .mfp-container:before {
+  display: none;
+}
+
+.mfp-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 505;
+}
+
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+  width: auto;
+  max-width: 1200px;
+  cursor: auto;
+}
+
+.mfp-ajax-cur {
+  cursor: progress;
+}
+
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.mfp-zoom {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+.mfp-auto-cursor .mfp-content {
+  cursor: auto;
+}
+
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.mfp-loading.mfp-figure {
+  display: none;
+}
+
+.mfp-hide {
+  display: none !important;
+}
+
+.mfp-preloader {
+  color: #cccccc;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  text-align: center;
+  margin-top: -0.8em;
+  left: 8px;
+  right: 8px;
+  z-index: 504;
+}
+
+.mfp-preloader a {
+  color: #cccccc;
+}
+
+.mfp-preloader a:hover {
+  color: white;
+}
+
+.mfp-s-ready .mfp-preloader {
+  display: none;
+}
+
+.mfp-s-error .mfp-content {
+  display: none;
+}
+
+button.mfp-close,
+button.mfp-arrow {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  padding: 0;
+  z-index: 506;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  padding: 0 0 18px 10px;
+  color: white;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace;
+}
+.mfp-close:hover, .mfp-close:focus {
+  opacity: 1;
+}
+.mfp-close:active {
+  top: 1px;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #333333;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  color: white;
+  right: -6px;
+  text-align: right;
+  padding-right: 6px;
+  width: 100%;
+}
+
+.mfp-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #cccccc;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.mfp-arrow {
+  position: absolute;
+  top: 0;
+  opacity: 0.65;
+  margin: 0;
+  top: 50%;
+  margin-top: -55px;
+  padding: 0;
+  width: 90px;
+  height: 110px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.mfp-arrow:active {
+  margin-top: -54px;
+}
+
+.mfp-arrow:hover,
+.mfp-arrow:focus {
+  opacity: 1;
+}
+
+.mfp-arrow:before, .mfp-arrow:after,
+.mfp-arrow .mfp-b,
+.mfp-arrow .mfp-a {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 35px;
+  margin-left: 35px;
+  border: solid transparent;
+}
+.mfp-arrow:after,
+.mfp-arrow .mfp-a {
+  opacity: 0.5;
+  border-top-width: 12px;
+  border-bottom-width: 12px;
+  top: 8px;
+}
+.mfp-arrow:before,
+.mfp-arrow .mfp-b {
+  border-top-width: 20px;
+  border-bottom-width: 20px;
+}
+
+.mfp-arrow-left {
+  left: 0;
+}
+.mfp-arrow-left:after,
+.mfp-arrow-left .mfp-a {
+  border-right: 12px solid #000;
+  left: 5px;
+}
+.mfp-arrow-left:before,
+.mfp-arrow-left .mfp-b {
+  border-right: 20px solid #FFF;
+}
+
+.mfp-arrow-right {
+  right: 0;
+}
+.mfp-arrow-right:after,
+.mfp-arrow-right .mfp-a {
+  border-left: 12px solid #000;
+  left: 3px;
+}
+.mfp-arrow-right:before,
+.mfp-arrow-right .mfp-b {
+  border-left: 20px solid #FFF;
+}
+
+.mfp-iframe-holder {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.mfp-iframe-holder .mfp-content {
+  line-height: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.mfp-iframe-scaler {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.mfp-iframe-scaler iframe {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+  background: black;
+}
+
+.mfp-iframe-holder .mfp-close {
+  top: -43px;
+}
+
+img.mfp-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 0 40px;
+  margin: 0 auto;
+}
+
+.mfp-figure:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 40px;
+  display: block;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.15), 8px, 3px, 3px;
+}
+
+.mfp-figure {
+  line-height: 0;
+}
+
+.mfp-bottom-bar {
+  margin-top: -36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto;
+}
+
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #f3f3f3;
+  padding-right: 36px;
+}
+
+.mfp-figure small {
+  color: #bdbdbd;
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.mfp-image-holder .mfp-content {
+  max-width: 100%;
+}
+
+.mfp-gallery .mfp-image-holder .mfp-figure {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  .mfp-img-mobile .mfp-image-holder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mfp-img-mobile img.mfp-img {
+    padding: 0;
+  }
+
+  .mfp-img-mobile .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+  }
+
+  .mfp-img-mobile .mfp-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    margin: 0;
+    top: auto;
+    padding: 3px 5px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .mfp-img-mobile .mfp-bottom-bar:empty {
+    padding: 0;
+  }
+
+  .mfp-img-mobile .mfp-counter {
+    right: 5px;
+    top: 3px;
+  }
+
+  .mfp-img-mobile .mfp-close {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    text-align: center;
+    padding: 0;
+  }
+
+  .mfp-img-mobile .mfp-figure small {
+    display: inline;
+    margin-left: 5px;
+  }
+}
+@media all and (max-width: 800px) {
+  .mfp-arrow {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+
+  .mfp-arrow-left {
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+  }
+
+  .mfp-arrow-right {
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+  }
+
+  .mfp-container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+.mfp-ie7 .mfp-img {
+  padding: 0;
+}
+.mfp-ie7 .mfp-bottom-bar {
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.mfp-ie7 .mfp-container {
+  padding: 0;
+}
+.mfp-ie7 .mfp-content {
+  padding-top: 44px;
+}
+.mfp-ie7 .mfp-close {
+  top: 0;
+  right: 0;
+  padding-top: 0;
+}
+
+.mfp-container {
+  -ms-box-shadow: inset 0 0 200px black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=200px, Direction=135, Color='#FF000000')";
+  filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=200px, Direction=135, Color='#FF000000')";
+  -o-box-shadow: inset 0 0 200px black;
+  -moz-box-shadow: inset 0 0 200px black;
+  -webkit-box-shadow: inset 0 0 200px black;
+  box-shadow: inset 0 0 200px black;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.35)), color-stop(100%, rgba(0, 0, 0, 0.7)));
+  background-image: -webkit-linear-gradient("top", rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  background-image: -moz-linear-gradient("top", rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  background-image: -o-linear-gradient("top", rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  background-image: linear-gradient("top", rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  -pie-background: linear-gradient("to bottom", rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  *behavior: url("/js/libs/PIE.htc");
+}
+
+.mfp-title {
+  word-break: break-word;
+}
+
+.mfp-content {
+  max-width: 1200px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
+}
+
+.mfp-iframe {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  *behavior: url("/js/libs/PIE.htc");
+}
+
+.mfp-iframe-holder .mfp-content {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.inline-modal .mfp-content {
+  width: auto;
+  position: relative;
+  padding: 25px;
+  background: #fff;
+}
+.inline-modal .mfp-close {
+  width: 25px;
+  height: 25px;
+  line-height: 30px;
+  font-size: 28px;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.ipad-only {
+  display: none !important;
+}
+
+.small-tablet-only {
+  display: none !important;
+}
+
+.mobile-only {
+  display: none !important;
 }
 
 .headings > .one {

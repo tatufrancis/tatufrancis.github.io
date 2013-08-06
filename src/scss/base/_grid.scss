@@ -14,7 +14,11 @@
 ///////////////////////////////////////////////
 
 %container {
-  max-width: $max-width;
+  @if $responsive {
+    max-width: $max-width;
+  } @else {
+    width: $max-width;
+  }
   margin: 0 auto;
 }
 
@@ -75,9 +79,9 @@ $selectors: if($grid-classes, "%" ".", "%");
   }
 }
 
-// small-tablet grid adapters
-@media #{$small-tablet} {
-  @if $adapter-classes {
+@if $responsive and $adapter-classes {
+  // small-tablet grid adapters
+  @media #{$small-tablet} {
     @for $i from 1 through length($grid-adapters) {
       .#{nth($numerators, ($i))}-up-small-tablet {
         width: nth($grid-adapters, $i) !important;
@@ -88,10 +92,8 @@ $selectors: if($grid-classes, "%" ".", "%");
       }
     }
   }
-}
-// grid adapter nth clearfix
-@media #{$small-tablet} and #{$not-mobile} {
-  @if $adapter-classes {
+  // grid adapter nth clearfix
+  @media #{$small-tablet} and #{$not-mobile} {
     @for $i from 1 through length($grid-adapters) {
       .#{nth($numerators, ($i))}-up-small-tablet {
         &:nth-child(#{$i + 1}) {
@@ -100,10 +102,8 @@ $selectors: if($grid-classes, "%" ".", "%");
       }
     }
   }
-}
-// mobile grid adapters
-@media #{$mobile} {
-  @if $adapter-classes {
+  // mobile grid adapters
+  @media #{$mobile} {
     @for $i from 1 through length($grid-adapters) {
       .#{nth($numerators, ($i))}-up-mobile {
         width: nth($grid-adapters, $i) !important;
@@ -166,30 +166,6 @@ $selectors: if($grid-classes, "%" ".", "%");
               @extend %responsive-grid-skip#{$both};
             }
           }
-        }
-      }
-    }
-  }
-}
-
-@media #{$small-tablet} and #{$not-mobile} {
-  @if $adapter-classes {
-    @for $i from 1 through length($grid-adapters) {
-      .#{nth($numerators, ($i))}-up-small-tablet {
-        &:nth-child(#{$i + 1}) {
-          clear: both !important;
-        }
-      }
-    }
-  }
-}
-
-@media #{$mobile} {
-  @if $adapter-classes {
-    @for $i from 1 through length($grid-adapters) {
-      .#{nth($numerators, ($i))}-up-mobile {
-        &:nth-child(#{$i + 1}) {
-          clear: both !important;
         }
       }
     }

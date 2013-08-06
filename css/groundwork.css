@@ -1,4 +1,4 @@
-/* ============================================
+/*! ============================================
  *       GroundworkCSS by Gary Hepting
  *          Last Updated:2013-6-25
  * ===========================================*/
@@ -2068,48 +2068,6 @@ big, .large, big {
     left: 0 !important;
     right: 0 !important;
   }
-  .five-up-mobile:nth-child(6) {
-    clear: both !important;
-  }
-}
-@media (max-width: 767px) and (min-width: 481px) {
-  .one-up-small-tablet:nth-child(2) {
-    clear: both !important;
-  }
-
-  .two-up-small-tablet:nth-child(3) {
-    clear: both !important;
-  }
-
-  .three-up-small-tablet:nth-child(4) {
-    clear: both !important;
-  }
-
-  .four-up-small-tablet:nth-child(5) {
-    clear: both !important;
-  }
-
-  .five-up-small-tablet:nth-child(6) {
-    clear: both !important;
-  }
-}
-@media (max-width: 480px) {
-  .one-up-mobile:nth-child(2) {
-    clear: both !important;
-  }
-
-  .two-up-mobile:nth-child(3) {
-    clear: both !important;
-  }
-
-  .three-up-mobile:nth-child(4) {
-    clear: both !important;
-  }
-
-  .four-up-mobile:nth-child(5) {
-    clear: both !important;
-  }
-
   .five-up-mobile:nth-child(6) {
     clear: both !important;
   }
@@ -4337,10 +4295,12 @@ a.button:visited, [role~=button], nav.menu .menu-toggle, .menu.nav .menu-toggle 
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
-input[type=reset]:hover, .button:hover, [role~=button]:hover, nav.menu .menu-toggle:hover, .menu.nav .menu-toggle:hover, button:focus,
+input[type=reset]:hover, .button:hover,
+a.button:hover:visited, [role~=button]:hover, nav.menu .menu-toggle:hover, .menu.nav .menu-toggle:hover, button:focus,
 input[type=submit]:focus,
 input[type=button]:focus,
-input[type=reset]:focus, .button:focus, [role~=button]:focus, nav.menu .menu-toggle:focus, .menu.nav .menu-toggle:focus {
+input[type=reset]:focus, .button:focus,
+a.button:focus:visited, [role~=button]:focus, nav.menu .menu-toggle:focus, .menu.nav .menu-toggle:focus {
   background: #198d98;
   text-decoration: none;
   color: white;
@@ -4367,11 +4327,13 @@ a.button.active:visited, ul.button-list li a.active,
 ol.button-list li a.active, [role~=button].active, button.active:hover,
 input[type=submit].active:hover,
 input[type=button].active:hover,
-input[type=reset].active:hover, .button.active:hover, ul.button-list li a.active:hover,
+input[type=reset].active:hover, .button.active:hover,
+a.button.active:hover:visited, ul.button-list li a.active:hover,
 ol.button-list li a.active:hover, [role~=button].active:hover, button.active:focus,
 input[type=submit].active:focus,
 input[type=button].active:focus,
-input[type=reset].active:focus, .button.active:focus, ul.button-list li a.active:focus,
+input[type=reset].active:focus, .button.active:focus,
+a.button.active:focus:visited, ul.button-list li a.active:focus,
 ol.button-list li a.active:focus, [role~=button].active:focus {
   background: #198d98;
   color: white;
@@ -4443,11 +4405,13 @@ ol.button-list li a.disabled, [role~=button].disabled {
 button.disabled:hover,
 input[type=submit].disabled:hover,
 input[type=button].disabled:hover,
-input[type=reset].disabled:hover, .button.disabled:hover, ul.button-list li a.disabled:hover,
+input[type=reset].disabled:hover, .button.disabled:hover,
+a.button.disabled:hover:visited, ul.button-list li a.disabled:hover,
 ol.button-list li a.disabled:hover, [role~=button].disabled:hover, button.disabled:focus,
 input[type=submit].disabled:focus,
 input[type=button].disabled:focus,
-input[type=reset].disabled:focus, .button.disabled:focus, ul.button-list li a.disabled:focus,
+input[type=reset].disabled:focus, .button.disabled:focus,
+a.button.disabled:focus:visited, ul.button-list li a.disabled:focus,
 ol.button-list li a.disabled:focus, [role~=button].disabled:focus, button.disabled:visited,
 input[type=submit].disabled:visited,
 input[type=button].disabled:visited,
@@ -4475,11 +4439,13 @@ ol.button-list li a.green, [role~=button].green {
 button.green:hover,
 input[type=submit].green:hover,
 input[type=button].green:hover,
-input[type=reset].green:hover, .button.green:hover, ul.button-list li a.green:hover,
+input[type=reset].green:hover, .button.green:hover,
+a.button.green:hover:visited, ul.button-list li a.green:hover,
 ol.button-list li a.green:hover, [role~=button].green:hover, button.green:focus,
 input[type=submit].green:focus,
 input[type=button].green:focus,
-input[type=reset].green:focus, .button.green:focus, ul.button-list li a.green:focus,
+input[type=reset].green:focus, .button.green:focus,
+a.button.green:focus:visited, ul.button-list li a.green:focus,
 ol.button-list li a.green:focus, [role~=button].green:focus {
   background: #29b765;
   border-color: #25a25a;
@@ -4531,11 +4497,13 @@ ol.button-list li a.blue, [role~=button].blue {
 button.blue:hover,
 input[type=submit].blue:hover,
 input[type=button].blue:hover,
-input[type=reset].blue:hover, .button.blue:hover, ul.button-list li a.blue:hover,
+input[type=reset].blue:hover, .button.blue:hover,
+a.button.blue:hover:visited, ul.button-list li a.blue:hover,
 ol.button-list li a.blue:hover, [role~=button].blue:hover, button.blue:focus,
 input[type=submit].blue:focus,
 input[type=button].blue:focus,
-input[type=reset].blue:focus, .button.blue:focus, ul.button-list li a.blue:focus,
+input[type=reset].blue:focus, .button.blue:focus,
+a.button.blue:focus:visited, ul.button-list li a.blue:focus,
 ol.button-list li a.blue:focus, [role~=button].blue:focus {
   background: #258cd1;
   border-color: #217dbb;
@@ -4587,11 +4555,13 @@ ol.button-list li a.purple, [role~=button].purple {
 button.purple:hover,
 input[type=submit].purple:hover,
 input[type=button].purple:hover,
-input[type=reset].purple:hover, .button.purple:hover, ul.button-list li a.purple:hover,
+input[type=reset].purple:hover, .button.purple:hover,
+a.button.purple:hover:visited, ul.button-list li a.purple:hover,
 ol.button-list li a.purple:hover, [role~=button].purple:hover, button.purple:focus,
 input[type=submit].purple:focus,
 input[type=button].purple:focus,
-input[type=reset].purple:focus, .button.purple:focus, ul.button-list li a.purple:focus,
+input[type=reset].purple:focus, .button.purple:focus,
+a.button.purple:focus:visited, ul.button-list li a.purple:focus,
 ol.button-list li a.purple:focus, [role~=button].purple:focus {
   background: #8f4bab;
   border-color: #804399;
@@ -4643,11 +4613,13 @@ ol.button-list li a.yellow, [role~=button].yellow {
 button.yellow:hover,
 input[type=submit].yellow:hover,
 input[type=button].yellow:hover,
-input[type=reset].yellow:hover, .button.yellow:hover, ul.button-list li a.yellow:hover,
+input[type=reset].yellow:hover, .button.yellow:hover,
+a.button.yellow:hover:visited, ul.button-list li a.yellow:hover,
 ol.button-list li a.yellow:hover, [role~=button].yellow:hover, button.yellow:focus,
 input[type=submit].yellow:focus,
 input[type=button].yellow:focus,
-input[type=reset].yellow:focus, .button.yellow:focus, ul.button-list li a.yellow:focus,
+input[type=reset].yellow:focus, .button.yellow:focus,
+a.button.yellow:focus:visited, ul.button-list li a.yellow:focus,
 ol.button-list li a.yellow:focus, [role~=button].yellow:focus {
   background: #dab10d;
   border-color: #c29d0b;
@@ -4699,11 +4671,13 @@ ol.button-list li a.orange, [role~=button].orange {
 button.orange:hover,
 input[type=submit].orange:hover,
 input[type=button].orange:hover,
-input[type=reset].orange:hover, .button.orange:hover, ul.button-list li a.orange:hover,
+input[type=reset].orange:hover, .button.orange:hover,
+a.button.orange:hover:visited, ul.button-list li a.orange:hover,
 ol.button-list li a.orange:hover, [role~=button].orange:hover, button.orange:focus,
 input[type=submit].orange:focus,
 input[type=button].orange:focus,
-input[type=reset].orange:focus, .button.orange:focus, ul.button-list li a.orange:focus,
+input[type=reset].orange:focus, .button.orange:focus,
+a.button.orange:focus:visited, ul.button-list li a.orange:focus,
 ol.button-list li a.orange:focus, [role~=button].orange:focus {
   background: #d67118;
   border-color: #bf6516;
@@ -4755,11 +4729,13 @@ ol.button-list li a.red, [role~=button].red {
 button.red:hover,
 input[type=submit].red:hover,
 input[type=button].red:hover,
-input[type=reset].red:hover, .button.red:hover, ul.button-list li a.red:hover,
+input[type=reset].red:hover, .button.red:hover,
+a.button.red:hover:visited, ul.button-list li a.red:hover,
 ol.button-list li a.red:hover, [role~=button].red:hover, button.red:focus,
 input[type=submit].red:focus,
 input[type=button].red:focus,
-input[type=reset].red:focus, .button.red:focus, ul.button-list li a.red:focus,
+input[type=reset].red:focus, .button.red:focus,
+a.button.red:focus:visited, ul.button-list li a.red:focus,
 ol.button-list li a.red:focus, [role~=button].red:focus {
   background: #e43725;
   border-color: #d62c1a;
@@ -4811,11 +4787,13 @@ ol.button-list li a.pink, [role~=button].pink {
 button.pink:hover,
 input[type=submit].pink:hover,
 input[type=button].pink:hover,
-input[type=reset].pink:hover, .button.pink:hover, ul.button-list li a.pink:hover,
+input[type=reset].pink:hover, .button.pink:hover,
+a.button.pink:hover:visited, ul.button-list li a.pink:hover,
 ol.button-list li a.pink:hover, [role~=button].pink:hover, button.pink:focus,
 input[type=submit].pink:focus,
 input[type=button].pink:focus,
-input[type=reset].pink:focus, .button.pink:focus, ul.button-list li a.pink:focus,
+input[type=reset].pink:focus, .button.pink:focus,
+a.button.pink:focus:visited, ul.button-list li a.pink:focus,
 ol.button-list li a.pink:focus, [role~=button].pink:focus {
   background: #ea1067;
   border-color: #d30e5c;
@@ -4867,11 +4845,13 @@ ol.button-list li a.turquoise, [role~=button].turquoise {
 button.turquoise:hover,
 input[type=submit].turquoise:hover,
 input[type=button].turquoise:hover,
-input[type=reset].turquoise:hover, .button.turquoise:hover, ul.button-list li a.turquoise:hover,
+input[type=reset].turquoise:hover, .button.turquoise:hover,
+a.button.turquoise:hover:visited, ul.button-list li a.turquoise:hover,
 ol.button-list li a.turquoise:hover, [role~=button].turquoise:hover, button.turquoise:focus,
 input[type=submit].turquoise:focus,
 input[type=button].turquoise:focus,
-input[type=reset].turquoise:focus, .button.turquoise:focus, ul.button-list li a.turquoise:focus,
+input[type=reset].turquoise:focus, .button.turquoise:focus,
+a.button.turquoise:focus:visited, ul.button-list li a.turquoise:focus,
 ol.button-list li a.turquoise:focus, [role~=button].turquoise:focus {
   background: #17a689;
   border-color: #148f77;
@@ -4923,11 +4903,13 @@ ol.button-list li a.asphalt, [role~=button].asphalt {
 button.asphalt:hover,
 input[type=submit].asphalt:hover,
 input[type=button].asphalt:hover,
-input[type=reset].asphalt:hover, .button.asphalt:hover, ul.button-list li a.asphalt:hover,
+input[type=reset].asphalt:hover, .button.asphalt:hover,
+a.button.asphalt:hover:visited, ul.button-list li a.asphalt:hover,
 ol.button-list li a.asphalt:hover, [role~=button].asphalt:hover, button.asphalt:focus,
 input[type=submit].asphalt:focus,
 input[type=button].asphalt:focus,
-input[type=reset].asphalt:focus, .button.asphalt:focus, ul.button-list li a.asphalt:focus,
+input[type=reset].asphalt:focus, .button.asphalt:focus,
+a.button.asphalt:focus:visited, ul.button-list li a.asphalt:focus,
 ol.button-list li a.asphalt:focus, [role~=button].asphalt:focus {
   background: #2b3c4e;
   border-color: #222f3d;
@@ -4979,11 +4961,13 @@ ol.button-list li a.info, [role~=button].info {
 button.info:hover,
 input[type=submit].info:hover,
 input[type=button].info:hover,
-input[type=reset].info:hover, .button.info:hover, ul.button-list li a.info:hover,
+input[type=reset].info:hover, .button.info:hover,
+a.button.info:hover:visited, ul.button-list li a.info:hover,
 ol.button-list li a.info:hover, [role~=button].info:hover, button.info:focus,
 input[type=submit].info:focus,
 input[type=button].info:focus,
-input[type=reset].info:focus, .button.info:focus, ul.button-list li a.info:focus,
+input[type=reset].info:focus, .button.info:focus,
+a.button.info:focus:visited, ul.button-list li a.info:focus,
 ol.button-list li a.info:focus, [role~=button].info:focus {
   background: #2582b1;
 }
@@ -5034,11 +5018,13 @@ ol.button-list li a.alert, [role~=button].alert {
 button.alert:hover,
 input[type=submit].alert:hover,
 input[type=button].alert:hover,
-input[type=reset].alert:hover, .button.alert:hover, ul.button-list li a.alert:hover,
+input[type=reset].alert:hover, .button.alert:hover,
+a.button.alert:hover:visited, ul.button-list li a.alert:hover,
 ol.button-list li a.alert:hover, [role~=button].alert:hover, button.alert:focus,
 input[type=submit].alert:focus,
 input[type=button].alert:focus,
-input[type=reset].alert:focus, .button.alert:focus, ul.button-list li a.alert:focus,
+input[type=reset].alert:focus, .button.alert:focus,
+a.button.alert:focus:visited, ul.button-list li a.alert:focus,
 ol.button-list li a.alert:focus, [role~=button].alert:focus {
   background: #e1c118;
 }
@@ -5089,11 +5075,13 @@ ol.button-list li a.warning, [role~=button].warning {
 button.warning:hover,
 input[type=submit].warning:hover,
 input[type=button].warning:hover,
-input[type=reset].warning:hover, .button.warning:hover, ul.button-list li a.warning:hover,
+input[type=reset].warning:hover, .button.warning:hover,
+a.button.warning:hover:visited, ul.button-list li a.warning:hover,
 ol.button-list li a.warning:hover, [role~=button].warning:hover, button.warning:focus,
 input[type=submit].warning:focus,
 input[type=button].warning:focus,
-input[type=reset].warning:focus, .button.warning:focus, ul.button-list li a.warning:focus,
+input[type=reset].warning:focus, .button.warning:focus,
+a.button.warning:focus:visited, ul.button-list li a.warning:focus,
 ol.button-list li a.warning:focus, [role~=button].warning:focus {
   background: #e07800;
 }
@@ -5144,11 +5132,13 @@ ol.button-list li a.error, [role~=button].error {
 button.error:hover,
 input[type=submit].error:hover,
 input[type=button].error:hover,
-input[type=reset].error:hover, .button.error:hover, ul.button-list li a.error:hover,
+input[type=reset].error:hover, .button.error:hover,
+a.button.error:hover:visited, ul.button-list li a.error:hover,
 ol.button-list li a.error:hover, [role~=button].error:hover, button.error:focus,
 input[type=submit].error:focus,
 input[type=button].error:focus,
-input[type=reset].error:focus, .button.error:focus, ul.button-list li a.error:focus,
+input[type=reset].error:focus, .button.error:focus,
+a.button.error:focus:visited, ul.button-list li a.error:focus,
 ol.button-list li a.error:focus, [role~=button].error:focus {
   background: #9a3d3d;
 }
@@ -5199,11 +5189,13 @@ ol.button-list li a.success, [role~=button].success {
 button.success:hover,
 input[type=submit].success:hover,
 input[type=button].success:hover,
-input[type=reset].success:hover, .button.success:hover, ul.button-list li a.success:hover,
+input[type=reset].success:hover, .button.success:hover,
+a.button.success:hover:visited, ul.button-list li a.success:hover,
 ol.button-list li a.success:hover, [role~=button].success:hover, button.success:focus,
 input[type=submit].success:focus,
 input[type=button].success:focus,
-input[type=reset].success:focus, .button.success:focus, ul.button-list li a.success:focus,
+input[type=reset].success:focus, .button.success:focus,
+a.button.success:focus:visited, ul.button-list li a.success:focus,
 ol.button-list li a.success:focus, [role~=button].success:focus {
   background: #549539;
 }
