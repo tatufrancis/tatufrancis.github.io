@@ -1,6 +1,6 @@
 {
   "name"        : "groundworkcss",
-  "version"     : "1.11.4",
+  "version"     : "1.12.0",
   "main"        : [
     "js/groundwork.all.js",
     "css/groundwork.min.css"
