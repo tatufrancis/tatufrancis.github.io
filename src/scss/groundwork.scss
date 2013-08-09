@@ -9,7 +9,7 @@
 
 // core
 @import "core/all-core";              // constants, defaults, mixins
-@import "base/all-base";              // reset, globals, grid, helpers, animations
+@import "base/all-base";              // reset, globals, grid, helpers
 
 // components
 @import "type/all-type";              // typography, web fonts
@@ -17,6 +17,7 @@
 @import "nav/all-nav";                // buttons, navigation, tabs
 @import "ui/all-ui";                  // messages, callouts, tables, tooltips, popovers, modals
 @import "form/all-form";              // forms, tiles
+@import "anim/all-animations";        // animations
 
 // responsive adjustments
 @import "responsive/all-responsive";  // responsive navigation, tabs

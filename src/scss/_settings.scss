@@ -13,7 +13,7 @@
 // $images_path:         "images/";  // path to images (relative from $root_path)
 // $fonts_path:          "fonts/";    // path to fonts (relative from $root_path)
 // $boxsizing_path:      "/js/libs/boxsizing.htc";  // path to box sizing polyfill (change to absolute path from HTML document root)
-// $PIE_path:            "/js/libs/PIE.htc" !default;  // path to IE CSS3 polyfill (change to absolute path from HTML document root)
+// $PIE_path:            "/js/libs/PIE.htc";  // path to IE CSS3 polyfill (change to absolute path from HTML document root)
 
 // build options
 // $reset:               true;       // enable CSS reset (recommended)
@@ -77,11 +77,25 @@
 // $rotation-classes:    true;       // enable output of rotational helpers (optional)
 // $rotation-helpers:    rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
 
-// spinners
-// $spin-classes:        true;       // enable output of spin helpers       (optional)
+// animations
+// $spin-animations:     true;       // enable output of spin animations        (optional)
 // $spin-helpers:        spin spin-once spin-twice spin-thrice
 //                       spin-fast spin-fast-once spin-fast-twice spin-fast-thrice
 //                       spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
+// $bounce-animations:     true;     // enable output of bounce animations      (optional)
+// $fade-animations:       true;     // enable output of fade animations        (optional)
+// $flash-animations:      true;     // enable output of flash animations       (optional)
+// $flip-animations:       true;     // enable output of flip animations        (optional)
+// $hinge-animations:      true;     // enable output of hinge animations       (optional)
+// $lightspeed-animations: true;     // enable output of lightspeed animations  (optional)
+// $pulse-animations:      true;     // enable output of pulse animations       (optional)
+// $roll-animations:       true;     // enable output of roll animations        (optional)
+// $rotate-animations:     true;     // enable output of rotate animations      (optional)
+// $shake-animations:      true;     // enable output of shake animations       (optional)
+// $swing-animations:      true;     // enable output of swing animations       (optional)
+// $tada-animations:       true;     // enable output of tada animations        (optional)
+// $wiggle-animations:     true;     // enable output of wiggle animations      (optional)
+// $wobble-animations:     true;     // enable output of wobble animations      (optional)
 
 // spacers
 // $spacer-classes:      true;       // enable output of spacer helpers     (recommended)

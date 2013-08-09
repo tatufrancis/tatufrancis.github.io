@@ -77,11 +77,25 @@ $radius-helpers:      square round !default;
 $rotation-classes:    true !default;       // enable output of rotational helpers (optional)
 $rotation-helpers:    rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr !default;
 
-// spinners
-$spin-classes:        true !default;       // enable output of spin helpers       (optional)
+// animations
+$spin-animations:     true !default;       // enable output of spin animations        (optional)
 $spin-helpers:        spin spin-once spin-twice spin-thrice
                       spin-fast spin-fast-once spin-fast-twice spin-fast-thrice
                       spin-slow spin-slow-once spin-slow-twice spin-slow-thrice !default;
+$bounce-animations:     true !default;     // enable output of bounce animations      (optional)
+$fade-animations:       true !default;     // enable output of fade animations        (optional)
+$flash-animations:      true !default;     // enable output of flash animations       (optional)
+$flip-animations:       true !default;     // enable output of flip animations        (optional)
+$hinge-animations:      true !default;     // enable output of hinge animations       (optional)
+$lightspeed-animations: true !default;     // enable output of lightspeed animations  (optional)
+$pulse-animations:      true !default;     // enable output of pulse animations       (optional)
+$roll-animations:       true !default;     // enable output of roll animations        (optional)
+$rotate-animations:     true !default;     // enable output of rotate animations      (optional)
+$shake-animations:      true !default;     // enable output of shake animations       (optional)
+$swing-animations:      true !default;     // enable output of swing animations       (optional)
+$tada-animations:       true !default;     // enable output of tada animations        (optional)
+$wiggle-animations:     true !default;     // enable output of wiggle animations      (optional)
+$wobble-animations:     true !default;     // enable output of wobble animations      (optional)
 
 // spacers
 $spacer-classes:      true !default;       // enable output of spacer helpers     (recommended)
