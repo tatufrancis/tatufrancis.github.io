@@ -7,23 +7,135 @@
 
 
 @mixin small-tablet {
-	@if $responsive {
-		@media #{$small-tablet} {
-			// responsive grid
-			@include grid-responsive();
-			// conditional helpers
-			.small-tablet-only { display: block !important; }
-			span.small-tablet-only { display: inline !important; }
-			.hide-on-small-tablet { display: none !important; }
-			.desktop-only { display: none !important; }
-			// spacer overrides
-			.zero-small-tablet { @include helper_reset(); }
-			.no-padding-small-tablet, .no-pad-small-tablet { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-			.no-margin-small-tablet, .no-gap-small-tablet { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
-			.no-border-small-tablet { border: 0; }
-			@content;
-		}
-	}
+  @if $responsive {
+    @media #{$small-tablet} {
+      // responsive grid
+      @include grid-responsive();
+      // conditional helpers
+      .small-tablet-only { display: block !important; }
+      span.small-tablet-only { display: inline !important; }
+      .hide-on-small-tablet { display: none !important; }
+      .desktop-only { display: none !important; }
+      // spacer overrides
+      .zero-small-tablet { @include helper_reset(); }
+      .no-padding-small-tablet, .no-pad-small-tablet { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+      .no-margin-small-tablet, .no-gap-small-tablet { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+      .no-border-small-tablet { border: 0; }
+      @if $spacer-classes {
+        .padded-small-tablet        { @include _padded;
+          &.double                  { @include _padded(2); }
+          &.triple                  { @include _padded(3); }
+        }
+        .pad-top-small-tablet       { @include _pad-top;
+          &.double                  { @include _pad-top(2); }
+          &.triple                  { @include _pad-top(3); }
+        }
+        .pad-right-small-tablet     { @include _pad-right;
+          &.double                  { @include _pad-right(2); }
+          &.triple                  { @include _pad-right(3); }
+        }
+        .pad-bottom-small-tablet    { @include _pad-bottom;
+          &.double                  { @include _pad-bottom(2); }
+          &.triple                  { @include _pad-bottom(3); }
+        }
+        .pad-left-small-tablet      { @include _pad-left;
+          &.double                  { @include _pad-left(2); }
+          &.triple                  { @include _pad-left(3); }
+        }
+        .gapped-small-tablet        { @include _gapped;
+          &.double                  { @include _gapped(2); }
+          &.triple                  { @include _gapped(3); }
+        }
+        .gap-top-small-tablet       { @include _gap-top;
+          &.double                  { @include _gap-top(2); }
+          &.triple                  { @include _gap-top(3); }
+        }
+        .gap-right-small-tablet     { @include _gap-right;
+          &.double                  { @include _gap-right(2); }
+          &.triple                  { @include _gap-right(3); }
+        }
+        .gap-bottom-small-tablet    { @include _gap-bottom;
+          &.double                  { @include _gap-bottom(2); }
+          &.triple                  { @include _gap-bottom(3); }
+        }
+        .gap-left-small-tablet      { @include _gap-left;
+          &.double                  { @include _gap-left(2); }
+          &.triple                  { @include _gap-left(3); }
+        }
+        .offset-small-tablet        { @include _offset;
+          &.double                  { @include _offset(2); }
+          &.triple                  { @include _offset(3); }
+        }
+        .offset-top-small-tablet    { @include _offset-top;
+          &.double                  { @include _offset-top(2); }
+          &.triple                  { @include _offset-top(3); }
+        }
+        .offset-right-small-tablet  { @include _offset-right;
+          &.double                  { @include _offset-right(2); }
+          &.triple                  { @include _offset-right(3); }
+        }
+        .offset-bottom-small-tablet { @include _offset-bottom;
+          &.double                  { @include _offset-bottom(2); }
+          &.triple                  { @include _offset-bottom(3); }
+        }
+        .offset-left-small-tablet   { @include _offset-left;
+          &.double                  { @include _offset-left(2); }
+          &.triple                  { @include _offset-left(3); }
+        }
+      }
+      @if $positioning-classes {
+        .fixed-small-tablet           { @include _fixed; }
+        .fixed-top-small-tablet       { @include _fixed(top); }
+        .fixed-right-small-tablet     { @include _fixed(right); }
+        .fixed-bottom-small-tablet    { @include _fixed(bottom); }
+        .fixed-left-small-tablet      { @include _fixed(left); }
+        .fixed-middle-small-tablet    { @include _fixed(middle); }
+        .fixed-center-small-tablet    { @include _fixed(center); }
+        .absolute-small-tablet        { @include _absolute; }
+        .absolute-top-small-tablet    { @include _absolute(top); }
+        .absolute-right-small-tablet  { @include _absolute(right); }
+        .absolute-bottom-small-tablet { @include _absolute(bottom); }
+        .absolute-left-small-tablet   { @include _absolute(left); }
+        .absolute-middle-small-tablet { @include _absolute(middle); }
+        .absolute-center-small-tablet { @include _absolute(center); }
+        .static-small-tablet          { @include _static; }
+      }
+      @if $layout-classes {
+        .inline-small-tablet          { @include _inline; }
+        .block-small-tablet           { @include _block; }
+        .clear-small-tablet           { @include _clear; }
+        .disabled-small-tablet        { @include _disabled; }
+        .center-small-tablet          { @include _center; }
+        .pull-right-small-tablet      { @include _pull-right; }
+        .pull-left-small-tablet       { @include _pull-left; }
+      }
+      @if $border-classes {
+        .bordered-small-tablet        { @include _bordered; }
+        .border-top-small-tablet      { @include _border-top; }
+        .border-right-small-tablet    { @include _border-right; }
+        .border-bottom-small-tablet   { @include _border-bottom; }
+        .border-left-small-tablet     { @include _border-left; }
+      }
+      @if $typography-helpers {
+        .align-top-small-tablet       { @include _align-top; }
+        .align-right-small-tablet     { @include _align-right; }
+        .align-bottom-small-tablet    { @include _align-bottom; }
+        .align-left-small-tablet      { @include _align-left; }
+        .align-center-small-tablet    { @include _align-center; }
+        .justify-small-tablet         { @include _justify; }
+        .truncate-small-tablet        { @include _truncate; }
+      }
+      @if $rotation-classes {
+        .rotate-90-small-tablet       { @include _rotate-90; }
+        .rotate-180-small-tablet      { @include _rotate-180; }
+        .rotate-270-small-tablet      { @include _rotate-270; }
+        .rotate-90-ctr-small-tablet   { @include _rotate-90-ctr; }
+        .rotate-180-ctr-small-tablet  { @include _rotate-180-ctr; }
+        .rotate-270-ctr-small-tablet  { @include _rotate-270-ctr; }
+      }
+      @content;
+    }
+  }
 }
 
 
@@ -33,178 +145,178 @@
 
 @if $responsive {
 
-	@include small-tablet {
-		%nav-not-pagination {
-			width:100%;
-			ul, ul.row {
-				li {
-					display:block;
-					width:100% !important;
-					&:first-child {
-						> a {
-							@include rounded($default-radius $default-radius 0 0);
-						}
-					}
-					&:last-child {
-						> a {
-							@include rounded(0 0 $default-radius $default-radius);
-						}
-					}
-					&:only-child {
-						> a {
-							@include rounded($default-radius);
-						}
-					}
-					a {
-						border:none;
-						border-top:1px solid $button-active !important;
-					}
-					ul {
-						position:static !important;
-						li {
-							a {
-								@include rounded(0);
-							}
-							&:first-child,
-							&:last-child,
-							&:only-child {
-								a {
-									@include rounded(0);
-								}
-							}
-						}
-					}
-					&:first-child {
-						a {
-							@include rounded($default-radius $default-radius 0 0);
-						}
-					}
-					&:last-child {
-						a {
-							@include rounded(0 0 $default-radius $default-radius);
-						}
-						ul {
-							li {
-								a {
-									@include rounded(0 0 0 0 !important);
-								}
-								&:last-child {
-									a {
-										@include rounded(0 0 $default-radius $default-radius !important);
-									}
-								}
-							}
-						}
-					}
-					&:only-child {
-						a {
-							@include rounded($default-radius);
-						}
-					}
-				}
-			}
-		}
-		// hamburger menus
-		%nav-menu-not-pagination {
-			display:block;
-			float:none;
-			&:before {
-				content:attr(data-label);
-				float:left;
-				color:$button-text;
-				line-height:2.2;
-			}
-			background-color:$button-color;
-			padding:$gutter;
-			padding-bottom:0;
-			@include rounded($default-radius);
-			.menu-toggle {
-				display:inline-block !important;
-				float:right;
-				margin-bottom:$gutter;
-			}
-			> ul, > ul.row {
-				display:block !important;
-				overflow:hidden;
-				max-height:0;
-				width:auto;
-				margin:0 (-$gutter);
-				clear:both;
-				@include transition(all 0.2s ease);
-				li {
-					a {
-						border:none;
-						border-top:1px solid $button-active;
-						&:first-child, &:last-child {
-							@include rounded(0);
-						}
-						&:hover, &:focus {
-							border:none;
-							border-top:1px solid $button-active;
-						}
-					}
-					&:last-child {
-						a {
-							@include rounded(0 0 $default-radius $default-radius !important);
-						}
-					}
-					ul {
-						position:static;
-					}
-				}
-			}
-			&.on {
-				> ul {
-					max-height:1000px;
-				}
-			}
-		}
-		%normal-tabs {
-			> ul {
-				li {
-					float:none;
-					width:100%;
-					margin:0;
-					a {
-						@include rounded(0);
-						border-bottom:none;
-						&:before, &:after {
-							display:none !important;
-						}
-					}
-					&:first-child a {
-						@include rounded($default-radius $default-radius 0 0);
-					}
-				}
-			}
-		}
+  @include small-tablet {
+    %nav-not-pagination {
+      width:100%;
+      ul, ul.row {
+        li {
+          display:block;
+          width:100% !important;
+          &:first-child {
+            > a {
+              @include rounded($default-radius $default-radius 0 0);
+            }
+          }
+          &:last-child {
+            > a {
+              @include rounded(0 0 $default-radius $default-radius);
+            }
+          }
+          &:only-child {
+            > a {
+              @include rounded($default-radius);
+            }
+          }
+          a {
+            border:none;
+            border-top:1px solid $button-active !important;
+          }
+          ul {
+            position:static !important;
+            li {
+              a {
+                @include rounded(0);
+              }
+              &:first-child,
+              &:last-child,
+              &:only-child {
+                a {
+                  @include rounded(0);
+                }
+              }
+            }
+          }
+          &:first-child {
+            a {
+              @include rounded($default-radius $default-radius 0 0);
+            }
+          }
+          &:last-child {
+            a {
+              @include rounded(0 0 $default-radius $default-radius);
+            }
+            ul {
+              li {
+                a {
+                  @include rounded(0 0 0 0 !important);
+                }
+                &:last-child {
+                  a {
+                    @include rounded(0 0 $default-radius $default-radius !important);
+                  }
+                }
+              }
+            }
+          }
+          &:only-child {
+            a {
+              @include rounded($default-radius);
+            }
+          }
+        }
+      }
+    }
+    // hamburger menus
+    %nav-menu-not-pagination {
+      display:block;
+      float:none;
+      &:before {
+        content:attr(data-label);
+        float:left;
+        color:$button-text;
+        line-height:2.2;
+      }
+      background-color:$button-color;
+      padding:$gutter;
+      padding-bottom:0;
+      @include rounded($default-radius);
+      .menu-toggle {
+        display:inline-block !important;
+        float:right;
+        margin-bottom:$gutter;
+      }
+      > ul, > ul.row {
+        display:block !important;
+        overflow:hidden;
+        max-height:0;
+        width:auto;
+        margin:0 (-$gutter);
+        clear:both;
+        @include transition(all 0.2s ease);
+        li {
+          a {
+            border:none;
+            border-top:1px solid $button-active;
+            &:first-child, &:last-child {
+              @include rounded(0);
+            }
+            &:hover, &:focus {
+              border:none;
+              border-top:1px solid $button-active;
+            }
+          }
+          &:last-child {
+            a {
+              @include rounded(0 0 $default-radius $default-radius !important);
+            }
+          }
+          ul {
+            position:static;
+          }
+        }
+      }
+      &.on {
+        > ul {
+          max-height:1000px;
+        }
+      }
+    }
+    %normal-tabs {
+      > ul {
+        li {
+          float:none;
+          width:100%;
+          margin:0;
+          a {
+            @include rounded(0);
+            border-bottom:none;
+            &:before, &:after {
+              display:none !important;
+            }
+          }
+          &:first-child a {
+            @include rounded($default-radius $default-radius 0 0);
+          }
+        }
+      }
+    }
 
-		@if $nav-tags {
-			nav:not(.pagination) {
-				@extend %nav-not-pagination;
-			}
+    @if $nav-tags {
+      nav:not(.pagination) {
+        @extend %nav-not-pagination;
+      }
 
-			@if $nav-classes {
-				nav.inline {
-					@extend %nav-not-pagination;
-				}
-				nav.menu {
-					@extend %nav-menu-not-pagination;
-				}
-			}
-		}
-		@if $nav-classes {
-			.nav, .nav.inline {
-				@extend %nav-not-pagination;
-			}
-			.nav.menu {
-				@extend %nav-menu-not-pagination;
-			}
-		}
-		@if $tab-classes {
-			.tabs:not(.small-tablet):not(.mobile):not(.vertical) {
-				@extend %normal-tabs;
-			}
-		}
-	}
+      @if $nav-classes {
+        nav.inline {
+          @extend %nav-not-pagination;
+        }
+        nav.menu {
+          @extend %nav-menu-not-pagination;
+        }
+      }
+    }
+    @if $nav-classes {
+      .nav, .nav.inline {
+        @extend %nav-not-pagination;
+      }
+      .nav.menu {
+        @extend %nav-menu-not-pagination;
+      }
+    }
+    @if $tab-classes {
+      .tabs:not(.small-tablet):not(.mobile):not(.vertical) {
+        @extend %normal-tabs;
+      }
+    }
+  }
 }

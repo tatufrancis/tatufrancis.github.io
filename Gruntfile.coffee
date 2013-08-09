@@ -71,6 +71,7 @@ module.exports = (grunt) ->
         files:
           'tests/test-buttons.html'                 : ['tests/src/jade/test-buttons.jade']
           'tests/test-grid.html'                    : ['tests/src/jade/test-grid.jade']
+          'tests/test-conditional-helpers.html'     : ['tests/src/jade/test-conditional-helpers.jade']
           'tests/test-helpers.html'                 : ['tests/src/jade/test-helpers.jade']
           'tests/test-typography.html'              : ['tests/src/jade/test-typography.jade']
           'tests/test-ui-elements.html'             : ['tests/src/jade/test-ui-elements.jade']

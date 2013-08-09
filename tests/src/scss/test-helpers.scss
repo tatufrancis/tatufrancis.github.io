@@ -68,100 +68,724 @@ $root_path: '../../';
 .include-clear, 
 .include-clearfix           { @include _clear;}
 
-.include-padded             { @include _padded; }
-.include-padded-double      { @include _padded(2); }
-.include-padded-triple      { @include _padded(3); }
+.include-padded                 { @include _padded; }
+.include-padded-double          { @include _padded(2); }
+.include-padded-triple          { @include _padded(3); }
+@media #{$mobile} {
+  .include-padded-mobile        { @include _padded; }
+}
+@media #{$small-tablet} {
+  .include-padded-small-tablet  { @include _padded; }
+}
+@media #{$ipad} {
+  .include-padded-ipad          { @include _padded; }
+}
+@media #{$desktop} {
+  .include-padded-desktop       { @include _padded; }
+}
 
-.include-pad-top            { @include _pad-top; }
-.include-pad-top-double     { @include _pad-top(2); }
-.include-pad-top-triple     { @include _pad-top(3); }
+.include-pad-top                { @include _pad-top; }
+.include-pad-top-double         { @include _pad-top(2); }
+.include-pad-top-triple         { @include _pad-top(3); }
+@media #{$mobile} {
+  .include-pad-top-mobile       { @include _pad-top; }
+}
+@media #{$small-tablet} {
+  .include-pad-top-small-tablet { @include _pad-top; }
+}
+@media #{$ipad} {
+  .include-pad-top-ipad         { @include _pad-top; }
+}
+@media #{$desktop} {
+  .include-pad-top-desktop      { @include _pad-top; }
+}
 
 .include-pad-right          { @include _pad-right; }
 .include-pad-right-double   { @include _pad-right(2); }
 .include-pad-right-triple   { @include _pad-right(3); }
+@media #{$mobile} {
+  .include-pad-right-mobile       { @include _pad-right; }
+}
+@media #{$small-tablet} {
+  .include-pad-right-small-tablet { @include _pad-right; }
+}
+@media #{$ipad} {
+  .include-pad-right-ipad         { @include _pad-right; }
+}
+@media #{$desktop} {
+  .include-pad-right-desktop      { @include _pad-right; }
+}
 
 .include-pad-bottom         { @include _pad-bottom; }
 .include-pad-bottom-double  { @include _pad-bottom(2); }
 .include-pad-bottom-triple  { @include _pad-bottom(3); }
+@media #{$mobile} {
+  .include-pad-bottom-mobile       { @include _pad-bottom; }
+}
+@media #{$small-tablet} {
+  .include-pad-bottom-small-tablet { @include _pad-bottom; }
+}
+@media #{$ipad} {
+  .include-pad-bottom-ipad         { @include _pad-bottom; }
+}
+@media #{$desktop} {
+  .include-pad-bottom-desktop      { @include _pad-bottom; }
+}
 
 .include-pad-left           { @include _pad-left; }
 .include-pad-left-double    { @include _pad-left(2); }
 .include-pad-left-triple    { @include _pad-left(3); }
+@media #{$mobile} {
+  .include-pad-left-mobile       { @include _pad-left; }
+}
+@media #{$small-tablet} {
+  .include-pad-left-small-tablet { @include _pad-left; }
+}
+@media #{$ipad} {
+  .include-pad-left-ipad         { @include _pad-left; }
+}
+@media #{$desktop} {
+  .include-pad-left-desktop      { @include _pad-left; }
+}
 
 .include-gapped             { @include _gapped; }
 .include-gapped-double      { @include _gapped(2); }
 .include-gapped-triple      { @include _gapped(3); }
+@media #{$mobile} {
+  .include-gapped-mobile       { @include _gapped; }
+}
+@media #{$small-tablet} {
+  .include-gapped-small-tablet { @include _gapped; }
+}
+@media #{$ipad} {
+  .include-gapped-ipad         { @include _gapped; }
+}
+@media #{$desktop} {
+  .include-gapped-desktop      { @include _gapped; }
+}
 
 .include-gap-top            { @include _gap-top; }
 .include-gap-top-double     { @include _gap-top(2); }
 .include-gap-top-triple     { @include _gap-top(3); }
+@media #{$mobile} {
+  .include-gap-top-mobile       { @include _gap-top; }
+}
+@media #{$small-tablet} {
+  .include-gap-top-small-tablet { @include _gap-top; }
+}
+@media #{$ipad} {
+  .include-gap-top-ipad         { @include _gap-top; }
+}
+@media #{$desktop} {
+  .include-gap-top-desktop      { @include _gap-top; }
+}
                    
 .include-gap-right          { @include _gap-right; }
 .include-gap-right-double   { @include _gap-right(2); }
 .include-gap-right-triple   { @include _gap-right(3); }
+@media #{$mobile} {
+  .include-gap-right-mobile       { @include _gap-right; }
+}
+@media #{$small-tablet} {
+  .include-gap-right-small-tablet { @include _gap-right; }
+}
+@media #{$ipad} {
+  .include-gap-right-ipad         { @include _gap-right; }
+}
+@media #{$desktop} {
+  .include-gap-right-desktop      { @include _gap-right; }
+}
                    
 .include-gap-bottom         { @include _gap-bottom; }
 .include-gap-bottom-double  { @include _gap-bottom(2); }
 .include-gap-bottom-triple  { @include _gap-bottom(3); }
+@media #{$mobile} {
+  .include-gap-bottom-mobile       { @include _gap-bottom; }
+}
+@media #{$small-tablet} {
+  .include-gap-bottom-small-tablet { @include _gap-bottom; }
+}
+@media #{$ipad} {
+  .include-gap-bottom-ipad         { @include _gap-bottom; }
+}
+@media #{$desktop} {
+  .include-gap-bottom-desktop      { @include _gap-bottom; }
+}
                    
 .include-gap-left           { @include _gap-left; }
 .include-gap-left-double    { @include _gap-left(2); }
 .include-gap-left-triple    { @include _gap-left(3); }
+@media #{$mobile} {
+  .include-gap-left-mobile       { @include _gap-left; }
+}
+@media #{$small-tablet} {
+  .include-gap-left-small-tablet { @include _gap-left; }
+}
+@media #{$ipad} {
+  .include-gap-left-ipad         { @include _gap-left; }
+}
+@media #{$desktop} {
+  .include-gap-left-desktop      { @include _gap-left; }
+}
 
 .include-stick              { @include _fixed; }
+@media #{$mobile} {
+  .include-stick-mobile       { @include _fixed; }
+}
+@media #{$small-tablet} {
+  .include-stick-small-tablet { @include _fixed; }
+}
+@media #{$ipad} {
+  .include-stick-ipad         { @include _fixed; }
+}
+@media #{$desktop} {
+  .include-stick-desktop      { @include _fixed; }
+}
 .include-stick-top          { @include _fixed(top); }
+@media #{$mobile} {
+  .include-stick-top-mobile       { @include _fixed(top); }
+}
+@media #{$small-tablet} {
+  .include-stick-top-small-tablet { @include _fixed(top); }
+}
+@media #{$ipad} {
+  .include-stick-top-ipad         { @include _fixed(top); }
+}
+@media #{$desktop} {
+  .include-stick-top-desktop      { @include _fixed(top); }
+}
 .include-stick-right        { @include _fixed(right); }
+@media #{$mobile} {
+  .include-stick-right-mobile       { @include _fixed(right); }
+}
+@media #{$small-tablet} {
+  .include-stick-right-small-tablet { @include _fixed(right); }
+}
+@media #{$ipad} {
+  .include-stick-right-ipad         { @include _fixed(right); }
+}
+@media #{$desktop} {
+  .include-stick-right-desktop      { @include _fixed(right); }
+}
 .include-stick-bottom       { @include _fixed(bottom); }
+@media #{$mobile} {
+  .include-stick-bottom-mobile       { @include _fixed(bottom); }
+}
+@media #{$small-tablet} {
+  .include-stick-bottom-small-tablet { @include _fixed(bottom); }
+}
+@media #{$ipad} {
+  .include-stick-bottom-ipad         { @include _fixed(bottom); }
+}
+@media #{$desktop} {
+  .include-stick-bottom-desktop      { @include _fixed(bottom); }
+}
 .include-stick-left         { @include _fixed(left); }
+@media #{$mobile} {
+  .include-stick-left-mobile       { @include _fixed(left); }
+}
+@media #{$small-tablet} {
+  .include-stick-left-small-tablet { @include _fixed(left); }
+}
+@media #{$ipad} {
+  .include-stick-left-ipad         { @include _fixed(left); }
+}
+@media #{$desktop} {
+  .include-stick-left-desktop      { @include _fixed(left); }
+}
 .include-stick-middle       { @include _fixed(middle); }
+@media #{$mobile} {
+  .include-stick-middle-mobile       { @include _fixed(middle); }
+}
+@media #{$small-tablet} {
+  .include-stick-middle-small-tablet { @include _fixed(middle); }
+}
+@media #{$ipad} {
+  .include-stick-middle-ipad         { @include _fixed(middle); }
+}
+@media #{$desktop} {
+  .include-stick-middle-desktop      { @include _fixed(middle); }
+}
 .include-stick-center       { @include _fixed(center); }
+@media #{$mobile} {
+  .include-stick-center-mobile       { @include _fixed(center); }
+}
+@media #{$small-tablet} {
+  .include-stick-center-small-tablet { @include _fixed(center); }
+}
+@media #{$ipad} {
+  .include-stick-center-ipad         { @include _fixed(center); }
+}
+@media #{$desktop} {
+  .include-stick-center-desktop      { @include _fixed(center); }
+}
 
 .include-absolute           { @include _absolute; }
+@media #{$mobile} {
+  .include-absolute-mobile       { @include _absolute; }
+}
+@media #{$small-tablet} {
+  .include-absolute-small-tablet { @include _absolute; }
+}
+@media #{$ipad} {
+  .include-absolute-ipad         { @include _absolute; }
+}
+@media #{$desktop} {
+  .include-absolute-desktop      { @include _absolute; }
+}
 .include-absolute-top       { @include _absolute(top); }
+@media #{$mobile} {
+  .include-absolute-top-mobile       { @include _absolute(top); }
+}
+@media #{$small-tablet} {
+  .include-absolute-top-small-tablet { @include _absolute(top); }
+}
+@media #{$ipad} {
+  .include-absolute-top-ipad         { @include _absolute(top); }
+}
+@media #{$desktop} {
+  .include-absolute-top-desktop      { @include _absolute(top); }
+}
 .include-absolute-right     { @include _absolute(right); }
+@media #{$mobile} {
+  .include-absolute-right-mobile       { @include _absolute(right); }
+}
+@media #{$small-tablet} {
+  .include-absolute-right-small-tablet { @include _absolute(right); }
+}
+@media #{$ipad} {
+  .include-absolute-right-ipad         { @include _absolute(right); }
+}
+@media #{$desktop} {
+  .include-absolute-right-desktop      { @include _absolute(right); }
+}
 .include-absolute-bottom    { @include _absolute(bottom); }
+@media #{$mobile} {
+  .include-absolute-bottom-mobile       { @include _absolute(bottom); }
+}
+@media #{$small-tablet} {
+  .include-absolute-bottom-small-tablet { @include _absolute(bottom); }
+}
+@media #{$ipad} {
+  .include-absolute-bottom-ipad         { @include _absolute(bottom); }
+}
+@media #{$desktop} {
+  .include-absolute-bottom-desktop      { @include _absolute(bottom); }
+}
 .include-absolute-left      { @include _absolute(left); }
+@media #{$mobile} {
+  .include-absolute-left-mobile       { @include _absolute(left); }
+}
+@media #{$small-tablet} {
+  .include-absolute-left-small-tablet { @include _absolute(left); }
+}
+@media #{$ipad} {
+  .include-absolute-left-ipad         { @include _absolute(left); }
+}
+@media #{$desktop} {
+  .include-absolute-left-desktop      { @include _absolute(left); }
+}
 .include-absolute-middle    { @include _absolute(middle); }
+@media #{$mobile} {
+  .include-absolute-middle-mobile       { @include _absolute(middle); }
+}
+@media #{$small-tablet} {
+  .include-absolute-middle-small-tablet { @include _absolute(middle); }
+}
+@media #{$ipad} {
+  .include-absolute-middle-ipad         { @include _absolute(middle); }
+}
+@media #{$desktop} {
+  .include-absolute-middle-desktop      { @include _absolute(middle); }
+}
 .include-absolute-center    { @include _absolute(center); }
+@media #{$mobile} {
+  .include-absolute-center-mobile       { @include _absolute(center); }
+}
+@media #{$small-tablet} {
+  .include-absolute-center-small-tablet { @include _absolute(center); }
+}
+@media #{$ipad} {
+  .include-absolute-center-ipad         { @include _absolute(center); }
+}
+@media #{$desktop} {
+  .include-absolute-center-desktop      { @include _absolute(center); }
+}
 
 .include-static             { @include _static; }
+@media #{$mobile} {
+  .include-static-mobile       { @include _static; }
+}
+@media #{$small-tablet} {
+  .include-static-small-tablet { @include _static; }
+}
+@media #{$ipad} {
+  .include-static-ipad         { @include _static; }
+}
+@media #{$desktop} {
+  .include-static-desktop      { @include _static; }
+}
 
 .include-inline             { @include _inline; }
+@media #{$mobile} {
+  .include-inline-mobile       { @include _inline; }
+}
+@media #{$small-tablet} {
+  .include-inline-small-tablet { @include _inline; }
+}
+@media #{$ipad} {
+  .include-inline-ipad         { @include _inline; }
+}
+@media #{$desktop} {
+  .include-inline-desktop      { @include _inline; }
+}
 .include-block              { @include _block; }
+@media #{$mobile} {
+  .include-block-mobile       { @include _block; }
+}
+@media #{$small-tablet} {
+  .include-block-small-tablet { @include _block; }
+}
+@media #{$ipad} {
+  .include-block-ipad         { @include _block; }
+}
+@media #{$desktop} {
+  .include-block-desktop      { @include _block; }
+}
 .include-hidden             { @include _hidden; }
+@media #{$mobile} {
+  .include-hidden-mobile       { @include _hidden; }
+}
+@media #{$small-tablet} {
+  .include-hidden-small-tablet { @include _hidden; }
+}
+@media #{$ipad} {
+  .include-hidden-ipad         { @include _hidden; }
+}
+@media #{$desktop} {
+  .include-hidden-desktop      { @include _hidden; }
+}
 
 .include-zero               { @include _zero; }
+@media #{$mobile} {
+  .include-zero-mobile       { @include _zero; }
+}
+@media #{$small-tablet} {
+  .include-zero-small-tablet { @include _zero; }
+}
+@media #{$ipad} {
+  .include-zero-ipad         { @include _zero; }
+}
+@media #{$desktop} {
+  .include-zero-desktop      { @include _zero; }
+}
 
 .include-pull-right         { @include _pull-right; }
+@media #{$mobile} {
+  .include-pull-right-mobile       { @include _pull-right; }
+}
+@media #{$small-tablet} {
+  .include-pull-right-tablet { @include _pull-right; }
+}
+@media #{$ipad} {
+  .include-pull-right-ipad         { @include _pull-right; }
+}
+@media #{$desktop} {
+  .include-pull-right-desktop      { @include _pull-right; }
+}
 .include-pull-left          { @include _pull-left; }
+@media #{$mobile} {
+  .include-pull-left-mobile       { @include _pull-left; }
+}
+@media #{$small-tablet} {
+  .include-pull-left-tablet { @include _pull-left; }
+}
+@media #{$ipad} {
+  .include-pull-left-ipad         { @include _pull-left; }
+}
+@media #{$desktop} {
+  .include-pull-left-desktop      { @include _pull-left; }
+}
 
 .include-bordered           { @include _bordered; }
+@media #{$mobile} {
+  .include-bordered-mobile       { @include _bordered; }
+}
+@media #{$small-tablet} {
+  .include-bordered-tablet { @include _bordered; }
+}
+@media #{$ipad} {
+  .include-bordered-ipad         { @include _bordered; }
+}
+@media #{$desktop} {
+  .include-bordered-desktop      { @include _bordered; }
+}
 .include-border-top         { @include _border-top; }
+@media #{$mobile} {
+  .include-border-top-mobile       { @include _border-top; }
+}
+@media #{$small-tablet} {
+  .include-border-top-tablet { @include _border-top; }
+}
+@media #{$ipad} {
+  .include-border-top-ipad         { @include _border-top; }
+}
+@media #{$desktop} {
+  .include-border-top-desktop      { @include _border-top; }
+}
 .include-border-right       { @include _border-right; }
+@media #{$mobile} {
+  .include-border-right-mobile       { @include _border-right; }
+}
+@media #{$small-tablet} {
+  .include-border-right-tablet { @include _border-right; }
+}
+@media #{$ipad} {
+  .include-border-right-ipad         { @include _border-right; }
+}
+@media #{$desktop} {
+  .include-border-right-desktop      { @include _border-right; }
+}
 .include-border-bottom      { @include _border-bottom; }
+@media #{$mobile} {
+  .include-border-bottom-mobile       { @include _border-bottom; }
+}
+@media #{$small-tablet} {
+  .include-border-bottom-tablet { @include _border-bottom; }
+}
+@media #{$ipad} {
+  .include-border-bottom-ipad         { @include _border-bottom; }
+}
+@media #{$desktop} {
+  .include-border-bottom-desktop      { @include _border-bottom; }
+}
 .include-border-left        { @include _border-left; }
+@media #{$mobile} {
+  .include-border-left-mobile       { @include _border-left; }
+}
+@media #{$small-tablet} {
+  .include-border-left-tablet { @include _border-left; }
+}
+@media #{$ipad} {
+  .include-border-left-ipad         { @include _border-left; }
+}
+@media #{$desktop} {
+  .include-border-left-desktop      { @include _border-left; }
+}
 
 .include-align-top          { @include _align-top; }
+@media #{$mobile} {
+  .include-align-top-mobile       { @include _align-top; }
+}
+@media #{$small-tablet} {
+  .include-align-top-tablet { @include _align-top; }
+}
+@media #{$ipad} {
+  .include-align-top-ipad         { @include _align-top; }
+}
+@media #{$desktop} {
+  .include-align-top-desktop      { @include _align-top; }
+}
 .include-align-right        { @include _align-right; }
+@media #{$mobile} {
+  .include-align-right-mobile       { @include _align-right; }
+}
+@media #{$small-tablet} {
+  .include-align-right-tablet { @include _align-right; }
+}
+@media #{$ipad} {
+  .include-align-right-ipad         { @include _align-right; }
+}
+@media #{$desktop} {
+  .include-align-right-desktop      { @include _align-right; }
+}
 .include-align-bottom       { @include _align-bottom; }
+@media #{$mobile} {
+  .include-align-bottom-mobile       { @include _align-bottom; }
+}
+@media #{$small-tablet} {
+  .include-align-bottom-tablet { @include _align-bottom; }
+}
+@media #{$ipad} {
+  .include-align-bottom-ipad         { @include _align-bottom; }
+}
+@media #{$desktop} {
+  .include-align-bottom-desktop      { @include _align-bottom; }
+}
 .include-align-left         { @include _align-left; }
-.include-align-center       { @include _align-center; }   
+@media #{$mobile} {
+  .include-align-left-mobile       { @include _align-left; }
+}
+@media #{$small-tablet} {
+  .include-align-left-tablet { @include _align-left; }
+}
+@media #{$ipad} {
+  .include-align-left-ipad         { @include _align-left; }
+}
+@media #{$desktop} {
+  .include-align-left-desktop      { @include _align-left; }
+}
+.include-align-center       { @include _align-center; }
+@media #{$mobile} {
+  .include-align-center-mobile       { @include _align-center; }
+}
+@media #{$small-tablet} {
+  .include-align-center-tablet { @include _align-center; }
+}
+@media #{$ipad} {
+  .include-align-center-ipad         { @include _align-center; }
+}
+@media #{$desktop} {
+  .include-align-center-desktop      { @include _align-center; }
+}
 .include-justify            { @include _justify; }
+@media #{$mobile} {
+  .include-justify-mobile       { @include _justify; }
+}
+@media #{$small-tablet} {
+  .include-justify-tablet { @include _justify; }
+}
+@media #{$ipad} {
+  .include-justify-ipad         { @include _justify; }
+}
+@media #{$desktop} {
+  .include-justify-desktop      { @include _justify; }
+}
 
 .include-truncate           { @include _truncate; }
+@media #{$mobile} {
+  .include-truncate-mobile       { @include _truncate; }
+}
+@media #{$small-tablet} {
+  .include-truncate-tablet { @include _truncate; }
+}
+@media #{$ipad} {
+  .include-truncate-ipad         { @include _truncate; }
+}
+@media #{$desktop} {
+  .include-truncate-desktop      { @include _truncate; }
+}
 
 .include-center             { @include _center; }
+@media #{$mobile} {
+  .include-center-mobile       { @include _center; }
+}
+@media #{$small-tablet} {
+  .include-center-tablet { @include _center; }
+}
+@media #{$ipad} {
+  .include-center-ipad         { @include _center; }
+}
+@media #{$desktop} {
+  .include-center-desktop      { @include _center; }
+}
 
 .include-round              { @include _round; }
+@media #{$mobile} {
+  .include-round-mobile       { @include _round; }
+}
+@media #{$small-tablet} {
+  .include-round-tablet { @include _round; }
+}
+@media #{$ipad} {
+  .include-round-ipad         { @include _round; }
+}
+@media #{$desktop} {
+  .include-round-desktop      { @include _round; }
+}
 
 .include-disabled           { @include _disabled; }
+@media #{$mobile} {
+  .include-disabled-mobile       { @include _disabled; }
+}
+@media #{$small-tablet} {
+  .include-disabled-tablet { @include _disabled; }
+}
+@media #{$ipad} {
+  .include-disabled-ipad         { @include _disabled; }
+}
+@media #{$desktop} {
+  .include-disabled-desktop      { @include _disabled; }
+}
 
 .include-rotate-90          { @include _rotate-90; }
+@media #{$mobile} {
+  .include-rotate-90-mobile       { @include _rotate-90; }
+}
+@media #{$small-tablet} {
+  .include-rotate-90-tablet { @include _rotate-90; }
+}
+@media #{$ipad} {
+  .include-rotate-90-ipad         { @include _rotate-90; }
+}
+@media #{$desktop} {
+  .include-rotate-90-desktop      { @include _rotate-90; }
+}
 .include-rotate-180         { @include _rotate-180; }
+@media #{$mobile} {
+  .include-rotate-180-mobile       { @include _rotate-180; }
+}
+@media #{$small-tablet} {
+  .include-rotate-180-tablet { @include _rotate-180; }
+}
+@media #{$ipad} {
+  .include-rotate-180-ipad         { @include _rotate-180; }
+}
+@media #{$desktop} {
+  .include-rotate-180-desktop      { @include _rotate-180; }
+}
 .include-rotate-270         { @include _rotate-270; }
+@media #{$mobile} {
+  .include-rotate-270-mobile       { @include _rotate-270; }
+}
+@media #{$small-tablet} {
+  .include-rotate-270-tablet { @include _rotate-270; }
+}
+@media #{$ipad} {
+  .include-rotate-270-ipad         { @include _rotate-270; }
+}
+@media #{$desktop} {
+  .include-rotate-270-desktop      { @include _rotate-270; }
+}
 .include-rotate-90-ctr      { @include _rotate-90-ctr; }
+@media #{$mobile} {
+  .include-rotate-90-ctr-mobile       { @include _rotate-90-ctr; }
+}
+@media #{$small-tablet} {
+  .include-rotate-90-ctr-tablet { @include _rotate-90-ctr; }
+}
+@media #{$ipad} {
+  .include-rotate-90-ctr-ipad         { @include _rotate-90-ctr; }
+}
+@media #{$desktop} {
+  .include-rotate-90-ctr-desktop      { @include _rotate-90-ctr; }
+}
 .include-rotate-180-ctr     { @include _rotate-180-ctr; }
+@media #{$mobile} {
+  .include-rotate-180-ctr-mobile       { @include _rotate-180-ctr; }
+}
+@media #{$small-tablet} {
+  .include-rotate-180-ctr-tablet { @include _rotate-180-ctr; }
+}
+@media #{$ipad} {
+  .include-rotate-180-ctr-ipad         { @include _rotate-180-ctr; }
+}
+@media #{$desktop} {
+  .include-rotate-180-ctr-desktop      { @include _rotate-180-ctr; }
+}
 .include-rotate-270-ctr     { @include _rotate-270-ctr; }
+@media #{$mobile} {
+  .include-rotate-270-ctr-mobile       { @include _rotate-270-ctr; }
+}
+@media #{$small-tablet} {
+  .include-rotate-270-ctr-tablet { @include _rotate-270-ctr; }
+}
+@media #{$ipad} {
+  .include-rotate-270-ctr-ipad         { @include _rotate-270-ctr; }
+}
+@media #{$desktop} {
+  .include-rotate-270-ctr-desktop      { @include _rotate-270-ctr; }
+}
 
 .include-spin               { @include _spin; }
 .include-spin-once          { @include _spin-once; }

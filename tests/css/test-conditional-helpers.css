@@ -101,10 +101,10 @@ img, a img {
   }
 }
 
-.clear, .clearfix, .row, .extend-row {
+.clear, .clearfix, .row {
   clear: both;
 }
-.clear:after, .clearfix:after, .row:after, .extend-row:after {
+.clear:after, .clearfix:after, .row:after {
   content: '';
   display: block;
   clear: both;
@@ -675,20 +675,16 @@ big, .large, big {
   clear: both;
 }
 
-.container, .extend-container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.row, .extend-row {
+.row {
   width: 100%;
 }
 
-.column, .extend-third, .extend-one.extend-third, .extend-third.extend-two, .extend-third.extend-three,
-.extend-fifths,
-.extend-one.extend-fifths,
-.extend-two.extend-fifths,
-.extend-three.extend-fifths, .whole,
+.column, .whole,
 .wholes, .whole.one,
 .wholes.one, .half,
 .halves, .half.one,
@@ -784,64 +780,12 @@ big, .large, big {
   min-height: 1px;
 }
 
-.centered, .extend-centered {
+.centered {
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-.extend-third {
-  width: 33.33333%;
-}
-.extend-one.extend-third {
-  width: 33.33333%;
-}
-.extend-third.extend-two {
-  width: 66.66667%;
-}
-.extend-third.extend-three {
-  width: 100%;
-}
-.extend-third.extend-right-one {
-  left: 33.33333%;
-}
-.extend-third.extend-left-one {
-  right: 33.33333%;
-}
-.extend-third.extend-right-two {
-  left: 66.66667%;
-}
-.extend-third.extend-skip-two {
-  margin-left: 66.66667%;
-}
-
-.extend-fifths {
-  width: 20%;
-}
-.extend-one.extend-fifths {
-  width: 20%;
-}
-.extend-two.extend-fifths {
-  width: 40%;
-}
-.extend-three.extend-fifths {
-  width: 60%;
-}
-.extend-fifths.extend-right-one {
-  left: 20%;
-}
-.extend-fifths.extend-left-one {
-  right: 20%;
-}
-.extend-fifths.extend-right-two {
-  left: 40%;
-}
-.extend-fifths.extend-skip-two {
-  margin-left: 40%;
-}
-.extend-fifths.extend-left-three {
-  right: 60%;
-}
 .whole,
 .wholes {
   width: 100%;
@@ -4313,24 +4257,24 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   content: "\f18b";
 }
 
-.desktop-only {
+.desktop-only, .extend-desktop-only {
   display: block;
 }
 
-.ipad-only {
+.ipad-only, .extend-ipad-only {
   display: none !important;
 }
 
-.small-tablet-only {
+.small-tablet-only, .extend-small-tablet-only {
   display: none !important;
 }
 
-.mobile-only {
+.mobile-only, .extend-mobile-only {
   display: none !important;
 }
 
 @media (min-width: 1025px) {
-  .hide-on-desktop {
+  .hide-on-desktop, .extend-hide-on-desktop {
     display: none !important;
   }
 
@@ -4790,19 +4734,19 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .ipad-only {
+  .ipad-only, .extend-ipad-only {
     display: block !important;
   }
 
-  span.ipad-only {
+  span.ipad-only, span.extend-ipad-only {
     display: inline !important;
   }
 
-  .hide-on-ipad {
+  .hide-on-ipad, .extend-hide-on-ipad {
     display: none !important;
   }
 
-  .desktop-only {
+  .desktop-only, .extend-desktop-only {
     display: none !important;
   }
 
@@ -5262,8 +5206,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   }
 }
 @media (max-width: 767px) {
-  .extend-third:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
-  .extend-fifths:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .half:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
+  .half:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .halves:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .fourth:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .fourths:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .fifth:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
@@ -5280,9 +5223,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     clear: both;
   }
 
-  .extend-third.extend-right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .extend-third.extend-right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
-  .extend-fifths.extend-right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
-  .extend-fifths.extend-right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .half.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
+  .half.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .halves.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third.right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds.right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .fourth.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
@@ -5352,9 +5293,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     left: 0;
   }
 
-  .extend-third.extend-left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
-  .extend-fifths.extend-left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
-  .extend-fifths.extend-left-three:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .half.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
+  .half.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .halves.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third.left-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds.left-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .fourth.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
@@ -5424,8 +5363,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     right: 0;
   }
 
-  .extend-third.extend-skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
-  .extend-fifths.extend-skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .half.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
+  .half.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .halves.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .third.skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
   .thirds.skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet), .fourth.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.small-tablet):not(.one-up-small-tablet):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet),
@@ -5495,19 +5433,19 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     margin-left: 0;
   }
 
-  .small-tablet-only {
+  .small-tablet-only, .extend-small-tablet-only {
     display: block !important;
   }
 
-  span.small-tablet-only {
+  span.small-tablet-only, span.extend-small-tablet-only {
     display: inline !important;
   }
 
-  .hide-on-small-tablet {
+  .hide-on-small-tablet, .extend-hide-on-small-tablet {
     display: none !important;
   }
 
-  .desktop-only {
+  .desktop-only, .extend-desktop-only {
     display: none !important;
   }
 
@@ -6155,8 +6093,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   }
 }
 @media (max-width: 480px) {
-  .extend-third:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
-  .extend-fifths:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .half:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
+  .half:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .halves:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .fourth:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .fourths:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .fifth:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
@@ -6173,9 +6110,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     clear: both;
   }
 
-  .extend-third.extend-right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .extend-third.extend-right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
-  .extend-fifths.extend-right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
-  .extend-fifths.extend-right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .half.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
+  .half.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .halves.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third.right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds.right-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .fourth.right-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
@@ -6245,9 +6180,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     left: 0;
   }
 
-  .extend-third.extend-left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
-  .extend-fifths.extend-left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
-  .extend-fifths.extend-left-three:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .half.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
+  .half.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .halves.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third.left-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds.left-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .fourth.left-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
@@ -6317,8 +6250,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     right: 0;
   }
 
-  .extend-third.extend-skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
-  .extend-fifths.extend-skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .half.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
+  .half.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .halves.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .third.skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
   .thirds.skip-two:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile), .fourth.skip-one:not(.mobile):not(.one-up-mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile),
@@ -6388,35 +6320,35 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
     margin-left: 0;
   }
 
-  .mobile-only {
+  .mobile-only, .extend-mobile-only {
     display: block !important;
   }
 
-  span.mobile-only {
+  span.mobile-only, span.extend-mobile-only {
     display: inline !important;
   }
 
-  .hide-on-small-tablet {
+  .hide-on-small-tablet, .extend-hide-on-small-tablet {
     display: block !important;
   }
 
-  span.hide-on-small-tablet {
+  span.hide-on-small-tablet, span.extend-hide-on-small-tablet {
     display: inline !important;
   }
 
-  .small-tablet-only {
+  .small-tablet-only, .extend-small-tablet-only {
     display: none !important;
   }
 
-  span.small-tablet-only {
+  span.small-tablet-only, span.extend-small-tablet-only {
     display: none !important;
   }
 
-  .hide-on-mobile {
+  .hide-on-mobile, .extend-hide-on-mobile {
     display: none !important;
   }
 
-  .desktop-only {
+  .desktop-only, .extend-desktop-only {
     display: none !important;
   }
 
@@ -6919,7 +6851,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   background: #e67e22;
 }
 
-.demo .row, .demo .row, .demo .extend-row {
+.demo .row, .demo .row {
   background: #fafafa;
 }
 .demo .whole,
@@ -6933,8 +6865,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 .demo .ninth, .demo .ninths,
 .demo .tenth, .demo .tenths,
 .demo .eleventh, .demo .elevenths,
-.demo .twelfth, .demo .twelfths,
-.demo .extend-third, .demo .extend-fifths {
+.demo .twelfth, .demo .twelfths {
   min-height: 1em;
   padding: 10px;
   background: #f3f3f3;

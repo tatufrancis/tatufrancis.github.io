@@ -1,0 +1,30 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Helpers
+    link(rel="stylesheet", href="css/test-conditional-helpers.css")
+  
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Conditional Content Helpers
+        p This page generates elements that use Groundwork conditional content helpers using all 3 possible ways: classes, includes, and extends.
+        p Things are good when:
+        ul.list
+          li Extends function like their class counterparts.
+    
+      .row.headings
+        .one.mobile.half Classes
+        .one.mobile.half Placeholders
+      
+      //- This should sync with cases in test-helpers.scss
+      - var cases = ["desktop-only", "hide-on-desktop", "ipad-only", "hide-on-ipad", "small-tablet-only", "hide-on-small-tablet", "mobile-only", "hide-on-mobile"]
+      //- End cases
+      
+      each item in cases
+        .row.demo
+          .one.mobile.half: div(class="#{item}")
+            | #{item}
+          .one.mobile.half: div(class="extend-#{item}")
+            | #{item}

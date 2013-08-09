@@ -1,0 +1,19 @@
+$root_path: '../../';
+@import "../../../src/scss/core/all-core";
+@import "../../../src/scss/base/all-base";
+@import "../../../src/scss/type/all-type";
+@import "../../../src/scss/icons/all-icons";
+// @import "../../../src/scss/nav/all-nav";
+// @import "../../../src/scss/ui/all-ui";
+// @import "../../../src/scss/form/all-form";
+@import "../../../src/scss/responsive/all-responsive";
+
+@import "demo";
+
+
+
+$conditionals: "desktop-only" "hide-on-desktop" "ipad-only" "hide-on-ipad" "small-tablet-only" "hide-on-small-tablet" "mobile-only" "hide-on-mobile";
+
+@for $i from 1 through length($conditionals) {
+  .extend-#{nth($conditionals, $i)} { @extend .#{nth($conditionals, $i)}; }
+}
