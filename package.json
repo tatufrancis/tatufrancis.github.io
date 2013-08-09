@@ -1,6 +1,6 @@
 {
   "name": "GroundworkCSS",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "GroundworkCSS is a fully responsive HTML5, CSS and Javascript toolkit created by @ghepting",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -10,7 +10,8 @@
     "grunt-contrib-sass": "~0.3.0",
     "grunt-contrib-compass": "~0.2.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-cssmin": "~0.4.1"
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-autoprefixer": "~0.2.2"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,15 @@
     "groundworkcss",
     "groundwork",
     "responsive",
+    "adaptive",
     "framework",
     "grid",
     "fluid",
     "css",
     "sass",
     "scss",
+    "compass",
+    "autoprefixer",
     "coffeescript",
     "javascript",
     "jquery"

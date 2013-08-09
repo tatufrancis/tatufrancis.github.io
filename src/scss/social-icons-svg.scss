@@ -1,7 +1,7 @@
-/*! ============================================
- *               Social Icons
- *          Last Updated:2013-6-25
- * ===========================================*/
+// ============================================
+//               Social Icons
+//          Last Updated:2013-6-25
+// ============================================
 
 
 @import "settings";
@@ -39,7 +39,6 @@
     @include rounded();
   }
   &.disabled {
-    -webkit-filter:grayscale(100%);
     filter:grayscale(100%);
   }
   &.aboutme       { @include data-image("social-icons/aboutme.svg"); }

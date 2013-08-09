@@ -6,17 +6,20 @@
     "groundworkcss",
     "groundwork",
     "responsive",
+    "adaptive",
     "framework",
     "grid",
     "fluid",
     "css",
     "sass",
     "scss",
+    "compass",
+    "autoprefixer",
     "coffeescript",
     "javascript",
     "jquery"
   ],
-  "version": "1.12.0",
+  "version": "1.13.0",
   "author": {
     "name": "Gary Hepting",
     "url": "http://groundworkcss.github.com"
