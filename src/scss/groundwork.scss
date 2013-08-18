@@ -1,6 +1,6 @@
 // ============================================
 //       GroundworkCSS by Gary Hepting
-//          Last Updated:2013-6-25
+//          Last Updated:2013-8-16
 // ============================================
 
 
@@ -8,16 +8,15 @@
 @import "settings";                   // customizable settings
 
 // core
-@import "core/all-core";              // constants, defaults, mixins
-@import "base/all-base";              // reset, globals, grid, helpers
+@import "core/all-core";              // constants, defaults, mixins, breakpoints, color palette
+@import "base/all-base";              // reset, globals, grid, flexbox, helpers
 
 // components
 @import "type/all-type";              // typography, web fonts
-@import "icons/all-icons";            // font awesome
-@import "nav/all-nav";                // buttons, navigation, tabs
-@import "ui/all-ui";                  // messages, callouts, tables, tooltips, popovers, modals
-@import "form/all-form";              // forms, tiles
+@import "icons/all-icons";            // font awesome icons
+@import "ui/all-ui";                  // navigation, buttons, messages, tables
+@import "form/all-form";              // forms
 @import "anim/all-animations";        // animations
 
 // responsive adjustments
-@import "responsive/all-responsive";  // responsive navigation, tabs
+@import "responsive/all-responsive";  // responsive (helpers, desktop, ipad, small-tablet, mobile)

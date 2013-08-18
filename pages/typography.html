@@ -8,94 +8,63 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; Typography</title>
-    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
     <!-- Modernizr -->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
-    <!-- jQuery -->
+    <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
     <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
-    <script type="text/javascript">
-      // extend Modernizr to have datauri test
-      (function(){
-        var datauri = new Image();
-        datauri.onerror = function() {
-          Modernizr.addTest('datauri', function () { return false; });
-        };
-        datauri.onload = function() {
-          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
-          Modernizr.load({
-            test: Modernizr.datauri,
-            nope: '../css/no-datauri.css'
-          });
-        };
-        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-      })();
-      // SVG support?
-      Modernizr.load({
-        test: Modernizr.inlinesvg,
-        yep: [
-          '../css/social-icons-svg.css'
-        ],
-        nope: [
-          '../css/social-icons-png.css'
-        ]
-      });
-      // polyfill for HTML5 placeholders
-      Modernizr.load({
-        test: Modernizr.input.placeholder,
-        nope: [
-          '../css/placeholder_polyfill.min.css',
-          '../js/libs/placeholder_polyfill.jquery.js'
-        ]
-      });
-      
-    </script>
+    <style type="text/css">
+      .logo {
+        position: relative;
+        top: -0.5em;
+      }
+      .logo a, .logo a:visited {
+        text-decoration: none;
+        color: #2B2B2D;
+      }
+      .logo img {
+        height: 2em;
+        position: relative;
+        top: 0.55em;
+        margin-right: 0.3em;
+      }
+    </style>
   </head>
   <body>
-    <header class="white band padded">
-      <div class="container">
-        <h2 class="AverageSans">GroundworkCSS</h2>
-        <nav class="nav inline menu gap-top">
+    <header class="padded">
+      <div class="container fadeIn animated">
+        <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS</a></h2>
+        <nav class="nav gap-top">
           <ul>
             <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
-            <li class="menu"><a href="#">Example Layouts</a>
+            <li><a href="#">Example Layouts</a>
               <ul>
-                <li><a href="./layout-1.html">Layout 1</a></li>
-                <li><a href="./layout-2.html">Layout 2</a></li>
-                <li><a href="./layout-3.html">Layout 3</a></li>
-                <li><a href="./layout-4.html">Layout 4</a></li>
-                <li><a href="./layout-5.html">Layout 5</a></li>
-                <li><a href="./layout-6.html">Image Gallery</a></li>
-                <li><a href="./layout-7.html">Ecommerce</a></li>
+                <li><a href="./layout-a.html">Web Page</a></li>
+                <li><a href="./layout-b.html">Image Gallery</a></li>
+                <li><a href="./layout-c.html">Ecommerce Page</a></li>
               </ul>
             </li>
-            <li class="menu"><a href="#">Example Components Usage</a>
+            <li><a href="#">Usage Examples</a>
               <ul>
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
-                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
-                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
-                <li><a href="./ui-elements.html" title="Message &amp; callout boxes">UI Elements</a></li>
-                <li><a href="./tooltips.html" title="Tooltips">Tooltips</a></li>
-                <li><a href="./tables.html" title="Tabs, message &amp; callout boxes, tables and tooltips">Tables</a></li>
-                <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
-                <li><a href="./tiles.html" title="Tiles">Tiles</a></li>
+                <li><a href="#" title="Navigation, buttons, messages and tables">UI Elements</a>
+                  <ul>
+                    <li><a href="./navigation.html" title="Navigation">Navigation</a></li>
+                    <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                    <li><a href="./messages.html" title="Message blocks">Message Blocks</a></li>
+                    <li><a href="./tables.html" title="Tables">Tables</a></li>
+                    <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
+                  </ul>
+                </li>
                 <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
-                <li><a href="./social-icons.html">Social Icons</a></li>
                 <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
-                <li><a href="./modals.html" title="Magnific Popup modals">Magnific Popup</a></li>
-                <li><a href="./cycle2.html" title="Cycle2 Slideshows">Cycle2</a></li>
+                <li><a href="./animations.html" title="Pure CSS3 Animations">Animations</a></li>
               </ul>
             </li>
           </ul>
@@ -103,202 +72,233 @@
       </div>
     </header>
     <div class="container">
-      <div class="pad-left pad-right">
-        <h1 class="AverageSans zero">Typography</h1>
-        <p>Example usage of typography elements such as headings, paragraphs, lists, blockquotes, code and web fonts</p>
+      <div class="padded">
+        <div class="row">
+          <div class="three fifths bounceInRight animated">
+            <h1 class="zero museo-slab">Typography</h1>
+            <p class="quicksand">Example usage of typography elements such as headings, paragraphs, lists, blockquotes, code and web font</p>
+          </div>
+          <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
+            <p class="quicksand">Component Usage Example 3 of 11</p>
+            <p><a href="helpers.html" class="blue button"><i class="icon-arrow-left"></i> Back</a> <a href="navigation.html" class="green button">Next: Navigation <i class="icon-arrow-right"></i></a></p>
+          </div>
+        </div>
       </div>
+      <hr>
       <div class="row">
         <div class="one whole padded">
-          <h4 class="AverageSans">Text Elements</h4>
-          <div class="row">
-            <div class="one third padded">
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <h4>Heading 4</h4>
-              <h5>Heading 5</h5>
-              <h6>Heading 6</h6>
-            </div>
-            <div class="one third padded">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Paragraph with <sup>superscript</sup></p>
-              <p>Paragraph with <sub>subscript</sub></p>
-              <p>Paragraph with <small>small text</small></p>
-              <p>Paragraph with 
-                <big>large text</big>
-              </p>
-              <p>Paragraph with <em>emphasized text</em></p>
-              <p>Paragraph with <b>bold text</b></p>
-              <p>Paragraph with 
-                <del>deleted text</del>
-              </p>
-              <p>Paragraph with <abbr title="Abreviated" class="tooltip">abbr</abbr> text</p>
-            </div>
-            <div class="one third padded">
-              <ul class="unstyled">
-                <li>Unstyled list item 1</li>
-                <li>Unstyled list item 2</li>
-              </ul>
-              <ol class="unstyled">
-                <li>Unstyled ordered list item 1</li>
-                <li>Unstyled ordered list item 2</li>
-              </ol>
-              <ul>
-                <li>Normal list item 1</li>
-                <li>Normal list item 2</li>
-              </ul>
-              <ol>
-                <li>Ordered list item 1</li>
-                <li>Ordered list item 2</li>
-              </ol>
-              <ul class="list">
-                <li>Styled list item 1</li>
-                <li>Styled list item 2</li>
-              </ul>
-              <ol class="list">
-                <li>Styled ordered list item 1</li>
-                <li>Styled ordered list item 2</li>
-              </ol>
-            </div>
-          </div>
-          <h4 class="AverageSans">Colors</h4>
-          <div class="row">
-            <div class="one third padded"><b><span class="yellow">Yellow</span><br><span class="orange">Orange</span><br><span class="red">Red</span><br><span class="pink">Pink</span><br><span class="purple">Purple</span><br><span class="asphalt">Asphalt</span><br><span class="blue">Blue</span><br><span class="turquoise">Turquoise</span><br><span class="green">Green</span></b></div>
-            <div class="one third padded">
-              <ul>
-                <li class="yellow">Normal list item</li>
-                <li class="orange">Normal list item</li>
-                <li class="red">Normal list item</li>
-                <li class="pink">Normal list item</li>
-                <li class="purple">Normal list item</li>
-                <li class="asphalt">Normal list item</li>
-                <li class="blue">Normal list item</li>
-                <li class="turquoise">Normal list item</li>
-                <li class="green">Normal list item</li>
-              </ul>
-            </div>
-            <div class="one third padded">
-              <ol>
-                <li class="yellow">Ordered list item</li>
-                <li class="orange">Ordered list item</li>
-                <li class="red">Ordered list item</li>
-                <li class="pink">Ordered list item</li>
-                <li class="purple">Ordered list item</li>
-                <li class="asphalt">Ordered list item</li>
-                <li class="blue">Ordered list item</li>
-                <li class="turquoise">Ordered list item</li>
-                <li class="green">Ordered list item</li>
-              </ol>
-            </div>
-          </div>
-          <div class="row">
-            <div class="one third padded"><b><span class="info">Info</span><br><span class="alert">Alert</span><br><span class="warning">Warning</span><br><span class="error">Error</span><br><span class="success">Success</span><br><span class="disabled">Disabled</span></b></div>
-            <div class="one third padded">
-              <ul class="list">
-                <li class="yellow">Styled list item</li>
-                <li class="orange">Styled list item</li>
-                <li class="red">Styled list item</li>
-                <li class="pink">Styled list item</li>
-                <li class="purple">Styled list item</li>
-                <li class="asphalt">Styled list item</li>
-                <li class="blue">Styled list item</li>
-                <li class="turquoise">Styled list item</li>
-                <li class="green">Styled list item</li>
-              </ul>
-            </div>
-            <div class="one third padded">
-              <ol class="list">
-                <li class="yellow">Styled ordered list item</li>
-                <li class="orange">Styled ordered list item</li>
-                <li class="red">Styled ordered list item</li>
-                <li class="pink">Styled ordered list item</li>
-                <li class="purple">Styled ordered list item</li>
-                <li class="asphalt">Styled ordered list item</li>
-                <li class="blue">Styled ordered list item</li>
-                <li class="turquoise">Styled ordered list item</li>
-                <li class="green">Styled ordered list item</li>
-              </ol>
-            </div>
-          </div>
-          <h4 class="AverageSans">Links</h4>
-          <div class="row">
-            <div class="one third padded">
-              <h1><a href="#">Heading 1 link</a></h1>
-              <h2><a href="#">Heading 2 link</a></h2>
-              <h3><a href="#">Heading 3 link</a></h3>
-              <h4><a href="#">Heading 4 link</a></h4>
-              <h5><a href="#">Heading 5 link</a></h5>
-              <h6><a href="#">Heading 6 link</a></h6>
-            </div>
-            <div class="one third padded">
-              <p><a href="#">Paragraph link</a></p>
-              <p><a href="#">Paragraph link with <sup>superscript</sup></a></p>
-              <p><a href="#">Paragraph link with <sub>subscript</sub></a></p>
-              <p><a href="#">Paragraph link with <small>small text</small></a></p>
-              <p><a href="#">Paragraph link with 
-                  <big>large text</big></a></p>
-              <p><a href="#">Paragraph link with <em>emphasized text</em></a></p>
-              <p><a href="#">Paragraph link with <b>bold text</b></a></p>
-            </div>
-            <div class="one third padded">
-              <ul>
-                <li><a href="#">Normal list link item 1</a></li>
-                <li><a href="#">Normal list link item 2</a></li>
-              </ul>
-              <ol>
-                <li><a href="#">Ordered list link item 1</a></li>
-                <li><a href="#">Ordered list link item 2</a></li>
-              </ol>
-              <ul class="list">
-                <li><a href="#">Styled list link item 1</a></li>
-                <li><a href="#">Styled list link item 2</a></li>
-              </ul>
-              <ol class="list">
-                <li><a href="#">Styled ordered link list item 1</a></li>
-                <li><a href="#">Styled ordered link list item 2</a></li>
-              </ol>
+          <div class="bounceInLeft animated">
+            <h4>Headings</h4>
+            <div class="row">
+              <div class="one whole padded">
+                <h1>Heading 1: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h1>
+                <h2>Heading 2: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h2>
+                <h3>Heading 3: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h3>
+                <h4>Heading 4: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+                <h5>Heading 5: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h5>
+                <h6>Heading 6: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h6>
+              </div>
             </div>
           </div>
           <hr><br>
-          <h2 class="AmericanTypewriter">Web Fonts Usage</h2>
-          <div class="row">
-            <div class="one whole padded">
-              <h5 class="AverageSans">Average Sans webfont</h5>
-              <h5 class="AmericanTypewriter">American Typewriter webfont</h5>
+          <div class="bounceInRight animated">
+            <h4>Paragraphs & Lists</h4>
+            <div class="row">
+              <div class="one half padded">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Paragraph with <sup>superscript</sup></p>
+                <p>Paragraph with <sub>subscript</sub></p>
+                <p>Paragraph with <small>small text</small></p>
+                <p>Paragraph with 
+                  <big>large text</big>
+                </p>
+                <p>Paragraph with <em>emphasized text</em></p>
+                <p>Paragraph with <b>bold text</b></p>
+                <p>Paragraph with 
+                  <del>deleted text</del>
+                </p>
+                <p>Paragraph with <abbr title="Abreviated">abbr</abbr> text</p>
+              </div>
+              <div class="one half padded">
+                <ul class="unstyled">
+                  <li>Unstyled list item 1</li>
+                  <li>Unstyled list item 2</li>
+                </ul>
+                <ol class="unstyled">
+                  <li>Unstyled ordered list item 1</li>
+                  <li>Unstyled ordered list item 2</li>
+                </ol>
+                <ul>
+                  <li>Normal list item 1</li>
+                  <li>Normal list item 2</li>
+                </ul>
+                <ol>
+                  <li>Ordered list item 1</li>
+                  <li>Ordered list item 2</li>
+                </ol>
+                <ul class="list">
+                  <li>Styled list item 1</li>
+                  <li>Styled list item 2</li>
+                </ul>
+                <ol class="list">
+                  <li>Styled ordered list item 1</li>
+                  <li>Styled ordered list item 2</li>
+                </ol>
+              </div>
             </div>
           </div>
           <hr><br>
-          <h2 class="AmericanTypewriter">Quotes</h2>
-          <blockquote>A computer once beat me at chess, but it was no match for me at kick boxing.
-            <cite>Emo Phillips</cite>
-          </blockquote><br>
-          <h2 class="AmericanTypewriter">Code</h2>
-          <h4 class="AverageSans">Blocks</h4>
-          <pre><code>$names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;</code><code>@for $i from 1 through length($names) {</code><code>  .#{nth($names, $i)} {</code><code>    @extend %#{nth($names, $i)};</code><code>  }</code><code>}</code></pre><br>
-          <h4 class="AverageSans">Inline</h4>
-          <p>This is some text with some<code>inline code</code>automatic</p>
+          <div class="bounceInLeft animated">
+            <h4>Colors</h4>
+            <div class="row">
+              <div class="one third padded"><b><span class="yellow">Yellow</span><br><span class="orange">Orange</span><br><span class="red">Red</span><br><span class="pink">Pink</span><br><span class="purple">Purple</span><br><span class="asphalt">Asphalt</span><br><span class="blue">Blue</span><br><span class="turquoise">Turquoise</span><br><span class="green">Green</span></b></div>
+              <div class="one third padded">
+                <ul>
+                  <li class="yellow">Normal list item</li>
+                  <li class="orange">Normal list item</li>
+                  <li class="red">Normal list item</li>
+                  <li class="pink">Normal list item</li>
+                  <li class="purple">Normal list item</li>
+                  <li class="asphalt">Normal list item</li>
+                  <li class="blue">Normal list item</li>
+                  <li class="turquoise">Normal list item</li>
+                  <li class="green">Normal list item</li>
+                </ul>
+              </div>
+              <div class="one third padded">
+                <ol>
+                  <li class="yellow">Ordered list item</li>
+                  <li class="orange">Ordered list item</li>
+                  <li class="red">Ordered list item</li>
+                  <li class="pink">Ordered list item</li>
+                  <li class="purple">Ordered list item</li>
+                  <li class="asphalt">Ordered list item</li>
+                  <li class="blue">Ordered list item</li>
+                  <li class="turquoise">Ordered list item</li>
+                  <li class="green">Ordered list item</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row">
+              <div class="one third padded"><b><span class="info">Info</span><br><span class="alert">Alert</span><br><span class="warning">Warning</span><br><span class="error">Error</span><br><span class="success">Success</span><br><span class="disabled">Disabled</span></b></div>
+              <div class="one third padded">
+                <ul class="list">
+                  <li class="yellow">Styled list item</li>
+                  <li class="orange">Styled list item</li>
+                  <li class="red">Styled list item</li>
+                  <li class="pink">Styled list item</li>
+                  <li class="purple">Styled list item</li>
+                  <li class="asphalt">Styled list item</li>
+                  <li class="blue">Styled list item</li>
+                  <li class="turquoise">Styled list item</li>
+                  <li class="green">Styled list item</li>
+                </ul>
+              </div>
+              <div class="one third padded">
+                <ol class="list">
+                  <li class="yellow">Styled ordered list item</li>
+                  <li class="orange">Styled ordered list item</li>
+                  <li class="red">Styled ordered list item</li>
+                  <li class="pink">Styled ordered list item</li>
+                  <li class="purple">Styled ordered list item</li>
+                  <li class="asphalt">Styled ordered list item</li>
+                  <li class="blue">Styled ordered list item</li>
+                  <li class="turquoise">Styled ordered list item</li>
+                  <li class="green">Styled ordered list item</li>
+                </ol>
+              </div>
+            </div>
+          </div>
           <hr><br>
+          <div class="bounceInRight animated">
+            <h4>Links</h4>
+            <div class="row">
+              <div class="one third padded">
+                <h1><a href="#">Heading 1 link</a></h1>
+                <h2><a href="#">Heading 2 link</a></h2>
+                <h3><a href="#">Heading 3 link</a></h3>
+                <h4><a href="#">Heading 4 link</a></h4>
+                <h5><a href="#">Heading 5 link</a></h5>
+                <h6><a href="#">Heading 6 link</a></h6>
+              </div>
+              <div class="one third padded">
+                <p><a href="#">Paragraph link</a></p>
+                <p><a href="#">Paragraph link with <sup>superscript</sup></a></p>
+                <p><a href="#">Paragraph link with <sub>subscript</sub></a></p>
+                <p><a href="#">Paragraph link with <small>small text</small></a></p>
+                <p><a href="#">Paragraph link with 
+                    <big>large text</big></a></p>
+                <p><a href="#">Paragraph link with <em>emphasized text</em></a></p>
+                <p><a href="#">Paragraph link with <b>bold text</b></a></p>
+              </div>
+              <div class="one third padded">
+                <ul>
+                  <li><a href="#">Normal list link item 1</a></li>
+                  <li><a href="#">Normal list link item 2</a></li>
+                </ul>
+                <ol>
+                  <li><a href="#">Ordered list link item 1</a></li>
+                  <li><a href="#">Ordered list link item 2</a></li>
+                </ol>
+                <ul class="list">
+                  <li><a href="#">Styled list link item 1</a></li>
+                  <li><a href="#">Styled list link item 2</a></li>
+                </ul>
+                <ol class="list">
+                  <li><a href="#">Styled ordered link list item 1</a></li>
+                  <li><a href="#">Styled ordered link list item 2</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <hr><br>
+          <div class="bounceInLeft animated">
+            <h4>Web Fonts</h4>
+            <div class="row">
+              <div class="one third padded">
+                <h1 class="source-sans-pro">Source Sans Pro</h1>
+              </div>
+              <div class="one third padded">
+                <h1 class="museo-slab">Museo Slab</h1>
+              </div>
+              <div class="one third padded">
+                <h1 class="quicksand">Quicksand</h1>
+              </div>
+            </div>
+          </div>
+          <hr><br>
+          <div class="bounceInRight animated">
+            <h4>Quotations</h4>
+            <p>This is a normal sentence with an 
+              <quote>inline quote</quote> nested within it.
+            </p>
+            <blockquote>A computer once beat me at chess, but it was no match for me at kick boxing.
+              <cite>Emo Phillips</cite>
+            </blockquote>
+          </div>
+          <hr><br>
+          <div class="bounceInUp animated">
+            <h4>Code</h4>
+            <p>This is some text with some<code>inline code</code>automatic</p>
+            <pre><code>$names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;</code><code>@for $i from 1 through length($names) {</code><code>  .#{nth($names, $i)} {</code><code>    @extend %#{nth($names, $i)};</code><code>  }</code><code>}</code></pre>
+          </div>
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="message triple gap-top bounceInUp animated">
       <div class="container padded">
-        <div class="green callout">
-          <div class="row">
-            <div class="three fourths padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
-              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
-            </div>
-            <div class="one fourth padded">
-              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
-            </div>
+        <div class="row">
+          <div class="three fourths padded">
+            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="red">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
+            <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="asphalt">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+          </div>
+          <div class="one fourth padded">
+            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="blue large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="asphalt large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="red large inline gapped"><i class="icon-envelope"></i></a></p>
           </div>
         </div>
       </div>
     </footer>
-    <!-- scripts-->
-    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
-    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
+    <!-- javascript-->
     <script type="text/javascript" src="../js/groundwork.all.js"></script>
     <!-- google analytics-->
     <script type="text/javascript">
@@ -310,7 +310,6 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-      
     </script>
   </body>
 </html>

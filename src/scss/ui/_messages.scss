@@ -1,69 +1,74 @@
 // =============================================
 //              Message Boxes
-//          Last Updated:2013-4-24
+//          Last Updated:2013-8-21
 // =============================================
 
-
+$ui-classes:      true !default;
+$ui-modifiers:    "dismissible" !default;
+$ui-states:       "info" "alert" "warning" "error" "success" !default;
+$aria-selectors:  true !default;
+$default-radius:      4px !default;
 
 
 %message {
-  position:relative;
-  word-wrap:break-word;
-  padding:0.25em 1em;
-  background:$button-color;
-  border:1px solid $button-active;
-  color:$button-text;
-  font-weight:bold;
-  text-decoration:none;
+  position: relative;
+  word-wrap: break-word;
+  padding: 0.25em 1em;
+  background: lighten(gray, 32.5%);
+  color: darken(gray, 15%);
+  border: 1px solid $border-color;
+  font-weight: bold;
+  text-decoration: none;
   @include rounded($default-radius);
 }
 
 %message-small { @include _small; }
+%message-medium { @include _medium; }
 %message-large { @include _large; }
 %message-square { @include _square; }
 %message-round { @include _round; }
 %message-disabled { @include state(disabled,normal,desaturate($button-color,20%)); }
 
 %message-info {
-  background-color:$info-background;
-  color:$info-color;
-  border-color:$info-border;
+  background-color: $info-background;
+  color: $info-color;
+  border-color: $info-border;
   &%message-disabled {
     @include state(disabled,normal,desaturate($info-color,20%));
   }
 }
 
 %message-alert {
-  background-color:$alert-background;
-  color:$alert-color;
-  border-color:$alert-border;
+  background-color: $alert-background;
+  color: $alert-color;
+  border-color: $alert-border;
   &%message-disabled {
     @include state(disabled,normal,desaturate($alert-color,20%));
   }
 }
 
 %message-warning {
-  background:$warning-background;
-  color:$warning-color;
-  border-color:$warning-border;
+  background: $warning-background;
+  color: $warning-color;
+  border-color: $warning-border;
   &%message-disabled {
     @include state(disabled,normal,desaturate($warning-color,20%));
   }
 }
 
 %message-error {
-  background:$error-background;
-  color:$error-color;
-  border-color:$error-border;
+  background: $error-background;
+  color: $error-color;
+  border-color: $error-border;
   &%message-disabled {
     @include state(disabled,normal,desaturate($error-color,20%));
   }
 }
 
 %message-success {
-  background:$success-background;
-  color:$success-color;
-  border-color:$success-border;
+  background: $success-background;
+  color: $success-color;
+  border-color: $success-border;
   &%message-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
   }
@@ -85,9 +90,9 @@
 
 @for $i from 1 through length($modifier-name) {
   %message-#{nth($modifier-name, $i)} {
-    border-color:nth($modifier-code, $i);
-    background-color:lighten(nth($modifier-code, $i), 10%);
-    color:nth($modifier-text, $i);
+    border-color: nth($modifier-code, $i);
+    background-color: lighten(nth($modifier-code, $i), 10%);
+    color: nth($modifier-text, $i);
   }
 }
 

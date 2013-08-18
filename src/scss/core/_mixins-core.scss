@@ -1,9 +1,9 @@
 // =============================================
 //              Global Mixins
-//          Last Updated:2013-4-24
+//          Last Updated:2013-8-16
 // =============================================
 
-
+$font-family: Helvetica, Arial, Geneva, sans-serif !default;
 
 
 ///////////////////////
@@ -127,16 +127,6 @@
     @include border-radius($radius);
     *behavior: url($PIE_path);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
   }
-}
-
-// animations
-@mixin animation($animation: spin, $count: infinite, $speed: 2s, $easing: linear) {
-  animation: $animation $speed $easing;
-  animation-iteration-count: $count;
-}
-// deprecated, use animation() now instead
-@mixin spin($count: infinite, $speed: 2s) {
-  @include animation(spin, $count, $speed);
 }
 
 

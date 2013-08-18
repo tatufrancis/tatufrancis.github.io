@@ -1,20 +1,40 @@
 // =============================================
 //                   Forms
-//          Last Updated:2013-4-24
+//          Last Updated:2013-8-21
 // =============================================
 
+$form-tags:       true !default;
+$form-classes:    false !default;
+$form-elements:   "fieldset" "legend" "label" "input" "textarea" !default;
+$default-radius:  4px !default;
 
+$fieldset-color:  darken(white, 2%) !default;
+
+$border-thickness:    1px !default;
+$border-style:        solid !default;
+$border-color:        #dddddd !default;
+
+$error-color:         #b94a48 !default;
+$error-text:          #ffffff !default;
+$error-background:    #f2dede !default;
+$error-border:        #eed3d7 !default;
+
+$success-color:       #468847 !default;
+$success-text:        #ffffff !default;
+$success-background:  #dff0d8 !default;
+$success-border:      #d6e9c6 !default;
 
 
 %fieldset {
+  background-color: $fieldset-color;
   border:1px solid $border-color;
   padding:$gutter;
+  @include rounded($default-radius);
 }
 
 %legend {
-  font-weight:900;
-  color:darken($background-color, 35%);
-  margin-bottom:0;
+  font-weight: 900;
+  margin-bottom: 0;
 }
 
 %label {
@@ -46,12 +66,12 @@
     height:auto;
   }
   &[type=checkbox], &[type=radio] {
-    display:inline-block;
-    width:1em;
-    height:1em;
-    margin:0 0 0 0.2em;
-    background:white;
-    border:1px solid $border-color;
+    @extend %inline-block;
+    width: 1em;
+    height: 1em;
+    margin: 0 0 0 0.2em;
+    background: white;
+    border: $border-thickness $border-style $border-color;
     @include rounded($default-radius);
   }
 }
@@ -82,12 +102,6 @@
   color:lighten($success-color, 62%);;
   background:$success-color;
   border-color:$success-color;
-}
-
-%radio-list {
-  list-style:none;
-  margin:0;
-  padding:0;
 }
 
 %prefix, %suffix {
@@ -178,8 +192,5 @@
   }
   .input, .select, .textarea {
     @extend %field;
-  }
-  .radio-list {
-    @extend %radio-list;
   }
 }

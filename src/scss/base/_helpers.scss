@@ -1,8 +1,40 @@
 // =============================================
 //              Layout Helpers
-//          Last Updated:2013-8-9
+//          Last Updated:2013-8-16
 // =============================================
 
+$positioning-classes: true !default;
+
+$spacer-classes:      true !default;
+$spacer-helpers:      "padded" "pad-top" "pad-right" "pad-bottom" "pad-left"
+                      "gapped" "gap-top" "gap-right" "gap-bottom" "gap-left"
+                      "offset" "offset-top" "offset-right" "offset-bottom" "offset-left" !default;
+
+$spacer-mod-classes:  true !default;
+$spacer-modifiers:    "half" "double" "triple" !default;
+
+$size-classes:        true !default;
+$size-helpers:        "small" "medium" "large" !default;
+
+$layout-classes:      true !default;
+$layout-helpers:      "inline" "inline-block" "block"
+                      "hidden"
+                      "zero"
+                      "pull-right" "pull-left" "pull-none" "clear"
+                      "center" !default;
+
+$typography-classes:  true !default;
+$typography-helpers:  "align-top" "align-right" "align-bottom" "align-left" "align-center" "justify"
+                      "truncate" !default;
+
+$border-classes:      true !default;
+$border-helpers:      "bordered" "border-right" "border-left" "border-top" "border-bottom" !default;
+
+$radius-classes:      true !default;
+$radius-helpers:      "square" "round" !default;
+
+$rotation-classes:    true !default;
+$rotation-helpers:    "rotate-90" "rotate-90-ctr" "rotate-180" "rotate-180-ctr" "rotate-270" "rotate-270-ctr" "rotate-360" "rotate-360-ctr" !default;
 
 
 ///////////////////////
@@ -50,19 +82,23 @@
   @if $position == center {left: 50%;}
 }
 
+@mixin _relative                  { position: relative; }
 @mixin _static                    { position: static; }
 
-@mixin _inline                    { display:inline-block; width:auto; }
+@mixin _inline                    { display:inline; }
+@mixin _inline-block              { display:inline-block; width:auto; }
 @mixin _block                     { display:block; }
 @mixin _hidden                    { display:none !important; }
 
 @mixin _small                     { font-size:0.8em; }
+@mixin _medium                    { font-size:1em; }
 @mixin _large                     { font-size:1.5em; }
 
 @mixin _zero                      { margin:0; padding:0; }
 
 @mixin _pull-right                { float:right; }
 @mixin _pull-left                 { float:left; }
+@mixin _pull-none                 { float:none; }
 
 @mixin _bordered                  { border: 1px solid $border-color; }
 @mixin _border-top                { border-top:1px solid $border-color; }
@@ -84,14 +120,14 @@
 @mixin _square                    { @include border-radius(0); }
 @mixin _round                     { @include rounded(9999em); }
 
-@mixin _disabled                  { @include state(disabled,textOnly); }
-
-@mixin _rotate-90                 { @include _inline; @include rotate(90deg); }
-@mixin _rotate-180                { @include _inline; @include rotate(180deg); }
-@mixin _rotate-270                { @include _inline; @include rotate(270deg); }
-@mixin _rotate-90-ctr             { @include _inline; @include rotate(-90deg); }
-@mixin _rotate-180-ctr            { @include _inline; @include rotate(-180deg); }
-@mixin _rotate-270-ctr            { @include _inline; @include rotate(-270deg); }
+@mixin _rotate-90                 { @include _inline-block; @include rotate(90deg); }
+@mixin _rotate-180                { @include _inline-block; @include rotate(180deg); }
+@mixin _rotate-270                { @include _inline-block; @include rotate(270deg); }
+@mixin _rotate-360                { @include _inline-block; @include rotate(360deg); }
+@mixin _rotate-90-ctr             { @include _inline-block; @include rotate(-90deg); }
+@mixin _rotate-180-ctr            { @include _inline-block; @include rotate(-180deg); }
+@mixin _rotate-270-ctr            { @include _inline-block; @include rotate(-270deg); }
+@mixin _rotate-360-ctr            { @include _inline-block; @include rotate(-360deg); }
 
 
 
@@ -103,64 +139,79 @@
 %clear, %clearfix { @include _clear;}
 
 %padded           { @include _padded;
+  &.half          { @include _padded(0.5); }
   &%double        { @include _padded(2); }
   &%triple        { @include _padded(3); }
 }
 %pad-top          { @include _pad-top;
+  &.half          { @include _pad-top(0.5); }
   &%double        { @include _pad-top(2); }
   &%triple        { @include _pad-top(3); }
 }
 %pad-right        { @include _pad-right;
+  &.half          { @include _pad-right(0.5); }
   &%double        { @include _pad-right(2); }
   &%triple        { @include _pad-right(3); }
 }
 %pad-bottom       { @include _pad-bottom;
+  &.half          { @include _pad-bottom(0.5); }
   &%double        { @include _pad-bottom(2); }
   &%triple        { @include _pad-bottom(3); }
 }
 %pad-left         { @include _pad-left;
+  &.half          { @include _pad-left(0.5); }
   &%double        { @include _pad-left(2); }
   &%triple        { @include _pad-left(3); }
 }
 
 %gapped           { @include _gapped;
+  &.half          { @include _gapped(0.5); }
   &%double        { @include _gapped(2); }
   &%triple        { @include _gapped(3); }
 }
 %gap-top          { @include _gap-top;
+  &.half          { @include _gap-top(0.5); }
   &%double        { @include _gap-top(2); }
   &%triple        { @include _gap-top(3); }
 }                   
 %gap-right        { @include _gap-right;
+  &.half          { @include _gap-right(0.5); }
   &%double        { @include _gap-right(2); }
   &%triple        { @include _gap-right(3); }
 }                   
 %gap-bottom       { @include _gap-bottom;
+  &.half          { @include _gap-bottom(0.5); }
   &%double        { @include _gap-bottom(2); }
   &%triple        { @include _gap-bottom(3); }
 }                   
 %gap-left         { @include _gap-left;
+  &.half          { @include _gap-left(0.5); }
   &%double        { @include _gap-left(2); }
   &%triple        { @include _gap-left(3); }
 }
 
 %offset           { @include _offset;
+  &.half          { @include _offset(0.5); }
   &%double        { @include _offset(2); }
   &%triple        { @include _offset(3); }
 }
 %offset-top       { @include _offset-top;
+  &.half          { @include _offset-top(0.5); }
   &%double        { @include _offset-top(2); }
   &%triple        { @include _offset-top(3); }
 }
 %offset-right     { @include _offset-right;
+  &.half          { @include _offset-right(0.5); }
   &%double        { @include _offset-right(2); }
   &%triple        { @include _offset-right(3); }
 }
 %offset-bottom    { @include _offset-bottom;
+  &.half          { @include _offset-bottom(0.5); }
   &%double        { @include _offset-bottom(2); }
   &%triple        { @include _offset-bottom(3); }
 }
 %offset-left      { @include _offset-left;
+  &.half          { @include _offset-left(0.5); }
   &%double        { @include _offset-left(2); }
   &%triple        { @include _offset-left(3); }
 }
@@ -181,19 +232,23 @@
 %absolute-middle  { @include _absolute(middle); }
 %absolute-center  { @include _absolute(center); }
 
+%relative         { @include _relative; }
 %static           { @include _static; }
 
 %inline           { @include _inline; }
+%inline-block     { @include _inline-block; }
 %block            { @include _block; }
 %hidden           { @include _hidden; }
 
 %small            { @include _small; }
+%medium           { @include _medium; }
 %big, %large      { @include _large; }
 
 %zero             { @include _zero; }
 
 %pull-right       { @include _pull-right; }
 %pull-left        { @include _pull-left; }
+%pull-none        { @include _pull-none; }
 
 %bordered         { @include _bordered; }
 %border-top       { @include _border-top; }
@@ -205,7 +260,7 @@
 %align-right      { @include _align-right; }
 %align-bottom     { @include _align-bottom; } // must have height (experimental)
 %align-left       { @include _align-left; }
-%align-center     { @include _align-center; }   
+%align-center     { @include _align-center; }
 %justify          { @include _justify; }
 
 %truncate         { @include _truncate; }
@@ -215,14 +270,14 @@
 %square           { @include _square; }
 %round            { @include _round; }
 
-%disabled         { @include _disabled; }
-
 %rotate-90        { @include _rotate-90; }
-%rotate-180       { @include _rotate-180; }
-%rotate-270       { @include _rotate-270; }
 %rotate-90-ctr    { @include _rotate-90-ctr; }
+%rotate-180       { @include _rotate-180; }
 %rotate-180-ctr   { @include _rotate-180-ctr; }
+%rotate-270       { @include _rotate-270; }
 %rotate-270-ctr   { @include _rotate-270-ctr; }
+%rotate-360       { @include _rotate-360; }
+%rotate-360-ctr   { @include _rotate-360-ctr; }
 
 
 
@@ -256,6 +311,7 @@
     &.middle        { @extend %absolute-middle; }
     &.center        { @extend %absolute-center; }
   }
+  .relative         { @extend %relative; }
   .static           { @extend %static; }
 }
 @if $typography-classes {

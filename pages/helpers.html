@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; Helpers</title>
     <style type="text/css">
       .desktop-only,
@@ -22,94 +22,70 @@
         padding: 0.25em;
         color: #fff;
       }
+      .demo .row {
+        background: #f6f6f6 url('../images/diag6-black.png') center repeat;
+      }
+      .demo .row div {
+        background: #eee;
+        border: 1px dashed #ddd;
+      }
       
     </style>
-    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
     <!-- Modernizr -->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
-    <!-- jQuery -->
+    <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
     <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
-    <script type="text/javascript">
-      // extend Modernizr to have datauri test
-      (function(){
-        var datauri = new Image();
-        datauri.onerror = function() {
-          Modernizr.addTest('datauri', function () { return false; });
-        };
-        datauri.onload = function() {
-          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
-          Modernizr.load({
-            test: Modernizr.datauri,
-            nope: '../css/no-datauri.css'
-          });
-        };
-        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-      })();
-      // SVG support?
-      Modernizr.load({
-        test: Modernizr.inlinesvg,
-        yep: [
-          '../css/social-icons-svg.css'
-        ],
-        nope: [
-          '../css/social-icons-png.css'
-        ]
-      });
-      // polyfill for HTML5 placeholders
-      Modernizr.load({
-        test: Modernizr.input.placeholder,
-        nope: [
-          '../css/placeholder_polyfill.min.css',
-          '../js/libs/placeholder_polyfill.jquery.js'
-        ]
-      });
-      
-    </script>
+    <style type="text/css">
+      .logo {
+        position: relative;
+        top: -0.5em;
+      }
+      .logo a, .logo a:visited {
+        text-decoration: none;
+        color: #2B2B2D;
+      }
+      .logo img {
+        height: 2em;
+        position: relative;
+        top: 0.55em;
+        margin-right: 0.3em;
+      }
+    </style>
   </head>
   <body>
-    <header class="white band padded">
-      <div class="container">
-        <h2 class="AverageSans">GroundworkCSS</h2>
-        <nav class="nav inline menu gap-top">
+    <header class="padded">
+      <div class="container fadeIn animated">
+        <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS</a></h2>
+        <nav class="nav gap-top">
           <ul>
             <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
-            <li class="menu"><a href="#">Example Layouts</a>
+            <li><a href="#">Example Layouts</a>
               <ul>
-                <li><a href="./layout-1.html">Layout 1</a></li>
-                <li><a href="./layout-2.html">Layout 2</a></li>
-                <li><a href="./layout-3.html">Layout 3</a></li>
-                <li><a href="./layout-4.html">Layout 4</a></li>
-                <li><a href="./layout-5.html">Layout 5</a></li>
-                <li><a href="./layout-6.html">Image Gallery</a></li>
-                <li><a href="./layout-7.html">Ecommerce</a></li>
+                <li><a href="./layout-a.html">Web Page</a></li>
+                <li><a href="./layout-b.html">Image Gallery</a></li>
+                <li><a href="./layout-c.html">Ecommerce Page</a></li>
               </ul>
             </li>
-            <li class="menu"><a href="#">Example Components Usage</a>
+            <li><a href="#">Usage Examples</a>
               <ul>
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
-                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
-                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
-                <li><a href="./ui-elements.html" title="Message &amp; callout boxes">UI Elements</a></li>
-                <li><a href="./tooltips.html" title="Tooltips">Tooltips</a></li>
-                <li><a href="./tables.html" title="Tabs, message &amp; callout boxes, tables and tooltips">Tables</a></li>
-                <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
-                <li><a href="./tiles.html" title="Tiles">Tiles</a></li>
+                <li><a href="#" title="Navigation, buttons, messages and tables">UI Elements</a>
+                  <ul>
+                    <li><a href="./navigation.html" title="Navigation">Navigation</a></li>
+                    <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                    <li><a href="./messages.html" title="Message blocks">Message Blocks</a></li>
+                    <li><a href="./tables.html" title="Tables">Tables</a></li>
+                    <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
+                  </ul>
+                </li>
                 <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
-                <li><a href="./social-icons.html">Social Icons</a></li>
                 <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
-                <li><a href="./modals.html" title="Magnific Popup modals">Magnific Popup</a></li>
-                <li><a href="./cycle2.html" title="Cycle2 Slideshows">Cycle2</a></li>
+                <li><a href="./animations.html" title="Pure CSS3 Animations">Animations</a></li>
               </ul>
             </li>
           </ul>
@@ -117,43 +93,347 @@
       </div>
     </header>
     <div class="container">
-      <div class="pad-left pad-right">
-        <h1 class="AverageSans zero">Conditional Content Helpers</h1>
-        <p>Conditionally show and hide elements for specific viewport sizes.</p>
+      <div class="padded">
         <div class="row">
-          <div class="one whole padded">
-            <ol class="list large">
-              <li class="green desktop-only">Desktop only</li>
-              <li class="blue hide-on-desktop">Hide on desktop</li>
-              <li class="green ipad-only">iPad only</li>
-              <li class="blue hide-on-ipad">Hide on iPad</li>
-              <li class="green small-tablet-only">Small-tablet only</li>
-              <li class="blue hide-on-small-tablet">Hide on small-tablet</li>
-              <li class="green mobile-only">Mobile only</li>
-              <li class="blue hide-on-mobile">Hide on mobile</li>
-            </ol>
+          <div class="three fifths bounceInRight animated">
+            <h1 class="zero museo-slab">Helpers</h1>
+            <p class="quicksand">Layout, breakpoint-targeted, and conditional helpers.</p>
+          </div>
+          <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
+            <p class="quicksand">Component Usage Example 2 of 11</p>
+            <p><a href="grid.html" class="blue button"><i class="icon-arrow-left"></i> Back</a> <a href="typography.html" class="green button">Next: Typography <i class="icon-arrow-right"></i></a></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="one whole padded bounceInUp animated">
+          <h4 class="zero">Conditional Display Helpers</h4>
+          <p class="small">Conditionally show and hide elements at specific breakpoints.</p>
+          <div class="row">
+            <div class="one half small-tablet padded">
+              <h4>Demonstration</h4>
+              <ol class="list large">
+                <li class="green desktop-only">desktop-only</li>
+                <li class="blue hide-on-desktop">hide-on-desktop</li>
+                <li class="green ipad-only">ipad-only</li>
+                <li class="blue hide-on-ipad">hide-on-ipad</li>
+                <li class="green small-tablet-only">small-tablet-only</li>
+                <li class="blue hide-on-small-tablet">hide-on-small-tablet</li>
+                <li class="green mobile-only">mobile-only</li>
+                <li class="blue hide-on-mobile">hide-on-mobile</li>
+              </ol>
+            </div>
+            <div class="one half small-tablet padded">
+              <h4 class="double gap-top-mobile">Conditional Display Classes</h4>
+              <ul class="unstyled">
+                <li>.desktop-only</li>
+                <li>.hide-on-desktop</li>
+                <li>.ipad-only</li>
+                <li>.hide-on-ipad</li>
+                <li>.small-tablet-only</li>
+                <li>.hide-on-small-tablet</li>
+                <li>.mobile-only</li>
+                <li>.hide-on-mobile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <hr><br>
+      <div class="row">
+        <div class="one whole padded bounceInLeft animated">
+          <h4 class="zero">Spacing Helpers</h4>
+          <p class="small">
+             
+            With breakpoint-targeted conditional classes and overrides. (i.e. - <code>.no-pad-mobile</code>,  <code>.no-gap-desktop</code>,  <code>.double.gap-top-mobile</code>,  <code>.padded-small-tablet</code>,  <code>.padded-mobile</code>, etc.)
+          </p>
+          <div class="row">
+            <div class="one third small-tablet padded">
+              <h4>Padded</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="padded">.padded</div>
+                  <div class="pad-top">.pad-top</div>
+                  <div class="pad-right">.pad-right</div>
+                  <div class="pad-bottom">.pad-bottom</div>
+                  <div class="pad-left">.pad-left</div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Double</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="double padded">.double.padded</div>
+                  <div class="double pad-top">.double.pad-top</div>
+                  <div class="double pad-right">.double.pad-right</div>
+                  <div class="double pad-bottom">.double.pad-bottom</div>
+                  <div class="double pad-left">.double.pad-left</div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Triple</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="triple padded">.triple.padded</div>
+                  <div class="triple pad-top">.triple.pad-top</div>
+                  <div class="triple pad-right">.triple.pad-right</div>
+                  <div class="triple pad-bottom">.triple.pad-bottom</div>
+                  <div class="triple pad-left">.triple.pad-left</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one third small-tablet padded">
+              <h4>Gapped</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="gapped">.gapped</div>
+                  <div class="gap-top">.gap-top</div>
+                  <div class="gap-right">.gap-right</div>
+                  <div class="gap-bottom">.gap-bottom</div>
+                  <div class="gap-left">.gap-left</div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Double</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="double gapped">.double.gapped</div>
+                  <div class="double gap-top">.double.gap-top</div>
+                  <div class="double gap-right">.double.gap-right</div>
+                  <div class="double gap-bottom">.double.gap-bottom</div>
+                  <div class="double gap-left">.double.gap-left</div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Triple</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="triple gapped">.triple.gapped</div>
+                  <div class="triple gap-top">.triple.gap-top</div>
+                  <div class="triple gap-right">.triple.gap-right</div>
+                  <div class="triple gap-bottom">.triple.gap-bottom</div>
+                  <div class="triple gap-left">.triple.gap-left</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <hr><br>
+      <div class="row">
+        <div class="one whole padded bounceInRight animated">
+          <h4 class="zero">Layout</h4>
+          <p class="small">
+             
+            With breakpoint-targeted conditional classes and overrides. (i.e. - <code>.block-desktop</code>, <code>.no-border-small-tablet</code>, <code>.pull-right-small-tablet</code>, <code>.center-ipad</code>
+          </p>
+          <div class="row">
+            <div class="one third small-tablet padded">
+              <h4>Display</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="inline">.inline</div>
+                  <div class="inline-block">.inline-block</div>
+                  <div class="block">.block</div>
+                  <div class="hidden">.hidden</div>
+                </div>
+              </div><br>
+              <h4>Border Radius</h4>
+              <div class="demo">
+                <div class="row">
+                  <div>
+                    <button class="square">.square</button>
+                  </div>
+                  <div>
+                    <button class="round">.round</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Floating</h4>
+              <div class="demo">
+                <div class="row">
+                  <div class="pull-none">.pull-none</div>
+                  <div class="pull-right">.pull-right</div>
+                  <div class="pull-left">.pull-left</div>
+                </div>
+              </div><br>
+              <h4>Centering</h4>
+              <div class="demo">
+                <div class="row">
+                  <div>
+                    <button class="center">.center</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Borders</h4>
+              <div class="demo">
+                <div class="bordered">.bordered</div><br>
+                <div class="border-top">.border-top</div><br>
+                <div class="border-right">.border-right</div><br>
+                <div class="border-bottom">.border-bottom</div><br>
+                <div class="border-left">.border-left</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <hr><br>
+      <div class="row">
+        <div class="one whole padded bounceInUp animated">
+          <h4>Typographic</h4>
+          <div class="row">
+            <div class="one third small-tablet padded">
+              <h4>Font Sizing</h4>
+              <p class="zero">.small</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="small">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">.medium</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="medium">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">.large</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="large">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Text Alignment</h4>
+              <p class="zero">.align-left</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="align-left">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">.align-center</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="align-center">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">.align-right</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="align-right">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">.justify</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="justify">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div>
+            </div>
+            <div class="one third small-tablet padded">
+              <h4>Text Helpers</h4>
+              <p class="zero">.truncate </p>
+              <p class="zero small">(single-line, pure CSS)</p>
+              <div class="demo">
+                <div class="row">
+                  <div class="truncate">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">data-truncate='2' </p>
+              <p class="zero small">(multi-line, powered by truncateLines plugin)</p>
+              <div class="demo">
+                <div class="row">
+                  <div data-truncate="2">The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.</div>
+                </div>
+              </div><br>
+              <p class="zero">.responsive </p>
+              <p class="zero small">(single-line, powered by responsiveText plugin)</p>
+              <div class="demo">
+                <div class="row">
+                  <div data-compression="20.65" class="responsive">The quick brown fox jumped over the lazy dog.</div>
+                </div>
+              </div>
+              <p class="gap-top small">Note: <code>data-compression='20.65'</code> applied to increase compression</p><br>
+              <p class="zero">.responsive </p>
+              <p class="zero small">(scrollable single-line, powered by responsiveText plugin)</p>
+              <div class="demo">
+                <div class="row">
+                  <div data-scrollable="true" class="responsive">The quick brown fox jumped over the lazy dog.</div>
+                </div>
+              </div>
+              <p class="gap-top small">Note: <code>data-scrollable='true'</code> applied to enable scrolling on hover</p>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <hr><br>
+      <div class="row">
+        <div class="one whole padded bounceInUp animated">
+          <h4>Rotation</h4>
+          <div class="row">
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-90"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-90 </p>
+            </div>
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-180"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-180 </p>
+            </div>
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-270"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-270 </p>
+            </div>
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-360"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-360</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-90-ctr"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-90-ctr  </p>
+            </div>
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-180-ctr"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-180-ctr </p>
+            </div>
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-270-ctr"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-270-ctr </p>
+            </div>
+            <div class="one fourth small-tablet two-up-mobile double padded align-center">
+              <div class="rotate-360-ctr"><i class="icon-4x icon-power-off"></i></div>
+              <p>.rotate-360-ctr </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="message triple gap-top bounceInUp animated">
       <div class="container padded">
-        <div class="green callout">
-          <div class="row">
-            <div class="three fourths padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
-              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
-            </div>
-            <div class="one fourth padded">
-              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
-            </div>
+        <div class="row">
+          <div class="three fourths padded">
+            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="red">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
+            <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="asphalt">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+          </div>
+          <div class="one fourth padded">
+            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="blue large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="asphalt large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="red large inline gapped"><i class="icon-envelope"></i></a></p>
           </div>
         </div>
       </div>
     </footer>
-    <!-- scripts-->
-    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
-    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
+    <!-- javascript-->
     <script type="text/javascript" src="../js/groundwork.all.js"></script>
     <!-- google analytics-->
     <script type="text/javascript">
@@ -165,7 +445,6 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-      
     </script>
   </body>
 </html>

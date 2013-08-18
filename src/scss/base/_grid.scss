@@ -1,12 +1,20 @@
 // =============================================
 //    Fractional grid system by Gary Hepting
-//          Last Updated:2013-4-24
+//          Last Updated:2013-8-16
 //
 //    ***** REQUIRES BORDER BOX SIZING *****
 //
 // =============================================
 
-
+$numerators:            "one"    "two"    "three"  "four"    "five"   "six"    "seven"    "eight"   "nine"   "ten"    "eleven"    "twelve" !default;
+$denominators:          "whole"  "half"   "third"  "fourth"  "fifth"  "sixth"  "seventh"  "eighth"  "ninth"  "tenth"  "eleventh"  "twelfth" !default;
+$denominators-plural:   "wholes" "halves" "thirds" "fourths" "fifths" "sixths" "sevenths" "eighths" "ninths" "tenths" "elevenths" "twelfths" !default;
+$grid-classes:          true !default;
+$grid-adapter-classes:  true !default;
+$grid-adapters:         $one-whole $one-half $one-third $one-fourth $one-fifth !default;
+$container-width:       1200px !default;
+$gutter:                10px !default;
+$responsive:            true !default;
 
 
 ///////////////////////////////////////////////
@@ -15,9 +23,9 @@
 
 %container {
   @if $responsive {
-    max-width: $max-width;
+    max-width: $container-width;
   } @else {
-    width: $max-width;
+    width: $container-width;
   }
   margin: 0 auto;
 }
@@ -79,7 +87,29 @@ $selectors: if($grid-classes, "%" ".", "%");
   }
 }
 
-@if $responsive and $adapter-classes {
+@if $responsive and $grid-adapter-classes {
+  // ipad grid adapters
+  @media #{$ipad} {
+    @for $i from 1 through length($grid-adapters) {
+      .#{nth($numerators, ($i))}-up-ipad {
+        width: nth($grid-adapters, $i) !important;
+        clear: none !important;
+        float: left !important;
+        left: 0 !important;
+        right: 0 !important;
+      }
+    }
+  }
+  // grid adapter nth clearfix
+  @media #{$ipad} and #{$tablet} and #{$not-mobile} {
+    @for $i from 1 through length($grid-adapters) {
+      .#{nth($numerators, ($i))}-up-ipad {
+        &:nth-child(#{$i + 1}) {
+          clear: both !important;
+        }
+      }
+    }
+  }
   // small-tablet grid adapters
   @media #{$small-tablet} {
     @for $i from 1 through length($grid-adapters) {
@@ -122,7 +152,7 @@ $selectors: if($grid-classes, "%" ".", "%");
 // grid classes responsive
 @mixin grid-responsive($both: true) {
   $nots: ':not(.mobile)'; // set up mobile nots
-  @if $adapter-classes {
+  @if $grid-adapter-classes {
     @for $i from 1 through length($grid-adapters) {
       $nots: $nots + ':not(.' + unquote("#{nth($numerators, ($i))}") + '-up-mobile)';
     }
@@ -145,7 +175,7 @@ $selectors: if($grid-classes, "%" ".", "%");
     @for $j from 2 through length($numerators) {
       @if $both {
         $nots: $nots + ':not(.small-tablet)'; // setup tablet $nots
-        @if $adapter-classes {
+        @if $grid-adapter-classes {
           @for $i from 1 through length($grid-adapters) {
             $nots: $nots + ':not(.' + unquote("#{nth($numerators, ($i))}") + '-up-small-tablet)';
           }

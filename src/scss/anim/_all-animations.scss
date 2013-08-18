@@ -7,7 +7,7 @@
 @charset "UTF-8";
 
 body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .animated {

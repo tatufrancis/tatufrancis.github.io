@@ -1,3 +1,6 @@
+$bounce-animations: true !default;
+
+
 @if $bounce-animations {
 
   @keyframes bounce {

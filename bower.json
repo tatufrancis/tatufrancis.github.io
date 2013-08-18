@@ -1,6 +1,6 @@
 {
   "name"        : "groundworkcss",
-  "version"     : "1.13.0",
+  "version"     : "2.0.0",
   "main"        : [
     "js/groundwork.all.js",
     "css/groundwork.css"
@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "jquery": "~1.10.2",
-    "modernizer": "~2.6.2",
-    "jquery-cycle2": "*"
+    "modernizer": "~2.6.2"
   }
 }

@@ -8,24 +8,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>GroundworkCSS &hearts; A Responsive HTML5, CSS &amp; Javascript Toolkit</title>
-  <link rel="apple-touch-icon" href="./images/apple-icons/apple-touch-icon-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icons/apple-touch-icon-57x57-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icons/apple-touch-icon-72x72-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icons/apple-touch-icon-114x114-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icons/apple-touch-icon-144x144-precomposed.png" />
+
   <!-- Modernizr -->
   <script src="./js/libs/modernizr-2.6.2.min.js"></script>
+
   <!-- jQuery -->
   <script type="text/javascript" src="./js/libs/jquery-1.10.2.min.js"></script>
+
   <!-- GroundworkCSS -->
   <link type="text/css" rel="stylesheet" href="./css/groundwork.css">
   <!--[if IE]>
   <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.css">
   <![endif]-->
-  <!--[if IE 7]>
-  <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
-  <![endif]-->
-  </script>
 </head>
 <body>
   <style type="text/css">
@@ -45,6 +39,11 @@
       margin:0 auto;
       background:white;
       box-shadow:0 0 50px #000;
+      -webkit-transition: max-width 0.35s ease-out, max-height 0.35s ease-out;
+      -moz-transition: max-width 0.35s ease-out, max-height 0.35s ease-out;
+      -ms-transition: max-width 0.35s ease-out, max-height 0.35s ease-out;
+      -o-transition: max-width 0.35s ease-out, max-height 0.35s ease-out;
+      transition: max-width 0.35s ease-out, max-height 0.35s ease-out;
     }
     #resizer {
       position:fixed;
@@ -69,28 +68,17 @@
       transform: translateZ(0);
       margin:-0.2em auto 0;
     }
-    #closeResizer, #openHome {
-      padding:0.3em 0.5em;
-      background:#fff;
-      border-radius:0.3em;
-      margin:1px 2px;
+    #closeResizer {
+      padding:0.3em 0.5em 0.2em;
       text-decoration:none;
       color:#222;
-      box-shadow:0 0 5px rgba(0,0,0,0.35);
     }
     a.rotate i, a[data-rotate] i {
       -webkit-transition: all 0.15s linear;
       -moz-transition: all 0.15s linear;
-      -mx-transition: all 0.15s linear;
+      -ms-transition: all 0.15s linear;
       -o-transition: all 0.15s linear;
       transition: all 0.15s linear;
-    }
-    .landscape:before {
-      -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      -o-transform: rotate(-90deg);
-      transform: rotate(-90deg);
     }
   </style>
   <script type="text/javascript">
@@ -133,14 +121,16 @@
         }
         $('a[data-viewport-width]').removeClass('active');
         $(this).addClass('active');
-        $('#resizerFrame').stop().animate({'max-width': newWidth, 'max-height': newHeight}, 200);
+        // $('#resizerFrame').stop().animate({'max-width': newWidth, 'max-height': newHeight}, 200);
+        $('#resizerFrame').css({'max-width': newWidth, 'max-height': newHeight});
         e.preventDefault();
         return false;
       });
       $('a.rotate').on('click', function(e) {
-        $(this).children('i[class*=icon]').toggleClass('landscape');
+        $(this).toggleClass('icon-rotate-90')
+        $(this).children('i[class*=icon]').toggleClass('icon-rotate-270');
         $('a[data-rotate=true]').each(function() {
-          $(this).children('i[class*=icon]').toggleClass('landscape');
+          $(this).children('i[class*=icon]').toggleClass('icon-rotate-270');
           width = $(this).attr('data-viewport-width');
           height = $(this).attr('data-viewport-height');
           // shuffle values
@@ -155,7 +145,8 @@
         newWidth = $(window).width();
         newHeight = $(window).height();
         $('a[data-viewport-width]').removeClass('active');
-        $('#resizerFrame').stop().animate({'max-width': newWidth, 'max-height': newHeight}, 200);
+        // $('#resizerFrame').stop().animate({'max-width': newWidth, 'max-height': newHeight}, 200);
+        $('#resizerFrame').css({'max-width': newWidth, 'max-height': newHeight});
         $('#resizer').fadeOut(500, function() {
           document.location = document.getElementById("resizerFrame").contentWindow.location.href;
         });
@@ -174,24 +165,23 @@
     });
   </script>
   <div style="position:fixed;top:0;z-index:99;width:100%;">
-    <div id="resizer">
-      <ul class="button-list pull-left">
-        <li><a class="tooltip active" title="Fullscreen" href="#" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'Desktop' ? 'active' : '' ?>" title="Desktop" href="#" data-viewport-width="1920" data-viewport-height="1080"><i class="icon-desktop"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'MacBook' ? 'active' : '' ?>" title="MacBook" href="#" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'iPad' ? 'active' : '' ?>" title="iPad" href="#" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'Android Tablet' ? 'active' : '' ?>" title="Android Tablet" href="#" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="icon-tablet" style="font-size:0.9em;"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'Android Phone' ? 'active' : '' ?>" title="Android Phone" href="#" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="icon-mobile-phone"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'iPhone' ? 'active' : '' ?>" title="iPhone" href="#" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone" style="font-size:0.9em;"></i></a></li>
-        <li><a class="tooltip rotate <?php echo $_REQUEST['orientation'] == 'landscape' ? 'rotate-90-ctr' : '' ?>" title="Toggle Landscape/Portrait" href="#"><i class="icon-refresh"></i></a></li>
+    <div id="resizer" class="bounceInDown animated">
+      <ul class="button-group pull-left">
+        <li><a class="active" title="Fullscreen" href="#" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'Desktop' ? 'active' : '' ?>" title="Desktop" href="#" data-viewport-width="1920px" data-viewport-height="1080px"><i class="icon-desktop"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'MacBook' ? 'active' : '' ?>" title="MacBook" href="#" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'iPad' ? 'active' : '' ?>" title="iPad" href="#" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'Android Tablet' ? 'active' : '' ?>" title="Android Tablet" href="#" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="icon-tablet" style="font-size:0.9em;"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'Android Phone' ? 'active' : '' ?>" title="Android Phone" href="#" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="icon-mobile-phone"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'iPhone' ? 'active' : '' ?>" title="iPhone" href="#" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone" style="font-size:0.9em;"></i></a></li>
+        <li><a class="rotate" title="Toggle Landscape/Portrait" href="#"><i class="icon-refresh"></i></a></li>
       </ul>
       <a id="closeResizer" class="pull-left" title="Close Resizer" href="./pages/home.html"><i class="icon-remove"></i></a>
     </div>
   </div>
   <iframe id="resizerFrame" src="./pages/home.html" frameborder="0"></iframe>
+  
   <!-- scripts -->
-  <script type="text/javascript" src="./js/plugins/jquery.cycle2.js"></script>
-  <script type="text/javascript" src="./js/plugins/jquery.magnific-popup.js"></script>
   <script type="text/javascript" src="./js/groundwork.all.js"></script>
 
   <!-- google analytics -->

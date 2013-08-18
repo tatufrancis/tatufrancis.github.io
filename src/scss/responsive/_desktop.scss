@@ -1,9 +1,9 @@
 // =============================================
 //                  Desktop
-//          Last Updated:2013-6-25
+//          Last Updated:2013-8-16
 // =============================================
 
-
+$responsive: true !default;
 
 
 @mixin desktop {
@@ -99,7 +99,6 @@
         .inline-desktop          { @include _inline; }
         .block-desktop           { @include _block; }
         .clear-desktop           { @include _clear; }
-        .disabled-desktop        { @include _disabled; }
         .center-desktop          { @include _center; }
         .pull-right-desktop      { @include _pull-right; }
         .pull-left-desktop       { @include _pull-left; }
@@ -122,11 +121,13 @@
       }
       @if $rotation-classes {
         .rotate-90-desktop       { @include _rotate-90; }
-        .rotate-180-desktop      { @include _rotate-180; }
-        .rotate-270-desktop      { @include _rotate-270; }
         .rotate-90-ctr-desktop   { @include _rotate-90-ctr; }
+        .rotate-180-desktop      { @include _rotate-180; }
         .rotate-180-ctr-desktop  { @include _rotate-180-ctr; }
+        .rotate-270-desktop      { @include _rotate-270; }
         .rotate-270-ctr-desktop  { @include _rotate-270-ctr; }
+        .rotate-360-desktop      { @include _rotate-360; }
+        .rotate-360-ctr-desktop  { @include _rotate-360-ctr; }
       }
       @content;
     }
@@ -138,6 +139,8 @@
 //      desktop      //
 ///////////////////////
 
-@include desktop {
-  // do not remove -- required for desktop helpers
+@if $responsive {
+  @include desktop {
+    // do not remove -- required for desktop helpers
+  }
 }

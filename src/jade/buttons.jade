@@ -5,116 +5,145 @@ block title
 
 block content
   .container
-    .pad-left.pad-right
-      h1.AverageSans.zero Buttons
-      p Clean, accessible and easy to customize buttons.
+    .padded
+      .row
+        .three.fifths.bounceInRight.animated
+          h1.zero.museo-slab Buttons
+          p.quicksand Clean, accessible and easy to customize buttons.
+        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+          p.quicksand Component Usage Example 5 of 11
+          p
+            a.blue.button(href='navigation.html')
+              i.icon-arrow-left
+              |  Back
+            | 
+            a.green.button(href='messages.html')
+              | Next: Message Blocks 
+              i.icon-arrow-right
+    hr
     .row
       .one.whole.padded
-        h2.AmericanTypewriter Buttons
+        .bounceInLeft.animated
+          h4 Buttons
+          .row
+            .one.third.padded
+              h4 Sizes
+              p
+                button.small Small Button
+              p
+                button Medium Button
+              p
+                button.large Large Button
+            .one.third.padded
+              h4 Types
+              p
+                button Normal Button
+              p
+                button.info Info Button
+              p
+                button.success Success Button
+              p
+                button.alert Alert Button
+              p
+                button.warning Warning Button
+              p
+                button.error Error Button
+            .one.third.padded
+              h4 Styles
+              p
+                button Normal Button
+              p
+                button.square Square Button
+              p
+                button.round Round Button
+              p
+                button.block Block Button
+        hr
+        br
+        .bounceInRight.animated
+          h4 States
+          .row
+            .one.third.padded
+              h4 Normal
+              p
+                button Button
+              p
+                button.info Info
+              p
+                button.success Success
+              p
+                button.alert Alert
+              p
+                button.warning Warning
+              p
+                button.error Error
+            .one.third.padded
+              h4 Active
+              p
+                button.active Active Button
+              p
+                button.info.active Active Info
+              p
+                button.success.active Active Success
+              p
+                button.alert.active Active Alert
+              p
+                button.warning.active Active Warning
+              p
+                button.error.active Active Error
+            .one.third.padded
+              h4 Disabled
+              p
+                button.disabled(tabindex='-1') Disabled Button
+              p
+                button.info.disabled Disabled Info
+              p
+                button.success.disabled Disabled Success
+              p
+                button.alert.disabled Disabled Alert
+              p
+                button.warning.disabled Disabled Warning
+              p
+                button.error.disabled Disabled Error
+        hr
+        br
+        .bounceInLeft.animated
+          h4 Colors
+          .row
+            .one.whole
+              button.yellow.gap-right.gap-bottom Yellow Button
+              button.orange.gap-right.gap-bottom Orange Button
+              button.red.gap-right.gap-bottom Red Button
+              button.pink.gap-right.gap-bottom Pink Button
+              button.purple.gap-right.gap-bottom Purple Button
+              button.asphalt.gap-right.gap-bottom Asphalt Button
+              button.blue.gap-right.gap-bottom Blue Button
+              button.turquoise.gap-right.gap-bottom Turquoise Button
+              button.green.gap-right.gap-bottom Green Button
+        hr
+        br
+        //- .bounceInUp.animated
+        h4 Button Groups & Dropdown Menus
         .row
           .one.third.padded
-            h4.AverageSans Button Sizes
-            p
-              button.small Small Button
-            p
-              button Medium Button
-            p
-              button.large Large Button
-          .one.third.padded
-            h4.AverageSans Button Types
-            p
-              button Normal Button
-            p
-              button.info Info Button
-            p
-              button.success Success Button
-            p
-              button.alert Alert Button
-            p
-              button.warning Warning Button
-            p
-              button.error Error Button
-          .one.third.padded
-            h4.AverageSans Button Styles
-            p
-              button Normal Button
-            p
-              button.square Square Button
-            p
-              button.round Round Button
-            p
-              button.block Block Button
-        h2.AmericanTypewriter Button States
-        .row
-          .one.third.padded
-            h4.AverageSans Disabled
-            p
-              button.disabled(tabindex='-1') Disabled Button
-            p
-              button.info.disabled Disabled Info
-            p
-              button.success.disabled Disabled Success
-            p
-              button.alert.disabled Disabled Alert
-            p
-              button.warning.disabled Disabled Warning
-            p
-              button.error.disabled Disabled Error
-          .one.third.padded
-            h4.AverageSans Active
-            p
-              button.active Active Button
-            p
-              button.info.active Active Info
-            p
-              button.success.active Active Success
-            p
-              button.alert.active Active Alert
-            p
-              button.warning.active Active Warning
-            p
-              button.error.active Active Error
-          .one.third.padded
-            h4.AverageSans Colors
-            p
-              button.yellow Yellow Button
-            p
-              button.orange Orange Button
-            p
-              button.red Red Button
-            p
-              button.pink Pink Button
-            p
-              button.purple Purple Button
-            p
-              button.asphalt Asphalt Button
-            p
-              button.blue Blue Button
-            p
-              button.turquoise Turquoise Button
-            p
-              button.green Green Button
-        h2.AmericanTypewriter Button Lists & Dropdowns
-        .row
-          .one.third.padded
-            ul.button-list
+            ul.button-group
               li
-                a(href='#') Button 1
+                a(href='#') Normal
               li
-                a(href='#') Button 2
+                a.disabled(href='#') Disabled
               li
-                a(href='#') Button 3
+                a.active(href='#') Active
             br
-            ul.button-list
+            ul.button-group
               li
-                a.blue(href='#') Button 1
+                a.blue(href='#') Normal
               li
-                a.turquoise(href='#') Button 2
+                a.turquoise.disabled(href='#') Disabled
               li
-                a.green(href='#') Button 3
+                a.green.active(href='#') Active
             br
           .one.third.padded
-            ul.button-list
+            ul.button-group
               li
                 a(href='#')
                   i.icon-github-alt
@@ -134,7 +163,7 @@ block content
                 a(href='#')
                   i.icon-pinterest
             br
-            ul.button-list
+            ul.button-group
               li
                 a.yellow(href='#')
                   i.icon-github-alt
@@ -155,40 +184,39 @@ block content
                   i.icon-pinterest
             br
           .one.third.padded
-              .dropdown
-                button
-                  | Dropdown Menu Button
-                ul
-                  li
-                    a(href='#')
-                      i.icon-home
-                      |  Example Menu Item 1
-                  li
-                    a(href='#')
-                      i.icon-envelope-alt
-                      |  Example Menu Item 2
-                  li
-                    hr
-                  li
-                    a(href='#')
-                      i.icon-heart
-                      |  Seperated Menu Item
-              br
-              .dropdown.gap-top
-                button.blue
-                  | Dropdown Menu Button
-                ul
-                  li
-                    a(href='#')
-                      i.icon-home
-                      |  Example Menu Item 1
-                  li
-                    a(href='#')
-                      i.icon-envelope-alt
-                      |  Example Menu Item 2
-                  li
-                    hr
-                  li
-                    a(href='#')
-                      i.icon-heart
-                      |  Seperated Menu Item
+            .dropdown
+              button
+                | Dropdown Menu Button
+              ul
+                li
+                  a(href='#')
+                    i.icon-home
+                    |  Example Menu Item 1
+                li
+                  a(href='#')
+                    i.icon-envelope-alt
+                    |  Example Menu Item 2
+                li
+                  hr
+                li
+                  a(href='#')
+                    i.icon-heart
+                    |  Seperated Menu Item
+            .dropdown.double.gap-top
+              button.blue
+                | Dropdown Menu Button
+              ul
+                li
+                  a(href='#')
+                    i.icon-home
+                    |  Example Menu Item 1
+                li
+                  a(href='#')
+                    i.icon-envelope-alt
+                    |  Example Menu Item 2
+                li
+                  hr
+                li
+                  a(href='#')
+                    i.icon-heart
+                    |  Seperated Menu Item

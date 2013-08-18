@@ -1,13 +1,20 @@
 // =============================================
 //                 Web Fonts
-//          Last Updated:2013-4-25
+//          Last Updated:2013-8-16
 // =============================================
 
-
+$webfont-classes: true !default;
+$web-font-names:  "source-sans-pro"
+                  "museo-slab"
+                  "quicksand"
+                  !default;
+$web-font-files:  "sourcesanspro-regular-webfont"
+                  "museo-slab-500-webfont"
+                  "quicksand-regular-webfont"
+                  !default;
 
 
 @for $i from 1 through length($web-font-files) {
-  // @include font-face('#{nth($web-font-names, $i)}', inline-font-files("#{nth($web-font-files, $i)}.eot", "#{nth($web-font-files, $i)}.woff", "#{nth($web-font-files, $i)}.ttf"));
   @font-face {
     font-family: '#{nth($web-font-names, $i)}';
     font-style: normal;
