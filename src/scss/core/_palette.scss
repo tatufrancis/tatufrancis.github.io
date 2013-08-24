@@ -3,6 +3,10 @@
 //          Last Updated:2013-8-16
 // =============================================
 
+// color range
+$white:               #ffffff !default;
+$black:               #111111 !default;
+
 // base styles
 $background-color:    #ffffff !default;
 $font-color:          #2b2b2d !default;
@@ -65,6 +69,12 @@ $success-text:        #ffffff !default;
 $success-background:  #dff0d8 !default;
 $success-border:      #d6e9c6 !default;
 
+// question
+$question-color:      #9855b4 !default;
+$question-text:       #ffffff !default;
+$question-background: #dfcae8 !default;
+$question-border:     #e3b7f5 !default;
+
 // disabled
 $disabled-color:      #808080 !default;
 $disabled-text:       #ffffff !default;
@@ -72,9 +82,9 @@ $disabled-background: lighten($disabled-color, 20%) !default;
 $disabled-border:     darken($disabled-color, 10%) !default;
 
 // modifier states
-$state-name:          "info"       "alert"       "warning"       "error"       "success"       "disabled"       !default;
-$state-code:          $info-color  $alert-color  $warning-color  $error-color  $success-color  $disabled-color  !default;
-$state-text:          $info-text   $alert-text   $warning-text   $error-text   $success-text   $disabled-text   !default;
+$state-name:          "info"       "alert"       "warning"       "error"       "success"       "question"       "disabled"       !default;
+$state-code:          $info-color  $alert-color  $warning-color  $error-color  $success-color  $question-color  $disabled-color  !default;
+$state-text:          $info-text   $alert-text   $warning-text   $error-text   $success-text   $question-text   $disabled-text   !default;
 
 // modifier colors
 $yellow:              #f1c40f !default;

@@ -28,7 +28,7 @@ block content
       .row
         .three.fifths.bounceInRight.animated
           h1.zero.museo-slab Helpers
-          p.quicksand Layout, breakpoint-targeted, and conditional helpers.
+          p.quicksand Breakpoint-targeted layout, typographic, and conditional helpers for responsive layouts
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 2 of 11
           p
@@ -41,7 +41,7 @@ block content
               i.icon-arrow-right
     hr
     .row
-      .one.whole.padded.bounceInUp.animated
+      .one.whole.padded.bounceInLeft.animated
         h4.zero Conditional Display Helpers
         p.small Conditionally show and hide elements at specific breakpoints.
         .row
@@ -58,32 +58,40 @@ block content
               li.blue.hide-on-mobile hide-on-mobile
           .one.half.small-tablet.padded
             h4.double.gap-top-mobile Conditional Display Classes
-            ul.unstyled
-              li .desktop-only
-              li .hide-on-desktop
-              li .ipad-only
-              li .hide-on-ipad
-              li .small-tablet-only
-              li .hide-on-small-tablet
-              li .mobile-only
-              li .hide-on-mobile
+            ol.list
+              li
+                code.inline .desktop-only
+              li
+                code.inline .hide-on-desktop
+              li
+                code.inline .ipad-only
+              li
+                code.inline .hide-on-ipad
+              li
+                code.inline .small-tablet-only
+              li
+                code.inline .hide-on-small-tablet
+              li
+                code.inline .mobile-only
+              li
+                code.inline .hide-on-mobile
     br
     hr
     br
     .row
-      .one.whole.padded.bounceInLeft.animated
+      .one.whole.padded.bounceInRight.animated
         h4.zero Spacing Helpers
         p.small 
           | With breakpoint-targeted conditional classes and overrides. (i.e. - 
-          code .no-pad-mobile
+          code.inline .no-pad-mobile
           | ,  
-          code .no-gap-desktop
+          code.inline .no-gap-desktop
           | ,  
-          code .double.gap-top-mobile
+          code.inline .double.gap-top-mobile
           | ,  
-          code .padded-small-tablet
+          code.inline .padded-small-tablet
           | ,  
-          code .padded-mobile
+          code.inline .padded-mobile
           | , etc.)
         .row
           .one.third.small-tablet.padded
@@ -145,17 +153,17 @@ block content
     hr
     br
     .row
-      .one.whole.padded.bounceInRight.animated
+      .one.whole.padded.bounceInLeft.animated
         h4.zero Layout
         p.small 
           | With breakpoint-targeted conditional classes and overrides. (i.e. - 
-          code .block-desktop
+          code.inline .block-desktop
           | , 
-          code .no-border-small-tablet
+          code.inline .no-border-small-tablet
           | , 
-          code .pull-right-small-tablet
+          code.inline .pull-right-small-tablet
           | , 
-          code .center-ipad
+          code.inline .center-ipad
         .row
           .one.third.small-tablet.padded
             h4 Display
@@ -202,7 +210,7 @@ block content
     hr
     br
     .row
-      .one.whole.padded.bounceInUp.animated
+      .one.whole.padded.bounceInRight.animated
         h4 Typographic
         .row
           .one.third.small-tablet.padded
@@ -273,7 +281,7 @@ block content
                   | The quick brown fox jumped over the lazy dog.
             p.gap-top.small
               | Note: 
-              code data-compression='20.65'
+              code.inline data-compression='20.65'
               |  applied to increase compression
             br
             p.zero .responsive 
@@ -284,7 +292,7 @@ block content
                   | The quick brown fox jumped over the lazy dog.
             p.gap-top.small
               | Note: 
-              code data-scrollable='true'
+              code.inline data-scrollable='true'
               |  applied to enable scrolling on hover
     br
     hr

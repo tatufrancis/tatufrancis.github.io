@@ -1,25 +1,36 @@
 // =============================================
-//              Message Boxes
+//               Message Boxes
 //          Last Updated:2013-8-21
 // =============================================
 
 $ui-classes:      true !default;
 $ui-modifiers:    "dismissible" !default;
-$ui-states:       "info" "alert" "warning" "error" "success" !default;
+$ui-states:       "info" "alert" "warning" "error" "success" "question" !default;
+$radius-helpers:  "square" "round" !default;
+$size-helpers:    "small" "medium" "large" !default;
 $aria-selectors:  true !default;
-$default-radius:      4px !default;
+$default-radius:  4px !default;
 
 
 %message {
-  position: relative;
+  @extend %relative;
   word-wrap: break-word;
-  padding: 0.25em 1em;
-  background: lighten(gray, 32.5%);
-  color: darken(gray, 15%);
+  padding: 0.25em 1em 0.25em 2em;
+  background: $button-color;
+  color: $button-text;
   border: 1px solid $border-color;
   font-weight: bold;
   text-decoration: none;
   @include rounded($default-radius);
+  &:before {
+    @include icon-FontAwesome();
+    content: "\f05a"; // icon-info-sign
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2em 0.3em;
+    font-size: 1.2em;
+  }
 }
 
 %message-small { @include _small; }
@@ -38,10 +49,25 @@ $default-radius:      4px !default;
   }
 }
 
+%message-question {
+  background-color: $question-background;
+  color: $question-color;
+  border-color: $question-border;
+  &:before {
+    content: "\f059"; // icon-question-sign
+  }
+  &%message-disabled {
+    @include state(disabled,normal,desaturate($question-color,20%));
+  }
+}
+
 %message-alert {
   background-color: $alert-background;
   color: $alert-color;
   border-color: $alert-border;
+  &:before {
+    content: "\f06a"; // icon-exclamation-sign
+  }
   &%message-disabled {
     @include state(disabled,normal,desaturate($alert-color,20%));
   }
@@ -51,6 +77,9 @@ $default-radius:      4px !default;
   background: $warning-background;
   color: $warning-color;
   border-color: $warning-border;
+  &:before {
+    content: "\f071"; // icon-warning-sign
+  }
   &%message-disabled {
     @include state(disabled,normal,desaturate($warning-color,20%));
   }
@@ -60,6 +89,9 @@ $default-radius:      4px !default;
   background: $error-background;
   color: $error-color;
   border-color: $error-border;
+  &:before {
+    content: "\f057"; // icon-remove-sign
+  }
   &%message-disabled {
     @include state(disabled,normal,desaturate($error-color,20%));
   }
@@ -69,6 +101,9 @@ $default-radius:      4px !default;
   background: $success-background;
   color: $success-color;
   border-color: $success-border;
+  &:before {
+    content: "\f058"; // icon-ok-sign
+  }
   &%message-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
   }

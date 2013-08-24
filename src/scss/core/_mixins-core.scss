@@ -90,6 +90,8 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
       $color: $warning-color;
     }@else if $state == "error" {
       $color: $error-color;
+    }@else if $state == "question" {
+      $color: $question-color;
     }
   }
   color: lighten($color, 35%);

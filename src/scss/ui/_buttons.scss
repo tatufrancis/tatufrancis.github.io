@@ -6,7 +6,7 @@
 $button-tags:         true !default;
 $button-classes:      true !default;
 $button-modifiers:    "small" "large" "on" "active" "square" "round" "block" !default;
-$button-states:       "on" "active" "disabled" "info" "alert" "warning" "error" "success" !default;
+$button-states:       "on" "active" "disabled" "info" "alert" "warning" "error" "success" "question" !default;
 $aria-selectors:      true !default;
 $button-color:        lighten(gray, 32.5%) !default;
 $button-text:         darken(gray, 15%) !default;
@@ -137,6 +137,18 @@ $default-radius:      4px !default;
   }
   &.disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
+  }
+}
+
+%button-question {
+  background-color: darken($question-background, 40%);
+  color: $question-text;
+  border-color: darken($question-border, 40%);
+  &.active, &:hover, &:focus {
+    background: darken($question-background, 49%);
+  }
+  &.disabled {
+    @include state(disabled,normal,desaturate($question-color,20%));
   }
 }
 

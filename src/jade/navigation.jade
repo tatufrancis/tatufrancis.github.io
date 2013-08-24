@@ -29,8 +29,9 @@ block content
     .padded
       .row
         .three.fifths.bounceInRight.animated
-          h1.zero.museo-slab Navigation Bar
-          p.quicksand Responsive navigation bars with support for menus and sub-menus
+          h1.zero.museo-slab Navigation Bars
+          p.quicksand Responsive navigation created by 
+            a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 4 of 11
           p
@@ -51,46 +52,74 @@ block content
               h4 iPad
               nav.nav(title='iPad Menu')
                 +nav-structure()
+              br
+              pre(data-lang='html')
+                | <nav class="nav" title="iPad Menu">
+                |   <ul>
+                |     <li><a href="#1">Nav Item 1</a></li>
+                |     <li><a href="#2">Nav Menu 1</a>
+                |       <ul>
+                |         <li><a href="#3">Menu Item 1</a></li>
+                |         <li><a href="#4">Sub Menu 1</a>
+                |           <ul>
+                |             <li><a href="#5">Sub Menu Item 1</a></li>
+                |             <li><a href="#6">Sub Menu Item 2</a></li>
+                |           </ul>
+                |         </li>
+                |         <li><a href="#7">Menu Item 2</a></li>
+                |       </ul>
+                |     </li>
+                |     <li><a href="#8">Nav Item 3</a></li>
+                |   </ul>
+                | </nav>
           .row
             .one.whole.padded
               h4 Small Tablet
               nav.nav.small-tablet(title='Small Tablet Menu')
                 +nav-structure()
+              br
+              pre(data-lang='html')
+                | <nav class="nav small-tablet" title="Small Tablet Menu">...</nav>
           .row
             .one.whole.padded
               h4 Mobile
               nav.nav.mobile(title='Mobile Menu')
                 +nav-structure()
-        hr
+              br
+              pre(data-lang='html')
+                | <nav class="nav mobile" title="Mobile Menu">...</nav>
         br
-        h4 Colors
-        .row
-          .one.third.padded
-            nav.nav.yellow
-              +nav-structure()
-          .one.third.padded
-            nav.nav.orange
-              +nav-structure()
-          .one.third.padded
-            nav.nav.red
-              +nav-structure()
-        .row
-          .one.third.padded
-            nav.nav.pink
-              +nav-structure()
-          .one.third.padded
-            nav.nav.purple
-              +nav-structure()
-          .one.third.padded
-            nav.nav.asphalt
-              +nav-structure()
-        .row
-          .one.third.padded
-            nav.nav.blue
-              +nav-structure()
-          .one.third.padded
-            nav.nav.turquoise
-              +nav-structure()
-          .one.third.padded
-            nav.nav.green
-              +nav-structure()
+        .bounceInUp.animated
+          h4 Colors
+          .row
+            .one.third.padded
+              nav.nav.yellow
+                +nav-structure()
+            .one.third.padded
+              nav.nav.orange
+                +nav-structure()
+            .one.third.padded
+              nav.nav.red
+                +nav-structure()
+          br
+          .row
+            .one.third.padded
+              nav.nav.pink
+                +nav-structure()
+            .one.third.padded
+              nav.nav.purple
+                +nav-structure()
+            .one.third.padded
+              nav.nav.asphalt
+                +nav-structure()
+          br
+          .row
+            .one.third.padded
+              nav.nav.blue
+                +nav-structure()
+            .one.third.padded
+              nav.nav.turquoise
+                +nav-structure()
+            .one.third.padded
+              nav.nav.green
+                +nav-structure()

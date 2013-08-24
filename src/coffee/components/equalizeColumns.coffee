@@ -8,7 +8,7 @@ equalizeColumns = ->
     tallest = 0
     collapsed = false
     
-    $row.children('*').each (i) ->
+    $row.children().each (i) ->
       $this = $ this
       $this.css('minHeight','1px')
       collapsed = ($this.outerWidth() == $row.outerWidth())
@@ -16,7 +16,6 @@ equalizeColumns = ->
         $this.addClass('equal') unless $this.hasClass('equal')
         if $this.outerHeight() > tallest
           tallest = $this.outerHeight()
-          
       return 
-      
-    $row.children('*').css('min-height', tallest) unless collapsed
+
+    $row.children().css('min-height', tallest) unless collapsed

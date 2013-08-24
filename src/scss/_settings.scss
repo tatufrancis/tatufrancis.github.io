@@ -5,6 +5,10 @@
 
 @import "core/constants";
 
+// color range
+$white:               #ffffff;
+$black:               #111111;
+
 
 // =============================================
 //                  File Paths
@@ -84,6 +88,12 @@ $success-text:              #ffffff;
 $success-background:        #dff0d8;
 $success-border:            #d6e9c6;
 
+// question
+$question-color:            #9855b4;
+$question-text:             #ffffff;
+$question-background:       #dfcae8;
+$question-border:           #e3b7f5;
+
 // disabled
 $disabled-color:            #808080;
 $disabled-text:             #ffffff;
@@ -91,9 +101,9 @@ $disabled-background:       lighten($disabled-color, 20%);
 $disabled-border:           darken($disabled-color, 10%);
 
 // modifier states
-$state-name:                "info"       "alert"       "warning"       "error"       "success"       "disabled"      ;
-$state-code:                $info-color  $alert-color  $warning-color  $error-color  $success-color  $disabled-color ;
-$state-text:                $info-text   $alert-text   $warning-text   $error-text   $success-text   $disabled-text  ;
+$state-name:                "info"       "alert"       "warning"       "error"       "success"       "question"       "disabled";
+$state-code:                $info-color  $alert-color  $warning-color  $error-color  $success-color  $question-color  $disabled-color;
+$state-text:                $info-text   $alert-text   $warning-text   $error-text   $success-text   $question-text   $disabled-text;
 
 // modifier colors
 $yellow:                    #f1c40f;

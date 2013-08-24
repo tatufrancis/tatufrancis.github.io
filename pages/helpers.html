@@ -53,7 +53,34 @@
         top: 0.55em;
         margin-right: 0.3em;
       }
+      
     </style>
+    <!-- snippet (syntax highlighting for code examples)-->
+    <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
+(function() {
+
+  $(document).ready(function() {
+    $('pre[data-lang="html"]').snippet("html", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    $('pre[data-lang="css"]').snippet("css", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    $('pre[data-lang="scss"]').snippet("scss", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    return $('pre[data-lang="js"]').snippet("javascript", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+  });
+
+}).call(this);
+</script>
   </head>
   <body>
     <header class="padded">
@@ -78,12 +105,13 @@
                   <ul>
                     <li><a href="./navigation.html" title="Navigation">Navigation</a></li>
                     <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
-                    <li><a href="./messages.html" title="Message blocks">Message Blocks</a></li>
+                    <li><a href="./boxes.html" title="Boxes">Boxes</a></li>
+                    <li><a href="./messages.html" title="Message boxes">Message Boxes</a></li>
                     <li><a href="./tables.html" title="Tables">Tables</a></li>
                     <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
                   </ul>
                 </li>
-                <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
+                <li><a href="./icons.html" title="Icons">Icons</a></li>
                 <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
                 <li><a href="./animations.html" title="Pure CSS3 Animations">Animations</a></li>
               </ul>
@@ -97,7 +125,7 @@
         <div class="row">
           <div class="three fifths bounceInRight animated">
             <h1 class="zero museo-slab">Helpers</h1>
-            <p class="quicksand">Layout, breakpoint-targeted, and conditional helpers.</p>
+            <p class="quicksand">Breakpoint-targeted layout, typographic, and conditional helpers for responsive layouts</p>
           </div>
           <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
             <p class="quicksand">Component Usage Example 2 of 11</p>
@@ -107,7 +135,7 @@
       </div>
       <hr>
       <div class="row">
-        <div class="one whole padded bounceInUp animated">
+        <div class="one whole padded bounceInLeft animated">
           <h4 class="zero">Conditional Display Helpers</h4>
           <p class="small">Conditionally show and hide elements at specific breakpoints.</p>
           <div class="row">
@@ -126,27 +154,27 @@
             </div>
             <div class="one half small-tablet padded">
               <h4 class="double gap-top-mobile">Conditional Display Classes</h4>
-              <ul class="unstyled">
-                <li>.desktop-only</li>
-                <li>.hide-on-desktop</li>
-                <li>.ipad-only</li>
-                <li>.hide-on-ipad</li>
-                <li>.small-tablet-only</li>
-                <li>.hide-on-small-tablet</li>
-                <li>.mobile-only</li>
-                <li>.hide-on-mobile</li>
-              </ul>
+              <ol class="list">
+                <li><code class="inline">.desktop-only</code></li>
+                <li><code class="inline">.hide-on-desktop</code></li>
+                <li><code class="inline">.ipad-only</code></li>
+                <li><code class="inline">.hide-on-ipad</code></li>
+                <li><code class="inline">.small-tablet-only</code></li>
+                <li><code class="inline">.hide-on-small-tablet</code></li>
+                <li><code class="inline">.mobile-only</code></li>
+                <li><code class="inline">.hide-on-mobile</code></li>
+              </ol>
             </div>
           </div>
         </div>
       </div><br>
       <hr><br>
       <div class="row">
-        <div class="one whole padded bounceInLeft animated">
+        <div class="one whole padded bounceInRight animated">
           <h4 class="zero">Spacing Helpers</h4>
           <p class="small">
              
-            With breakpoint-targeted conditional classes and overrides. (i.e. - <code>.no-pad-mobile</code>,  <code>.no-gap-desktop</code>,  <code>.double.gap-top-mobile</code>,  <code>.padded-small-tablet</code>,  <code>.padded-mobile</code>, etc.)
+            With breakpoint-targeted conditional classes and overrides. (i.e. - <code class="inline">.no-pad-mobile</code>,  <code class="inline">.no-gap-desktop</code>,  <code class="inline">.double.gap-top-mobile</code>,  <code class="inline">.padded-small-tablet</code>,  <code class="inline">.padded-mobile</code>, etc.)
           </p>
           <div class="row">
             <div class="one third small-tablet padded">
@@ -228,11 +256,11 @@
       </div><br>
       <hr><br>
       <div class="row">
-        <div class="one whole padded bounceInRight animated">
+        <div class="one whole padded bounceInLeft animated">
           <h4 class="zero">Layout</h4>
           <p class="small">
              
-            With breakpoint-targeted conditional classes and overrides. (i.e. - <code>.block-desktop</code>, <code>.no-border-small-tablet</code>, <code>.pull-right-small-tablet</code>, <code>.center-ipad</code>
+            With breakpoint-targeted conditional classes and overrides. (i.e. - <code class="inline">.block-desktop</code>, <code class="inline">.no-border-small-tablet</code>, <code class="inline">.pull-right-small-tablet</code>, <code class="inline">.center-ipad</code>
           </p>
           <div class="row">
             <div class="one third small-tablet padded">
@@ -290,7 +318,7 @@
       </div><br>
       <hr><br>
       <div class="row">
-        <div class="one whole padded bounceInUp animated">
+        <div class="one whole padded bounceInRight animated">
           <h4>Typographic</h4>
           <div class="row">
             <div class="one third small-tablet padded">
@@ -364,7 +392,7 @@
                   <div data-compression="20.65" class="responsive">The quick brown fox jumped over the lazy dog.</div>
                 </div>
               </div>
-              <p class="gap-top small">Note: <code>data-compression='20.65'</code> applied to increase compression</p><br>
+              <p class="gap-top small">Note: <code class="inline">data-compression='20.65'</code> applied to increase compression</p><br>
               <p class="zero">.responsive </p>
               <p class="zero small">(scrollable single-line, powered by responsiveText plugin)</p>
               <div class="demo">
@@ -372,7 +400,7 @@
                   <div data-scrollable="true" class="responsive">The quick brown fox jumped over the lazy dog.</div>
                 </div>
               </div>
-              <p class="gap-top small">Note: <code>data-scrollable='true'</code> applied to enable scrolling on hover</p>
+              <p class="gap-top small">Note: <code class="inline">data-scrollable='true'</code> applied to enable scrolling on hover</p>
             </div>
           </div>
         </div>
@@ -420,15 +448,15 @@
         </div>
       </div>
     </div>
-    <footer class="message triple gap-top bounceInUp animated">
+    <footer class="box gap-top bounceInUp animated">
       <div class="container padded">
         <div class="row">
           <div class="three fourths padded">
-            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="red">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
-            <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="asphalt">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
+            <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
           </div>
           <div class="one fourth padded">
-            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="blue large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="asphalt large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="red large inline gapped"><i class="icon-envelope"></i></a></p>
+            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped"><i class="icon-envelope"></i></a></p>
           </div>
         </div>
       </div>

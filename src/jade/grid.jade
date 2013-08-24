@@ -3,6 +3,9 @@ extends template
 block title
   title GroundworkCSS &hearts; Responsive/Adaptive Grid System
   style(type="text/css").
+    .snippet-container {
+      margin-top: 10px;
+    }
     .demo .row {
       background: #f6f6f6;
     }
@@ -31,18 +34,18 @@ block title
       color: white;
       font-size: 0.8em;
     }
-    .demo .whole:not(.equal),
-    .demo .half:not(.equal), .demo .halves:not(.equal),
-    .demo .third:not(.equal), .demo .thirds:not(.equal),
-    .demo .fourth:not(.equal), .demo .fourths:not(.equal),
-    .demo .fifth:not(.equal), .demo .fifths:not(.equal),
-    .demo .sixth:not(.equal), .demo .sixths:not(.equal),
-    .demo .seventh:not(.equal), .demo .sevenths:not(.equal),
-    .demo .eighth:not(.equal), .demo .eighths:not(.equal),
-    .demo .ninth:not(.equal), .demo .ninths:not(.equal),
-    .demo .tenth:not(.equal), .demo .tenths:not(.equal),
-    .demo .eleventh:not(.equal), .demo .elevenths:not(.equal),
-    .demo .twelfth:not(.equal), .demo .twelfths:not(.equal) {
+    .demo .row:not(.equalize) .whole,
+    .demo .row:not(.equalize) .half, .demo .row:not(.equalize) .halves,
+    .demo .row:not(.equalize) .third, .demo .row:not(.equalize) .thirds,
+    .demo .row:not(.equalize) .fourth, .demo .row:not(.equalize) .fourths,
+    .demo .row:not(.equalize) .fifth, .demo .row:not(.equalize) .fifths,
+    .demo .row:not(.equalize) .sixth, .demo .row:not(.equalize) .sixths,
+    .demo .row:not(.equalize) .seventh, .demo .row:not(.equalize) .sevenths,
+    .demo .row:not(.equalize) .eighth, .demo .row:not(.equalize) .eighths,
+    .demo .row:not(.equalize) .ninth, .demo .row:not(.equalize) .ninths,
+    .demo .row:not(.equalize) .tenth, .demo .row:not(.equalize) .tenths,
+    .demo .row:not(.equalize) .eleventh, .demo .row:not(.equalize) .elevenths,
+    .demo .row:not(.equalize) .twelfth, .demo .row:not(.equalize) .twelfths {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -184,7 +187,9 @@ block content
       .row
         .three.fifths.bounceInRight.animated
           h1.zero.museo-slab Grid System
-          p.quicksand Example usage of responsive grid system
+          p.quicksand
+            | A responsive and adaptive fractional grid system created by 
+            a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
             p.quicksand Component Usage Example 1 of 11
             p
@@ -206,26 +211,41 @@ block content
             .four.fifths
               .demo
                 .row
-                  .one.half(title='class="one half"') 1/2
-                  .one.half(title='class="one half"') 1/2
+                  .one.half 1/2
+                  .one.half 1/2
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one half">1/2</div>
+                |   <div class="one half">1/2</div>
+                | </div>
           br
           .row
-            .one.fifth.small-tablet
+            .one.fifth
               p Small-Tablet Grid
-            .four.fifths.small-tablet
+            .four.fifths
               .demo
                 .row
-                  .one.half.small-tablet(title='class="one small-tablet half"') 1/2
-                  .one.half.small-tablet(title='class="one small-tablet half"') 1/2
+                  .one.half.small-tablet 1/2
+                  .one.half.small-tablet 1/2
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one half small-tablet">1/2</div>
+                |   <div class="one half small-tablet">1/2</div>
+                | </div>
           br
           .row
-            .one.fifth.small-tablet
+            .one.fifth
               p Mobile Grid
-            .four.fifths.small-tablet
+            .four.fifths
               .demo
                 .row
-                  .one.half.mobile(title='class="one mobile half"') 1/2
-                  .one.half.mobile(title='class="one mobile half"') 1/2
+                  .one.half.mobile 1/2
+                  .one.half.mobile 1/2
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one half mobile">1/2</div>
+                |   <div class="one half mobile">1/2</div>
+                | </div>
         br
         hr
         br
@@ -237,10 +257,17 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.fourth.two-up-ipad(title='class="one fourth two-up-ipad"') 1/4 to 2-up
-                  .one.fourth.two-up-ipad(title='class="one fourth two-up-ipad"') 1/4 to 2-up
-                  .one.fourth.two-up-ipad(title='class="one fourth two-up-ipad"') 1/4 to 2-up
-                  .one.fourth.two-up-ipad(title='class="one fourth two-up-ipad"') 1/4 to 2-up
+                  .one.fourth.two-up-ipad 1/4 to 2-up
+                  .one.fourth.two-up-ipad 1/4 to 2-up
+                  .one.fourth.two-up-ipad 1/4 to 2-up
+                  .one.fourth.two-up-ipad 1/4 to 2-up
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one fourth two-up-ipad">1/4 to 2-up</div>
+                |   <div class="one fourth two-up-ipad">1/4 to 2-up</div>
+                |   <div class="one fourth two-up-ipad">1/4 to 2-up</div>
+                |   <div class="one fourth two-up-ipad">1/4 to 2-up</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -248,10 +275,17 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.fourth.two-up-small-tablet(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
-                  .one.fourth.two-up-small-tablet(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
-                  .one.fourth.two-up-small-tablet(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
-                  .one.fourth.two-up-small-tablet(title='class="one fourth two-up-small-tablet"') 1/4 to 2-up
+                  .one.fourth.two-up-small-tablet 1/4 to 2-up
+                  .one.fourth.two-up-small-tablet 1/4 to 2-up
+                  .one.fourth.two-up-small-tablet 1/4 to 2-up
+                  .one.fourth.two-up-small-tablet 1/4 to 2-up
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                |   <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                |   <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                |   <div class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -259,10 +293,17 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.fourth.small-tablet.two-up-mobile(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
-                  .one.fourth.small-tablet.two-up-mobile(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
-                  .one.fourth.small-tablet.two-up-mobile(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
-                  .one.fourth.small-tablet.two-up-mobile(title='class="one fourth small-tablet two-up-mobile"') 1/4 to 2-up
+                  .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
+                  .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
+                  .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
+                  .one.fourth.small-tablet.two-up-mobile 1/4 to 2-up
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                |   <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                |   <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                |   <div class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -270,12 +311,21 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.sixth.three-up-small-tablet.two-up-mobile(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
-                  .one.sixth.three-up-small-tablet.two-up-mobile(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
-                  .one.sixth.three-up-small-tablet.two-up-mobile(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
-                  .one.sixth.three-up-small-tablet.two-up-mobile(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
-                  .one.sixth.three-up-small-tablet.two-up-mobile(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
-                  .one.sixth.three-up-small-tablet.two-up-mobile(title='class="one sixth three-up-small-tablet two-up-mobile"') 1/6 to 3-up to 2-up
+                  .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+                  .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+                  .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+                  .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+                  .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+                  .one.sixth.three-up-small-tablet.two-up-mobile 1/6 to 3-up to 2-up
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                |   <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                |   <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                |   <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                |   <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                |   <div class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                | </div>
         br
         hr
         br
@@ -287,8 +337,13 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.half(title='class="one half"') 1/2
-                  .one.half(title='class="one half"') 1/2
+                  .one.half 1/2
+                  .one.half 1/2
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one half">1/2</div>
+                |   <div class="one half">1/2</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -296,9 +351,13 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.third(title='class="one third"') 1/3
-                  .one.third(title='class="one third"') 1/3
-                  .one.third(title='class="one third"') 1/3
+                  .one.third 1/3
+                  .two.thirds 2/3
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one third">1/3</div>
+                |   <div class="two thirds">2/3</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -306,10 +365,13 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.fourth(title='class="one fourth"') 1/4
-                  .one.fourth(title='class="one fourth"') 1/4
-                  .one.fourth(title='class="one fourth"') 1/4
-                  .one.fourth(title='class="one fourth"') 1/4
+                  .one.fourth 1/4
+                  .three.fourths 3/4
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one fourth">1/4</div>
+                |   <div class="three fourths">3/4</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -317,11 +379,15 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.fifth(title='class="one fifth"') 1/5
-                  .one.fifth(title='class="one fifth"') 1/5
-                  .one.fifth(title='class="one fifth"') 1/5
-                  .one.fifth(title='class="one fifth"') 1/5
-                  .one.fifth(title='class="one fifth"') 1/5
+                  .one.fifth 1/5
+                  .three.fifths 3/5
+                  .one.fifth 1/5
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one fifth">1/5</div>
+                |   <div class="three fifths">3/5</div>
+                |   <div class="one fifth">1/5</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -329,12 +395,15 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.sixth(title='class="one sixth"') 1/6
-                  .one.sixth(title='class="one sixth"') 1/6
-                  .one.sixth(title='class="one sixth"') 1/6
-                  .one.sixth(title='class="one sixth"') 1/6
-                  .one.sixth(title='class="one sixth"') 1/6
-                  .one.sixth(title='class="one sixth"') 1/6
+                  .one.sixth 1/6
+                  .two.sixths 2/6
+                  .three.sixths 3/6
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one sixth">1/6</div>
+                |   <div class="two sixths">2/6</div>
+                |   <div class="three sixths">3/6</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -342,13 +411,15 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.seventh(title='class="one seventh"') 1/7
-                  .one.seventh(title='class="one seventh"') 1/7
-                  .one.seventh(title='class="one seventh"') 1/7
-                  .one.seventh(title='class="one seventh"') 1/7
-                  .one.seventh(title='class="one seventh"') 1/7
-                  .one.seventh(title='class="one seventh"') 1/7
-                  .one.seventh(title='class="one seventh"') 1/7
+                  .one.seventh 1/7
+                  .two.sevenths 2/7
+                  .four.sevenths 4/7
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one seventh">1/7</div>
+                |   <div class="two sevenths">2/7</div>
+                |   <div class="four sevenths">4/7</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -356,14 +427,15 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
-                  .one.eighth(title='class="one eighth"') 1/8
+                  .one.eighth 1/8
+                  .two.eighths 2/8
+                  .five.eighths 5/8
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one eighth">1/8</div>
+                |   <div class="two eighths">2/8</div>
+                |   <div class="five eighths">5/8</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -371,15 +443,15 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
-                  .one.ninth(title='class="one ninth"') 1/9
+                  .one.ninth 1/9
+                  .three.ninths 3/9
+                  .five.ninths 5/9
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one ninth">1/9</div>
+                |   <div class="three ninths">3/9</div>
+                |   <div class="five ninths">5/9</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -387,16 +459,17 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
-                  .one.tenth(title='class="one tenth"') 1/10
+                  .one.tenth 1/10
+                  .three.tenths 3/10
+                  .five.tenths 5/10
+                  .one.tenth 1/10
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one tenth">1/10</div>
+                |   <div class="three tenths">3/10</div>
+                |   <div class="five tenths">5/10</div>
+                |   <div class="one tenth">1/10</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -404,17 +477,17 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
-                  .one.eleventh(title='class="one eleventh"') 1/11
+                  .one.eleventh 1/11
+                  .three.elevenths 3/11
+                  .five.elevenths 5/11
+                  .two.elevenths 2/11
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one eleventh">1/11</div>
+                |   <div class="three elevenths">3/11</div>
+                |   <div class="five elevenths">5/11</div>
+                |   <div class="two elevenths">2/11</div>
+                | </div>
           br
           .row
             .one.fifth.small-tablet
@@ -422,43 +495,67 @@ block content
             .four.fifths.small-tablet
               .demo
                 .row
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
-                  .one.twelfth(title='class="one twelfth"') 1/12
+                  .one.twelfth 1/12
+                  .three.twelfths 3/12
+                  .five.twelfths 5/12
+                  .two.twelfths 2/12
+                  .one.twelfth 1/12
+              pre(data-lang='html')
+                | <div class="row">
+                |   <div class="one twelfth">1/12</div>
+                |   <div class="three twelfths">3/12</div>
+                |   <div class="five twelfths">5/12</div>
+                |   <div class="two twelfths">2/12</div>
+                |   <div class="one twelfth">1/12</div>
+                | </div>
         br
         hr
         br
         .bounceInRight.animated
-          h4.zero Source Reordering
+          h4.zero Column Shuffling/Source Reordering
           p (Adapting column ordering without changing source order)
           .demo.reordering
             .row
               .one.fifth.right-four 1/5 (first)
               .four.fifths.left-one 4/5 (last)
+            pre(data-lang='html')
+              | <div class="row">
+              |   <div class="one fifth right-four">1/5 (first)</div>
+              |   <div class="four fifths left-one">4/5 (last)</div>
+              | </div>
             br
             .row
               .two.thirds.right-one 2/3 (first)
               .one.third.left-two 1/3 (last)
+            pre(data-lang='html')
+              | <div class="row">
+              |   <div class="two thirds right-one">2/3 (first)</div>
+              |   <div class="one third left-two">1/3 (last)</div>
+              | </div>
             br
             .row
               .one.fourth.right-two 1/4 (first)
               .one.fourth.left-one 1/4 (second)
               .one.fourth.right-one 1/4 (third)
               .one.fourth.left-two 1/4 (fourth)
+            pre(data-lang='html')
+              | <div class="row">
+              |   <div class="one fourth right-two">1/4 (first)</div>
+              |   <div class="one fourth left-one">1/4 (second)</div>
+              |   <div class="one fourth right-one">1/4 (third)</div>
+              |   <div class="one fourth left-two">1/4 (fourth)</div>
+              | </div>
             br
             .row
               .three.eighths.right-five 3/8 (first)
               .two.eighths.left-three 2/8 (second)
               .three.eighths.left-three 3/8 (third)
+            pre(data-lang='html')
+              | <div class="row">
+              |   <div class="three eighths right-five">3/8 (first)</div>
+              |   <div class="two eighths left-three">2/8 (second)</div>
+              |   <div class="three eighths left-three">3/8 (third)</div>
+              | </div>
         br
         hr
         br
@@ -473,6 +570,16 @@ block content
             br
             .row
               .one.centered.mobile.third 1/3
+            pre(data-lang='html')
+              | <div class="row">
+              |   <div class="one centered mobile seventh">1/7</div>
+              | </div>
+              | <div class="row">
+              |   <div class="one centered mobile fifth">1/5</div>
+              | </div>
+              | <div class="row">
+              |   <div class="one centered mobile third">1/3</div>
+              | </div>
         br
         hr
         br
@@ -525,6 +632,54 @@ block content
             br
             .row
               .five.mobile.sevenths.skip-two 5/7
+            pre(data-lang='html')
+              | <div class="row">
+              |   <div class="eleven mobile twelfths skip-one">11</div>
+              | </div>
+              | <div class="row">
+              |   <div class="ten mobile twelfths skip-two">10</div>
+              | </div>
+              | <div class="row">
+              |   <div class="nine mobile twelfths skip-three">9</div>
+              | </div>
+              | <div class="row">
+              |   <div class="eight mobile twelfths skip-four">8</div>
+              | </div>
+              | <div class="row">
+              |   <div class="seven mobile twelfths skip-five">7</div>
+              | </div>
+              | <div class="row">
+              |   <div class="six mobile twelfths skip-six">6</div>
+              | </div>
+              | <div class="row">
+              |   <div class="one mobile twelfth">1</div>
+              |   <div class="five mobile twelfths skip-six">5</div>
+              | </div>
+              | <div class="row">
+              |   <div class="two mobile twelfths">2</div>
+              |   <div class="four mobile twelfths skip-six">4</div>
+              | </div>
+              | <div class="row">
+              |   <div class="three mobile twelfths">3</div>
+              |   <div class="three mobile twelfths skip-six">3</div>
+              | </div>
+              | <div class="row">
+              |   <div class="four mobile twelfths">4</div>
+              |   <div class="two mobile twelfths skip-six">2</div>
+              | </div>
+              | <div class="row">
+              |   <div class="five mobile twelfths">5</div>
+              |   <div class="one mobile twelfth skip-six">1</div>
+              | </div>
+              | <div class="row">
+              |   <div class="four mobile fifths skip-one">4/5</div>
+              | </div>
+              | <div class="row">
+              |   <div class="eight mobile elevenths skip-three">8/11</div>
+              | </div>
+              | <div class="row">
+              |   <div class="five mobile sevenths skip-two">5/7</div>
+              | </div>
         br
         hr
         br
@@ -532,16 +687,31 @@ block content
           h4 Equal Columns
           .demo.equal-columns
             .equalize.row
-              .one.small-tablet.third.padded.tooltip.asphalt(title='.one.small-tablet.third.padded')
+              .one.third.padded
                 h1 First Column
                 p
                   | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-              .one.small-tablet.third.padded.tooltip.asphalt(title='.one.small-tablet.third.padded')
+              .one.third.padded
                 h1 Second Column
                 p
                   | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-              .one.small-tablet.third.padded.tooltip.asphalt(title='.one.small-tablet.third.padded')
+              .one.third.padded
                 h1 Third Column
                 p
                   | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          pre(data-lang='html')
+            | <div class="equalize row">
+            |   <div class="one third padded">
+            |     <h1>First Column</h1>
+            |     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            |   </div>
+            |   <div class="one third padded">
+            |     <h1>Second Column</h1>
+            |     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            |   </div>
+            |   <div class="one third padded">
+            |     <h1>Third Column</h1>
+            |     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            |   </div>
+            | </div>
         br

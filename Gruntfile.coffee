@@ -26,6 +26,7 @@ module.exports = (grunt) ->
           'pages/typography.html':        ['src/jade/typography.jade']
           'pages/navigation.html':        ['src/jade/navigation.jade']
           'pages/buttons.html':           ['src/jade/buttons.jade']
+          'pages/boxes.html':             ['src/jade/boxes.jade']
           'pages/messages.html':          ['src/jade/messages.jade']
           'pages/tables.html':            ['src/jade/tables.jade']
           'pages/forms.html':             ['src/jade/forms.jade']
@@ -49,18 +50,17 @@ module.exports = (grunt) ->
           'css/groundwork.css': ['css/groundwork.css']
 
     coffee:
-      build:
-        individual:
-          expand: true
-          cwd: 'src/coffee'
-          src: ['components/*.coffee', 'plugins/*.coffee']
-          dest: 'js'
-          ext: '.js'
-        concatenated:
-          options:
-            join: true
-          files:
-            "js/groundwork.all.js": ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
+      individual:
+        expand: true
+        cwd: 'src/coffee'
+        src: ['components/*.coffee', 'plugins/*.coffee']
+        dest: 'js'
+        ext: '.js'
+      concatenated:
+        options:
+          join: true
+        files:
+          "js/groundwork.all.js": ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
 
     uglify:
       minify:
