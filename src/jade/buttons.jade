@@ -23,7 +23,7 @@ block content
     hr
     .row
       .one.whole.padded
-        .bounceInLeft.animated
+        .bounceInRight.animated
           h4 Buttons
           .row
             .one.third.padded
@@ -45,9 +45,9 @@ block content
               p
                 button.alert Alert Button
               p
-                button.warning Warning Button
-              p
                 button.question Question Button
+              p
+                button.warning Warning Button
               p
                 button.error Error Button
             .one.third.padded
@@ -62,7 +62,7 @@ block content
                 button.block Block Button
         hr
         br
-        .bounceInRight.animated
+        .bounceInLeft.animated
           h4 States
           .row
             .one.third.padded
@@ -75,6 +75,8 @@ block content
                 button.success Success
               p
                 button.alert Alert
+              p
+                button.question Question
               p
                 button.warning Warning
               p
@@ -90,6 +92,8 @@ block content
               p
                 button.alert.active Active Alert
               p
+                button.question.active Active Question
+              p
                 button.warning.active Active Warning
               p
                 button.error.active Active Error
@@ -104,12 +108,14 @@ block content
               p
                 button.alert.disabled Disabled Alert
               p
+                button.question.disabled Disabled Question
+              p
                 button.warning.disabled Disabled Warning
               p
                 button.error.disabled Disabled Error
         hr
         br
-        .bounceInLeft.animated
+        .bounceInRight.animated
           h4 Colors
           .row
             .one.whole
@@ -124,9 +130,8 @@ block content
               button.green.gap-right.gap-bottom Green Button
         hr
         br
-        //- .bounceInUp.animated
         h4 Button Groups & Dropdown Menus
-        .row
+        .row.bounceInLeft.animated
           .one.third.padded
             ul.button-group
               li
@@ -222,3 +227,42 @@ block content
                   a(href='#')
                     i.icon-heart
                     |  Seperated Menu Item
+    hr
+    br
+    .row.bounceInUp.animated
+      .one.whole.padded
+        h4 Example Usage
+        .row
+          .one.half
+            .row
+              .one.third.small-tablet.pad-top.pad-left.pad-right.align-center
+                .pad-top
+                  button Normal Button
+              .two.thirds.small-tablet.padded
+                pre(data-lang='html')
+                  | <button>Normal Button</button>
+          .one.half
+            .row
+              .one.third.small-tablet.pad-top.pad-left.pad-right.align-center
+                .pad-top
+                  input(type='button', value='Input Button')
+              .two.thirds.small-tablet.padded
+                pre(data-lang='html')
+                  | <input type="button" value="Input Button" />
+        .row
+          .one.half
+            .row
+              .one.third.small-tablet.pad-top.pad-left.pad-right.align-center
+                .pad-top
+                  a(role='button', href='#') ARIA Role Button
+              .two.thirds.small-tablet.padded
+                pre(data-lang='html')
+                  | <a role="button" href="#">ARIA Role Button</button>
+          .one.half
+            .row
+              .one.third.small-tablet.pad-top.pad-left.pad-right.align-center
+                .pad-top
+                  a.blue.button(href='#') Blue Button
+              .two.thirds.small-tablet.padded
+                pre(data-lang='html')
+                  | <a class="blue button" href="#">Blue Button</a>

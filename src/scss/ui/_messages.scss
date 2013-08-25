@@ -26,7 +26,8 @@ $default-radius:  4px !default;
     @include icon-FontAwesome();
     content: "\f05a"; // icon-info-sign
     position: absolute;
-    top: 0;
+    top: 50%;
+    margin-top: -0.9em;
     left: 0;
     padding: 0.2em 0.3em;
     font-size: 1.2em;
@@ -111,11 +112,13 @@ $default-radius:  4px !default;
 
 %message-dismissible {
   padding-right: 2em;
+  cursor: pointer;
   &:after {
     @include icon-FontAwesome();
     content: "\f00d";
     position: absolute;
-    top: 0;
+    top: 50%;
+    margin-top: -0.9em;
     right: 0;
     padding: 0.2em 0.3em;
     font-size: 1.2em;

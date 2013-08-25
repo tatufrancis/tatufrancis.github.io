@@ -33,6 +33,9 @@ $default-radius:      4px !default;
   text-align: center;
   @include transition(background-color 0.25s ease-out);
   @include rounded($default-radius);
+  &:visited {
+    color: $button-text;
+  }
   &:hover, &:focus {
     @extend %button-on;
   }

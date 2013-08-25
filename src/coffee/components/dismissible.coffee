@@ -1,5 +1,8 @@
 $ ->
 
   $('body').on 'click', '.dismissible', ->
-    $(this).hide 150, ->
-      $(this).remove()
+    $(@).addClass('dismiss animated')
+    setTimeout( =>
+      $(@).hide 250, ->
+        $(@).remove()
+    , 1000)

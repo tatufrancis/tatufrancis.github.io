@@ -115,7 +115,7 @@
       <hr>
       <div class="row">
         <div class="one whole padded">
-          <div class="bounceInLeft animated">
+          <div class="bounceInRight animated">
             <h4>Buttons</h4>
             <div class="row">
               <div class="one third padded">
@@ -145,10 +145,10 @@
                   <button class="alert">Alert Button</button>
                 </p>
                 <p>
-                  <button class="warning">Warning Button</button>
+                  <button class="question">Question Button</button>
                 </p>
                 <p>
-                  <button class="question">Question Button</button>
+                  <button class="warning">Warning Button</button>
                 </p>
                 <p>
                   <button class="error">Error Button</button>
@@ -172,7 +172,7 @@
             </div>
           </div>
           <hr><br>
-          <div class="bounceInRight animated">
+          <div class="bounceInLeft animated">
             <h4>States</h4>
             <div class="row">
               <div class="one third padded">
@@ -188,6 +188,9 @@
                 </p>
                 <p>
                   <button class="alert">Alert</button>
+                </p>
+                <p>
+                  <button class="question">Question</button>
                 </p>
                 <p>
                   <button class="warning">Warning</button>
@@ -211,6 +214,9 @@
                   <button class="alert active">Active Alert</button>
                 </p>
                 <p>
+                  <button class="question active">Active Question</button>
+                </p>
+                <p>
                   <button class="warning active">Active Warning</button>
                 </p>
                 <p>
@@ -232,6 +238,9 @@
                   <button class="alert disabled">Disabled Alert</button>
                 </p>
                 <p>
+                  <button class="question disabled">Disabled Question</button>
+                </p>
+                <p>
                   <button class="warning disabled">Disabled Warning</button>
                 </p>
                 <p>
@@ -241,7 +250,7 @@
             </div>
           </div>
           <hr><br>
-          <div class="bounceInLeft animated">
+          <div class="bounceInRight animated">
             <h4>Colors</h4>
             <div class="row">
               <div class="one whole">
@@ -259,7 +268,7 @@
           </div>
           <hr><br>
           <h4>Button Groups & Dropdown Menus</h4>
-          <div class="row">
+          <div class="row bounceInLeft animated">
             <div class="one third padded">
               <ul class="button-group">
                 <li><a href="#">Normal</a></li>
@@ -317,16 +326,70 @@
           </div>
         </div>
       </div>
+      <hr><br>
+      <div class="row bounceInUp animated">
+        <div class="one whole padded">
+          <h4>Example Usage</h4>
+          <div class="row">
+            <div class="one half">
+              <div class="row">
+                <div class="one third small-tablet pad-top pad-left pad-right align-center">
+                  <div class="pad-top">
+                    <button>Normal Button</button>
+                  </div>
+                </div>
+                <div class="two thirds small-tablet padded">
+                  <pre data-lang="html">&lt;button&gt;Normal Button&lt;/button&gt;</pre>
+                </div>
+              </div>
+            </div>
+            <div class="one half">
+              <div class="row">
+                <div class="one third small-tablet pad-top pad-left pad-right align-center">
+                  <div class="pad-top">
+                    <input type="button" value="Input Button">
+                  </div>
+                </div>
+                <div class="two thirds small-tablet padded">
+                  <pre data-lang="html">&lt;input type=&quot;button&quot; value=&quot;Input Button&quot; /&gt;</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one half">
+              <div class="row">
+                <div class="one third small-tablet pad-top pad-left pad-right align-center">
+                  <div class="pad-top"><a role="button" href="#">ARIA Role Button</a></div>
+                </div>
+                <div class="two thirds small-tablet padded">
+                  <pre data-lang="html">&lt;a role=&quot;button&quot; href=&quot;#&quot;&gt;ARIA Role Button&lt;/button&gt;</pre>
+                </div>
+              </div>
+            </div>
+            <div class="one half">
+              <div class="row">
+                <div class="one third small-tablet pad-top pad-left pad-right align-center">
+                  <div class="pad-top"><a href="#" class="blue button">Blue Button</a></div>
+                </div>
+                <div class="two thirds small-tablet padded">
+                  <pre data-lang="html">&lt;a class=&quot;blue button&quot; href=&quot;#&quot;&gt;Blue Button&lt;/a&gt;</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="box gap-top bounceInUp animated">
       <div class="container padded">
         <div class="row">
-          <div class="three fourths padded">
-            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
+          <div class="one half padded">
+            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
             <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
           </div>
-          <div class="one fourth padded">
-            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped"><i class="icon-envelope"></i></a></p>
+          <div class="one half padded">
+            <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"><i class="icon-envelope"></i></a></p>
           </div>
         </div>
       </div>

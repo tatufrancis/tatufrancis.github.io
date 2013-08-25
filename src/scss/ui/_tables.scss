@@ -5,7 +5,7 @@
 
 $table-tags:    true !default;
 $table-classes: true !default;
-$tables-states: "info" "alert" "warning" "error" "success" !default;
+$tables-states: "info" "alert" "warning" "error" "success" "question" !default;
 
 
 %table {
@@ -71,6 +71,13 @@ $tables-states: "info" "alert" "warning" "error" "success" !default;
   %table-head-cells {
     background: #{$alert-background};
     color: #{$alert-color};
+  }
+}
+
+%table-question {
+  %table-head-cells {
+    background: #{$question-background};
+    color: #{$question-color};
   }
 }
 
