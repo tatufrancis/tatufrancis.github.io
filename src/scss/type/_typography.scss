@@ -29,7 +29,15 @@ $type-classnames:     "h1" "h2" "h3" "h4" "h5" "h6" "p"
                       "invalid" "valid"
                       "unstyled" !default;
 $styled-lists:        true !default;
-$ui-states:           "info" "alert" "warning" "error" "success" "question" !default;
+$info-color:          #3a87ad !default;
+$alert-text:          #ffffff !default;
+$error-color:         #b94a48 !default;
+$warning-color:       #FF971E !default;
+$success-color:       #468847 !default;
+$question-color:      #9855b4 !default;
+$ui-states:           "info"  "alert" "warning" "error" "success" "question" !default;
+$ui-icons:            "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059" !default;
+$ui-states-colors:    $info-color $alert-color $warning-color $error-color $success-color $question-color !default;
 $font-size:           14px !default;
 $line-height:         1.5 !default;
 $font-color:          #2b2b2d !default;
@@ -39,12 +47,6 @@ $link-active:         #198D98 !default;
 $selection-color:     $link-color !default;
 $selection-text:      #ffffff !default;
 $default-radius:      4px !default;
-$info-color:          #3a87ad !default;
-$alert-text:          #ffffff !default;
-$error-color:         #b94a48 !default;
-$warning-color:       #FF971E !default;
-$success-color:       #468847 !default;
-$question-color:      #9855b4 !default;
 $gutter:              10px !default;
 $background-color:    #ffffff !default;
 $default-radius:      4px !default;
@@ -143,18 +145,44 @@ $default-radius:      4px !default;
   list-style: none;
 }
 
-%ul-list {
+%ul-checklist {
   @extend %unstyled;
   margin-left: 0;
-  %list-item {
+  %checklist-item {
+    cursor: pointer;
     &:before {
-      content: '\f00c';
+      content: "\f096"; // check empty icon
       display: inline-block;
       width: 1.1em;
       margin-right: 0.25em;
       @include icon-FontAwesome();
       font-size: 1.2em;
       vertical-align: baseline;
+      background-image: none;
+      background-position: 0% 0%;
+      background-repeat: repeat;
+      margin-top: 0;
+    }
+    &[data-checked~="true"], &.checked, &.completed {
+      &:before {
+        content: "\f046"; // check icon
+      }
+    }
+  }
+}
+
+%ul-list {
+  @extend %unstyled;
+  margin-left: 0;
+  %list-item {
+    &:before {
+      content: "\f111"; // icon cirle (filled)
+      display: inline-block;
+      width: 1.1em;
+      margin-right: 0.25em;
+      @include icon-FontAwesome();
+      font-size: 0.75em;
+      vertical-align: middle;
       background-image: none;
       background-position: 0% 0%;
       background-repeat: repeat;
@@ -209,10 +237,10 @@ $default-radius:      4px !default;
 %q, %quote {
   @extend %bold, %italic;
   &:before {
-    content: '\201C';
+    content: "\201C";
   }
   &:after {
-    content: '\201D';
+    content: "\201D";
   }
 }
 
@@ -224,7 +252,7 @@ $default-radius:      4px !default;
   background: darken($background-color, 10%);
   @include border-radius($default-radius);
   &:before {
-    content: '\201C';
+    content: "\201C";
     color: darken($background-color, 20%);
     font-size: 4em;
     display: block;
@@ -233,7 +261,7 @@ $default-radius:      4px !default;
     left: 0.1em;
   }
   &:after {
-    content: '\201D';
+    content: "\201D";
     color: darken($background-color, 20%);
     font-size: 4em;
     display: block;
@@ -253,7 +281,7 @@ $default-radius:      4px !default;
   font-style: normal;
   color: lighten($font-color, 15%);
   &:before {
-    content: '\2014';
+    content: "\2014";
   }
 }
 
@@ -348,6 +376,19 @@ $default-radius:      4px !default;
     @extend %ul-list;
     > li {
       @extend %list-item;
+      @for $i from 1 through length($ui-states) {
+        &.#{nth($ui-states, $i)} {
+          &:before {
+            content: "#{nth($ui-icons, $i)}";
+          }
+        }
+      }
+    }
+  }
+  ul.checklist {
+    @extend %ul-checklist;
+    > li {
+      @extend %checklist-item;
     }
   }
   ol.list {
@@ -368,6 +409,13 @@ $default-radius:      4px !default;
           &.#{nth($modifier-name, $i)} {
             &:before {
               background: #{nth($modifier-code, $i)};
+            }
+          }
+        }
+        @for $i from 1 through length($ui-states) {
+          &.#{nth($ui-states, $i)} {
+            &:before {
+              background-color: #{nth($ui-states-colors, $i)};
             }
           }
         }

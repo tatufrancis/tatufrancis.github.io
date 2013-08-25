@@ -5,7 +5,8 @@
 
 $ui-classes:      true !default;
 $ui-modifiers:    "dismissible" !default;
-$ui-states:       "info" "alert" "warning" "error" "success" "question" !default;
+$ui-states:       "info"  "alert" "warning" "error" "success" "question" !default;
+$ui-icons:        "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059" !default;
 $radius-helpers:  "square" "round" !default;
 $size-helpers:    "small" "medium" "large" !default;
 $aria-selectors:  true !default;
@@ -47,18 +48,6 @@ $default-radius:  4px !default;
   border-color: $info-border;
   &%message-disabled {
     @include state(disabled,normal,desaturate($info-color,20%));
-  }
-}
-
-%message-question {
-  background-color: $question-background;
-  color: $question-color;
-  border-color: $question-border;
-  &:before {
-    content: "\f059"; // icon-question-sign
-  }
-  &%message-disabled {
-    @include state(disabled,normal,desaturate($question-color,20%));
   }
 }
 
@@ -107,6 +96,18 @@ $default-radius:  4px !default;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
+  }
+}
+
+%message-question {
+  background-color: $question-background;
+  color: $question-color;
+  border-color: $question-border;
+  &:before {
+    content: "\f059"; // icon-question-sign
+  }
+  &%message-disabled {
+    @include state(disabled,normal,desaturate($question-color,20%));
   }
 }
 
