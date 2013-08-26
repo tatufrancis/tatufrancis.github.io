@@ -92,7 +92,7 @@ $question-border:     #f1dbfa !default;
 }
 
 %error-block-prefix, %error-block-suffix {
-  color:lighten($error-color, 62%);;
+  color:lighten($error-color, 62%);
   background:$error-color;
   border-color:$error-color;
 }
@@ -104,7 +104,7 @@ $question-border:     #f1dbfa !default;
 }
 
 %success-block-prefix, %success-block-suffix {
-  color:lighten($success-color, 62%);;
+  color:lighten($success-color, 62%);
   background:$success-color;
   border-color:$success-color;
 }

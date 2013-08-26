@@ -171,7 +171,7 @@ $default-radius:  4px !default;
 }
 
 @if $aria-selectors {
-  [role~=alert] {
+  [role~="alert"] {
     @extend %message;
     
     @if $ui-classes {

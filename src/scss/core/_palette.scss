@@ -28,14 +28,14 @@ $border:              #{$border-thickness} #{$border-style} #{$border-color} !de
 // buttons
 $button-color:        lighten(gray, 32.5%) !default;
 $button-text:         darken(gray, 15%) !default;
-$button-border-color: lighten(gray, 27.5%) !default;;
+$button-border-color: lighten(gray, 27.5%) !default;
 $button-active:       lighten(gray, 27.5%) !default;
 $button-active-text:  darken(gray, 12%) !default;
 
 // navigation
 $nav-color:           lighten(gray, 32.5%) !default;
 $nav-text:            darken(gray, 15%) !default;
-$nav-border-color:    lighten(gray, 27.5%) !default;;
+$nav-border-color:    lighten(gray, 27.5%) !default;
 $nav-active:          lighten(gray, 27.5%) !default;
 $nav-active-text:     darken(gray, 12%) !default;
 

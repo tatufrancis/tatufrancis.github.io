@@ -36,6 +36,8 @@ module.exports = (grunt) ->
           'pages/icons.html':             ['src/jade/icons.jade']
           'pages/responsive-text.html':   ['src/jade/responsive-text.jade']
           'pages/animations.html':        ['src/jade/animations.jade']
+          'pages/breakpoints.html':        ['src/jade/breakpoints.jade']
+          'pages/media-queries.html':        ['src/jade/media-queries.jade']
         options:
           pretty: true
 

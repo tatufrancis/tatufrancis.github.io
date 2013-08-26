@@ -36,6 +36,8 @@ $radius-helpers:      "square" "round" !default;
 $rotation-classes:    true !default;
 $rotation-helpers:    "rotate-90" "rotate-90-ctr" "rotate-180" "rotate-180-ctr" "rotate-270" "rotate-270-ctr" "rotate-360" "rotate-360-ctr" !default;
 
+$transition-classes:  true !default;
+
 
 ///////////////////////
 //       mixins      //
@@ -349,5 +351,13 @@ $rotation-helpers:    "rotate-90" "rotate-90-ctr" "rotate-180" "rotate-180-ctr" 
         }
       }
     }
+  }
+}
+@if $transition-classes {
+  .transition {
+    @include transition();
+  }
+  .no-transition {
+    transition: none !important;
   }
 }

@@ -111,6 +111,7 @@ $responsive: true !default;
         .center-mobile          { @include _center; }
         .pull-right-mobile      { @include _pull-right; }
         .pull-left-mobile       { @include _pull-left; }
+        .pull-none-mobile       { @include _pull-none; }
       }
       @if $border-classes {
         .bordered-mobile        { @include _bordered; }

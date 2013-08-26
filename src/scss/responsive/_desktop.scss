@@ -102,6 +102,7 @@ $responsive: true !default;
         .center-desktop          { @include _center; }
         .pull-right-desktop      { @include _pull-right; }
         .pull-left-desktop       { @include _pull-left; }
+        .pull-none-desktop       { @include _pull-none; }
       }
       @if $border-classes {
         .bordered-desktop        { @include _bordered; }

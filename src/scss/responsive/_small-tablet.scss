@@ -107,6 +107,7 @@ $responsive: true !default;
         .center-small-tablet          { @include _center; }
         .pull-right-small-tablet      { @include _pull-right; }
         .pull-left-small-tablet       { @include _pull-left; }
+        .pull-none-small-tablet       { @include _pull-none; }
       }
       @if $border-classes {
         .bordered-small-tablet        { @include _bordered; }

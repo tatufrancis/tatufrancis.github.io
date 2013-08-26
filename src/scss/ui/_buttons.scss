@@ -357,7 +357,7 @@ $default-radius:      4px !default;
 }
 
 @if $aria-selectors {
-  [role~=button] {
+  [role~="button"] {
     @extend %button;
 
     @if $button-classes {

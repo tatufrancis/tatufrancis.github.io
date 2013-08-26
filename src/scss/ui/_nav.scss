@@ -8,7 +8,7 @@ $navigation-states:   "on" "active" !default;
 $aria-selectors:      true !default;
 $nav-color:           lighten(gray, 32.5%) !default;
 $nav-text:            darken(gray, 15%) !default;
-$nav-border-color:    lighten(gray, 27.5%) !default;;
+$nav-border-color:    lighten(gray, 27.5%) !default;
 $nav-active:          lighten(gray, 27.5%) !default;
 $nav-active-text:     darken(gray, 12%) !default;
 $border-thickness:    1px !default;
@@ -313,7 +313,7 @@ $default-radius:      4px !default;
 }
 
 @if $aria-selectors {
-  [role~=navigation] {
+  [role~="navigation"] {
     @extend %navigation;
   }
 }

@@ -105,6 +105,7 @@ $responsive: true !default;
         .center-ipad          { @include _center; }
         .pull-right-ipad      { @include _pull-right; }
         .pull-left-ipad       { @include _pull-left; }
+        .pull-none-ipad       { @include _pull-none; }
       }
       @if $border-classes {
         .bordered-ipad        { @include _bordered; }
