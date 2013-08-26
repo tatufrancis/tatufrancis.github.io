@@ -14,7 +14,7 @@ Say hello to responsive design made easy.
 [GroundworkCSS](http://groundwork.sidereel.com) is a fully responsive HTML5, CSS 
 and Javascript toolkit created by [@ghepting](http://twitter.com/ghepting).
 
-Using GroundworkCSS, you can rapidly prototype and build accessible web apps that 
+Using GroundworkCSS, you can rapidly prototype and create accessible web apps that 
 work on virtually any device. Key features that make GroundworkCSS stand out are:
 
 * nestable, fractional, responsive, adaptive, fluid grid system

@@ -16,6 +16,9 @@ $default-radius:  4px !default;
   color: $button-text;
   border: 1px solid $border-color;
   @include rounded($default-radius);
+  %links {
+    color: inherit;
+  }
 }
 
 %box-small { @include _small; }

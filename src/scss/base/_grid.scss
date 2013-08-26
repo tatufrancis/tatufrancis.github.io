@@ -6,15 +6,16 @@
 //
 // =============================================
 
-$numerators:            "one"    "two"    "three"  "four"    "five"   "six"    "seven"    "eight"   "nine"   "ten"    "eleven"    "twelve" !default;
-$denominators:          "whole"  "half"   "third"  "fourth"  "fifth"  "sixth"  "seventh"  "eighth"  "ninth"  "tenth"  "eleventh"  "twelfth" !default;
-$denominators-plural:   "wholes" "halves" "thirds" "fourths" "fifths" "sixths" "sevenths" "eighths" "ninths" "tenths" "elevenths" "twelfths" !default;
-$grid-classes:          true !default;
-$grid-adapter-classes:  true !default;
-$grid-adapters:         $one-whole $one-half $one-third $one-fourth $one-fifth !default;
-$container-width:       1200px !default;
-$gutter:                10px !default;
-$responsive:            true !default;
+$numerators:              "one"    "two"    "three"  "four"    "five"   "six"    "seven"    "eight"   "nine"   "ten"    "eleven"    "twelve" !default;
+$denominators:            "whole"  "half"   "third"  "fourth"  "fifth"  "sixth"  "seventh"  "eighth"  "ninth"  "tenth"  "eleventh"  "twelfth" !default;
+$denominators-plural:     "wholes" "halves" "thirds" "fourths" "fifths" "sixths" "sevenths" "eighths" "ninths" "tenths" "elevenths" "twelfths" !default;
+$grid-classes:            true !default;
+$grid-adapter-classes:    true !default;
+$grid-adapters:           $one-whole $one-half $one-third $one-fourth $one-fifth !default;
+$grid-adapters-clearfix:  15 !default;
+$container-width:         1200px !default;
+$gutter:                  10px !default;
+$responsive:              true !default;
 
 
 ///////////////////////////////////////////////
@@ -87,6 +88,36 @@ $selectors: if($grid-classes, "%" ".", "%");
   }
 }
 
+@if $grid-adapter-classes {
+  @media #{$tablet} {
+    // grid adapters
+    @for $i from 1 through length($grid-adapters) {
+      .#{nth($numerators, ($i))}-up {
+        width: nth($grid-adapters, $i) !important;
+        clear: none !important;
+        float: left !important;
+        left: 0 !important;
+        right: 0 !important;
+      }
+    }
+    // grid adapters nth clearfix
+    @for $i from 1 through length($grid-adapters) {
+      $nth-clears: "";
+      @for $j from 1 through $grid-adapters-clearfix {
+        $nth-clears: $nth-clears + "&:nth-child(#{($i * $j) + 1})";
+        @if $j < $grid-adapters-clearfix {
+          $nth-clears: $nth-clears + ", ";
+        }
+      }
+      .#{nth($numerators, ($i))}-up {
+        #{$nth-clears} {
+          clear: both !important;
+        }
+      }
+    }
+  }
+}
+
 @if $responsive and $grid-adapter-classes {
   // ipad grid adapters
   @media #{$ipad} {
@@ -100,18 +131,25 @@ $selectors: if($grid-classes, "%" ".", "%");
       }
     }
   }
-  // grid adapter nth clearfix
+  // ipad grid adapters nth clearfix
   @media #{$ipad} and #{$tablet} and #{$not-mobile} {
     @for $i from 1 through length($grid-adapters) {
+      $nth-clears: "";
+      @for $j from 1 through $grid-adapters-clearfix {
+        $nth-clears: $nth-clears + "&:nth-child(#{($i * $j) + 1})";
+        @if $j < $grid-adapters-clearfix {
+          $nth-clears: $nth-clears + ", ";
+        }
+      }
       .#{nth($numerators, ($i))}-up-ipad {
-        &:nth-child(#{$i + 1}) {
+        #{$nth-clears} {
           clear: both !important;
         }
       }
     }
   }
   // small-tablet grid adapters
-  @media #{$small-tablet} {
+  @media #{$small-tablet} and #{$not-mobile} {
     @for $i from 1 through length($grid-adapters) {
       .#{nth($numerators, ($i))}-up-small-tablet {
         width: nth($grid-adapters, $i) !important;
@@ -122,11 +160,18 @@ $selectors: if($grid-classes, "%" ".", "%");
       }
     }
   }
-  // grid adapter nth clearfix
+  // small-tablet grid adapters nth clearfix
   @media #{$small-tablet} and #{$not-mobile} {
     @for $i from 1 through length($grid-adapters) {
+      $nth-clears: "";
+      @for $j from 1 through $grid-adapters-clearfix {
+        $nth-clears: $nth-clears + "&:nth-child(#{($i * $j) + 1})";
+        @if $j < $grid-adapters-clearfix {
+          $nth-clears: $nth-clears + ", ";
+        }
+      }
       .#{nth($numerators, ($i))}-up-small-tablet {
-        &:nth-child(#{$i + 1}) {
+        #{$nth-clears} {
           clear: both !important;
         }
       }
@@ -142,6 +187,23 @@ $selectors: if($grid-classes, "%" ".", "%");
         left: 0 !important;
         right: 0 !important;
         &:nth-child(#{$i + 1}) {
+          clear: both !important;
+        }
+      }
+    }
+  }
+  // mobile grid adapters nth clearfix
+  @media #{$mobile} {
+    @for $i from 1 through length($grid-adapters) {
+      $nth-clears: "";
+      @for $j from 1 through $grid-adapters-clearfix {
+        $nth-clears: $nth-clears + "&:nth-child(#{($i * $j) + 1})";
+        @if $j < $grid-adapters-clearfix {
+          $nth-clears: $nth-clears + ", ";
+        }
+      }
+      .#{nth($numerators, ($i))}-up-mobile {
+        #{$nth-clears} {
           clear: both !important;
         }
       }

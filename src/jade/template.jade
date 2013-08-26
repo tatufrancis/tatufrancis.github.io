@@ -66,11 +66,11 @@ html.no-js
         })
   body
     header.padded
-      .container.fadeIn.animated
+      .container
         h2.logo
           a(href='/', target='_parent')
             img(src='../images/groundwork-logo.svg', alt='GroundworkCSS')
-            | GroundworkCSS
+            | GroundworkCSS 2
         nav.nav.gap-top(role='navigation')
           ul(role='menubar')
             li
@@ -87,7 +87,7 @@ html.no-js
                 li
                   a(href='./layout-c.html') Ecommerce Page
             li.menu(role='menu')
-              a(href='#') Usage Examples
+              a(href='#') Documentation
               ul
                 li
                   a(href='./grid.html', title='Responsive grid system, grid adapters and helpers') Grid
@@ -117,38 +117,87 @@ html.no-js
                 li
                   a(href='./responsive-text.html', title='Responsive text and multi-line text block truncation') Responsive Text
                 li
+                  a(href='./placeholder-text.html', title='Placeholder text and placeholder fonts for rapid prototyping and wireframes') Placeholder Text
+                li
                   a(href='./animations.html', title='Pure CSS3 Animations') Animations
 
     block content
 
-    footer.box.gap-top.bounceInUp.animated
-      .container.padded
-        .row
-          .one.half.padded
-            p
-              | GroundworkCSS is 
-              b 100% free
-              |  and 
-              b open source
-              |. 
-              a(href='mailto:groundworkcss@gmail.com')
-                | Give me a shout 
-                i.icon-envelope
-              |  if you find it useful and have any feedback.
-            p
-              | Find a bug? Let me know by 
-              a(href="https://github.com/groundworkcss/groundwork/issues", target="_blank")
-                | filing an issue 
-                i.icon-github-alt
-              |  on Github.
-          .one.half.padded
-            p.large.padded.align-right.align-center-small-tablet
-              a.large.inline.gapped(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
-                i.icon-twitter-sign
-              a.large.inline.gapped(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
-                i.icon-github-sign
-              a.large.inline.gapped(href="mailto:groundworkcss@gmail.com", title="groundworkcss@gmail.com", style="text-decoration:none;")
-                i.icon-envelope
+    footer.gap-top.bounceInUp.animated
+      .box.square.charcoal
+        .container.padded
+          .row
+            .one.fourth.padded
+              h5.zero.green Example Layouts
+            .three.fourths.padded
+              h5.zero.blue Documentation
+          .row
+            .one.fourth.pad-left.pad-right
+              ul.unstyled
+                li
+                  a(href='./layout-a.html') Web Page
+                li
+                  a(href='./layout-b.html') Image Gallery
+                li
+                  a(href='./layout-c.html') Ecommerce Page
+            .three.fourths.pad-left.pad-right
+              ul.unstyled.three-column
+                li
+                  a(href='./grid.html', title='Responsive grid system, grid adapters and helpers') Grid
+                li
+                  a(href='./helpers.html', title='Layout helpers, spinners and much more') Helpers
+                li
+                  a(href='./typography.html', title='Text elements, quotes, code and web fonts') Typography
+                li
+                  a(href='./navigation.html', title='Navigation') Navigation
+                li
+                  a(href='./buttons.html', title='Buttons, button groups, button menus') Buttons
+                li
+                  a(href='./boxes.html', title='Boxes') Boxes
+                li
+                  a(href='./messages.html', title='Message boxes') Message Boxes
+                li
+                  a(href='./tables.html', title='Tables') Tables
+                li
+                  a(href='./tabs.html', title='Tabs') Tabs
+                li
+                  a(href='./forms.html', title='Form elements') Form Elements
+                li
+                  a(href='./icons.html', title="Icons") Icons
+                li
+                  a(href='./responsive-text.html', title='Responsive text and multi-line text block truncation') Responsive Text
+                li
+                  a(href='./placeholder-text.html', title='Placeholder text and placeholder fonts for rapid prototyping and wireframes') Placeholder Text
+                li
+                  a(href='./animations.html', title='Pure CSS3 Animations') Animations
+      .box.square
+        .container.padded
+          .row
+            .one.half.padded
+              p
+                | GroundworkCSS is 
+                b 100% free
+                |  and 
+                b open source
+                |. 
+                a(href='mailto:groundworkcss@gmail.com')
+                  | Give me a shout 
+                  i.icon-envelope
+                |  if you find it useful and have any feedback.
+              p
+                | Find a bug? Let me know by 
+                a(href="https://github.com/groundworkcss/groundwork/issues", target="_blank")
+                  | filing an issue 
+                  i.icon-github-alt
+                |  on Github.
+            .one.half.padded
+              p.large.padded.align-right.align-center-small-tablet
+                a.large.inline.gapped(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
+                  i.icon-twitter-sign
+                a.large.inline.gapped(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
+                  i.icon-github-sign
+                a.large.inline.gapped(href="mailto:groundworkcss@gmail.com", title="groundworkcss@gmail.com", style="text-decoration:none;")
+                  i.icon-envelope
 
     // javascript
     script(type='text/javascript', src='../js/groundwork.all.js')

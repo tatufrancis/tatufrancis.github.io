@@ -92,11 +92,12 @@ $orange:              #e67e22 !default;
 $red:                 #e74c3c !default;
 $pink:                #f02475 !default;
 $purple:              #9b59b6 !default;
+$charcoal:            #383636 !default;
 $asphalt:             #34495e !default;
 $blue:                #3498db !default;
 $turquoise:           #1abc9c !default;
 $green:               #2ecc71 !default;
 
-$modifier-name:       "green"   "blue"   "purple"   "yellow"   "orange"   "red"   "pink"   "turquoise"   "asphalt"  !default;
-$modifier-code:       $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt   !default;
-$modifier-text:       $white    $white   $white     $white     $white     $white  $white   $white        $white     !default;
+$modifier-name:       "green"   "blue"   "purple"   "yellow"   "orange"   "red"   "pink"   "turquoise"   "asphalt"  "charcoal"  "white"   "black" !default;
+$modifier-code:       $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt   $charcoal   $white    $black  !default;
+$modifier-text:       $white    $white   $white     $white     $white     $white  $white   $white        $white     $white      $black    $white  !default;

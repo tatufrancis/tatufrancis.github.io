@@ -45,17 +45,29 @@ $ ->
     $(tabTypes).each ->
       tabs = $(@)
       tabs.removeClass('accordion')
+      adjustVerticalTabs(tabs)
       tabs.find('> ul > div').each ->
         tabpanel = $(@).clone()
         tabs.append(tabpanel)
         $(@).remove()
 
+  adjustVerticalTabs = (tabs) ->
+    tabs = $(tabs)
+    unless tabs.length
+      tabs = $('.tabs.vertical')
+    tabs.each ->
+      $(@).find('> ul').css('height', 'auto')
+      unless $(@).hasClass('accordion')
+        $(@).find('> ul').css('height', $(@).height() + 'px')
+
   $(window).resize ->
     clearTimeout(window.delayedAdjustTabs)
     window.delayedAdjustTabs = setTimeout( ->
       transformTabs()
+      adjustVerticalTabs()
     , 50)
 
   $(window).load ->
     transformTabs()
+    adjustVerticalTabs()
 

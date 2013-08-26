@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    return $('body').on('click', '.checklist li', function() {
+    return $('body').on('click', '.checklist:not([readonly]) li:not([readonly])', function() {
       if ($(this).attr('data-checked') === "true") {
         return $(this).attr('data-checked', "false");
       } else {

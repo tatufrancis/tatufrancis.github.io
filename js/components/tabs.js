@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    var convertToAccordion, restoreTabStructure, transformTabs;
+    var adjustVerticalTabs, convertToAccordion, restoreTabStructure, transformTabs;
     $('.tabs').each(function() {
       var activeTab, tabs;
       activeTab = $(this).find('> ul li.active');
@@ -56,6 +56,7 @@
         var tabs;
         tabs = $(this);
         tabs.removeClass('accordion');
+        adjustVerticalTabs(tabs);
         return tabs.find('> ul > div').each(function() {
           var tabpanel;
           tabpanel = $(this).clone();
@@ -64,14 +65,28 @@
         });
       });
     };
+    adjustVerticalTabs = function(tabs) {
+      tabs = $(tabs);
+      if (!tabs.length) {
+        tabs = $('.tabs.vertical');
+      }
+      return tabs.each(function() {
+        $(this).find('> ul').css('height', 'auto');
+        if (!$(this).hasClass('accordion')) {
+          return $(this).find('> ul').css('height', $(this).height() + 'px');
+        }
+      });
+    };
     $(window).resize(function() {
       clearTimeout(window.delayedAdjustTabs);
       return window.delayedAdjustTabs = setTimeout(function() {
-        return transformTabs();
+        transformTabs();
+        return adjustVerticalTabs();
       }, 50);
     });
     return $(window).load(function() {
-      return transformTabs();
+      transformTabs();
+      return adjustVerticalTabs();
     });
   });
 

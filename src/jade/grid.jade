@@ -191,7 +191,7 @@ block content
             | A responsive and adaptive fractional grid system created by 
             a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
-            p.quicksand Component Usage Example 1 of 13
+            p.quicksand Component Usage Example 1 of 14
             p
               a.blue.button(href='layout-c.html')
                 i.icon-arrow-left
@@ -204,7 +204,11 @@ block content
     .row
       .one.whole.padded
         .bounceInLeft.animated
-          h4 Grid Helpers
+          h4.zero Grid Breakpoint Helpers
+          p.small
+            | By default, grid columns collapse into rows at the 
+            code.inline $small-tablet
+            |  breakpoint. The grid breakpoint helpers allow you to target the breakpoint that the grid structure should persist through.
           .row
             .one.fifth
               p Desktop Grid (default)

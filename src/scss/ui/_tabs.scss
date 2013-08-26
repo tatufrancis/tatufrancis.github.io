@@ -107,6 +107,18 @@ $default-radius:      4px !default;
     > div {
       @extend %tabpanel;
     }
+    &.vertical {
+      > ul {
+        @extend %pull-left, %gap-right;
+        li {
+          @extend %block;
+          @include rounded(0);
+        }
+      }
+      > div {
+        clear: none;
+      }
+    }
     &.accordion {
       > ul {
         li {
