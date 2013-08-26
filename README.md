@@ -4,7 +4,7 @@
   alt="GroundworkCSS">
 </a>
 
-GroundworkCSS v1.13.0
+GroundworkCSS v2.0.0-wip
 ====
 
 Say hello to responsive design made easy.
@@ -17,15 +17,16 @@ and Javascript toolkit created by [@ghepting](http://twitter.com/ghepting).
 Using GroundworkCSS, you can rapidly prototype and build accessible web apps that 
 work on virtually any device. Key features that make GroundworkCSS stand out are:
 
-* nestable, fractions-based, fluid grid system
+* nestable, fractional, responsive, adaptive, fluid grid system
 * works on virtually anything: mobile, tablet, or large screen devices
 * built with modular SCSS and JS components
 * easy to customize
-* responsive text
-* unique approach to responsive tables
+* highly configurable
 * supports purely semantic implementations by utilizing Sass @extend, @mixin and 
   %placeholder classes
-  
+* built-in ARIA role support
+* responsive text and tables
+* and much more
 
 Getting Started using GroundworkCSS
 ====
@@ -38,46 +39,53 @@ pre-compiled CSS and JS files into your project, and then refer to them in
 markup. The 2 most important files are:
 
 * css/groundwork.css
-* js/groundwork.all.js
+* js/groundwork.all.js (requires jQuery & modernizr)
 
 In addition, these support files may be used:
 
+* js/libs/jquery-1.10.2.min.js
+* js/libs/modernizr-2.6.2.min.js
 * css/groundwork-ie.css (IE Compatibility)
-* js/libs/html5shiv.min.js (IE Compatibility)
-* css/font-awesome-ie7.min.css (IE Compatibility)
-* js/plugins/jquery.cycle2.js (Required for Cycle2)
 
 All in all, you may end up with markup that looks like the following:
 
 **At the top of your HTML document (within the head section)**
 
+    <script type="text/javascript" src="/js/libs/modernizr-2.6.2.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/css/groundwork.css">
     <!--[if IE]><link type="text/css" rel="stylesheet" href="/css/groundwork-ie.css"><![endif]-->
-    <!--[if lt IE 9]><script type="text/javascript" src="/js/libs/html5shiv.min.js"></script><![endif]-->
-    <!--[if IE 7]><link type="text/css" rel="stylesheet" href="/css/font-awesome-ie7.min.css"><![endif]-->
 
 **At the bottom of your HTML document (just before your closing body tag)**
 
-    <script type="text/javascript" src="/js/plugins/jquery.cycle2.js"></script>
+    <script type="text/javascript" src="/js/libs/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/js/groundwork.all.js"></script>
 
 
 Custom Build
 ----
 
-If you use SCSS and you want to compile your own build of groundwork you can do
-so (good if you need lean CSS output for your site).
+If you use SCSS and you want to compile your own build of Groundwork or 
+integrate it along with your project code.
 
-SCSS source files are located in **src/scss**. Important files to edit are:
+SCSS source files are located in **src/scss** and **src/coffee**.
+
+Important files to edit are:
 
 * groundwork.scss: dictates which modules are imported for compilation
 (delete/comment out unneeded modules).
-* _variables.scss: initial settings for GroundworkCSS, including whether to
-generate grid/helper classes or not.
+* _settings.scss: initial settings for Groundwork, including customizable 
+colors, options to turn off rapid prototyping classes and much more.
 
-You can then output your own groundwork.css, or import groundwork.scss as part
-of your project's SCSS. The latter lets you utilise GroundworkCSS's library
-through ```@include``` or ```@extend``` for your custom classes.
+You can then output your own groundwork[.css/.js], or import groundwork.scss 
+as part of your project's SCSS. The latter lets you utilise GroundworkCSS's 
+library through ```@include``` or ```@extend``` for your custom classes.
+
+
+Ruby on Rails
+----
+
+If you're using Groundwork in a Ruby on Rails project, definitely use the 
+[groundworkcss-rails gem](http://github.com/groundworkcss/groundworkcss-rails)
 
 
 Want to develop on and contribute to GroundworkCSS?
