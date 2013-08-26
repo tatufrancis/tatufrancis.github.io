@@ -1,31 +1,30 @@
-.snippet-wrap .snippet-num {
-  margin: 1em 0.5em !important;
-}
-.snippet-wrap .snippet-num li {
-  padding-left: 0.5em !important;
-}
-.snippet-wrap pre.sh_sourceCode {
-  padding: 0 !important;
-  max-height: 16.75em;
-}
-.snippet-wrap pre.sh_sourceCode.snippet-textonly {
-  padding: 12px 15px !important;
-}
-.snippet-wrap .snippet-menu, .snippet-wrap .snippet-hide {
-  top: 5px !important;
-  right: 5px !important;
-}
-.snippet-wrap .snippet-menu pre, .snippet-wrap .snippet-hide pre {
-  background-color: rgba(17, 17, 17, 0.75) !important;
-  padding: 5px 5px 0 !important;
-  border-radius: 4px;
-}
-
 .sh_groundwork {
   background: none;
   padding: 0;
   margin: 0;
   border: 0 none;
+}
+.sh_groundwork.snippet-wrap .snippet-num {
+  margin: 1em 0.5em;
+}
+.sh_groundwork.snippet-wrap .snippet-num li {
+  padding-left: 0.5em;
+}
+.sh_groundwork.snippet-wrap pre.sh_sourceCode {
+  padding: 0;
+  max-height: 16.75em;
+}
+.sh_groundwork.snippet-wrap pre.sh_sourceCode.snippet-textonly {
+  padding: 12px 15px;
+}
+.sh_groundwork.snippet-wrap .snippet-menu, .sh_groundwork.snippet-wrap .snippet-hide {
+  top: 5px;
+  right: 5px;
+}
+.sh_groundwork.snippet-wrap .snippet-menu pre, .sh_groundwork.snippet-wrap .snippet-hide pre {
+  background-color: rgba(17, 17, 17, 0.75);
+  padding: 5px 5px 0;
+  border-radius: 4px;
 }
 .sh_groundwork .sh_sourceCode {
   background-color: #34495e;

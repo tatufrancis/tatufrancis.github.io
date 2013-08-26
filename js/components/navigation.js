@@ -77,8 +77,7 @@
           $(this).closest('.menu').find('.menu').removeClass('on');
           $(this).closest('.menu').find('ul').removeClass('open');
         }
-        e.preventDefault();
-        return false;
+        return e.preventDefault();
       });
     };
 
@@ -100,8 +99,7 @@
         list.find('.menu').removeClass('on');
         list.find('ul').removeClass('open');
       }
-      e.preventDefault();
-      return false;
+      return e.preventDefault();
     });
   });
 

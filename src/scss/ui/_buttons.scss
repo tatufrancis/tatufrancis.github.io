@@ -10,18 +10,21 @@ $button-states:       "on" "active" "disabled" "info" "alert" "warning" "error" 
 $aria-selectors:      true !default;
 $button-color:        lighten(gray, 32.5%) !default;
 $button-text:         darken(gray, 15%) !default;
-$button-border-color: lighten(gray, 27.5%) !default;;
+$button-border-color: lighten(gray, 27.5%) !default;
 $button-active:       lighten(gray, 27.5%) !default;
 $button-active-text:  darken(gray, 12%) !default;
+$border-thickness:    1px !default;
+$border-style:        solid !default;
+$border-color:        #dddddd !default;
 $default-radius:      4px !default;
 
 
 %button {
-  display: inline-block;
+  @extend %inline-block;
   word-wrap: break-word;
   padding: 0.25em 1em;
   background: $button-color;
-  border: 1px solid $button-active;
+  border: $border-thickness $border-style $button-active;
   color: $button-text;
   @include font-stack();
   font-weight: bold;
@@ -183,7 +186,7 @@ $default-radius:      4px !default;
   list-style: none;
   display: none;
   background: white;
-  border: 1px solid $border-color;
+  border: $border-thickness $border-style $border-color;
   position: absolute;
   left: 0;
   width: 100%;
@@ -243,7 +246,7 @@ $default-radius:      4px !default;
       word-wrap: break-word;
       padding: 0.25em 1em;
       background: $button-color;
-      border: 1px solid $button-active;
+      border: $border-thickness $border-style $button-active;
       color: $button-text;
       font-weight: bold;
       text-decoration: none;
@@ -254,7 +257,7 @@ $default-radius:      4px !default;
         background: $button-active;
         text-decoration: none;
         // color: $button-active-text;
-        border: 1px solid $button-active;
+        border: $border-thickness $border-style $button-active;
       }
     }
   }

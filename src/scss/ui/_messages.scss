@@ -116,7 +116,7 @@ $default-radius:  4px !default;
   cursor: pointer;
   &:after {
     @include icon-FontAwesome();
-    content: "\f00d";
+    content: "\f00d"; // icon-remove
     position: absolute;
     top: 50%;
     margin-top: -0.9em;

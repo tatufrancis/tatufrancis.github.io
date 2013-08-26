@@ -124,11 +124,6 @@ $default-radius:      4px !default;
           }
         }
         &.menu {
-          // &.on {
-          //   > a {
-          //     border-bottom: 0;
-          //   }
-          // }
           ul {
             border: 0;
             a {
@@ -138,13 +133,13 @@ $default-radius:      4px !default;
           > a {
             &:after {
               float: none;
-              content: "\f0d7";
+              content: "\f0d7"; // icon-caret-down
             }
           }
           &.on {
             > a {
               &:after {
-                content: "\f0d8";
+                content: "\f0d8"; // icon-caret-up
               }
             }
           }
@@ -173,6 +168,19 @@ $default-radius:      4px !default;
 }
 
 @if $navigation-classes {
+  .no-js {
+    .nav {
+      ul {
+        li {
+          &:hover, &:focus {
+            > ul {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
   .nav {
     @extend %navigation;
 
@@ -220,7 +228,7 @@ $default-radius:      4px !default;
           &:after {
             @extend %pull-right;
             margin-left: 0.5em;
-            content: "\f0d7";
+            content: "\f0d7"; // icon-caret-down
             font-family: FontAwesome;
             font-weight: normal;
             font-style: normal;
@@ -261,7 +269,7 @@ $default-radius:      4px !default;
         &.menu {
           > a {
             &:after {
-              content: "\f0da";
+              content: "\f0da"; // icon-caret-right
             }
           }
         }
@@ -287,12 +295,6 @@ $default-radius:      4px !default;
           }
         }
       }
-
-      // &:hover, &:focus {
-      //   > ul {
-      //     display: block;
-      //   }
-      // }
 
       > ul.open {
         display: block;

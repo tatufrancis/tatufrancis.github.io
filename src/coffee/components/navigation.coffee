@@ -59,7 +59,6 @@ class ResponsiveNavigation
         $(this).closest('.menu').find('.menu').removeClass('on')
         $(this).closest('.menu').find('ul').removeClass('open')
       e.preventDefault()
-      false
 
 $ ->
 
@@ -75,4 +74,3 @@ $ ->
       list.find('.menu').removeClass('on')
       list.find('ul').removeClass('open')
     e.preventDefault()
-    false

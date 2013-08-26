@@ -1,32 +1,32 @@
 @import "../core/palette";
 @import "../settings";
 
-.snippet-wrap {
-  .snippet-num {
-    margin: 1em 0.5em !important;
-    li {
-      padding-left: 0.5em !important;
-    }
-  }
-  pre.sh_sourceCode {
-    padding: 0 !important;
-    max-height: 16.75em;
-    &.snippet-textonly {
-      padding: 12px 15px !important;
-    }
-  }
-  .snippet-menu, .snippet-hide {
-    top: 5px !important;
-    right: 5px !important;
-    pre {
-      background-color: rgba($black, 0.75) !important;
-      padding: 5px 5px 0 !important;
-      border-radius: 4px;
-    }
-  }
-}
 
 .sh_groundwork {
+  &.snippet-wrap {
+    .snippet-num {
+      margin: 1em 0.5em;
+      li {
+        padding-left: 0.5em;
+      }
+    }
+    pre.sh_sourceCode {
+      padding: 0;
+      max-height: 16.75em;
+      &.snippet-textonly {
+        padding: 12px 15px;
+      }
+    }
+    .snippet-menu, .snippet-hide {
+      top: 5px;
+      right: 5px;
+      pre {
+        background-color: rgba($black, 0.75);
+        padding: 5px 5px 0;
+        border-radius: 4px;
+      }
+    }
+  }
   background: none;
   padding: 0;
   margin: 0;

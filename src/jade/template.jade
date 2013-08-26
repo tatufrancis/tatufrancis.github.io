@@ -71,13 +71,13 @@ html.no-js
           a(href='/', target='_parent')
             img(src='../images/groundwork-logo.svg', alt='GroundworkCSS')
             | GroundworkCSS
-        nav.nav.gap-top
-          ul
+        nav.nav.gap-top(role='navigation')
+          ul(role='menubar')
             li
               a(href='./home.html')
                 i.icon-home
                 |  Home
-            li
+            li.menu(role='menu')
               a(href='#') Example Layouts
               ul
                 li
@@ -86,7 +86,7 @@ html.no-js
                   a(href='./layout-b.html') Image Gallery
                 li
                   a(href='./layout-c.html') Ecommerce Page
-            li
+            li.menu(role='menu')
               a(href='#') Usage Examples
               ul
                 li
@@ -95,7 +95,7 @@ html.no-js
                   a(href='./helpers.html', title='Layout helpers, spinners and much more') Helpers
                 li
                   a(href='./typography.html', title='Text elements, quotes, code and web fonts') Typography
-                li
+                li.menu(role='menu')
                   a(href='#', title='Navigation, buttons, messages and tables') UI Elements
                   ul
                     li
@@ -108,6 +108,8 @@ html.no-js
                       a(href='./messages.html', title='Message boxes') Message Boxes
                     li
                       a(href='./tables.html', title='Tables') Tables
+                    li
+                      a(href='./tabs.html', title='Tabs') Tabs
                     li
                       a(href='./forms.html', title='Form elements') Form Elements
                 li

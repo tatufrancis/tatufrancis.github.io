@@ -7,6 +7,8 @@ module.exports = (grunt) ->
       jade:
         files: '**/*.jade'
         tasks: ['jade']
+        options:
+          livereload: true
       compass:
         files: '**/*.scss'
         tasks: ['compass', 'autoprefixer']
@@ -29,6 +31,7 @@ module.exports = (grunt) ->
           'pages/boxes.html':             ['src/jade/boxes.jade']
           'pages/messages.html':          ['src/jade/messages.jade']
           'pages/tables.html':            ['src/jade/tables.jade']
+          'pages/tabs.html':              ['src/jade/tabs.jade']
           'pages/forms.html':             ['src/jade/forms.jade']
           'pages/icons.html':             ['src/jade/icons.jade']
           'pages/responsive-text.html':   ['src/jade/responsive-text.jade']

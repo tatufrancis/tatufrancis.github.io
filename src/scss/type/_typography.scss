@@ -181,7 +181,7 @@ $default-radius:      4px !default;
       width: 1.1em;
       margin-right: 0.25em;
       @include icon-FontAwesome();
-      font-size: 0.75em;
+      font-size: 0.6em;
       vertical-align: middle;
       background-image: none;
       background-position: 0% 0%;
@@ -237,10 +237,10 @@ $default-radius:      4px !default;
 %q, %quote {
   @extend %bold, %italic;
   &:before {
-    content: "\201C";
+    content: "\201C"; // left quotation mark
   }
   &:after {
-    content: "\201D";
+    content: "\201D"; // right quotation mark
   }
 }
 
@@ -252,7 +252,7 @@ $default-radius:      4px !default;
   background: darken($background-color, 10%);
   @include border-radius($default-radius);
   &:before {
-    content: "\201C";
+    content: "\201C"; // left quotation mark
     color: darken($background-color, 20%);
     font-size: 4em;
     display: block;
@@ -261,7 +261,7 @@ $default-radius:      4px !default;
     left: 0.1em;
   }
   &:after {
-    content: "\201D";
+    content: "\201D"; // right quotation mark
     color: darken($background-color, 20%);
     font-size: 4em;
     display: block;
@@ -281,7 +281,7 @@ $default-radius:      4px !default;
   font-style: normal;
   color: lighten($font-color, 15%);
   &:before {
-    content: "\2014";
+    content: "\2014"; // em dash
   }
 }
 
@@ -379,7 +379,8 @@ $default-radius:      4px !default;
       @for $i from 1 through length($ui-states) {
         &.#{nth($ui-states, $i)} {
           &:before {
-            content: "#{nth($ui-icons, $i)}";
+            content: "#{nth($ui-icons, $i)}"; // see $ui-icons
+            font-size: 1.2em;
           }
         }
       }
