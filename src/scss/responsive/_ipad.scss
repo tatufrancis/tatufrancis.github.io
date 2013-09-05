@@ -161,8 +161,5 @@ $inline-conditional-helpers: false !default;
 @if $responsive {
   @include ipad {
     // do not remove -- required for ipad helpers
-    @if $navigation-classes {
-      @include hamburger-mode(":not(.small-tablet):not(.mobile)");
-    }
   }
 }

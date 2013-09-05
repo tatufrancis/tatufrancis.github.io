@@ -4,27 +4,12 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON("package.json")
 
     watch:
-      jade:
-        files: '**/*.jade'
-        tasks: ['jade']
       compass:
         files: '**/*.scss'
         tasks: ['compass', 'autoprefixer', 'cssmin']
       coffee:
         files: '**/*.coffee'
         tasks: ['coffee', 'uglify']
-
-    jade:
-      build:
-        options:
-          pretty: true
-        files: [
-          expand: true
-          cwd: 'src/jade'
-          src: ['**/*.jade', '!template.jade']
-          dest: 'docs'
-          ext: '.html'
-        ]
 
     compass:
       build:
@@ -67,7 +52,6 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-autoprefixer'
@@ -76,4 +60,3 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default',           ['build']
   grunt.registerTask 'build',             ['compass', 'autoprefixer', 'coffee:individual', 'coffee:concatenated', 'cssmin', 'uglify']
-  grunt.registerTask 'docs',              ['jade']

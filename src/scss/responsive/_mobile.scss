@@ -180,8 +180,5 @@ $inline-conditional-helpers: false !default;
 @if $responsive {
   @include mobile {
     // do not remove -- required for mobile helpers
-    @if $navigation-classes {
-      @include hamburger-mode();
-    }
   }
 }
