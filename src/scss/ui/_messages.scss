@@ -25,7 +25,7 @@ $default-radius:  4px !default;
   @include rounded($default-radius);
   &:before {
     @include icon-FontAwesome();
-    content: "\f05a"; // icon-info-sign
+    content: $icon-info-sign;
     position: absolute;
     top: 50%;
     margin-top: -0.9em;
@@ -56,7 +56,7 @@ $default-radius:  4px !default;
   color: $alert-color;
   border-color: $alert-border;
   &:before {
-    content: "\f06a"; // icon-exclamation-sign
+    content: $icon-exclamation-sign;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($alert-color,20%));
@@ -68,7 +68,7 @@ $default-radius:  4px !default;
   color: $warning-color;
   border-color: $warning-border;
   &:before {
-    content: "\f071"; // icon-warning-sign
+    content: $icon-warning-sign;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($warning-color,20%));
@@ -80,7 +80,7 @@ $default-radius:  4px !default;
   color: $error-color;
   border-color: $error-border;
   &:before {
-    content: "\f057"; // icon-remove-sign
+    content: $icon-remove-sign;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($error-color,20%));
@@ -92,7 +92,7 @@ $default-radius:  4px !default;
   color: $success-color;
   border-color: $success-border;
   &:before {
-    content: "\f058"; // icon-ok-sign
+    content: $icon-ok-sign;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
@@ -104,7 +104,7 @@ $default-radius:  4px !default;
   color: $question-color;
   border-color: $question-border;
   &:before {
-    content: "\f059"; // icon-question-sign
+    content: $icon-question-sign;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($question-color,20%));
@@ -116,7 +116,7 @@ $default-radius:  4px !default;
   cursor: pointer;
   &:after {
     @include icon-FontAwesome();
-    content: "\f00d"; // icon-remove
+    content: $icon-remove;
     position: absolute;
     top: 50%;
     margin-top: -0.9em;

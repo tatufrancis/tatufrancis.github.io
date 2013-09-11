@@ -38,9 +38,9 @@ $border-color:        #dddddd !default;
 @if $global-tags {
   $elements: html hr img;
   @for $i from 1 through length($elements) {
-		#{nth($elements, $i)} {
-			@extend %#{nth($elements, $i)};
-		}
+    #{nth($elements, $i)} {
+      @extend %#{nth($elements, $i)};
+    }
   }
   html, body {
     @extend %document;

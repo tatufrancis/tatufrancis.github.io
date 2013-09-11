@@ -139,6 +139,13 @@ $responsive: true !default;
         .rotate-360-mobile      { @include _rotate-360; }
         .rotate-360-mobile      { @include _rotate-360-ctr; }
       }
+      @if $multi-column-classes {
+        @for $i from 1 through length($multi-column-names) {
+          .#{nth($multi-column-names, $i)}-mobile, .#{nth($multi-column-names, $i)}s-mobile {
+            @include _multi-column($i);
+          }
+        }
+      }
       @content;
     }
   }

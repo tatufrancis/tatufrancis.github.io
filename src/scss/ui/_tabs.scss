@@ -13,6 +13,7 @@ $tab-active:          lighten(gray, 27.5%) !default;
 $tab-active-text:     darken(gray, 12%) !default;
 $tabpanel-background: #ffffff !default;
 $tabpanel-text:       #2b2b2d !default;
+// shared defaults
 $border-thickness:    1px !default;
 $border-style:        solid !default;
 $border-color:        #dddddd !default;
@@ -76,7 +77,16 @@ $default-radius:      4px !default;
 
   }
   %tab-#{nth($modifier-name, $i)} {
-
+    background-color: #{nth($modifier-code, $i)};
+    color: #{nth($modifier-text, $i)};
+    border-color: darken(nth($modifier-code, $i), 5%);
+    &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
+      background: darken(nth($modifier-code, $i), 5%);
+      border-color: darken(nth($modifier-code, $i), 10%);
+    }
+    &.disabled, &[disabled="disabled"] {
+      @include state(disabled,normal,desaturate(nth($modifier-code, $i),20%));
+    }
   }
 
   %tabpanel-#{nth($modifier-name, $i)} {
@@ -93,10 +103,24 @@ $default-radius:      4px !default;
     }
   }
   .tabs {
+    &:not(.accordion) {
+      @extend %relative;
+      &.vertical {
+        > ul {
+          @extend %absolute, %absolute-top, %absolute-left, %absolute-bottom;
+          overflow: auto;
+        }
+      }
+    }
     > ul {
       @extend %tablist;
       li {
         @extend %tab;
+        @for $i from 1 through length($modifier-name) {
+          &.#{nth($modifier-name, $i)} {
+            @extend %tab-#{nth($modifier-name, $i)};
+          }
+        }
         @for $i from 1 through length($tab-states) {
           &.#{nth($tab-states, $i)} {
             @extend %tab-#{nth($tab-states, $i)};
@@ -108,15 +132,24 @@ $default-radius:      4px !default;
       @extend %tabpanel;
     }
     &.vertical {
+      @include rounded($default-radius);
       > ul {
-        @extend %pull-left, %gap-right;
+        background: $tab-border-color;
+        @include rounded($default-radius 0 0 $default-radius);
         li {
           @extend %block;
-          @include rounded(0);
+          border-right: 0;
+          &:not(:first-child) {
+            @include rounded(0);
+          }
+          &:first-child {
+            @include rounded($default-radius 0 0 0);
+          }
         }
       }
       > div {
         clear: none;
+        @include rounded($default-radius);
       }
     }
     &.accordion {

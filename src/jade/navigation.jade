@@ -1,23 +1,23 @@
 mixin nav-structure
   ul(role='menubar')
     li
-      a(href='#1') Nav Item 1
+      button Nav Item 1
     li.menu(role='menu')
-      a(href='#2') Nav Menu 1
+      button Nav Menu 1
       ul
         li
-          a(href='#3') Menu Item 1
+          button Menu Item 1
         li.menu(role='menu')
-          a(href='#4') Sub Menu 1
+          button Sub Menu 1
           ul
             li
-              a(href='#5') Sub Menu Item 1
+              button Sub Menu Item 1
             li
-              a(href='#6') Sub Menu Item 2
+              button Sub Menu Item 2
         li
-          a(href='#7') Menu Item 2
+          button Menu Item 2
     li
-      a(href='#8') Nav Item 3
+      button Nav Item 3
 
 extends template
 
@@ -35,13 +35,11 @@ block content
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 4 of 14
           p
-            a.blue.button(href='typography.html')
-              i.icon-arrow-left
-              |  Back
+            a.blue.button(href='typography.html', rel='prev')
+              | Back
             | 
-            a.green.button(href='buttons.html')
-              | Next: Buttons 
-              i.icon-arrow-right
+            a.green.button(href='buttons.html', rel='next')
+              | Next: Buttons
     hr
     .row
       .one.whole.padded
@@ -56,20 +54,20 @@ block content
               pre(data-lang='html')
                 | <nav class="nav" title="iPad Menu">
                 |   <ul>
-                |     <li><a href="#1">Nav Item 1</a></li>
-                |     <li><a href="#2">Nav Menu 1</a>
+                |     <li><button>Nav Item 1</button></li>
+                |     <li><button>Nav Menu 1</button>
                 |       <ul>
-                |         <li><a href="#3">Menu Item 1</a></li>
-                |         <li><a href="#4">Sub Menu 1</a>
+                |         <li><button>Menu Item 1</button></li>
+                |         <li><button>Sub Menu 1</button>
                 |           <ul>
-                |             <li><a href="#5">Sub Menu Item 1</a></li>
-                |             <li><a href="#6">Sub Menu Item 2</a></li>
+                |             <li><button>Sub Menu Item 1</button></li>
+                |             <li><button>Sub Menu Item 2</button></li>
                 |           </ul>
                 |         </li>
-                |         <li><a href="#7">Menu Item 2</a></li>
+                |         <li><button>Menu Item 2</button></li>
                 |       </ul>
                 |     </li>
-                |     <li><a href="#8">Nav Item 3</a></li>
+                |     <li><button>Nav Item 3</button></li>
                 |   </ul>
                 | </nav>
           .row

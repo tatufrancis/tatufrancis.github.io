@@ -3,13 +3,13 @@
     var adjustVerticalTabs, convertToAccordion, restoreTabStructure, transformTabs;
     $('.tabs').each(function() {
       var activeTab, tabs;
-      activeTab = $(this).find('> ul li.active');
+      activeTab = $(this).children('ul').children('li.active');
       if (activeTab.length) {
         tabs = activeTab.parents('.tabs');
         return tabs.find(activeTab.attr('aria-controls')).addClass('active');
       } else {
-        $(this).find('> ul li').first().addClass('active');
-        return $(this).find('> div').first().addClass('active');
+        $(this).children('ul').children('li').first().addClass('active');
+        return $(this).children('div').first().addClass('active');
       }
     });
     $('body').on('click', '.tabs > ul li', function(e) {
@@ -56,8 +56,10 @@
         var tabs;
         tabs = $(this);
         tabs.removeClass('accordion');
-        adjustVerticalTabs(tabs);
-        return tabs.find('> ul > div').each(function() {
+        if (tabs.hasClass('vertical')) {
+          adjustVerticalTabs(tabs);
+        }
+        return tabs.children('ul').children('div').each(function() {
           var tabpanel;
           tabpanel = $(this).clone();
           tabs.append(tabpanel);
@@ -71,9 +73,18 @@
         tabs = $('.tabs.vertical');
       }
       return tabs.each(function() {
-        $(this).find('> ul').css('height', 'auto');
-        if (!$(this).hasClass('accordion')) {
-          return $(this).find('> ul').css('height', $(this).height() + 'px');
+        if ($(this).hasClass('vertical')) {
+          $(this).children('ul').css({
+            'min-height': '0px'
+          });
+          if (!$(this).hasClass('accordion')) {
+            $(this).children('[role="tabpanel"]').css({
+              'padding-left': $(this).children('ul').width() + 10 + 'px'
+            });
+            return $(this).children('ul').css({
+              'min-height': $(this).height() + 'px'
+            });
+          }
         }
       });
     };

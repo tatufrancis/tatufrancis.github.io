@@ -92,6 +92,9 @@
       font-style: normal;
       position: relative;
       top: -0.35em;
+      &:after, &:before {
+        content: "";
+      }
     }
     .sh_date, .sh_time, .sh_file {
       color: $pink;

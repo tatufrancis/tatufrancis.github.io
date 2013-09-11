@@ -89,6 +89,9 @@
   position: relative;
   top: -0.35em;
 }
+.sh_groundwork .sh_sourceCode .sh_url:after, .sh_groundwork .sh_sourceCode .sh_url:before {
+  content: "";
+}
 .sh_groundwork .sh_sourceCode .sh_date, .sh_groundwork .sh_sourceCode .sh_time, .sh_groundwork .sh_sourceCode .sh_file {
   color: #f02475;
   font-weight: normal;

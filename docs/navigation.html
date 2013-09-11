@@ -110,7 +110,7 @@
           </div>
           <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
             <p class="quicksand">Component Usage Example 4 of 14</p>
-            <p><a href="typography.html" class="blue button"><i class="icon-arrow-left"></i> Back</a> <a href="buttons.html" class="green button">Next: Buttons <i class="icon-arrow-right"></i></a></p>
+            <p><a href="typography.html" rel="prev" class="blue button">Back</a> <a href="buttons.html" rel="next" class="green button">Next: Buttons</a></p>
           </div>
         </div>
       </div>
@@ -124,38 +124,52 @@
                 <h4>iPad</h4>
                 <nav title="iPad Menu" role="navigation" class="nav">
                   <ul role="menubar">
-                    <li><a href="#1">Nav Item 1</a></li>
-                    <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                    <li>
+                      <button>Nav Item 1</button>
+                    </li>
+                    <li role="menu" class="menu">
+                      <button>Nav Menu 1</button>
                       <ul>
-                        <li><a href="#3">Menu Item 1</a></li>
-                        <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                        <li>
+                          <button>Menu Item 1</button>
+                        </li>
+                        <li role="menu" class="menu">
+                          <button>Sub Menu 1</button>
                           <ul>
-                            <li><a href="#5">Sub Menu Item 1</a></li>
-                            <li><a href="#6">Sub Menu Item 2</a></li>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
                           </ul>
                         </li>
-                        <li><a href="#7">Menu Item 2</a></li>
+                        <li>
+                          <button>Menu Item 2</button>
+                        </li>
                       </ul>
                     </li>
-                    <li><a href="#8">Nav Item 3</a></li>
+                    <li>
+                      <button>Nav Item 3</button>
+                    </li>
                   </ul>
                 </nav><br>
                 <pre data-lang="html">&lt;nav class=&quot;nav&quot; title=&quot;iPad Menu&quot;&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Nav Menu 1&lt;/a&gt;
+    &lt;li&gt;&lt;button&gt;Nav Item 1&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Nav Menu 1&lt;/button&gt;
       &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;#3&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#4&quot;&gt;Sub Menu 1&lt;/a&gt;
+        &lt;li&gt;&lt;button&gt;Menu Item 1&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button&gt;Sub Menu 1&lt;/button&gt;
           &lt;ul&gt;
-            &lt;li&gt;&lt;a href=&quot;#5&quot;&gt;Sub Menu Item 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#6&quot;&gt;Sub Menu Item 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button&gt;Sub Menu Item 1&lt;/button&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button&gt;Sub Menu Item 2&lt;/button&gt;&lt;/li&gt;
           &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#7&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button&gt;Menu Item 2&lt;/button&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#8&quot;&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Nav Item 3&lt;/button&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</pre>
               </div>
@@ -165,20 +179,34 @@
                 <h4>Small Tablet</h4>
                 <nav title="Small Tablet Menu" role="navigation" class="nav small-tablet">
                   <ul role="menubar">
-                    <li><a href="#1">Nav Item 1</a></li>
-                    <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                    <li>
+                      <button>Nav Item 1</button>
+                    </li>
+                    <li role="menu" class="menu">
+                      <button>Nav Menu 1</button>
                       <ul>
-                        <li><a href="#3">Menu Item 1</a></li>
-                        <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                        <li>
+                          <button>Menu Item 1</button>
+                        </li>
+                        <li role="menu" class="menu">
+                          <button>Sub Menu 1</button>
                           <ul>
-                            <li><a href="#5">Sub Menu Item 1</a></li>
-                            <li><a href="#6">Sub Menu Item 2</a></li>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
                           </ul>
                         </li>
-                        <li><a href="#7">Menu Item 2</a></li>
+                        <li>
+                          <button>Menu Item 2</button>
+                        </li>
                       </ul>
                     </li>
-                    <li><a href="#8">Nav Item 3</a></li>
+                    <li>
+                      <button>Nav Item 3</button>
+                    </li>
                   </ul>
                 </nav><br>
                 <pre data-lang="html">&lt;nav class=&quot;nav small-tablet&quot; title=&quot;Small Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
@@ -189,20 +217,34 @@
                 <h4>Mobile</h4>
                 <nav title="Mobile Menu" role="navigation" class="nav mobile">
                   <ul role="menubar">
-                    <li><a href="#1">Nav Item 1</a></li>
-                    <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                    <li>
+                      <button>Nav Item 1</button>
+                    </li>
+                    <li role="menu" class="menu">
+                      <button>Nav Menu 1</button>
                       <ul>
-                        <li><a href="#3">Menu Item 1</a></li>
-                        <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                        <li>
+                          <button>Menu Item 1</button>
+                        </li>
+                        <li role="menu" class="menu">
+                          <button>Sub Menu 1</button>
                           <ul>
-                            <li><a href="#5">Sub Menu Item 1</a></li>
-                            <li><a href="#6">Sub Menu Item 2</a></li>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
                           </ul>
                         </li>
-                        <li><a href="#7">Menu Item 2</a></li>
+                        <li>
+                          <button>Menu Item 2</button>
+                        </li>
                       </ul>
                     </li>
-                    <li><a href="#8">Nav Item 3</a></li>
+                    <li>
+                      <button>Nav Item 3</button>
+                    </li>
                   </ul>
                 </nav><br>
                 <pre data-lang="html">&lt;nav class=&quot;nav mobile&quot; title=&quot;Mobile Menu&quot;&gt;...&lt;/nav&gt;</pre>
@@ -214,60 +256,102 @@
             <div class="one third padded">
               <nav role="navigation" class="nav yellow">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="one third padded">
               <nav role="navigation" class="nav orange">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="one third padded">
               <nav role="navigation" class="nav red">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -276,60 +360,102 @@
             <div class="one third padded">
               <nav role="navigation" class="nav pink">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="one third padded">
               <nav role="navigation" class="nav purple">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="one third padded">
               <nav role="navigation" class="nav asphalt">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -338,60 +464,102 @@
             <div class="one third padded">
               <nav role="navigation" class="nav blue">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="one third padded">
               <nav role="navigation" class="nav turquoise">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="one third padded">
               <nav role="navigation" class="nav green">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -400,20 +568,34 @@
             <div class="one third padded">
               <nav role="navigation" class="nav charcoal">
                 <ul role="menubar">
-                  <li><a href="#1">Nav Item 1</a></li>
-                  <li role="menu" class="menu"><a href="#2">Nav Menu 1</a>
+                  <li>
+                    <button>Nav Item 1</button>
+                  </li>
+                  <li role="menu" class="menu">
+                    <button>Nav Menu 1</button>
                     <ul>
-                      <li><a href="#3">Menu Item 1</a></li>
-                      <li role="menu" class="menu"><a href="#4">Sub Menu 1</a>
+                      <li>
+                        <button>Menu Item 1</button>
+                      </li>
+                      <li role="menu" class="menu">
+                        <button>Sub Menu 1</button>
                         <ul>
-                          <li><a href="#5">Sub Menu Item 1</a></li>
-                          <li><a href="#6">Sub Menu Item 2</a></li>
+                          <li>
+                            <button>Sub Menu Item 1</button>
+                          </li>
+                          <li>
+                            <button>Sub Menu Item 2</button>
+                          </li>
                         </ul>
                       </li>
-                      <li><a href="#7">Menu Item 2</a></li>
+                      <li>
+                        <button>Menu Item 2</button>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="#8">Nav Item 3</a></li>
+                  <li>
+                    <button>Nav Item 3</button>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -465,11 +647,11 @@
         <div class="container padded">
           <div class="row">
             <div class="one half padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
-              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
+              <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
             <div class="one half padded">
-              <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"><i class="icon-envelope"></i></a></p>
+              <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
             </div>
           </div>
         </div>

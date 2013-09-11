@@ -31,7 +31,7 @@ $type-classnames:           "h1" "h2" "h3" "h4" "h5" "h6" "p"
                             "unstyled" !default;
 $styled-lists:              true !default;
 $multi-column-classes:      true !default;
-$multi-column-names:        "two-column" "three-column" "four-column" "five-column" !default;
+$multi-column-names:        "one-column" "two-column" "three-column" "four-column" "five-column" !default;
 $info-color:                #3a87ad !default;
 $alert-text:                #ffffff !default;
 $error-color:               #b94a48 !default;
@@ -53,8 +53,13 @@ $font-family:               Helvetica, Arial, Geneva, sans-serif !default;
 $font-color:                #2b2b2d !default;
 $link-color:                #489AC1 !default;
 $link-active:               #198D98 !default;
+$code-text:                 #555555 !default;
+$code-background:           #ffffff !default;
 $selection-color:           $link-color !default;
 $selection-text:            #ffffff !default;
+$border-thickness:          1px !default;
+$border-style:              solid !default;
+$border-color:              #dddddd !default;
 $gutter:                    10px !default;
 $default-radius:            4px !default;
 $placeholderText-fallback:  true !default;
@@ -163,7 +168,7 @@ $placeholderText-fallback:  true !default;
   margin-left: 0;
   %checklist-item {
     &:before {
-      content: "\f096"; // check empty icon
+      content: $icon-check-empty;
       display: inline-block;
       width: 1.1em;
       margin-right: 0.25em;
@@ -177,7 +182,7 @@ $placeholderText-fallback:  true !default;
     }
     &[data-checked~="true"], &.checked, &.completed {
       &:before {
-        content: "\f046"; // check icon
+        content: $icon-check;
       }
     }
   }
@@ -195,7 +200,7 @@ $placeholderText-fallback:  true !default;
   margin-left: 0;
   %list-item {
     &:before {
-      content: "\f111"; // icon cirle (filled)
+      content: $icon-circle;
       display: inline-block;
       width: 1.1em;
       margin-right: 0.25em;
@@ -247,17 +252,24 @@ $placeholderText-fallback:  true !default;
 %monospace          { font-family: monospace; }
 %del, %strike       { text-decoration: line-through; }
 
+@mixin _multi-column($count: 2) {
+  column-count: $count;
+}
+
+%one-column {
+  @include _multi-column(1);
+}
 %two-column {
-  column-count: 2;
+  @include _multi-column(2);
 }
 %three-column {
-  column-count: 3;
+  @include _multi-column(3);
 }
 %four-column {
-  column-count: 4;
+  @include _multi-column(4);
 }
 %five-column {
-  column-count: 5;
+  @include _multi-column(5);
 }
 
 @if $multi-column-classes {
@@ -330,26 +342,24 @@ $placeholderText-fallback:  true !default;
   cursor: help;
 }
 
-%pre, %code {
+%pre {
+  @extend %monospace;
+  white-space: pre;
   max-width: 100%;
   overflow: auto;
 }
 
 %code {
-  @extend %block, %monospace;
-  &.inline {
-    @extend %inline-block;
+  @extend %inline-block, %monospace;
+  white-space: no-wrap;
+  background: $code-background;
+  color: $code-text;
+  border: $border-thickness $border-style $border-color;
+  @include rounded($default-radius);
+  padding: 0 ($gutter / 2);
+  &.block {
+    padding: ($gutter / 2) $gutter;
   }
-  background: darken($background-color, 10%);
-  padding: 0 0.3em;
-  margin: 0 0.2em;
-  font-weight: normal;
-  line-height: inherit;
-}
-
-%pre {
-  @extend %monospace;
-  white-space: pre;
 }
 
 %info             { color: $info-color; }

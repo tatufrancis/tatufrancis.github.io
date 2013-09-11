@@ -165,18 +165,18 @@ $question-border:     #f1dbfa !default;
 }
 
 @if $form-tags {
-	@for $i from 1 through length($form-elements) {
-		$element: nth($form-elements, $i);
-		#{$element} {
-			@extend %#{$element};
-			@if $element == input or $element == textarea {
-				@extend %field;
-			}
-			@if $element == textarea {
-				@extend %textarea;
-			}
-		}
-	}
+  @for $i from 1 through length($form-elements) {
+    $element: nth($form-elements, $i);
+    #{$element} {
+      @extend %#{$element};
+      @if $element == input or $element == textarea {
+        @extend %field;
+      }
+      @if $element == textarea {
+        @extend %textarea;
+      }
+    }
+  }
   select {
     @extend %field;
   }

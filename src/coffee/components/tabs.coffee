@@ -1,13 +1,13 @@
 $ ->
 
   $('.tabs').each ->
-    activeTab = $(@).find('> ul li.active')
+    activeTab = $(@).children('ul').children('li.active')
     if activeTab.length
       tabs = activeTab.parents('.tabs')
       tabs.find(activeTab.attr('aria-controls')).addClass('active')
     else
-      $(@).find('> ul li').first().addClass('active')
-      $(@).find('> div').first().addClass('active')
+      $(@).children('ul').children('li').first().addClass('active')
+      $(@).children('div').first().addClass('active')
 
   $('body').on 'click', '.tabs > ul li', (e) ->
     tab = $(@).addClass('active')
@@ -45,20 +45,32 @@ $ ->
     $(tabTypes).each ->
       tabs = $(@)
       tabs.removeClass('accordion')
-      adjustVerticalTabs(tabs)
-      tabs.find('> ul > div').each ->
+      if tabs.hasClass('vertical')
+        adjustVerticalTabs(tabs)
+      tabs.children('ul').children('div').each ->
         tabpanel = $(@).clone()
         tabs.append(tabpanel)
         $(@).remove()
+
+  # adjustHorizontalTabs = (tabs) ->
+  #   tabs = $(tabs)
+  #   unless tabs.length
+  #     tabs = $('.tabs:not(.vertical)')
+  #   tabs.each ->
 
   adjustVerticalTabs = (tabs) ->
     tabs = $(tabs)
     unless tabs.length
       tabs = $('.tabs.vertical')
     tabs.each ->
-      $(@).find('> ul').css('height', 'auto')
-      unless $(@).hasClass('accordion')
-        $(@).find('> ul').css('height', $(@).height() + 'px')
+      if $(@).hasClass('vertical')
+        $(@).children('ul').css
+          'min-height': '0px'
+        unless $(@).hasClass('accordion')
+          $(@).children('[role="tabpanel"]').css
+            'padding-left': $(@).children('ul').width() + 10 + 'px'
+          $(@).children('ul').css
+            'min-height': $(@).height() + 'px'
 
   $(window).resize ->
     clearTimeout(window.delayedAdjustTabs)

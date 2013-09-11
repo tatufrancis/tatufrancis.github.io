@@ -106,11 +106,11 @@
         <div class="row">
           <div class="three fifths bounceInRight animated">
             <h1 class="zero museo-slab">Typography</h1>
-            <p class="quicksand">Headings, paragraphs, emphasizers, lists, web fonts, quotes, code, and colors</p>
+            <p class="quicksand">Headings, paragraphs, emphasizers, links, lists, web fonts, quotes, code, and colors</p>
           </div>
           <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
             <p class="quicksand">Component Usage Example 3 of 14</p>
-            <p><a href="helpers.html" class="blue button"><i class="icon-arrow-left"></i> Back</a> <a href="navigation.html" class="green button">Next: Navigation <i class="icon-arrow-right"></i></a></p>
+            <p><a href="helpers.html" rel="prev" class="blue button">Back</a> <a href="navigation.html" rel="next" class="green button">Next: Navigation</a></p>
           </div>
         </div>
       </div>
@@ -181,6 +181,196 @@
             <div class="row">
               <div class="one whole pad-left pad-right">
                 <pre data-lang="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</pre>
+              </div>
+            </div>
+          </div>
+          <hr><br>
+          <div class="bounceInLeft animated">
+            <h4 id="link-types">Semantic Link Types</h4>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="home.html">Normal Hyperlink</a></p>
+                <pre data-lang="html">&lt;a href=&quot;home.html&quot;&gt;Normal Hyperlink&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#link-types">Anchor Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot;&gt;Anchor Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="https://google.com">Secure Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;https://google.com&quot;&gt;Secure Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://google.com" target="_blank">New Window Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot;&gt;New Window Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="view-source:http://google.com">View Source Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;view-source:http://google.com&quot;&gt;View Source Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.gif">Image Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.gif&quot;&gt;Image Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.pdf">PDF Document Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.pdf&quot;&gt;PDF Document Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.doc">Word Document Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.doc&quot;&gt;Word Document Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="example.txt">Text Document Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.txt&quot;&gt;Text Document Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.md">Markdown Document Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.md&quot;&gt;Markdown Document Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.zip">ZIP File Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.zip&quot;&gt;ZIP File Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.exe">Executable File Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.exe&quot;&gt;Executable File Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="home.html" rel="home">Home Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;home.html&quot; rel=&quot;home&quot;&gt;Home Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="search">Search Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;search&quot;&gt;Search Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="author">Author Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;author&quot;&gt;Author Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="help">Help Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;help&quot;&gt;Help Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="#" rel="tag">Tag Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;tag&quot;&gt;Tag Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="bookmark">Bookmark Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;bookmark&quot;&gt;Bookmark Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="prev">Previous Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;prev&quot;&gt;Previous Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="next">Next Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;next&quot;&gt;Next Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="#" rel="directory">Directory Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;directory&quot;&gt;Directory Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="#" rel="payment">Payment Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;#&quot; rel=&quot;payment&quot;&gt;Payment Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="mailto:user@example.com">Email Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;mailto:user@example.com&quot;&gt;Email Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="tel:5555551212">Telephone Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;tel:5555551212&quot;&gt;Telephone Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="mailto:user@gmail.com">Gmail Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;mailto:user@gmail.com&quot;&gt;Gmail Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="skype:skypeusername">Skype Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;skype:skypeusername&quot;&gt;Skype Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="example.rss">RSS Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;example.rss&quot;&gt;RSS Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://twitter.com">Twitter Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;twitter.com&quot;&gt;Twitter Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="http://facebook.com">Facebook Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;facebook.com&quot;&gt;Facebook Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://tumblr.com">Tumblr Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://tumblr.com&quot;&gt;Tumblr Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://linkedin.com">LinkedIn Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://linkedin.com&quot;&gt;LinkedIn Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://plus.google.com">Google Plus Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://plus.google.com&quot;&gt;Google Plus Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="http://youtube.com">Youtube Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://youtube.com&quot;&gt;Youtube Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://github.com">Github Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://github.com&quot;&gt;Github Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://stackoverflow.com">Stack Overflow Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://stackoverflow.com&quot;&gt;Stack Overflow Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://instagram.com">Instagram Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://instagram.com&quot;&gt;Instagram Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="http://flickr.com">Flickr Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://flickr.com&quot;&gt;Flickr Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://foursquare.com">Foursquare Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://foursquare.com&quot;&gt;Foursquare Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://dribbble.com">Dribbble Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://dribbble.com&quot;&gt;Dribbble Link&lt;/a&gt;</pre>
+              </div>
+              <div class="one fourth padded">
+                <p><a href="http://dropbox.com">Dropbox Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://dropbox.com&quot;&gt;Dropbox Link&lt;/a&gt;</pre>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="one fourth padded">
+                <p><a href="http://trello.com">Trello Link</a></p>
+                <pre data-lang="html">&lt;a href=&quot;http://trello.com&quot;&gt;Trello Link&lt;/a&gt;</pre>
               </div>
             </div>
           </div>
@@ -422,47 +612,6 @@
             </div>
           </div>
           <hr><br>
-          <div class="bounceInRight animated">
-            <h4 class="zero">Placeholder Fonts for Rapid Prototyping & Wireframes</h4>
-            <p class="small">Keep your wireframes free of distracting Lorem Ipsum.</p>
-            <div class="row">
-              <div class="one whole padded">
-                <h4>Redacted Regular</h4>
-                <p class="redacted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="one whole pad-left pad-right">
-                <pre data-lang="html">&lt;p class=&quot;redacted&quot;&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus&lt;/p&gt;</pre>
-              </div>
-            </div><br>
-            <div class="row">
-              <div class="one third padded">
-                <h4>Redacted Script</h4>
-                <p class="redacted-script">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              </div>
-              <div class="one third padded">
-                <h4>Redacted Script Light</h4>
-                <p class="redacted-script-light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              </div>
-              <div class="one third padded">
-                <h4>Redacted Script Bold</h4>
-                <p class="redacted-script-bold">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="one third pad-left pad-right">
-                <pre data-lang="html">&lt;p class=&quot;redacted-script&quot;&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus&lt;/p&gt;</pre>
-              </div>
-              <div class="one third pad-left pad-right">
-                <pre data-lang="html">&lt;p class=&quot;redacted-script-light&quot;&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus&lt;/p&gt;</pre>
-              </div>
-              <div class="one third pad-left pad-right">
-                <pre data-lang="html">&lt;p class=&quot;redacted-script-bold&quot;&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus&lt;/p&gt;</pre>
-              </div>
-            </div>
-          </div>
-          <hr><br>
           <div class="bounceInLeft animated">
             <h4>Quotations</h4>
             <div class="row">
@@ -494,8 +643,8 @@
             <h4>Code Snippets</h4>
             <div class="row">
               <div class="one whole padded">
-                <p>This is some text with some <code class="inline">inline code</code></p>
-                <pre data-lang="html">&lt;p&gt;This is some text with some &lt;code class=&quot;inline&quot;&gt;inline code&lt;/code&gt;&lt;/p&gt;</pre>
+                <p>This is some text with some <code>inline code</code></p>
+                <pre data-lang="html">&lt;p&gt;This is some text with some &lt;code&gt;inline code&lt;/code&gt;&lt;/p&gt;</pre>
               </div>
             </div>
           </div>
@@ -503,20 +652,24 @@
           <div class="bounceInRight animated">
             <h4>Preformatted Code Blocks</h4>
             <div class="row">
-              <div class="one whole padded"><code>
+              <div class="one whole padded"><code class="block">
                   <pre>%code {
-  @extend %monospace;
-  display: inline-block;
+  @extend %inline-block, %monospace;
+  &amp;.block {
+    @extend %block;
+  }
   background: darken($background-color, 10%);
   padding: 0 0.3em;
   margin: 0 0.2em;
   font-weight: normal;
   line-height: inherit;
 }</pre></code><br>
-                <pre data-lang="html">&lt;code&gt;
+                <pre data-lang="html">&lt;code class=&quot;block&quot;&gt;
   &lt;pre&gt;%code {
-  @extend %monospace;
-  display: inline-block;
+  @extend %inline-block, %monospace;
+  &amp;.block {
+    @extend %block;
+  }
   background: darken($background-color, 10%);
   padding: 0 0.3em;
   margin: 0 0.2em;
@@ -533,8 +686,12 @@
             <div class="row">
               <div class="two eighths padded">
                 <div class="row">
-                  <div class="one mobile half"><b><span class="yellow">.yellow</span><br><span class="orange">.orange</span><br><span class="red">.red</span><br><span class="pink">.pink</span><br><span class="purple">.purple</span><br><span class="asphalt">.asphalt</span><br><span class="blue">.blue</span><br><span class="turquoise">.turquoise</span><br><span class="green">.green</span><br><span class="charcoal">.charcoal</span></b></div>
-                  <div class="one mobile half"><b><span class="info">.info</span><br><span class="alert">.alert</span><br><span class="warning">.warning</span><br><span class="error">.error</span><br><span class="success">.success</span></b></div>
+                  <div class="one mobile half">
+                    <p><span class="yellow">.yellow</span><br><span class="orange">.orange</span><br><span class="red">.red</span><br><span class="pink">.pink</span><br><span class="purple">.purple</span><br><span class="asphalt">.asphalt</span><br><span class="blue">.blue</span><br><span class="turquoise">.turquoise</span><br><span class="green">.green</span><br><span class="charcoal">.charcoal</span></p>
+                  </div>
+                  <div class="one mobile half">
+                    <p><span class="info">.info</span><br><span class="alert">.alert</span><br><span class="warning">.warning</span><br><span class="error">.error</span><br><span class="success">.success</span><br><span class="question">.question</span></p>
+                  </div>
                 </div>
               </div>
               <div class="six eighths">
@@ -646,11 +803,11 @@
         <div class="container padded">
           <div class="row">
             <div class="one half padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
-              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
+              <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
             <div class="one half padded">
-              <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"><i class="icon-envelope"></i></a></p>
+              <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
             </div>
           </div>
         </div>

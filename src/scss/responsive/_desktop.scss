@@ -130,6 +130,13 @@ $responsive: true !default;
         .rotate-360-desktop      { @include _rotate-360; }
         .rotate-360-ctr-desktop  { @include _rotate-360-ctr; }
       }
+      @if $multi-column-classes {
+        @for $i from 1 through length($multi-column-names) {
+          .#{nth($multi-column-names, $i)}-desktop, .#{nth($multi-column-names, $i)}s-desktop {
+            @include _multi-column($i);
+          }
+        }
+      }
       @content;
     }
   }

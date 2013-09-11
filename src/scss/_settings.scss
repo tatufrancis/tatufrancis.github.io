@@ -60,6 +60,10 @@
 // $selection-color:           $link-color;
 // $selection-text:            #ffffff;
 
+// code
+// $code-text:                 #555555;
+// $code-background:           #ffffff;
+
 // borders
 // $border-thickness:          1px;
 // $border-style:              solid;
@@ -127,7 +131,7 @@
 
 // disabled
 // $disabled-color:            #808080;
-// $disabled-text:             #ffffff;
+// $disabled-text:             #dddddd;
 // $disabled-background:       lighten($disabled-color, 20%);
 // $disabled-border:           darken($disabled-color, 10%);
 
@@ -199,6 +203,18 @@
 
 
 // =============================================
+//                   Buttons
+// =============================================
+
+// $button-tags:               true;
+// $button-classes:            true;
+// $button-modifiers:          "small" "large" "on" "active" "square" "round" "block";
+// $button-states:             "on" "active" "selected" "pressed" "disabled" "info" "alert" "warning" "error" "success" "question";
+// $aria-selectors:            true;
+// $aria-states:               "selected" "pressed" "disabled" "readonly" "invalid";
+
+
+// =============================================
 //                  Animations
 // =============================================
 
@@ -255,7 +271,7 @@
 //                             "unstyled";
 // $styled-lists:              true;
 // $multi-column-classes:      true;
-// $multi-column-names:        "two-column" "three-column" "four-column" "five-column";
+// $multi-column-names:        "one-column" "two-column" "three-column" "four-column" "five-column";
 // $ui-states:                 "info"  "alert" "warning" "error" "success" "question";
 // $ui-icons:                  "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059";
 // $ui-states-colors:          $info-color $alert-color $warning-color $error-color $success-color $question-color;
@@ -266,6 +282,8 @@
 // $headings-font:             nth($web-font-names, 1);
 // $links-underlined:          false;
 // $links-active-underlined:   true;
+// $link-type-icons:           true;
+// $link-type-colors:          true;
 
 
 // =============================================

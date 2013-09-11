@@ -26,11 +26,7 @@
     ResponsiveNavigation.prototype.init = function() {
       this.defaultLabel();
       this.setupMarkers();
-      this.hamburgerHelper();
-      this.touchBindings();
-      if (!Modernizr.touch) {
-        return this.mouseBindings();
-      }
+      return this.hamburgerHelper();
     };
 
     ResponsiveNavigation.prototype.defaultLabel = function() {
@@ -48,12 +44,18 @@
     };
 
     ResponsiveNavigation.prototype.hamburgerHelper = function() {
-      return this.el.prepend('<button><i class="icon-list-ul" /></button>');
+      return this.el.prepend('<button class="hamburger"></button>');
     };
 
-    ResponsiveNavigation.prototype.mouseBindings = function() {
+    return ResponsiveNavigation;
+
+  })();
+
+  $(function() {
+    var mouseBindings, responsiveNavigationElements, touchBindings;
+    mouseBindings = function() {
       $('body').on('mouseenter', 'li.menu', function() {
-        if (!$(this).parents('.nav').find('button').is(':visible')) {
+        if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
           clearTimeout(delayNavigationClose[this.index]);
           $(this).siblings().children('ul').removeClass('open');
           return $(this).children('ul').addClass('open');
@@ -61,16 +63,15 @@
       });
       return $('body').on('mouseleave', 'li.menu, ul.open', function() {
         var _this = this;
-        if (!$(this).parents('.nav').find('button').is(':visible')) {
+        if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
           return delayNavigationClose[this.index] = setTimeout(function() {
             return $(_this).find('ul').removeClass('open');
           }, 500);
         }
       });
     };
-
-    ResponsiveNavigation.prototype.touchBindings = function() {
-      return $('body').on('click', 'li.menu > a', function(e) {
+    touchBindings = function() {
+      return $('body').on('click', 'li.menu > a, li.menu > button', function(e) {
         $(this).closest('.menu').children('ul').toggleClass('open');
         $(this).closest('.menu').toggleClass('on');
         if (!$(this).closest('.menu').hasClass('on')) {
@@ -80,19 +81,13 @@
         return e.preventDefault();
       });
     };
-
-    return ResponsiveNavigation;
-
-  })();
-
-  $(function() {
-    var responsiveNavigationElements;
     responsiveNavigationElements = [];
     $('.nav').each(function() {
       return responsiveNavigationElements.push(new ResponsiveNavigation(this));
     });
-    return $('body').on('click', '.nav button', function(e) {
+    $('body').on('click', '.nav button.hamburger', function(e) {
       var list;
+      $(this).toggleClass('open');
       list = $(this).siblings('ul');
       list.toggleClass('open');
       if (!list.hasClass('on')) {
@@ -101,6 +96,10 @@
       }
       return e.preventDefault();
     });
+    touchBindings();
+    if (!Modernizr.touch) {
+      return mouseBindings();
+    }
   });
 
 }).call(this);

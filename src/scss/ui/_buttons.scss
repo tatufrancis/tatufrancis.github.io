@@ -1,22 +1,28 @@
 // =============================================
 //                  Buttons
-//          Last Updated:2013-8-21
+//          Last Updated:2013-9-6
 // =============================================
 
 $button-tags:         true !default;
 $button-classes:      true !default;
 $button-modifiers:    "small" "large" "on" "active" "square" "round" "block" !default;
-$button-states:       "on" "active" "disabled" "info" "alert" "warning" "error" "success" "question" !default;
+$button-states:       "on" "active" "selected" "pressed" "disabled" "info" "alert" "warning" "error" "success" "question" !default;
 $aria-selectors:      true !default;
+$aria-states:         "selected" "pressed" "disabled" "readonly" "invalid" !default;
 $button-color:        lighten(gray, 32.5%) !default;
 $button-text:         darken(gray, 15%) !default;
 $button-border-color: lighten(gray, 27.5%) !default;
 $button-active:       lighten(gray, 27.5%) !default;
 $button-active-text:  darken(gray, 12%) !default;
+// shared defaults
 $border-thickness:    1px !default;
 $border-style:        solid !default;
 $border-color:        #dddddd !default;
 $default-radius:      4px !default;
+$disabled-color:      #808080 !default;
+$disabled-text:       #dddddd !default;
+$disabled-background: lighten($disabled-color, 20%) !default;
+$disabled-border:     darken($disabled-color, 10%) !default;
 
 
 %button {
@@ -39,15 +45,18 @@ $default-radius:      4px !default;
   &:visited {
     color: $button-text;
   }
-  &:hover, &:focus {
-    @extend %button-on;
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
+    @extend %button-active;
   }
-  .block {
-    @extend %button-block;
+  &.disabled, &[disabled="disabled"] {
+    @include state(disabled,normal,$disabled-background);
+    &:hover, &:focus {
+      @include state(disabled,normal,$disabled-background);
+    }
   }
 }
 
-%button-on, %button-active {
+%button-on, %button-active, %button-selected, %button-pressed {
   background: $button-active;
   text-decoration: none;
   color: $button-active-text;
@@ -64,11 +73,11 @@ $default-radius:      4px !default;
     background-color: #{nth($modifier-code, $i)};
     color: #{nth($modifier-text, $i)};
     border-color: darken(nth($modifier-code, $i), 5%);
-    &.active, &:hover, &:focus {
+    &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
       background: darken(nth($modifier-code, $i), 5%);
       border-color: darken(nth($modifier-code, $i), 10%);
     }
-    &.disabled {
+    &.disabled, &[disabled="disabled"] {
       @include state(disabled,normal,desaturate(nth($modifier-code, $i),20%));
     }
   }
@@ -78,23 +87,23 @@ $default-radius:      4px !default;
   background-color: darken($info-background, 40%);
   color: $info-text;
   border-color: darken($info-border, 40%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($info-background, 49%);
   }
-  &.disabled {
+  &.disabled, &[disabled="disabled"] {
     @include state(disabled,normal,desaturate($info-color,20%));
   }
 }
 
-%button-disabled {
+%button-disabled, %button-readonly {
   background-color: darken($disabled-background, 40%);
   color: $disabled-text;
   border-color: darken($disabled-border, 40%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($disabled-background, 49%);
   }
-  &.disabled {
-    @include state(disabled,normal,desaturate($disabled-color,20%));
+  &.disabled, &[disabled="disabled"] {
+    @include state(disabled,normal,$disabled-background);
   }
 }
 
@@ -102,10 +111,10 @@ $default-radius:      4px !default;
   background-color: darken($alert-background, 40%);
   color: $alert-text;
   border-color: darken($alert-border, 25%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($alert-background, 45%);
   }
-  &.disabled {
+  &.disabled, &[disabled="disabled"] {
     @include state(disabled,normal,desaturate($alert-color,20%));
   }
 }
@@ -114,22 +123,22 @@ $default-radius:      4px !default;
   background-color: darken($warning-background, 40%);
   color: $warning-text;
   border-color: darken($warning-border, 40%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($warning-background, 45%);
   }
-  &.disabled {
+  &.disabled, &[disabled="disabled"] {
     @include state(disabled,normal,desaturate($warning-color,20%));
   }
 }
 
-%button-error {
+%button-error, %button-invalid {
   background-color: darken($error-background, 40%);
   color: $error-text;
   border-color: darken($error-border, 40%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($error-background, 49%);
   }
-  &.disabled {
+  &.disabled, &[disabled="disabled"] {
     @include state(disabled,normal,desaturate($error-color,20%));
   }
 }
@@ -138,10 +147,10 @@ $default-radius:      4px !default;
   background-color: darken($success-background, 40%);
   color: $success-text;
   border-color: darken($success-border, 40%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($success-background, 49%);
   }
-  &.disabled {
+  &.disabled, &[disabled="disabled"] {
     @include state(disabled,normal,desaturate($success-color,20%));
   }
 }
@@ -150,32 +159,29 @@ $default-radius:      4px !default;
   background-color: darken($question-background, 40%);
   color: $question-text;
   border-color: darken($question-border, 40%);
-  &.active, &:hover, &:focus {
+  &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
     background: darken($question-background, 49%);
   }
-  &.disabled {
+  &.disabled, &[disabled="disabled"] {
     @include state(disabled,normal,desaturate($question-color,20%));
   }
 }
 
 %button-block {
-  display: block;
+  @extend %block;
   width: 100%;
 }
 
 %dropdown-holder {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  @extend %inline-block;
 }
 
 %dropdown-button {
-  position: relative;
-  padding-right: 2em;
   &:after {
-    content: '...';
-    position: absolute;
-    right: 1em;
-    bottom: 0.25em;
+    @extend %inline-block, %gap-left;
+    @include icon-FontAwesome();
+    content: $icon-caret-down;
   }
 }
 
@@ -196,18 +202,24 @@ $default-radius:      4px !default;
 }
 
 %dropdown-list-item {
-  display: block;
+  @extend %block;
   %dropdown-menu-item {
-    display: block;
+    @extend %block;
+    width: 100%;
     padding: 0.5em 1em;
     border: none;
+    background: none;
     color: $font-color;
+    font-size: 1em;
+    font-weight: normal;
     text-shadow: none;
     text-decoration: none;
+    text-align: left;
+    @include rounded(0);
     &:hover, &:focus {
       background: #efefef;
     }
-    &.disabled {
+    &.disabled, &[disabled="disabled"] {
       @include state(disabled,textOnly);
     }
   }
@@ -222,27 +234,23 @@ $default-radius:      4px !default;
 }
 
 %button-group {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @extend %zero, %unstyled;
   &:after {
-    content: '';
-    display: block;
-    clear: both;
+    @extend %block, %clear;
+    content: "";
   }
   li {
-    display: block;
+    @extend %block;
     float: left;
     margin: 0;
-    border-radius: 0;
-    &:first-child a {
-      border-radius: $default-radius 0 0 $default-radius;
+    &:first-child a, &:first-child button {
+      @include rounded($default-radius 0 0 $default-radius);
     }
-    &:last-child a {
-      border-radius: 0 $default-radius $default-radius 0;
+    &:last-child a, &:last-child button {
+      @include rounded(0 $default-radius $default-radius 0);
     }
-    a {
-      display: block;
+    a, button {
+      @extend %block;
       word-wrap: break-word;
       padding: 0.25em 1em;
       background: $button-color;
@@ -252,12 +260,16 @@ $default-radius:      4px !default;
       text-decoration: none;
       cursor: pointer;
       line-height: 1.5;
+      @include rounded(0);
       @include transition(background-color 0.25s ease-out);
-      &:hover, &:focus {
+      &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
         background: $button-active;
         text-decoration: none;
         // color: $button-active-text;
         border: $border-thickness $border-style $button-active;
+      }
+      &.disabled, &[disabled="disabled"] {
+        @include state(disabled,normal,$disabled-background);
       }
     }
   }
@@ -294,27 +306,29 @@ $default-radius:      4px !default;
     }
   }
 
-	.dropdown {
-		@extend %dropdown-holder;
-		&.on ul {
-			@extend %block;
-		}
-		button {
-			@extend %dropdown-button;
-		}
-		ul {
-			@extend %dropdown-list;
-			li {
-				@extend %dropdown-list-item;
-                a, a:visited {
-					@extend %dropdown-menu-item;
-				}
-			}
-		}
-		hr {
-			@extend %dropdown-divider;
-		}
-	}
+  .dropdown {
+    @extend %dropdown-holder;
+    &.on, &.active, &[aria-selected="true"], &[aria-pressed="true"] {
+      ul {
+       @extend %block;
+      }
+    }
+    > a, > button {
+      @extend %dropdown-button;
+    }
+    ul {
+      @extend %dropdown-list;
+      li {
+        @extend %dropdown-list-item;
+        a, button {
+          @extend %dropdown-menu-item;
+        }
+      }
+    }
+    hr {
+      @extend %dropdown-divider;
+    }
+  }
 }
 
 @if $button-classes {
@@ -323,33 +337,35 @@ $default-radius:      4px !default;
   a.button:visited {
     @extend %button;
     @include button_modifiers;
-	}
-	.dropdown {
-		@extend %dropdown-holder;
-		&.on ul {
-			@extend %block;
-		}
-		.button {
-			@extend %dropdown-button;
-		}
-		ul {
-			@extend %dropdown-list;
-			li {
-				@extend %dropdown-list-item;
-                a, a:visited {
-					@extend %dropdown-menu-item;
-				}
-			}
-		}
-		hr {
-			@extend %dropdown-divider; 
-		}
-	}
+  }
+  .dropdown {
+    @extend %dropdown-holder;
+    &.on, &.active, &[aria-selected="true"], &[aria-pressed="true"] {
+      ul {
+       @extend %block;
+      }
+    }
+    .button {
+      @extend %dropdown-button;
+    }
+    ul {
+      @extend %dropdown-list;
+      li {
+        @extend %dropdown-list-item;
+          a, button {
+          @extend %dropdown-menu-item;
+        }
+      }
+    }
+    hr {
+      @extend %dropdown-divider; 
+    }
+  }
   ul.button-group,
   ol.button-group {
     @extend %button-group;
     li {
-      a {
+      a, button {
         @include button_modifiers;
       }
     }
@@ -359,6 +375,12 @@ $default-radius:      4px !default;
 @if $aria-selectors {
   [role~="button"] {
     @extend %button;
+
+    @for $i from 1 through length($aria-states) {
+      &[aria-#{nth($aria-states, $i)}] {
+        @extend %button-#{nth($aria-states, $i)};
+      }
+    }
 
     @if $button-classes {
       @include button_modifiers;

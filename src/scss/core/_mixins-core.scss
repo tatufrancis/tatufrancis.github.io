@@ -94,25 +94,25 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
       $color: $question-color;
     }
   }
-  color: lighten($color, 35%);
+  color: lighten($color, 25%);
   @if $mode != "textOnly" {
   background: lighten($color, 15%);
-  border-color: $color;
+  border-color: lighten($color, 10%);
   }
   @if $state == "disabled" {
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
-    &:hover, &:focus, &:visited {
-      color: lighten($color, 35%);
-      @if $mode != "textOnly" {
-      background: lighten($color, 15%);
-      border-color: $color;
-      }
-      cursor: not-allowed;
-      text-decoration: none;
-      outline: none;
-    }
+    // &:hover, &:focus, &:visited {
+    //   color: lighten($color, 35%);
+    //   @if $mode != "textOnly" {
+    //   background: lighten($color, 15%);
+    //   border-color: $color;
+    //   }
+    //   cursor: not-allowed;
+    //   text-decoration: none;
+    //   outline: none;
+    // }
   }
 }
 

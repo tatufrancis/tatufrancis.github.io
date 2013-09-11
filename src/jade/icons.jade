@@ -25,13 +25,11 @@ block content
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 11 of 14
           p
-            a.blue.button(href='forms.html')
-              i.icon-arrow-left
-              |  Back
+            a.blue.button(href='forms.html', rel='prev')
+              | Back
             | 
-            a.green.button(href='responsive-text.html')
-              | Next: Responsive Text 
-              i.icon-arrow-right
+            a.green.button(href='responsive-text.html', rel='next')
+              | Next: Responsive Text
     hr
     .row
       .one.whole.padded
@@ -1542,6 +1540,10 @@ block content
                 |  icon-chevron-right
             .one.fourth.two-up-small-tablet.two-up-mobile
               p
+                i.icon-chevron-up
+                |  icon-chevron-up
+            .one.fourth.two-up-small-tablet.two-up-mobile
+              p
                 i.icon-chevron-sign-down
                 |  icon-chevron-sign-down
             .one.fourth.two-up-small-tablet.two-up-mobile
@@ -1556,10 +1558,6 @@ block content
               p
                 i.icon-chevron-sign-up
                 |  icon-chevron-sign-up
-            .one.fourth.two-up-small-tablet.two-up-mobile
-              p
-                i.icon-chevron-up
-                |  icon-chevron-up
             .one.fourth.two-up-small-tablet.two-up-mobile
               p
                 i.icon-circle-arrow-down

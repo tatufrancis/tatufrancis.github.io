@@ -42,6 +42,7 @@ $default-radius:      4px !default;
   text-decoration: none;
   cursor: pointer;
   line-height: 1.5;
+  @include rounded(0);
   &:hover, &:focus {
     @extend %navigation-link-active;
   }
@@ -52,7 +53,10 @@ $default-radius:      4px !default;
   display: none;
   background: none;
   color: $nav-active-text;
-  border: 0;
+  border: none !important;
+  &:hover, &:focus {
+    background: none !important;
+  }
 }
 
 %navigation-link-on, %navigation-link-active {
@@ -101,9 +105,19 @@ $default-radius:      4px !default;
         display: inline-block;
         content: attr(title);
         padding: 0.25em 0.5em;
+        font-weight: bold;
       }
-      button {
-        display: block;
+      button.hamburger {
+        display: inline-block;
+        &:before {
+          @include icon-FontAwesome();
+          content: $icon-list;
+        }
+        &.open {
+          &:before {
+            content: $icon-collapse-top;
+          }
+        }
       }
       > ul {
         display: none;
@@ -118,42 +132,49 @@ $default-radius:      4px !default;
           position: static;
         }
         li {
-          text-indent: $gutter;
+          a, button {
+            text-indent: $gutter;
+          }
           li {
-            text-indent: ($gutter * 2);
+            a, button {
+              text-indent: ($gutter * 2);
+            }
           }
         }
         &.menu {
           ul {
-            border: 0;
-            a {
+            border: none;
+            a, button {
+              border-top: none;
               border-bottom: $border-thickness $border-style $nav-border-color;
             }
           }
-          > a {
+          > a, > button {
             &:after {
               float: none;
-              content: "\f0d7"; // icon-caret-down
+              content: $icon-caret-down;
             }
           }
           &.on {
-            > a {
+            > a, > button {
               &:after {
-                content: "\f0d8"; // icon-caret-up
+                content: $icon-caret-up;
               }
             }
           }
         }
       }
-      a {
+      a, button:not(.hamburger) {
         display: block;
+        width: 100%;
         text-align: left;
         border-bottom: $border-thickness $border-style $nav-border-color;
       }
       @for $i from 1 through length($modifier-name) {
         &.#{nth($modifier-name, $i)} {
-          li ul a, li.menu ul a, a {
-            border-top: 0;
+          li ul a, li.menu ul a, a,
+          li ul button, li.menu ul button, button {
+            border-top: none;
             border-bottom: $border-thickness $border-style darken(nth($modifier-code, $i), 5%);
             @include rounded(0);
           }
@@ -161,8 +182,8 @@ $default-radius:      4px !default;
       }
     }
     > ul li:last-child {
-      a {
-        border-bottom: 0;
+      a, button {
+        border-bottom: none;
       }
     }
 }
@@ -184,7 +205,7 @@ $default-radius:      4px !default;
   .nav {
     @extend %navigation;
 
-    button {
+    button.hamburger {
       @extend %hamburger-button;
     }
 
@@ -192,25 +213,25 @@ $default-radius:      4px !default;
     @for $i from 1 through length($modifier-name) {
       &.#{nth($modifier-name, $i)} {
         @extend %navigation-#{nth($modifier-name, $i)};
-        button {
+        button.hamburger {
           color: #{nth($modifier-text, $i)}
         }
         li.menu {
           ul {
             @extend %navigation-menu-#{nth($modifier-name, $i)};
-            a {
+            a, button {
               @extend %navigation-link-#{nth($modifier-name, $i)};
             }
           }
           &.on {
-            > a {
+            > a, > button {
               background: darken(nth($modifier-code, $i), 5%);
               border-color: darken(nth($modifier-code, $i), 10%);
               color: nth($modifier-text, $i)
             }
           }
         }
-        a {
+        a, button {
           @extend %navigation-link-#{nth($modifier-name, $i)};
         }
       }
@@ -224,11 +245,11 @@ $default-radius:      4px !default;
       @extend %navigation-list-item;
 
       &.menu {
-        > a {
+        > a, > button {
           &:after {
             @extend %pull-right;
             margin-left: 0.5em;
-            content: "\f0d7"; // icon-caret-down
+            content: $icon-caret-down;
             font-family: FontAwesome;
             font-weight: normal;
             font-style: normal;
@@ -237,7 +258,7 @@ $default-radius:      4px !default;
           }
         }
         &.on {
-          > a {
+          > a, > button {
             @extend %navigation-link-active;
           }
         }
@@ -246,13 +267,15 @@ $default-radius:      4px !default;
       ul {
         @extend %navigation-menu;
 
-        a {
-          @extend %block, %align-left;
+        a, button {
+          @extend %align-left;
+          display: block;
+          width: 100%;
           border-top: $border-thickness $border-style $nav-border-color;
         }
 
         li:first-child {
-          a {
+          a, button {
             border-top: none;
           }
         }
@@ -261,15 +284,15 @@ $default-radius:      4px !default;
       li {
         float: none;
         &:last-child {
-          a {
+          a, button {
             @include rounded(0 0 $default-radius $default-radius);
           }
         }
 
         &.menu {
-          > a {
+          > a, > button {
             &:after {
-              content: "\f0da"; // icon-caret-right
+              content: $icon-caret-right;
             }
           }
         }
@@ -283,12 +306,12 @@ $default-radius:      4px !default;
 
           li {
             &:first-child {
-              a {
+              a, button {
                 @include rounded(0 $default-radius 0 0);
               }
             }
             &:last-child {
-              a {
+              a, button {
                 @include rounded(0 0 $default-radius $default-radius);
               }
             }
@@ -301,13 +324,16 @@ $default-radius:      4px !default;
       }
     }
 
-    a, a:visited {
+    a, a:visited, button {
       @extend %navigation-link;
       @for $i from 1 through length($navigation-states) {
         &.#{nth($navigation-states, $i)} {
           @extend %navigation-link-#{nth($navigation-states, $i)};
         }
       }
+    }
+    button {
+      border: none;
     }
   }
 }

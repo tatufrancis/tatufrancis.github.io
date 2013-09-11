@@ -22,9 +22,6 @@ class ResponsiveNavigation
     @defaultLabel()
     @setupMarkers()
     @hamburgerHelper()
-    @touchBindings()
-    unless Modernizr.touch
-      @mouseBindings()
 
   defaultLabel: ->
     if @el.attr('title') == undefined
@@ -36,41 +33,47 @@ class ResponsiveNavigation
         $(@).addClass('menu')
 
   hamburgerHelper: ->
-    @el.prepend('<button><i class="icon-list-ul" /></button>')
+    @el.prepend('<button class="hamburger"></button>')
 
-  mouseBindings: ->
+$ ->
+
+  mouseBindings = -> # need a little more <3
     $('body').on 'mouseenter', 'li.menu', ->
-      unless $(@).parents('.nav').find('button').is(':visible')
+      unless $(@).parents('.nav').find('button.hamburger').is(':visible')
         clearTimeout(delayNavigationClose[@index])
-        $(this).siblings().children('ul').removeClass('open')
+        $(@).siblings().children('ul').removeClass('open')
         $(@).children('ul').addClass('open')
 
     $('body').on 'mouseleave', 'li.menu, ul.open', ->
-      unless $(@).parents('.nav').find('button').is(':visible')
+      unless $(@).parents('.nav').find('button.hamburger').is(':visible')
         delayNavigationClose[@index] = setTimeout( =>
           $(@).find('ul').removeClass('open')
         , 500)
 
-  touchBindings: ->
-    $('body').on 'click', 'li.menu > a', (e) ->
-      $(this).closest('.menu').children('ul').toggleClass('open')
-      $(this).closest('.menu').toggleClass('on')
-      unless $(this).closest('.menu').hasClass('on')
-        $(this).closest('.menu').find('.menu').removeClass('on')
-        $(this).closest('.menu').find('ul').removeClass('open')
+  touchBindings = ->
+    $('body').on 'click', 'li.menu > a, li.menu > button', (e) ->
+      $(@).closest('.menu').children('ul').toggleClass('open')
+      $(@).closest('.menu').toggleClass('on')
+      unless $(@).closest('.menu').hasClass('on')
+        $(@).closest('.menu').find('.menu').removeClass('on')
+        $(@).closest('.menu').find('ul').removeClass('open')
       e.preventDefault()
-
-$ ->
 
   responsiveNavigationElements = []
 
   $('.nav').each ->
     responsiveNavigationElements.push( new ResponsiveNavigation(@) )
 
-  $('body').on 'click', '.nav button', (e) ->
-    list = $(this).siblings('ul')
+  $('body').on 'click', '.nav button.hamburger', (e) ->
+    $(@).toggleClass('open')
+    list = $(@).siblings('ul')
     list.toggleClass('open')
     unless list.hasClass('on')
       list.find('.menu').removeClass('on')
       list.find('ul').removeClass('open')
     e.preventDefault()
+
+  # initialize bindings
+  touchBindings()
+  unless Modernizr.touch
+    mouseBindings()

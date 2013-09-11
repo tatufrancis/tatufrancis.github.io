@@ -135,6 +135,13 @@ $responsive: true !default;
         .rotate-360-small-tablet      { @include _rotate-360; }
         .rotate-360-ctr-small-tablet  { @include _rotate-360-ctr; }
       }
+      @if $multi-column-classes {
+        @for $i from 1 through length($multi-column-names) {
+          .#{nth($multi-column-names, $i)}-small-tablet, .#{nth($multi-column-names, $i)}s-small-tablet {
+            @include _multi-column($i);
+          }
+        }
+      }
       @content;
     }
   }

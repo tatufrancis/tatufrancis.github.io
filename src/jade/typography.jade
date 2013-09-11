@@ -9,17 +9,15 @@ block content
       .row
         .three.fifths.bounceInRight.animated
           h1.zero.museo-slab Typography
-          p.quicksand Headings, paragraphs, emphasizers, lists, web fonts, quotes, code, and colors
+          p.quicksand Headings, paragraphs, emphasizers, links, lists, web fonts, quotes, code, and colors
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 3 of 14
           p
-            a.blue.button(href='helpers.html')
-              i.icon-arrow-left
-              |  Back
+            a.blue.button(href='helpers.html', rel='prev')
+              | Back
             | 
-            a.green.button(href='navigation.html')
-              | Next: Navigation 
-              i.icon-arrow-right
+            a.green.button(href='navigation.html', rel='next')
+              | Next: Navigation
     hr
     .row
       .one.whole.padded
@@ -77,6 +75,236 @@ block content
             .one.whole.pad-left.pad-right
               pre(data-lang='html')
                 | <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        hr
+        br
+        .bounceInLeft.animated
+          h4#link-types Semantic Link Types
+          .row
+            .one.fourth.padded
+              p
+                a(href='home.html') Normal Hyperlink
+              pre(data-lang='html')
+                | <a href="home.html">Normal Hyperlink</a>
+            .one.fourth.padded
+              p
+                a(href='#link-types') Anchor Link
+              pre(data-lang='html')
+                | <a href="#">Anchor Link</a>
+            .one.fourth.padded
+              p
+                a(href='https://google.com') Secure Link
+              pre(data-lang='html')
+                | <a href="https://google.com">Secure Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://google.com', target='_blank') New Window Link
+              pre(data-lang='html')
+                | <a href="http://google.com" target="_blank">New Window Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='view-source:http://google.com') View Source Link
+              pre(data-lang='html')
+                | <a href="view-source:http://google.com">View Source Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.gif') Image Link
+              pre(data-lang='html')
+                | <a href="example.gif">Image Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.pdf') PDF Document Link
+              pre(data-lang='html')
+                | <a href="example.pdf">PDF Document Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.doc') Word Document Link
+              pre(data-lang='html')
+                | <a href="example.doc">Word Document Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='example.txt') Text Document Link
+              pre(data-lang='html')
+                | <a href="example.txt">Text Document Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.md') Markdown Document Link
+              pre(data-lang='html')
+                | <a href="example.md">Markdown Document Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.zip') ZIP File Link
+              pre(data-lang='html')
+                | <a href="example.zip">ZIP File Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.exe') Executable File Link
+              pre(data-lang='html')
+                | <a href="example.exe">Executable File Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='home.html', rel='home') Home Link
+              pre(data-lang='html')
+                | <a href="home.html" rel="home">Home Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='search') Search Link
+              pre(data-lang='html')
+                | <a href="#" rel="search">Search Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='author') Author Link
+              pre(data-lang='html')
+                | <a href="#" rel="author">Author Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='help') Help Link
+              pre(data-lang='html')
+                | <a href="#" rel="help">Help Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='#', rel='tag') Tag Link
+              pre(data-lang='html')
+                | <a href="#" rel="tag">Tag Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='bookmark') Bookmark Link
+              pre(data-lang='html')
+                | <a href="#" rel="bookmark">Bookmark Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='prev') Previous Link
+              pre(data-lang='html')
+                | <a href="#" rel="prev">Previous Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='next') Next Link
+              pre(data-lang='html')
+                | <a href="#" rel="next">Next Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='#', rel='directory') Directory Link
+              pre(data-lang='html')
+                | <a href="#" rel="directory">Directory Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='payment') Payment Link
+              pre(data-lang='html')
+                | <a href="#" rel="payment">Payment Link</a>
+            .one.fourth.padded
+              p
+                a(href='mailto:user@example.com') Email Link
+              pre(data-lang='html')
+                | <a href="mailto:user@example.com">Email Link</a>
+            .one.fourth.padded
+              p
+                a(href='tel:5555551212') Telephone Link
+              pre(data-lang='html')
+                | <a href="tel:5555551212">Telephone Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='mailto:user@gmail.com') Gmail Link
+              pre(data-lang='html')
+                | <a href="mailto:user@gmail.com">Gmail Link</a>
+            .one.fourth.padded
+              p
+                a(href='skype:skypeusername') Skype Link
+              pre(data-lang='html')
+                | <a href="skype:skypeusername">Skype Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.rss') RSS Link
+              pre(data-lang='html')
+                | <a href="example.rss">RSS Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://twitter.com') Twitter Link
+              pre(data-lang='html')
+                | <a href="twitter.com">Twitter Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://facebook.com') Facebook Link
+              pre(data-lang='html')
+                | <a href="facebook.com">Facebook Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://tumblr.com') Tumblr Link
+              pre(data-lang='html')
+                | <a href="http://tumblr.com">Tumblr Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://linkedin.com') LinkedIn Link
+              pre(data-lang='html')
+                | <a href="http://linkedin.com">LinkedIn Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://plus.google.com') Google Plus Link
+              pre(data-lang='html')
+                | <a href="http://plus.google.com">Google Plus Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://youtube.com') Youtube Link
+              pre(data-lang='html')
+                | <a href="http://youtube.com">Youtube Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://github.com') Github Link
+              pre(data-lang='html')
+                | <a href="http://github.com">Github Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://stackoverflow.com') Stack Overflow Link
+              pre(data-lang='html')
+                | <a href="http://stackoverflow.com">Stack Overflow Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://instagram.com') Instagram Link
+              pre(data-lang='html')
+                | <a href="http://instagram.com">Instagram Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://flickr.com') Flickr Link
+              pre(data-lang='html')
+                | <a href="http://flickr.com">Flickr Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://foursquare.com') Foursquare Link
+              pre(data-lang='html')
+                | <a href="http://foursquare.com">Foursquare Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://dribbble.com') Dribbble Link
+              pre(data-lang='html')
+                | <a href="http://dribbble.com">Dribbble Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://dropbox.com') Dropbox Link
+              pre(data-lang='html')
+                | <a href="http://dropbox.com">Dropbox Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://trello.com') Trello Link
+              pre(data-lang='html')
+                | <a href="http://trello.com">Trello Link</a>
         hr
         br
         .bounceInLeft.animated
@@ -289,40 +517,6 @@ block content
                 | <h1 class="quicksand">Quicksand</h1>
         hr
         br
-        .bounceInRight.animated
-          h4.zero Placeholder Fonts for Rapid Prototyping & Wireframes
-          p.small Keep your wireframes free of distracting Lorem Ipsum.
-          .row
-            .one.whole.padded
-              h4 Redacted Regular
-              p.redacted Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-          .row
-            .one.whole.pad-left.pad-right
-              pre(data-lang='html')
-                | <p class="redacted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-          br
-          .row
-            .one.third.padded
-              h4 Redacted Script
-              p.redacted-script Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-            .one.third.padded
-              h4 Redacted Script Light
-              p.redacted-script-light Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-            .one.third.padded
-              h4 Redacted Script Bold
-              p.redacted-script-bold Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-          .row
-            .one.third.pad-left.pad-right
-              pre(data-lang='html')
-                | <p class="redacted-script">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-            .one.third.pad-left.pad-right
-              pre(data-lang='html')
-                | <p class="redacted-script-light">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-            .one.third.pad-left.pad-right
-              pre(data-lang='html')
-                | <p class="redacted-script-bold">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-        hr
-        br
         .bounceInLeft.animated
           h4 Quotations
           .row
@@ -358,20 +552,22 @@ block content
             .one.whole.padded
               p
                 | This is some text with some 
-                code.inline inline code
+                code inline code
               pre(data-lang='html')
-                | <p>This is some text with some <code class="inline">inline code</code></p>
+                | <p>This is some text with some <code>inline code</code></p>
         hr
         br
         .bounceInRight.animated
           h4 Preformatted Code Blocks
           .row
             .one.whole.padded
-              code
+              code.block
                 pre
                   | %code {
-                  |   @extend %monospace;
-                  |   display: inline-block;
+                  |   @extend %inline-block, %monospace;
+                  |   &.block {
+                  |     @extend %block;
+                  |   }
                   |   background: darken($background-color, 10%);
                   |   padding: 0 0.3em;
                   |   margin: 0 0.2em;
@@ -380,10 +576,12 @@ block content
                   | }
               br
               pre(data-lang='html')
-                | <code>
+                | <code class="block">
                 |   <pre>%code {
-                |   @extend %monospace;
-                |   display: inline-block;
+                |   @extend %inline-block, %monospace;
+                |   &.block {
+                |     @extend %block;
+                |   }
                 |   background: darken($background-color, 10%);
                 |   padding: 0 0.3em;
                 |   margin: 0 0.2em;
@@ -399,7 +597,7 @@ block content
             .two.eighths.padded
               .row
                 .one.mobile.half
-                  b
+                  p
                     span.yellow .yellow
                     br
                     span.orange .orange
@@ -420,7 +618,7 @@ block content
                     br
                     span.charcoal .charcoal
                 .one.mobile.half
-                  b
+                  p
                     span.info .info
                     br
                     span.alert .alert
@@ -430,6 +628,8 @@ block content
                     span.error .error
                     br
                     span.success .success
+                    br
+                    span.question .question
             .six.eighths
               .row
                 .two.fifths.padded
