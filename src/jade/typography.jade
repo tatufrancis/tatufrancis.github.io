@@ -452,21 +452,21 @@ block content
               p Normal Checklist
               ul.checklist
                 li Checklist item
-                li(data-checked='true') Completed checklist item
+                li(aria-checked='true') Completed checklist item
                 li Checklist item
                 li Checklist item
             .one.third.padded
               p Large, Colored Checklist
               ul.checklist.large.turquoise
                 li Checklist item
-                li(data-checked='true') Completed checklist item
+                li(aria-checked='true') Completed checklist item
                 li Checklist item
                 li Checklist item
             .one.third.padded
               p Individually Colored Checklist Items
               ul.checklist
                 li.blue Blue checklist item
-                li.red(data-checked='true') Completed red checklist item
+                li.red(aria-checked='true') Completed red checklist item
                 li.purple Purple checklist item
                 li.turquoise Turquoise checklist item
           .row
@@ -474,7 +474,7 @@ block content
               pre(data-lang='html')
                 | <ul class="checklist">
                 |   <li>Checklist item</li>
-                |   <li data-checked="true">Completed checklist item</li>
+                |   <li aria-checked="true">Completed checklist item</li>
                 |   <li>Checklist item</li>
                 |   <li>Checklist item</li>
                 | </ul>
@@ -482,7 +482,7 @@ block content
               pre(data-lang='html')
                 | <ul class="checklist large turquoise">
                 |   <li>Checklist item</li>
-                |   <li data-checked="true">Completed checklist item</li>
+                |   <li aria-checked="true">Completed checklist item</li>
                 |   <li>Checklist item</li>
                 |   <li>Checklist item</li>
                 | </ul>
@@ -490,7 +490,7 @@ block content
               pre(data-lang='html')
                 | <ul class="checklist">
                 |   <li class="blue">Blue checklist item</li>
-                |   <li data-checked="true" class="red">Completed red checklist item</li>
+                |   <li aria-checked="true" class="red">Completed red checklist item</li>
                 |   <li class="purple">Purple checklist item</li>
                 |   <li class="turquoise">Turquoise checklist item</li>
                 | </ul>

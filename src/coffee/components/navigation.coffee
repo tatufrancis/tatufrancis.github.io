@@ -1,6 +1,6 @@
 ###
  *
- *  jQuery ResponsiveNavigation by Gary Hepting
+ *  Responsive Navigation by Gary Hepting
  *  
  *  Open source under the MIT License. 
  *
@@ -9,7 +9,8 @@
 ###
 
 responsiveNavigationIndex = 0
-delayNavigationClose = []
+window.delayMenuClose = ''
+window.delayNavigationClose = ''
 
 class ResponsiveNavigation
 
@@ -30,48 +31,59 @@ class ResponsiveNavigation
   setupMarkers: ->
     @el.find('li').each ->
       if $(@).find('ul').length
-        $(@).addClass('menu')
+        $(@).attr('role', 'menu')
 
   hamburgerHelper: ->
     @el.prepend('<button class="hamburger"></button>')
 
 $ ->
 
-  mouseBindings = -> # need a little more <3
-    $('body').on 'mouseenter', 'li.menu', ->
+  mouseBindings = -> # needs more <3
+    $('body').on 'mouseenter', '.nav li[role="menu"]', (e) ->
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
-        clearTimeout(delayNavigationClose[@index])
-        $(@).siblings().children('ul').removeClass('open')
-        $(@).children('ul').addClass('open')
+        clearTimeout(window.delayMenuClose)
+        $(@).siblings().find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
+        # $(@).children('ul').attr('aria-expanded', 'true')
+        $(e.target).parents('li[role="menu"]').children('ul').attr('aria-expanded', 'true')
 
-    $('body').on 'mouseleave', 'li.menu, ul.open', ->
+    $('body').on 'mouseleave', '.nav li[role="menu"]', (e) ->
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
-        delayNavigationClose[@index] = setTimeout( =>
-          $(@).find('ul').removeClass('open')
+        window.delayMenuClose = setTimeout( =>
+          $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
         , 500)
 
   touchBindings = ->
-    $('body').on 'click', 'li.menu > a, li.menu > button', (e) ->
-      $(@).closest('.menu').children('ul').toggleClass('open')
-      $(@).closest('.menu').toggleClass('on')
-      unless $(@).closest('.menu').hasClass('on')
-        $(@).closest('.menu').find('.menu').removeClass('on')
-        $(@).closest('.menu').find('ul').removeClass('open')
+    $('body').on 'click', '.nav li[role="menu"] > a, .nav li[role="menu"] > button', (e) ->
+      console.log $(@)
+      list = $(@).siblings('ul')
+      menu = $(@).parent('[role="menu"]')
+      if list.attr('aria-expanded') != 'true'
+        list.attr('aria-expanded', 'true')
+      else
+        list.attr('aria-expanded', 'false')
+        list.find('[aria-expanded="true"]').attr('aria-expanded', 'false')
+      if menu.attr('aria-pressed') != 'true'
+        menu.attr('aria-pressed', 'true')
+      else
+        menu.attr('aria-pressed', 'false')
+        menu.find('[aria-pressed="true"]').attr('aria-pressed', 'false')
+        menu.find('[aria-expanded="true"]').attr('aria-expanded', 'false')
+      e.preventDefault()
+
+    $('body').on 'click', '.nav button.hamburger', (e) ->
+      list = $(@).siblings('ul')
+      if list.attr('aria-expanded') != 'true'
+        list.attr('aria-expanded', 'true')
+      else
+        list.attr('aria-expanded', 'false')
+        list.find('[aria-pressed="true"]').attr('aria-pressed', 'false')
+        list.find('[aria-expanded="true"]').attr('aria-expanded', 'false')
       e.preventDefault()
 
   responsiveNavigationElements = []
 
   $('.nav').each ->
     responsiveNavigationElements.push( new ResponsiveNavigation(@) )
-
-  $('body').on 'click', '.nav button.hamburger', (e) ->
-    $(@).toggleClass('open')
-    list = $(@).siblings('ul')
-    list.toggleClass('open')
-    unless list.hasClass('on')
-      list.find('.menu').removeClass('on')
-      list.find('ul').removeClass('open')
-    e.preventDefault()
 
   # initialize bindings
   touchBindings()

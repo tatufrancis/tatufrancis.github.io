@@ -8,15 +8,20 @@ $ ->
       $(@).attr('aria-pressed', 'false')
       $(@).children('ul').attr
         'aria-expanded': 'false'
+        'aria-hidden': 'true'
         'role': 'menu'
 
   $body.on 'dropdown', (e) ->
     $target = $(e.target)
     $('.dropdown').not($target).attr('aria-pressed', 'false')
-    $('.dropdown').children('ul').attr('aria-expanded', 'false')
+    $('.dropdown').children('ul').attr
+      'aria-expanded': 'false'
+      'aria-hidden': 'true'
     console.log $('.dropdown').children('ul')
     $target.attr('aria-pressed', (if $target.attr('aria-pressed') == 'true' then 'false' else 'true'))
-    $target.children('ul').attr('aria-expanded', (if $target.attr('aria-pressed') == 'true' then 'true' else 'false'))
+    $target.children('ul').attr
+      'aria-expanded': (if $target.attr('aria-pressed') == 'true' then 'true' else 'false')
+      'aria-hidden': (if $target.attr('aria-pressed') == 'true' then 'false' else 'true')
 
   $body.on 'click', '.dropdown', (e) ->
     $target = $(e.currentTarget)

@@ -5,12 +5,13 @@
 
 $navigation-classes:  true !default;
 $navigation-states:   "on" "active" !default;
-$aria-selectors:      true !default;
 $nav-color:           lighten(gray, 32.5%) !default;
 $nav-text:            darken(gray, 15%) !default;
 $nav-border-color:    lighten(gray, 27.5%) !default;
 $nav-active:          lighten(gray, 27.5%) !default;
 $nav-active-text:     darken(gray, 12%) !default;
+// shared defaults
+$aria-selectors:      true !default;
 $border-thickness:    1px !default;
 $border-style:        solid !default;
 $border-color:        #dddddd !default;
@@ -113,7 +114,7 @@ $default-radius:      4px !default;
           @include icon-FontAwesome();
           content: $icon-list;
         }
-        &.open {
+        &[aria-expanded="true"] {
           &:before {
             content: $icon-collapse-top;
           }
@@ -122,7 +123,7 @@ $default-radius:      4px !default;
       > ul {
         display: none;
       }
-      > ul.open {
+      > ul[aria-expanded="true"] {
         display: block;
       }
       li {
@@ -141,7 +142,7 @@ $default-radius:      4px !default;
             }
           }
         }
-        &.menu {
+        &[role="menu"] {
           ul {
             border: none;
             a, button {
@@ -155,7 +156,7 @@ $default-radius:      4px !default;
               content: $icon-caret-down;
             }
           }
-          &.on {
+          &[aria-pressed="true"] {
             > a, > button {
               &:after {
                 content: $icon-caret-up;
@@ -172,8 +173,8 @@ $default-radius:      4px !default;
       }
       @for $i from 1 through length($modifier-name) {
         &.#{nth($modifier-name, $i)} {
-          li ul a, li.menu ul a, a,
-          li ul button, li.menu ul button, button {
+          li ul a, li[role="menu"] ul a, a,
+          li ul button, li[role="menu"] ul button, button {
             border-top: none;
             border-bottom: $border-thickness $border-style darken(nth($modifier-code, $i), 5%);
             @include rounded(0);
@@ -216,14 +217,14 @@ $default-radius:      4px !default;
         button.hamburger {
           color: #{nth($modifier-text, $i)}
         }
-        li.menu {
+        li[role="menu"] {
           ul {
             @extend %navigation-menu-#{nth($modifier-name, $i)};
             a, button {
               @extend %navigation-link-#{nth($modifier-name, $i)};
             }
           }
-          &.on {
+          &[aria-expanded="true"] {
             > a, > button {
               background: darken(nth($modifier-code, $i), 5%);
               border-color: darken(nth($modifier-code, $i), 10%);
@@ -244,7 +245,7 @@ $default-radius:      4px !default;
     li {
       @extend %navigation-list-item;
 
-      &.menu {
+      &[role="menu"] {
         > a, > button {
           &:after {
             @extend %pull-right;
@@ -257,7 +258,7 @@ $default-radius:      4px !default;
             -webkit-font-smoothing: antialiased;
           }
         }
-        &.on {
+        &[aria-expanded="true"] {
           > a, > button {
             @extend %navigation-link-active;
           }
@@ -289,7 +290,7 @@ $default-radius:      4px !default;
           }
         }
 
-        &.menu {
+        &[role="menu"] {
           > a, > button {
             &:after {
               content: $icon-caret-right;
@@ -319,7 +320,7 @@ $default-radius:      4px !default;
         }
       }
 
-      > ul.open {
+      > ul[aria-expanded="true"] {
         display: block;
       }
     }

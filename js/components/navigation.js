@@ -1,6 +1,6 @@
 /*
  *
- *  jQuery ResponsiveNavigation by Gary Hepting
+ *  Responsive Navigation by Gary Hepting
  *  
  *  Open source under the MIT License. 
  *
@@ -10,11 +10,13 @@
 
 
 (function() {
-  var ResponsiveNavigation, delayNavigationClose, responsiveNavigationIndex;
+  var ResponsiveNavigation, responsiveNavigationIndex;
 
   responsiveNavigationIndex = 0;
 
-  delayNavigationClose = [];
+  window.delayMenuClose = '';
+
+  window.delayNavigationClose = '';
 
   ResponsiveNavigation = (function() {
     function ResponsiveNavigation(el) {
@@ -38,7 +40,7 @@
     ResponsiveNavigation.prototype.setupMarkers = function() {
       return this.el.find('li').each(function() {
         if ($(this).find('ul').length) {
-          return $(this).addClass('menu');
+          return $(this).attr('role', 'menu');
         }
       });
     };
@@ -54,29 +56,52 @@
   $(function() {
     var mouseBindings, responsiveNavigationElements, touchBindings;
     mouseBindings = function() {
-      $('body').on('mouseenter', 'li.menu', function() {
+      $('body').on('mouseenter', '.nav li[role="menu"]', function(e) {
         if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
-          clearTimeout(delayNavigationClose[this.index]);
-          $(this).siblings().children('ul').removeClass('open');
-          return $(this).children('ul').addClass('open');
+          clearTimeout(window.delayMenuClose);
+          $(this).siblings().find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
+          return $(e.target).parents('li[role="menu"]').children('ul').attr('aria-expanded', 'true');
         }
       });
-      return $('body').on('mouseleave', 'li.menu, ul.open', function() {
+      return $('body').on('mouseleave', '.nav li[role="menu"]', function(e) {
         var _this = this;
         if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
-          return delayNavigationClose[this.index] = setTimeout(function() {
-            return $(_this).find('ul').removeClass('open');
+          return window.delayMenuClose = setTimeout(function() {
+            return $(_this).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
           }, 500);
         }
       });
     };
     touchBindings = function() {
-      return $('body').on('click', 'li.menu > a, li.menu > button', function(e) {
-        $(this).closest('.menu').children('ul').toggleClass('open');
-        $(this).closest('.menu').toggleClass('on');
-        if (!$(this).closest('.menu').hasClass('on')) {
-          $(this).closest('.menu').find('.menu').removeClass('on');
-          $(this).closest('.menu').find('ul').removeClass('open');
+      $('body').on('click', '.nav li[role="menu"] > a, .nav li[role="menu"] > button', function(e) {
+        var list, menu;
+        console.log($(this));
+        list = $(this).siblings('ul');
+        menu = $(this).parent('[role="menu"]');
+        if (list.attr('aria-expanded') !== 'true') {
+          list.attr('aria-expanded', 'true');
+        } else {
+          list.attr('aria-expanded', 'false');
+          list.find('[aria-expanded="true"]').attr('aria-expanded', 'false');
+        }
+        if (menu.attr('aria-pressed') !== 'true') {
+          menu.attr('aria-pressed', 'true');
+        } else {
+          menu.attr('aria-pressed', 'false');
+          menu.find('[aria-pressed="true"]').attr('aria-pressed', 'false');
+          menu.find('[aria-expanded="true"]').attr('aria-expanded', 'false');
+        }
+        return e.preventDefault();
+      });
+      return $('body').on('click', '.nav button.hamburger', function(e) {
+        var list;
+        list = $(this).siblings('ul');
+        if (list.attr('aria-expanded') !== 'true') {
+          list.attr('aria-expanded', 'true');
+        } else {
+          list.attr('aria-expanded', 'false');
+          list.find('[aria-pressed="true"]').attr('aria-pressed', 'false');
+          list.find('[aria-expanded="true"]').attr('aria-expanded', 'false');
         }
         return e.preventDefault();
       });
@@ -84,17 +109,6 @@
     responsiveNavigationElements = [];
     $('.nav').each(function() {
       return responsiveNavigationElements.push(new ResponsiveNavigation(this));
-    });
-    $('body').on('click', '.nav button.hamburger', function(e) {
-      var list;
-      $(this).toggleClass('open');
-      list = $(this).siblings('ul');
-      list.toggleClass('open');
-      if (!list.hasClass('on')) {
-        list.find('.menu').removeClass('on');
-        list.find('ul').removeClass('open');
-      }
-      return e.preventDefault();
     });
     touchBindings();
     if (!Modernizr.touch) {

@@ -7,6 +7,7 @@
         $(this).attr('aria-pressed', 'false');
         return $(this).children('ul').attr({
           'aria-expanded': 'false',
+          'aria-hidden': 'true',
           'role': 'menu'
         });
       }
@@ -15,10 +16,16 @@
       var $target;
       $target = $(e.target);
       $('.dropdown').not($target).attr('aria-pressed', 'false');
-      $('.dropdown').children('ul').attr('aria-expanded', 'false');
+      $('.dropdown').children('ul').attr({
+        'aria-expanded': 'false',
+        'aria-hidden': 'true'
+      });
       console.log($('.dropdown').children('ul'));
       $target.attr('aria-pressed', ($target.attr('aria-pressed') === 'true' ? 'false' : 'true'));
-      return $target.children('ul').attr('aria-expanded', ($target.attr('aria-pressed') === 'true' ? 'true' : 'false'));
+      return $target.children('ul').attr({
+        'aria-expanded': ($target.attr('aria-pressed') === 'true' ? 'true' : 'false'),
+        'aria-hidden': ($target.attr('aria-pressed') === 'true' ? 'false' : 'true')
+      });
     });
     $body.on('click', '.dropdown', function(e) {
       var $target;

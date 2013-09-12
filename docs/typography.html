@@ -534,7 +534,7 @@
                 <p>Normal Checklist</p>
                 <ul class="checklist">
                   <li>Checklist item</li>
-                  <li data-checked="true">Completed checklist item</li>
+                  <li aria-checked="true">Completed checklist item</li>
                   <li>Checklist item</li>
                   <li>Checklist item</li>
                 </ul>
@@ -543,7 +543,7 @@
                 <p>Large, Colored Checklist</p>
                 <ul class="checklist large turquoise">
                   <li>Checklist item</li>
-                  <li data-checked="true">Completed checklist item</li>
+                  <li aria-checked="true">Completed checklist item</li>
                   <li>Checklist item</li>
                   <li>Checklist item</li>
                 </ul>
@@ -552,7 +552,7 @@
                 <p>Individually Colored Checklist Items</p>
                 <ul class="checklist">
                   <li class="blue">Blue checklist item</li>
-                  <li data-checked="true" class="red">Completed red checklist item</li>
+                  <li aria-checked="true" class="red">Completed red checklist item</li>
                   <li class="purple">Purple checklist item</li>
                   <li class="turquoise">Turquoise checklist item</li>
                 </ul>
@@ -562,7 +562,7 @@
               <div class="one third pad-left pad-right">
                 <pre data-lang="html">&lt;ul class=&quot;checklist&quot;&gt;
   &lt;li&gt;Checklist item&lt;/li&gt;
-  &lt;li data-checked=&quot;true&quot;&gt;Completed checklist item&lt;/li&gt;
+  &lt;li aria-checked=&quot;true&quot;&gt;Completed checklist item&lt;/li&gt;
   &lt;li&gt;Checklist item&lt;/li&gt;
   &lt;li&gt;Checklist item&lt;/li&gt;
 &lt;/ul&gt;</pre>
@@ -570,7 +570,7 @@
               <div class="one third pad-left pad-right">
                 <pre data-lang="html">&lt;ul class=&quot;checklist large turquoise&quot;&gt;
   &lt;li&gt;Checklist item&lt;/li&gt;
-  &lt;li data-checked=&quot;true&quot;&gt;Completed checklist item&lt;/li&gt;
+  &lt;li aria-checked=&quot;true&quot;&gt;Completed checklist item&lt;/li&gt;
   &lt;li&gt;Checklist item&lt;/li&gt;
   &lt;li&gt;Checklist item&lt;/li&gt;
 &lt;/ul&gt;</pre>
@@ -578,7 +578,7 @@
               <div class="one third pad-left pad-right">
                 <pre data-lang="html">&lt;ul class=&quot;checklist&quot;&gt;
   &lt;li class=&quot;blue&quot;&gt;Blue checklist item&lt;/li&gt;
-  &lt;li data-checked=&quot;true&quot; class=&quot;red&quot;&gt;Completed red checklist item&lt;/li&gt;
+  &lt;li aria-checked=&quot;true&quot; class=&quot;red&quot;&gt;Completed red checklist item&lt;/li&gt;
   &lt;li class=&quot;purple&quot;&gt;Purple checklist item&lt;/li&gt;
   &lt;li class=&quot;turquoise&quot;&gt;Turquoise checklist item&lt;/li&gt;
 &lt;/ul&gt;</pre>
@@ -763,23 +763,17 @@
       <div class="box square charcoal">
         <div class="container padded">
           <div class="row">
-            <div class="one fourth padded">
-              <h5 class="zero green">Example Layouts</h5>
-            </div>
-            <div class="three fourths padded">
-              <h5 class="zero blue">Documentation</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="one fourth pad-left pad-right">
+            <div class="one small-tablet fourth padded">
+              <h5 class="green">Example Layouts</h5>
               <ul class="unstyled">
                 <li><a href="./layout-a.html">Web Page</a></li>
                 <li><a href="./layout-b.html">Image Gallery</a></li>
                 <li><a href="./layout-c.html">Ecommerce Page</a></li>
               </ul>
             </div>
-            <div class="three fourths pad-left pad-right">
-              <ul class="unstyled three-column">
+            <div class="three small-tablet fourths padded">
+              <h5 class="blue">Documentation</h5>
+              <ul class="unstyled three-column two-column-mobile">
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
