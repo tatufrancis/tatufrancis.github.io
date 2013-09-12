@@ -75,7 +75,6 @@
     touchBindings = function() {
       $('body').on('click', '.nav li[role="menu"] > a, .nav li[role="menu"] > button', function(e) {
         var list, menu;
-        console.log($(this));
         list = $(this).siblings('ul');
         menu = $(this).parent('[role="menu"]');
         if (list.attr('aria-expanded') !== 'true') {

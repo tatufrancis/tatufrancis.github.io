@@ -20,7 +20,6 @@
         'aria-expanded': 'false',
         'aria-hidden': 'true'
       });
-      console.log($('.dropdown').children('ul'));
       $target.attr('aria-pressed', ($target.attr('aria-pressed') === 'true' ? 'false' : 'true'));
       return $target.children('ul').attr({
         'aria-expanded': ($target.attr('aria-pressed') === 'true' ? 'true' : 'false'),
