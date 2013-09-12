@@ -17,7 +17,6 @@ $ ->
     $('.dropdown').children('ul').attr
       'aria-expanded': 'false'
       'aria-hidden': 'true'
-    console.log $('.dropdown').children('ul')
     $target.attr('aria-pressed', (if $target.attr('aria-pressed') == 'true' then 'false' else 'true'))
     $target.children('ul').attr
       'aria-expanded': (if $target.attr('aria-pressed') == 'true' then 'true' else 'false')

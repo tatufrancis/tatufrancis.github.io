@@ -54,7 +54,6 @@ $ ->
 
   touchBindings = ->
     $('body').on 'click', '.nav li[role="menu"] > a, .nav li[role="menu"] > button', (e) ->
-      console.log $(@)
       list = $(@).siblings('ul')
       menu = $(@).parent('[role="menu"]')
       if list.attr('aria-expanded') != 'true'
