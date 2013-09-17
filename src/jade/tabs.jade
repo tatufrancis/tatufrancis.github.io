@@ -1,3 +1,21 @@
+mixin tab-structure
+  colors = ["f1c40f", "e67e22", "e74c3c", "f02475", "9b59b6", "383636", "34495e", "3498db", "1abc9c", "2ecc71"]
+  classes = ["yellow", "orange", "pink", "red", "purple", "charcoal", "asphalt", "blue", "turquoise", "green"]
+  ul(role='tablist')
+    each color, i in colors
+      tab = i+1
+      li(role='tab', aria-controls='#tab#{tab}') Tab #{tab}
+  each color, i in classes
+    tab = i+1
+    div(id='tab#{tab}', role='tabpanel')
+      h1
+        | This is the content of tab 
+        span(style='display:inline-block;padding:0 0.3em;border-radius:4px;color:#fff;background:##{colors[i]};') panel #{tab}
+      .pull-right.pull-none-small-tablet.gap-left.no-gap-small-tablet.align-center
+        img(src='http://placehold.it/520x300/#{colors[i]}/ffffff')
+      p.gap-top-small-tablet Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 extends template
 
 block title
@@ -5,66 +23,73 @@ block title
 
 block content
   .container
-    .pad-left.pad-right
-      h2.AverageSans Tabs
-      .tabs
-        ul
-          li
-            a.active(href='#content-1') Tab 1
-          li
-            a(href='#content-2') Tab 2
-          li
-            a(href='#content-3') Tab 3
-          li
-            a.disabled(href='#content-4', tabindex='-1') Disabled Tab
-          li.pull-right
-            a(href='#content-6') Right 2
-          li.pull-right
-            a(href='#content-5') Right 1
-        #content-1.active
-          h1 Tab 1
+    .padded
+      .row
+        .three.fifths.bounceInRight.animated
+          h1.zero.museo-slab Tabs
+          p.quicksand
+            | Accessible, responsive tab panels that collapse into accordions at 
+            a(href='breakpoints.html') targeted breakpoints
+        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+          p.quicksand Component Usage Example 9 of 14
           p
-            | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-        #content-2
-          h1 Tab 2
-          ul
-            li
-              | Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-            li
-              | Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-            li
-              | Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
-            li
-              | Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
-        #content-3
-          h1 Tab 3
-          dl
-            dt Definition list
-            dd
-              | Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            dt Lorem ipsum dolor sit amet
-            dd
-              | Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        #content-4
-          h1 Tab 4
-          p
-            | You should not be able to get to this content, because the tabs has been disabled.
-        #content-5
-          h1 Tab 5
-          h3 The tab for this content is aligned to the right.
-          ul
-            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            li Aliquam tincidunt mauris eu risus.
-            li Vestibulum auctor dapibus neque.
-        #content-6
-          h1 Tab 6
-          h3 The tab for this content is aligned to the right as well.
-          ul
-            li
-              | Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-            li
-              | Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-            li
-              | Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
-            li
-              | Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
+            a.blue.button(href='tables.html', rel='prev')
+              | Back
+            | 
+            a.green.button(href='forms.html', rel='next')
+              | Next: Forms
+    hr
+    .row
+      .one.whole.padded
+        .bounceInLeft.animated
+          .row
+            .one.whole.padded
+              .tabs.ipad
+                +tab-structure()
+              pre.gap-top(data-lang='html')
+                | <div class="tabs ipad">
+                |   <ul role="tablist">
+                |     <li role="tab" aria-controls="#tab1">Tab 1</li>
+                |     <li role="tab" aria-controls="#tab2">Tab 2</li>
+                |     <li role="tab" aria-controls="#tab3">Tab 3</li>
+                |     <li role="tab" aria-controls="#tab4">Tab 4</li>
+                |     <li role="tab" aria-controls="#tab5">Tab 5</li>
+                |   </ul>
+                |   <div id="tab1" role="tabpanel">
+                |     <h1>This is the content of tab <span class="blue">panel 1</span></h1>
+                |     <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center"><img src="http://placehold.it/520x300/3498db/ffffff"></div>
+                |     <p class="gap-top-small-tablet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |   </div>
+                |   <div id="tab2" role="tabpanel">
+                |     <h1>This is the content of tab <span class="red">panel 2</span></h1>
+                |     <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center"><img src="http://placehold.it/520x300/e74c3c/ffffff"></div>
+                |     <p class="gap-top-small-tablet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |   </div>
+                |   <div id="tab3" role="tabpanel">
+                |     <h1>This is the content of tab <span class="purple">panel 3</span></h1>
+                |     <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center"><img src="http://placehold.it/520x300/9b59b6/ffffff"></div>
+                |     <p class="gap-top-small-tablet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |   </div>
+                |   <div id="tab4" role="tabpanel">
+                |     <h1>This is the content of tab <span class="green">panel 4</span></h1>
+                |     <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center"><img src="http://placehold.it/520x300/2ecc71/ffffff"></div>
+                |     <p class="gap-top-small-tablet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |   </div>
+                |   <div id="tab5" role="tabpanel">
+                |     <h1>This is the content of tab <span class="orange">panel 5</span></h1>
+                |     <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center"><img src="http://placehold.it/520x300/e67e22/ffffff"></div>
+                |     <p class="gap-top-small-tablet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                |   </div></div>
+                | </div>
+          hr
+          br
+          h4 Vertical Tabs
+          .row
+            .one.whole.padded
+              .tabs.vertical.ipad
+                +tab-structure()

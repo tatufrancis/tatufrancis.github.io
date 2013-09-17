@@ -4,7 +4,7 @@ css_dir = "css"
 sass_dir = "src/scss"
 images_dir = "images"
 javascripts_dir = "js"
-fonts_dir = "font"
+fonts_dir = "fonts"
 
 output_style = :expanded
 environment = :development

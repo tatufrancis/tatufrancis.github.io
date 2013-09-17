@@ -3,7 +3,18 @@
 //          Last Updated:2013-8-9
 // =============================================
 
+$spin-animations:     true !default;
+$spin-helpers:        "spin" "spin-once" "spin-twice" "spin-thrice"
+                      "spin-fast" "spin-fast-once" "spin-fast-twice" "spin-fast-thrice"
+                      "spin-slow" "spin-slow-once" "spin-slow-twice" "spin-slow-thrice" !default;
 
+@mixin animation($animation: spin, $count: infinite, $speed: 2s, $easing: linear) {
+  animation: $animation $speed $easing;
+  animation-iteration-count: $count;
+}
+@mixin spin($count: infinite, $speed: 2s) {
+  @include animation(spin, $count, $speed);
+}
 
 @mixin _spin                      { @include _inline; @include spin; }
 @mixin _spin-once                 { @include _inline; @include spin(1); }
@@ -39,6 +50,8 @@
   }
 
   @for $i from 1 through length($spin-helpers) {
-    .#{nth($spin-helpers, $i)} { @extend %#{nth($spin-helpers, $i)}; }
+    .#{nth($spin-helpers, $i)} {
+      @extend %#{nth($spin-helpers, $i)};
+    }
   }
 }

@@ -1,3 +1,6 @@
+$shake-animations: true !default;
+
+
 @if $shake-animations {
 
   @keyframes shake {

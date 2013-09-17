@@ -11,7 +11,7 @@
       $row = $(this);
       tallest = 0;
       collapsed = false;
-      $row.children('*').each(function(i) {
+      $row.children().each(function(i) {
         var $this;
         $this = $(this);
         $this.css('minHeight', '1px');
@@ -26,7 +26,7 @@
         }
       });
       if (!collapsed) {
-        return $row.children('*').css('min-height', tallest);
+        return $row.children().css('min-height', tallest);
       }
     });
   };

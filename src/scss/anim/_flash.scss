@@ -1,3 +1,6 @@
+$flash-animations: true !default;
+
+
 @if $flash-animations {
 
   @keyframes flash {

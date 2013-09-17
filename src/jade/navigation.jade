@@ -1,3 +1,24 @@
+mixin nav-structure
+  ul(role='menubar')
+    li
+      button Nav Item 1
+    li.menu(role='menu')
+      button Nav Menu 1
+      ul
+        li
+          button Menu Item 1
+        li.menu(role='menu')
+          button Sub Menu 1
+          ul
+            li
+              button Sub Menu Item 1
+            li
+              button Sub Menu Item 2
+        li
+          button Menu Item 2
+    li
+      button Nav Item 3
+
 extends template
 
 block title
@@ -5,203 +26,102 @@ block title
 
 block content
   .container
-    .pad-left.pad-right
-      h1.AverageSans.zero Navigation
-      p Common navigation styles to help you build faster, better products and stay focused on what's important.
+    .padded
+      .row
+        .three.fifths.bounceInRight.animated
+          h1.zero.museo-slab Navigation Bars
+          p.quicksand Responsive navigation created by 
+            a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
+        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+          p.quicksand Component Usage Example 4 of 14
+          p
+            a.blue.button(href='typography.html', rel='prev')
+              | Back
+            | 
+            a.green.button(href='buttons.html', rel='next')
+              | Next: Buttons
+    hr
     .row
       .one.whole.padded
-        h2 Horizontal Grid Navigation (grid)
-        nav.small-tablet.nav
-          ul.row
-            li.one.small-tablet.fourth
-              a(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-            li.menu.one.small-tablet.fourth
-              a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-              ul
-                li
-                  a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-                li
-                  a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-                li
-                  a.disabled(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-                li
-                  a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li.one.small-tablet.fourth
-              a.disabled(href='#nowhere', title='Praesent dapibus, neque id cursus faucibus') Praesent
-            li.one.small-tablet.fourth
-              a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-        hr
-        h2 Horizontal "Hamburger" Grid Navigation (menu + grid)
-        nav.small-tablet.menu.nav
-          ul.row
-            li.one.small-tablet.fourth
-              a(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-            li.menu.one.small-tablet.fourth
-              a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-              ul
-                li
-                  a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-                li
-                  a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-                li
-                  a.disabled(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-                li
-                  a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li.one.small-tablet.fourth
-              a.disabled(href='#nowhere', title='Praesent dapibus, neque id cursus faucibus') Praesent
-            li.one.small-tablet.fourth
-              a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-        hr
-        h2 Horizontal Navigation (inline)
-        nav.inline.nav
-          ul
-            li
-              a(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-            li
-              a.disabled(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-            li.menu
-              a(href='#nowhere', title='Praesent dapibus, neque id cursus faucibus') Praesent
-              ul
-                li
-                  a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-                li
-                  a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-                li
-                  a.disabled(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-                li
-                  a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li
-              a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-        hr
-        h2 Horizontal "Hamburger" Navigation (inline + menu)
-        nav.inline.menu.nav
-          ul
-            li
-              a(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-            li
-              a.disabled(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-            li.menu
-              a(href='#nowhere', title='Praesent dapibus, neque id cursus faucibus') Praesent
-              ul
-                li
-                  a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-                li
-                  a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-                li
-                  a.disabled(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-                li
-                  a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li
-              a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-        hr
-        h2 Vertical Navigation
-        p
-        nav.nav
-          ul
-            li
-              a(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-            li
-              a.disabled(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-            li
-              a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li.menu
-              a(href='#nowhere', title='Praesent dapibus, neque id cursus faucibus') Praesent
-              ul
-                li
-                  a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-                li
-                  a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-                li
-                  a.disabled(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-                li
-                  a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li
-              a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-        hr
-        h2 Vertical "Hamburger" Navigation (menu)
-        p
-        nav.menu.nav
-          ul
-            li
-              a(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-            li
-              a.disabled(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-            li
-              a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li.menu
-              a(href='#nowhere', title='Praesent dapibus, neque id cursus faucibus') Praesent
-              ul
-                li
-                  a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-                li
-                  a(href='#nowhere', title='Aliquam tincidunt mauris eu risus') Aliquam
-                li
-                  a.disabled(href='#nowhere', title='Lorum ipsum dolor sit amet') Lorem
-                li
-                  a(href='#nowhere', title='Morbi in sem quis dui placerat ornare') Morbi
-            li
-              a(href='#nowhere', title='Pellentesque fermentum dolor') Pellentesque
-        hr
-        h2 Dropdown Button
-        .dropdown
-          button Dropdown Menu Button
-          ul
-            li
-              a(href='#')
-                i.icon-home
-                |  Example Menu Item 1
-            li
-              a.disabled(href='#')
-                i.icon-envelope-alt
-                |  Example Menu Item 2
-            hr
-            li
-              a(href='#')
-                i.icon-heart
-                |  Seperated Menu Item
-        hr
-        h2 Responsive Pagination
-        p
-        nav.pagination.align-center
-          ul
-            | <li class="prev"><a href="#">&laquo;</a></li
-            | ><li class="first"><a href="#">1</a></li
-            | ><li><a href="#">2</a></li
-            | ><li><a href="#">3</a></li
-            | ><li><a href="#">4</a></li
-            | ><li><a href="#">5</a></li
-            | ><li><a href="#">6</a></li
-            | ><li><a href="#">7</a></li
-            | ><li><a href="#">8</a></li
-            | ><li><a href="#">9</a></li
-            | ><li><a href="#">10</a></li
-            | ><li><a href="#">11</a></li
-            | ><li><a href="#">12</a></li
-            | ><li><a href="#">13</a></li
-            | ><li><a href="#">14</a></li
-            | ><li><a href="#">15</a></li
-            | ><li><a href="#">16</a></li
-            | ><li><a href="#">17</a></li
-            | ><li><a href="#">18</a></li
-            | ><li class="active"><a href="#">19</a></li
-            | ><li><a href="#">20</a></li
-            | ><li><a href="#">21</a></li
-            | ><li><a href="#">22</a></li
-            | ><li><a href="#">23</a></li
-            | ><li><a href="#">24</a></li
-            | ><li><a href="#">25</a></li
-            | ><li><a href="#">26</a></li
-            | ><li><a href="#">27</a></li
-            | ><li><a href="#">28</a></li
-            | ><li><a href="#">29</a></li
-            | ><li><a href="#">30</a></li
-            | ><li><a href="#">31</a></li
-            | ><li><a href="#">32</a></li
-            | ><li><a href="#">33</a></li
-            | ><li><a href="#">34</a></li
-            | ><li><a href="#">35</a></li
-            | ><li><a href="#">36</a></li
-            | ><li><a href="#">37</a></li
-            | ><li><a href="#">38</a></li
-            | ><li class="last"><a href="#">39</a></li
-            | ><li class="next"><a href="#">&raquo;</a></li>
+        .bounceInLeft.animated
+          h4 Target Breakpoints
+          .row
+            .one.whole.padded
+              h4 iPad
+              nav.nav(title='iPad Menu', role='navigation')
+                +nav-structure()
+              br
+              pre(data-lang='html')
+                | <nav class="nav" title="iPad Menu">
+                |   <ul>
+                |     <li><button>Nav Item 1</button></li>
+                |     <li><button>Nav Menu 1</button>
+                |       <ul>
+                |         <li><button>Menu Item 1</button></li>
+                |         <li><button>Sub Menu 1</button>
+                |           <ul>
+                |             <li><button>Sub Menu Item 1</button></li>
+                |             <li><button>Sub Menu Item 2</button></li>
+                |           </ul>
+                |         </li>
+                |         <li><button>Menu Item 2</button></li>
+                |       </ul>
+                |     </li>
+                |     <li><button>Nav Item 3</button></li>
+                |   </ul>
+                | </nav>
+          .row
+            .one.whole.padded
+              h4 Small Tablet
+              nav.nav.small-tablet(title='Small Tablet Menu', role='navigation')
+                +nav-structure()
+              br
+              pre(data-lang='html')
+                | <nav class="nav small-tablet" title="Small Tablet Menu">...</nav>
+          .row
+            .one.whole.padded
+              h4 Mobile
+              nav.nav.mobile(title='Mobile Menu', role='navigation')
+                +nav-structure()
+              br
+              pre(data-lang='html')
+                | <nav class="nav mobile" title="Mobile Menu">...</nav>
+        br
+        h4 Colors
+        .row
+          .one.third.padded
+            nav.nav.yellow(role='navigation')
+              +nav-structure()
+          .one.third.padded
+            nav.nav.orange(role='navigation')
+              +nav-structure()
+          .one.third.padded
+            nav.nav.red(role='navigation')
+              +nav-structure()
+        br
+        .row
+          .one.third.padded
+            nav.nav.pink(role='navigation')
+              +nav-structure()
+          .one.third.padded
+            nav.nav.purple(role='navigation')
+              +nav-structure()
+          .one.third.padded
+            nav.nav.asphalt(role='navigation')
+              +nav-structure()
+        br
+        .row
+          .one.third.padded
+            nav.nav.blue(role='navigation')
+              +nav-structure()
+          .one.third.padded
+            nav.nav.turquoise(role='navigation')
+              +nav-structure()
+          .one.third.padded
+            nav.nav.green(role='navigation')
+              +nav-structure()
+        br
+        .row
+          .one.third.padded
+            nav.nav.charcoal(role='navigation')
+              +nav-structure()

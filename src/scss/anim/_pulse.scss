@@ -1,3 +1,6 @@
+$pulse-animations: true !default;
+
+
 @if $pulse-animations {
 
   @keyframes pulse {

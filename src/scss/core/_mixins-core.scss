@@ -1,9 +1,9 @@
 // =============================================
 //              Global Mixins
-//          Last Updated:2013-4-24
+//          Last Updated:2013-8-16
 // =============================================
 
-
+$font-family: Helvetica, Arial, Geneva, sans-serif !default;
 
 
 ///////////////////////
@@ -121,27 +121,29 @@
       $color: $warning-color;
     }@else if $state == "error" {
       $color: $error-color;
+    }@else if $state == "question" {
+      $color: $question-color;
     }
   }
-  color: lighten($color, 35%);
+  color: lighten($color, 25%);
   @if $mode != "textOnly" {
   background: lighten($color, 15%);
-  border-color: $color;
+  border-color: lighten($color, 10%);
   }
   @if $state == "disabled" {
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
-    &:hover, &:focus, &:visited {
-      color: lighten($color, 35%);
-      @if $mode != "textOnly" {
-      background: lighten($color, 15%);
-      border-color: $color;
-      }
-      cursor: not-allowed;
-      text-decoration: none;
-      outline: none;
-    }
+    // &:hover, &:focus, &:visited {
+    //   color: lighten($color, 35%);
+    //   @if $mode != "textOnly" {
+    //   background: lighten($color, 15%);
+    //   border-color: $color;
+    //   }
+    //   cursor: not-allowed;
+    //   text-decoration: none;
+    //   outline: none;
+    // }
   }
 }
 
@@ -158,16 +160,6 @@
     @include border-radius($radius);
     *behavior: url($PIE_path);  // IE 6-7  -- Thank Jason for these polyfills for legacy IE browsers: http://css3pie.com/
   }
-}
-
-// animations
-@mixin animation($animation: spin, $count: infinite, $speed: 2s, $easing: linear) {
-  animation: $animation $speed $easing;
-  animation-iteration-count: $count;
-}
-// deprecated, use animation() now instead
-@mixin spin($count: infinite, $speed: 2s) {
-  @include animation(spin, $count, $speed);
 }
 
 

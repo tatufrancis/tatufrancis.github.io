@@ -1,9 +1,9 @@
 // =============================================
 //               Small Tablet
-//          Last Updated:2013-6-25
+//          Last Updated:2013-8-16
 // =============================================
 
-
+$responsive: true !default;
 
 
 @mixin small-tablet {
@@ -104,10 +104,10 @@
         .inline-small-tablet          { @include _inline; }
         .block-small-tablet           { @include _block; }
         .clear-small-tablet           { @include _clear; }
-        .disabled-small-tablet        { @include _disabled; }
         .center-small-tablet          { @include _center; }
         .pull-right-small-tablet      { @include _pull-right; }
         .pull-left-small-tablet       { @include _pull-left; }
+        .pull-none-small-tablet       { @include _pull-none; }
       }
       @if $border-classes {
         .bordered-small-tablet        { @include _bordered; }
@@ -127,11 +127,20 @@
       }
       @if $rotation-classes {
         .rotate-90-small-tablet       { @include _rotate-90; }
-        .rotate-180-small-tablet      { @include _rotate-180; }
-        .rotate-270-small-tablet      { @include _rotate-270; }
         .rotate-90-ctr-small-tablet   { @include _rotate-90-ctr; }
+        .rotate-180-small-tablet      { @include _rotate-180; }
         .rotate-180-ctr-small-tablet  { @include _rotate-180-ctr; }
+        .rotate-270-small-tablet      { @include _rotate-270; }
         .rotate-270-ctr-small-tablet  { @include _rotate-270-ctr; }
+        .rotate-360-small-tablet      { @include _rotate-360; }
+        .rotate-360-ctr-small-tablet  { @include _rotate-360-ctr; }
+      }
+      @if $multi-column-classes {
+        @for $i from 1 through length($multi-column-names) {
+          .#{nth($multi-column-names, $i)}-small-tablet, .#{nth($multi-column-names, $i)}s-small-tablet {
+            @include _multi-column($i);
+          }
+        }
       }
       @content;
     }
@@ -144,179 +153,10 @@
 ///////////////////////
 
 @if $responsive {
-
   @include small-tablet {
-    %nav-not-pagination {
-      width:100%;
-      ul, ul.row {
-        li {
-          display:block;
-          width:100% !important;
-          &:first-child {
-            > a {
-              @include rounded($default-radius $default-radius 0 0);
-            }
-          }
-          &:last-child {
-            > a {
-              @include rounded(0 0 $default-radius $default-radius);
-            }
-          }
-          &:only-child {
-            > a {
-              @include rounded($default-radius);
-            }
-          }
-          a {
-            border:none;
-            border-top:1px solid $button-active !important;
-          }
-          ul {
-            position:static !important;
-            li {
-              a {
-                @include rounded(0);
-              }
-              &:first-child,
-              &:last-child,
-              &:only-child {
-                a {
-                  @include rounded(0);
-                }
-              }
-            }
-          }
-          &:first-child {
-            a {
-              @include rounded($default-radius $default-radius 0 0);
-            }
-          }
-          &:last-child {
-            a {
-              @include rounded(0 0 $default-radius $default-radius);
-            }
-            ul {
-              li {
-                a {
-                  @include rounded(0 0 0 0 !important);
-                }
-                &:last-child {
-                  a {
-                    @include rounded(0 0 $default-radius $default-radius !important);
-                  }
-                }
-              }
-            }
-          }
-          &:only-child {
-            a {
-              @include rounded($default-radius);
-            }
-          }
-        }
-      }
-    }
-    // hamburger menus
-    %nav-menu-not-pagination {
-      display:block;
-      float:none;
-      &:before {
-        content:attr(data-label);
-        float:left;
-        color:$button-text;
-        line-height:2.2;
-      }
-      background-color:$button-color;
-      padding:$gutter;
-      padding-bottom:0;
-      @include rounded($default-radius);
-      .menu-toggle {
-        display:inline-block !important;
-        float:right;
-        margin-bottom:$gutter;
-      }
-      > ul, > ul.row {
-        display:block !important;
-        overflow:hidden;
-        max-height:0;
-        width:auto;
-        margin:0 (-$gutter);
-        clear:both;
-        @include transition(all 0.2s ease);
-        li {
-          a {
-            border:none;
-            border-top:1px solid $button-active;
-            &:first-child, &:last-child {
-              @include rounded(0);
-            }
-            &:hover, &:focus {
-              border:none;
-              border-top:1px solid $button-active;
-            }
-          }
-          &:last-child {
-            a {
-              @include rounded(0 0 $default-radius $default-radius !important);
-            }
-          }
-          ul {
-            position:static;
-          }
-        }
-      }
-      &.on {
-        > ul {
-          max-height:1000px;
-        }
-      }
-    }
-    %normal-tabs {
-      > ul {
-        li {
-          float:none;
-          width:100%;
-          margin:0;
-          a {
-            @include rounded(0);
-            border-bottom:none;
-            &:before, &:after {
-              display:none !important;
-            }
-          }
-          &:first-child a {
-            @include rounded($default-radius $default-radius 0 0);
-          }
-        }
-      }
-    }
-
-    @if $nav-tags {
-      nav:not(.pagination) {
-        @extend %nav-not-pagination;
-      }
-
-      @if $nav-classes {
-        nav.inline {
-          @extend %nav-not-pagination;
-        }
-        nav.menu {
-          @extend %nav-menu-not-pagination;
-        }
-      }
-    }
-    @if $nav-classes {
-      .nav, .nav.inline {
-        @extend %nav-not-pagination;
-      }
-      .nav.menu {
-        @extend %nav-menu-not-pagination;
-      }
-    }
-    @if $tab-classes {
-      .tabs:not(.small-tablet):not(.mobile):not(.vertical) {
-        @extend %normal-tabs;
-      }
+    // do not remove -- required for small-tablet helpers
+    @if $navigation-classes {
+      @include hamburger-mode(":not(.mobile)");
     }
   }
 }

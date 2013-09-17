@@ -62,7 +62,6 @@ class ResponsiveTable
     #   fontSize = $(@).width() / obj.compression
     #   fontSize = Math.min(obj.maxFontSize, fontSize)
     #   fontSize = Math.max(obj.minFontSize, fontSize)
-    #   console.log fontSize
     #   $(@).css('font-size', fontSize)
 
   adjustOnLoad: ->

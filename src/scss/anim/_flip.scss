@@ -1,3 +1,6 @@
+$flip-animations: true !default;
+
+
 @if $flip-animations {
 
   @keyframes flip {

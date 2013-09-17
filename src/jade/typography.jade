@@ -5,243 +5,674 @@ block title
 
 block content
   .container
-    .pad-left.pad-right
-      h1.AverageSans.zero Typography
-      p Example usage of typography elements such as headings, paragraphs, lists, blockquotes, code and web fonts
+    .padded
+      .row
+        .three.fifths.bounceInRight.animated
+          h1.zero.museo-slab Typography
+          p.quicksand Headings, paragraphs, emphasizers, links, lists, web fonts, quotes, code, and colors
+        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+          p.quicksand Component Usage Example 3 of 14
+          p
+            a.blue.button(href='helpers.html', rel='prev')
+              | Back
+            | 
+            a.green.button(href='navigation.html', rel='next')
+              | Next: Navigation
+    hr
     .row
       .one.whole.padded
-        h4.AverageSans Text Elements
-        .row
-          .one.third.padded
-            h1 Heading 1
-            h2 Heading 2
-            h3 Heading 3
-            h4 Heading 4
-            h5 Heading 5
-            h6 Heading 6
-          .one.third.padded
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            p
-              | Paragraph with 
-              sup superscript
-            p
-              | Paragraph with 
-              sub subscript
-            p
-              | Paragraph with 
-              small small text
-            p
-              | Paragraph with 
-              big large text
-            p
-              | Paragraph with 
-              em emphasized text
-            p
-              | Paragraph with 
-              b bold text
-            p
-              | Paragraph with 
-              del deleted text
-            p
-              | Paragraph with 
-              abbr.tooltip(title='Abreviated') abbr
-              |  text
-          .one.third.padded
-            ul.unstyled
-              li Unstyled list item 1
-              li Unstyled list item 2
-            ol.unstyled
-              li Unstyled ordered list item 1
-              li Unstyled ordered list item 2
-            ul
-              li Normal list item 1
-              li Normal list item 2
-            ol
-              li Ordered list item 1
-              li Ordered list item 2
-            ul.list
-              li Styled list item 1
-              li Styled list item 2
-            ol.list
-              li Styled ordered list item 1
-              li Styled ordered list item 2
-        h4.AverageSans Colors
-        .row
-          .one.third.padded
-            b
-              span.yellow Yellow
-              br
-              span.orange Orange
-              br
-              span.red Red
-              br
-              span.pink Pink
-              br
-              span.purple Purple
-              br
-              span.asphalt Asphalt
-              br
-              span.blue Blue
-              br
-              span.turquoise Turquoise
-              br
-              span.green Green
-          .one.third.padded
-            ul
-              li.yellow Normal list item
-              li.orange Normal list item
-              li.red Normal list item
-              li.pink Normal list item
-              li.purple Normal list item
-              li.asphalt Normal list item
-              li.blue Normal list item
-              li.turquoise Normal list item
-              li.green Normal list item
-          .one.third.padded
-            ol
-              li.yellow Ordered list item
-              li.orange Ordered list item
-              li.red Ordered list item
-              li.pink Ordered list item
-              li.purple Ordered list item
-              li.asphalt Ordered list item
-              li.blue Ordered list item
-              li.turquoise Ordered list item
-              li.green Ordered list item
-        .row
-          .one.third.padded
-            b
-              span.info Info
-              br
-              span.alert Alert
-              br
-              span.warning Warning
-              br
-              span.error Error
-              br
-              span.success Success
-              br
-              span.disabled Disabled
-          .one.third.padded
-            ul.list
-              li.yellow Styled list item
-              li.orange Styled list item
-              li.red Styled list item
-              li.pink Styled list item
-              li.purple Styled list item
-              li.asphalt Styled list item
-              li.blue Styled list item
-              li.turquoise Styled list item
-              li.green Styled list item
-          .one.third.padded
-            ol.list
-              li.yellow Styled ordered list item
-              li.orange Styled ordered list item
-              li.red Styled ordered list item
-              li.pink Styled ordered list item
-              li.purple Styled ordered list item
-              li.asphalt Styled ordered list item
-              li.blue Styled ordered list item
-              li.turquoise Styled ordered list item
-              li.green Styled ordered list item
-        h4.AverageSans Links
-        .row
-          .one.third.padded
-            h1
-              a(href="#") Heading 1 link
-            h2
-              a(href="#") Heading 2 link
-            h3
-              a(href="#") Heading 3 link
-            h4
-              a(href="#") Heading 4 link
-            h5
-              a(href="#") Heading 5 link
-            h6
-              a(href="#") Heading 6 link
-          .one.third.padded
-            p
-              a(href="#") Paragraph link
-            p
-              a(href="#")
-                | Paragraph link with 
+        .bounceInLeft.animated
+          h4 Headings
+          .row
+            .one.third.padded
+              p Heading 1
+              h1 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            .one.third.padded
+              p Heading 2
+              h2 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            .one.third.padded
+              p Heading 3
+              h3 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          .row
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h1>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h1>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h2>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h3>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h3>
+          br
+          .row
+            .one.third.padded
+              p Heading 4
+              h4 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            .one.third.padded
+              p Heading 5
+              h5 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            .one.third.padded
+              p Heading 6
+              h6 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          .row
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h4>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h5>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h5>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h6>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h6>
+        hr
+        br
+        .bounceInRight.animated
+          h4 Paragraphs
+          .row
+            .one.whole.padded
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .row
+            .one.whole.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        hr
+        br
+        .bounceInLeft.animated
+          h4#link-types Semantic Link Types
+          .row
+            .one.fourth.padded
+              p
+                a(href='home.html') Normal Hyperlink
+              pre(data-lang='html')
+                | <a href="home.html">Normal Hyperlink</a>
+            .one.fourth.padded
+              p
+                a(href='#link-types') Anchor Link
+              pre(data-lang='html')
+                | <a href="#">Anchor Link</a>
+            .one.fourth.padded
+              p
+                a(href='https://google.com') Secure Link
+              pre(data-lang='html')
+                | <a href="https://google.com">Secure Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://google.com', target='_blank') New Window Link
+              pre(data-lang='html')
+                | <a href="http://google.com" target="_blank">New Window Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='view-source:http://google.com') View Source Link
+              pre(data-lang='html')
+                | <a href="view-source:http://google.com">View Source Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.gif') Image Link
+              pre(data-lang='html')
+                | <a href="example.gif">Image Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.pdf') PDF Document Link
+              pre(data-lang='html')
+                | <a href="example.pdf">PDF Document Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.doc') Word Document Link
+              pre(data-lang='html')
+                | <a href="example.doc">Word Document Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='example.txt') Text Document Link
+              pre(data-lang='html')
+                | <a href="example.txt">Text Document Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.md') Markdown Document Link
+              pre(data-lang='html')
+                | <a href="example.md">Markdown Document Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.zip') ZIP File Link
+              pre(data-lang='html')
+                | <a href="example.zip">ZIP File Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.exe') Executable File Link
+              pre(data-lang='html')
+                | <a href="example.exe">Executable File Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='home.html', rel='home') Home Link
+              pre(data-lang='html')
+                | <a href="home.html" rel="home">Home Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='search') Search Link
+              pre(data-lang='html')
+                | <a href="#" rel="search">Search Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='author') Author Link
+              pre(data-lang='html')
+                | <a href="#" rel="author">Author Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='help') Help Link
+              pre(data-lang='html')
+                | <a href="#" rel="help">Help Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='#', rel='tag') Tag Link
+              pre(data-lang='html')
+                | <a href="#" rel="tag">Tag Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='bookmark') Bookmark Link
+              pre(data-lang='html')
+                | <a href="#" rel="bookmark">Bookmark Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='prev') Previous Link
+              pre(data-lang='html')
+                | <a href="#" rel="prev">Previous Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='next') Next Link
+              pre(data-lang='html')
+                | <a href="#" rel="next">Next Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='#', rel='directory') Directory Link
+              pre(data-lang='html')
+                | <a href="#" rel="directory">Directory Link</a>
+            .one.fourth.padded
+              p
+                a(href='#', rel='payment') Payment Link
+              pre(data-lang='html')
+                | <a href="#" rel="payment">Payment Link</a>
+            .one.fourth.padded
+              p
+                a(href='mailto:user@example.com') Email Link
+              pre(data-lang='html')
+                | <a href="mailto:user@example.com">Email Link</a>
+            .one.fourth.padded
+              p
+                a(href='tel:5555551212') Telephone Link
+              pre(data-lang='html')
+                | <a href="tel:5555551212">Telephone Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='mailto:user@gmail.com') Gmail Link
+              pre(data-lang='html')
+                | <a href="mailto:user@gmail.com">Gmail Link</a>
+            .one.fourth.padded
+              p
+                a(href='skype:skypeusername') Skype Link
+              pre(data-lang='html')
+                | <a href="skype:skypeusername">Skype Link</a>
+            .one.fourth.padded
+              p
+                a(href='example.rss') RSS Link
+              pre(data-lang='html')
+                | <a href="example.rss">RSS Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://twitter.com') Twitter Link
+              pre(data-lang='html')
+                | <a href="twitter.com">Twitter Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://facebook.com') Facebook Link
+              pre(data-lang='html')
+                | <a href="facebook.com">Facebook Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://tumblr.com') Tumblr Link
+              pre(data-lang='html')
+                | <a href="http://tumblr.com">Tumblr Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://linkedin.com') LinkedIn Link
+              pre(data-lang='html')
+                | <a href="http://linkedin.com">LinkedIn Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://plus.google.com') Google Plus Link
+              pre(data-lang='html')
+                | <a href="http://plus.google.com">Google Plus Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://youtube.com') Youtube Link
+              pre(data-lang='html')
+                | <a href="http://youtube.com">Youtube Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://github.com') Github Link
+              pre(data-lang='html')
+                | <a href="http://github.com">Github Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://stackoverflow.com') Stack Overflow Link
+              pre(data-lang='html')
+                | <a href="http://stackoverflow.com">Stack Overflow Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://instagram.com') Instagram Link
+              pre(data-lang='html')
+                | <a href="http://instagram.com">Instagram Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://flickr.com') Flickr Link
+              pre(data-lang='html')
+                | <a href="http://flickr.com">Flickr Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://foursquare.com') Foursquare Link
+              pre(data-lang='html')
+                | <a href="http://foursquare.com">Foursquare Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://dribbble.com') Dribbble Link
+              pre(data-lang='html')
+                | <a href="http://dribbble.com">Dribbble Link</a>
+            .one.fourth.padded
+              p
+                a(href='http://dropbox.com') Dropbox Link
+              pre(data-lang='html')
+                | <a href="http://dropbox.com">Dropbox Link</a>
+          br
+          .row
+            .one.fourth.padded
+              p
+                a(href='http://trello.com') Trello Link
+              pre(data-lang='html')
+                | <a href="http://trello.com">Trello Link</a>
+        hr
+        br
+        .bounceInLeft.animated
+          h4 Emphasizers & Modifiers
+          .row
+            .one.fourth.padded
+              p
+                | Paragraph with 
                 sup superscript
-            p
-              a(href="#")
-                | Paragraph link with 
+            .one.fourth.padded
+              p
+                | Paragraph with 
                 sub subscript
-            p
-              a(href="#")
-                | Paragraph link with 
+            .one.fourth.padded
+              p
+                | Paragraph with 
                 small small text
-            p
-              a(href="#")
-                | Paragraph link with 
+            .one.fourth.padded
+              p
+                | Paragraph with 
                 big large text
-            p
-              a(href="#")
-                | Paragraph link with 
+          .row
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <sup>superscript</sup></p>
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <sub>subscript</sub></p>
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <small>small text</small></p>
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <big>large text</big></p>
+          br
+          .row
+            .one.fourth.padded
+              p
+                | Paragraph with 
                 em emphasized text
-            p
-              a(href="#")
-                | Paragraph link with 
+            .one.fourth.padded
+              p
+                | Paragraph with 
                 b bold text
-          .one.third.padded
-            ul
-              li
-                a(href="#") Normal list link item 1
-              li
-                a(href="#") Normal list link item 2
-            ol
-              li
-                a(href="#") Ordered list link item 1
-              li
-                a(href="#") Ordered list link item 2
-            ul.list
-              li
-                a(href="#") Styled list link item 1
-              li
-                a(href="#") Styled list link item 2
-            ol.list
-              li
-                a(href="#") Styled ordered link list item 1
-              li
-                a(href="#") Styled ordered link list item 2
+            .one.fourth.padded
+              p
+                | Paragraph with 
+                del deleted text
+            .one.fourth.padded
+              p
+                | Paragraph with 
+                abbr(title='Abreviated') abbr
+                |  text
+          .row
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <em>emphasized text</em></p>
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <b>bold text</b></p>
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <del>deleted text</del></p>
+            .one.fourth.pad-left.pad-right
+              pre(data-lang='html')
+                | <p>Paragraph with <abbr title="Abreviated">abbr</abbr> text</p>
         hr
         br
-        h2.AmericanTypewriter Web Fonts Usage
-        .row
-          .one.whole.padded
-            h5.AverageSans Average Sans webfont
-            h5.AmericanTypewriter American Typewriter webfont
+        .bounceInRight.animated
+          h4 Unordered Lists
+          .row
+            .one.third.padded
+              ul.unstyled
+                li Unstyled list item 1
+                li Unstyled list item 2
+            .one.third.padded
+              ul
+                li Normal list item 1
+                li Normal list item 2
+            .one.third.padded
+              ul.list
+                li Styled list item 1
+                li Styled list item 2
+          .row
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ul class="unstyled">
+                |   <li>Unstyled list item 1</li>
+                |   <li>Unstyled list item 2</li>
+                | </ul>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ul>
+                |   <li>Normal list item 1</li>
+                |   <li>Normal list item 2</li>
+                | </ul>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ul class="list">
+                |   <li>Styled list item 1</li>
+                |   <li>Styled list item 2</li>
+                | </ul>
         hr
         br
-        h2.AmericanTypewriter Quotes
-        blockquote
-          | A computer once beat me at chess, but it was no match for me at kick boxing.
-          cite
-            | Emo Phillips
-        br
-        h2.AmericanTypewriter Code
-        h4.AverageSans Blocks
-        pre
-          code
-            | $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;
-          code
-            | @for $i from 1 through length($names) {
-          code
-            |   .\#{nth($names, $i)} {
-          code
-            |     @extend %\#{nth($names, $i)};
-          code
-            |   }
-          code
-            | }
-        br
-        h4.AverageSans Inline
-        p
-          | This is some text with some
-          code inline code
-          | automatic
+        .bounceInLeft.animated
+          h4 Ordered Lists
+          .row
+            .one.third.padded
+              ol.unstyled
+                li Unstyled ordered list item 1
+                li Unstyled ordered list item 2
+            .one.third.padded
+              ol
+                li Ordered list item 1
+                li Ordered list item 2
+            .one.third.padded
+              ol.list
+                li Styled ordered list item 1
+                li Styled ordered list item 2
+          .row
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ol class="unstyled">
+                |   <li>Unstyled ordered list item 1</li>
+                |   <li>Unstyled ordered list item 2</li>
+                | </ol>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ol>
+                |   <li>Ordered list item 1</li>
+                |   <li>Ordered list item 2</li>
+                | </ol>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ol class="list">
+                |   <li>Styled ordered list item 1</li>
+                |   <li>Styled ordered list item 2</li>
+                | </ol>
         hr
         br
+        .bounceInRight.animated
+          h4 Checklists
+          .row
+            .one.third.padded
+              p Normal Checklist
+              ul.checklist
+                li Checklist item
+                li(aria-checked='true') Completed checklist item
+                li Checklist item
+                li Checklist item
+            .one.third.padded
+              p Large, Colored Checklist
+              ul.checklist.large.turquoise
+                li Checklist item
+                li(aria-checked='true') Completed checklist item
+                li Checklist item
+                li Checklist item
+            .one.third.padded
+              p Individually Colored Checklist Items
+              ul.checklist
+                li.blue Blue checklist item
+                li.red(aria-checked='true') Completed red checklist item
+                li.purple Purple checklist item
+                li.turquoise Turquoise checklist item
+          .row
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ul class="checklist">
+                |   <li>Checklist item</li>
+                |   <li aria-checked="true">Completed checklist item</li>
+                |   <li>Checklist item</li>
+                |   <li>Checklist item</li>
+                | </ul>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ul class="checklist large turquoise">
+                |   <li>Checklist item</li>
+                |   <li aria-checked="true">Completed checklist item</li>
+                |   <li>Checklist item</li>
+                |   <li>Checklist item</li>
+                | </ul>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <ul class="checklist">
+                |   <li class="blue">Blue checklist item</li>
+                |   <li aria-checked="true" class="red">Completed red checklist item</li>
+                |   <li class="purple">Purple checklist item</li>
+                |   <li class="turquoise">Turquoise checklist item</li>
+                | </ul>
+        hr
+        br
+        .bounceInLeft.animated
+          h4 Web Fonts
+          .row
+            .one.third.padded
+              h1.source-sans-pro Source Sans Pro
+            .one.third.padded
+              h1.museo-slab Museo Slab
+            .one.third.padded
+              h1.quicksand Quicksand
+          .row
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h1 class="source-sans-pro">Source Sans Pro</h1>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h1 class="museo-slab">Museo Slab</h1>
+            .one.third.pad-left.pad-right
+              pre(data-lang='html')
+                | <h1 class="quicksand">Quicksand</h1>
+        hr
+        br
+        .bounceInLeft.animated
+          h4 Quotations
+          .row
+            .one.whole.padded
+              p
+                | This is a sentence with an 
+                quote
+                  | inline quote
+                |  nested within it.
+              pre(data-lang='html')
+                | <p>This is a sentence with an <quote>inline quote</quote> nested within it.</p>
+        hr
+        br
+        .bounceInRight.animated
+          h4 Block Quotations & Cites
+          .row
+            .one.whole.padded
+              blockquote
+                | A computer once beat me at chess, but it was no match for me at kick boxing.
+                cite
+                  | Emo Phillips
+              br
+              pre(data-lang='html')
+                | <blockquote>
+                |   A computer once beat me at chess, but it was no match for me at kick boxing.
+                |   <cite>Emo Phillips</cite>
+                | </blockquote>
+        hr
+        br
+        .bounceInLeft.animated
+          h4 Code Snippets
+          .row
+            .one.whole.padded
+              p
+                | This is some text with some 
+                code inline code
+              pre(data-lang='html')
+                | <p>This is some text with some <code>inline code</code></p>
+        hr
+        br
+        .bounceInRight.animated
+          h4 Preformatted Code Blocks
+          .row
+            .one.whole.padded
+              code.block
+                pre
+                  | %code {
+                  |   @extend %inline-block, %monospace;
+                  |   &.block {
+                  |     @extend %block;
+                  |   }
+                  |   background: darken($background-color, 10%);
+                  |   padding: 0 0.3em;
+                  |   margin: 0 0.2em;
+                  |   font-weight: normal;
+                  |   line-height: inherit;
+                  | }
+              br
+              pre(data-lang='html')
+                | <code class="block">
+                |   <pre>%code {
+                |   @extend %inline-block, %monospace;
+                |   &.block {
+                |     @extend %block;
+                |   }
+                |   background: darken($background-color, 10%);
+                |   padding: 0 0.3em;
+                |   margin: 0 0.2em;
+                |   font-weight: normal;
+                |   line-height: inherit;
+                | }</pre>
+                | </code>
+        hr
+        br
+        .bounceInUp.animated
+          h4 Colors & States
+          .row
+            .two.eighths.padded
+              .row
+                .one.mobile.half
+                  p
+                    span.yellow .yellow
+                    br
+                    span.orange .orange
+                    br
+                    span.red .red
+                    br
+                    span.pink .pink
+                    br
+                    span.purple .purple
+                    br
+                    span.asphalt .asphalt
+                    br
+                    span.blue .blue
+                    br
+                    span.turquoise .turquoise
+                    br
+                    span.green .green
+                    br
+                    span.charcoal .charcoal
+                .one.mobile.half
+                  p
+                    span.info .info
+                    br
+                    span.alert .alert
+                    br
+                    span.warning .warning
+                    br
+                    span.error .error
+                    br
+                    span.success .success
+                    br
+                    span.question .question
+            .six.eighths
+              .row
+                .two.fifths.padded
+                  .row
+                    .one.mobile.half
+                      ul.list
+                        li.yellow .yellow list item
+                        li.orange .orange list item
+                        li.red .red list item
+                        li.pink .pink list item
+                        li.purple .purple list item
+                        li.asphalt .asphalt list item
+                        li.blue .blue list item
+                        li.turquoise .turquoise list item
+                        li.green .green list item
+                        li.charcoal .charcoal list item
+                    .one.mobile.half
+                      ul.list
+                        li.info .info list item
+                        li.alert .alert list item
+                        li.warning .warning list item
+                        li.error .error list item
+                        li.success .success list item
+                        li.question .question list item
+                .three.fifths.padded
+                  .row
+                    .one.mobile.half
+                      ol.list
+                        li.yellow .yellow ordered list item
+                        li.orange .orange ordered list item
+                        li.red .red ordered list item
+                        li.pink .pink ordered list item
+                        li.purple .purple ordered list item
+                        li.asphalt .asphalt ordered list item
+                        li.blue .blue ordered list item
+                        li.turquoise .turquoise ordered list item
+                        li.green .green ordered list item
+                        li.charcoal .charcoal ordered list item
+                    .one.mobile.half
+                      ol.list
+                        li.info .info ordered list item
+                        li.alert .alert ordered list item
+                        li.warning .warning ordered list item
+                        li.error .error ordered list item
+                        li.success .success ordered list item
+                        li.question .question ordered list item

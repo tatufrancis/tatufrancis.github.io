@@ -1,3 +1,6 @@
+$wobble-animations: true !default;
+
+
 @if $wobble-animations {
 
   @keyframes wobble {

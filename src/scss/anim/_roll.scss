@@ -1,3 +1,6 @@
+$roll-animations: true !default;
+
+
 @if $roll-animations {
 
   @keyframes rollIn {
