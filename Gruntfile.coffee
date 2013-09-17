@@ -19,6 +19,7 @@ module.exports = (grunt) ->
     jade:
       build:
         files:
+          'groundworkcss.html':            ['src/jade/groundworkcss.jade']
           'docs/home.html':                ['src/jade/home.jade']
           'docs/layout-a.html':            ['src/jade/layout-a.jade']
           'docs/layout-b.html':            ['src/jade/layout-b.jade']
