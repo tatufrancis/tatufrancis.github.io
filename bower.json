@@ -9,6 +9,7 @@
     "**/.*",
     "*.json",
     "*.rb",
+    "css/demo",
     "js/demo",
     "Gruntfile.coffee",
     "node_modules"
