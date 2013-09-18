@@ -32,7 +32,7 @@ $responsive:              true !default;
 }
 
 %row {
-  @extend %clear;
+  @include _clear;
   width: $one-whole;
 }
 

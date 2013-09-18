@@ -19,7 +19,8 @@ $default-radius:      4px !default;
 
 
 %navigation {
-  @extend %clear, %relative;
+  @extend %relative;
+  @include _clear;
   background: $nav-color;
   color: $nav-text;
   border: $border-thickness $border-style $nav-border-color;
