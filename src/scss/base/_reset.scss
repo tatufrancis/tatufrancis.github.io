@@ -90,4 +90,5 @@ $reset-elements:  "html" "body"
   table {
     @extend %table-elements;
   }
+  script { display: none !important; } // ensure embedded script tags don't mess up inline lists, etc.
 }
