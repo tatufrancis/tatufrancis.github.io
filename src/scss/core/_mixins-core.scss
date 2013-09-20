@@ -149,6 +149,112 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
 
 
 ///////////////////////
+//     Typography    //
+///////////////////////
+
+// multi-columns
+@mixin _multi-column($count: 2) {
+  column-count: $count;
+}
+
+
+///////////////////////
+//     Navigation    //
+///////////////////////
+
+// responsive navigation
+@mixin hamburger-mode($filters: "") {
+    .nav#{$filters} {
+      &:before {
+        float: left;
+        display: inline-block;
+        content: attr(title);
+        padding: 0.25em 0.5em;
+        font-weight: bold;
+      }
+      button.hamburger {
+        display: inline-block;
+        &:before {
+          @include icon-FontAwesome();
+          content: $icon-list;
+        }
+        &[aria-expanded="true"] {
+          &:before {
+            content: $icon-collapse-top;
+          }
+        }
+      }
+      > ul {
+        display: none;
+      }
+      > ul[aria-expanded="true"] {
+        display: block;
+      }
+      li {
+        float: none;
+        display: block;
+        ul {
+          position: static;
+        }
+        li {
+          a, button {
+            text-indent: $gutter;
+          }
+          li {
+            a, button {
+              text-indent: ($gutter * 2);
+            }
+          }
+        }
+        &[role="menu"] {
+          ul {
+            border: none;
+            a, button {
+              border-top: none;
+              border-bottom: $border-thickness $border-style $nav-border-color;
+            }
+          }
+          > a, > button {
+            &:after {
+              float: none;
+              content: $icon-caret-down;
+            }
+          }
+          &[aria-pressed="true"] {
+            > a, > button {
+              &:after {
+                content: $icon-caret-up;
+              }
+            }
+          }
+        }
+      }
+      a, button:not(.hamburger) {
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-bottom: $border-thickness $border-style $nav-border-color;
+      }
+      @for $i from 1 through length($modifier-name) {
+        &.#{nth($modifier-name, $i)} {
+          li ul a, li[role="menu"] ul a, a,
+          li ul button, li[role="menu"] ul button, button {
+            border-top: none;
+            border-bottom: $border-thickness $border-style darken(nth($modifier-code, $i), 5%);
+            @include rounded(0);
+          }
+        }
+      }
+    }
+    > ul li:last-child {
+      a, button {
+        border-bottom: none;
+      }
+    }
+}
+
+
+///////////////////////
 //    CSS3 helpers   //
 ///////////////////////
 

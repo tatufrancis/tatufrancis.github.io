@@ -67,10 +67,19 @@ html.no-js
   body
     header.padded
       .container
-        h2.logo
-          a(href='/', target='_parent')
-            img(src='../images/groundwork-logo.svg', alt='GroundworkCSS')
-            | GroundworkCSS 2
+        .row
+          .one.half
+            h2.logo
+              a(href='/', target='_parent')
+                img(src='../images/groundwork-logo.svg', alt='GroundworkCSS')
+                | GroundworkCSS 2
+          .one.half
+            p.small.double.pad-top.no-pad-small-tablet.align-right.align-left-small-tablet
+              a(href='https://github.com/groundworkcss/groundwork') Github Project
+              |  - Version 2.0.4
+              br
+              | Created & Maintained by 
+              a(href='http://twitter.com/ghepting') Gary Hepting
         nav.nav.gap-top(role='navigation')
           ul(role='menubar')
             li

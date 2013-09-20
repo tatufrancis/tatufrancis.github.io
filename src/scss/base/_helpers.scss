@@ -25,7 +25,7 @@ $layout-helpers:      "inline" "inline-block" "block"
 
 $typography-classes:  true !default;
 $typography-helpers:  "align-top" "align-right" "align-bottom" "align-left" "align-center" "justify"
-                      "truncate" !default;
+                      "truncate" "unstyled" !default;
 
 $border-classes:      true !default;
 $border-helpers:      "bordered" "border-right" "border-left" "border-top" "border-bottom" !default;
@@ -96,6 +96,9 @@ $transition-classes:  true !default;
 @mixin _medium                    { font-size:1em; }
 @mixin _large                     { font-size:1.5em; }
 
+@mixin _italic                    { font-style: italic; }
+@mixin _bold                      { font-weight: 900; }
+
 @mixin _zero                      { margin:0; padding:0; }
 
 @mixin _pull-right                { float:right; }
@@ -114,6 +117,8 @@ $transition-classes:  true !default;
 @mixin _align-left                { text-align:left; }
 @mixin _align-center              { text-align:center; }
 @mixin _justify                   { text-align:justify; }
+@mixin _unstyled                  { margin: 0; padding: 0; list-style: none; }
+
 
 @mixin _truncate                  { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 
@@ -248,6 +253,9 @@ $transition-classes:  true !default;
 %medium           { @include _medium; }
 %big, %large      { @include _large; }
 
+%em, %italic      { @include _italic; }
+%b, %bold, %strong{ @include _bold; }
+
 %zero             { @include _zero; }
 
 %pull-right       { @include _pull-right; }
@@ -266,6 +274,7 @@ $transition-classes:  true !default;
 %align-left       { @include _align-left; }
 %align-center     { @include _align-center; }
 %justify          { @include _justify; }
+%unstyled         { @extend %zero; list-style: none; }
 
 %truncate         { @include _truncate; }
 

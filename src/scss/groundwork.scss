@@ -4,18 +4,62 @@
 // ============================================
 
 
-// custom settings
-@import "settings";                   // customizable settings
+//---------- CUSTOM SETTINGS: ----------//
+@import "settings";         // customizable settings
 
-// core
-@import "core/all-core";              // constants, defaults, mixins, breakpoints, color palette
-@import "base/all-base";              // reset, globals, grid, flexbox, helpers
 
-// components
-@import "icons/all-icons";            // font awesome icons
-@import "type/all-type";              // typography, web fonts
-@import "ui/all-ui";                  // navigation, buttons, boxes, messages, tables, tabs, forms
-@import "anim/all-animations";        // animations
 
-// responsive adjustments
-@import "responsive/all-responsive";  // responsive (helpers, desktop, ipad, small-tablet, mobile)
+//-------- REQUIRED COMPONENTS: --------//
+@import "core/all-core";    // constants, defaults, mixins, breakpoints, color palette
+@import "base/all-base";    // reset, globals, grid, flexbox, helpers
+@import "icons/all-icons";  // font awesome icons
+
+
+
+//-------- OPTIONAL COMPONENTS: --------//
+
+// Typography
+@import "type/all-type";
+// individual typography modules
+// @import "type/link-type-icons";
+// @import "type/typography";
+// @import "type/webfonts";
+
+// UI
+@import "ui/all-ui";
+// individual UI modules
+// @import "ui/boxes";
+// @import "ui/buttons";
+// @import "ui/forms";
+// @import "ui/messages";
+// @import "ui/nav";
+// @import "ui/tables";
+// @import "ui/tabs";
+
+// Animations
+@import "anim/all-animations";
+// individual animation modules
+// @import "anim/bounce";
+// @import "anim/fade";
+// @import "anim/flash";
+// @import "anim/flip";
+// @import "anim/hinge";
+// @import "anim/lightspeed";
+// @import "anim/pulse";
+// @import "anim/roll";
+// @import "anim/rotate";
+// @import "anim/shake";
+// @import "anim/spin";
+// @import "anim/swing";
+// @import "anim/tada";
+// @import "anim/wiggle";
+// @import "anim/wobble";
+
+// Responsive Components
+@import "responsive/all-responsive";
+// individual responsive modules
+// @import "responsive/helpers-responsive";
+// @import "responsive/desktop";
+// @import "responsive/ipad";
+// @import "responsive/small-tablet";
+// @import "responsive/mobile";

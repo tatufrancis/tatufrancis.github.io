@@ -158,11 +158,6 @@ $placeholderText-fallback:  true !default;
   }
 }
 
-%unstyled {
-  @extend %zero;
-  list-style: none;
-}
-
 %ul-checklist {
   @extend %unstyled;
   margin-left: 0;
@@ -242,19 +237,10 @@ $placeholderText-fallback:  true !default;
   }
 }
 
-%small              { @include _small; }
-%medium             { @include _medium; }
-%big, %large        { @include _large; }
-%em, %italic        { font-style: italic; }
-%b, %bold, %strong  { font-weight: 900; }
 %sup                { @extend %relative, %small; top: -0.4em; }
 %sub                { @extend %relative, %small; top: 0.2em; }
 %monospace          { font-family: monospace; }
 %del, %strike       { text-decoration: line-through; }
-
-@mixin _multi-column($count: 2) {
-  column-count: $count;
-}
 
 %one-column {
   @include _multi-column(1);
