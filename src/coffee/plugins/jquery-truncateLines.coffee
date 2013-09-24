@@ -1,8 +1,9 @@
 ###
  *
- *  jQuery truncateLines by Gary Hepting - https://github.com/ghepting/jquery-truncate-lines
- *  
- *  Open source under the MIT License. 
+ *  jQuery TruncateLines by Gary Hepting
+ *  https://github.com/ghepting/jquery-truncate-lines
+ *
+ *  Open source under the MIT License.
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
@@ -18,8 +19,8 @@ class TruncateLines
     @index = truncateIndex++
     @text = $(@el).text()
     $(@el).attr('data-text',@text)
-    @words = @text.trim().split(" ")                # store words in array
-    @lines = parseInt($(@el).attr('data-truncate'))         # store maximum number of lines
+    @words = @text.trim().split(" ")
+    @lines = parseInt($(@el).attr('data-truncate'))
     @truncate()
     @adjustOnResize()
 
@@ -33,26 +34,26 @@ class TruncateLines
       .attr('data-truncated', 'false')
 
   measure: ->
-    @reset()                                              # reset element state
-    $(@el).html(".")                                      # set element to have single line
+    @reset()
+    $(@el).html(".")
     @singleLineHeight = $(@el).outerHeight()
     i = 1
-    while i++ < @lines                                    # set element to have the maximum number of lines
+    while i++ < @lines
       $(@el).append("<br>.")
-    @maxLinesHeight = $(@el).outerHeight()                # store the height of the element when it is at the max number of lines
+    @maxLinesHeight = $(@el).outerHeight()
 
   empty: ->
-    $(@el).html("")                                       # clear the element
+    $(@el).html("")
 
   setContent: ->
-    @reset()                                              # reset element state
-    truncated = false                                     # reset truncated state
+    @reset()
+    truncated = false
     @addWords(@words.length)
     if @tooBig()
       # binary build-up the string -- Thanks @BananaNeil  :]
       @addNumberWordsThatFit()
-      $(@el).css('max-height', @maxLinesHeight + 'px')    # set the max height
-      $(@el).attr('data-truncated', true)            # set element truncation state
+      $(@el).css('max-height', @maxLinesHeight + 'px')
+      $(@el).attr('data-truncated', true)
 
   addNumberWordsThatFit: ->
     cant = @words.length
@@ -66,7 +67,7 @@ class TruncateLines
         can = can + mid
       mid = Math.floor(mid/2) || 1
     @addWords(can)
-    $(@el).html( @trimTrailingPunctuation( $(@el).html() ) ) # trim trailing punctuation
+    $(@el).html( @trimTrailingPunctuation( $(@el).html() ) )
 
   addWords: (num) ->
     $(@el).html(@words.slice(0,num).join(" "))
@@ -92,8 +93,11 @@ class TruncateLines
   $.fn.truncateLines = ->
 
     unless truncateInitialized
-      # add CSS for the ellipsis (just so there are no additional file dependencies)
-      $('head').append('<style type="text/css"> [data-truncated="true"] { overflow: hidden; } [data-truncated="true"]:after { content: "..."; position: absolute; } </style>')
+      $('head').append('
+<style type="text/css">
+  [data-truncated="true"] { overflow: hidden; }
+  [data-truncated="true"]:after { content: "..."; position: absolute; }
+</style>')
 
     @each ->
       truncatedLineElements.push( new TruncateLines(@) )
@@ -102,18 +106,3 @@ class TruncateLines
 
 $(window).load ->
   $("[data-truncate]").truncateLines()
-  # $('[data-truncated="true"]').on 'mouseenter', ->
-  #   $(this).html($(this).attr('data-text')).attr('data-truncated', 'false')
-  #   stopScrolling($(this))
-  #   $(this).animate(scrollTop: $(this)[0].scrollHeight, ($(this)[0].scrollHeight * 120))
-  # $('[data-truncated="true"]').on 'mouseleave', ->
-  #   $(this).stop().animate(scrollTop: 0, ($(this)[0].scrollHeight * 5), ->
-  #     $(this).truncateLines()
-  #   )
-  # $('[data-truncated="true"]').on 'mousedown', ->
-  #   stopScrolling($(this))
-  # $('[data-truncated="true"]').on 'mousewheel', ->
-  #   stopScrolling($(this))
-
-# stopScrolling = ($el) ->
-#   $el.stop().css('overflow','auto')

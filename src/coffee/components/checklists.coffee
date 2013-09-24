@@ -5,4 +5,4 @@ $ ->
       $(@).attr('aria-checked', "false")
     else
       $(@).attr('aria-checked', "true")
-    $(@).removeClass('checked completed').removeAttr('data-checked').removeAttr('checked')
+    $(@).removeClass('checked completed').removeAttr('data-checked checked')

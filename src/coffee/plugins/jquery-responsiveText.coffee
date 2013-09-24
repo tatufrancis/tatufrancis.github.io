@@ -1,8 +1,9 @@
 ###
  *
- *  jQuery ResponsiveText by Gary Hepting - https://github.com/ghepting/jquery-responsive-text
- *  
- *  Open source under the MIT License. 
+ *  jQuery ResponsiveText by Gary Hepting
+ *  https://github.com/ghepting/jquery-responsive-text
+ *
+ *  Open source under the MIT License.
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
@@ -31,7 +32,10 @@ class ResponsiveText
     @scrollOnHover() if @scrollable
 
   resizeText: ->
-    $(@el).css "font-size", Math.floor( Math.max( Math.min( ($(@el).width() / @compression), @maxFontSize ), @minFontSize ) )
+    calculatedFontSize = $(@el).width() / @compression
+    fontSize = Math.max(Math.min(calculatedFontSize,@maxFontSize),@minFontSize)
+    $(@el).css
+      "font-size": Math.floor(fontSize)
 
   adjustOnLoad: ->
     $(window).on 'load', =>

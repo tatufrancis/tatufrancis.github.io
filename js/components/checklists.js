@@ -6,7 +6,7 @@
       } else {
         $(this).attr('aria-checked', "true");
       }
-      return $(this).removeClass('checked completed').removeAttr('data-checked').removeAttr('checked');
+      return $(this).removeClass('checked completed').removeAttr('data-checked checked');
     });
   });
 

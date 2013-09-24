@@ -1,28 +1,26 @@
 (function() {
   $(function() {
-    var $body;
+    var $body, setSelectState;
     $body = $('body');
-    $body.on('click', ['.error input', '.error textarea', '.invalid input', '.invalid textarea', 'input.error', 'textarea.error ', 'input.invalid', 'textarea.invalid '].join(','), function() {
-      return $(this).focus().select();
-    });
+    $body.on('click', ['.error input', '.error textarea', '.invalid input', '.invalid textarea', 'input.error', 'textarea.error', 'input.invalid', 'textarea.invalid'].join(','), function() {});
+    $(this).focus().select();
     $('.select select').each(function() {
-      var $this;
-      $this = $(this);
-      if ($this.children('option').first().val() === '' && $this.children('option').first().attr('selected')) {
-        $this.addClass('unselected');
-      } else {
-        $this.removeClass('unselected');
-      }
+      return setSelectState(this);
     });
     $body.on('change', '.select select', function() {
-      var $this;
-      $this = $(this);
-      if ($this.children('option').first().val() === '' && $this.children('option').first().attr('selected')) {
-        $this.addClass('unselected');
-      } else {
-        $this.removeClass('unselected');
-      }
+      return setSelectState(this);
     });
+    return setSelectState = function(el) {
+      var $el, firstOptionSelected, firstOptionVal;
+      $el = $(el);
+      firstOptionVal = $el.children('option').first().val();
+      firstOptionSelected = $el.children('option').first().attr('selected');
+      if (firstOptionVal === '' && firstOptionSelected) {
+        return $el.addClass('unselected');
+      } else {
+        return $el.removeClass('unselected');
+      }
+    };
   });
 
 }).call(this);

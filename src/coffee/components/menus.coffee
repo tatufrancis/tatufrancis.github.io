@@ -17,10 +17,14 @@ $ ->
     $('.dropdown').children('ul').attr
       'aria-expanded': 'false'
       'aria-hidden': 'true'
-    $target.attr('aria-pressed', (if $target.attr('aria-pressed') == 'true' then 'false' else 'true'))
+    if $target.attr('aria-pressed') == 'true'
+      dropdownState = 'false'
+    else
+      dropdownState = 'true'
+    $target.attr('aria-pressed', dropdownState)
     $target.children('ul').attr
-      'aria-expanded': (if $target.attr('aria-pressed') == 'true' then 'true' else 'false')
-      'aria-hidden': (if $target.attr('aria-pressed') == 'true' then 'false' else 'true')
+      'aria-expanded': !dropdownState
+      'aria-hidden': dropdownState
 
   $body.on 'click', '.dropdown', (e) ->
     $target = $(e.currentTarget)
@@ -36,5 +40,6 @@ $ ->
     if $dropdown.length
       $dropdown.attr('aria-pressed', 'false')
 
-  $body.on 'focusout', '.dropdown li:last-child a, .dropdown li:last-child button', (e) ->
+  $body.on 'focusout', '.dropdown li:last-child a,
+                        .dropdown li:last-child button', (e) ->
     $('.dropdown[aria-pressed="true"]').attr('aria-pressed', 'false')

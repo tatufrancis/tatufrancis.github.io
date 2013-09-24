@@ -19,10 +19,10 @@
     "javascript",
     "jquery"
   ],
-  "version": "2.0.1",
+  "version": "2.0.4",
   "author": {
     "name": "Gary Hepting",
-    "url": "http://groundworkcss.github.com"
+    "url": "http://groundworkcss.github.io"
   },
   "licenses": [
     {
@@ -31,7 +31,7 @@
     }
   ],
   "bugs": "https://github.com/groundworkcss/groundwork/issues",
-  "homepage": "http://groundworkcss.github.com/",
-  "docs": "http://groundworkcss.github.com/",
+  "homepage": "http://groundworkcss.github.io/",
+  "docs": "http://groundworkcss.github.io/",
   "download": "https://github.com/groundworkcss/groundwork/archive/master.zip"
 }

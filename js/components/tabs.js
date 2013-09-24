@@ -22,19 +22,27 @@
       return e.preventDefault();
     });
     transformTabs = function() {
-      var viewport;
+      var accordion, ipad, mobile, notaccordion, notipad, notmobile, notsmalltablet, smalltablet, viewport;
       viewport = $(window).width();
+      accordion = '.tabs.accordion';
+      mobile = '.tabs.accordion.mobile';
+      smalltablet = '.tabs.accordion.small-tablet';
+      ipad = '.tabs.accordion.ipad';
+      notaccordion = '.tabs:not(.accordion)';
+      notmobile = ':not(.mobile)';
+      notsmalltablet = ':not(.small-tablet)';
+      notipad = ':not(.ipad)';
       if (viewport <= 480) {
-        restoreTabStructure('.tabs.accordion.mobile');
-        return convertToAccordion('.tabs:not(.accordion):not(.mobile)');
+        restoreTabStructure(mobile);
+        return convertToAccordion(notaccordion + notmobile);
       } else if (viewport < 768) {
-        restoreTabStructure('.tabs.accordion.mobile, .tabs.accordion.small-tablet');
-        return convertToAccordion('.tabs:not(.accordion):not(.mobile):not(.small-tablet)');
+        restoreTabStructure(mobile + ', ' + smalltablet);
+        return convertToAccordion(notaccordion + notmobile + notsmalltablet);
       } else if (viewport <= 1024) {
-        restoreTabStructure('.tabs.accordion.mobile, .tabs.accordion.small-tablet, .tabs.accordion.ipad');
-        return convertToAccordion('.tabs:not(.accordion):not(.mobile):not(.small-tablet):not(.ipad)');
+        restoreTabStructure(mobile + ', ' + smalltablet + ', ' + ipad);
+        return convertToAccordion(notaccordion + notmobile + notsmalltablet + notipad);
       } else if (viewport > 1024) {
-        return restoreTabStructure('.tabs.accordion');
+        return restoreTabStructure(accordion);
       }
     };
     convertToAccordion = function(tabTypes) {
@@ -44,9 +52,10 @@
         tabs = $(this);
         tabs.addClass('accordion');
         return tabs.find('> div').each(function() {
-          var tabpanel;
+          var tablink, tabpanel;
           tabpanel = $(this).clone();
-          tabs.find('li[aria-controls="#' + tabpanel.attr('id') + '"]').after(tabpanel);
+          tablink = 'li[aria-controls="#' + tabpanel.attr('id') + '"]';
+          tabs.find(tablink).after(tabpanel);
           return $(this).remove();
         });
       });

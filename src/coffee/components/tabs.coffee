@@ -19,17 +19,25 @@ $ ->
 
   transformTabs = ->
     viewport = $(window).width()
+    accordion = '.tabs.accordion'
+    mobile = '.tabs.accordion.mobile'
+    smalltablet = '.tabs.accordion.small-tablet'
+    ipad = '.tabs.accordion.ipad'
+    notaccordion = '.tabs:not(.accordion)'
+    notmobile = ':not(.mobile)'
+    notsmalltablet = ':not(.small-tablet)'
+    notipad = ':not(.ipad)'
     if viewport <= 480
-      restoreTabStructure('.tabs.accordion.mobile')
-      convertToAccordion('.tabs:not(.accordion):not(.mobile)')
+      restoreTabStructure(mobile)
+      convertToAccordion(notaccordion + notmobile)
     else if viewport < 768
-      restoreTabStructure('.tabs.accordion.mobile, .tabs.accordion.small-tablet')
-      convertToAccordion('.tabs:not(.accordion):not(.mobile):not(.small-tablet)')
+      restoreTabStructure(mobile + ', ' + smalltablet)
+      convertToAccordion(notaccordion + notmobile + notsmalltablet)
     else if viewport <= 1024
-      restoreTabStructure('.tabs.accordion.mobile, .tabs.accordion.small-tablet, .tabs.accordion.ipad')
-      convertToAccordion('.tabs:not(.accordion):not(.mobile):not(.small-tablet):not(.ipad)')
+      restoreTabStructure(mobile + ', ' + smalltablet + ', ' + ipad)
+      convertToAccordion(notaccordion + notmobile + notsmalltablet + notipad)
     else if viewport > 1024
-      restoreTabStructure('.tabs.accordion')
+      restoreTabStructure(accordion)
 
   convertToAccordion = (tabTypes) ->
     tabTypes = $(tabTypes)
@@ -38,7 +46,8 @@ $ ->
       tabs.addClass('accordion')
       tabs.find('> div').each ->
         tabpanel = $(@).clone()
-        tabs.find('li[aria-controls="#'+tabpanel.attr('id')+'"]').after(tabpanel)
+        tablink = 'li[aria-controls="#'+tabpanel.attr('id')+'"]'
+        tabs.find(tablink).after(tabpanel)
         $(@).remove()
 
   restoreTabStructure = (tabTypes) ->

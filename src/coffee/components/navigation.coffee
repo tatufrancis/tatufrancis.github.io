@@ -1,8 +1,8 @@
 ###
  *
  *  Responsive Navigation by Gary Hepting
- *  
- *  Open source under the MIT License. 
+ *
+ *  Open source under the MIT License.
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
@@ -42,9 +42,10 @@ $ ->
     $('body').on 'mouseenter', '.nav li[role="menu"]', (e) ->
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
         clearTimeout(window.delayMenuClose)
-        $(@).siblings().find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
-        # $(@).children('ul').attr('aria-expanded', 'true')
-        $(e.target).parents('li[role="menu"]').children('ul').attr('aria-expanded', 'true')
+        expandedSiblings = $(@).siblings().find('ul[aria-expanded="true"]')
+        expandedSiblings.attr('aria-expanded', 'false')
+        targetMenu = $(e.target).parents('li[role="menu"]').children('ul')
+        targetMenu.attr('aria-expanded', 'true')
 
     $('body').on 'mouseleave', '.nav li[role="menu"]', (e) ->
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
@@ -53,7 +54,8 @@ $ ->
         , 500)
 
   touchBindings = ->
-    $('body').on 'click', '.nav li[role="menu"] > a, .nav li[role="menu"] > button', (e) ->
+    $('body').on 'click', '.nav li[role="menu"] > a,
+                           .nav li[role="menu"] > button', (e) ->
       list = $(@).siblings('ul')
       menu = $(@).parent('[role="menu"]')
       if list.attr('aria-expanded') != 'true'

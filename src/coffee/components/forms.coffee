@@ -1,36 +1,29 @@
 $ ->
+
   $body = $ 'body'
-  # select all text in invalid input field on focus
   $body.on 'click', [
       '.error input'
       '.error textarea'
       '.invalid input'
       '.invalid textarea'
       'input.error'
-      'textarea.error '
-      'input.invalid' 
-      'textarea.invalid '
+      'textarea.error'
+      'input.invalid'
+      'textarea.invalid'
     ].join(','), ->
-      $(this).focus().select()
+    $(@).focus().select()
 
-  # polyfill select box placeholders
   $('.select select').each ->
-    $this = $ this
-    if $this.children('option').first().val() is '' and $this.children('option').first().attr('selected')
-      $this.addClass('unselected')
-    else
-      $this.removeClass('unselected')
-      
-    return  
-    
-  $body.on 'change', '.select select', ->
-    $this = $ this
-    
-    if $this.children('option').first().val() is '' and $this.children('option').first().attr('selected')
-      $this.addClass('unselected')
-    else
-      $this.removeClass('unselected')
+    setSelectState(@)
 
-    return
-    
-  return
+  $body.on 'change', '.select select', ->
+    setSelectState(@)
+
+  setSelectState = (el) ->
+    $el = $(el)
+    firstOptionVal = $el.children('option').first().val()
+    firstOptionSelected = $el.children('option').first().attr('selected')
+    if firstOptionVal == '' and firstOptionSelected
+      $el.addClass('unselected')
+    else
+      $el.removeClass('unselected')

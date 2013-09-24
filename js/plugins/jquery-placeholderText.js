@@ -1,3 +1,14 @@
+/*
+ *
+ *  jQuery PlaceholderText by Gary Hepting
+ *
+ *  Open source under the MIT License.
+ *
+ *  Copyright © 2013 Gary Hepting. All rights reserved.
+ *
+*/
+
+
 (function() {
   (function($) {
     return $.fn.placeholderText = function(options) {

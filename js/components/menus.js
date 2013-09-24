@@ -13,17 +13,22 @@
       }
     });
     $body.on('dropdown', function(e) {
-      var $target;
+      var $target, dropdownState;
       $target = $(e.target);
       $('.dropdown').not($target).attr('aria-pressed', 'false');
       $('.dropdown').children('ul').attr({
         'aria-expanded': 'false',
         'aria-hidden': 'true'
       });
-      $target.attr('aria-pressed', ($target.attr('aria-pressed') === 'true' ? 'false' : 'true'));
+      if ($target.attr('aria-pressed') === 'true') {
+        dropdownState = 'false';
+      } else {
+        dropdownState = 'true';
+      }
+      $target.attr('aria-pressed', dropdownState);
       return $target.children('ul').attr({
-        'aria-expanded': ($target.attr('aria-pressed') === 'true' ? 'true' : 'false'),
-        'aria-hidden': ($target.attr('aria-pressed') === 'true' ? 'false' : 'true')
+        'aria-expanded': !dropdownState,
+        'aria-hidden': dropdownState
       });
     });
     $body.on('click', '.dropdown', function(e) {
@@ -45,7 +50,8 @@
         return $dropdown.attr('aria-pressed', 'false');
       }
     });
-    return $body.on('focusout', '.dropdown li:last-child a, .dropdown li:last-child button', function(e) {
+    return $body.on('focusout', '.dropdown li:last-child a,\
+                        .dropdown li:last-child button', function(e) {
       return $('.dropdown[aria-pressed="true"]').attr('aria-pressed', 'false');
     });
   });

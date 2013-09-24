@@ -21,7 +21,7 @@
             $this.addClass('equal');
           }
           if ($this.outerHeight() > tallest) {
-            tallest = $this.outerHeight();
+            return tallest = $this.outerHeight();
           }
         }
       });

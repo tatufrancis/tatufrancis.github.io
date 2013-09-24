@@ -4,14 +4,14 @@ $slide-animations: true !default;
 @if $slide-animations {
 
   @keyframes slideInDown {
-	0% {
-	  opacity: 0;
-	  transform: translateY(-2000px);
-	}
-	
-	100% {
-	  transform: translateY(0);
-	}
+    0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
   .slideInDown {
@@ -19,14 +19,14 @@ $slide-animations: true !default;
   }
 
   @keyframes slideInLeft {
-	0% {
-	  opacity: 0;
-	  transform: translateX(-2000px);
-	}
-	
-	100% {
-	  transform: translateX(0);
-	}
+    0% {
+      opacity: 0;
+      transform: translateX(-2000px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .slideInLeft {
@@ -34,14 +34,14 @@ $slide-animations: true !default;
   }
 
   @keyframes slideInRight {
-	0% {
-	  opacity: 0;
-	  transform: translateX(2000px);
-	}
-	
-	100% {
-	  transform: translateX(0);
-	}
+    0% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .slideInRight {
@@ -49,14 +49,14 @@ $slide-animations: true !default;
   }
 
   @keyframes slideOutLeft {
-	0% {
-	  transform: translateX(0);
-	}
-	
-	100% {
-	  opacity: 0;
-	  transform: translateX(-2000px);
-	}
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-2000px);
+    }
   }
 
   .slideOutLeft {
@@ -64,14 +64,14 @@ $slide-animations: true !default;
   }
 
   @keyframes slideOutRight {
-	0% {
-	  transform: translateX(0);
-	}
-	
-	100% {
-	  opacity: 0;
-	  transform: translateX(2000px);
-	}
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
   }
 
   .slideOutRight {
@@ -79,14 +79,14 @@ $slide-animations: true !default;
   }
 
   @keyframes slideOutUp {
-	0% {
-	  transform: translateY(0);
-	}
-	
-	100% {
-	  opacity: 0;
-	  transform: translateY(-2000px);
-	}
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
   }
 
   .slideOutUp {
