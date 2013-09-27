@@ -60,24 +60,17 @@ $question-border:     #f1dbfa !default;
   background:white;
   border:1px solid $border-color;
   @include rounded($default-radius);
-  &[size] {
-    height:auto;
-  }
 }
 
 %input {
   @extend %field;
-  &[size] {
+  &[size], &[type="checkbox"], &[type="radio"] {
     height:auto;
   }
-  &[type=checkbox], &[type=radio] {
-    @extend %inline-block;
-    width: 1em;
-    height: 1em;
-    margin: 0 0 0 0.2em;
-    background: white;
-    border: $border-thickness $border-style $border-color;
-    @include rounded($default-radius);
+  &[type="checkbox"], &[type="radio"] {
+    @extend %zero, %inline-block;
+    border: 0;
+    @include rounded(0);
   }
 }
 

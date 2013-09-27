@@ -11,18 +11,6 @@ $container-width: 1200px !default;
 
 
 
-input {
-  &[type=checkbox], &[type=radio] {
-    padding: 0;
-    background: none;
-    border: none;
-    display: inline-block;
-    width: auto !important;
-    height: auto !important;
-    @include rounded(0);
-  }
-}
-
 html {
   &.lt-ie9 {
     min-width: $container-width !important;
