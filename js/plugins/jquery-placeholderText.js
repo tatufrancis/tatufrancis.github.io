@@ -33,12 +33,19 @@
       placeholder[9] = "Aenean placerat. In vulputate urna eu arcu. Aliquam erat volutpat. Suspendisse potenti. Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere. Nullam lectus justo, vulputate eget, mollis sed, tempor sed, magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam neque. Curabitur ligula sapien, pulvinar a, vestibulum quis, facilisis vel, sapien. Nullam eget nisl. Donec vitae arcu.";
       createPlaceholderContent = function(el) {
         var count, i, iParagraphCount, iWordCount, list, numOfChars, numOfWords, outputString, placeholderText, random, tempString, wordList;
-        options = {
-          type: $(el).data('placeholderType') !== 'undefined' ? $(el).data('placeholderType') : void 0,
-          amount: $(el).data('placeholderAmount') !== 'undefined' ? $(el).data('placeholderAmount') : void 0,
-          html: $(el).data('placeholderHtml') !== 'undefined' ? $(el).data('placeholderHtml') : void 0,
-          punctuation: $(el).data('placeholderPunctuation') !== 'undefined' ? $(el).data('placeholderPunctuation') : void 0
-        };
+        options = {};
+        if ($(el).data('placeholderType') !== 'undefined') {
+          options.type = $(el).data('placeholderType');
+        }
+        if ($(el).data('placeholderAmount') !== 'undefined') {
+          options.amount = $(el).data('placeholderAmount');
+        }
+        if ($(el).data('placeholderHtml') !== 'undefined') {
+          options.html = $(el).data('placeholderHtml');
+        }
+        if ($(el).data('placeholderPunctuation') !== 'undefined') {
+          options.punctuation = $(el).data('placeholderPunctuation');
+        }
         opts = $.extend({}, $.fn.placeholderText.defaults, options);
         count = opts.amount;
         placeholderText = "";

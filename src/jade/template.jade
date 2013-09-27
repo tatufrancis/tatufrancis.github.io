@@ -22,7 +22,19 @@ html.no-js
     script(type='text/javascript', src='../js/libs/jquery-1.10.2.min.js')
 
     // framework css 
+    | <!--[if !IE]><!-->
     link(type='text/css', rel='stylesheet', href='../css/groundwork.css')
+    | <!--<![endif]-->
+
+    | <!--[if gt IE 9]>
+    link(type='text/css', rel='stylesheet', href='../css/groundwork.css')
+    | <![endif]-->
+
+    //if lte IE 9
+      link(type='text/css', rel='stylesheet', href='../css/groundwork-core.css')
+      link(type='text/css', rel='stylesheet', href='../css/groundwork-type.css')
+      link(type='text/css', rel='stylesheet', href='../css/groundwork-ui.css')
+      link(type='text/css', rel='stylesheet', href='../css/groundwork-anim.css')
 
     //if IE
       link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
@@ -76,7 +88,7 @@ html.no-js
           .one.half
             p.small.double.pad-top.no-pad-small-tablet.align-right.align-left-small-tablet
               a(href='https://github.com/groundworkcss/groundwork') Github Project
-              |  - Version 2.0.4
+              |  - Version 2.0.6
               br
               | Created & Maintained by 
               a(href='http://twitter.com/ghepting') Gary Hepting
