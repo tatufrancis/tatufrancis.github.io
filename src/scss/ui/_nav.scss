@@ -35,6 +35,10 @@ $default-radius:      4px !default;
   @extend %block, %relative, %pull-left;
 }
 
+%vertical-navigation-list-item {
+  @extend %pull-none;
+}
+
 %navigation-link {
   @extend %inline-block, %align-center, %strong;
   background: $nav-color;
@@ -44,10 +48,18 @@ $default-radius:      4px !default;
   text-decoration: none;
   cursor: pointer;
   line-height: 1.5;
+  border: 0;
+  border-top: $border-thickness $border-style $nav-border-color;
   @include rounded(0);
   &:hover, &:focus {
     @extend %navigation-link-active;
   }
+}
+
+%vertical-navigation-link {
+  display: block;
+  width: 100%;
+  text-align: left;
 }
 
 %hamburger-button {
@@ -55,7 +67,7 @@ $default-radius:      4px !default;
   display: none;
   background: none;
   color: $nav-active-text;
-  border: none !important;
+  border: 0 !important;
   &:hover, &:focus {
     background: none !important;
   }
@@ -77,6 +89,12 @@ $default-radius:      4px !default;
   border: $border-thickness $border-style $nav-border-color;
   font-size: 0.9em;
   @include rounded(0 0 $default-radius $default-radius);
+}
+
+%vertical-navigation-menu {
+  position: static;
+  border: 0;
+  @include rounded(0 !important);
 }
 
 @for $i from 1 through length($modifier-name) {
@@ -149,6 +167,68 @@ $default-radius:      4px !default;
       }
     }
 
+    &.vertical {
+      > ul {
+        > li:first-child {
+          > a, > button {
+            border-top-width: 0;
+          }
+        }
+      }
+      li {
+        li {
+          a, button {
+            text-indent: $gutter;
+          }
+          li {
+            a, button {
+              text-indent: ($gutter * 2);
+            }
+          }
+        }
+        @extend %vertical-navigation-list-item;
+        &[role="menu"] {
+          > a, > button {
+            &:after {
+              content: $icon-caret-down;
+            }
+          }
+          &[aria-pressed="true"] {
+            > a, > button {
+              &:after {
+                content: $icon-caret-up;
+              }
+            }
+          }
+        }
+        ul {
+          @extend %vertical-navigation-menu;
+          li {
+          }
+        }
+        li {
+          @include rounded(0 0 0 0);
+          &:last-child {
+            a, button {
+              @include rounded(0 0 0 0);
+            }
+          }
+          ul {
+            li {
+              &:first-child {
+                a, button {
+                  @include rounded(0 0 0 0);
+                }
+              }
+            }
+          }
+        }
+      }
+      a, button:not(.hamburger) {
+        @extend %vertical-navigation-link;
+      }
+    }
+
     ul {
       @extend %navigation-list;
     }
@@ -178,18 +258,17 @@ $default-radius:      4px !default;
 
       ul {
         @extend %navigation-menu;
-
+        > li {
+          &:first-child {
+            > a, > button {
+              border-top-width: 0;
+            }
+          }
+        }
         a, button {
           @extend %align-left;
           display: block;
           width: 100%;
-          border-top: $border-thickness $border-style $nav-border-color;
-        }
-
-        li:first-child {
-          a, button {
-            border-top: none;
-          }
         }
       }
 
@@ -230,10 +309,9 @@ $default-radius:      4px !default;
           }
         }
       }
-
-      > ul[aria-expanded="true"] {
-        display: block;
-      }
+    }
+    ul[aria-expanded="true"] {
+      display: inline-block;
     }
 
     a, a:visited, button {
@@ -244,8 +322,14 @@ $default-radius:      4px !default;
         }
       }
     }
-    button {
-      border: none;
+    > ul {
+      > li {
+        &:first-child {
+          > a, > button {
+            border-top: 0;
+          }
+        }
+      }
     }
   }
 }

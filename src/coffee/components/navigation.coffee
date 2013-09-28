@@ -39,7 +39,7 @@ class ResponsiveNavigation
 $ ->
 
   mouseBindings = -> # needs more <3
-    $('body').on 'mouseenter', '.nav li[role="menu"]', (e) ->
+    $('body').on 'mouseenter', '.nav:not(.vertical) li[role="menu"]', (e) ->
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
         clearTimeout(window.delayMenuClose)
         expandedSiblings = $(@).siblings().find('ul[aria-expanded="true"]')
@@ -47,7 +47,7 @@ $ ->
         targetMenu = $(e.target).parents('li[role="menu"]').children('ul')
         targetMenu.attr('aria-expanded', 'true')
 
-    $('body').on 'mouseleave', '.nav li[role="menu"]', (e) ->
+    $('body').on 'mouseleave', '.nav:not(.vertical) li[role="menu"]', (e) ->
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
         window.delayMenuClose = setTimeout( =>
           $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')

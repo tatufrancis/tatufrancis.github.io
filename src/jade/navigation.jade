@@ -19,6 +19,27 @@ mixin nav-structure
     li
       button Nav Item 3
 
+mixin vertical-nav-structure
+  ul(role='menu')
+    li
+      button Nav Item 1
+    li.menu(role='menu')
+      button Nav Menu 1
+      ul
+        li
+          button Menu Item 1
+        li.menu(role='menu')
+          button Sub Menu 1
+          ul
+            li
+              button Sub Menu Item 1
+            li
+              button Sub Menu Item 2
+        li
+          button Menu Item 2
+    li
+      button Nav Item 3
+
 extends template
 
 block title
@@ -29,7 +50,7 @@ block content
     .padded
       .row
         .three.fifths.bounceInRight.animated
-          h1.zero.museo-slab Navigation Bars
+          h1.zero.museo-slab Navigation
           p.quicksand Responsive navigation created by 
             a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
         .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
@@ -125,3 +146,24 @@ block content
           .one.third.padded
             nav.nav.charcoal(role='navigation')
               +nav-structure()
+        br
+        hr
+        br
+        h4 Vertical Orientation
+        .row
+          .one.whole.padded
+            h4 iPad
+            nav.nav.vertical(title='Vertical iPad Menu', role='navigation')
+              +vertical-nav-structure()
+            br
+            pre(data-lang='html')
+              | <nav class="vertical nav" title="Vertical iPad Menu">
+            h4 Small Tablet
+            nav.nav.small-tablet.vertical(title='Vertical Small-Tablet Menu', role='navigation')
+              +vertical-nav-structure()
+            br
+            h4 Mobile
+            nav.nav.mobile.vertical(title='Vertical Mobile Menu', role='navigation')
+              +vertical-nav-structure()
+            br
+

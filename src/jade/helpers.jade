@@ -213,6 +213,97 @@ block content
     br
     .row
       .one.whole.padded.bounceInRight.animated
+        h4.zero Positioning
+        .padded
+          .demo
+            .relative
+              .row.align-center(style='height: 10em;')
+                .absolute(title='.absolute') X
+                .absolute.top.left(title='.absolute.top.left') X
+                .absolute.bottom.left(title='.absolute.bottom.left') X
+                .absolute.top.right(title='.absolute.top.right') X
+                .absolute.bottom.right(title='.absolute.bottom.right') X
+                .absolute.middle.left(title='.absolute.middle.left', style='margin-top: -0.65em;') X
+                .absolute.middle.center(title='.absolute.middle.center', style='margin-top: -0.65em;') X
+                .absolute.middle.right(title='.absolute.middle.right', style='margin-top: -0.65em;') X
+                .absolute.top.center(title='.absolute.top.center') X
+                .absolute.bottom.center(title='.absolute.bottom.center') X
+        .row
+          .one.third.small-tablet.padded
+            h4 Static
+            code
+              ul.unstyled
+                li
+                  | .static
+          .one.third.small-tablet.padded
+            h4 Absolute
+            code
+              ul.unstyled
+                li
+                  | .absolute
+                li
+                  | .absolute.top
+                li
+                  | .absolute.top.left
+                li
+                  | .absolute.top.center
+                li
+                  | .absolute.top.right
+                li
+                  | .absolute.middle
+                li
+                  | .absolute.middle.left
+                li
+                  | .absolute.middle.center
+                li
+                  | .absolute.middle.right
+                li
+                  | .absolute.bottom
+                li
+                  | .absolute.bottom.left
+                li
+                  | .absolute.bottom.center
+                li
+                  | .absolute.bottom.right
+                li
+                  | .absolute.center
+          .one.third.small-tablet.padded
+            h4 Fixed
+            code
+              ul.unstyled
+                li
+                  | .fixed
+                li
+                  | .fixed.top
+                li
+                  | .fixed.top.left
+                li
+                  | .fixed.top.center
+                li
+                  | .fixed.top.right
+                li
+                  | .fixed.middle
+                li
+                  | .fixed.middle.left
+                li
+                  | .fixed.middle.center
+                li
+                  | .fixed.middle.right
+                li
+                  | .fixed.bottom
+                li
+                  | .fixed.bottom.left
+                li
+                  | .fixed.bottom.center
+                li
+                  | .fixed.bottom.right
+                li
+                  | .fixed.center
+    br
+    hr
+    br
+    .row
+      .one.whole.padded.bounceInLeft.animated
         h4 Typographic
         .row
           .one.third.small-tablet.padded

@@ -56,7 +56,7 @@
   $(function() {
     var mouseBindings, responsiveNavigationElements, touchBindings;
     mouseBindings = function() {
-      $('body').on('mouseenter', '.nav li[role="menu"]', function(e) {
+      $('body').on('mouseenter', '.nav:not(.vertical) li[role="menu"]', function(e) {
         var expandedSiblings, targetMenu;
         if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
           clearTimeout(window.delayMenuClose);
@@ -66,7 +66,7 @@
           return targetMenu.attr('aria-expanded', 'true');
         }
       });
-      return $('body').on('mouseleave', '.nav li[role="menu"]', function(e) {
+      return $('body').on('mouseleave', '.nav:not(.vertical) li[role="menu"]', function(e) {
         var _this = this;
         if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
           return window.delayMenuClose = setTimeout(function() {

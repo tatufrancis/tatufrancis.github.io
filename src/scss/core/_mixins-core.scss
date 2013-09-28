@@ -134,16 +134,6 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
-    // &:hover, &:focus, &:visited {
-    //   color: lighten($color, 35%);
-    //   @if $mode != "textOnly" {
-    //   background: lighten($color, 15%);
-    //   border-color: $color;
-    //   }
-    //   cursor: not-allowed;
-    //   text-decoration: none;
-    //   outline: none;
-    // }
   }
 }
 
@@ -208,10 +198,13 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
         }
         &[role="menu"] {
           ul {
-            border: none;
-            a, button {
-              border-top: none;
-              border-bottom: $border-thickness $border-style $nav-border-color;
+            border: 0;
+            > li {
+              &:first-child {
+                > a, > button {
+                  border-top-width: $border-thickness;
+                }
+              }
             }
           }
           > a, > button {
@@ -233,22 +226,14 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
         display: block;
         width: 100%;
         text-align: left;
-        border-bottom: $border-thickness $border-style $nav-border-color;
       }
       @for $i from 1 through length($modifier-name) {
         &.#{nth($modifier-name, $i)} {
           li ul a, li[role="menu"] ul a, a,
           li ul button, li[role="menu"] ul button, button {
-            border-top: none;
-            border-bottom: $border-thickness $border-style darken(nth($modifier-code, $i), 5%);
             @include rounded(0);
           }
         }
-      }
-    }
-    > ul li:last-child {
-      a, button {
-        border-bottom: none;
       }
     }
 }
