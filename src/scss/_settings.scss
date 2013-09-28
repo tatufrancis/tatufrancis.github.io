@@ -17,6 +17,8 @@
 // $boxsizing_path:            "/js/libs/boxsizing.htc"; // path to box sizing polyfill (change to absolute path from HTML document root)
 // $PIE_path:                  "/js/libs/PIE.htc"; // path to IE CSS3 polyfill (change to absolute path from HTML document root)
 
+// $oldIE:                     false; // enable polyfills for legacy IE
+
 // =============================================
 //                  Web Fonts
 // =============================================
@@ -248,7 +250,7 @@
 // $type-tags:                 true;
 // $type-elements:             "h1" "h2" "h3" "h4" "h5" "h6" "p"
 //                             "ul" "ol" "dl"
-//                             "q" "quote" "blockquote" "cite"
+//                             "q" "blockquote" "cite"
 //                             "small" "big"
 //                             "b" "strong"
 //                             "em"
@@ -259,7 +261,7 @@
 // $type-classes:              false;
 // $type-classnames:           "h1" "h2" "h3" "h4" "h5" "h6" "p"
 //                             "ul" "ol" "dl"
-//                             "q" "quote" "blockquote" "cite"
+//                             "q" "blockquote" "cite"
 //                             "small" "big" "large"
 //                             "b" "bold" "strong"
 //                             "em" "italic"
@@ -335,7 +337,7 @@
 //                             "h1" "h2" "h3" "h4" "h5" "h6" "p"
 //                             "ol" "ul" "li" "dl" "dt" "dd"
 //                             "em" "small" "big" "strong" "b" "u" "i" "sub" "sup" "del" "strike"
-//                             "q" "quote" "blockquote" "cite"
+//                             "q" "blockquote" "cite"
 //                             "time" "address"
 //                             "code" "pre"
 //                             "a" "img" "center" "hr"

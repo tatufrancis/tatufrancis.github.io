@@ -15,4 +15,6 @@ $fonts_path:          "fonts/" !default;    // path to fonts (relative from $roo
 $boxsizing_path:      "/js/libs/boxsizing.htc" !default;  // path to box sizing polyfill (change to absolute path from HTML document root)
 $PIE_path:            "/js/libs/PIE.htc" !default;  // path to IE CSS3 polyfill (change to absolute path from HTML document root)
 
+$oldIE:               false !default;
+
 @import "palette";

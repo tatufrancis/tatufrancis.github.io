@@ -9,7 +9,7 @@
 $type-tags:                 true !default;
 $type-elements:             "h1" "h2" "h3" "h4" "h5" "h6" "p"
                             "ul" "ol" "dl"
-                            "q" "quote" "blockquote" "cite"
+                            "q" "blockquote" "cite"
                             "small" "big"
                             "b" "strong"
                             "em"
@@ -20,7 +20,7 @@ $type-colors:               true !default;
 $type-classes:              false !default;
 $type-classnames:           "h1" "h2" "h3" "h4" "h5" "h6" "p"
                             "ul" "ol" "dl"
-                            "q" "quote" "blockquote" "cite"
+                            "q" "blockquote" "cite"
                             "small" "big" "large"
                             "b" "bold" "strong"
                             "em" "italic"
@@ -272,7 +272,7 @@ $placeholderText-fallback:  true !default;
   }
 }
 
-%q, %quote {
+%q {
   @extend %bold, %italic;
   &:before {
     content: "\201C"; // left quotation mark
@@ -337,7 +337,7 @@ $placeholderText-fallback:  true !default;
 
 %code {
   @extend %inline-block, %monospace;
-  white-space: no-wrap;
+  white-space: nowrap;
   background: $code-background;
   color: $code-text;
   border: $border-thickness $border-style $border-color;

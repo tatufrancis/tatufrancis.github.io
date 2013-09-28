@@ -9,7 +9,7 @@ $reset-elements:  "html" "body"
                   "h1" "h2" "h3" "h4" "h5" "h6" "p"
                   "ol" "ul" "li" "dl" "dt" "dd"
                   "em" "small" "big" "strong" "b" "u" "i" "sub" "sup" "del" "strike"
-                  "q" "quote" "blockquote" "cite"
+                  "q" "blockquote" "cite"
                   "time" "address"
                   "code" "pre"
                   "a" "img" "center" "hr"
@@ -20,7 +20,9 @@ $reset-elements:  "html" "body"
 
 %everything {
   @include box-sizing(border-box);
-  *behavior: url($boxsizing_path);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
+  @if $oldIE {
+    *behavior: url($boxsizing_path);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
+  }
   //
   // =======================================================
   //               the better box model
