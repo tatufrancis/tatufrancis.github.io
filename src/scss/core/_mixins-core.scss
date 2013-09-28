@@ -154,7 +154,7 @@ $font-family: Helvetica, Arial, Geneva, sans-serif !default;
 
 // responsive navigation
 @mixin hamburger-mode($filters: "") {
-    .nav#{$filters} {
+    .nav:not(.nocollapse)#{$filters} {
       &:before {
         float: left;
         display: inline-block;

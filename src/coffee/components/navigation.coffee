@@ -25,10 +25,14 @@ class ResponsiveNavigation
     @hamburgerHelper()
 
   defaultLabel: ->
-    if @el.attr('title') == undefined
-      @el.attr('title', 'Menu')
+    unless @el.hasClass('nocollapse')
+      @el.attr('title', 'Menu') if @el.attr('title') == undefined
 
   setupMarkers: ->
+    @el.find('ul').each ->
+      if $(@).find('li').length
+        $(@).attr('role', 'menu')
+    @el.find('> ul').attr('role', 'menubar') unless $(@el).hasClass('vertical')
     @el.find('li').each ->
       if $(@).find('ul').length
         $(@).attr('role', 'menu')

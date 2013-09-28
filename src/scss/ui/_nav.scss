@@ -311,7 +311,7 @@ $default-radius:      4px !default;
       }
     }
     ul[aria-expanded="true"] {
-      display: inline-block;
+      display: block;
     }
 
     a, a:visited, button {

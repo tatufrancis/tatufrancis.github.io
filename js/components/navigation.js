@@ -32,12 +32,22 @@
     };
 
     ResponsiveNavigation.prototype.defaultLabel = function() {
-      if (this.el.attr('title') === void 0) {
-        return this.el.attr('title', 'Menu');
+      if (!this.el.hasClass('nocollapse')) {
+        if (this.el.attr('title') === void 0) {
+          return this.el.attr('title', 'Menu');
+        }
       }
     };
 
     ResponsiveNavigation.prototype.setupMarkers = function() {
+      this.el.find('ul').each(function() {
+        if ($(this).find('li').length) {
+          return $(this).attr('role', 'menu');
+        }
+      });
+      if (!$(this.el).hasClass('vertical')) {
+        this.el.find('> ul').attr('role', 'menubar');
+      }
       return this.el.find('li').each(function() {
         if ($(this).find('ul').length) {
           return $(this).attr('role', 'menu');

@@ -1,34 +1,13 @@
 mixin nav-structure
-  ul(role='menubar')
+  ul
     li
       button Nav Item 1
-    li.menu(role='menu')
+    li
       button Nav Menu 1
       ul
         li
           button Menu Item 1
-        li.menu(role='menu')
-          button Sub Menu 1
-          ul
-            li
-              button Sub Menu Item 1
-            li
-              button Sub Menu Item 2
         li
-          button Menu Item 2
-    li
-      button Nav Item 3
-
-mixin vertical-nav-structure
-  ul(role='menu')
-    li
-      button Nav Item 1
-    li.menu(role='menu')
-      button Nav Menu 1
-      ul
-        li
-          button Menu Item 1
-        li.menu(role='menu')
           button Sub Menu 1
           ul
             li
@@ -107,6 +86,14 @@ block content
               br
               pre(data-lang='html')
                 | <nav class="nav mobile" title="Mobile Menu">...</nav>
+          .row
+            .one.whole.padded
+              h4 Vegetarian (No Hamburger)
+              nav.nav.nocollapse(role='navigation')
+                +nav-structure()
+              br
+              pre(data-lang='html')
+                | <nav class="nav nocollapse" title="Vegetarian Menu">...</nav>
         br
         h4 Colors
         .row
@@ -151,19 +138,33 @@ block content
         br
         h4 Vertical Orientation
         .row
-          .one.whole.padded
+          .one.third.padded
             h4 iPad
             nav.nav.vertical(title='Vertical iPad Menu', role='navigation')
-              +vertical-nav-structure()
+              +nav-structure()
             br
             pre(data-lang='html')
-              | <nav class="vertical nav" title="Vertical iPad Menu">
+              | <nav class="nav vertical" title="Vertical iPad Menu">...</nav>
+          .one.third.padded
             h4 Small Tablet
             nav.nav.small-tablet.vertical(title='Vertical Small-Tablet Menu', role='navigation')
-              +vertical-nav-structure()
+              +nav-structure()
             br
+            pre(data-lang='html')
+              | <nav class="nav small-tablet vertical" title="Vertical Small-Tablet Menu">...</nav>
+          .one.third.padded
             h4 Mobile
             nav.nav.mobile.vertical(title='Vertical Mobile Menu', role='navigation')
-              +vertical-nav-structure()
+              +nav-structure()
             br
+            pre(data-lang='html')
+              | <nav class="nav mobile vertical" title="Vertical Mobile Menu">...</nav>
+        .row
+          .one.whole.padded
+            h4 Vegetarian (No Hamburger)
+            nav.nav.nocollapse.vertical(role='navigation')
+              +nav-structure()
+            br
+            pre(data-lang='html')
+              | <nav class="nav vertical nocollapse">...</nav
 
