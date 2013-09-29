@@ -39,6 +39,11 @@ $nav-border-color:    lighten(gray, 27.5%) !default;
 $nav-active:          lighten(gray, 27.5%) !default;
 $nav-active-text:     darken(gray, 12%) !default;
 
+// quotes
+$quote-color:         $font-color !default;
+$quote-background:    $border-color !default;
+$quote-font:          "source-sans-pro" !default;
+
 // info
 $info-color:          #3a87ad !default;
 $info-text:           #ffffff !default;

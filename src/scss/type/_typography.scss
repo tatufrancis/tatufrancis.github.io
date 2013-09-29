@@ -29,6 +29,9 @@ $type-classnames:           "h1" "h2" "h3" "h4" "h5" "h6" "p"
                             "code" "pre"
                             "invalid" "valid"
                             "unstyled" !default;
+$quote-color:               $font-color !default;
+$quote-background:          $border-color !default;
+$quote-font:                "source-sans-pro" !default;
 $styled-lists:              true !default;
 $multi-column-classes:      true !default;
 $multi-column-names:        "one-column" "two-column" "three-column" "four-column" "five-column" !default;
@@ -41,6 +44,7 @@ $question-color:            #9855b4 !default;
 $ui-states:                 "info"  "alert" "warning" "error" "success" "question" !default;
 $ui-icons:                  "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059" !default;
 $ui-states-colors:          $info-color $alert-color $warning-color $error-color $success-color $question-color !default;
+$ui-states-color-classes:   true !default;
 $font-size:                 14px !default;
 $line-height:               1.5 !default;
 $heading-line-height:       1.3 !default;
@@ -268,7 +272,7 @@ $placeholderText-fallback:  true !default;
 
 @for $i from 1 through length($modifier-name) {
   %#{nth($modifier-name, $i)} {
-    color: #{nth($modifier-text, $i)};
+    color: nth($modifier-text, $i);
   }
 }
 
@@ -285,13 +289,14 @@ $placeholderText-fallback:  true !default;
 %blockquote {
   @extend %relative, %bold;
   padding: 1.3em 4em 1em;
-  color: $font-color;
+  color: $quote-color;
+  @include font-stack($quote-font);
   font-size: 1.15em;
-  background: darken($background-color, 10%);
+  background: $quote-background;
   @include border-radius($default-radius);
   &:before {
     content: "\201C"; // left quotation mark
-    color: darken($background-color, 20%);
+    color: darken($quote-background, 20%);
     font-size: 4em;
     display: block;
     position: absolute;
@@ -300,7 +305,7 @@ $placeholderText-fallback:  true !default;
   }
   &:after {
     content: "\201D"; // right quotation mark
-    color: darken($background-color, 20%);
+    color: darken($quote-background, 20%);
     font-size: 4em;
     display: block;
     position: absolute;
@@ -436,7 +441,7 @@ $placeholderText-fallback:  true !default;
         &.#{nth($modifier-name, $i)} {
           li {
             &:before {
-              background: #{nth($modifier-code, $i)};
+              background: nth($modifier-code, $i);
             }
           }
         }
@@ -445,14 +450,14 @@ $placeholderText-fallback:  true !default;
         @for $i from 1 through length($modifier-name) {
           &.#{nth($modifier-name, $i)} {
             &:before {
-              background: #{nth($modifier-code, $i)};
+              background: nth($modifier-code, $i);
             }
           }
         }
         @for $i from 1 through length($ui-states) {
           &.#{nth($ui-states, $i)} {
             &:before {
-              background-color: #{nth($ui-states-colors, $i)};
+              background-color: nth($ui-states-colors, $i);
             }
           }
         }
@@ -540,14 +545,24 @@ $placeholderText-fallback:  true !default;
 @if $type-colors {
   @for $i from 1 through length($modifier-name) {
     .#{nth($modifier-name, $i)} {
-      color: #{nth($modifier-code, $i)};
+      color: nth($modifier-code, $i);
+    }
+    .#{nth($modifier-name, $i)}-bg {
+      background: nth($modifier-code, $i);
+      color: nth($modifier-text, $i);
     }
   }
 }
 
-@for $i from 1 through length($ui-states) {
-  .#{nth($ui-states, $i)} {
-    @extend %#{nth($ui-states, $i)};
+@if $ui-states-color-classes {
+  @for $i from 1 through length($ui-states) {
+    .#{nth($ui-states, $i)} {
+      @extend %#{nth($ui-states, $i)};
+    }
+    .#{nth($ui-states, $i)}-bg {
+      background: nth($ui-states-colors, $i);
+      color: $white;
+    }
   }
 }
 
