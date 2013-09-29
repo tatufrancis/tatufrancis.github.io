@@ -22,7 +22,8 @@ class ResponsiveNavigation
   init: ->
     @defaultLabel()
     @setupMarkers()
-    @hamburgerHelper()
+    unless @el.hasClass('nocollapse')
+      @hamburgerHelper()
 
   defaultLabel: ->
     unless @el.hasClass('nocollapse')

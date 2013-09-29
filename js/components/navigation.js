@@ -28,7 +28,9 @@
     ResponsiveNavigation.prototype.init = function() {
       this.defaultLabel();
       this.setupMarkers();
-      return this.hamburgerHelper();
+      if (!this.el.hasClass('nocollapse')) {
+        return this.hamburgerHelper();
+      }
     };
 
     ResponsiveNavigation.prototype.defaultLabel = function() {
