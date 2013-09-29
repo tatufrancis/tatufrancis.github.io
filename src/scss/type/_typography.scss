@@ -44,6 +44,7 @@ $question-color:            #9855b4 !default;
 $ui-states:                 "info"  "alert" "warning" "error" "success" "question" !default;
 $ui-icons:                  "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059" !default;
 $ui-states-colors:          $info-color $alert-color $warning-color $error-color $success-color $question-color !default;
+$ui-states-backgrounds:     $info-background $alert-background $warning-background $error-background $success-background $question-background !default;
 $ui-states-color-classes:   true !default;
 $font-size:                 14px !default;
 $line-height:               1.5 !default;
@@ -560,8 +561,8 @@ $placeholderText-fallback:  true !default;
       @extend %#{nth($ui-states, $i)};
     }
     .#{nth($ui-states, $i)}-bg {
-      background: nth($ui-states-colors, $i);
-      color: $white;
+      background: nth($ui-states-backgrounds, $i);
+      color: nth($ui-states-colors, $i);
     }
   }
 }

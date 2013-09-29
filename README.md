@@ -1,6 +1,6 @@
 ![Groundwork Logo](https://0.gravatar.com/avatar/c8ae740c0b5f7dd913308974a07ee02c?s=150)
 
-GroundworkCSS 2.2.1
+GroundworkCSS 2.2.2
 ====
 
 Say hello to responsive design made easy.
