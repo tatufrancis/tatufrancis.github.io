@@ -148,83 +148,80 @@ $gutter:              10px !default;
   &:after         { content: " "; display: block; height: 0; font-size: 0; clear: both; visibility: hidden; }
 }
 
-%padded           { @include _padded;
-  &%half          { @include _padded(0.5); }
-  &%double        { @include _padded(2); }
-  &%triple        { @include _padded(3); }
-}
-%pad-top          { @include _pad-top;
-  &%half          { @include _pad-top(0.5); }
-  &%double        { @include _pad-top(2); }
-  &%triple        { @include _pad-top(3); }
-}
-%pad-right        { @include _pad-right;
-  &%half          { @include _pad-right(0.5); }
-  &%double        { @include _pad-right(2); }
-  &%triple        { @include _pad-right(3); }
-}
-%pad-bottom       { @include _pad-bottom;
-  &%half          { @include _pad-bottom(0.5); }
-  &%double        { @include _pad-bottom(2); }
-  &%triple        { @include _pad-bottom(3); }
-}
-%pad-left         { @include _pad-left;
-  &%half          { @include _pad-left(0.5); }
-  &%double        { @include _pad-left(2); }
-  &%triple        { @include _pad-left(3); }
-}
+%padded               { @include _padded; }
+%half-padded          { @include _padded(0.5); }
+%double-padded        { @include _padded(2); }
+%triple-padded        { @include _padded(3); }
 
-%gapped           { @include _gapped;
-  &%half          { @include _gapped(0.5); }
-  &%double        { @include _gapped(2); }
-  &%triple        { @include _gapped(3); }
-}
-%gap-top          { @include _gap-top;
-  &%half          { @include _gap-top(0.5); }
-  &%double        { @include _gap-top(2); }
-  &%triple        { @include _gap-top(3); }
-}                   
-%gap-right        { @include _gap-right;
-  &%half          { @include _gap-right(0.5); }
-  &%double        { @include _gap-right(2); }
-  &%triple        { @include _gap-right(3); }
-}                   
-%gap-bottom       { @include _gap-bottom;
-  &%half          { @include _gap-bottom(0.5); }
-  &%double        { @include _gap-bottom(2); }
-  &%triple        { @include _gap-bottom(3); }
-}                   
-%gap-left         { @include _gap-left;
-  &%half          { @include _gap-left(0.5); }
-  &%double        { @include _gap-left(2); }
-  &%triple        { @include _gap-left(3); }
-}
+%pad-top              { @include _pad-top; }
+%half-pad-top         { @include _pad-top(0.5); }
+%double-pad-top       { @include _pad-top(2); }
+%triple-pad-top       { @include _pad-top(3); }
 
-%offset           { @include _offset;
-  &%half          { @include _offset(0.5); }
-  &%double        { @include _offset(2); }
-  &%triple        { @include _offset(3); }
-}
-%offset-top       { @include _offset-top;
-  &%half          { @include _offset-top(0.5); }
-  &%double        { @include _offset-top(2); }
-  &%triple        { @include _offset-top(3); }
-}
-%offset-right     { @include _offset-right;
-  &%half          { @include _offset-right(0.5); }
-  &%double        { @include _offset-right(2); }
-  &%triple        { @include _offset-right(3); }
-}
-%offset-bottom    { @include _offset-bottom;
-  &%half          { @include _offset-bottom(0.5); }
-  &%double        { @include _offset-bottom(2); }
-  &%triple        { @include _offset-bottom(3); }
-}
-%offset-left      { @include _offset-left;
-  &%half          { @include _offset-left(0.5); }
-  &%double        { @include _offset-left(2); }
-  &%triple        { @include _offset-left(3); }
-}
+%pad-right            { @include _pad-right; }
+%half-pad-right       { @include _pad-right(0.5); }
+%double-pad-right     { @include _pad-right(2); }
+%triple-pad-right     { @include _pad-right(3); }
+
+%pad-bottom           { @include _pad-bottom; }
+%half-pad-bottom      { @include _pad-bottom(0.5); }
+%double-pad-bottom    { @include _pad-bottom(2); }
+%triple-pad-bottom    { @include _pad-bottom(3); }
+
+%pad-left             { @include _pad-left; }
+%half-pad-left        { @include _pad-left(0.5); }
+%double-pad-left      { @include _pad-left(2); }
+%triple-pad-left      { @include _pad-left(3); }
+
+%gapped               { @include _gapped; }
+%half-gapped          { @include _gapped(0.5); }
+%double-gapped        { @include _gapped(2); }
+%triple-gapped        { @include _gapped(3); }
+
+%gap-top              { @include _gap-top; }
+%half-gap-top         { @include _gap-top(0.5); }
+%double-gap-top       { @include _gap-top(2); }
+%triple-gap-top       { @include _gap-top(3); }
+
+%gap-right            { @include _gap-right; }
+%half-gap-right       { @include _gap-right(0.5); }
+%double-gap-right     { @include _gap-right(2); }
+%triple-gap-right     { @include _gap-right(3); }
+
+%gap-bottom           { @include _gap-bottom; }
+%half-gap-bottom      { @include _gap-bottom(0.5); }
+%double-gap-bottom    { @include _gap-bottom(2); }
+%triple-gap-bottom    { @include _gap-bottom(3); }
+
+%gap-left             { @include _gap-left; }
+%half-gap-left        { @include _gap-left(0.5); }
+%double-gap-left      { @include _gap-left(2); }
+%triple-gap-left      { @include _gap-left(3); }
+
+%offset               { @include _offset; }
+%half-offset          { @include _offset(0.5); }
+%double-offset        { @include _offset(2); }
+%triple-offset        { @include _offset(3); }
+
+%offset-top           { @include _offset-top; }
+%half-offset-top      { @include _offset-top(0.5); }
+%double-offset-top    { @include _offset-top(2); }
+%triple-offset-top    { @include _offset-top(3); }
+
+%offset-right         { @include _offset-right; }
+%half-offset-right    { @include _offset-right(0.5); }
+%double-offset-right  { @include _offset-right(2); }
+%triple-offset-right  { @include _offset-right(3); }
+
+%offset-bottom        { @include _offset-bottom; }
+%half-offset-bottom   { @include _offset-bottom(0.5); }
+%double-offset-bottom { @include _offset-bottom(2); }
+%triple-offset-bottom { @include _offset-bottom(3); }
+
+%offset-left          { @include _offset-left; }
+%half-offset-left     { @include _offset-left(0.5); }
+%double-offset-left   { @include _offset-left(2); }
+%triple-offset-left   { @include _offset-left(3); }
 
 %fixed            { @include _fixed; }
 %fixed-top        { @include _fixed(top); }
@@ -355,10 +352,10 @@ $gutter:              10px !default;
   @for $i from 1 through length($spacer-helpers) {
     .#{nth($spacer-helpers, $i)} {
       @extend %#{nth($spacer-helpers, $i)};
-      @if $spacer-mod-classes {
-        @for $i from 1 through length($spacer-modifiers) {
-          &.#{nth($spacer-modifiers, $i)} { @extend %#{nth($spacer-modifiers, $i)}; }
-        }
+    }
+    @if $spacer-mod-classes {
+      @for $j from 1 through length($spacer-modifiers) {
+        .#{nth($spacer-modifiers, $j)}-#{nth($spacer-helpers, $i)} { @extend %#{nth($spacer-modifiers, $j)}-#{nth($spacer-helpers, $i)}; }
       }
     }
   }

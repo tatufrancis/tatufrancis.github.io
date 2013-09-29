@@ -177,6 +177,11 @@ $oldIE: false !default;
       }
       > ul {
         display: none;
+        > li {
+          > a, > button {
+            border-top-width: $border-thickness;
+          }
+        }
       }
       > ul[aria-expanded="true"] {
         display: block;

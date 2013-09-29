@@ -68,6 +68,11 @@
     mouseBindings = function() {
       $('body').on('mouseenter', '.nav:not(.vertical) li[role="menu"]', function(e) {
         var expandedSiblings, targetMenu;
+        $('.nav:not(.vertical)').not(this).each(function() {
+          if (!$(this).find('button.hamburger').is(':visible')) {
+            return $(this).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
+          }
+        });
         if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
           clearTimeout(window.delayMenuClose);
           expandedSiblings = $(this).siblings().find('ul[aria-expanded="true"]');

@@ -20,66 +20,82 @@ $multi-column-names:        "one-column" "two-column" "three-column" "four-colum
       .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
       .no-border-desktop { border: 0; }
       @if $spacer-classes {
-        .padded-desktop         { @include _padded;
-          &.double              { @include _padded(2); }
-          &.triple              { @include _padded(3); }
-        }
-        .pad-top-desktop        { @include _pad-top;
-          &.double              { @include _pad-top(2); }
-          &.triple              { @include _pad-top(3); }
-        }
-        .pad-right-desktop      { @include _pad-right;
-          &.double              { @include _pad-right(2); }
-          &.triple              { @include _pad-right(3); }
-        }
-        .pad-bottom-desktop     { @include _pad-bottom;
-          &.double              { @include _pad-bottom(2); }
-          &.triple              { @include _pad-bottom(3); }
-        }
-        .pad-left-desktop       { @include _pad-left;
-          &.double              { @include _pad-left(2); }
-          &.triple              { @include _pad-left(3); }
-        }
-        .gapped-desktop         { @include _gapped;
-          &.double              { @include _gapped(2); }
-          &.triple              { @include _gapped(3); }
-        }
-        .gap-top-desktop        { @include _gap-top;
-          &.double              { @include _gap-top(2); }
-          &.triple              { @include _gap-top(3); }
-        }
-        .gap-right-desktop      { @include _gap-right;
-          &.double              { @include _gap-right(2); }
-          &.triple              { @include _gap-right(3); }
-        }
-        .gap-bottom-desktop     { @include _gap-bottom;
-          &.double              { @include _gap-bottom(2); }
-          &.triple              { @include _gap-bottom(3); }
-        }
-        .gap-left-desktop       { @include _gap-left;
-          &.double              { @include _gap-left(2); }
-          &.triple              { @include _gap-left(3); }
-        }
-        .offset-desktop         { @include _offset;
-          &.double              { @include _offset(2); }
-          &.triple              { @include _offset(3); }
-        }
-        .offset-top-desktop     { @include _offset-top;
-          &.double              { @include _offset-top(2); }
-          &.triple              { @include _offset-top(3); }
-        }
-        .offset-right-desktop   { @include _offset-right;
-          &.double              { @include _offset-right(2); }
-          &.triple              { @include _offset-right(3); }
-        }
-        .offset-bottom-desktop  { @include _offset-bottom;
-          &.double              { @include _offset-bottom(2); }
-          &.triple              { @include _offset-bottom(3); }
-        }
-        .offset-left-desktop    { @include _offset-left;
-          &.double              { @include _offset-left(2); }
-          &.triple              { @include _offset-left(3); }
-        }
+        .padded-desktop               { @include _padded; }
+        .pad-top-desktop              { @include _pad-top; }
+        .pad-right-desktop            { @include _pad-right; }
+        .pad-bottom-desktop           { @include _pad-bottom; }
+        .pad-left-desktop             { @include _pad-left; }
+        .gapped-desktop               { @include _gapped; }
+        .gap-top-desktop              { @include _gap-top; }
+        .gap-right-desktop            { @include _gap-right; }
+        .gap-bottom-desktop           { @include _gap-bottom; }
+        .gap-left-desktop             { @include _gap-left; }
+        .offset-desktop               { @include _offset; }
+        .offset-top-desktop           { @include _offset-top; }
+        .offset-right-desktop         { @include _offset-right; }
+        .offset-bottom-desktop        { @include _offset-bottom; }
+        .offset-left-desktop          { @include _offset-left; }
+      }
+      @if $spacer-mod-classes {
+        .half-padded-desktop          { @include _padded(0.5); }
+        .double-padded-desktop        { @include _padded(2); }
+        .triple-padded-desktop        { @include _padded(3); }
+
+        .half-pad-top-desktop         { @include _pad-top(0.5); }
+        .double-pad-top-desktop       { @include _pad-top(2); }
+        .triple-pad-top-desktop       { @include _pad-top(3); }
+
+        .half-pad-right-desktop       { @include _pad-right(0.5); }
+        .double-pad-right-desktop     { @include _pad-right(2); }
+        .triple-pad-right-desktop     { @include _pad-right(3); }
+
+        .half-pad-bottom-desktop      { @include _pad-bottom(0.5); }
+        .double-pad-bottom-desktop    { @include _pad-bottom(2); }
+        .triple-pad-bottom-desktop    { @include _pad-bottom(3); }
+
+        .half-pad-left-desktop        { @include _pad-left(0.5); }
+        .double-pad-left-desktop      { @include _pad-left(2); }
+        .triple-pad-left-desktop      { @include _pad-left(3); }
+
+        .half-gapped-desktop          { @include _gapped(0.5); }
+        .double-gapped-desktop        { @include _gapped(2); }
+        .triple-gapped-desktop        { @include _gapped(3); }
+
+        .half-gap-top-desktop         { @include _gap-top(0.5); }
+        .double-gap-top-desktop       { @include _gap-top(2); }
+        .triple-gap-top-desktop       { @include _gap-top(3); }
+
+        .half-gap-right-desktop       { @include _gap-right(0.5); }
+        .double-gap-right-desktop     { @include _gap-right(2); }
+        .triple-gap-right-desktop     { @include _gap-right(3); }
+
+        .half-gap-bottom-desktop      { @include _gap-bottom(0.5); }
+        .double-gap-bottom-desktop    { @include _gap-bottom(2); }
+        .triple-gap-bottom-desktop    { @include _gap-bottom(3); }
+
+        .half-gap-left-desktop        { @include _gap-left(0.5); }
+        .double-gap-left-desktop      { @include _gap-left(2); }
+        .triple-gap-left-desktop      { @include _gap-left(3); }
+
+        .half-offset-desktop          { @include _offset(0.5); }
+        .double-offset-desktop        { @include _offset(2); }
+        .triple-offset-desktop        { @include _offset(3); }
+
+        .half-offset-top-desktop      { @include _offset-top(0.5); }
+        .double-offset-top-desktop    { @include _offset-top(2); }
+        .triple-offset-top-desktop    { @include _offset-top(3); }
+
+        .half-offset-right-desktop    { @include _offset-right(0.5); }
+        .double-offset-right-desktop  { @include _offset-right(2); }
+        .triple-offset-right-desktop  { @include _offset-right(3); }
+
+        .half-offset-bottom-desktop   { @include _offset-bottom(0.5); }
+        .double-offset-bottom-desktop { @include _offset-bottom(2); }
+        .triple-offset-bottom-desktop { @include _offset-bottom(3); }
+
+        .half-offset-left-desktop     { @include _offset-left(0.5); }
+        .double-offset-left-desktop   { @include _offset-left(2); }
+        .triple-offset-left-desktop   { @include _offset-left(3); }
       }
       @if $positioning-classes {
         .fixed-desktop           { @include _fixed; }

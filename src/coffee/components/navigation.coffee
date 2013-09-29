@@ -44,6 +44,9 @@ $ ->
 
   mouseBindings = -> # needs more <3
     $('body').on 'mouseenter', '.nav:not(.vertical) li[role="menu"]', (e) ->
+      $('.nav:not(.vertical)').not(@).each ->
+        unless $(@).find('button.hamburger').is(':visible')
+          $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
       unless $(@).parents('.nav').find('button.hamburger').is(':visible')
         clearTimeout(window.delayMenuClose)
         expandedSiblings = $(@).siblings().find('ul[aria-expanded="true"]')

@@ -67,7 +67,7 @@ $default-radius:      4px !default;
   display: none;
   background: none;
   color: $nav-active-text;
-  border: 0 !important;
+  border: 0;
   &:hover, &:focus {
     background: none !important;
   }
@@ -172,6 +172,11 @@ $default-radius:      4px !default;
         > li:first-child {
           > a, > button {
             border-top-width: 0;
+          }
+        }
+        > li {
+          > a, > button {
+            border-top-width: $border-thickness;
           }
         }
       }
@@ -324,9 +329,12 @@ $default-radius:      4px !default;
     }
     > ul {
       > li {
+        > a, > button {
+          border-top-width: 0;
+        }
         &:first-child {
           > a, > button {
-            border-top: 0;
+            border-top-width: 0;
           }
         }
       }

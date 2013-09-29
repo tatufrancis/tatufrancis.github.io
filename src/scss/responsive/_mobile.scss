@@ -29,66 +29,82 @@ $multi-column-names:        "one-column" "two-column" "three-column" "four-colum
       .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
       .no-border-mobile { border: 0; }
       @if $spacer-classes {
-        .padded-mobile        { @include _padded;
-          &.double            { @include _padded(2); }
-          &.triple            { @include _padded(3); }
-        }
-        .pad-top-mobile       { @include _pad-top;
-          &.double            { @include _pad-top(2); }
-          &.triple            { @include _pad-top(3); }
-        }
-        .pad-right-mobile     { @include _pad-right;
-          &.double            { @include _pad-right(2); }
-          &.triple            { @include _pad-right(3); }
-        }
-        .pad-bottom-mobile    { @include _pad-bottom;
-          &.double            { @include _pad-bottom(2); }
-          &.triple            { @include _pad-bottom(3); }
-        }
-        .pad-left-mobile      { @include _pad-left;
-          &.double            { @include _pad-left(2); }
-          &.triple            { @include _pad-left(3); }
-        }
-        .gapped-mobile        { @include _gapped;
-          &.double            { @include _gapped(2); }
-          &.triple            { @include _gapped(3); }
-        }
-        .gap-top-mobile       { @include _gap-top;
-          &.double            { @include _gap-top(2); }
-          &.triple            { @include _gap-top(3); }
-        }
-        .gap-right-mobile     { @include _gap-right;
-          &.double            { @include _gap-right(2); }
-          &.triple            { @include _gap-right(3); }
-        }
-        .gap-bottom-mobile    { @include _gap-bottom;
-          &.double            { @include _gap-bottom(2); }
-          &.triple            { @include _gap-bottom(3); }
-        }
-        .gap-left-mobile      { @include _gap-left;
-          &.double            { @include _gap-left(2); }
-          &.triple            { @include _gap-left(3); }
-        }
-        .offset-mobile        { @include _offset;
-          &.double            { @include _offset(2); }
-          &.triple            { @include _offset(3); }
-        }
-        .offset-top-mobile    { @include _offset-top;
-          &.double            { @include _offset-top(2); }
-          &.triple            { @include _offset-top(3); }
-        }
-        .offset-right-mobile  { @include _offset-right;
-          &.double            { @include _offset-right(2); }
-          &.triple            { @include _offset-right(3); }
-        }
-        .offset-bottom-mobile { @include _offset-bottom;
-          &.double            { @include _offset-bottom(2); }
-          &.triple            { @include _offset-bottom(3); }
-        }
-        .offset-left-mobile   { @include _offset-left;
-          &.double            { @include _offset-left(2); }
-          &.triple            { @include _offset-left(3); }
-        }
+        .padded-mobile               { @include _padded; }
+        .pad-top-mobile              { @include _pad-top; }
+        .pad-right-mobile            { @include _pad-right; }
+        .pad-bottom-mobile           { @include _pad-bottom; }
+        .pad-left-mobile             { @include _pad-left; }
+        .gapped-mobile               { @include _gapped; }
+        .gap-top-mobile              { @include _gap-top; }
+        .gap-right-mobile            { @include _gap-right; }
+        .gap-bottom-mobile           { @include _gap-bottom; }
+        .gap-left-mobile             { @include _gap-left; }
+        .offset-mobile               { @include _offset; }
+        .offset-top-mobile           { @include _offset-top; }
+        .offset-right-mobile         { @include _offset-right; }
+        .offset-bottom-mobile        { @include _offset-bottom; }
+        .offset-left-mobile          { @include _offset-left; }
+      }
+      @if $spacer-mod-classes {
+        .half-padded-mobile          { @include _padded(0.5); }
+        .double-padded-mobile        { @include _padded(2); }
+        .triple-padded-mobile        { @include _padded(3); }
+
+        .half-pad-top-mobile         { @include _pad-top(0.5); }
+        .double-pad-top-mobile       { @include _pad-top(2); }
+        .triple-pad-top-mobile       { @include _pad-top(3); }
+
+        .half-pad-right-mobile       { @include _pad-right(0.5); }
+        .double-pad-right-mobile     { @include _pad-right(2); }
+        .triple-pad-right-mobile     { @include _pad-right(3); }
+
+        .half-pad-bottom-mobile      { @include _pad-bottom(0.5); }
+        .double-pad-bottom-mobile    { @include _pad-bottom(2); }
+        .triple-pad-bottom-mobile    { @include _pad-bottom(3); }
+
+        .half-pad-left-mobile        { @include _pad-left(0.5); }
+        .double-pad-left-mobile      { @include _pad-left(2); }
+        .triple-pad-left-mobile      { @include _pad-left(3); }
+
+        .half-gapped-mobile          { @include _gapped(0.5); }
+        .double-gapped-mobile        { @include _gapped(2); }
+        .triple-gapped-mobile        { @include _gapped(3); }
+
+        .half-gap-top-mobile         { @include _gap-top(0.5); }
+        .double-gap-top-mobile       { @include _gap-top(2); }
+        .triple-gap-top-mobile       { @include _gap-top(3); }
+
+        .half-gap-right-mobile       { @include _gap-right(0.5); }
+        .double-gap-right-mobile     { @include _gap-right(2); }
+        .triple-gap-right-mobile     { @include _gap-right(3); }
+
+        .half-gap-bottom-mobile      { @include _gap-bottom(0.5); }
+        .double-gap-bottom-mobile    { @include _gap-bottom(2); }
+        .triple-gap-bottom-mobile    { @include _gap-bottom(3); }
+
+        .half-gap-left-mobile        { @include _gap-left(0.5); }
+        .double-gap-left-mobile      { @include _gap-left(2); }
+        .triple-gap-left-mobile      { @include _gap-left(3); }
+
+        .half-offset-mobile          { @include _offset(0.5); }
+        .double-offset-mobile        { @include _offset(2); }
+        .triple-offset-mobile        { @include _offset(3); }
+
+        .half-offset-top-mobile      { @include _offset-top(0.5); }
+        .double-offset-top-mobile    { @include _offset-top(2); }
+        .triple-offset-top-mobile    { @include _offset-top(3); }
+
+        .half-offset-right-mobile    { @include _offset-right(0.5); }
+        .double-offset-right-mobile  { @include _offset-right(2); }
+        .triple-offset-right-mobile  { @include _offset-right(3); }
+
+        .half-offset-bottom-mobile   { @include _offset-bottom(0.5); }
+        .double-offset-bottom-mobile { @include _offset-bottom(2); }
+        .triple-offset-bottom-mobile { @include _offset-bottom(3); }
+
+        .half-offset-left-mobile     { @include _offset-left(0.5); }
+        .double-offset-left-mobile   { @include _offset-left(2); }
+        .triple-offset-left-mobile   { @include _offset-left(3); }
       }
       @if $positioning-classes {
         .fixed-mobile           { @include _fixed; }
