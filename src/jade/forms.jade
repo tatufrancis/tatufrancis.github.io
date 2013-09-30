@@ -19,55 +19,9 @@ block content
             a.green.button(href='icons.html', rel='next')
               | Next: Icons
     hr
-    .row.bounceInLeft.animated
-      .one.whole.padded
-        h4 Form Validation
-        .row
-          .one.half.padded
-            p Invalid Entry
-            p.invalid
-              input(value='Invalid entry')
-            .invalid.row
-              .one.mobile.tenth
-                span.prefix @
-              .nine.mobile.tenths
-                input(value='Invalid entry')
-          .one.half.padded
-            p Validated Entry
-            p.valid
-              input(value='Valid entry')
-            .valid.row
-              .one.mobile.tenth
-                span.prefix @
-              .nine.mobile.tenths
-                input(value='Valid entry')
-        .row.gap-top
-          .one.half.pad-left.pad-right
-            pre(data-lang='html')
-              | <p class="invalid">
-              |   <input value="Invalid entry">
-              | </p>
-              | <div class="invalid row">
-              |   <div class="one mobile tenth"><span class="prefix">@</span></div>
-              |   <div class="nine mobile tenths">
-              |     <input value="Invalid entry">
-              |   </div>
-              | </div>
-          .one.half.pad-left.pad-right
-            pre(data-lang='html')
-              | <p class="valid">
-              |   <input value="Valid entry">
-              | </p>
-              | <div class="valid row">
-              |   <div class="one mobile tenth"><span class="prefix">@</span></div>
-              |   <div class="nine mobile tenths">
-              |     <input value="Valid entry">
-              |   </div>
-              | </div>
-    hr
-    br
     .row.bounceInRight.animated
       .one.whole.padded
+        h4 Form Elements
         form(action='#', method='post')
           fieldset
             legend Example HTML5 Form
@@ -87,7 +41,7 @@ block content
                 input(type='text', placeholder='City')
               .one.fourth.padded
                 span.select-wrap
-                  select.unselected
+                  select
                     option(value='', disabled='', selected='') State
                     option(value='AL') Alabama
                     option(value='AK') Alaska
@@ -367,3 +321,51 @@ block content
               |     </div>
               |   </fieldset>
               | </form>
+    br
+    hr
+    .row.bounceInLeft.animated
+      .one.whole.padded
+        h4 Form Validation
+        .row
+          .one.half.padded
+            p.error Invalid Entry
+            p
+              input(aria-invalid='true', value='Invalid entry')
+            .invalid.row
+              .one.mobile.tenth
+                span.prefix @
+              .nine.mobile.tenths
+                input(aria-invalid='true', value='Invalid entry')
+          .one.half.padded
+            p.success Validated Entry
+            p
+              input(aria-invalid='false', value='Valid entry')
+            .valid.row
+              .one.mobile.tenth
+                span.prefix @
+              .nine.mobile.tenths
+                input(aria-invalid='false', value='Valid entry')
+        .row.gap-top
+          .one.half.pad-left.pad-right
+            pre(data-lang='html')
+              | <p class="invalid">
+              |   <input value="Invalid entry">
+              | </p>
+              | <div class="invalid row">
+              |   <div class="one mobile tenth"><span class="prefix">@</span></div>
+              |   <div class="nine mobile tenths">
+              |     <input value="Invalid entry">
+              |   </div>
+              | </div>
+          .one.half.pad-left.pad-right
+            pre(data-lang='html')
+              | <p class="valid">
+              |   <input value="Valid entry">
+              | </p>
+              | <div class="valid row">
+              |   <div class="one mobile tenth"><span class="prefix">@</span></div>
+              |   <div class="nine mobile tenths">
+              |     <input value="Valid entry">
+              |   </div>
+              | </div>
+

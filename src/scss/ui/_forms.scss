@@ -28,6 +28,8 @@ $question-color:      #9855b4 !default;
 $question-text:       #ffffff !default;
 $question-background: #f0e6f4 !default;
 $question-border:     #f1dbfa !default;
+// shared defaults
+$aria-selectors:      true !default;
 
 
 %fieldset {
@@ -131,7 +133,6 @@ $question-border:     #f1dbfa !default;
   @include rounded(0 $default-radius $default-radius 0);
 }
 
-// prefix/suffix classes
 .prefix {
   @extend %prefix;
 }
@@ -148,12 +149,32 @@ $question-border:     #f1dbfa !default;
     @extend %error-block-prefix;
   }
 }
+input, select, textarea {
+  &.invalid, &.error {
+    @extend %error-block;
+  }
+  @if $aria-selectors {
+    &[aria-invalid="true"] {
+      @extend %error-block;
+    }
+  }
+}
 .success, .valid {
   input, select, textarea {
     @extend %success-block;
   }
   .prefix, .suffix {
     @extend %success-block-prefix;
+  }
+}
+input, select, textarea {
+  &.valid, &.success {
+    @extend %success-block;
+  }
+  @if $aria-selectors {
+    &[aria-invalid="false"] {
+      @extend %success-block;
+    }
   }
 }
 

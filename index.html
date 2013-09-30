@@ -48,14 +48,16 @@
     #resizer {
       position:fixed;
       top:0;
+      left:0;
+      right:0;
       z-index:99;
-      width:29em;
-      left:50%;
-      height:2em;
+      width:100%;
+      text-align:center;
       margin:0 auto;
-      margin-left:-14.5em;
     }
     #resizer ul {
+      font-size: 17px;
+      display: inline-block;
       -webkit-filter: drop-shadow(0 1px 5px rgba(0,0,0,.25));
       -moz-filter: drop-shadow(0 1px 5px rgba(0,0,0,.25));
       -ms-filter: drop-shadow(0 1px 5px rgba(0,0,0,.25));
@@ -68,17 +70,19 @@
       transform: translateZ(0);
       margin:-0.2em auto 0;
     }
-    #closeResizer {
-      padding:0.3em 0.5em 0.2em;
-      text-decoration:none;
-      color:#222;
-    }
-    button.rotate i, button[data-rotate] i {
+    button.rotate i:before, button[data-rotate] i:before {
       -webkit-transition: all 0.15s linear;
       -moz-transition: all 0.15s linear;
       -ms-transition: all 0.15s linear;
       -o-transition: all 0.15s linear;
       transition: all 0.15s linear;
+    }
+    .landscape i:before {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
     }
   </style>
   <script type="text/javascript">
@@ -127,10 +131,9 @@
         return false;
       });
       $('button.rotate').on('click', function(e) {
-        $(this).toggleClass('icon-rotate-90')
-        $(this).children('i[class*=icon]').toggleClass('icon-rotate-270');
+        $(this).toggleClass('landscape');
         $('button[data-rotate=true]').each(function() {
-          $(this).children('i[class*=icon]').toggleClass('icon-rotate-270');
+          $(this).toggleClass('landscape');
           width = $(this).attr('data-viewport-width');
           height = $(this).attr('data-viewport-height');
           // shuffle values
@@ -166,17 +169,17 @@
   </script>
   <div style="position:fixed;top:0;z-index:99;width:100%;">
     <div id="resizer" class="bounceInDown animated">
-      <ul class="button-group pull-left">
-        <li><button class="active" title="Fullscreen" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></button></li>
-        <li><button class="<?php echo $_REQUEST['size'] == 'Desktop' ? 'active' : '' ?>" title="Desktop" href="#" data-viewport-width="1920px" data-viewport-height="1080px"><i class="icon-desktop"></i></button></li>
-        <li><button class="<?php echo $_REQUEST['size'] == 'MacBook' ? 'active' : '' ?>" title="MacBook" href="#" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></button></li>
-        <li><button class="<?php echo $_REQUEST['size'] == 'iPad' ? 'active' : '' ?>" title="iPad" href="#" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></button></li>
-        <li><button class="<?php echo $_REQUEST['size'] == 'Android Tablet' ? 'active' : '' ?>" title="Android Tablet" href="#" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="icon-tablet"></i></button></li>
-        <li><button class="<?php echo $_REQUEST['size'] == 'Android Phone' ? 'active' : '' ?>" title="Android Phone" href="#" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="icon-mobile-phone"></i></button></li>
-        <li><button class="<?php echo $_REQUEST['size'] == 'iPhone' ? 'active' : '' ?>" title="iPhone" href="#" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone"></i></button></li>
-        <li><button class="rotate" title="Toggle Landscape/Portrait" href="#"><i class="icon-refresh"></i></button></li>
+      <ul class="button-group">
+        <li><button class="desktop-only" title="Fullscreen" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></button></li>
+        <li><button class="desktop-only" title="Desktop" data-viewport-width="1920px" data-viewport-height="1080px"><i class="icon-desktop"></i></button></li>
+        <li><button class="desktop-only" title="13 &#39; MacBook Pro" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></button></li>
+        <li><button class="hide-on-small-tablet hide-on-mobile" title="iPad" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></button></li>
+        <li><button class="hide-on-mobile" title="Android Tablet" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="android icon-tablet"></i></button></li>
+        <li><button class="" title="Android Phone" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="android icon-mobile-phone"></i></button></li>
+        <li><button class="" title="iPhone" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone"></i></button></li>
+        <li><button class="rotate" title="Toggle Landscape/Portrait"><i class="icon-refresh"></i></button></li>
+        <li><button id="closeResizer"><i class="icon-remove"></i></button></li>
       </ul>
-      <a id="closeResizer" class="pull-left" title="Close Resizer" href="./docs/home.html"><i class="icon-remove"></i></a>
     </div>
   </div>
   <iframe id="resizerFrame" src="./docs/home.html" frameborder="0"></iframe>
