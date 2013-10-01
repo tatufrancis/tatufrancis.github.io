@@ -7,6 +7,7 @@ $responsive: true !default;
 $navigation-classes: true !default;
 $multi-column-classes:      true !default;
 $multi-column-names:        "one-column" "two-column" "three-column" "four-column" "five-column" !default;
+$inline-conditional-helpers: false !default;
 
 
 @mixin mobile {
@@ -15,14 +16,15 @@ $multi-column-names:        "one-column" "two-column" "three-column" "four-colum
       // responsive grid
       @include grid-responsive(false);
       // conditional helpers
-      .mobile-only { display: block !important; }
-      span.mobile-only { display: inline !important; }
-      .hide-on-small-tablet { display: block !important; }
-      span.hide-on-small-tablet { display: inline !important; }
-      .small-tablet-only { display: none !important; }
-      span.small-tablet-only { display: none !important; }
-      .hide-on-mobile { display: none !important; }
       .desktop-only { display: none !important; }
+      .ipad-only { display: none !important; }
+      .small-tablet-only { display: none !important; }
+      .mobile-only { display: block !important; }
+      .hide-on-mobile { display: none !important; }
+      .hide-on-small-tablet { display: block !important; }
+      @if $inline-conditional-helpers {
+        span.mobile-only { display: inline !important; }
+      }
       // spacer overrides
       .zero-mobile { @include helper_reset(); }
       .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }

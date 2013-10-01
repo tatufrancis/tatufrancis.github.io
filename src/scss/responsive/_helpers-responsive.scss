@@ -4,12 +4,16 @@
 // =============================================
 
 $responsive: true !default;
+$inline-conditional-helpers: false !default;
 
 
 @if $responsive {
   // desktop helpers
   .desktop-only { display: block; }
-  .hide-on-desktop {}
+  @if $inline-conditional-helpers {
+    span.desktop-only { display: inline; }
+  }
+  .hide-on-desktop { display: none; }
   // ipad helpers
   .ipad-only { display: none !important; }
   .hide-on-ipad {}
