@@ -13,7 +13,7 @@ $oldIE: false !default;
 
 @mixin helper_reset($properties: padding margin, $spacers: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left) {
   @for $i from 1 through length($spacers) {
-    &.#{nth($spacers, $i)}, &.#{nth($spacers, $i)}.double, &.#{nth($spacers, $i)}.triple {
+    &.#{nth($spacers, $i)}, &.half-#{nth($spacers, $i)}, &.double-#{nth($spacers, $i)}, &.triple-#{nth($spacers, $i)} {
       @for $i from 1 through length($properties) {
         #{nth($properties, $i)}: 0 !important;
       }
