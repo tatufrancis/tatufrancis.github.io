@@ -35,21 +35,31 @@ pre-compiled CSS and JS files into your project, and then refer to them in
 markup. The 2 most important files are:
 
 * css/groundwork.css
-* js/groundwork.all.js (requires jQuery & modernizr)
+* js/groundwork.all.js
 
-In addition, these support files may be used:
+In addition to these (required) support files:
 
-* js/libs/jquery-1.10.2.min.js
-* js/libs/modernizr-2.6.2.min.js
-* css/groundwork-ie.css (IE Compatibility)
+* js/libs/modernizr-2.6.2.min.js (required)
+* js/libs/jquery-1.10.2.min.js (required)
+* css/groundwork-ie.css (required for old IE compatibility)
 
 All in all, you may end up with markup that looks like the following:
 
 **At the top of your HTML document (within the head section)**
 
-    <script type="text/javascript" src="/js/libs/modernizr-2.6.2.min.js"></script>
+    <!-- Modernizr -->
+    <script src="/js/libs/modernizr-2.6.2.min.js"></script>
+    <!-- framework css -->
+    <!--[if gt IE 9]><!-->
     <link type="text/css" rel="stylesheet" href="/css/groundwork.css">
-    <!--[if IE]><link type="text/css" rel="stylesheet" href="/css/groundwork-ie.css"><![endif]-->
+    <!--<![endif]-->
+    <!--[if lte IE 9]>
+    <link type="text/css" rel="stylesheet" href="/css/groundwork-core.css">
+    <link type="text/css" rel="stylesheet" href="/css/groundwork-type.css">
+    <link type="text/css" rel="stylesheet" href="/css/groundwork-ui.css">
+    <link type="text/css" rel="stylesheet" href="/css/groundwork-anim.css">
+    <link type="text/css" rel="stylesheet" href="/css/groundwork-ie.css">
+    <![endif]-->
 
 **At the bottom of your HTML document (just before your closing body tag)**
 
