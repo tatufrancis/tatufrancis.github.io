@@ -13,7 +13,7 @@ $inline-conditional-helpers: false !default;
   @if $inline-conditional-helpers {
     span.desktop-only { display: inline; }
   }
-  .hide-on-desktop { display: none; }
+  .hide-on-desktop {}
   // ipad helpers
   .ipad-only { display: none !important; }
   .hide-on-ipad {}

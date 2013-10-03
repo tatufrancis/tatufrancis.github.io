@@ -12,6 +12,11 @@ $container-width: 1200px !default;
 
 
 html {
+  &.ie {
+    .hide-on-desktop {
+      display: none;
+    }
+  }
   &.lt-ie9 {
     min-width: $container-width !important;
     body {
