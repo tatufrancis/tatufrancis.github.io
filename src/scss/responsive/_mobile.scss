@@ -20,8 +20,8 @@ $inline-conditional-helpers: false !default;
       .ipad-only { display: none !important; }
       .small-tablet-only { display: none !important; }
       .mobile-only { display: block !important; }
-      .hide-on-mobile { display: none !important; }
       .hide-on-small-tablet { display: block !important; }
+      .hide-on-mobile { display: none !important; }
       @if $inline-conditional-helpers {
         span.mobile-only { display: inline !important; }
       }
