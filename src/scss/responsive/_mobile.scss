@@ -25,27 +25,48 @@ $inline-conditional-helpers: false !default;
       @if $inline-conditional-helpers {
         span.mobile-only { display: inline !important; }
       }
-      // spacer overrides
-      .zero-mobile { @include helper_reset(); }
-      .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-      .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
       .no-border-mobile { border: 0; }
+      @if $size-classes {
+        .small-mobile                { @include _small; }
+        .medium-mobile               { @include _medium; }
+        .large-mobile                { @include _large; }
+      }
       @if $spacer-classes {
+        // spacer overrides
+        .zero-mobile                 { @include helper_reset; }
         .padded-mobile               { @include _padded; }
         .pad-top-mobile              { @include _pad-top; }
         .pad-right-mobile            { @include _pad-right; }
         .pad-bottom-mobile           { @include _pad-bottom; }
         .pad-left-mobile             { @include _pad-left; }
+        .no-padding-mobile,
+        .no-padded-mobile,
+        .no-pad-mobile               { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+        .no-pad-top-mobile           { @include _pad-top(0); }
+        .no-pad-right-mobile         { @include _pad-right(0); }
+        .no-pad-bottom-mobile        { @include _pad-bottom(0); }
+        .no-pad-left-mobile          { @include _pad-left(0); }
         .gapped-mobile               { @include _gapped; }
         .gap-top-mobile              { @include _gap-top; }
         .gap-right-mobile            { @include _gap-right; }
         .gap-bottom-mobile           { @include _gap-bottom; }
         .gap-left-mobile             { @include _gap-left; }
+        .no-margin-mobile,
+        .no-gapped-mobile,
+        .no-gap-mobile               { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+        .no-gap-top-mobile           { @include _gap-top(0); }
+        .no-gap-right-mobile         { @include _gap-right(0); }
+        .no-gap-bottom-mobile        { @include _gap-bottom(0); }
+        .no-gap-left-mobile          { @include _gap-left(0); }
         .offset-mobile               { @include _offset; }
         .offset-top-mobile           { @include _offset-top; }
         .offset-right-mobile         { @include _offset-right; }
         .offset-bottom-mobile        { @include _offset-bottom; }
         .offset-left-mobile          { @include _offset-left; }
+        .no-offset-top-mobile        { @include _offset-top(0); }
+        .no-offset-right-mobile      { @include _offset-right(0); }
+        .no-offset-bottom-mobile     { @include _offset-bottom(0); }
+        .no-offset-left-mobile       { @include _offset-left(0); }
       }
       @if $spacer-mod-classes {
         .half-padded-mobile          { @include _padded(0.5); }

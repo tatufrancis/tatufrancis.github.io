@@ -22,27 +22,48 @@ $inline-conditional-helpers: false !default;
       @if $inline-conditional-helpers {
         span.desktop-only { display: inline !important; }
       }
-      // spacer overrides
-      .zero-desktop { @include helper_reset(); }
-      .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-      .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
       .no-border-desktop { border: 0; }
+      @if $size-classes {
+        .small-desktop                { @include _small; }
+        .medium-desktop               { @include _medium; }
+        .large-desktop                { @include _large; }
+      }
       @if $spacer-classes {
+        // spacer overrides
+        .zero-desktop                 { @include helper_reset; }
         .padded-desktop               { @include _padded; }
         .pad-top-desktop              { @include _pad-top; }
         .pad-right-desktop            { @include _pad-right; }
         .pad-bottom-desktop           { @include _pad-bottom; }
         .pad-left-desktop             { @include _pad-left; }
+        .no-padding-desktop,
+        .no-padded-desktop,
+        .no-pad-desktop               { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+        .no-pad-top-desktop           { @include _pad-top(0); }
+        .no-pad-right-desktop         { @include _pad-right(0); }
+        .no-pad-bottom-desktop        { @include _pad-bottom(0); }
+        .no-pad-left-desktop          { @include _pad-left(0); }
         .gapped-desktop               { @include _gapped; }
         .gap-top-desktop              { @include _gap-top; }
         .gap-right-desktop            { @include _gap-right; }
         .gap-bottom-desktop           { @include _gap-bottom; }
         .gap-left-desktop             { @include _gap-left; }
+        .no-margin-desktop,
+        .no-gapped-desktop,
+        .no-gap-desktop               { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+        .no-gap-top-desktop           { @include _gap-top(0); }
+        .no-gap-right-desktop         { @include _gap-right(0); }
+        .no-gap-bottom-desktop        { @include _gap-bottom(0); }
+        .no-gap-left-desktop          { @include _gap-left(0); }
         .offset-desktop               { @include _offset; }
         .offset-top-desktop           { @include _offset-top; }
         .offset-right-desktop         { @include _offset-right; }
         .offset-bottom-desktop        { @include _offset-bottom; }
         .offset-left-desktop          { @include _offset-left; }
+        .no-offset-top-desktop        { @include _offset-top(0); }
+        .no-offset-right-desktop      { @include _offset-right(0); }
+        .no-offset-bottom-desktop     { @include _offset-bottom(0); }
+        .no-offset-left-desktop       { @include _offset-left(0); }
       }
       @if $spacer-mod-classes {
         .half-padded-desktop          { @include _padded(0.5); }

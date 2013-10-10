@@ -22,72 +22,109 @@ $inline-conditional-helpers: false !default;
       @if $inline-conditional-helpers {
         span.ipad-only { display: inline !important; }
       }
-      // spacer overrides
-      .zero-ipad { @include helper_reset(); }
-      .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-      .no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
       .no-border-ipad { border: 0; }
+      @if $size-classes {
+        .small-ipad                { @include _small; }
+        .medium-ipad               { @include _medium; }
+        .large-ipad                { @include _large; }
+      }
       @if $spacer-classes {
-        .padded-ipad        { @include _padded;
-          &.double          { @include _padded(2); }
-          &.triple          { @include _padded(3); }
-        }
-        .pad-top-ipad       { @include _pad-top;
-          &.double          { @include _pad-top(2); }
-          &.triple          { @include _pad-top(3); }
-        }
-        .pad-right-ipad     { @include _pad-right;
-          &.double          { @include _pad-right(2); }
-          &.triple          { @include _pad-right(3); }
-        }
-        .pad-bottom-ipad    { @include _pad-bottom;
-          &.double          { @include _pad-bottom(2); }
-          &.triple          { @include _pad-bottom(3); }
-        }
-        .pad-left-ipad      { @include _pad-left;
-          &.double          { @include _pad-left(2); }
-          &.triple          { @include _pad-left(3); }
-        }
-        .gapped-ipad        { @include _gapped;
-          &.double          { @include _gapped(2); }
-          &.triple          { @include _gapped(3); }
-        }
-        .gap-top-ipad       { @include _gap-top;
-          &.double          { @include _gap-top(2); }
-          &.triple          { @include _gap-top(3); }
-        }
-        .gap-right-ipad     { @include _gap-right;
-          &.double          { @include _gap-right(2); }
-          &.triple          { @include _gap-right(3); }
-        }
-        .gap-bottom-ipad    { @include _gap-bottom;
-          &.double          { @include _gap-bottom(2); }
-          &.triple          { @include _gap-bottom(3); }
-        }
-        .gap-left-ipad      { @include _gap-left;
-          &.double          { @include _gap-left(2); }
-          &.triple          { @include _gap-left(3); }
-        }
-        .offset-ipad        { @include _offset;
-          &.double          { @include _offset(2); }
-          &.triple          { @include _offset(3); }
-        }
-        .offset-top-ipad    { @include _offset-top;
-          &.double          { @include _offset-top(2); }
-          &.triple          { @include _offset-top(3); }
-        }
-        .offset-right-ipad  { @include _offset-right;
-          &.double          { @include _offset-right(2); }
-          &.triple          { @include _offset-right(3); }
-        }
-        .offset-bottom-ipad { @include _offset-bottom;
-          &.double          { @include _offset-bottom(2); }
-          &.triple          { @include _offset-bottom(3); }
-        }
-        .offset-left-ipad   { @include _offset-left;
-          &.double          { @include _offset-left(2); }
-          &.triple          { @include _offset-left(3); }
-        }
+        // spacer overrides
+        .zero-ipad                 { @include helper_reset; }
+        .padded-ipad               { @include _padded; }
+        .pad-top-ipad              { @include _pad-top; }
+        .pad-right-ipad            { @include _pad-right; }
+        .pad-bottom-ipad           { @include _pad-bottom; }
+        .pad-left-ipad             { @include _pad-left; }
+        .no-padding-ipad,
+        .no-padded-ipad,
+        .no-pad-ipad               { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+        .no-pad-top-ipad           { @include _pad-top(0); }
+        .no-pad-right-ipad         { @include _pad-right(0); }
+        .no-pad-bottom-ipad        { @include _pad-bottom(0); }
+        .no-pad-left-ipad          { @include _pad-left(0); }
+        .gapped-ipad               { @include _gapped; }
+        .gap-top-ipad              { @include _gap-top; }
+        .gap-right-ipad            { @include _gap-right; }
+        .gap-bottom-ipad           { @include _gap-bottom; }
+        .gap-left-ipad             { @include _gap-left; }
+        .no-margin-ipad,
+        .no-gapped-ipad,
+        .no-gap-ipad               { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+        .no-gap-top-ipad           { @include _gap-top(0); }
+        .no-gap-right-ipad         { @include _gap-right(0); }
+        .no-gap-bottom-ipad        { @include _gap-bottom(0); }
+        .no-gap-left-ipad          { @include _gap-left(0); }
+        .offset-ipad               { @include _offset; }
+        .offset-top-ipad           { @include _offset-top; }
+        .offset-right-ipad         { @include _offset-right; }
+        .offset-bottom-ipad        { @include _offset-bottom; }
+        .offset-left-ipad          { @include _offset-left; }
+        .no-offset-top-ipad        { @include _offset-top(0); }
+        .no-offset-right-ipad      { @include _offset-right(0); }
+        .no-offset-bottom-ipad     { @include _offset-bottom(0); }
+        .no-offset-left-ipad       { @include _offset-left(0); }
+      }
+      @if $spacer-mod-classes {
+        .half-padded-ipad          { @include _padded(0.5); }
+        .double-padded-ipad        { @include _padded(2); }
+        .triple-padded-ipad        { @include _padded(3); }
+
+        .half-pad-top-ipad         { @include _pad-top(0.5); }
+        .double-pad-top-ipad       { @include _pad-top(2); }
+        .triple-pad-top-ipad       { @include _pad-top(3); }
+
+        .half-pad-right-ipad       { @include _pad-right(0.5); }
+        .double-pad-right-ipad     { @include _pad-right(2); }
+        .triple-pad-right-ipad     { @include _pad-right(3); }
+
+        .half-pad-bottom-ipad      { @include _pad-bottom(0.5); }
+        .double-pad-bottom-ipad    { @include _pad-bottom(2); }
+        .triple-pad-bottom-ipad    { @include _pad-bottom(3); }
+
+        .half-pad-left-ipad        { @include _pad-left(0.5); }
+        .double-pad-left-ipad      { @include _pad-left(2); }
+        .triple-pad-left-ipad      { @include _pad-left(3); }
+
+        .half-gapped-ipad          { @include _gapped(0.5); }
+        .double-gapped-ipad        { @include _gapped(2); }
+        .triple-gapped-ipad        { @include _gapped(3); }
+
+        .half-gap-top-ipad         { @include _gap-top(0.5); }
+        .double-gap-top-ipad       { @include _gap-top(2); }
+        .triple-gap-top-ipad       { @include _gap-top(3); }
+
+        .half-gap-right-ipad       { @include _gap-right(0.5); }
+        .double-gap-right-ipad     { @include _gap-right(2); }
+        .triple-gap-right-ipad     { @include _gap-right(3); }
+
+        .half-gap-bottom-ipad      { @include _gap-bottom(0.5); }
+        .double-gap-bottom-ipad    { @include _gap-bottom(2); }
+        .triple-gap-bottom-ipad    { @include _gap-bottom(3); }
+
+        .half-gap-left-ipad        { @include _gap-left(0.5); }
+        .double-gap-left-ipad      { @include _gap-left(2); }
+        .triple-gap-left-ipad      { @include _gap-left(3); }
+
+        .half-offset-ipad          { @include _offset(0.5); }
+        .double-offset-ipad        { @include _offset(2); }
+        .triple-offset-ipad        { @include _offset(3); }
+
+        .half-offset-top-ipad      { @include _offset-top(0.5); }
+        .double-offset-top-ipad    { @include _offset-top(2); }
+        .triple-offset-top-ipad    { @include _offset-top(3); }
+
+        .half-offset-right-ipad    { @include _offset-right(0.5); }
+        .double-offset-right-ipad  { @include _offset-right(2); }
+        .triple-offset-right-ipad  { @include _offset-right(3); }
+
+        .half-offset-bottom-ipad   { @include _offset-bottom(0.5); }
+        .double-offset-bottom-ipad { @include _offset-bottom(2); }
+        .triple-offset-bottom-ipad { @include _offset-bottom(3); }
+
+        .half-offset-left-ipad     { @include _offset-left(0.5); }
+        .double-offset-left-ipad   { @include _offset-left(2); }
+        .triple-offset-left-ipad   { @include _offset-left(3); }
       }
       @if $positioning-classes {
         .fixed-ipad           { @include _fixed; }
