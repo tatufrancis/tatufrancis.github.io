@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>GroundworkCSS &hearts; Media Queries</title>
+    <title>GroundworkCSS &hearts;</title>
     <!-- Modernizr -->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
@@ -120,78 +120,95 @@
       <div class="padded">
         <div class="row">
           <div class="three fifths bounceInRight animated">
-            <h1 class="zero museo-slab">Media Queries</h1>
-            <p class="quicksand">Restrict CSS rules to targeted browser conditions, such as viewport widths & pixel densities</p>
+            <h1 class="zero museo-slab">Contact Page Example Layout</h1>
+            <p class="quicksand">Demonstrates Typography, Form Elements, Buttons, Grid Breakpoint Modifiers and Adapters</p>
           </div>
           <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
-            <p class="quicksand">Documentation: Media Queries</p>
-            <p><a href="breakpoints.html" rel="next" class="green button">Also See: Targeted Breakpoints </a></p>
+            <p class="quicksand">Example Layout 2 of 4</p>
+            <p><a href="home.html" rel="prev" class="blue button">Back</a> <a href="grid.html" rel="next" class="green button">Next: Grid System</a></p>
           </div>
         </div>
       </div>
       <hr>
-      <div class="row">
-        <div class="one whole padded">
-          <div class="bounceInLeft animated">
-            <h4>Example Media Queries</h4>
-            <div class="row">
-              <div class="one half padded">
-                <p>Mobile</p>
-                <pre data-lang="css">@media (max-width: 480px) {
-  // CSS that only applies to viewports 
-  // less than or equal to 480 pixles goes here
-}</pre>
+      <article class="row">
+        <section class="two small-tablet thirds padded bounceInDown animated">
+          <h1>Contact Us</h1>
+          <p>We love to hear from you and welcome your feedback. Use the form below to send us an email:</p>
+          <form>
+            <fieldset>
+              <legend>Contact Form</legend>
+              <div class="row">
+                <div class="one small-tablet fourth padded no-pad-bottom-mobile">
+                  <label for="name">Your Name</label>
+                </div>
+                <div class="three small-tablet fourths padded no-pad-top-mobile">
+                  <input id="name" name="name" type="text" placeholder="Your Name">
+                </div>
               </div>
-              <div class="one half padded">
-                <p>Not Mobile</p>
-                <pre data-lang="css">@media (min-width: 481px) {
-  // CSS that only applies to viewports 
-  // greater than 480 pixles goes here
-}</pre>
+              <div class="row">
+                <div class="one small-tablet fourth padded no-pad-bottom-mobile">
+                  <label for="email">Your Email</label>
+                </div>
+                <div class="three small-tablet fourths padded no-pad-top-mobile">
+                  <input id="email" name="email" type="text" placeholder="you@example.com">
+                </div>
               </div>
-            </div><br>
-            <div class="row">
-              <div class="one half padded">
-                <p>Small Tablet</p>
-                <pre data-lang="css">@media (max-width: 767px) {
-  // CSS that only applies to viewports 
-  // less than 768 pixles goes here
-}</pre>
+              <div class="row">
+                <div class="one whole pad-left pad-right pad-top">
+                  <label for="message">Your Message</label>
+                </div>
               </div>
-              <div class="one half padded">
-                <p>iPad</p>
-                <pre data-lang="css">@media (min-width: 768px) and (max-width:1024px) {
-  // CSS that only applies to viewports 
-  // of similar size to the ipad goes here
-}</pre>
+              <div class="row">
+                <div class="one whole pad-left pad-right pad-bottom">
+                  <textarea id="message" name="message" placeholder="Write us a message here..."></textarea>
+                </div>
               </div>
-            </div><br>
-            <div class="row">
-              <div class="one half padded">
-                <p>Desktop</p>
-                <pre data-lang="css">@media (min-width: 1025px) {
-  // CSS that only applies to viewports 
-  // greater than 1024 pixles goes here
-}</pre>
+              <div class="row">
+                <div class="one whole padded align-right">
+                  <button type="submit" class="asphalt">Send Message</button>
+                </div>
               </div>
-              <div class="one half padded">
-                <p>iPad Retina</p>
-                <pre data-lang="css">@media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  // CSS that only applies to viewports 
-  // of similar size to the ipad and 
-  // with double pixel density goes here
-}</pre>
-              </div>
-            </div><br>
-            <hr><br>
-          </div>
-          <div class="bounceInUp animated">
-            <h4>Targeted Breakpoints</h4>
-            <p>Groundwork utilizes Sass variables to introduce <a href="breakpoints.html">logical media queries</a> which can help keep code organized, meaningful, and easier to read. The Sass variable names make targeting common devices and viewport size ranges a more intuitive and more natural step in the optimization process.</p>
-            <p><a href="breakpoints.html" rel="next" class="green button">Read More</a></p>
-          </div>
-        </div>
-      </div>
+            </fieldset>
+          </form>
+        </section>
+        <aside class="one small-tablet third padded border-left no-border-mobile bounceInRight animated">
+          <h3>Our Location</h3>
+          <h5>
+            <address>12345 Some Street<br>San Francisco, CA 94018</address>
+          </h5>
+          <p class="double-gap-bottom"><a href="https://maps.google.com/maps?f=d&amp;source=s_q&amp;hl=en&amp;geocode=%3BCWTrT4dujQbzFYZxQAIdei-0-Cl7MGKmg4CFgDFQ-cEtDAGZ_Q&amp;q=SOMA+san+francisco&amp;aq=&amp;sll=37.77493,-122.419416&amp;sspn=0.292536,0.657463&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=South+of+Market,+San+Francisco,+California&amp;z=14&amp;vpsrc=0&amp;iwloc=A&amp;daddr=South+of+Market,+San+Francisco,+CA" role="button" target="_blank" class="green noicon"><i class="icon-map-marker gap-right"></i>Get Directions</a></p>
+          <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SOMA+san+francisco&amp;aq=&amp;sll=37.77493,-122.419416&amp;sspn=0.292536,0.657463&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=South+of+Market,+San+Francisco,+California&amp;z=14&amp;ll=37.777798,-122.409094&amp;output=embed"></iframe>
+        </aside>
+      </article>
+      <hr class="gapped hide-on-mobile">
+      <article class="row">
+        <section class="one small-tablet third pad-left pad-right pad-top bounceInLeft animated">
+          <h3 class="zero">User Forums</h3>
+          <p>Browse the user forums</p>
+          <p class="mobile-only"><a href="#" role="button" class="blue">Visit Forums</a></p>
+        </section>
+        <section class="one small-tablet third pad-left pad-right pad-top bounceInUp animated">
+          <h3 class="zero">FAQs</h3>
+          <p>Browse the frequently asked questions</p>
+          <p class="mobile-only"><a href="#" role="button" class="pink">View FAQs</a></p>
+        </section>
+        <section class="one small-tablet third pad-left pad-right pad-top bounceInRight animated">
+          <h3 class="zero">Get Support</h3>
+          <p>Live chat with support 24 hours a day, 7 days a week</p>
+          <p class="mobile-only"><a href="#" role="button" class="yellow">Live Chat</a></p>
+        </section>
+      </article>
+      <article class="row hide-on-mobile">
+        <section class="one small-tablet third pad-left pad-right pad-bottom bounceInLeft animated">
+          <p><img src="http://placehold.it/380x200/3498db/ffffff"></p>
+        </section>
+        <section class="one small-tablet third pad-left pad-right pad-bottom bounceInUp animated">
+          <p><img src="http://placehold.it/380x200/f02475/ffffff"></p>
+        </section>
+        <section class="one small-tablet third pad-left pad-right pad-bottom bounceInUp animated">
+          <p><img src="http://placehold.it/380x200/f1c40f/ffffff"></p>
+        </section>
+      </article>
     </div>
     <footer class="gap-top bounceInUp animated">
       <div class="box square charcoal">
