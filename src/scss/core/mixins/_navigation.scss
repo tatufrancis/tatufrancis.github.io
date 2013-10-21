@@ -1,0 +1,104 @@
+///////////////////////
+//    navigation     //
+///////////////////////
+
+@import "../../icons/variables";
+
+@mixin hamburger-mode($filters: "") {
+  .nav:not(.nocollapse)#{$filters} {
+    &:before {
+      float: left;
+      display: inline-block;
+      content: attr(title);
+      padding: 0.25em 0.5em;
+      font-weight: bold;
+    }
+    button.hamburger {
+      display: inline-block;
+      &:before {
+        @include icon($fa-var-list);
+      }
+      &[aria-expanded="true"] {
+        &:before {
+          content: $fa-var-caret-square-o-up;
+        }
+      }
+    }
+    > ul {
+      display: none;
+      > li {
+        > a, > button {
+          border-top-width: $border-thickness;
+        }
+      }
+    }
+    > ul[aria-expanded="true"] {
+      display: block;
+    }
+    li {
+      float: none;
+      display: block;
+      ul {
+        position: static;
+      }
+      li {
+        a, button {
+          padding-left: 1.5em;
+        }
+        li {
+          a, button {
+            padding-left: 2em;
+          }
+          li {
+            a, button {
+              padding-left: 2.5em;
+            }
+            li {
+              a, button {
+                padding-left: 3em;
+              }
+            }
+          }
+        }
+      }
+      &[role="menu"] {
+        ul {
+          border: 0;
+          > li {
+            &:first-child {
+              > a, > button {
+                border-top-width: $border-thickness;
+              }
+            }
+          }
+        }
+        > a, > button {
+          &:after {
+            float: none;
+            content: $fa-var-caret-down;
+          }
+        }
+        &[aria-pressed="true"] {
+          > a, > button {
+            &:after {
+              content: $fa-var-caret-up;
+            }
+          }
+        }
+      }
+    }
+    a, button:not(.hamburger) {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    @for $i from 1 through length($modifier-name) {
+      &.#{nth($modifier-name, $i)} {
+        li ul a, li[role="menu"] ul a, a,
+        li ul button, li[role="menu"] ul button, button {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

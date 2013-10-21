@@ -9,13 +9,14 @@
  *
 ###
 
-delayedAdjustTables = []
-responsiveTableIndex = 0
+GroundworkCSS.responsiveTableIndex = 0
+GroundworkCSS.delayedAdjustTables = []
+GroundworkCSS.responsiveTableElements = []
 
-class ResponsiveTable
+class GroundworkCSS.ResponsiveTable
 
   constructor: (el) ->
-    @index = responsiveTableIndex++
+    @index = GroundworkCSS.responsiveTableIndex++
     @el = el
     @compression = $(@el).data('compression') || 5
     @minFontSize = $(@el).data('min') || 10
@@ -71,20 +72,18 @@ class ResponsiveTable
 
   adjustOnResize: ->
     $(window).on 'resize', =>
-      clearTimeout(delayedAdjustTables[@index])
-      delayedAdjustTables[@index] = setTimeout(=>
+      clearTimeout(GroundworkCSS.delayedAdjustTables[@index])
+      GroundworkCSS.delayedAdjustTables[@index] = setTimeout(=>
         @resizeTable()
       , 20)
 
 
 (($) ->
 
-  responsiveTableElements = []
-
   $.fn.responsiveTables = (options) ->
 
     @each ->
-      responsiveTableElements.push( new ResponsiveTable(@) )
+      GroundworkCSS.responsiveTableElements.push( new GroundworkCSS.ResponsiveTable(@) )
 
 ) jQuery
 

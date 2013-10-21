@@ -1,4 +1,6 @@
 (function() {
+  window.GroundworkCSS || (window.GroundworkCSS = {});
+
   $(function() {
     var $body;
     $body = $('body');

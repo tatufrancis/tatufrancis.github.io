@@ -9,13 +9,14 @@
  *
 ###
 
-delayedAdjustText = []
-responsiveTextIndex = 0
+GroundworkCSS.delayedAdjustText = []
+GroundworkCSS.responsiveTextIndex = 0
+GroundworkCSS.responsiveTextElements = []
 
-class ResponsiveText
+class GroundworkCSS.ResponsiveText
 
   constructor: (el) ->
-    @index = responsiveTextIndex++
+    @index = GroundworkCSS.responsiveTextIndex++
     @el = el
     @compression = $(@el).data('compression') || 10
     @minFontSize = $(@el).data('min') || Number.NEGATIVE_INFINITY
@@ -43,8 +44,8 @@ class ResponsiveText
 
   adjustOnResize: ->
     $(window).on 'resize', =>
-      clearTimeout(delayedAdjustText[@index])
-      delayedAdjustText[@index] = setTimeout(=>
+      clearTimeout(GroundworkCSS.delayedAdjustText[@index])
+      GroundworkCSS.delayedAdjustText[@index] = setTimeout(=>
         @resizeText()
       , 20)
 
@@ -71,12 +72,10 @@ class ResponsiveText
 
 (($) ->
 
-  responsiveTextElements = []
-
   $.fn.responsiveText = (options) ->
 
     @each ->
-      responsiveTextElements.push( new ResponsiveText(@) )
+      GroundworkCSS.responsiveTextElements.push( new GroundworkCSS.ResponsiveText(@) )
 
 ) jQuery
 

@@ -1,11 +1,16 @@
 (function() {
+  window.GroundworkCSS || (window.GroundworkCSS = {});
+
   $(function() {
-    return $('body').on('click', '.dismissible', function() {
-      var _this = this;
-      $(this).addClass('dismiss animated');
+    var $body;
+    $body = $('body');
+    return $body.on('click', '.dismissible', function() {
+      var $box;
+      $box = $(this);
+      $box.addClass('dismiss animated');
       return setTimeout(function() {
-        return $(_this).hide(250, function() {
-          return $(this).remove();
+        return $box.hide(250, function() {
+          return $box.remove();
         });
       }, 1000);
     });

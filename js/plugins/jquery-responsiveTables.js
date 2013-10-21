@@ -11,15 +11,15 @@
 
 
 (function() {
-  var ResponsiveTable, delayedAdjustTables, responsiveTableIndex;
+  GroundworkCSS.responsiveTableIndex = 0;
 
-  delayedAdjustTables = [];
+  GroundworkCSS.delayedAdjustTables = [];
 
-  responsiveTableIndex = 0;
+  GroundworkCSS.responsiveTableElements = [];
 
-  ResponsiveTable = (function() {
+  GroundworkCSS.ResponsiveTable = (function() {
     function ResponsiveTable(el) {
-      this.index = responsiveTableIndex++;
+      this.index = GroundworkCSS.responsiveTableIndex++;
       this.el = el;
       this.compression = $(this.el).data('compression') || 5;
       this.minFontSize = $(this.el).data('min') || 10;
@@ -83,8 +83,8 @@
     ResponsiveTable.prototype.adjustOnResize = function() {
       var _this = this;
       return $(window).on('resize', function() {
-        clearTimeout(delayedAdjustTables[_this.index]);
-        return delayedAdjustTables[_this.index] = setTimeout(function() {
+        clearTimeout(GroundworkCSS.delayedAdjustTables[_this.index]);
+        return GroundworkCSS.delayedAdjustTables[_this.index] = setTimeout(function() {
           return _this.resizeTable();
         }, 20);
       });
@@ -95,11 +95,9 @@
   })();
 
   (function($) {
-    var responsiveTableElements;
-    responsiveTableElements = [];
     return $.fn.responsiveTables = function(options) {
       return this.each(function() {
-        return responsiveTableElements.push(new ResponsiveTable(this));
+        return GroundworkCSS.responsiveTableElements.push(new GroundworkCSS.ResponsiveTable(this));
       });
     };
   })(jQuery);

@@ -1,0 +1,60 @@
+// semantic grid test settings
+
+$grid-classes: false;
+
+@import "test-settings";
+@import "../../../src/scss/core/all-core";
+
+// semantic grid test
+[role="main"] {
+  @extend %container;
+}
+
+article, aside {
+  @extend %padded;
+}
+
+section {
+  @extend %row;
+}
+
+section:nth-child(1) {
+  article {
+    @include columns($four-fifths, $three-fourths, $two-thirds, $one-half);
+  }
+
+  aside {
+    @include columns($one-fifth, $one-fourth, $one-third, $one-half);
+  }
+}
+
+section:nth-child(2) {
+  article {
+    @include columns($five-sevenths, $three-fourths, $two-thirds, $one-half);
+  }
+
+  aside {
+    @include columns($two-sevenths, $one-fourth, $one-third, $one-half);
+  }
+}
+
+section:nth-child(3) {
+  article {
+    @include columns($eight-fourteenths, $three-fourths, $two-thirds, $one-half);
+  }
+
+  aside {
+    @include columns($six-fourteenths, $one-fourth, $one-third, $one-half);
+  }
+}
+
+section:nth-child(4) {
+  article {
+    @include columns($thirteen-twentieths, $three-fourths, $two-thirds, $one-half);
+  }
+
+  aside {
+    @include columns($seven-twentieths, $one-fourth, $one-third, $one-half);
+  }
+}
+

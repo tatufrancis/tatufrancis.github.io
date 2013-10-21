@@ -18,7 +18,7 @@ environment = :development
 # relative_assets = true
 
 line_comments = false
-color_output = false
+color_output = true
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
@@ -26,3 +26,4 @@ color_output = false
 # and then run:
 # sass-convert -R --from scss --to sass src/scss scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
+

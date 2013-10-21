@@ -1,0 +1,451 @@
+// =============================================
+//              Layout Helpers
+//          Last Updated:2013-8-16
+// =============================================
+
+///////////////////////
+//    placeholders   //
+///////////////////////
+
+
+// spacer placeholders
+%padded               { @include _padded; }
+%half-padded          { @include _padded(0.5); }
+%double-padded        { @include _padded(2); }
+%triple-padded        { @include _padded(3); }
+
+%pad-top              { @include _pad-top; }
+%half-pad-top         { @include _pad-top(0.5); }
+%double-pad-top       { @include _pad-top(2); }
+%triple-pad-top       { @include _pad-top(3); }
+
+%pad-right            { @include _pad-right; }
+%half-pad-right       { @include _pad-right(0.5); }
+%double-pad-right     { @include _pad-right(2); }
+%triple-pad-right     { @include _pad-right(3); }
+
+%pad-bottom           { @include _pad-bottom; }
+%half-pad-bottom      { @include _pad-bottom(0.5); }
+%double-pad-bottom    { @include _pad-bottom(2); }
+%triple-pad-bottom    { @include _pad-bottom(3); }
+
+%pad-left             { @include _pad-left; }
+%half-pad-left        { @include _pad-left(0.5); }
+%double-pad-left      { @include _pad-left(2); }
+%triple-pad-left      { @include _pad-left(3); }
+
+%gapped               { @include _gapped; }
+%half-gapped          { @include _gapped(0.5); }
+%double-gapped        { @include _gapped(2); }
+%triple-gapped        { @include _gapped(3); }
+
+%gap-top              { @include _gap-top; }
+%half-gap-top         { @include _gap-top(0.5); }
+%double-gap-top       { @include _gap-top(2); }
+%triple-gap-top       { @include _gap-top(3); }
+
+%gap-right            { @include _gap-right; }
+%half-gap-right       { @include _gap-right(0.5); }
+%double-gap-right     { @include _gap-right(2); }
+%triple-gap-right     { @include _gap-right(3); }
+
+%gap-bottom           { @include _gap-bottom; }
+%half-gap-bottom      { @include _gap-bottom(0.5); }
+%double-gap-bottom    { @include _gap-bottom(2); }
+%triple-gap-bottom    { @include _gap-bottom(3); }
+
+%gap-left             { @include _gap-left; }
+%half-gap-left        { @include _gap-left(0.5); }
+%double-gap-left      { @include _gap-left(2); }
+%triple-gap-left      { @include _gap-left(3); }
+
+%offset               { @include _offset; }
+%half-offset          { @include _offset(0.5); }
+%double-offset        { @include _offset(2); }
+%triple-offset        { @include _offset(3); }
+
+%offset-top           { @include _offset-top; }
+%half-offset-top      { @include _offset-top(0.5); }
+%double-offset-top    { @include _offset-top(2); }
+%triple-offset-top    { @include _offset-top(3); }
+
+%offset-right         { @include _offset-right; }
+%half-offset-right    { @include _offset-right(0.5); }
+%double-offset-right  { @include _offset-right(2); }
+%triple-offset-right  { @include _offset-right(3); }
+
+%offset-bottom        { @include _offset-bottom; }
+%half-offset-bottom   { @include _offset-bottom(0.5); }
+%double-offset-bottom { @include _offset-bottom(2); }
+%triple-offset-bottom { @include _offset-bottom(3); }
+
+%offset-left          { @include _offset-left; }
+%half-offset-left     { @include _offset-left(0.5); }
+%double-offset-left   { @include _offset-left(2); }
+%triple-offset-left   { @include _offset-left(3); }
+
+%zero                 { @include _zero; }
+
+%clear, %clearfix {
+  clear: both;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// positioning placeholders
+%fixed                { @include _fixed; }
+%fixed-top            { @include _fixed(top); }
+%fixed-right          { @include _fixed(right); }
+%fixed-bottom         { @include _fixed(bottom); }
+%fixed-left           { @include _fixed(left); }
+%fixed-middle         { @include _fixed(middle); }
+%fixed-center         { @include _fixed(center); }
+
+%fixed-top-right      { @include _fixed((top, right)); }
+%fixed-top-left       { @include _fixed((top, left)); }
+%fixed-top-center     { @include _fixed((top, center)); }
+%fixed-middle-right   { @include _fixed((middle, right)); }
+%fixed-middle-left    { @include _fixed((middle, left)); }
+%fixed-middle-center  { @include _fixed((middle, center)); }
+%fixed-bottom-right   { @include _fixed((bottom, right)); }
+%fixed-bottom-left    { @include _fixed((bottom, left)); }
+%fixed-bottom-center  { @include _fixed((bottom, center)); }
+
+%absolute             { @include _absolute; }
+%absolute-top         { @include _absolute(top); }
+%absolute-right       { @include _absolute(right); }
+%absolute-bottom      { @include _absolute(bottom); }
+%absolute-left        { @include _absolute(left); }
+%absolute-middle      { @include _absolute(middle); }
+%absolute-center      { @include _absolute(center); }
+
+%absolute-top-right      { @include _absolute((top, right)); }
+%absolute-top-left       { @include _absolute((top, left)); }
+%absolute-top-center     { @include _absolute((top, center)); }
+%absolute-middle-right   { @include _absolute((middle, right)); }
+%absolute-middle-left    { @include _absolute((middle, left)); }
+%absolute-middle-center  { @include _absolute((middle, center)); }
+%absolute-bottom-right   { @include _absolute((bottom, right)); }
+%absolute-bottom-left    { @include _absolute((bottom, left)); }
+%absolute-bottom-center  { @include _absolute((bottom, center)); }
+
+%relative             { @include _relative; }
+
+%static               { @include _static; }
+
+
+// display placeholders
+%inline               { @include _inline; }
+%inline-block         { @include _inline-block; }
+%block                { @include _block; }
+%hidden               { @include _hidden; }
+
+
+// size placeholders
+%small                { @include _small; }
+%medium               { @include _medium; }
+%big, %large          { @include _large; }
+
+
+// font style placeholders
+%em, %italic          { @include _italic; }
+%b, %bold, %strong    { @include _bold; }
+
+
+// layout placeholders
+%pull-right           { @include _pull-right; }
+%pull-left            { @include _pull-left; }
+%pull-none            { @include _pull-none; }
+%center               { @include _center; }
+
+
+// border placeholders
+%bordered             { @include _bordered; }
+%border-top           { @include _border-top; }
+%border-right         { @include _border-right; }
+%border-bottom        { @include _border-bottom; }
+%border-left          { @include _border-left; }
+
+
+// typography placeholders
+%align-top            { @include _align-top; } // must have height (experimental)
+%align-right          { @include _align-right; }
+%align-bottom         { @include _align-bottom; } // must have height (experimental)
+%align-left           { @include _align-left; }
+%align-center         { @include _align-center; }
+%justify              { @include _justify; }
+%unstyled             { @extend %zero; list-style: none; }
+%truncate             { @include _truncate; }
+
+
+// radius placeholder
+%square               { @include _square; }
+%rounded              { @include _rounded; }
+%round                { @include _round; }
+
+
+// rotation placeholders
+%rotate-90            { @include _rotate-90; }
+%rotate-90-ctr        { @include _rotate-90-ctr; }
+%rotate-180           { @include _rotate-180; }
+%rotate-180-ctr       { @include _rotate-180-ctr; }
+%rotate-270           { @include _rotate-270; }
+%rotate-270-ctr       { @include _rotate-270-ctr; }
+%rotate-360           { @include _rotate-360; }
+%rotate-360-ctr       { @include _rotate-360-ctr; }
+
+
+
+// layout classes
+@if $layout-classes {
+  @each $helper in $layout-helpers {
+    .#{$helper} { @extend %#{$helper}; }
+  }
+  .clear, .clearfix { @extend %clear; }
+  @if $responsive {
+    @include responsive_layout_helpers($desktop, "desktop");
+    @include responsive_layout_helpers($ipad, "ipad");
+    @include responsive_layout_helpers($small-tablet, "small-tablet");
+    @include responsive_layout_helpers($mobile, "mobile");
+  }
+}
+
+
+// positioning classes
+@if $positioning-classes {
+  .fixed                  { @extend %fixed; }
+  .fixed-top              { @extend %fixed-top; }
+  .fixed-right            { @extend %fixed-right; }
+  .fixed-bottom           { @extend %fixed-bottom; }
+  .fixed-left             { @extend %fixed-left; }
+  .fixed-middle           { @extend %fixed-middle; }
+  .fixed-center           { @extend %fixed-center; }
+
+  .fixed-top-right,
+  .fixed-right-top        { @extend %fixed-top-right; }
+  .fixed-top-left,
+  .fixed-left-top         { @extend %fixed-top-left; }
+  .fixed-top-center,
+  .fixed-center-top       { @extend %fixed-top-center; }
+  .fixed-middle-right,
+  .fixed-right-middle     { @extend %fixed-middle-right; }
+  .fixed-middle-left,
+  .fixed-left-middle      { @extend %fixed-middle-left; }
+  .fixed-middle-center,
+  .fixed-center-middle    { @extend %fixed-middle-center; }
+  .fixed-bottom-right,
+  .fixed-right-bottom     { @extend %fixed-bottom-right; }
+  .fixed-bottom-left,
+  .fixed-left-bottom      { @extend %fixed-bottom-left; }
+  .fixed-bottom-center,
+  .fixed-center-bottom    { @extend %fixed-bottom-center; }
+
+  .absolute               { @extend %absolute; }
+  .absolute-top           { @extend %absolute-top; }
+  .absolute-right         { @extend %absolute-right; }
+  .absolute-bottom        { @extend %absolute-bottom; }
+  .absolute-left          { @extend %absolute-left; }
+  .absolute-middle        { @extend %absolute-middle; }
+  .absolute-center        { @extend %absolute-center; }
+
+  .absolute-top-right,
+  .absolute-right-top        { @extend %absolute-top-right; }
+  .absolute-top-left,
+  .absolute-left-top         { @extend %absolute-top-left; }
+  .absolute-top-center,
+  .absolute-center-top       { @extend %absolute-top-center; }
+  .absolute-middle-right,
+  .absolute-right-middle     { @extend %absolute-middle-right; }
+  .absolute-middle-left,
+  .absolute-left-middle      { @extend %absolute-middle-left; }
+  .absolute-middle-center,
+  .absolute-center-middle    { @extend %absolute-middle-center; }
+  .absolute-bottom-right,
+  .absolute-right-bottom     { @extend %absolute-bottom-right; }
+  .absolute-bottom-left,
+  .absolute-left-bottom      { @extend %absolute-bottom-left; }
+  .absolute-bottom-center,
+  .absolute-center-bottom    { @extend %absolute-bottom-center; }
+
+  .relative         { @extend %relative; }
+
+  .static           { @extend %static; }
+  @if $responsive {
+    @include responsive_positioning_helpers($desktop, "desktop");
+    @include responsive_positioning_helpers($ipad, "ipad");
+    @include responsive_positioning_helpers($small-tablet, "small-tablet");
+    @include responsive_positioning_helpers($mobile, "mobile");
+  }
+}
+
+
+// multi column classes
+@if $multi-column-classes {
+  @include _multi-column-classes;
+  @if $responsive {
+    @include responsive_multi-column_helpers($desktop, "desktop");
+    @include responsive_multi-column_helpers($ipad, "ipad");
+    @include responsive_multi-column_helpers($small-tablet, "small-tablet");
+    @include responsive_multi-column_helpers($mobile, "mobile");
+  }
+}
+
+
+// typography classes
+@if $typography-classes {
+  @each $helper in $typography-helpers {
+    .#{$helper} { @extend %#{$helper}; }
+  }
+  @if $responsive {
+    @include responsive_typography_helpers($desktop, "desktop");
+    @include responsive_typography_helpers($ipad, "ipad");
+    @include responsive_typography_helpers($small-tablet, "small-tablet");
+    @include responsive_typography_helpers($mobile, "mobile");
+  }
+}
+
+
+// size classes
+@if $size-classes {
+  @each $helper in $size-helpers {
+    .#{$helper} { @extend %#{$helper}; }
+  }
+  @if $responsive {
+    @include responsive_size_helpers($desktop, "desktop");
+    @include responsive_size_helpers($ipad, "ipad");
+    @include responsive_size_helpers($small-tablet, "small-tablet");
+    @include responsive_size_helpers($mobile, "mobile");
+  }
+}
+
+
+// border classes
+@if $border-classes {
+  @each $helper in $border-helpers {
+    .#{$helper} { @extend %#{$helper}; }
+  }
+  @if $responsive {
+    @include responsive_border_helpers($desktop, "desktop");
+    @include responsive_border_helpers($ipad, "ipad");
+    @include responsive_border_helpers($small-tablet, "small-tablet");
+    @include responsive_border_helpers($mobile, "mobile");
+  }
+}
+
+
+// radius classes
+@if $radius-classes {
+  @each $helper in $radius-helpers {
+    .#{$helper} { @extend %#{$helper}; }
+  }
+  @if $responsive {
+    @include responsive_radius_helpers($desktop, "desktop");
+    @include responsive_radius_helpers($ipad, "ipad");
+    @include responsive_radius_helpers($small-tablet, "small-tablet");
+    @include responsive_radius_helpers($mobile, "mobile");
+  }
+}
+
+
+// rotation classes
+@if $rotation-classes {
+  @each $helper in $rotation-helpers {
+    .#{$helper} { @extend %#{$helper}; }
+  }
+  @if $responsive {
+    @include responsive_rotation_helpers($desktop, "desktop");
+    @include responsive_rotation_helpers($ipad, "ipad");
+    @include responsive_rotation_helpers($small-tablet, "small-tablet");
+    @include responsive_rotation_helpers($mobile, "mobile");
+  }
+}
+
+
+// spacer classes
+@if $spacer-classes {
+  @for $i from 1 through length($spacer-helpers) {
+    .#{nth($spacer-helpers, $i)} {
+      @extend %#{nth($spacer-helpers, $i)};
+    }
+    @if $spacer-mod-classes {
+      @for $j from 1 through length($spacer-modifiers) {
+        .#{nth($spacer-modifiers, $j)}-#{nth($spacer-helpers, $i)} { @extend %#{nth($spacer-modifiers, $j)}-#{nth($spacer-helpers, $i)}; }
+      }
+    }
+  }
+  @if $responsive {
+    @include responsive_spacer_helpers($desktop, "desktop");
+    @include responsive_spacer_helpers($ipad, "ipad");
+    @include responsive_spacer_helpers($small-tablet, "small-tablet");
+    @include responsive_spacer_helpers($mobile, "mobile");
+    @if $spacer-mod-classes {
+      @include responsive_spacer_mods($desktop, "desktop");
+      @include responsive_spacer_mods($ipad, "ipad");
+      @include responsive_spacer_mods($small-tablet, "small-tablet");
+      @include responsive_spacer_mods($mobile, "mobile");
+    }
+  }
+}
+
+
+// transition classes
+@if $transition-classes {
+  .transition {
+    transition: all $default-transition-speed;
+  }
+  .no-transition {
+    transition: none !important;
+  }
+}
+
+
+// conditional content classes
+@if $responsive and $conditional-content-classes {
+  @media #{$desktop} {
+    .desktop-only { display: block !important; }
+    .ipad-only { display: none !important; }
+    .small-tablet-only { display: none !important; }
+    .mobile-only { display: none !important; }
+    .hide-on-desktop { display: none !important; }
+    @if $inline-conditional-helpers {
+      span.desktop-only { display: inline !important; }
+    }
+  }
+  @media #{$small-tablet} {
+    .desktop-only { display: none !important; }
+    .ipad-only { display: none !important; }
+    .small-tablet-only { display: block !important; }
+    .mobile-only { display: none !important; }
+    .hide-on-small-tablet { display: none !important; }
+    @if $inline-conditional-helpers {
+      span.small-tablet-only { display: inline !important; }
+    }
+  }
+  @media #{$ipad} {
+    .desktop-only { display: none !important; }
+    .ipad-only { display: block !important; }
+    .small-tablet-only { display: none !important; }
+    .mobile-only { display: none !important; }
+    .hide-on-ipad { display: none !important; }
+    @if $inline-conditional-helpers {
+      span.ipad-only { display: inline !important; }
+    }
+  }
+  @media #{$mobile} {
+    .desktop-only { display: none !important; }
+    .ipad-only { display: none !important; }
+    .small-tablet-only { display: none !important; }
+    .mobile-only { display: block !important; }
+    .hide-on-small-tablet { display: block !important; }
+    .hide-on-mobile { display: none !important; }
+    @if $inline-conditional-helpers {
+      span.mobile-only { display: inline !important; }
+    }
+  }
+}

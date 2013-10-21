@@ -8,24 +8,24 @@
  *
 ###
 
-# This file is for CodeKit users and joins all of the Groundwork coffeescript 
+# This file is for Codekit users and joins all of the Groundwork coffeescript 
 # files into a single `groundwork.all.js` javascript file
 
 
 # Plugins:
 
+# @codekit-append "plugins/jquery-placeholderText.coffee"
 # @codekit-append "plugins/jquery-responsiveTables.coffee"
 # @codekit-append "plugins/jquery-responsiveText.coffee"
 # @codekit-append "plugins/jquery-truncateLines.coffee"
-# @codekit-append "plugins/jquery-tooltip.coffee"
+
 
 # Components:
 
-# @codekit-append "components/disabled.coffee"
+# @codekit-append "components/checklists.coffee"
+# @codekit-append "components/dismissible.coffee"
 # @codekit-append "components/equalizeColumns.coffee"
 # @codekit-append "components/forms.coffee"
 # @codekit-append "components/menus.coffee"
-# @codekit-append "components/modals.coffee"
-# @codekit-append "components/pagination.coffee"
+# @codekit-append "components/navigation.coffee"
 # @codekit-append "components/tabs.coffee"
-# @codekit-append "components/tiles.coffee"

@@ -39,10 +39,10 @@ $default-radius:      4px !default;
   width: auto;
   height: auto;
   text-align: center;
-  @include rounded($default-radius $default-radius 0 0);
+  border-radius: $default-radius $default-radius 0 0;
   &:hover, &:focus {
     @extend %tab-hover;
-    @include transition(background-color 0.25s ease-out);
+    transition: background-color $default-transition-speed ease-out;
   }
 }
 
@@ -57,7 +57,7 @@ $default-radius:      4px !default;
   text-decoration: none;
   color: $tabpanel-text;
   border-bottom-color: $tabpanel-background;
-  @include transition(none);
+  transition: none;
 }
 
 %tabpanel {
@@ -66,7 +66,7 @@ $default-radius:      4px !default;
   background: $tabpanel-background;
   border: $border-thickness $border-style $tab-border-color;
   color: $tabpanel-text;
-  @include rounded(0 $default-radius $default-radius $default-radius);
+  border-radius: 0 $default-radius $default-radius $default-radius;
   &.active, &.on {
     display: block;
   }
@@ -132,36 +132,36 @@ $default-radius:      4px !default;
       @extend %tabpanel;
     }
     &.vertical {
-      @include rounded($default-radius);
+      border-radius: $default-radius;
       > ul {
         background: $tab-border-color;
-        @include rounded($default-radius 0 0 $default-radius);
+        border-radius: $default-radius 0 0 $default-radius;
         li {
           @extend %block;
           border-right: 0;
           &:not(:first-child) {
-            @include rounded(0);
+            border-radius: 0;
           }
           &:first-child {
-            @include rounded($default-radius 0 0 0);
+            border-radius: $default-radius 0 0 0;
           }
         }
       }
       > div {
         clear: none;
-        @include rounded($default-radius);
+        border-radius: $default-radius;
       }
     }
     &.accordion {
       > ul {
         li {
           @extend %block;
-          @include rounded(0);
+          border-radius: 0;
           &:first-child {
-            @include rounded($default-radius $default-radius 0 0);
+            border-radius: $default-radius $default-radius 0 0;
           }
           &:last-of-type {
-            @include rounded(0 0 $default-radius $default-radius);
+            border-radius: 0 0 $default-radius $default-radius;
           }
           &.active {
             @extend %tab-hover;
@@ -169,9 +169,10 @@ $default-radius:      4px !default;
           }
         }
         > div {
-          @include rounded(0);
+          padding-left: $gutter !important;
+          border-radius: 0;
           &:last-child {
-            @include rounded(0 0 $default-radius $default-radius);
+            border-radius: 0 0 $default-radius $default-radius;
           }
         }
       }
@@ -180,6 +181,13 @@ $default-radius:      4px !default;
 }
 
 @if $aria-selectors {
+  .accordion {
+    [role='tablist'] {
+      [role='tabpanel'] {
+        padding-left: $gutter !important;
+      }
+    }
+  }
   [role~="tablist"] {
     @extend %tablist;
   }

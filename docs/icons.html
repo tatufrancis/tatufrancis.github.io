@@ -9,6 +9,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
     <title>GroundworkCSS &hearts; Font Awesome Icons</title>
     <style type="text/css">
       .the-icons {
@@ -21,75 +26,54 @@
       }
       
     </style>
-    <!-- Modernizr -->
+    <!-- Modernizr-->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
-    <!-- framework css --><!--[if gt IE 9]><!-->
-    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]--><!--[if lte IE 9]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-core.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-type.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ui.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-anim.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
+    <!-- framework css-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css">
     <style type="text/css">
-      .logo {
-        position: relative;
-        top: -0.5em;
-      }
       .logo a, .logo a:visited {
+        display: inline-block;
         text-decoration: none;
-        color: #2B2B2D;
+        color: #fff;
       }
-      .logo img {
-        height: 2em;
-        position: relative;
-        top: 0.55em;
-        margin-right: 0.3em;
+      .logo img, .logo svg {
+        height: 1.5em;
       }
       
     </style>
-    <!-- snippet (syntax highlighting for code examples)-->
-    <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
-(function() {
-
-  $(document).ready(function() {
-    $('pre[data-lang="html"]').snippet("html", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-    $('pre[data-lang="css"]').snippet("css", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-    $('pre[data-lang="scss"]').snippet("scss", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-    return $('pre[data-lang="js"]').snippet("javascript", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-  });
-
-}).call(this);
-</script>
   </head>
   <body>
-    <header class="padded">
+    <header class="charcoal-bg padded">
       <div class="container">
         <div class="row">
-          <div class="one half">
-            <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS 2</a></h2>
+          <div class="one-half collapse-on-small-tablet">
+            <h2 class="logo museo-slab"><a href="/" target="_parent">
+                <svg version="1.1" id="groundwork-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="49px" viewBox="10 10 3790 498" enable-background="new 10 10 3317 498" xml:space="preserve">
+                  <g>
+                    <path fill="#BADA55" d="M21,139C21,72.725,74.725,19,141,19h120v240H21V139z"></path>
+                    <path fill="#2C2C2F" d="M155,206c0-29.271,23.729-53,53-53h53v106H155V206z"></path>
+                    <path fill="#282830" d="M381,19c66.275,0,120,53.725,120,120v120H261V19H381z"></path>
+                    <path fill="#55ADAB" d="M314,153c29.271,0,53,23.729,53,53v53H261V153H314z"></path>
+                    <path fill="#F0F0E1" d="M21,379c0,66.275,53.725,120,120,120h120V259H21V379z"></path>
+                    <path fill="#C82647" d="M381,499c66.275,0,120-53.725,120-120V259H261v240H381z"></path>
+                    <path fill="#198D98" d="M155,312c0,29.271,23.729,53,53,53h53V259H155V312z"></path>
+                    <path fill="#1DABB8" d="M314,365c29.271,0,53-23.729,53-53v-53H261v106H314z"></path>
+                    <path fill="#FFFFFF" d="M191,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S191,215.389,191,206z"></path>
+                    <path fill="#FFFFFF" d="M297,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S297,215.389,297,206z"></path>
+                    <path fill="none" stroke="#FFFFFF" stroke-width="10" d="M196.5,259.5h130"></path>
+                  </g>
+                  <text fill="#ffffff" transform="matrix(1 0 0 1 600 450)" font-family="URWUrban" font-size="448">Groundwork CSS 3</text>
+                </svg></a></h2>
           </div>
-          <div class="one half">
-            <p class="small double pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.3.7<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+          <div class="one-half collapse-on-small-tablet">
+            <p class="small double pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 3.0.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
-        <nav role="navigation" class="nav gap-top">
+        <nav role="navigation" class="nav gap-top red">
           <ul role="menubar">
-            <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
+            <li><a href="./home.html"><i class="fa fa-home"></i> Home</a></li>
             <li role="menu">
               <button>Example Layouts</button>
               <ul>
@@ -130,11 +114,11 @@
     <div class="container">
       <div class="padded">
         <div class="row">
-          <div class="three fifths bounceInRight animated">
-            <h1 class="zero museo-slab">Font Awesome Icons</h1>
-            <p class="quicksand"><a href="http://fontawesome.io/" target="_blank">Font Awesome</a> is a beautiful collection of vector icons created & maintained by <a href="http://twitter.com/davegandy" target="_blank">Dave Gandy</a></p>
+          <div class="three-fifths collapse-on-small-tablet bounceInRight animated">
+            <h1 class="zero museo-slab">Font Awesome 4.0.3</h1>
+            <p class="quicksand"><a href="http://fontawesome.io/" target="_blank">Font Awesome</a> is a collection of vector icons created & maintained by <a href="http://twitter.com/davegandy" target="_blank">Dave Gandy</a></p>
           </div>
-          <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
+          <div class="two-fifths collapse-on-small-tablet align-right-ipad align-right-desktop flipInX animated">
             <p class="quicksand">Component Usage Example 11 of 14</p>
             <p><a href="forms.html" rel="prev" class="blue button">Back</a> <a href="responsive-text.html" rel="next" class="green button">Next: Responsive Text</a></p>
           </div>
@@ -142,1415 +126,1439 @@
       </div>
       <hr>
       <div class="row">
-        <div class="one whole padded">
+        <div class="one-whole padded">
           <h4>Example Usage</h4>
           <div class="row">
-            <div class="one half">
+            <div class="one-half">
               <div class="row">
-                <div class="one third small-tablet pad-left pad-right align-center"><i class="icon-twitter icon-4x"></i></div>
-                <div class="two thirds small-tablet padded">
-                  <pre data-lang="html">&lt;i class=&quot;icon-twitter icon-4x&quot;&gt;&lt;/i&gt;</pre>
+                <div class="one-third small-tablet pad-left pad-right align-center"><i class="fa fa-twitter fa-4x"></i></div>
+                <div class="two-thirds small-tablet padded">
+                  <pre data-lang="html">&lt;i class=&quot;fa fa-twitter fa-4x&quot;&gt;&lt;/i&gt;</pre>
                 </div>
               </div>
             </div>
-            <div class="one half">
+            <div class="one-half">
               <div class="row">
-                <div class="one third small-tablet pad-left pad-right align-center"><i class="icon-spinner icon-spin icon-4x"></i></div>
-                <div class="two thirds small-tablet padded">
-                  <pre data-lang="html">&lt;i class=&quot;icon-spinner icon-spin icon-4x&quot;&gt;&lt;/i&gt;</pre>
+                <div class="one-third small-tablet pad-left pad-right align-center"><i class="fa fa-spinner fa-spin fa-4x"></i></div>
+                <div class="two-thirds small-tablet padded">
+                  <pre data-lang="html">&lt;i class=&quot;fa fa-spinner fa-spin fa-4x&quot;&gt;&lt;/i&gt;</pre>
                 </div>
               </div>
             </div>
           </div>
-          <hr><br>
-          <section id="new" class="bounceInLeft animated">
-            <h4>New Icons in 3.2</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-compass"></i> icon-compass</p>
+          <hr class="triple-gap-bottom">
+          <section id="new">
+            <h2>11 New Icons in 4.0</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rub"></i> .fa-rub</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-collapse"></i> icon-collapse</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ruble"></i> .fa-ruble<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-collapse-top"></i> icon-collapse-top</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rouble"></i> .fa-rouble<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-expand"></i> icon-expand</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pagelines"></i> .fa-pagelines</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eur"></i> icon-eur</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-stack-exchange"></i> .fa-stack-exchange</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-euro"></i> icon-euro<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-o-right"></i> .fa-arrow-circle-o-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gbp"></i> icon-gbp</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-o-left"></i> .fa-arrow-circle-o-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-usd"></i> icon-usd</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-left"></i> .fa-caret-square-o-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dollar"></i> icon-dollar<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-left"></i> .fa-toggle-left<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-inr"></i> icon-inr</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dot-circle-o"></i> .fa-dot-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rupee"></i> icon-rupee<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-wheelchair"></i> .fa-wheelchair</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-jpy"></i> icon-jpy</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-vimeo-square"></i> .fa-vimeo-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-yen"></i> icon-yen<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-try"></i> .fa-try</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cny"></i> icon-cny</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-turkish-lira"></i> .fa-turkish-lira<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-renminbi"></i> icon-renminbi<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-krw"></i> icon-krw</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-won"></i> icon-won<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-btc"></i> icon-btc</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitcoin"></i> icon-bitcoin<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-file"></i> icon-file</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-file-text"></i> icon-file-text</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-alphabet"></i> icon-sort-by-alphabet</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-alphabet-alt"></i> icon-sort-by-alphabet-alt</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-attributes"></i> icon-sort-by-attributes</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-attributes-alt"></i> icon-sort-by-attributes-alt</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-order"></i> icon-sort-by-order</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-order-alt"></i> icon-sort-by-order-alt</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-thumbs-up"></i> icon-thumbs-up</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-thumbs-down"></i> icon-thumbs-down</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube-sign"></i> icon-youtube-sign</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube"></i> icon-youtube</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-xing"></i> icon-xing</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-xing-sign"></i> icon-xing-sign</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube-play"></i> icon-youtube-play</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dropbox"></i> icon-dropbox</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-stackexchange"></i> icon-stackexchange</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-instagram"></i> icon-instagram</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-flickr"></i> icon-flickr</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-adn"></i> icon-adn</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitbucket"></i> icon-bitbucket</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitbucket-sign"></i> icon-bitbucket-sign</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tumblr"></i> icon-tumblr</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tumblr-sign"></i> icon-tumblr-sign</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-down"></i> icon-long-arrow-down</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-up"></i> icon-long-arrow-up</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-left"></i> icon-long-arrow-left</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-right"></i> icon-long-arrow-right</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-apple"></i> icon-apple</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-windows"></i> icon-windows</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-android"></i> icon-android</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-linux"></i> icon-linux</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dribbble"></i> icon-dribbble</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-skype"></i> icon-skype</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-foursquare"></i> icon-foursquare</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-trello"></i> icon-trello</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-female"></i> icon-female</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-male"></i> icon-male</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gittip"></i> icon-gittip</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sun"></i> icon-sun</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-moon"></i> icon-moon</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-archive"></i> icon-archive</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bug"></i> icon-bug</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-vk"></i> icon-vk</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-weibo"></i> icon-weibo</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-renren"></i> icon-renren</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-square-o"></i> .fa-plus-square-o</div>
               </div>
             </div>
           </section>
-          <hr><br>
-          <section id="web-application" class="bounceInRight animated">
-            <h4>Web Application Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-adjust"></i> icon-adjust</p>
+          <hr class="triple-gap-bottom">
+          <section id="web-application">
+            <h2>Web Application Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-adjust"></i> .fa-adjust</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-anchor"></i> icon-anchor</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-anchor"></i> .fa-anchor</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-archive"></i> icon-archive</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-archive"></i> .fa-archive</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-asterisk"></i> icon-asterisk</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows"></i> .fa-arrows</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ban-circle"></i> icon-ban-circle</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows-h"></i> .fa-arrows-h</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bar-chart"></i> icon-bar-chart</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows-v"></i> .fa-arrows-v</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-barcode"></i> icon-barcode</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-asterisk"></i> .fa-asterisk</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-beaker"></i> icon-beaker</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ban"></i> .fa-ban</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-beer"></i> icon-beer</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bar-chart-o"></i> .fa-bar-chart-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bell"></i> icon-bell</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-barcode"></i> .fa-barcode</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bell-alt"></i> icon-bell-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bars"></i> .fa-bars</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bolt"></i> icon-bolt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-beer"></i> .fa-beer</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-book"></i> icon-book</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bell"></i> .fa-bell</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bookmark"></i> icon-bookmark</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bell-o"></i> .fa-bell-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bookmark-empty"></i> icon-bookmark-empty</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bolt"></i> .fa-bolt</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-briefcase"></i> icon-briefcase</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-book"></i> .fa-book</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bug"></i> icon-bug</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bookmark"></i> .fa-bookmark</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-building"></i> icon-building</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bookmark-o"></i> .fa-bookmark-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bullhorn"></i> icon-bullhorn</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-briefcase"></i> .fa-briefcase</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bullseye"></i> icon-bullseye</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bug"></i> .fa-bug</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-calendar"></i> icon-calendar</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-building-o"></i> .fa-building-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-calendar-empty"></i> icon-calendar-empty</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bullhorn"></i> .fa-bullhorn</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-camera"></i> icon-camera</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bullseye"></i> .fa-bullseye</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-camera-retro"></i> icon-camera-retro</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-calendar"></i> .fa-calendar</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-certificate"></i> icon-certificate</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-calendar-o"></i> .fa-calendar-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-check"></i> icon-check</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-camera"></i> .fa-camera</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-check-empty"></i> icon-check-empty</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-camera-retro"></i> .fa-camera-retro</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-check-minus"></i> icon-check-minus</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-down"></i> .fa-caret-square-o-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-check-sign"></i> icon-check-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-left"></i> .fa-caret-square-o-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-circle"></i> icon-circle</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-right"></i> .fa-caret-square-o-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-circle-blank"></i> icon-circle-blank</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-up"></i> .fa-caret-square-o-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cloud"></i> icon-cloud</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-certificate"></i> .fa-certificate</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cloud-download"></i> icon-cloud-download</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check"></i> .fa-check</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cloud-upload"></i> icon-cloud-upload</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check-circle"></i> .fa-check-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-code"></i> icon-code</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check-circle-o"></i> .fa-check-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-code-fork"></i> icon-code-fork</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check-square"></i> .fa-check-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-coffee"></i> icon-coffee</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check-square-o"></i> .fa-check-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cog"></i> icon-cog</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-circle"></i> .fa-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cogs"></i> icon-cogs</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-circle-o"></i> .fa-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-collapse"></i> icon-collapse</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-clock-o"></i> .fa-clock-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-collapse-alt"></i> icon-collapse-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cloud"></i> .fa-cloud</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-collapse-top"></i> icon-collapse-top</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cloud-download"></i> .fa-cloud-download</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-comment"></i> icon-comment</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cloud-upload"></i> .fa-cloud-upload</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-comment-alt"></i> icon-comment-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-code"></i> .fa-code</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-comments"></i> icon-comments</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-code-fork"></i> .fa-code-fork</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-comments-alt"></i> icon-comments-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-coffee"></i> .fa-coffee</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-compass"></i> icon-compass</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cog"></i> .fa-cog</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-credit-card"></i> icon-credit-card</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cogs"></i> .fa-cogs</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-crop"></i> icon-crop</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-comment"></i> .fa-comment</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dashboard"></i> icon-dashboard</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-comment-o"></i> .fa-comment-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-desktop"></i> icon-desktop</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-comments"></i> .fa-comments</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-download"></i> icon-download</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-comments-o"></i> .fa-comments-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-download-alt"></i> icon-download-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-compass"></i> .fa-compass</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-edit"></i> icon-edit</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-credit-card"></i> .fa-credit-card</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-edit-sign"></i> icon-edit-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-crop"></i> .fa-crop</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ellipsis-horizontal"></i> icon-ellipsis-horizontal</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-crosshairs"></i> .fa-crosshairs</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ellipsis-vertical"></i> icon-ellipsis-vertical</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cutlery"></i> .fa-cutlery</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-envelope"></i> icon-envelope</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dashboard"></i> .fa-dashboard<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-envelope-alt"></i> icon-envelope-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-desktop"></i> .fa-desktop</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eraser"></i> icon-eraser</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dot-circle-o"></i> .fa-dot-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-exchange"></i> icon-exchange</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-download"></i> .fa-download</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-exclamation"></i> icon-exclamation</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-edit"></i> .fa-edit<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-exclamation-sign"></i> icon-exclamation-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ellipsis-h"></i> .fa-ellipsis-h</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-expand"></i> icon-expand</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ellipsis-v"></i> .fa-ellipsis-v</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-expand-alt"></i> icon-expand-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-envelope"></i> .fa-envelope</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-external-link"></i> icon-external-link</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-envelope-o"></i> .fa-envelope-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-external-link-sign"></i> icon-external-link-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-eraser"></i> .fa-eraser</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eye-close"></i> icon-eye-close</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-exchange"></i> .fa-exchange</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eye-open"></i> icon-eye-open</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-exclamation"></i> .fa-exclamation</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-facetime-video"></i> icon-facetime-video</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-exclamation-circle"></i> .fa-exclamation-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-female"></i> icon-female</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-exclamation-triangle"></i> .fa-exclamation-triangle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-fighter-jet"></i> icon-fighter-jet</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-external-link"></i> .fa-external-link</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-film"></i> icon-film</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-external-link-square"></i> .fa-external-link-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-filter"></i> icon-filter</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-eye"></i> .fa-eye</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-fire"></i> icon-fire</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-eye-slash"></i> .fa-eye-slash</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-fire-extinguisher"></i> icon-fire-extinguisher</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-female"></i> .fa-female</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-flag"></i> icon-flag</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-fighter-jet"></i> .fa-fighter-jet</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-flag-alt"></i> icon-flag-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-film"></i> .fa-film</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-flag-checkered"></i> icon-flag-checkered</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-filter"></i> .fa-filter</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-folder-close"></i> icon-folder-close</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-fire"></i> .fa-fire</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-folder-close-alt"></i> icon-folder-close-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-fire-extinguisher"></i> .fa-fire-extinguisher</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-folder-open"></i> icon-folder-open</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-flag"></i> .fa-flag</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-folder-open-alt"></i> icon-folder-open-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-flag-checkered"></i> .fa-flag-checkered</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-food"></i> icon-food</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-flag-o"></i> .fa-flag-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-frown"></i> icon-frown</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-flash"></i> .fa-flash<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gamepad"></i> icon-gamepad</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-flask"></i> .fa-flask</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gear"></i> icon-gear<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-folder"></i> .fa-folder</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gears"></i> icon-gears<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-folder-o"></i> .fa-folder-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gift"></i> icon-gift</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-folder-open"></i> .fa-folder-open</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-glass"></i> icon-glass</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-folder-open-o"></i> .fa-folder-open-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-globe"></i> icon-globe</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-frown-o"></i> .fa-frown-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-group"></i> icon-group</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gamepad"></i> .fa-gamepad</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-hdd"></i> icon-hdd</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gavel"></i> .fa-gavel</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-headphones"></i> icon-headphones</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gear"></i> .fa-gear<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-heart"></i> icon-heart</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gears"></i> .fa-gears<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-heart-empty"></i> icon-heart-empty</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gift"></i> .fa-gift</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-home"></i> icon-home</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-glass"></i> .fa-glass</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-inbox"></i> icon-inbox</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-globe"></i> .fa-globe</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-info"></i> icon-info</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-group"></i> .fa-group<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-info-sign"></i> icon-info-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-hdd-o"></i> .fa-hdd-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-key"></i> icon-key</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-headphones"></i> .fa-headphones</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-keyboard"></i> icon-keyboard</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-heart"></i> .fa-heart</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-laptop"></i> icon-laptop</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-heart-o"></i> .fa-heart-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-leaf"></i> icon-leaf</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-home"></i> .fa-home</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-legal"></i> icon-legal</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-inbox"></i> .fa-inbox</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-lemon"></i> icon-lemon</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-info"></i> .fa-info</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-level-down"></i> icon-level-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-info-circle"></i> .fa-info-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-level-up"></i> icon-level-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-key"></i> .fa-key</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-lightbulb"></i> icon-lightbulb</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-keyboard-o"></i> .fa-keyboard-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-location-arrow"></i> icon-location-arrow</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-laptop"></i> .fa-laptop</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-lock"></i> icon-lock</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-leaf"></i> .fa-leaf</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-magic"></i> icon-magic</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-legal"></i> .fa-legal<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-magnet"></i> icon-magnet</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-lemon-o"></i> .fa-lemon-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-mail-forward"></i> icon-mail-forward<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-level-down"></i> .fa-level-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-mail-reply"></i> icon-mail-reply<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-level-up"></i> .fa-level-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-mail-reply-all"></i> icon-mail-reply-all</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-lightbulb-o"></i> .fa-lightbulb-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-male"></i> icon-male</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-location-arrow"></i> .fa-location-arrow</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-map-marker"></i> icon-map-marker</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-lock"></i> .fa-lock</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-meh"></i> icon-meh</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-magic"></i> .fa-magic</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-microphone"></i> icon-microphone</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-magnet"></i> .fa-magnet</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-microphone-off"></i> icon-microphone-off</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-mail-forward"></i> .fa-mail-forward<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-minus"></i> icon-minus</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-mail-reply"></i> .fa-mail-reply<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-minus-sign"></i> icon-minus-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-mail-reply-all"></i> .fa-mail-reply-all</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-minus-sign-alt"></i> icon-minus-sign-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-male"></i> .fa-male</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-mobile-phone"></i> icon-mobile-phone</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-map-marker"></i> .fa-map-marker</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-money"></i> icon-money</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-meh-o"></i> .fa-meh-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-moon"></i> icon-moon</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-microphone"></i> .fa-microphone</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-move"></i> icon-move</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-microphone-slash"></i> .fa-microphone-slash</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-music"></i> icon-music</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-minus"></i> .fa-minus</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-off"></i> icon-off</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-minus-circle"></i> .fa-minus-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ok"></i> icon-ok</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-minus-square"></i> .fa-minus-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ok-circle"></i> icon-ok-circle</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-minus-square-o"></i> .fa-minus-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ok-sign"></i> icon-ok-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-mobile"></i> .fa-mobile</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-pencil"></i> icon-pencil</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-mobile-phone"></i> .fa-mobile-phone<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-phone"></i> icon-phone</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-money"></i> .fa-money</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-phone-sign"></i> icon-phone-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-moon-o"></i> .fa-moon-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-picture"></i> icon-picture</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-music"></i> .fa-music</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-plane"></i> icon-plane</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pencil"></i> .fa-pencil</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-plus"></i> icon-plus</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pencil-square"></i> .fa-pencil-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-plus-sign"></i> icon-plus-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pencil-square-o"></i> .fa-pencil-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-plus-sign-alt"></i> icon-plus-sign-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-phone"></i> .fa-phone</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-power-off"></i> icon-power-off<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-phone-square"></i> .fa-phone-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-print"></i> icon-print</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-picture-o"></i> .fa-picture-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-pushpin"></i> icon-pushpin</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plane"></i> .fa-plane</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-puzzle-piece"></i> icon-puzzle-piece</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus"></i> .fa-plus</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-qrcode"></i> icon-qrcode</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-circle"></i> .fa-plus-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-question"></i> icon-question</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-square"></i> .fa-plus-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-question-sign"></i> icon-question-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-square-o"></i> .fa-plus-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-quote-left"></i> icon-quote-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-power-off"></i> .fa-power-off</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-quote-right"></i> icon-quote-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-print"></i> .fa-print</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-random"></i> icon-random</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-puzzle-piece"></i> .fa-puzzle-piece</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-refresh"></i> icon-refresh</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-qrcode"></i> .fa-qrcode</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-remove"></i> icon-remove</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-question"></i> .fa-question</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-remove-circle"></i> icon-remove-circle</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-question-circle"></i> .fa-question-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-remove-sign"></i> icon-remove-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-quote-left"></i> .fa-quote-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-reorder"></i> icon-reorder</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-quote-right"></i> .fa-quote-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-reply"></i> icon-reply</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-random"></i> .fa-random</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-reply-all"></i> icon-reply-all</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-refresh"></i> .fa-refresh</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-resize-horizontal"></i> icon-resize-horizontal</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-reply"></i> .fa-reply</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-resize-vertical"></i> icon-resize-vertical</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-reply-all"></i> .fa-reply-all</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-retweet"></i> icon-retweet</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-retweet"></i> .fa-retweet</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-road"></i> icon-road</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-road"></i> .fa-road</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rocket"></i> icon-rocket</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rocket"></i> .fa-rocket</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rss"></i> icon-rss</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rss"></i> .fa-rss</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rss-sign"></i> icon-rss-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rss-square"></i> .fa-rss-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-screenshot"></i> icon-screenshot</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-search"></i> .fa-search</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-search"></i> icon-search</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-search-minus"></i> .fa-search-minus</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-share"></i> icon-share</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-search-plus"></i> .fa-search-plus</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-share-alt"></i> icon-share-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-share"></i> .fa-share</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-share-sign"></i> icon-share-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-share-square"></i> .fa-share-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-shield"></i> icon-shield</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-share-square-o"></i> .fa-share-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-shopping-cart"></i> icon-shopping-cart</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-shield"></i> .fa-shield</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sign-blank"></i> icon-sign-blank</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-shopping-cart"></i> .fa-shopping-cart</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-signal"></i> icon-signal</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sign-in"></i> .fa-sign-in</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-signin"></i> icon-signin</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sign-out"></i> .fa-sign-out</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-signout"></i> icon-signout</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-signal"></i> .fa-signal</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sitemap"></i> icon-sitemap</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sitemap"></i> .fa-sitemap</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-smile"></i> icon-smile</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-smile-o"></i> .fa-smile-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort"></i> icon-sort</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort"></i> .fa-sort</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-alphabet"></i> icon-sort-by-alphabet</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-alpha-asc"></i> .fa-sort-alpha-asc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-alphabet-alt"></i> icon-sort-by-alphabet-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-alpha-desc"></i> .fa-sort-alpha-desc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-attributes"></i> icon-sort-by-attributes</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-amount-asc"></i> .fa-sort-amount-asc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-attributes-alt"></i> icon-sort-by-attributes-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-amount-desc"></i> .fa-sort-amount-desc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-order"></i> icon-sort-by-order</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-asc"></i> .fa-sort-asc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-by-order-alt"></i> icon-sort-by-order-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-desc"></i> .fa-sort-desc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-down"></i> icon-sort-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-down"></i> .fa-sort-down<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sort-up"></i> icon-sort-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-numeric-asc"></i> .fa-sort-numeric-asc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-spinner"></i> icon-spinner</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-numeric-desc"></i> .fa-sort-numeric-desc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-star"></i> icon-star</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sort-up"></i> .fa-sort-up<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-star-empty"></i> icon-star-empty</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-spinner"></i> .fa-spinner</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-star-half"></i> icon-star-half</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-square"></i> .fa-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-star-half-empty"></i> icon-star-half-empty</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-square-o"></i> .fa-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-star-half-full"></i> icon-star-half-full<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-star"></i> .fa-star</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-subscript"></i> icon-subscript</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-star-half"></i> .fa-star-half</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-suitcase"></i> icon-suitcase</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-star-half-empty"></i> .fa-star-half-empty<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-sun"></i> icon-sun</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-star-half-full"></i> .fa-star-half-full<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-superscript"></i> icon-superscript</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-star-half-o"></i> .fa-star-half-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tablet"></i> icon-tablet</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-star-o"></i> .fa-star-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tag"></i> icon-tag</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-subscript"></i> .fa-subscript</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tags"></i> icon-tags</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-suitcase"></i> .fa-suitcase</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tasks"></i> icon-tasks</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-sun-o"></i> .fa-sun-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-terminal"></i> icon-terminal</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-superscript"></i> .fa-superscript</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-thumbs-down"></i> icon-thumbs-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tablet"></i> .fa-tablet</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-thumbs-down-alt"></i> icon-thumbs-down-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tachometer"></i> .fa-tachometer</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-thumbs-up"></i> icon-thumbs-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tag"></i> .fa-tag</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-thumbs-up-alt"></i> icon-thumbs-up-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tags"></i> .fa-tags</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ticket"></i> icon-ticket</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tasks"></i> .fa-tasks</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-time"></i> icon-time</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-terminal"></i> .fa-terminal</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tint"></i> icon-tint</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-thumb-tack"></i> .fa-thumb-tack</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-trash"></i> icon-trash</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-thumbs-down"></i> .fa-thumbs-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-trophy"></i> icon-trophy</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-thumbs-o-down"></i> .fa-thumbs-o-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-truck"></i> icon-truck</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-thumbs-o-up"></i> .fa-thumbs-o-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-umbrella"></i> icon-umbrella</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-thumbs-up"></i> .fa-thumbs-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-unchecked"></i> icon-unchecked<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ticket"></i> .fa-ticket</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-unlock"></i> icon-unlock</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-times"></i> .fa-times</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-unlock-alt"></i> icon-unlock-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-times-circle"></i> .fa-times-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-upload"></i> icon-upload</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-times-circle-o"></i> .fa-times-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-upload-alt"></i> icon-upload-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tint"></i> .fa-tint</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-user"></i> icon-user</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-down"></i> .fa-toggle-down<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-volume-down"></i> icon-volume-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-left"></i> .fa-toggle-left<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-volume-off"></i> icon-volume-off</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-right"></i> .fa-toggle-right<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-volume-up"></i> icon-volume-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-up"></i> .fa-toggle-up<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-warning-sign"></i> icon-warning-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-trash-o"></i> .fa-trash-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-wrench"></i> icon-wrench</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-trophy"></i> .fa-trophy</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-zoom-in"></i> icon-zoom-in</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-truck"></i> .fa-truck</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-zoom-out"></i> icon-zoom-out</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-umbrella"></i> .fa-umbrella</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-unlock"></i> .fa-unlock</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-unlock-alt"></i> .fa-unlock-alt</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-unsorted"></i> .fa-unsorted<span class="text-muted">(alias)</span></div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-upload"></i> .fa-upload</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-user"></i> .fa-user</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-users"></i> .fa-users</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-video-camera"></i> .fa-video-camera</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-volume-down"></i> .fa-volume-down</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-volume-off"></i> .fa-volume-off</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-volume-up"></i> .fa-volume-up</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-warning"></i> .fa-warning<span class="text-muted">(alias)</span></div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-wheelchair"></i> .fa-wheelchair</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-wrench"></i> .fa-wrench</div>
               </div>
             </div>
           </section>
-          <hr><br>
-          <section id="currency" class="bounceInLeft animated">
-            <h4>Currency Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitcoin"></i> icon-bitcoin<span class="muted">(alias)</span></p>
+          <hr class="triple-gap-bottom">
+          <section id="form-control">
+            <h2>Form Control Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check-square"></i> .fa-check-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-btc"></i> icon-btc</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-check-square-o"></i> .fa-check-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cny"></i> icon-cny</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-circle"></i> .fa-circle</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dollar"></i> icon-dollar<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-circle-o"></i> .fa-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eur"></i> icon-eur</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dot-circle-o"></i> .fa-dot-circle-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-euro"></i> icon-euro<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-minus-square"></i> .fa-minus-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gbp"></i> icon-gbp</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-minus-square-o"></i> .fa-minus-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-inr"></i> icon-inr</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-square"></i> .fa-plus-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-jpy"></i> icon-jpy</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-square-o"></i> .fa-plus-square-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-krw"></i> icon-krw</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-square"></i> .fa-square</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-renminbi"></i> icon-renminbi<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rupee"></i> icon-rupee<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-usd"></i> icon-usd</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-won"></i> icon-won<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-yen"></i> icon-yen<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-square-o"></i> .fa-square-o</div>
               </div>
             </div>
           </section>
-          <hr><br>
-          <section id="text-editor" class="bounceInRight animated">
-            <h4>Text Editor Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-align-center"></i> icon-align-center</p>
+          <hr class="triple-gap-bottom">
+          <section id="currency">
+            <h2>Currency Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bitcoin"></i> .fa-bitcoin<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-align-justify"></i> icon-align-justify</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-btc"></i> .fa-btc</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-align-left"></i> icon-align-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cny"></i> .fa-cny<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-align-right"></i> icon-align-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dollar"></i> .fa-dollar<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bold"></i> icon-bold</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-eur"></i> .fa-eur</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-columns"></i> icon-columns</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-euro"></i> .fa-euro<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-copy"></i> icon-copy</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gbp"></i> .fa-gbp</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-cut"></i> icon-cut</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-inr"></i> .fa-inr</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eraser"></i> icon-eraser</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-jpy"></i> .fa-jpy</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-file"></i> icon-file</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-krw"></i> .fa-krw</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-file-alt"></i> icon-file-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-money"></i> .fa-money</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-file-text"></i> icon-file-text</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rmb"></i> .fa-rmb<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-file-text-alt"></i> icon-file-text-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rouble"></i> .fa-rouble<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-font"></i> icon-font</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rub"></i> .fa-rub</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-indent-left"></i> icon-indent-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ruble"></i> .fa-ruble<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-indent-right"></i> icon-indent-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rupee"></i> .fa-rupee<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-italic"></i> icon-italic</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-try"></i> .fa-try</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-link"></i> icon-link</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-turkish-lira"></i> .fa-turkish-lira<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-list"></i> icon-list</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-usd"></i> .fa-usd</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-list-alt"></i> icon-list-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-won"></i> .fa-won<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-list-ol"></i> icon-list-ol</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-list-ul"></i> icon-list-ul</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-paper-clip"></i> icon-paper-clip</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-paperclip"></i> icon-paperclip<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-paste"></i> icon-paste</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-repeat"></i> icon-repeat</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rotate-left"></i> icon-rotate-left<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-rotate-right"></i> icon-rotate-right<span class="muted">(alias)</span></p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-save"></i> icon-save</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-strikethrough"></i> icon-strikethrough</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-table"></i> icon-table</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-text-height"></i> icon-text-height</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-text-width"></i> icon-text-width</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-th"></i> icon-th</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-th-large"></i> icon-th-large</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-th-list"></i> icon-th-list</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-underline"></i> icon-underline</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-undo"></i> icon-undo</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-unlink"></i> icon-unlink</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-yen"></i> .fa-yen<span class="text-muted">(alias)</span></div>
               </div>
             </div>
           </section>
-          <hr><br>
-          <section id="directional" class="bounceInLeft animated">
-            <h4>Directional Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-angle-down"></i> icon-angle-down</p>
+          <hr class="triple-gap-bottom">
+          <section id="text-editor">
+            <h2>Text Editor Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-align-center"></i> .fa-align-center</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-angle-left"></i> icon-angle-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-align-justify"></i> .fa-align-justify</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-angle-right"></i> icon-angle-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-align-left"></i> .fa-align-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-angle-up"></i> icon-angle-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-align-right"></i> .fa-align-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-arrow-down"></i> icon-arrow-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bold"></i> .fa-bold</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-arrow-left"></i> icon-arrow-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chain"></i> .fa-chain<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-arrow-right"></i> icon-arrow-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chain-broken"></i> .fa-chain-broken</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-arrow-up"></i> icon-arrow-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-clipboard"></i> .fa-clipboard</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-caret-down"></i> icon-caret-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-columns"></i> .fa-columns</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-caret-left"></i> icon-caret-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-copy"></i> .fa-copy<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-caret-right"></i> icon-caret-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-cut"></i> .fa-cut<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-caret-up"></i> icon-caret-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dedent"></i> .fa-dedent<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-down"></i> icon-chevron-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-eraser"></i> .fa-eraser</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-left"></i> icon-chevron-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-file"></i> .fa-file</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-right"></i> icon-chevron-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-file-o"></i> .fa-file-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-up"></i> icon-chevron-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-file-text"></i> .fa-file-text</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-sign-down"></i> icon-chevron-sign-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-file-text-o"></i> .fa-file-text-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-sign-left"></i> icon-chevron-sign-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-files-o"></i> .fa-files-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-sign-right"></i> icon-chevron-sign-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-floppy-o"></i> .fa-floppy-o</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-chevron-sign-up"></i> icon-chevron-sign-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-font"></i> .fa-font</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-indent"></i> .fa-indent</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-italic"></i> .fa-italic</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-link"></i> .fa-link</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-list"></i> .fa-list</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-double-angle-down"></i> icon-double-angle-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-list-alt"></i> .fa-list-alt</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-double-angle-left"></i> icon-double-angle-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-list-ol"></i> .fa-list-ol</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-double-angle-right"></i> icon-double-angle-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-list-ul"></i> .fa-list-ul</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-double-angle-up"></i> icon-double-angle-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-outdent"></i> .fa-outdent</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-hand-down"></i> icon-hand-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-paperclip"></i> .fa-paperclip</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-hand-left"></i> icon-hand-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-paste"></i> .fa-paste<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-hand-right"></i> icon-hand-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-repeat"></i> .fa-repeat</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-hand-up"></i> icon-hand-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rotate-left"></i> .fa-rotate-left<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-down"></i> icon-long-arrow-down</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-rotate-right"></i> .fa-rotate-right<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-left"></i> icon-long-arrow-left</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-save"></i> .fa-save<span class="text-muted">(alias)</span></div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-right"></i> icon-long-arrow-right</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-scissors"></i> .fa-scissors</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-long-arrow-up"></i> icon-long-arrow-up</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-strikethrough"></i> .fa-strikethrough</div>
               </div>
-            </div>
-          </section>
-          <hr><br>
-          <section id="video-player" class="bounceInRight animated">
-            <h4>Video Player Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-backward"></i> icon-backward</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-table"></i> .fa-table</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-eject"></i> icon-eject</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-text-height"></i> .fa-text-height</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-fast-backward"></i> icon-fast-backward</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-text-width"></i> .fa-text-width</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-fast-forward"></i> icon-fast-forward</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-th"></i> .fa-th</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-forward"></i> icon-forward</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-th-large"></i> .fa-th-large</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-fullscreen"></i> icon-fullscreen</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-th-list"></i> .fa-th-list</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-pause"></i> icon-pause</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-underline"></i> .fa-underline</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-play"></i> icon-play</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-undo"></i> .fa-undo</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-play-circle"></i> icon-play-circle</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-play-sign"></i> icon-play-sign</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-resize-full"></i> icon-resize-full</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-resize-small"></i> icon-resize-small</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-step-backward"></i> icon-step-backward</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-step-forward"></i> icon-step-forward</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-stop"></i> icon-stop</p>
-              </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube-play"></i> icon-youtube-play</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-unlink"></i> .fa-unlink<span class="text-muted">(alias)</span></div>
               </div>
             </div>
           </section>
-          <hr><br>
-          <section id="brand" class="bounceInLeft animated">
-            <h4>Brand Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-adn"></i> icon-adn</p>
+          <hr class="triple-gap-bottom">
+          <section id="directional">
+            <h2>Directional Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-double-down"></i> .fa-angle-double-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-android"></i> icon-android</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-double-left"></i> .fa-angle-double-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-apple"></i> icon-apple</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-double-right"></i> .fa-angle-double-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitbucket"></i> icon-bitbucket</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-double-up"></i> .fa-angle-double-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitbucket-sign"></i> icon-bitbucket-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-down"></i> .fa-angle-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-bitcoin"></i> icon-bitcoin<span class="muted">(alias)</span></p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-left"></i> .fa-angle-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-btc"></i> icon-btc</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-right"></i> .fa-angle-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-css3"></i> icon-css3</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-angle-up"></i> .fa-angle-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dribbble"></i> icon-dribbble</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-down"></i> .fa-arrow-circle-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-dropbox"></i> icon-dropbox</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-left"></i> .fa-arrow-circle-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-facebook"></i> icon-facebook</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-o-down"></i> .fa-arrow-circle-o-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-facebook-sign"></i> icon-facebook-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-o-left"></i> .fa-arrow-circle-o-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-flickr"></i> icon-flickr</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-o-right"></i> .fa-arrow-circle-o-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-foursquare"></i> icon-foursquare</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-o-up"></i> .fa-arrow-circle-o-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-github"></i> icon-github</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-right"></i> .fa-arrow-circle-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-github-alt"></i> icon-github-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-circle-up"></i> .fa-arrow-circle-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-github-sign"></i> icon-github-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-down"></i> .fa-arrow-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-gittip"></i> icon-gittip</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-left"></i> .fa-arrow-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-google-plus"></i> icon-google-plus</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-right"></i> .fa-arrow-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-google-plus-sign"></i> icon-google-plus-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrow-up"></i> .fa-arrow-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-html5"></i> icon-html5</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows"></i> .fa-arrows</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-instagram"></i> icon-instagram</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows-alt"></i> .fa-arrows-alt</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-linkedin"></i> icon-linkedin</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows-h"></i> .fa-arrows-h</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-linkedin-sign"></i> icon-linkedin-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows-v"></i> .fa-arrows-v</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-linux"></i> icon-linux</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-down"></i> .fa-caret-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-maxcdn"></i> icon-maxcdn</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-left"></i> .fa-caret-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-pinterest"></i> icon-pinterest</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-right"></i> .fa-caret-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-pinterest-sign"></i> icon-pinterest-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-down"></i> .fa-caret-square-o-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-renren"></i> icon-renren</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-left"></i> .fa-caret-square-o-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-skype"></i> icon-skype</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-right"></i> .fa-caret-square-o-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-stackexchange"></i> icon-stackexchange</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-square-o-up"></i> .fa-caret-square-o-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-trello"></i> icon-trello</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-caret-up"></i> .fa-caret-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tumblr"></i> icon-tumblr</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-circle-down"></i> .fa-chevron-circle-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-tumblr-sign"></i> icon-tumblr-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-circle-left"></i> .fa-chevron-circle-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-twitter"></i> icon-twitter</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-circle-right"></i> .fa-chevron-circle-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-twitter-sign"></i> icon-twitter-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-circle-up"></i> .fa-chevron-circle-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-vk"></i> icon-vk</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-down"></i> .fa-chevron-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-weibo"></i> icon-weibo</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-left"></i> .fa-chevron-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-windows"></i> icon-windows</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-right"></i> .fa-chevron-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-xing"></i> icon-xing</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-chevron-up"></i> .fa-chevron-up</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-xing-sign"></i> icon-xing-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-hand-o-down"></i> .fa-hand-o-down</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube"></i> icon-youtube</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-hand-o-left"></i> .fa-hand-o-left</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube-play"></i> icon-youtube-play</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-hand-o-right"></i> .fa-hand-o-right</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-youtube-sign"></i> icon-youtube-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-hand-o-up"></i> .fa-hand-o-up</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-long-arrow-down"></i> .fa-long-arrow-down</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-long-arrow-left"></i> .fa-long-arrow-left</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-long-arrow-right"></i> .fa-long-arrow-right</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-long-arrow-up"></i> .fa-long-arrow-up</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-down"></i> .fa-toggle-down<span class="text-muted">(alias)</span></div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-left"></i> .fa-toggle-left<span class="text-muted">(alias)</span></div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-right"></i> .fa-toggle-right<span class="text-muted">(alias)</span></div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-toggle-up"></i> .fa-toggle-up<span class="text-muted">(alias)</span></div>
               </div>
             </div>
           </section>
-          <hr><br>
-          <section id="medical" class="bounceInUp animated">
-            <h4>Medical Icons</h4>
-            <div class="row the-icons">
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-ambulance"></i> icon-ambulance</p>
+          <hr class="triple-gap-bottom">
+          <section id="video-player">
+            <h2>Video Player Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-arrows-alt"></i> .fa-arrows-alt</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-h-sign"></i> icon-h-sign</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-backward"></i> .fa-backward</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-hospital"></i> icon-hospital</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-compress"></i> .fa-compress</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-medkit"></i> icon-medkit</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-eject"></i> .fa-eject</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-plus-sign-alt"></i> icon-plus-sign-alt</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-expand"></i> .fa-expand</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-stethoscope"></i> icon-stethoscope</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-fast-backward"></i> .fa-fast-backward</div>
               </div>
-              <div class="one fourth two-up-small-tablet two-up-mobile">
-                <p><i class="icon-user-md"></i> icon-user-md</p>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-fast-forward"></i> .fa-fast-forward</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-forward"></i> .fa-forward</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pause"></i> .fa-pause</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-play"></i> .fa-play</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-play-circle"></i> .fa-play-circle</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-play-circle-o"></i> .fa-play-circle-o</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-step-backward"></i> .fa-step-backward</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-step-forward"></i> .fa-step-forward</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-stop"></i> .fa-stop</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-youtube-play"></i> .fa-youtube-play</div>
+              </div>
+            </div>
+          </section>
+          <hr class="triple-gap-bottom">
+          <section id="brand">
+            <h2 class="zero">Brand Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-adn"></i> .fa-adn</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-android"></i> .fa-android</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-apple"></i> .fa-apple</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bitbucket"></i> .fa-bitbucket</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bitbucket-square"></i> .fa-bitbucket-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-bitcoin"></i> .fa-bitcoin<span class="text-muted">(alias)</span></div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-btc"></i> .fa-btc</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-css3"></i> .fa-css3</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dribbble"></i> .fa-dribbble</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-dropbox"></i> .fa-dropbox</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-facebook"></i> .fa-facebook</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-facebook-square"></i> .fa-facebook-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-flickr"></i> .fa-flickr</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-foursquare"></i> .fa-foursquare</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-github"></i> .fa-github</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-github-alt"></i> .fa-github-alt</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-github-square"></i> .fa-github-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-gittip"></i> .fa-gittip</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-google-plus"></i> .fa-google-plus</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-google-plus-square"></i> .fa-google-plus-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-html5"></i> .fa-html5</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-instagram"></i> .fa-instagram</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-linkedin"></i> .fa-linkedin</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-linkedin-square"></i> .fa-linkedin-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-linux"></i> .fa-linux</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-maxcdn"></i> .fa-maxcdn</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pagelines"></i> .fa-pagelines</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pinterest"></i> .fa-pinterest</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-pinterest-square"></i> .fa-pinterest-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-renren"></i> .fa-renren</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-skype"></i> .fa-skype</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-stack-exchange"></i> .fa-stack-exchange</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-stack-overflow"></i> .fa-stack-overflow</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-trello"></i> .fa-trello</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tumblr"></i> .fa-tumblr</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-tumblr-square"></i> .fa-tumblr-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-twitter"></i> .fa-twitter</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-twitter-square"></i> .fa-twitter-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-vimeo-square"></i> .fa-vimeo-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-vk"></i> .fa-vk</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-weibo"></i> .fa-weibo</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-windows"></i> .fa-windows</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-xing"></i> .fa-xing</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-xing-square"></i> .fa-xing-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-youtube"></i> .fa-youtube</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-youtube-play"></i> .fa-youtube-play</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-youtube-square"></i> .fa-youtube-square</div>
+              </div>
+            </div>
+          </section>
+          <hr class="triple-gap-bottom">
+          <section id="medical">
+            <h2>Medical Icons</h2>
+            <div class="row fontawesome-icon-list">
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-ambulance"></i> .fa-ambulance</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-h-square"></i> .fa-h-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-hospital-o"></i> .fa-hospital-o</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-medkit"></i> .fa-medkit</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-plus-square"></i> .fa-plus-square</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-stethoscope"></i> .fa-stethoscope</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-user-md"></i> .fa-user-md</div>
+              </div>
+              <div class="four-up two-up-small-tablet one-up-mobile">
+                <div class="padded"><i class="fa fa-wheelchair"></i> .fa-wheelchair</div>
               </div>
             </div>
           </section>
@@ -1561,18 +1569,18 @@
       <div class="box square charcoal">
         <div class="container padded">
           <div class="row">
-            <div class="one small-tablet fourth padded">
+            <div class="three-tenths two-fifths-small-tablet collapse-on-mobile padded">
               <h5 class="green">Example Layouts</h5>
-              <ul class="unstyled">
+              <ul class="unstyled two-columns-mobile">
                 <li><a href="./layout-a.html">Web Page</a></li>
                 <li><a href="./layout-b.html">Image Gallery</a></li>
                 <li><a href="./layout-c.html">Ecommerce Page</a></li>
                 <li><a href="./layout-d.html">Contact Page</a></li>
               </ul>
             </div>
-            <div class="three small-tablet fourths padded">
+            <div class="seven-tenths three-fifths-small-tablet collapse-on-mobile padded">
               <h5 class="blue">Documentation</h5>
-              <ul class="unstyled three-column two-column-mobile">
+              <ul class="unstyled three-columns two-columns-small-tablet two-columns-mobile">
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
@@ -1595,11 +1603,11 @@
       <div class="box square">
         <div class="container padded">
           <div class="row">
-            <div class="one half padded">
+            <div class="one-half collapse-on-small-tablet padded">
               <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
               <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
-            <div class="one half padded">
+            <div class="one-half collapse-on-small-tablet padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
             </div>
           </div>
@@ -1607,7 +1615,33 @@
       </div>
     </footer>
     <!-- javascript-->
-    <script type="text/javascript" src="../js/groundwork.all.js"></script>
+    <script type="text/javascript" src="../js/groundwork.all.min.js"></script>
+    <!-- snippet (syntax highlighting for code examples)-->
+    <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
+(function() {
+
+  $(document).ready(function() {
+    $('pre[data-lang="html"]').snippet("html", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    $('pre[data-lang="css"]').snippet("css", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    $('pre[data-lang="scss"]').snippet("scss", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    return $('pre[data-lang="js"]').snippet("javascript", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+  });
+
+}).call(this);
+</script>
     <!-- google analytics-->
     <script type="text/javascript">
       var _gaq = _gaq || [];

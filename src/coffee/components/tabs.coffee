@@ -1,24 +1,32 @@
+# Responsive Tabs
+
+window.GroundworkCSS ||= {}
+
 $ ->
 
-  $('.tabs').each ->
-    activeTab = $(@).children('ul').children('li.active')
-    if activeTab.length
-      tabs = activeTab.parents('.tabs')
-      tabs.find(activeTab.attr('aria-controls')).addClass('active')
-    else
-      $(@).children('ul').children('li').first().addClass('active')
-      $(@).children('div').first().addClass('active')
+  $body = $('body')
 
-  $('body').on 'click', '.tabs > ul li', (e) ->
-    tab = $(@).addClass('active')
-    tabs = tab.parents('.tabs')
-    tab.siblings('li').removeClass('active')
-    tabs.find('> div, > ul > div').hide()
-    tabs.find(tab.attr('aria-controls')).show()
+  $('.tabs').each ->
+    $tabs = $(@)
+    $activeTab = $tabs.children('ul').children('li.active')
+    if $activeTab.length
+      $tabs = $activeTab.parents('.tabs')
+      $tabs.find($activeTab.attr('aria-controls')).addClass('active')
+    else
+      $tabs.children('ul').children('li').first().addClass('active')
+      $tabs.children('div').first().addClass('active')
+
+  $body.on 'click', '.tabs > ul li', (e) ->
+    $tab = $(@)
+    $tabs = $tab.parents('.tabs')
+    $tab.addClass('active')
+    $tab.siblings('li').removeClass('active')
+    $tabs.find('> div, > ul > div').hide()
+    $tabs.find($tab.attr('aria-controls')).show()
     e.preventDefault()
 
-  transformTabs = ->
-    viewport = $(window).width()
+  GroundworkCSS.transformTabs = ->
+    viewportWidth = $(window).width()
     accordion = '.tabs.accordion'
     mobile = '.tabs.accordion.mobile'
     smalltablet = '.tabs.accordion.small-tablet'
@@ -27,47 +35,43 @@ $ ->
     notmobile = ':not(.mobile)'
     notsmalltablet = ':not(.small-tablet)'
     notipad = ':not(.ipad)'
-    if viewport <= 480
-      restoreTabStructure(mobile)
-      convertToAccordion(notaccordion + notmobile)
-    else if viewport < 768
-      restoreTabStructure(mobile + ', ' + smalltablet)
-      convertToAccordion(notaccordion + notmobile + notsmalltablet)
-    else if viewport <= 1024
-      restoreTabStructure(mobile + ', ' + smalltablet + ', ' + ipad)
-      convertToAccordion(notaccordion + notmobile + notsmalltablet + notipad)
-    else if viewport > 1024
-      restoreTabStructure(accordion)
+    if viewportWidth <= 480
+      GroundworkCSS.restoreTabStructure(mobile)
+      GroundworkCSS.convertToAccordion(notaccordion + notmobile)
+    else if viewportWidth < 768
+      GroundworkCSS.restoreTabStructure(mobile + ', ' + smalltablet)
+      GroundworkCSS.convertToAccordion(notaccordion + notmobile + notsmalltablet)
+    else if viewportWidth <= 1024
+      GroundworkCSS.restoreTabStructure(mobile + ', ' + smalltablet + ', ' + ipad)
+      GroundworkCSS.convertToAccordion(notaccordion + notmobile + notsmalltablet + notipad)
+    else if viewportWidth > 1024
+      GroundworkCSS.restoreTabStructure(accordion)
 
-  convertToAccordion = (tabTypes) ->
+  GroundworkCSS.convertToAccordion = (tabTypes) ->
     tabTypes = $(tabTypes)
     tabTypes.each ->
-      tabs = $(@)
-      tabs.addClass('accordion')
-      tabs.find('> div').each ->
-        tabpanel = $(@).clone()
-        tablink = 'li[aria-controls="#'+tabpanel.attr('id')+'"]'
-        tabs.find(tablink).after(tabpanel)
-        $(@).remove()
+      $tabs = $(@)
+      $tabs.addClass('accordion')
+      $tabs.find('> div').each ->
+        $tab = $(@)
+        $tabpanel = $tab.clone()
+        tablink = 'li[aria-controls="#'+$tabpanel.attr('id')+'"]'
+        $tabs.find(tablink).after($tabpanel)
+        $tab.remove()
 
-  restoreTabStructure = (tabTypes) ->
+  GroundworkCSS.restoreTabStructure = (tabTypes) ->
     $(tabTypes).each ->
-      tabs = $(@)
-      tabs.removeClass('accordion')
-      if tabs.hasClass('vertical')
-        adjustVerticalTabs(tabs)
-      tabs.children('ul').children('div').each ->
-        tabpanel = $(@).clone()
-        tabs.append(tabpanel)
-        $(@).remove()
+      $tabs = $(@)
+      $tabs.removeClass('accordion')
+      if $tabs.hasClass('vertical')
+        GroundworkCSS.adjustVerticalTabs($tabs)
+      $tabs.children('ul').children('div').each ->
+        $tab = $(@)
+        $tabpanel = $tab.clone()
+        $tabs.append($tabpanel)
+        $tab.remove()
 
-  # adjustHorizontalTabs = (tabs) ->
-  #   tabs = $(tabs)
-  #   unless tabs.length
-  #     tabs = $('.tabs:not(.vertical)')
-  #   tabs.each ->
-
-  adjustVerticalTabs = (tabs) ->
+  GroundworkCSS.adjustVerticalTabs = (tabs) ->
     tabs = $(tabs)
     unless tabs.length
       tabs = $('.tabs.vertical')
@@ -81,14 +85,9 @@ $ ->
           $(@).children('ul').css
             'min-height': $(@).height() + 'px'
 
-  $(window).resize ->
-    clearTimeout(window.delayedAdjustTabs)
-    window.delayedAdjustTabs = setTimeout( ->
-      transformTabs()
-      adjustVerticalTabs()
-    , 50)
-
-  $(window).load ->
-    transformTabs()
-    adjustVerticalTabs()
-
+$(window).on 'load resize', ->
+  clearTimeout(GroundworkCSS.delayedAdjustTabs)
+  GroundworkCSS.delayedAdjustTabs = setTimeout( ->
+    GroundworkCSS.transformTabs()
+    GroundworkCSS.adjustVerticalTabs()
+  , 50)

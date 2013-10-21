@@ -40,8 +40,8 @@ $disabled-border:     darken($disabled-color, 10%) !default;
   width: auto;
   height: auto;
   text-align: center;
-  @include transition(background-color 0.25s ease-out);
-  @include rounded($default-radius);
+  transition: background-color $default-transition-speed ease-out;
+  border-radius: $default-radius;
   &:visited {
     color: $button-text;
   }
@@ -180,8 +180,7 @@ $disabled-border:     darken($disabled-color, 10%) !default;
 %dropdown-button {
   &:after {
     @extend %inline-block, %gap-left;
-    @include icon-FontAwesome();
-    content: $icon-caret-down;
+    @include icon($fa-var-caret-down);
   }
 }
 
@@ -197,8 +196,7 @@ $disabled-border:     darken($disabled-color, 10%) !default;
   left: 0;
   width: 100%;
   z-index: 10;
-  @include box-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
-  @include rounded(0 0 $default-radius $default-radius);
+  border-radius: 0 0 $default-radius $default-radius;
 }
 
 %dropdown-list-item {
@@ -215,7 +213,7 @@ $disabled-border:     darken($disabled-color, 10%) !default;
     text-shadow: none;
     text-decoration: none;
     text-align: left;
-    @include rounded(0);
+    border-radius: 0;
     &:hover, &:focus {
       background: #efefef;
     }
@@ -224,7 +222,7 @@ $disabled-border:     darken($disabled-color, 10%) !default;
     }
   }
   &:last-child {
-    @include rounded(0 0 $default-radius $default-radius);
+    border-radius: 0 0 $default-radius $default-radius;
   }
 }
 
@@ -244,10 +242,10 @@ $disabled-border:     darken($disabled-color, 10%) !default;
     float: left;
     margin: 0;
     &:first-child a, &:first-child button {
-      @include rounded($default-radius 0 0 $default-radius);
+      border-radius: $default-radius 0 0 $default-radius;
     }
     &:last-child a, &:last-child button {
-      @include rounded(0 $default-radius $default-radius 0);
+      border-radius: 0 $default-radius $default-radius 0;
     }
     a, button {
       @extend %block;
@@ -260,8 +258,8 @@ $disabled-border:     darken($disabled-color, 10%) !default;
       text-decoration: none;
       cursor: pointer;
       line-height: 1.5;
-      @include rounded(0);
-      @include transition(background-color 0.25s ease-out);
+      border-radius: 0;
+      transition: background-color $default-transition-speed ease-out;
       &.active, &[aria-selected="true"], &[aria-pressed="true"], &:hover, &:focus {
         background: $button-active;
         text-decoration: none;
@@ -271,25 +269,6 @@ $disabled-border:     darken($disabled-color, 10%) !default;
       &.disabled, &[disabled="disabled"] {
         @include state(disabled,normal,$disabled-background);
       }
-    }
-  }
-}
-
-@mixin button_modifiers() {
-  @for $i from 1 through length($button-modifiers) {
-    &.#{nth($button-modifiers, $i)} {
-      @extend %button-#{nth($button-modifiers, $i)};
-    }
-  }
-  @for $i from 1 through length($button-states) {
-    &.#{nth($button-states, $i)} {
-      @extend %button-#{nth($button-states, $i)};
-    }
-  }
-  // modifier colors
-  @for $i from 1 through length($modifier-name) {
-    &.#{nth($modifier-name, $i)} {
-      @extend %button-#{nth($modifier-name, $i)};
     }
   }
 }

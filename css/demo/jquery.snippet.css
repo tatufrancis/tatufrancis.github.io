@@ -27,7 +27,7 @@
   border-radius: 4px;
 }
 .sh_groundwork .sh_sourceCode {
-  background-color: #34495e;
+  background-color: #383636;
   color: #f6f6f6;
   font-weight: normal;
   font-style: normal;
@@ -138,7 +138,6 @@
   font-style: normal;
 }
 
-/*-------- Snippet Base Styles ----------*/
 .snippet-wrap {
   position: relative;
 }

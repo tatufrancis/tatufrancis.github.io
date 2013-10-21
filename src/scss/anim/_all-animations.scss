@@ -7,8 +7,8 @@
 $dismiss-animation: "fadeOut" !default;
 
 
-body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
-  -webkit-backface-visibility: hidden;
+body {
+  -webkit-transform: translateZ(0); // Addresses webkit issue: http://bit.ly/NEdoDq
 }
 
 .animated {

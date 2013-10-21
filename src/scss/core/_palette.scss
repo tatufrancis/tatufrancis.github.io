@@ -19,11 +19,12 @@ $link-active:         #198D98 !default;
 $selection-color:     $link-color !default;
 $selection-text:      #ffffff !default;
 
+// code
+$code-text:           #555555 !default;
+$code-background:     #ffffff !default;
+
 // borders
-$border-thickness:    1px !default;
-$border-style:        solid !default;
 $border-color:        #dddddd !default;
-$border:              #{$border-thickness} #{$border-style} #{$border-color} !default;
 
 // buttons
 $button-color:        lighten(gray, 32.5%) !default;
@@ -40,9 +41,8 @@ $nav-active:          lighten(gray, 27.5%) !default;
 $nav-active-text:     darken(gray, 12%) !default;
 
 // quotes
-$quote-color:         $font-color !default;
-$quote-background:    $border-color !default;
-$quote-font:          "source-sans-pro" !default;
+$quote-color:         #2b2b2b !default;
+$quote-background:    #dddddd !default;
 
 // info
 $info-color:          #3a87ad !default;
@@ -126,3 +126,4 @@ $dribbble:            #ea4c89 !default;
 $dropbox:             #007FE1 !default;
 $trello:              #3493CA !default;
 $skype:               #009FE3 !default;
+

@@ -1,0 +1,11 @@
+// grid adapters test
+
+$grid-blocks: 1 2 3 4;
+
+@import "test-settings";
+@import "../../../src/scss/core/all-core";
+@import "../../../src/scss/responsive/all-responsive";
+
+section {
+  @extend %padded;
+}

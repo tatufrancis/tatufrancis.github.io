@@ -25,12 +25,12 @@ block content
   .container
     .padded
       .row
-        .three.fifths.bounceInRight.animated
+        .three-fifths.collapse-on-small-tablet.bounceInRight.animated
           h1.zero.museo-slab Tabs
           p.quicksand
             | Accessible, responsive tab panels that collapse into accordions at 
             a(href='breakpoints.html') targeted breakpoints
-        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+        .two-fifths.collapse-on-small-tablet.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 9 of 14
           p
             a.blue.button(href='tables.html', rel='prev')
@@ -40,10 +40,10 @@ block content
               | Next: Forms
     hr
     .row
-      .one.whole.padded
+      .one-whole.padded
         .bounceInLeft.animated
           .row
-            .one.whole.padded
+            .one-whole.padded
               .tabs.ipad
                 +tab-structure()
               pre.gap-top(data-lang='html')
@@ -90,6 +90,6 @@ block content
           br
           h4 Vertical Tabs
           .row
-            .one.whole.padded
+            .one-whole.padded
               .tabs.vertical.ipad
                 +tab-structure()

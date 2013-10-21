@@ -7,6 +7,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
   <title>GroundworkCSS &hearts; A Responsive HTML5, CSS &amp; Javascript Toolkit</title>
   <!-- Modernizr -->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
@@ -59,7 +64,6 @@
       margin:0 auto;
     }
     #resizer ul {
-      font-size: 17px;
       display: inline-block;
       -webkit-filter: drop-shadow(0 1px 5px rgba(0,0,0,.25));
       -moz-filter: drop-shadow(0 1px 5px rgba(0,0,0,.25));
@@ -173,15 +177,15 @@
   <div style="position:fixed;top:0;z-index:99;width:100%;">
     <div id="resizer" class="bounceInDown animated">
       <ul class="button-group">
-        <li><button class="desktop-only" title="Fullscreen" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></button></li>
-        <li><button class="desktop-only" title="Desktop" data-viewport-width="1920px" data-viewport-height="1080px"><i class="icon-desktop"></i></button></li>
-        <li><button class="desktop-only" title="13 &#39; MacBook Pro" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></button></li>
-        <li><button class="hide-on-small-tablet hide-on-mobile" title="iPad" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></button></li>
-        <li><button class="hide-on-mobile" title="Android Tablet" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="android icon-tablet"></i></button></li>
-        <li><button class="" title="Android Phone" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="android icon-mobile-phone"></i></button></li>
-        <li><button class="" title="iPhone" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone"></i></button></li>
-        <li><button class="rotate" title="Toggle Landscape/Portrait"><i class="icon-refresh"></i></button></li>
-        <li><button id="closeResizer"><i class="icon-remove"></i></button></li>
+        <li><button class="desktop-only" title="Fullscreen" data-viewport-width="100%" data-viewport-height="100%"><i class="fa fa-arrows-alt"></i></button></li>
+        <li><button class="desktop-only" title="Desktop" data-viewport-width="1920px" data-viewport-height="1080px"><i class="fa fa-desktop"></i></button></li>
+        <li><button class="desktop-only" title="13 &#39; MacBook Pro" data-viewport-width="1280px" data-viewport-height="800px"><i class="fa fa-laptop"></i></button></li>
+        <li><button class="hide-on-small-tablet hide-on-mobile" title="iPad" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="fa fa-tablet"></i></button></li>
+        <li><button class="hide-on-mobile" title="Android Tablet" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="android fa fa-tablet"></i></button></li>
+        <li><button class="" title="Android Phone" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="android fa fa-mobile-phone"></i></button></li>
+        <li><button class="" title="iPhone" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="fa fa-mobile-phone"></i></button></li>
+        <li><button class="rotate" title="Toggle Landscape/Portrait"><i class="fa fa-refresh"></i></button></li>
+        <li><button id="closeResizer"><i class="fa fa-times"></i></button></li>
       </ul>
     </div>
   </div>

@@ -1,29 +1,34 @@
 (function() {
+  window.GroundworkCSS || (window.GroundworkCSS = {});
+
   $(function() {
-    var adjustVerticalTabs, convertToAccordion, restoreTabStructure, transformTabs;
+    var $body;
+    $body = $('body');
     $('.tabs').each(function() {
-      var activeTab, tabs;
-      activeTab = $(this).children('ul').children('li.active');
-      if (activeTab.length) {
-        tabs = activeTab.parents('.tabs');
-        return tabs.find(activeTab.attr('aria-controls')).addClass('active');
+      var $activeTab, $tabs;
+      $tabs = $(this);
+      $activeTab = $tabs.children('ul').children('li.active');
+      if ($activeTab.length) {
+        $tabs = $activeTab.parents('.tabs');
+        return $tabs.find($activeTab.attr('aria-controls')).addClass('active');
       } else {
-        $(this).children('ul').children('li').first().addClass('active');
-        return $(this).children('div').first().addClass('active');
+        $tabs.children('ul').children('li').first().addClass('active');
+        return $tabs.children('div').first().addClass('active');
       }
     });
-    $('body').on('click', '.tabs > ul li', function(e) {
-      var tab, tabs;
-      tab = $(this).addClass('active');
-      tabs = tab.parents('.tabs');
-      tab.siblings('li').removeClass('active');
-      tabs.find('> div, > ul > div').hide();
-      tabs.find(tab.attr('aria-controls')).show();
+    $body.on('click', '.tabs > ul li', function(e) {
+      var $tab, $tabs;
+      $tab = $(this);
+      $tabs = $tab.parents('.tabs');
+      $tab.addClass('active');
+      $tab.siblings('li').removeClass('active');
+      $tabs.find('> div, > ul > div').hide();
+      $tabs.find($tab.attr('aria-controls')).show();
       return e.preventDefault();
     });
-    transformTabs = function() {
-      var accordion, ipad, mobile, notaccordion, notipad, notmobile, notsmalltablet, smalltablet, viewport;
-      viewport = $(window).width();
+    GroundworkCSS.transformTabs = function() {
+      var accordion, ipad, mobile, notaccordion, notipad, notmobile, notsmalltablet, smalltablet, viewportWidth;
+      viewportWidth = $(window).width();
       accordion = '.tabs.accordion';
       mobile = '.tabs.accordion.mobile';
       smalltablet = '.tabs.accordion.small-tablet';
@@ -32,51 +37,53 @@
       notmobile = ':not(.mobile)';
       notsmalltablet = ':not(.small-tablet)';
       notipad = ':not(.ipad)';
-      if (viewport <= 480) {
-        restoreTabStructure(mobile);
-        return convertToAccordion(notaccordion + notmobile);
-      } else if (viewport < 768) {
-        restoreTabStructure(mobile + ', ' + smalltablet);
-        return convertToAccordion(notaccordion + notmobile + notsmalltablet);
-      } else if (viewport <= 1024) {
-        restoreTabStructure(mobile + ', ' + smalltablet + ', ' + ipad);
-        return convertToAccordion(notaccordion + notmobile + notsmalltablet + notipad);
-      } else if (viewport > 1024) {
-        return restoreTabStructure(accordion);
+      if (viewportWidth <= 480) {
+        GroundworkCSS.restoreTabStructure(mobile);
+        return GroundworkCSS.convertToAccordion(notaccordion + notmobile);
+      } else if (viewportWidth < 768) {
+        GroundworkCSS.restoreTabStructure(mobile + ', ' + smalltablet);
+        return GroundworkCSS.convertToAccordion(notaccordion + notmobile + notsmalltablet);
+      } else if (viewportWidth <= 1024) {
+        GroundworkCSS.restoreTabStructure(mobile + ', ' + smalltablet + ', ' + ipad);
+        return GroundworkCSS.convertToAccordion(notaccordion + notmobile + notsmalltablet + notipad);
+      } else if (viewportWidth > 1024) {
+        return GroundworkCSS.restoreTabStructure(accordion);
       }
     };
-    convertToAccordion = function(tabTypes) {
+    GroundworkCSS.convertToAccordion = function(tabTypes) {
       tabTypes = $(tabTypes);
       return tabTypes.each(function() {
-        var tabs;
-        tabs = $(this);
-        tabs.addClass('accordion');
-        return tabs.find('> div').each(function() {
-          var tablink, tabpanel;
-          tabpanel = $(this).clone();
-          tablink = 'li[aria-controls="#' + tabpanel.attr('id') + '"]';
-          tabs.find(tablink).after(tabpanel);
-          return $(this).remove();
+        var $tabs;
+        $tabs = $(this);
+        $tabs.addClass('accordion');
+        return $tabs.find('> div').each(function() {
+          var $tab, $tabpanel, tablink;
+          $tab = $(this);
+          $tabpanel = $tab.clone();
+          tablink = 'li[aria-controls="#' + $tabpanel.attr('id') + '"]';
+          $tabs.find(tablink).after($tabpanel);
+          return $tab.remove();
         });
       });
     };
-    restoreTabStructure = function(tabTypes) {
+    GroundworkCSS.restoreTabStructure = function(tabTypes) {
       return $(tabTypes).each(function() {
-        var tabs;
-        tabs = $(this);
-        tabs.removeClass('accordion');
-        if (tabs.hasClass('vertical')) {
-          adjustVerticalTabs(tabs);
+        var $tabs;
+        $tabs = $(this);
+        $tabs.removeClass('accordion');
+        if ($tabs.hasClass('vertical')) {
+          GroundworkCSS.adjustVerticalTabs($tabs);
         }
-        return tabs.children('ul').children('div').each(function() {
-          var tabpanel;
-          tabpanel = $(this).clone();
-          tabs.append(tabpanel);
-          return $(this).remove();
+        return $tabs.children('ul').children('div').each(function() {
+          var $tab, $tabpanel;
+          $tab = $(this);
+          $tabpanel = $tab.clone();
+          $tabs.append($tabpanel);
+          return $tab.remove();
         });
       });
     };
-    adjustVerticalTabs = function(tabs) {
+    return GroundworkCSS.adjustVerticalTabs = function(tabs) {
       tabs = $(tabs);
       if (!tabs.length) {
         tabs = $('.tabs.vertical');
@@ -97,17 +104,14 @@
         }
       });
     };
-    $(window).resize(function() {
-      clearTimeout(window.delayedAdjustTabs);
-      return window.delayedAdjustTabs = setTimeout(function() {
-        transformTabs();
-        return adjustVerticalTabs();
-      }, 50);
-    });
-    return $(window).load(function() {
-      transformTabs();
-      return adjustVerticalTabs();
-    });
+  });
+
+  $(window).on('load resize', function() {
+    clearTimeout(GroundworkCSS.delayedAdjustTabs);
+    return GroundworkCSS.delayedAdjustTabs = setTimeout(function() {
+      GroundworkCSS.transformTabs();
+      return GroundworkCSS.adjustVerticalTabs();
+    }, 50);
   });
 
 }).call(this);

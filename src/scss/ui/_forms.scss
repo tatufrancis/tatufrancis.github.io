@@ -36,7 +36,7 @@ $aria-selectors:      true !default;
   background-color: $fieldset-color;
   border:1px solid $border-color;
   padding:$gutter;
-  @include rounded($default-radius);
+  border-radius: $default-radius;
 }
 
 %legend {
@@ -61,7 +61,7 @@ $aria-selectors:      true !default;
   height:2.25em;
   background:white;
   border:1px solid $border-color;
-  @include rounded($default-radius);
+  border-radius: $default-radius;
 }
 
 %input {
@@ -72,7 +72,7 @@ $aria-selectors:      true !default;
   &[type="checkbox"], &[type="radio"] {
     @extend %zero, %inline-block;
     border: 0;
-    @include rounded(0);
+    border-radius: 0;
   }
 }
 
@@ -125,12 +125,12 @@ $aria-selectors:      true !default;
 
 %prefix {
   left:2px;
-  @include rounded($default-radius 0 0 $default-radius);
+  border-radius: $default-radius 0 0 $default-radius;
 }
 
 %suffix {
   left:-2px;
-  @include rounded(0 $default-radius $default-radius 0);
+  border-radius: 0 $default-radius $default-radius 0;
 }
 
 .prefix {

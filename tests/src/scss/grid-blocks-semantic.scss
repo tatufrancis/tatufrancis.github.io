@@ -1,0 +1,12 @@
+// semantic grid test settings
+
+$grid-block-classes: false;
+
+@import "test-settings";
+@import "../../../src/scss/core/all-core";
+
+// semantic grid adapters test
+section {
+  @extend %padded;
+  @include blocks(4,3,2,1);
+}

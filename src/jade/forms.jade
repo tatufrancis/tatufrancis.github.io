@@ -1,16 +1,16 @@
 extends template
 
 block title
-  title GroundworkCSS 2 &hearts; Forms
+  title GroundworkCSS &hearts; Forms
 
 block content
   .container
     .padded
       .row
-        .three.fifths.bounceInRight.animated
+        .three-fifths.collapse-on-small-tablet.bounceInRight.animated
           h1.zero.museo-slab Form Elements
           p.quicksand Easy to customize & flexible form elements wrapped in the grid system.
-        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+        .two-fifths.collapse-on-small-tablet.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 10 of 14
           p
             a.blue.button(href='tables.html', rel='prev')
@@ -19,27 +19,27 @@ block content
             a.green.button(href='icons.html', rel='next')
               | Next: Icons
     hr
-    .row.bounceInRight.animated
-      .one.whole.padded
+    .bounceInRight.animated
+      .padded
         h4 Form Elements
         form(action='#', method='post')
           fieldset
             legend Example HTML5 Form
             .row
-              .one.half.padded
+              .one-half.collapse-on-mobile.padded
                 label(for='name') Text Field
                 input#name(type='text', placeholder='First & Last Name')
-              .one.half.padded
+              .one-half.collapse-on-mobile.padded
                 label(for='email') Email Field
                 input#email(type='email', placeholder='you@example.com')
             .row
-              .one.whole.padded
+              .one-whole.padded
                 label(for='address') Address
                 input#address(type='text', placeholder='Street Address')
             .row
-              .two.fourths.padded
+              .two-fourths.collapse-on-mobile.padded
                 input(type='text', placeholder='City')
-              .one.fourth.padded
+              .one-fourth.collapse-on-mobile.padded
                 span.select-wrap
                   select
                     option(value='', disabled='', selected='') State
@@ -121,30 +121,30 @@ block content
                     option(value='QC') Quebec
                     option(value='SK') Saskatchewan
                     option(value='YT') Yukon Territory
-              .one.fourth.padded
+              .one-fourth.collapse-on-mobile.padded
                 input(type='text', placeholder='Zip Code')
             .row
-              .one.whole.padded
+              .one-whole.padded
                 label(for='message') Special Instructions
                 textarea#message(placeholder='Enter your message...')
             .row
-              .one.whole.pad-left
+              .one-whole.pad-left
                 label(for='twitter') Prefixed & Suffixed
             .row
-              .one.half.padded
+              .one-half.collapse-on-mobile.padded
                 .row
-                  .one.mobile.sixth
+                  .one-sixth
                     span.prefix @
-                  .five.mobile.sixths
+                  .five-sixths
                     input#twitter(type='text', name='twitter', placeholder='twitter handle')
-              .one.half.padded
+              .one-half.collapse-on-mobile.padded
                 .row
-                  .three.mobile.fifths
+                  .three-fifths
                     input(type='text', name='sidereel', placeholder='desired username')
-                  .two.mobile.fifths
+                  .two-fifths
                     span.suffix @example.com
             .row
-              .one.whole.padded
+              .one-whole.padded
                 label(for='thing1') Radio Buttons:
                 ul.unstyled.zero
                   li
@@ -154,11 +154,11 @@ block content
                     input#thing2(type='radio', name='things')
                     label.inline(for='thing2') Thing two
             .row
-              .one.whole.padded
+              .one-whole.padded
                 input#allthings(type='checkbox', name='things', checked='')
                 label.inline(for='allthings')  I want all the things!
         .row
-          .one.whole.pad-top
+          .one-whole.pad-top
             pre(data-lang='html')
               | <form action="#" method="post">
               |   <fieldset>
@@ -324,29 +324,29 @@ block content
     br
     hr
     .row.bounceInLeft.animated
-      .one.whole.padded
+      .one-whole.padded
         h4 Form Validation
         .row
-          .one.half.padded
+          .one-half.collapse-on-mobile.padded
             p.error Invalid Entry
             p
               input(aria-invalid='true', value='Invalid entry')
             .invalid.row
-              .one.mobile.tenth
+              .one-tenth
                 span.prefix @
-              .nine.mobile.tenths
+              .nine-tenths
                 input(aria-invalid='true', value='Invalid entry')
-          .one.half.padded
+          .one-half.collapse-on-mobile.padded
             p.success Validated Entry
             p
               input(aria-invalid='false', value='Valid entry')
             .valid.row
-              .one.mobile.tenth
+              .one-tenth
                 span.prefix @
-              .nine.mobile.tenths
+              .nine-tenths
                 input(aria-invalid='false', value='Valid entry')
         .row.gap-top
-          .one.half.pad-left.pad-right
+          .one-half.collapse-on-mobile.padded.pad-left.pad-right
             pre(data-lang='html')
               | <p class="invalid">
               |   <input value="Invalid entry">
@@ -357,7 +357,7 @@ block content
               |     <input value="Invalid entry">
               |   </div>
               | </div>
-          .one.half.pad-left.pad-right
+          .one-half.collapse-on-mobile.padded.pad-left.pad-right
             pre(data-lang='html')
               | <p class="valid">
               |   <input value="Valid entry">

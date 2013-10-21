@@ -1,0 +1,150 @@
+///////////////////////
+//   layout mixins   //
+///////////////////////
+
+// multi-columns
+@mixin _multi-column($count: 2) {
+  column-count: $count;
+}
+@mixin _multi-column-classes($target: false) {
+  @each $number in $multi-columns {
+    $selector: #{'.' + nth($numbers, $number) + '-column'};
+    @if $number > 1 {
+      $selector: #{$selector + 's'};
+    }
+    @if $target {
+      $selector: #{$selector + '-' + $target};
+    }
+    #{$selector} {
+      @include _multi-column($number);
+    }
+  }
+}
+@mixin responsive_multi-column_helpers($breakpoint: false, $target: false) {
+  @if $breakpoint and $target {
+    @media #{$breakpoint} {
+      @include _multi-column-classes($target);
+    }
+  }
+}
+
+// grid system
+@mixin _grid-column() {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+}
+@mixin _grid-block($num) {
+  width: percentage(1 / $num);
+  &:nth-child(#{$num}n+1) {
+    clear: both;
+  }
+}
+@mixin columns($desktop-fraction, $ipad-fraction: $desktop-fraction, $small-tablet-fraction: $one-whole, $mobile-fraction: $one-whole) {
+  @include _grid-column();
+  @media #{$desktop} {
+    width: $desktop-fraction;
+  }
+  @media #{$ipad} {
+    width: $ipad-fraction;
+  }
+  @media #{$small-tablet} {
+    width: $small-tablet-fraction;
+  }
+  @media #{$mobile} {
+    width: $mobile-fraction;
+  }
+}
+@mixin blocks($desktop-num, $ipad-num: $desktop-num, $small-tablet-num: $desktop-num, $mobile-num: $desktop-num) {
+  @include _grid-column();
+  @media #{$desktop} {
+    @include _grid-block($desktop-num);
+  }
+  @media #{$ipad} {
+    @include _grid-block($ipad-num);
+  }
+  @media #{$small-tablet} {
+    @include _grid-block($small-tablet-num);
+  }
+  @media #{$mobile} {
+    @include _grid-block($mobile-num);
+  }
+}
+
+// responsive grid system
+@mixin grid-selectors($target: false) {
+  @if $target {
+    $target: #{'-' + $target};
+  }
+  // generate responsive grid selectors
+  @each $denominator in $grid-columns {
+    @for $numerator from 1 through $denominator - 1 { // i.e. one-tenth through nine-tenths
+      $grid-selector: '';
+      @if $numerator == 1 { // singular
+        $grid-selector: #{'.' + nth($numbers, $numerator) + '-' + nth($fractions-singular, $denominator) + $target};
+      }@else{               // plural
+        $grid-selector: #{'.' + nth($numbers, $numerator) + '-' + nth($fractions-plural, $denominator) + $target};
+      }
+      #{$grid-selector} {
+        @if $target {
+          @include _grid-column;
+        }@else{
+          @extend %column;
+        }
+        width: percentage($numerator / $denominator);
+        @for $num from 1 through $denominator - $numerator {
+          &#{'.' + 'right-' + nth($numbers, $num) + $target} {
+            left: percentage($num / $denominator);
+          }
+          &#{'.' + 'left-' + nth($numbers, $num) + $target} {
+            right: percentage($num / $denominator);
+          }
+        }
+      }
+    }
+  }
+}
+
+// grid collapse
+@mixin grid-collapse($target: false) {
+  $collapse-selectors: ":not(.no-collapse)";
+  @if $target {
+    $collapse-selectors: #{$collapse-selectors + ".collapse-on-" + $target};
+  }@else{
+    $collapse-selectors: #{$collapse-selectors + ':not([class*="collapse-on-"])'};
+  }
+  #{$grid-class-selectors} {
+    &#{$collapse-selectors} {
+      width:100%;
+      float:none;
+      clear:both;
+      @for $i from 1 through nth($grid-columns, length($grid-columns) - 1) {
+        &.right-#{nth($numbers, $i)} {
+          left: 0;
+        }
+        &.left-#{nth($numbers, $i)} {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+// flexible box
+@mixin flex-wrapper() {
+  display: flex;
+}
+@mixin flex-box($values: 1) {
+  width: percent(1/$values);
+  flex: $values;
+}
+@mixin flex-order($val) {
+  order: $val;
+}
+@mixin vertical-center() {
+  display: box;
+  box-orient: vertical;
+  box-pack: center;
+}
+

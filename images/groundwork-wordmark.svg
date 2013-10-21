@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="groundwork-logo-2.0.fw-Page_x25_201"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="3317.574px"
+	 height="498.065px" viewBox="10 10 3317.574 498.065" enable-background="new 10 10 3317.574 498.065" xml:space="preserve">
+<path fill="none" d="z"/>
+<g id="Layer_x25_201">
+	<g>
+		<path fill="#FFFFFF" d="M21,139C21,72.725,74.725,19,141,19h240c66.275,0,120,53.725,120,120v240c0,66.275-53.725,120-120,120H141
+			c-66.275,0-120-53.725-120-120V139z"/>
+	</g>
+	<path fill="#BADA55" d="M21,139C21,72.725,74.725,19,141,19h120v240H21V139z"/>
+	<path fill="#2C2C2F" d="M155,206c0-29.271,23.729-53,53-53h53v106H155V206z"/>
+	<path fill="#282830" d="M381,19c66.275,0,120,53.725,120,120v120H261V19H381z"/>
+	<path fill="#55ADAB" d="M314,153c29.271,0,53,23.729,53,53v53H261V153H314z"/>
+	<path fill="#F0F0E1" d="M21,379c0,66.275,53.725,120,120,120h120V259H21V379z"/>
+	<path display="none" fill="#E7E7E7" d="M381,499c66.275,0,120-53.725,120-120V259H261v240H381z"/>
+	<path fill="#C82647" d="M381,499c66.275,0,120-53.725,120-120V259H261v240H381z"/>
+	<path fill="#198D98" d="M155,312c0,29.271,23.729,53,53,53h53V259H155V312z"/>
+	<path fill="#1DABB8" d="M314,365c29.271,0,53-23.729,53-53v-53H261v106H314z"/>
+	<path id="Ellipse" fill="#FFFFFF" d="M191,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S191,215.389,191,206z"/>
+	<path id="Ellipse2" fill="#FFFFFF" d="M297,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S297,215.389,297,206z"/>
+	<path id="Line" fill="none" stroke="#FFFFFF" stroke-width="10" d="M196.5,259.5h130"/>
+</g>
+<path fill="none" d="z"/>
+<text transform="matrix(1 0 0 1 556.0117 410.0938)" font-family="'URWUrban'" font-size="448.4095">Groundwork CSS</text>
+</svg>

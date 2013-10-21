@@ -1,8 +1,15 @@
+# Dismissible Message Boxes
+
+window.GroundworkCSS ||= {}
+
 $ ->
 
-  $('body').on 'click', '.dismissible', ->
-    $(@).addClass('dismiss animated')
-    setTimeout( =>
-      $(@).hide 250, ->
-        $(@).remove()
+  $body = $('body')
+
+  $body.on 'click', '.dismissible', ->
+    $box = $(@)
+    $box.addClass('dismiss animated')
+    setTimeout( ->
+      $box.hide 250, ->
+        $box.remove()
     , 1000)

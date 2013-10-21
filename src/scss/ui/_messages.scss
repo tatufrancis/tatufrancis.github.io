@@ -3,16 +3,6 @@
 //          Last Updated:2013-8-21
 // =============================================
 
-$ui-classes:      true !default;
-$ui-modifiers:    "dismissible" !default;
-$ui-states:       "info"  "alert" "warning" "error" "success" "question" !default;
-$ui-icons:        "\f05a" "\f06a" "\f071"   "\f057" "\f058"   "\f059" !default;
-$radius-helpers:  "square" "round" !default;
-$size-helpers:    "small" "medium" "large" !default;
-$aria-selectors:  true !default;
-$default-radius:  4px !default;
-
-
 %message {
   @extend %relative;
   word-wrap: break-word;
@@ -22,13 +12,12 @@ $default-radius:  4px !default;
   border: 1px solid $border-color;
   font-weight: bold;
   text-decoration: none;
-  @include rounded($default-radius);
+  border-radius: $default-radius;
   &:before {
-    @include icon-FontAwesome();
-    content: $icon-info-sign;
+    @include icon($fa-var-info-circle);
     position: absolute;
     top: 50%;
-    margin-top: -0.9em;
+    margin-top: -0.65em;
     left: 0;
     padding: 0.2em 0.3em;
     font-size: 1.2em;
@@ -39,6 +28,7 @@ $default-radius:  4px !default;
 %message-medium { @include _medium; }
 %message-large { @include _large; }
 %message-square { @include _square; }
+%message-rounded { @include _rounded; }
 %message-round { @include _round; }
 %message-disabled { @include state(disabled,normal,desaturate($button-color,20%)); }
 
@@ -56,7 +46,7 @@ $default-radius:  4px !default;
   color: $alert-color;
   border-color: $alert-border;
   &:before {
-    content: $icon-exclamation-sign;
+    content: $fa-var-exclamation-circle;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($alert-color,20%));
@@ -68,7 +58,7 @@ $default-radius:  4px !default;
   color: $warning-color;
   border-color: $warning-border;
   &:before {
-    content: $icon-warning-sign;
+    content: $fa-var-exclamation-triangle;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($warning-color,20%));
@@ -80,7 +70,7 @@ $default-radius:  4px !default;
   color: $error-color;
   border-color: $error-border;
   &:before {
-    content: $icon-remove-sign;
+    content: $fa-var-times-circle;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($error-color,20%));
@@ -92,7 +82,7 @@ $default-radius:  4px !default;
   color: $success-color;
   border-color: $success-border;
   &:before {
-    content: $icon-ok-sign;
+    content: $fa-var-check-circle;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
@@ -104,7 +94,7 @@ $default-radius:  4px !default;
   color: $question-color;
   border-color: $question-border;
   &:before {
-    content: $icon-question-sign;
+    content: $fa-var-question-circle;
   }
   &%message-disabled {
     @include state(disabled,normal,desaturate($question-color,20%));
@@ -115,8 +105,7 @@ $default-radius:  4px !default;
   padding-right: 2em;
   cursor: pointer;
   &:after {
-    @include icon-FontAwesome();
-    content: $icon-remove;
+    @include icon($fa-var-times);
     position: absolute;
     top: 50%;
     margin-top: -0.9em;
@@ -135,47 +124,20 @@ $default-radius:  4px !default;
   }
 }
 
-@mixin message-modifiers() {
-  @for $i from 1 through length($ui-modifiers) {
-    &.#{nth($ui-modifiers, $i)} {
-      @extend %message-#{nth($ui-modifiers, $i)};
-    }
-  }
-  @for $i from 1 through length($ui-states) {
-    &.#{nth($ui-states, $i)} {
-      @extend %message-#{nth($ui-states, $i)};
-    }
-  }
-  @for $i from 1 through length($radius-helpers) {
-    &.#{nth($radius-helpers, $i)} {
-      @extend %message-#{nth($radius-helpers, $i)};
-    }
-  }
-  @for $i from 1 through length($size-helpers) {
-    &.#{nth($size-helpers, $i)} {
-      @extend %message-#{nth($size-helpers, $i)};
-    }
-  }
-  @for $i from 1 through length($modifier-name) {
-    &.#{nth($modifier-name, $i)} {
-      @extend %message-#{nth($modifier-name, $i)};
-    }
-  }
-}
+$message-selectors: '';
 
 @if $ui-classes {
-  .message {
-    @extend %message;
-    @include message-modifiers;
+  $message-selectors: ".message";
+}
+@if $aria-selectors {
+  @if $ui-classes {
+    $message-selectors: #{$message-selectors + ", "};
   }
+  $message-selectors: #{$message-selectors + '[role~="alert"], [role~="status"]'};
 }
 
-@if $aria-selectors {
-  [role~="alert"], [role~="status"] {
-    @extend %message;
-    
-    @if $ui-classes {
-      @include message-modifiers;
-    }
-  }
+#{$message-selectors} {
+  @extend %message;
+  @include message-modifiers;
 }
+

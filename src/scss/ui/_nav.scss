@@ -3,28 +3,13 @@
 //          Last Updated:2013-8-21
 // =============================================
 
-$navigation-classes:  true !default;
-$navigation-states:   "on" "active" !default;
-$nav-color:           lighten(gray, 32.5%) !default;
-$nav-text:            darken(gray, 15%) !default;
-$nav-border-color:    lighten(gray, 27.5%) !default;
-$nav-active:          lighten(gray, 27.5%) !default;
-$nav-active-text:     darken(gray, 12%) !default;
-// shared defaults
-$aria-selectors:      true !default;
-$border-thickness:    1px !default;
-$border-style:        solid !default;
-$border-color:        #dddddd !default;
-$default-radius:      4px !default;
-
-
 %navigation {
   @extend %relative;
   @include _clear;
   background: $nav-color;
   color: $nav-text;
   border: $border-thickness $border-style $nav-border-color;
-  @include rounded($default-radius);
+  border-radius: $default-radius;
 }
 
 %navigation-list {
@@ -50,7 +35,7 @@ $default-radius:      4px !default;
   line-height: 1.5;
   border: 0;
   border-top: $border-thickness $border-style $nav-border-color;
-  @include rounded(0);
+  border-radius: 0;
   &:hover, &:focus {
     @extend %navigation-link-active;
   }
@@ -87,14 +72,14 @@ $default-radius:      4px !default;
   z-index: 9;
   min-width: 100%;
   border: $border-thickness $border-style $nav-border-color;
-  font-size: 0.9em;
-  @include rounded(0 0 $default-radius $default-radius);
+  border-radius: 0 0 $default-radius $default-radius;
 }
 
 %vertical-navigation-menu {
   position: static;
   border: 0;
-  @include rounded(0 !important);
+  border-radius: 0 !important;
+  border-top: $border-thickness $border-style $nav-border-color;
 }
 
 @for $i from 1 through length($modifier-name) {
@@ -183,11 +168,21 @@ $default-radius:      4px !default;
       li {
         li {
           a, button {
-            text-indent: $gutter;
+            padding-left: 1.5em;
           }
           li {
             a, button {
-              text-indent: ($gutter * 2);
+              padding-left: 2em;
+            }
+            li {
+              a, button {
+                padding-left: 2.5em;
+              }
+              li {
+                a, button {
+                  padding-left: 3em;
+                }
+              }
             }
           }
         }
@@ -195,13 +190,13 @@ $default-radius:      4px !default;
         &[role="menu"] {
           > a, > button {
             &:after {
-              content: $icon-caret-down;
+              content: $fa-var-caret-down;
             }
           }
           &[aria-pressed="true"] {
             > a, > button {
               &:after {
-                content: $icon-caret-up;
+                content: $fa-var-caret-up;
               }
             }
           }
@@ -212,17 +207,17 @@ $default-radius:      4px !default;
           }
         }
         li {
-          @include rounded(0 0 0 0);
+          border-radius: 0;
           &:last-child {
             a, button {
-              @include rounded(0 0 0 0);
+              border-radius: 0;
             }
           }
           ul {
             li {
               &:first-child {
                 a, button {
-                  @include rounded(0 0 0 0);
+                  border-radius: 0;
                 }
               }
             }
@@ -245,13 +240,8 @@ $default-radius:      4px !default;
         > a, > button {
           &:after {
             @extend %pull-right;
+            @include icon($fa-var-caret-down);
             margin-left: 0.5em;
-            content: $icon-caret-down;
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            text-decoration: inherit;
-            -webkit-font-smoothing: antialiased;
           }
         }
         &[aria-expanded="true"] {
@@ -280,15 +270,17 @@ $default-radius:      4px !default;
       li {
         float: none;
         &:last-child {
-          a, button {
-            @include rounded(0 0 $default-radius $default-radius);
+          > {
+            a, button {
+              border-radius: 0 0 $default-radius $default-radius;
+            }
           }
         }
 
         &[role="menu"] {
           > a, > button {
             &:after {
-              content: $icon-caret-right;
+              content: $fa-var-caret-right;
             }
           }
         }
@@ -297,18 +289,21 @@ $default-radius:      4px !default;
           top: 0;
           left: 100%;
           min-width: none;
-          font-size: 1em;
-          @include rounded(0 $default-radius $default-radius $default-radius);
+          border-radius: 0 $default-radius $default-radius $default-radius;
 
           li {
             &:first-child {
-              a, button {
-                @include rounded(0 $default-radius 0 0);
+              > {
+                a, button {
+                  border-radius: 0 $default-radius 0 0;
+                }
               }
             }
             &:last-child {
-              a, button {
-                @include rounded(0 0 $default-radius $default-radius);
+              > {
+                a, button {
+                  border-radius: 0 0 $default-radius $default-radius;
+                }
               }
             }
           }
@@ -340,6 +335,21 @@ $default-radius:      4px !default;
       }
     }
   }
+
+  @if $responsive {
+    // ipad hamburger mode
+    @media #{$ipad} {
+      @include hamburger-mode(":not(.small-tablet):not(.mobile)");
+    }
+    // small tablet hamburger mode
+    @media #{$small-tablet} {
+      @include hamburger-mode(":not(.mobile)");
+    }
+    // mobile hamburger mode
+    @media #{$mobile} {
+      @include hamburger-mode();
+    }
+  }
 }
 
 @if $aria-selectors {
@@ -347,3 +357,4 @@ $default-radius:      4px !default;
     @extend %navigation;
   }
 }
+

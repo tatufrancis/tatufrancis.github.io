@@ -29,12 +29,12 @@ block content
   .container
     .padded
       .row
-        .three.fifths.bounceInRight.animated
+        .three-fifths.collapse-on-small-tablet.bounceInRight.animated
           h1.zero.museo-slab Helpers
           p.quicksand
             a(href='breakpoints.html') Breakpoint-targeted
             |  layout, typographic, and conditional helpers for responsive & adaptive layouts
-        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+        .two-fifths.collapse-on-small-tablet.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Component Usage Example 2 of 14
           p
             a.blue.button(href='grid.html', rel='prev')
@@ -44,13 +44,13 @@ block content
               | Next: Typography
     hr
     .row
-      .one.whole.padded.bounceInLeft.animated
+      .padded.bounceInLeft.animated
         h4.zero Conditional Display Helpers
         p.small
           | Conditionally show and hide elements at 
           a(href='breakpoints.html') targeted breakpoints
         .row
-          .one.half.small-tablet.padded
+          .one-half.collapse-on-mobile.padded
             h4 Demonstration
             ol.list.large
               li.green.desktop-only desktop-only
@@ -61,7 +61,7 @@ block content
               li.blue.hide-on-small-tablet hide-on-small-tablet
               li.green.mobile-only mobile-only
               li.blue.hide-on-mobile hide-on-mobile
-          .one.half.small-tablet.padded
+          .one-half.collapse-on-mobile.padded
             h4.double-gap-top-mobile Conditional Display Classes
             ol.list
               li
@@ -84,9 +84,9 @@ block content
     hr
     br
     .row
-      .one.whole.padded.bounceInRight.animated
+      .padded.bounceInRight.animated
         h4.zero Spacing Helpers
-        p.small 
+        p.small
           | With breakpoint-targeted conditional classes and overrides. (i.e. - 
           code.inline .no-pad-mobile
           | ,  
@@ -99,7 +99,7 @@ block content
           code.inline .padded-mobile
           | , etc.)
         .row
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Padded
             .demo
               .row
@@ -108,7 +108,7 @@ block content
                 div.pad-right .pad-right
                 div.pad-bottom .pad-bottom
                 div.pad-left .pad-left
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Half
             .demo
               .row
@@ -117,7 +117,7 @@ block content
                 div.half-pad-right .half-pad-right
                 div.half-pad-bottom .half-pad-bottom
                 div.half-pad-left .half-pad-left
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Double
             .demo
               .row
@@ -126,7 +126,7 @@ block content
                 div.double-pad-right .double-pad-right
                 div.double-pad-bottom .double-pad-bottom
                 div.double-pad-left .double-pad-left
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Triple
             .demo
               .row
@@ -136,7 +136,7 @@ block content
                 div.triple-pad-bottom .triple-pad-bottom
                 div.triple-pad-left .triple-pad-left
         .row
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Gapped
             .demo.spacers
               .row
@@ -145,7 +145,7 @@ block content
                 div.gap-right .gap-right
                 div.gap-bottom .gap-bottom
                 div.gap-left .gap-left
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Half
             .demo.spacers
               .row
@@ -154,7 +154,7 @@ block content
                 div.half-gap-right .half-gap-right
                 div.half-gap-bottom .half-gap-bottom
                 div.half-gap-left .half-gap-left
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Double
             .demo.spacers
               .row
@@ -163,7 +163,7 @@ block content
                 div.double-gap-right .double-gap-right
                 div.double-gap-bottom .double-gap-bottom
                 div.double-gap-left .double-gap-left
-          .one.fourth.padded
+          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
             h4 Triple
             .demo.spacers
               .row
@@ -176,7 +176,7 @@ block content
     hr
     br
     .row
-      .one.whole.padded.bounceInLeft.animated
+      .padded.bounceInLeft.animated
         h4.zero Layout
         p.small 
           | With breakpoint-targeted conditional classes and overrides. (i.e. - 
@@ -188,7 +188,7 @@ block content
           | , 
           code.inline .center-ipad
         .row
-          .one.third.small-tablet.padded
+          .one-third.collapse-on-small-tablet.padded
             h4 Display
             .demo
               .row
@@ -203,8 +203,8 @@ block content
                 div
                   button.square .square
                 div
-                  button.round .round
-          .one.third.small-tablet.padded
+                  button.rounded .rounded
+          .one-third.collapse-on-small-tablet.padded
             h4 Floating
             .demo
               .row
@@ -217,7 +217,7 @@ block content
               .row
                 div
                   button.center .center
-          .one.third.small-tablet.padded
+          .one-third.collapse-on-small-tablet.padded
             h4 Borders
             .demo
               div.bordered .bordered
@@ -233,101 +233,106 @@ block content
     hr
     br
     .row
-      .one.whole.padded.bounceInRight.animated
+      .padded.bounceInRight.animated
         h4.zero Positioning
         .padded
           .demo
             .relative
               .row.align-center(style='height: 10em;')
                 .absolute(title='.absolute') X
-                .absolute.top.left(title='.absolute.top.left') X
-                .absolute.bottom.left(title='.absolute.bottom.left') X
-                .absolute.top.right(title='.absolute.top.right') X
-                .absolute.bottom.right(title='.absolute.bottom.right') X
-                .absolute.middle.left(title='.absolute.middle.left', style='margin-top: -0.65em;') X
-                .absolute.middle.center(title='.absolute.middle.center', style='margin-top: -0.65em;') X
-                .absolute.middle.right(title='.absolute.middle.right', style='margin-top: -0.65em;') X
-                .absolute.top.center(title='.absolute.top.center') X
-                .absolute.bottom.center(title='.absolute.bottom.center') X
+                .absolute-top-left(title='.absolute-top-left') X
+                .absolute-bottom-left(title='.absolute-bottom-left') X
+                .absolute-top-right(title='.absolute-top-right') X
+                .absolute-bottom-right(title='.absolute-bottom-right') X
+                .absolute-middle-left(title='.absolute-middle-left', style='margin-top: -0.65em;') X
+                .absolute-middle-center(title='.absolute-middle-center', style='margin-top: -0.65em;') X
+                .absolute-middle-right(title='.absolute-middle-right', style='margin-top: -0.65em;') X
+                .absolute-top-center(title='.absolute-top-center') X
+                .absolute-bottom-center(title='.absolute-bottom-center') X
         .row
-          .one.third.small-tablet.padded
+          .one-third.collapse-on-small-tablet.padded
             h4 Static
             code
               ul.unstyled
                 li
                   | .static
-          .one.third.small-tablet.padded
-            h4 Absolute
+            h4.double-gap-top Relative
             code
+              ul.unstyled
+                li
+                  | .relative
+          .one-third.collapse-on-small-tablet.padded
+            h4 Absolute
+            code.block
               ul.unstyled
                 li
                   | .absolute
                 li
-                  | .absolute.top
+                  | .absolute-top
                 li
-                  | .absolute.top.left
+                  | .absolute-top-right
                 li
-                  | .absolute.top.center
+                  | .absolute-top-left
                 li
-                  | .absolute.top.right
+                  | .absolute-top-center
                 li
-                  | .absolute.middle
+                  | .absolute-middle
                 li
-                  | .absolute.middle.left
+                  | .absolute-middle-right
                 li
-                  | .absolute.middle.center
+                  | .absolute-middle-left
                 li
-                  | .absolute.middle.right
+                  | .absolute-middle-center
                 li
-                  | .absolute.bottom
+                  | .absolute-bottom
                 li
-                  | .absolute.bottom.left
+                  | .absolute-bottom-right
                 li
-                  | .absolute.bottom.center
+                  | .absolute-bottom-left
                 li
-                  | .absolute.bottom.right
+                  | .absolute-bottom-center
                 li
-                  | .absolute.center
-          .one.third.small-tablet.padded
+                  | .absolute-center
+          .one-third.collapse-on-small-tablet.padded
             h4 Fixed
-            code
+            code.block
               ul.unstyled
                 li
                   | .fixed
                 li
-                  | .fixed.top
+                  | .fixed-center
                 li
-                  | .fixed.top.left
+                  | .fixed-top
                 li
-                  | .fixed.top.center
+                  | .fixed-top-right
                 li
-                  | .fixed.top.right
+                  | .fixed-top-left
                 li
-                  | .fixed.middle
+                  | .fixed-top-center
                 li
-                  | .fixed.middle.left
+                  | .fixed-middle
                 li
-                  | .fixed.middle.center
+                  | .fixed-middle-right
                 li
-                  | .fixed.middle.right
+                  | .fixed-middle-left
                 li
-                  | .fixed.bottom
+                  | .fixed-middle-center
                 li
-                  | .fixed.bottom.left
+                  | .fixed-bottom
                 li
-                  | .fixed.bottom.center
+                  | .fixed-bottom-right
                 li
-                  | .fixed.bottom.right
+                  | .fixed-bottom-left
                 li
-                  | .fixed.center
+                  | .fixed-bottom-center
     br
     hr
     br
     .row
-      .one.whole.padded.bounceInLeft.animated
+      .padded.bounceInLeft.animated
         h4 Typographic
         .row
-          .one.third.small-tablet.padded
+          .one-third.collapse-on-small-tablet.padded
             h4 Font Sizing
             p.zero .small
             .demo
@@ -346,7 +351,7 @@ block content
               .row
                 div.large
                   | The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.
-          .one.third.small-tablet.padded
+          .one-third.collapse-on-small-tablet.padded
             h4 Text Alignment
             p.zero .align-left
             .demo
@@ -371,7 +376,7 @@ block content
               .row
                 div.justify
                   | The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.
-          .one.third.small-tablet.padded
+          .one-third.collapse-on-small-tablet.padded
             h4 Text Helpers
             p.zero .truncate 
             p.zero.small (single-line, pure CSS)
@@ -412,39 +417,40 @@ block content
     hr
     br
     .row
-      .one.whole.padded.bounceInUp.animated
+      .padded.bounceInUp.animated
         h4 Rotation
         .row
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-90
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-90 
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-180
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-180 
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-270
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-270 
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-360
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-360
         .row
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-90-ctr
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-90-ctr  
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-180-ctr
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-180-ctr 
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-270-ctr
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-270-ctr 
-          .one.fourth.small-tablet.two-up-mobile.double-padded.align-center
+          .one-fourth.small-tablet.two-up-mobile.double-padded.align-center
             .rotate-360-ctr
-              i.icon-4x.icon-power-off
+              i.fa.fa-4x.fa-power-off
             p .rotate-360-ctr 
+

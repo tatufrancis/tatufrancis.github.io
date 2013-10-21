@@ -9,76 +9,60 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
     <title>GroundworkCSS &hearts; Media Queries</title>
-    <!-- Modernizr -->
+    <!-- Modernizr-->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
     <script type="text/javascript" src="../js/libs/jquery-1.10.2.min.js"></script>
-    <!-- framework css --><!--[if gt IE 9]><!-->
-    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--<![endif]--><!--[if lte IE 9]>
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-core.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-type.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ui.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-anim.css">
-    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
+    <!-- framework css-->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css">
     <style type="text/css">
-      .logo {
-        position: relative;
-        top: -0.5em;
-      }
       .logo a, .logo a:visited {
+        display: inline-block;
         text-decoration: none;
-        color: #2B2B2D;
+        color: #fff;
       }
-      .logo img {
-        height: 2em;
-        position: relative;
-        top: 0.55em;
-        margin-right: 0.3em;
+      .logo img, .logo svg {
+        height: 1.5em;
       }
       
     </style>
-    <!-- snippet (syntax highlighting for code examples)-->
-    <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
-(function() {
-
-  $(document).ready(function() {
-    $('pre[data-lang="html"]').snippet("html", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-    $('pre[data-lang="css"]').snippet("css", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-    $('pre[data-lang="scss"]').snippet("scss", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-    return $('pre[data-lang="js"]').snippet("javascript", {
-      style: "groundwork",
-      clipboard: "../js/demo/ZeroClipboard.swf"
-    });
-  });
-
-}).call(this);
-</script>
   </head>
   <body>
-    <header class="padded">
+    <header class="charcoal-bg padded">
       <div class="container">
         <div class="row">
-          <div class="one half">
-            <h2 class="logo"><a href="/" target="_parent"><img src="../images/groundwork-logo.svg" alt="GroundworkCSS">GroundworkCSS 2</a></h2>
+          <div class="one-half collapse-on-small-tablet">
+            <h2 class="logo museo-slab"><a href="/" target="_parent">
+                <svg version="1.1" id="groundwork-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="49px" viewBox="10 10 3790 498" enable-background="new 10 10 3317 498" xml:space="preserve">
+                  <g>
+                    <path fill="#BADA55" d="M21,139C21,72.725,74.725,19,141,19h120v240H21V139z"></path>
+                    <path fill="#2C2C2F" d="M155,206c0-29.271,23.729-53,53-53h53v106H155V206z"></path>
+                    <path fill="#282830" d="M381,19c66.275,0,120,53.725,120,120v120H261V19H381z"></path>
+                    <path fill="#55ADAB" d="M314,153c29.271,0,53,23.729,53,53v53H261V153H314z"></path>
+                    <path fill="#F0F0E1" d="M21,379c0,66.275,53.725,120,120,120h120V259H21V379z"></path>
+                    <path fill="#C82647" d="M381,499c66.275,0,120-53.725,120-120V259H261v240H381z"></path>
+                    <path fill="#198D98" d="M155,312c0,29.271,23.729,53,53,53h53V259H155V312z"></path>
+                    <path fill="#1DABB8" d="M314,365c29.271,0,53-23.729,53-53v-53H261v106H314z"></path>
+                    <path fill="#FFFFFF" d="M191,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S191,215.389,191,206z"></path>
+                    <path fill="#FFFFFF" d="M297,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S297,215.389,297,206z"></path>
+                    <path fill="none" stroke="#FFFFFF" stroke-width="10" d="M196.5,259.5h130"></path>
+                  </g>
+                  <text fill="#ffffff" transform="matrix(1 0 0 1 600 450)" font-family="URWUrban" font-size="448">Groundwork CSS 3</text>
+                </svg></a></h2>
           </div>
-          <div class="one half">
-            <p class="small double pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 2.3.7<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+          <div class="one-half collapse-on-small-tablet">
+            <p class="small double pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 3.0.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
-        <nav role="navigation" class="nav gap-top">
+        <nav role="navigation" class="nav gap-top red">
           <ul role="menubar">
-            <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
+            <li><a href="./home.html"><i class="fa fa-home"></i> Home</a></li>
             <li role="menu">
               <button>Example Layouts</button>
               <ul>
@@ -119,11 +103,11 @@
     <div class="container">
       <div class="padded">
         <div class="row">
-          <div class="three fifths bounceInRight animated">
+          <div class="three-fifths collapse-on-small-tablet bounceInRight animated">
             <h1 class="zero museo-slab">Media Queries</h1>
             <p class="quicksand">Restrict CSS rules to targeted browser conditions, such as viewport widths & pixel densities</p>
           </div>
-          <div class="two fifths align-right-ipad align-right-desktop flipInX animated">
+          <div class="two-fifths collapse-on-small-tablet align-right-ipad align-right-desktop flipInX animated">
             <p class="quicksand">Documentation: Media Queries</p>
             <p><a href="breakpoints.html" rel="next" class="green button">Also See: Targeted Breakpoints </a></p>
           </div>
@@ -131,18 +115,18 @@
       </div>
       <hr>
       <div class="row">
-        <div class="one whole padded">
+        <div class="one-whole padded">
           <div class="bounceInLeft animated">
             <h4>Example Media Queries</h4>
             <div class="row">
-              <div class="one half padded">
+              <div class="one-half collapse-on-small-tablet padded">
                 <p>Mobile</p>
                 <pre data-lang="css">@media (max-width: 480px) {
   // CSS that only applies to viewports 
   // less than or equal to 480 pixles goes here
 }</pre>
               </div>
-              <div class="one half padded">
+              <div class="one-half collapse-on-small-tablet padded">
                 <p>Not Mobile</p>
                 <pre data-lang="css">@media (min-width: 481px) {
   // CSS that only applies to viewports 
@@ -151,14 +135,14 @@
               </div>
             </div><br>
             <div class="row">
-              <div class="one half padded">
+              <div class="one-half collapse-on-small-tablet padded">
                 <p>Small Tablet</p>
                 <pre data-lang="css">@media (max-width: 767px) {
   // CSS that only applies to viewports 
   // less than 768 pixles goes here
 }</pre>
               </div>
-              <div class="one half padded">
+              <div class="one-half collapse-on-small-tablet padded">
                 <p>iPad</p>
                 <pre data-lang="css">@media (min-width: 768px) and (max-width:1024px) {
   // CSS that only applies to viewports 
@@ -167,14 +151,14 @@
               </div>
             </div><br>
             <div class="row">
-              <div class="one half padded">
+              <div class="one-half collapse-on-small-tablet padded">
                 <p>Desktop</p>
                 <pre data-lang="css">@media (min-width: 1025px) {
   // CSS that only applies to viewports 
   // greater than 1024 pixles goes here
 }</pre>
               </div>
-              <div class="one half padded">
+              <div class="one-half collapse-on-small-tablet padded">
                 <p>iPad Retina</p>
                 <pre data-lang="css">@media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   // CSS that only applies to viewports 
@@ -197,18 +181,18 @@
       <div class="box square charcoal">
         <div class="container padded">
           <div class="row">
-            <div class="one small-tablet fourth padded">
+            <div class="three-tenths two-fifths-small-tablet collapse-on-mobile padded">
               <h5 class="green">Example Layouts</h5>
-              <ul class="unstyled">
+              <ul class="unstyled two-columns-mobile">
                 <li><a href="./layout-a.html">Web Page</a></li>
                 <li><a href="./layout-b.html">Image Gallery</a></li>
                 <li><a href="./layout-c.html">Ecommerce Page</a></li>
                 <li><a href="./layout-d.html">Contact Page</a></li>
               </ul>
             </div>
-            <div class="three small-tablet fourths padded">
+            <div class="seven-tenths three-fifths-small-tablet collapse-on-mobile padded">
               <h5 class="blue">Documentation</h5>
-              <ul class="unstyled three-column two-column-mobile">
+              <ul class="unstyled three-columns two-columns-small-tablet two-columns-mobile">
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
@@ -231,11 +215,11 @@
       <div class="box square">
         <div class="container padded">
           <div class="row">
-            <div class="one half padded">
+            <div class="one-half collapse-on-small-tablet padded">
               <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
               <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
-            <div class="one half padded">
+            <div class="one-half collapse-on-small-tablet padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
             </div>
           </div>
@@ -243,7 +227,33 @@
       </div>
     </footer>
     <!-- javascript-->
-    <script type="text/javascript" src="../js/groundwork.all.js"></script>
+    <script type="text/javascript" src="../js/groundwork.all.min.js"></script>
+    <!-- snippet (syntax highlighting for code examples)-->
+    <script type="text/javascript" src="../js/demo/jquery.snippet.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/demo/jquery.snippet.css"><script type="text/javascript">
+(function() {
+
+  $(document).ready(function() {
+    $('pre[data-lang="html"]').snippet("html", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    $('pre[data-lang="css"]').snippet("css", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    $('pre[data-lang="scss"]').snippet("scss", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+    return $('pre[data-lang="js"]').snippet("javascript", {
+      style: "groundwork",
+      clipboard: "../js/demo/ZeroClipboard.swf"
+    });
+  });
+
+}).call(this);
+</script>
     <!-- google analytics-->
     <script type="text/javascript">
       var _gaq = _gaq || [];

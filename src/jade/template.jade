@@ -12,85 +12,67 @@ html.no-js
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1')
+    link(rel='icon',type='image/x-icon',href='favicon.ico')
+    link(rel='apple-touch-icon-precomposed',sizes='144x144',href='images/apple-touch-icon-144x144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed',sizes='114x114',href='images/apple-touch-icon-114x114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed',sizes='72x72',href='images/apple-touch-icon-72x72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed',href='images/apple-touch-icon-precomposed.png')
 
     block title
 
-    // Modernizr 
+    // Modernizr
     script(src='../js/libs/modernizr-2.6.2.min.js')
 
     // jQuery
     script(type='text/javascript', src='../js/libs/jquery-1.10.2.min.js')
 
-    // framework css 
-    | <!--[if gt IE 9]><!-->
+    // framework css
     link(type='text/css', rel='stylesheet', href='../css/groundwork.css')
-    | <!--<![endif]-->
-
-    //if lte IE 9
-      link(type='text/css', rel='stylesheet', href='../css/groundwork-core.css')
-      link(type='text/css', rel='stylesheet', href='../css/groundwork-type.css')
-      link(type='text/css', rel='stylesheet', href='../css/groundwork-ui.css')
-      link(type='text/css', rel='stylesheet', href='../css/groundwork-anim.css')
-      link(type='text/css', rel='stylesheet', href='../css/groundwork-ie.css')
 
     style(type='text/css').
-      .logo {
-        position: relative;
-        top: -0.5em;
-      }
       .logo a, .logo a:visited {
+        display: inline-block;
         text-decoration: none;
-        color: #2B2B2D;
+        color: #fff;
       }
-      .logo img {
-        height: 2em;
-        position: relative;
-        top: 0.55em;
-        margin-right: 0.3em;
+      .logo img, .logo svg {
+        height: 1.5em;
       }
 
-    // snippet (syntax highlighting for code examples)
-    script(type='text/javascript', src='../js/demo/jquery.snippet.min.js')
-    link(type='text/css', rel='stylesheet', href='../css/demo/jquery.snippet.css')
-    :coffeescript
-      $(document).ready ->
-        $('pre[data-lang="html"]').snippet("html", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
-        $('pre[data-lang="css"]').snippet("css", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
-        $('pre[data-lang="scss"]').snippet("scss", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
-        $('pre[data-lang="js"]').snippet("javascript", {
-          style:"groundwork"
-          clipboard:"../js/demo/ZeroClipboard.swf"
-        })
   body
-    header.padded
+    header.charcoal-bg.padded
       .container
         .row
-          .one.half
-            h2.logo
+          .one-half.collapse-on-small-tablet
+            h2.logo.museo-slab
               a(href='/', target='_parent')
-                img(src='../images/groundwork-logo.svg', alt='GroundworkCSS')
-                | GroundworkCSS 2
-          .one.half
+                svg(version='1.1', id='groundwork-logo', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='320px', height='49px', viewBox='10 10 3790 498', enable-background='new 10 10 3317 498', xml:space='preserve')
+                  g
+                    path(fill='#BADA55', d='M21,139C21,72.725,74.725,19,141,19h120v240H21V139z')
+                    path(fill='#2C2C2F', d='M155,206c0-29.271,23.729-53,53-53h53v106H155V206z')
+                    path(fill='#282830', d='M381,19c66.275,0,120,53.725,120,120v120H261V19H381z')
+                    path(fill='#55ADAB', d='M314,153c29.271,0,53,23.729,53,53v53H261V153H314z')
+                    path(fill='#F0F0E1', d='M21,379c0,66.275,53.725,120,120,120h120V259H21V379z')
+                    path(fill='#C82647', d='M381,499c66.275,0,120-53.725,120-120V259H261v240H381z')
+                    path(fill='#198D98', d='M155,312c0,29.271,23.729,53,53,53h53V259H155V312z')
+                    path(fill='#1DABB8', d='M314,365c29.271,0,53-23.729,53-53v-53H261v106H314z')
+                    path(fill='#FFFFFF', d='M191,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S191,215.389,191,206z')
+                    path(fill='#FFFFFF', d='M297,206c0-9.389,7.611-17,17-17s17,7.611,17,17s-7.611,17-17,17S297,215.389,297,206z')
+                    path(fill='none', stroke='#FFFFFF', stroke-width='10', d='M196.5,259.5h130')
+                  text(fill='#ffffff', transform='matrix(1 0 0 1 600 450)', font-family='URWUrban', font-size='448') Groundwork CSS 3
+
+          .one-half.collapse-on-small-tablet
             p.small.double.pad-top.no-pad-small-tablet.align-right.align-left-small-tablet
               a(href='https://github.com/groundworkcss/groundwork', target="_parent") Github Project
-              |  - Version 2.3.7
+              |  - Version 3.0.0
               br
               | Created & Maintained by 
               a(href='http://twitter.com/ghepting', target='_blank') Gary Hepting
-        nav.nav.gap-top(role='navigation')
+        nav.nav.gap-top.red(role='navigation')
           ul(role='menubar')
             li
               a(href='./home.html')
-                i.icon-home
+                i.fa.fa-home
                 |  Home
             li(role='menu')
               button Example Layouts
@@ -144,9 +126,9 @@ html.no-js
       .box.square.charcoal
         .container.padded
           .row
-            .one.small-tablet.fourth.padded
+            .three-tenths.two-fifths-small-tablet.collapse-on-mobile.padded
               h5.green Example Layouts
-              ul.unstyled
+              ul.unstyled.two-columns-mobile
                 li
                   a(href='./layout-a.html') Web Page
                 li
@@ -155,9 +137,9 @@ html.no-js
                   a(href='./layout-c.html') Ecommerce Page
                 li
                   a(href='./layout-d.html') Contact Page
-            .three.small-tablet.fourths.padded
+            .seven-tenths.three-fifths-small-tablet.collapse-on-mobile.padded
               h5.blue Documentation
-              ul.unstyled.three-column.two-column-mobile
+              ul.unstyled.three-columns.two-columns-small-tablet.two-columns-mobile
                 li
                   a(href='./grid.html', title='Responsive grid system, grid adapters and helpers') Grid
                 li
@@ -189,7 +171,7 @@ html.no-js
       .box.square
         .container.padded
           .row
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p
                 | GroundworkCSS is 
                 b 100% free
@@ -204,14 +186,36 @@ html.no-js
                 a(href="https://github.com/groundworkcss/groundwork/issues", target="_blank")
                   | filing an issue
                 |  on Github.
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p.large.padded.align-right.align-center-small-tablet
                 a.large.inline.gapped(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
                 a.large.inline.gapped(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
                 a.large.inline.gapped(href="mailto:groundworkcss@gmail.com", title="groundworkcss@gmail.com", style="text-decoration:none;")
 
     // javascript
-    script(type='text/javascript', src='../js/groundwork.all.js')
+    script(type='text/javascript', src='../js/groundwork.all.min.js')
+
+    // snippet (syntax highlighting for code examples)
+    script(type='text/javascript', src='../js/demo/jquery.snippet.min.js')
+    link(type='text/css', rel='stylesheet', href='../css/demo/jquery.snippet.css')
+    :coffeescript
+      $(document).ready ->
+        $('pre[data-lang="html"]').snippet("html", {
+          style:"groundwork"
+          clipboard:"../js/demo/ZeroClipboard.swf"
+        })
+        $('pre[data-lang="css"]').snippet("css", {
+          style:"groundwork"
+          clipboard:"../js/demo/ZeroClipboard.swf"
+        })
+        $('pre[data-lang="scss"]').snippet("scss", {
+          style:"groundwork"
+          clipboard:"../js/demo/ZeroClipboard.swf"
+        })
+        $('pre[data-lang="js"]').snippet("javascript", {
+          style:"groundwork"
+          clipboard:"../js/demo/ZeroClipboard.swf"
+        })
 
     // google analytics
     script(type='text/javascript').

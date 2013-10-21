@@ -1,19 +1,27 @@
-$(window).on 'load resize',  ->
-  equalizeColumns()
+# Equal Grid Columns
 
-equalizeColumns = ->
-  $('.row.equalize').each ->
-    $row = $ this
-    tallest = 0
-    collapsed = false
+window.GroundworkCSS ||= {}
 
-    $row.children().each (i) ->
-      $this = $ this
-      $this.css('minHeight','1px')
-      collapsed = ($this.outerWidth() == $row.outerWidth())
-      unless collapsed
-        $this.addClass('equal') unless $this.hasClass('equal')
-        if $this.outerHeight() > tallest
-          tallest = $this.outerHeight()
+$ ->
 
-    $row.children().css('min-height', tallest) unless collapsed
+  $body = $('body')
+
+  GroundworkCSS.equalizeColumns = ->
+    $('.row.equalize').each ->
+      $row = $(@)
+      tallest = 0
+      collapsed = false
+
+      $row.children().each (i) ->
+        $col = $(@)
+        $col.css('minHeight','1px')
+        collapsed = ($col.outerWidth() == $row.outerWidth())
+        unless collapsed
+          $col.addClass('equal') unless $col.hasClass('equal')
+          if $col.outerHeight() > tallest
+            tallest = $col.outerHeight()
+
+      $row.children().css('min-height', tallest) unless collapsed
+
+$(window).on 'load resize', ->
+  GroundworkCSS.equalizeColumns()

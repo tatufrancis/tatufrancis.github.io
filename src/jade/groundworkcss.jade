@@ -22,16 +22,7 @@ html.no-js
     script(type='text/javascript', src='js/libs/jquery-1.10.2.min.js')
 
     // framework css 
-    | <!--[if gt IE 9]><!-->
     link(type='text/css', rel='stylesheet', href='css/groundwork.css')
-    | <!--<![endif]-->
-
-    //if lte IE 9
-      link(type='text/css', rel='stylesheet', href='css/groundwork-core.css')
-      link(type='text/css', rel='stylesheet', href='css/groundwork-type.css')
-      link(type='text/css', rel='stylesheet', href='css/groundwork-ui.css')
-      link(type='text/css', rel='stylesheet', href='css/groundwork-anim.css')
-      link(type='text/css', rel='stylesheet', href='css/groundwork-ie.css')
 
     style(type='text/css').
       .logo {
@@ -53,15 +44,15 @@ html.no-js
     header.padded
       .container
         .row
-          .one.half
+          .one-half
             h2.logo
               a(href='/', target='_parent')
                 img(src='images/groundwork-logo.svg', alt='GroundworkCSS')
-                | GroundworkCSS 2
-          .one.half
+                | GroundworkCSS 3
+          .one-half
             p.small.double-pad-top.no-pad-small-tablet.align-right.align-left-small-tablet
               a(href='https://github.com/groundworkcss/groundwork', target='_blank') Github Project
-              |  - Version 2.3.7
+              |  - Version 3.0.0
               br
               | Created & Maintained by 
               a(href='http://twitter.com/ghepting') Gary Hepting
@@ -117,12 +108,12 @@ html.no-js
 
     .container
       .row
-        .one.half.triple-padded.bounceInRight.animated
+        .one-half.triple-padded.bounceInRight.animated
           a.button.block.green.noicon(href='groundwork/', target='_parent')
             h1.zero
               i.icon-code.icon-4x
               br
-              | GroundworkCSS 2
+              | GroundworkCSS 3
             p A responsive HTML5, CSS & Javascript framework.
           .row.gap-top
             a.noicon.pad-right.border-right.gap-right(href='https://github.com/groundworkcss/groundwork/archive/master.zip')
@@ -131,12 +122,12 @@ html.no-js
             a.noicon(href='https://github.com/groundworkcss/groundwork', target='_blank')
               | Github Project 
               i.icon-github-sign
-        .one.half.triple-padded.bounceInLeft.animated
+        .one-half.triple-padded.bounceInLeft.animated
           a.button.block.blue.noicon(href='https://github.com/groundworkcss/groundworkcss-rails', target='_blank')
             h1.zero
               i.icon-code-fork.icon-4x
               br
-              | GroundworkCSS 2 for Rails
+              | GroundworkCSS 3 for Rails
             p Add Groundwork to your rails project in a snap.
           .row.gap-top
             a.noicon.pad-right.border-right.gap-right(href='http://rubygems.org/gems/groundworkcss', target='_blank')
@@ -149,7 +140,7 @@ html.no-js
       .box.square.charcoal
         .container.padded
           .row
-            .one.small-tablet.fourth.padded
+            .one-fourth-small-tablet.padded
               h5.green Example Layouts
               ul.unstyled
                 li
@@ -158,7 +149,7 @@ html.no-js
                   a(href='groundwork/docs/layout-b.html') Image Gallery
                 li
                   a(href='groundwork/docs/layout-c.html') Ecommerce Page
-            .three.small-tablet.fourths.padded
+            .three-fourths-small-tablet.padded
               h5.blue Documentation
               ul.unstyled.three-column.two-column-mobile
                 li
@@ -192,7 +183,7 @@ html.no-js
       .box.square
         .container.padded
           .row
-            .one.half.padded
+            .one-half.padded
               p
                 | GroundworkCSS is 
                 b 100% free
@@ -207,14 +198,14 @@ html.no-js
                 a(href="https://github.com/groundworkcss/groundwork/issues", target="_blank")
                   | filing an issue
                 |  on Github.
-            .one.half.padded
+            .one-half.padded
               p.large.padded.align-right.align-center-small-tablet
                 a.large.inline.gapped(href="http://twitter.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
                 a.large.inline.gapped(href="http://github.com/groundworkcss", target="_blank", title="@groundworkcss", style="text-decoration:none;")
                 a.large.inline.gapped(href="mailto:groundworkcss@gmail.com", title="groundworkcss@gmail.com", style="text-decoration:none;")
 
     // javascript
-    script(type='text/javascript', src='js/groundwork.all.js')
+    script(type='text/javascript', src='js/groundwork.all.min.js')
 
     // google analytics
     script(type='text/javascript').

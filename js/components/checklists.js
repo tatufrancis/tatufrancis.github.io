@@ -1,12 +1,18 @@
 (function() {
+  window.GroundworkCSS || (window.GroundworkCSS = {});
+
   $(function() {
-    return $('body').on('click', '.checklist:not([readonly]) li:not([readonly])', function() {
-      if ($(this).attr('aria-checked') === "true" || $(this).attr('data-checked') === "true" || $(this).attr('checked') === "checked" || $(this).hasClass('checked') || $(this).hasClass('completed')) {
-        $(this).attr('aria-checked', "false");
+    var $body;
+    $body = $('body');
+    return $body.on('click', '.checklist:not([readonly]) li:not([readonly])', function() {
+      var $item;
+      $item = $(this);
+      if ($item.attr('aria-checked') === "true" || $item.attr('data-checked') === "true" || $item.attr('checked') === "checked" || $item.hasClass('checked') || $item.hasClass('completed')) {
+        $item.attr('aria-checked', "false");
       } else {
-        $(this).attr('aria-checked', "true");
+        $item.attr('aria-checked', "true");
       }
-      return $(this).removeClass('checked completed').removeAttr('data-checked checked');
+      return $item.removeClass('checked completed').removeAttr('data-checked checked');
     });
   });
 

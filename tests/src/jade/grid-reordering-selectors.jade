@@ -1,0 +1,66 @@
+extends template
+
+block title
+  title GroundworkCSS &hearts; Grid System: Selector Classes
+
+block styles
+  link(rel='stylesheet',href='css/grid-selectors.css')
+
+block content
+  .container
+    .row
+      article.four-fifths.right-one
+          p This article is four fifths and reordered.
+        aside.one-fifth.left-four
+          p This sidebar is one fifth and reordered.
+      .row
+        article.five-sevenths.right-two
+          p This article is five sevenths and reordered.
+        aside.two-sevenths.left-five
+          p This sidebar is two sevenths and reordered.
+      .row
+        article.eight-fourteenths.right-six
+          p This article is eight fourteenths and reordered.
+        aside.six-fourteenths.left-eight
+          p This sidebar is six fourteenths and reordered.
+      .row
+        article.thirteen-twentieths.right-seven
+          p This article is thirteen twentieths and reordered.
+        aside.seven-twentieths.left-thirteen
+          p This sidebar is seven twentieths and reordered.
+      hr
+      .row
+        article.four-fifths.right-one.three-fifths-ipad.right-two-ipad.two-fifths-small-tablet.right-three-small-tablet
+          p
+            | This article is four fifths and reordered on desktop, three fifths and reordered on ipad, two fifths and reordered on small tablet.
+        aside.one-fifth.left-four.two-fifths-ipad.left-three-ipad.two-fifths-small-tablet.left-two-small-tablet
+          p
+            | This sidebar is one fifth and reordered on desktop, two fifths and reordered on ipad, two fifths and reordered on small tablet.
+      .row
+        article.four-fifths.right-one.three-fifths-ipad.right-two-ipad
+          p
+            | This article is four fifths and reordered on desktop, three fifths and reordered on ipad.
+        aside.one-fifth.left-four.two-fifths-ipad.left-three-ipad
+          p
+            | This sidebar is one fifth and reordered on desktop, two fifths and reordered on ipad.
+      .row
+        article.five-sevenths.right-two.three-fourths-small-tablet.right-one-small-tablet
+          p
+            | This article is five sevenths and reordered on desktop, three fourths and reordered on small tablet.
+        aside.two-sevenths.left-five.one-fourth-small-tablet.left-three-small-tablet
+          p
+            | This sidebar is two sevenths and reordered on desktop, one fourth and reordered on small tablet.
+      .row
+        article.eight-fourteenths.right-six
+          p This article is eight fourteenths and reordered.
+        aside.six-fourteenths.left-eight
+          p This sidebar is six fourteenths and reordered.
+      .row
+        article.thirteen-twentieths.right-seven.no-collapse
+          p This article is thirteen twentieths and reordered and does not collapse.
+        aside.seven-twentieths.left-thirteen.no-collapse
+          p This sidebar is seven twentieths and reordered and does not collapse.
+
+
+block scripts
+  

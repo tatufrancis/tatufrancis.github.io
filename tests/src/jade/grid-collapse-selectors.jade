@@ -1,0 +1,49 @@
+extends template
+
+block title
+  title GroundworkCSS &hearts; Grid System: Collapse Helper Classes
+
+block styles
+  link(rel='stylesheet',href='css/grid-collapse-selectors.css')
+
+block content
+  .container
+    .row
+      article.four-fifths.collapse-on-ipad
+        p
+          | This article is four fifths and collapses on iPad.
+      aside.one-fifth.collapse-on-ipad
+        p
+          | This sidebar is one fifth and collapses on iPad.
+    .row
+      article.five-sevenths.collapse-on-small-tablet
+        p
+          | This article is five sevenths and collapses on small tablet.
+      aside.two-sevenths.collapse-on-small-tablet
+        p
+          | This sidebar is two sevenths and collapses on small tablet.
+    .row
+      article.eight-fourteenths.collapse-on-mobile
+        p
+          | This article is eight fourteenths and collapses on mobile.
+      aside.six-fourteenths.collapse-on-mobile
+        p
+          | This sidebar is six fourteenths and collapses on mobile.
+    .row
+      article.thirteen-twentieths
+        p
+          | This article is thirteen twentieths and collapses at the default breakpoint (small tablet).
+      aside.seven-twentieths
+        p
+          | This sidebar is seven twentieths and does not collapses at the default breakpoint (small tablet).
+    .row
+      article.thirteen-twentieths.no-collapse
+        p
+          | This article is thirteen twentieths and does not collapse.
+      aside.seven-twentieths.no-collapse
+        p
+          | This sidebar is seven twentieths and does not collapse.
+
+
+block scripts
+  

@@ -1,0 +1,12 @@
+// grid classes test
+
+$grid-columns: 1 2 3 4 5 7 14 20;
+
+@import "test-settings";
+@import "../../../src/scss/core/all-core";
+@import "../../../src/scss/responsive/all-responsive";
+
+article, aside, section {
+  @extend %padded;
+}
+

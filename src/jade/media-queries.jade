@@ -19,29 +19,29 @@ block content
   .container
     .padded
       .row
-        .three.fifths.bounceInRight.animated
+        .three-fifths.collapse-on-small-tablet.bounceInRight.animated
           h1.zero.museo-slab Media Queries
           p.quicksand
             | Restrict CSS rules to targeted browser conditions, such as viewport widths & pixel densities
-        .two.fifths.align-right-ipad.align-right-desktop.flipInX.animated
+        .two-fifths.collapse-on-small-tablet.align-right-ipad.align-right-desktop.flipInX.animated
           p.quicksand Documentation: Media Queries
           p
             a.green.button(href='breakpoints.html', rel='next')
               | Also See: Targeted Breakpoints 
     hr
     .row
-      .one.whole.padded
+      .one-whole.padded
         .bounceInLeft.animated
           h4 Example Media Queries
           .row
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p Mobile
               pre(data-lang='css')
                 | @media #{$mobile} {
                 |   // CSS that only applies to viewports 
                 |   // less than or equal to 480 pixles goes here
                 | }
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p Not Mobile
               pre(data-lang='css')
                 | @media #{$notmobile} {
@@ -50,14 +50,14 @@ block content
                 | }
           br
           .row
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p Small Tablet
               pre(data-lang='css')
                 | @media #{$smalltablet} {
                 |   // CSS that only applies to viewports 
                 |   // less than 768 pixles goes here
                 | }
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p iPad
               pre(data-lang='css')
                 | @media #{$ipad} {
@@ -66,14 +66,14 @@ block content
                 | }
           br
           .row
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p Desktop
               pre(data-lang='css')
                 | @media #{$desktop} {
                 |   // CSS that only applies to viewports 
                 |   // greater than 1024 pixles goes here
                 | }
-            .one.half.padded
+            .one-half.collapse-on-small-tablet.padded
               p iPad Retina
               pre(data-lang='css')
                 | @media #{$retinaipad} {

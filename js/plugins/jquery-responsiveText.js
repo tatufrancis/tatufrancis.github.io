@@ -11,15 +11,15 @@
 
 
 (function() {
-  var ResponsiveText, delayedAdjustText, responsiveTextIndex;
+  GroundworkCSS.delayedAdjustText = [];
 
-  delayedAdjustText = [];
+  GroundworkCSS.responsiveTextIndex = 0;
 
-  responsiveTextIndex = 0;
+  GroundworkCSS.responsiveTextElements = [];
 
-  ResponsiveText = (function() {
+  GroundworkCSS.ResponsiveText = (function() {
     function ResponsiveText(el) {
-      this.index = responsiveTextIndex++;
+      this.index = GroundworkCSS.responsiveTextIndex++;
       this.el = el;
       this.compression = $(this.el).data('compression') || 10;
       this.minFontSize = $(this.el).data('min') || Number.NEGATIVE_INFINITY;
@@ -58,8 +58,8 @@
     ResponsiveText.prototype.adjustOnResize = function() {
       var _this = this;
       return $(window).on('resize', function() {
-        clearTimeout(delayedAdjustText[_this.index]);
-        return delayedAdjustText[_this.index] = setTimeout(function() {
+        clearTimeout(GroundworkCSS.delayedAdjustText[_this.index]);
+        return GroundworkCSS.delayedAdjustText[_this.index] = setTimeout(function() {
           return _this.resizeText();
         }, 20);
       });
@@ -97,11 +97,9 @@
   })();
 
   (function($) {
-    var responsiveTextElements;
-    responsiveTextElements = [];
     return $.fn.responsiveText = function(options) {
       return this.each(function() {
-        return responsiveTextElements.push(new ResponsiveText(this));
+        return GroundworkCSS.responsiveTextElements.push(new GroundworkCSS.ResponsiveText(this));
       });
     };
   })(jQuery);
