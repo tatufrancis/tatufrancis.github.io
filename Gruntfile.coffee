@@ -4,12 +4,16 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON("package.json")
 
     watch:
-      compass:
+      styles:
         files: '**/*.scss'
         tasks: ['compass', 'autoprefixer', 'cssmin']
-      coffee:
+        options:
+          livereload: true
+      scripts:
         files: '**/*.coffee'
         tasks: ['coffee', 'uglify']
+        options:
+          livereload: true
 
     compass:
       build:
@@ -52,11 +56,13 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['compass', 'autoprefixer', 'coffee:individual', 'coffee:concatenated', 'cssmin', 'uglify']
+  grunt.registerTask 'build',             ['styles', 'scripts']
+  grunt.registerTask 'styles',            ['compass', 'autoprefixer', 'cssmin']
+  grunt.registerTask 'scripts',           ['coffee', 'uglify']
+
