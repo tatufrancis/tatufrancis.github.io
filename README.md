@@ -5,9 +5,9 @@ GroundworkCSS 2.4.0
 
 Say hello to responsive design made easy.
 
-[http://groundwork.sidereel.com](http://groundwork.sidereel.com)
+[http://groundworkcss.github.io](http://groundworkcss.github.io)
 
-[GroundworkCSS](http://groundwork.sidereel.com) is a fully responsive HTML5, CSS 
+[GroundworkCSS](http://groundworkcss.github.io) is a fully responsive HTML5, CSS 
 and Javascript toolkit created by [@ghepting](http://twitter.com/ghepting).
 
 Using GroundworkCSS, you can rapidly prototype and create accessible web apps that 
