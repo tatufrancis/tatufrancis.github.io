@@ -6522,1187 +6522,1353 @@ section:after {
   visibility: hidden;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-.one-up {
-  width: 100% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.one-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 100%;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-.one-up:nth-child(1n+1) {
-  clear: both !important;
+.one-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-.two-up {
-  width: 50% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.one-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-.two-up:nth-child(2n+1) {
-  clear: both !important;
+.one-up-:nth-child(1n+1) {
+  clear: both;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-.three-up {
-  width: 33.33333% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.two-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 50%;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-.three-up:nth-child(3n+1) {
-  clear: both !important;
+.two-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-.four-up {
-  width: 25% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.two-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-.four-up:nth-child(4n+1) {
-  clear: both !important;
+.two-up-:nth-child(2n+1) {
+  clear: both;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-.five-up {
-  width: 20% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.three-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 33.33333%;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-.five-up:nth-child(5n+1) {
-  clear: both !important;
+.three-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-.six-up {
-  width: 16.66667% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.three-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-.six-up:nth-child(6n+1) {
-  clear: both !important;
+.three-up-:nth-child(3n+1) {
+  clear: both;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-.seven-up {
-  width: 14.28571% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.four-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 25%;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-.seven-up:nth-child(7n+1) {
-  clear: both !important;
+.four-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-.eight-up {
-  width: 12.5% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.four-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-.eight-up:nth-child(8n+1) {
-  clear: both !important;
+.four-up-:nth-child(4n+1) {
+  clear: both;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-.nine-up {
-  width: 11.11111% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.five-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 20%;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-.nine-up:nth-child(9n+1) {
-  clear: both !important;
+.five-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-.ten-up {
-  width: 10% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.five-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-.ten-up:nth-child(10n+1) {
-  clear: both !important;
+.five-up-:nth-child(5n+1) {
+  clear: both;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-.eleven-up {
-  width: 9.09091% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.six-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 16.66667%;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-.eleven-up:nth-child(11n+1) {
-  clear: both !important;
+.six-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 135, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-.twelve-up {
-  width: 8.33333% !important;
-  clear: none !important;
-  float: left !important;
-  left: 0 !important;
-  right: 0 !important;
+.six-up-:nth-child(n) {
+  clear: none;
 }
 
-/* line 138, ../../src/scss/layout/_grid.scss */
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-.twelve-up:nth-child(12n+1) {
-  clear: both !important;
+.six-up-:nth-child(6n+1) {
+  clear: both;
 }
 
-@media (min-width: 1025px) {
-  /* line 147, ../../src/scss/layout/_grid.scss */
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .one-up-desktop {
-    width: 100% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .one-up-desktop:nth-child(1n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .two-up-desktop {
-    width: 50% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .two-up-desktop:nth-child(2n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .three-up-desktop {
-    width: 33.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .three-up-desktop:nth-child(3n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .four-up-desktop {
-    width: 25% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .four-up-desktop:nth-child(4n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .five-up-desktop {
-    width: 20% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .five-up-desktop:nth-child(5n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .six-up-desktop {
-    width: 16.66667% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .six-up-desktop:nth-child(6n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .seven-up-desktop {
-    width: 14.28571% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .seven-up-desktop:nth-child(7n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .eight-up-desktop {
-    width: 12.5% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .eight-up-desktop:nth-child(8n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .nine-up-desktop {
-    width: 11.11111% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .nine-up-desktop:nth-child(9n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .ten-up-desktop {
-    width: 10% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .ten-up-desktop:nth-child(10n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .eleven-up-desktop {
-    width: 9.09091% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .eleven-up-desktop:nth-child(11n+1) {
-    clear: both !important;
-  }
-
-  /* line 147, ../../src/scss/layout/_grid.scss */
-
-  .twelve-up-desktop {
-    width: 8.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 150, ../../src/scss/layout/_grid.scss */
-
-  .twelve-up-desktop:nth-child(12n+1) {
-    clear: both !important;
-  }
+.seven-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 14.28571%;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (min-width: 768px) and (min-width: 481px) {
-  /* line 159, ../../src/scss/layout/_grid.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .one-up-ipad {
-    width: 100% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .one-up-ipad:not(:nth-child(1n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .one-up-ipad:nth-child(1n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .two-up-ipad {
-    width: 50% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .two-up-ipad:not(:nth-child(2n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .two-up-ipad:nth-child(2n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .three-up-ipad {
-    width: 33.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .three-up-ipad:not(:nth-child(3n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .three-up-ipad:nth-child(3n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .four-up-ipad {
-    width: 25% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .four-up-ipad:not(:nth-child(4n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .four-up-ipad:nth-child(4n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .five-up-ipad {
-    width: 20% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .five-up-ipad:not(:nth-child(5n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .five-up-ipad:nth-child(5n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .six-up-ipad {
-    width: 16.66667% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .six-up-ipad:not(:nth-child(6n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .six-up-ipad:nth-child(6n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .seven-up-ipad {
-    width: 14.28571% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .seven-up-ipad:not(:nth-child(7n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .seven-up-ipad:nth-child(7n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .eight-up-ipad {
-    width: 12.5% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .eight-up-ipad:not(:nth-child(8n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .eight-up-ipad:nth-child(8n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .nine-up-ipad {
-    width: 11.11111% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .nine-up-ipad:not(:nth-child(9n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .nine-up-ipad:nth-child(9n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .ten-up-ipad {
-    width: 10% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .ten-up-ipad:not(:nth-child(10n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .ten-up-ipad:nth-child(10n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .eleven-up-ipad {
-    width: 9.09091% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .eleven-up-ipad:not(:nth-child(11n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .eleven-up-ipad:nth-child(11n+1) {
-    clear: both !important;
-  }
-
-  /* line 159, ../../src/scss/layout/_grid.scss */
-
-  .twelve-up-ipad {
-    width: 8.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-
-  /* line 162, ../../src/scss/layout/_grid.scss */
-
-  .twelve-up-ipad:not(:nth-child(12n+1)) {
-    clear: none !important;
-  }
-
-  /* line 165, ../../src/scss/layout/_grid.scss */
-
-  .twelve-up-ipad:nth-child(12n+1) {
-    clear: both !important;
-  }
+.seven-up-:nth-child(n) {
+  clear: none;
 }
 
-@media (max-width: 767px) and (min-width: 481px) {
-  /* line 174, ../../src/scss/layout/_grid.scss */
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+.seven-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+.seven-up-:nth-child(7n+1) {
+  clear: both;
+}
+
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+.eight-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 12.5%;
+}
+
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+.eight-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+.eight-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+.eight-up-:nth-child(8n+1) {
+  clear: both;
+}
+
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+.nine-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 11.11111%;
+}
+
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+.nine-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+.nine-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+.nine-up-:nth-child(9n+1) {
+  clear: both;
+}
+
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+.ten-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 10%;
+}
+
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+.ten-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+.ten-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+.ten-up-:nth-child(10n+1) {
+  clear: both;
+}
+
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+.eleven-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 9.09091%;
+}
+
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+.eleven-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+.eleven-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+.eleven-up-:nth-child(11n+1) {
+  clear: both;
+}
+
+/* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+.twelve-up- {
+  float: left;
+  clear: none;
+  position: relative;
+  min-height: 1px;
+  width: 8.33333%;
+}
+
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+.twelve-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+.twelve-up-:nth-child(n) {
+  clear: none;
+}
+
+/* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+.twelve-up-:nth-child(12n+1) {
+  clear: both;
+}
+
+@media screen and (min-width: 30.125em) {
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .one-up-small-tablet {
-    width: 100% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .one-up-small-tablet:not(:nth-child(1n+1)) {
-    clear: none !important;
+  .one-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .one-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .one-up-small-tablet:nth-child(1n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .two-up-small-tablet {
-    width: 50% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 50%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .two-up-small-tablet:not(:nth-child(2n+1)) {
-    clear: none !important;
+  .two-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .two-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .two-up-small-tablet:nth-child(2n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .three-up-small-tablet {
-    width: 33.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 33.33333%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .three-up-small-tablet:not(:nth-child(3n+1)) {
-    clear: none !important;
+  .three-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .three-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .three-up-small-tablet:nth-child(3n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .four-up-small-tablet {
-    width: 25% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 25%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .four-up-small-tablet:not(:nth-child(4n+1)) {
-    clear: none !important;
+  .four-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .four-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .four-up-small-tablet:nth-child(4n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .five-up-small-tablet {
-    width: 20% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 20%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .five-up-small-tablet:not(:nth-child(5n+1)) {
-    clear: none !important;
+  .five-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .five-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .five-up-small-tablet:nth-child(5n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .six-up-small-tablet {
-    width: 16.66667% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 16.66667%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .six-up-small-tablet:not(:nth-child(6n+1)) {
-    clear: none !important;
+  .six-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .six-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .six-up-small-tablet:nth-child(6n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .seven-up-small-tablet {
-    width: 14.28571% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 14.28571%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .seven-up-small-tablet:not(:nth-child(7n+1)) {
-    clear: none !important;
+  .seven-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .seven-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .seven-up-small-tablet:nth-child(7n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .eight-up-small-tablet {
-    width: 12.5% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 12.5%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .eight-up-small-tablet:not(:nth-child(8n+1)) {
-    clear: none !important;
+  .eight-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .eight-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .eight-up-small-tablet:nth-child(8n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .nine-up-small-tablet {
-    width: 11.11111% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 11.11111%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .nine-up-small-tablet:not(:nth-child(9n+1)) {
-    clear: none !important;
+  .nine-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .nine-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .nine-up-small-tablet:nth-child(9n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .ten-up-small-tablet {
-    width: 10% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 10%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .ten-up-small-tablet:not(:nth-child(10n+1)) {
-    clear: none !important;
+  .ten-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .ten-up-small-tablet:nth-child(10n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .eleven-up-small-tablet {
-    width: 9.09091% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 9.09091%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .eleven-up-small-tablet:not(:nth-child(11n+1)) {
-    clear: none !important;
+  .eleven-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .eleven-up-small-tablet:nth-child(11n+1) {
-    clear: both !important;
+    clear: both;
   }
 
-  /* line 174, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
   .twelve-up-small-tablet {
-    width: 8.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 8.33333%;
   }
 
-  /* line 177, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .twelve-up-small-tablet:not(:nth-child(12n+1)) {
-    clear: none !important;
+  .twelve-up-small-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 180, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-small-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
   .twelve-up-small-tablet:nth-child(12n+1) {
-    clear: both !important;
+    clear: both;
   }
 }
 
-@media (max-width: 480px) {
-  /* line 189, ../../src/scss/layout/_grid.scss */
+@media screen and (min-width: 48em) {
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .one-up-mobile {
-    width: 100% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .one-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .one-up-mobile:not(:nth-child(1n+1)) {
-    clear: none !important;
+  .one-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .one-up-mobile:nth-child(2) {
-    clear: both !important;
+  .one-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .two-up-mobile {
-    width: 50% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .one-up-large-tablet:nth-child(1n+1) {
+    clear: both;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .two-up-mobile:not(:nth-child(2n+1)) {
-    clear: none !important;
+  .two-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 50%;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .two-up-mobile:nth-child(3) {
-    clear: both !important;
+  .two-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .three-up-mobile {
-    width: 33.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .two-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .three-up-mobile:not(:nth-child(3n+1)) {
-    clear: none !important;
+  .two-up-large-tablet:nth-child(2n+1) {
+    clear: both;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .three-up-mobile:nth-child(4) {
-    clear: both !important;
+  .three-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 33.33333%;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .four-up-mobile {
-    width: 25% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .three-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .four-up-mobile:not(:nth-child(4n+1)) {
-    clear: none !important;
+  .three-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .four-up-mobile:nth-child(5) {
-    clear: both !important;
+  .three-up-large-tablet:nth-child(3n+1) {
+    clear: both;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .five-up-mobile {
-    width: 20% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .four-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 25%;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .five-up-mobile:not(:nth-child(5n+1)) {
-    clear: none !important;
+  .four-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .five-up-mobile:nth-child(6) {
-    clear: both !important;
+  .four-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .six-up-mobile {
-    width: 16.66667% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .four-up-large-tablet:nth-child(4n+1) {
+    clear: both;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .six-up-mobile:not(:nth-child(6n+1)) {
-    clear: none !important;
+  .five-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 20%;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .six-up-mobile:nth-child(7) {
-    clear: both !important;
+  .five-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .seven-up-mobile {
-    width: 14.28571% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .five-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .seven-up-mobile:not(:nth-child(7n+1)) {
-    clear: none !important;
+  .five-up-large-tablet:nth-child(5n+1) {
+    clear: both;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .seven-up-mobile:nth-child(8) {
-    clear: both !important;
+  .six-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 16.66667%;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .eight-up-mobile {
-    width: 12.5% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .six-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .eight-up-mobile:not(:nth-child(8n+1)) {
-    clear: none !important;
+  .six-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .eight-up-mobile:nth-child(9) {
-    clear: both !important;
+  .six-up-large-tablet:nth-child(6n+1) {
+    clear: both;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .nine-up-mobile {
-    width: 11.11111% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .seven-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 14.28571%;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .nine-up-mobile:not(:nth-child(9n+1)) {
-    clear: none !important;
+  .seven-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .nine-up-mobile:nth-child(10) {
-    clear: both !important;
+  .seven-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .ten-up-mobile {
-    width: 10% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .seven-up-large-tablet:nth-child(7n+1) {
+    clear: both;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .ten-up-mobile:not(:nth-child(10n+1)) {
-    clear: none !important;
+  .eight-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 12.5%;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .ten-up-mobile:nth-child(11) {
-    clear: both !important;
+  .eight-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .eleven-up-mobile {
-    width: 9.09091% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .eight-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .eleven-up-mobile:not(:nth-child(11n+1)) {
-    clear: none !important;
+  .eight-up-large-tablet:nth-child(8n+1) {
+    clear: both;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
 
-  .eleven-up-mobile:nth-child(12) {
-    clear: both !important;
+  .nine-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 11.11111%;
   }
 
-  /* line 189, ../../src/scss/layout/_grid.scss */
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  .twelve-up-mobile {
-    width: 8.33333% !important;
-    clear: none !important;
-    float: left !important;
-    left: 0 !important;
-    right: 0 !important;
+  .nine-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 192, ../../src/scss/layout/_grid.scss */
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
 
-  .twelve-up-mobile:not(:nth-child(12n+1)) {
-    clear: none !important;
+  .nine-up-large-tablet:nth-child(n) {
+    clear: none;
   }
 
-  /* line 195, ../../src/scss/layout/_grid.scss */
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
 
-  .twelve-up-mobile:nth-child(13) {
-    clear: both !important;
+  .nine-up-large-tablet:nth-child(9n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 10%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-large-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-large-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-large-tablet:nth-child(10n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 9.09091%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-large-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-large-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-large-tablet:nth-child(11n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-large-tablet {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 8.33333%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-large-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-large-tablet:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-large-tablet:nth-child(12n+1) {
+    clear: both;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .one-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .one-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .one-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .one-up-desktop:nth-child(1n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .two-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 50%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .two-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .two-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .two-up-desktop:nth-child(2n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .three-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 33.33333%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .three-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .three-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .three-up-desktop:nth-child(3n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .four-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 25%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .four-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .four-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .four-up-desktop:nth-child(4n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .five-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 20%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .five-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .five-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .five-up-desktop:nth-child(5n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .six-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 16.66667%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .six-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .six-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .six-up-desktop:nth-child(6n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .seven-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 14.28571%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .seven-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .seven-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .seven-up-desktop:nth-child(7n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .eight-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 12.5%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .eight-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .eight-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .eight-up-desktop:nth-child(8n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .nine-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 11.11111%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .nine-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .nine-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .nine-up-desktop:nth-child(9n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 10%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .ten-up-desktop:nth-child(10n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 9.09091%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .eleven-up-desktop:nth-child(11n+1) {
+    clear: both;
+  }
+
+  /* line 119, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-desktop {
+    float: left;
+    clear: none;
+    position: relative;
+    min-height: 1px;
+    width: 8.33333%;
+  }
+
+  /* line 37, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 43, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-desktop:nth-child(n) {
+    clear: none;
+  }
+
+  /* line 46, ../../src/scss/core/mixins/_layout.scss */
+
+  .twelve-up-desktop:nth-child(12n+1) {
+    clear: both;
   }
 }
 
@@ -7713,25 +7879,16 @@ section:nth-child(1) article {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 23, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(1) article {
-    width: 80%;
-  }
+section:nth-child(1) article:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 23, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(1) article {
-    width: 75%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 23, ../src/scss/grid-semantic.scss */
 
   section:nth-child(1) article {
@@ -7739,11 +7896,19 @@ section:nth-child(1) article {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 23, ../src/scss/grid-semantic.scss */
 
   section:nth-child(1) article {
-    width: 50%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 23, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(1) article {
+    width: 80%;
   }
 }
 
@@ -7754,25 +7919,16 @@ section:nth-child(1) aside {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 27, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(1) aside {
-    width: 20%;
-  }
+section:nth-child(1) aside:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 27, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(1) aside {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 27, ../src/scss/grid-semantic.scss */
 
   section:nth-child(1) aside {
@@ -7780,11 +7936,19 @@ section:nth-child(1) aside {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 27, ../src/scss/grid-semantic.scss */
 
   section:nth-child(1) aside {
-    width: 50%;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 27, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(1) aside {
+    width: 20%;
   }
 }
 
@@ -7795,25 +7959,16 @@ section:nth-child(2) article {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 33, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(2) article {
-    width: 71.42857%;
-  }
+section:nth-child(2) article:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 33, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(2) article {
-    width: 75%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 33, ../src/scss/grid-semantic.scss */
 
   section:nth-child(2) article {
@@ -7821,11 +7976,19 @@ section:nth-child(2) article {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 33, ../src/scss/grid-semantic.scss */
 
   section:nth-child(2) article {
-    width: 50%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 33, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(2) article {
+    width: 71.42857%;
   }
 }
 
@@ -7836,25 +7999,16 @@ section:nth-child(2) aside {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 37, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(2) aside {
-    width: 28.57143%;
-  }
+section:nth-child(2) aside:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 37, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(2) aside {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 37, ../src/scss/grid-semantic.scss */
 
   section:nth-child(2) aside {
@@ -7862,11 +8016,19 @@ section:nth-child(2) aside {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 37, ../src/scss/grid-semantic.scss */
 
   section:nth-child(2) aside {
-    width: 50%;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 37, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(2) aside {
+    width: 28.57143%;
   }
 }
 
@@ -7877,25 +8039,16 @@ section:nth-child(3) article {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 43, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(3) article {
-    width: 57.14286%;
-  }
+section:nth-child(3) article:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 43, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(3) article {
-    width: 75%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 43, ../src/scss/grid-semantic.scss */
 
   section:nth-child(3) article {
@@ -7903,11 +8056,19 @@ section:nth-child(3) article {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 43, ../src/scss/grid-semantic.scss */
 
   section:nth-child(3) article {
-    width: 50%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 43, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(3) article {
+    width: 57.14286%;
   }
 }
 
@@ -7918,25 +8079,16 @@ section:nth-child(3) aside {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 47, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(3) aside {
-    width: 42.85714%;
-  }
+section:nth-child(3) aside:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 47, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(3) aside {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 47, ../src/scss/grid-semantic.scss */
 
   section:nth-child(3) aside {
@@ -7944,11 +8096,19 @@ section:nth-child(3) aside {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 47, ../src/scss/grid-semantic.scss */
 
   section:nth-child(3) aside {
-    width: 50%;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 47, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(3) aside {
+    width: 42.85714%;
   }
 }
 
@@ -7959,25 +8119,16 @@ section:nth-child(4) article {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 53, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(4) article {
-    width: 65%;
-  }
+section:nth-child(4) article:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 53, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(4) article {
-    width: 75%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 53, ../src/scss/grid-semantic.scss */
 
   section:nth-child(4) article {
@@ -7985,11 +8136,19 @@ section:nth-child(4) article {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 53, ../src/scss/grid-semantic.scss */
 
   section:nth-child(4) article {
-    width: 50%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 53, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(4) article {
+    width: 65%;
   }
 }
 
@@ -8000,25 +8159,16 @@ section:nth-child(4) aside {
   clear: none;
   position: relative;
   min-height: 1px;
+  width: 50%;
 }
 
-@media (min-width: 1025px) {
-  /* line 57, ../src/scss/grid-semantic.scss */
+/* line 37, ../../src/scss/core/mixins/_layout.scss */
 
-  section:nth-child(4) aside {
-    width: 35%;
-  }
+section:nth-child(4) aside:nth-child(n) {
+  clear: none;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* line 57, ../src/scss/grid-semantic.scss */
-
-  section:nth-child(4) aside {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (min-width: 30.125em) {
   /* line 57, ../src/scss/grid-semantic.scss */
 
   section:nth-child(4) aside {
@@ -8026,10 +8176,18 @@ section:nth-child(4) aside {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 48em) {
   /* line 57, ../src/scss/grid-semantic.scss */
 
   section:nth-child(4) aside {
-    width: 50%;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 57, ../src/scss/grid-semantic.scss */
+
+  section:nth-child(4) aside {
+    width: 35%;
   }
 }

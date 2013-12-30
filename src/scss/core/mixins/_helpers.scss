@@ -408,7 +408,7 @@ $bp-target: null;
 $bp-target-pre: null;
 $bp-target-post: null;
 $bp-target-mid: null;
-@mixin breakpoints($base: $default-breakpoint, $separator: '-') {
+@mixin breakpoints($base: $default-base, $separator: '-') {
   @if $responsive {
     @for $breakpoint-index from 1 through length($breakpoints) {
       $bp-index: $breakpoint-index;

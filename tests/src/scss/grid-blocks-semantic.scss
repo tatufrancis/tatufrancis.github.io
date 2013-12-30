@@ -9,5 +9,5 @@ $grid-block-classes: false;
 // semantic grid adapters test
 section {
   @extend %padded;
-  @include blocks(4,3,2,1);
+  @include blocks(4 3 2 1);
 }
