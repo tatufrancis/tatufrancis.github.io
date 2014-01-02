@@ -200,199 +200,292 @@
 %rotate-360           { @include _rotate-360; }
 %rotate-360-ctr       { @include _rotate-360-ctr; }
 
+@include breakpoints($base: $helper-base) {
 
-
-// layout classes
-@if $layout-classes {
-  @each $helper in $layout-helpers {
-    .#{$helper} { @extend %#{$helper}; }
-  }
-  .clear, .clearfix { @extend %clear; }
-  @if $responsive {
-    @include responsive_layout_helpers($desktop, "desktop");
-    @include responsive_layout_helpers($ipad, "ipad");
-    @include responsive_layout_helpers($small-tablet, "small-tablet");
-    @include responsive_layout_helpers($mobile, "mobile");
-  }
-}
-
-
-// positioning classes
-@if $positioning-classes {
-  .fixed                  { @extend %fixed; }
-  .fixed-top              { @extend %fixed-top; }
-  .fixed-right            { @extend %fixed-right; }
-  .fixed-bottom           { @extend %fixed-bottom; }
-  .fixed-left             { @extend %fixed-left; }
-  .fixed-middle           { @extend %fixed-middle; }
-  .fixed-center           { @extend %fixed-center; }
-
-  .fixed-top-right,
-  .fixed-right-top        { @extend %fixed-top-right; }
-  .fixed-top-left,
-  .fixed-left-top         { @extend %fixed-top-left; }
-  .fixed-top-center,
-  .fixed-center-top       { @extend %fixed-top-center; }
-  .fixed-middle-right,
-  .fixed-right-middle     { @extend %fixed-middle-right; }
-  .fixed-middle-left,
-  .fixed-left-middle      { @extend %fixed-middle-left; }
-  .fixed-middle-center,
-  .fixed-center-middle    { @extend %fixed-middle-center; }
-  .fixed-bottom-right,
-  .fixed-right-bottom     { @extend %fixed-bottom-right; }
-  .fixed-bottom-left,
-  .fixed-left-bottom      { @extend %fixed-bottom-left; }
-  .fixed-bottom-center,
-  .fixed-center-bottom    { @extend %fixed-bottom-center; }
-
-  .absolute               { @extend %absolute; }
-  .absolute-top           { @extend %absolute-top; }
-  .absolute-right         { @extend %absolute-right; }
-  .absolute-bottom        { @extend %absolute-bottom; }
-  .absolute-left          { @extend %absolute-left; }
-  .absolute-middle        { @extend %absolute-middle; }
-  .absolute-center        { @extend %absolute-center; }
-
-  .absolute-top-right,
-  .absolute-right-top        { @extend %absolute-top-right; }
-  .absolute-top-left,
-  .absolute-left-top         { @extend %absolute-top-left; }
-  .absolute-top-center,
-  .absolute-center-top       { @extend %absolute-top-center; }
-  .absolute-middle-right,
-  .absolute-right-middle     { @extend %absolute-middle-right; }
-  .absolute-middle-left,
-  .absolute-left-middle      { @extend %absolute-middle-left; }
-  .absolute-middle-center,
-  .absolute-center-middle    { @extend %absolute-middle-center; }
-  .absolute-bottom-right,
-  .absolute-right-bottom     { @extend %absolute-bottom-right; }
-  .absolute-bottom-left,
-  .absolute-left-bottom      { @extend %absolute-bottom-left; }
-  .absolute-bottom-center,
-  .absolute-center-bottom    { @extend %absolute-bottom-center; }
-
-  .relative         { @extend %relative; }
-
-  .static           { @extend %static; }
-  @if $responsive {
-    @include responsive_positioning_helpers($desktop, "desktop");
-    @include responsive_positioning_helpers($ipad, "ipad");
-    @include responsive_positioning_helpers($small-tablet, "small-tablet");
-    @include responsive_positioning_helpers($mobile, "mobile");
-  }
-}
-
-
-// multi column classes
-@if $multi-column-classes {
-  @include _multi-column-classes;
-  @if $responsive {
-    @include responsive_multi-column_helpers($desktop, "desktop");
-    @include responsive_multi-column_helpers($ipad, "ipad");
-    @include responsive_multi-column_helpers($small-tablet, "small-tablet");
-    @include responsive_multi-column_helpers($mobile, "mobile");
-  }
-}
-
-
-// typography classes
-@if $typography-classes {
-  @each $helper in $typography-helpers {
-    .#{$helper} { @extend %#{$helper}; }
-  }
-  @if $responsive {
-    @include responsive_typography_helpers($desktop, "desktop");
-    @include responsive_typography_helpers($ipad, "ipad");
-    @include responsive_typography_helpers($small-tablet, "small-tablet");
-    @include responsive_typography_helpers($mobile, "mobile");
-  }
-}
-
-
-// size classes
-@if $size-classes {
-  @each $helper in $size-helpers {
-    .#{$helper} { @extend %#{$helper}; }
-  }
-  @if $responsive {
-    @include responsive_size_helpers($desktop, "desktop");
-    @include responsive_size_helpers($ipad, "ipad");
-    @include responsive_size_helpers($small-tablet, "small-tablet");
-    @include responsive_size_helpers($mobile, "mobile");
-  }
-}
-
-
-// border classes
-@if $border-classes {
-  @each $helper in $border-helpers {
-    .#{$helper} { @extend %#{$helper}; }
-  }
-  @if $responsive {
-    @include responsive_border_helpers($desktop, "desktop");
-    @include responsive_border_helpers($ipad, "ipad");
-    @include responsive_border_helpers($small-tablet, "small-tablet");
-    @include responsive_border_helpers($mobile, "mobile");
-  }
-}
-
-
-// radius classes
-@if $radius-classes {
-  @each $helper in $radius-helpers {
-    .#{$helper} { @extend %#{$helper}; }
-  }
-  @if $responsive {
-    @include responsive_radius_helpers($desktop, "desktop");
-    @include responsive_radius_helpers($ipad, "ipad");
-    @include responsive_radius_helpers($small-tablet, "small-tablet");
-    @include responsive_radius_helpers($mobile, "mobile");
-  }
-}
-
-
-// rotation classes
-@if $rotation-classes {
-  @each $helper in $rotation-helpers {
-    .#{$helper} { @extend %#{$helper}; }
-  }
-  @if $responsive {
-    @include responsive_rotation_helpers($desktop, "desktop");
-    @include responsive_rotation_helpers($ipad, "ipad");
-    @include responsive_rotation_helpers($small-tablet, "small-tablet");
-    @include responsive_rotation_helpers($mobile, "mobile");
-  }
-}
-
-
-// spacer classes
-@if $spacer-classes {
-  @for $i from 1 through length($spacer-helpers) {
-    .#{nth($spacer-helpers, $i)} {
-      @extend %#{nth($spacer-helpers, $i)};
+  // layout classes
+  @if $layout-classes {
+    %bp-inline#{$bp-target-post}          { @include _inline; }
+    %bp-inline-block#{$bp-target-post}    { @include _inline-block; }
+    %bp-block#{$bp-target-post}           { @include _block; }
+    %bp-hidden#{$bp-target-post}          { @include _hidden; }
+    %bp-clear#{$bp-target-post}           { @include _clear; }
+    %bp-center#{$bp-target-post}          { @include _center; }
+    %bp-pull-right#{$bp-target-post}      { @include _pull-right; }
+    %bp-pull-left#{$bp-target-post}       { @include _pull-left; }
+    %bp-pull-none#{$bp-target-post}       { @include _pull-none; }
+    %bp-zero#{$bp-target-post}            { @include _zero; }      
+    @each $helper in $layout-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
     }
-    @if $spacer-mod-classes {
-      @for $j from 1 through length($spacer-modifiers) {
-        .#{nth($spacer-modifiers, $j)}-#{nth($spacer-helpers, $i)} { @extend %#{nth($spacer-modifiers, $j)}-#{nth($spacer-helpers, $i)}; }
+  }
+
+
+  // positioning classes
+  @if $positioning-classes {
+    %bp-fixed#{$bp-target-post}                { @include _fixed; }
+    %bp-fixed-top#{$bp-target-post}            { @include _fixed(top); }
+    %bp-fixed-right#{$bp-target-post}          { @include _fixed(right); }
+    %bp-fixed-bottom#{$bp-target-post}         { @include _fixed(bottom); }
+    %bp-fixed-left#{$bp-target-post}           { @include _fixed(left); }
+    %bp-fixed-middle#{$bp-target-post}         { @include _fixed(middle); }
+    %bp-fixed-center#{$bp-target-post}         { @include _fixed(center); }
+
+    %bp-fixed-top-right#{$bp-target-post}      { @include _fixed((top, right)); }
+    %bp-fixed-top-left#{$bp-target-post}       { @include _fixed((top, left)); }
+    %bp-fixed-top-center#{$bp-target-post}     { @include _fixed((top, center)); }
+    %bp-fixed-middle-right#{$bp-target-post}   { @include _fixed((middle, right)); }
+    %bp-fixed-middle-left#{$bp-target-post}    { @include _fixed((middle, left)); }
+    %bp-fixed-middle-center#{$bp-target-post}  { @include _fixed((middle, center)); }
+    %bp-fixed-bottom-right#{$bp-target-post}   { @include _fixed((bottom, right)); }
+    %bp-fixed-bottom-left#{$bp-target-post}    { @include _fixed((bottom, left)); }
+    %bp-fixed-bottom-center#{$bp-target-post}  { @include _fixed((bottom, center)); }
+
+    %bp-absolute#{$bp-target-post}             { @include _absolute; }
+    %bp-absolute-top#{$bp-target-post}         { @include _absolute(top); }
+    %bp-absolute-right#{$bp-target-post}       { @include _absolute(right); }
+    %bp-absolute-bottom#{$bp-target-post}      { @include _absolute(bottom); }
+    %bp-absolute-left#{$bp-target-post}        { @include _absolute(left); }
+    %bp-absolute-middle#{$bp-target-post}      { @include _absolute(middle); }
+    %bp-absolute-center#{$bp-target-post}      { @include _absolute(center); }
+
+    %bp-absolute-top-right#{$bp-target-post}      { @include _absolute((top, right)); }
+    %bp-absolute-top-left#{$bp-target-post}       { @include _absolute((top, left)); }
+    %bp-absolute-top-center#{$bp-target-post}     { @include _absolute((top, center)); }
+    %bp-absolute-middle-right#{$bp-target-post}   { @include _absolute((middle, right)); }
+    %bp-absolute-middle-left#{$bp-target-post}    { @include _absolute((middle, left)); }
+    %bp-absolute-middle-center#{$bp-target-post}  { @include _absolute((middle, center)); }
+    %bp-absolute-bottom-right#{$bp-target-post}   { @include _absolute((bottom, right)); }
+    %bp-absolute-bottom-left#{$bp-target-post}    { @include _absolute((bottom, left)); }
+    %bp-absolute-bottom-center#{$bp-target-post}  { @include _absolute((bottom, center)); }
+
+    %bp-relative#{$bp-target-post}               { @include _relative; }
+
+    %bp-static#{$bp-target-post}                 { @include _static; }
+
+    .relative#{$bp-target-post} { @extend %bp-relative#{$bp-target-post} }
+    .static#{$bp-target-post} { @extend %bp-static#{$bp-target-post} }
+    @each $type in "fixed" "absolute" {
+      // 1D directions
+      @each $direction in "" "top" "middle" "bottom" "right" "left" "center" {
+        @if $direction != "" and $direction != null {
+          $direction: "-" + $direction;
+        }@else{
+          $direction: "";
+        }
+        .#{$type + $direction + $bp-target-post} { @extend %bp-#{$type + $direction + $bp-target-post} }
+      }
+      // 2D directions
+      @each $vertical in "top" "middle" "bottom" {
+        @each $horizontal in "right" "left" "center" {
+          .#{$type + "-" + $vertical + "-" + $horizontal + $bp-target-post} { @extend %bp-#{$type + "-" + $vertical + "-" + $horizontal + $bp-target-post} }
+        }
+      }
+    } 
+  }
+
+
+  // multi column classes
+  @if $multi-column-classes {
+    @include _multi-column-classes($bp-target);
+  }
+
+
+  // typography classes
+  @if $typography-classes {
+    %bp-align-top#{$bp-target-post}       { @include _align-top; }
+    %bp-align-right#{$bp-target-post}     { @include _align-right; }
+    %bp-align-bottom#{$bp-target-post}    { @include _align-bottom; }
+    %bp-align-left#{$bp-target-post}      { @include _align-left; }
+    %bp-align-center#{$bp-target-post}    { @include _align-center; }
+    %bp-unstyled#{$bp-target-post}        { @include _zero; }
+    %bp-justify#{$bp-target-post}         { @include _justify; }
+    %bp-truncate#{$bp-target-post}        { @include _truncate; }
+    @each $helper in $typography-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
+    }
+  }
+
+
+  // size classes
+  @if $size-classes {
+    %bp-small#{$bp-target-post}    { @include _small }
+    %bp-medium#{$bp-target-post}   { @include _medium }
+    %bp-large#{$bp-target-post}    { @include _large }
+    @each $helper in $size-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
+    }
+  }
+
+
+  // border classes
+  @if $border-classes {
+    %bp-no-border#{$bp-target-post}       { border: 0; }
+    %bp-bordered#{$bp-target-post}        { @include _bordered; }
+    %bp-border-top#{$bp-target-post}      { @include _border-top; }
+    %bp-border-right#{$bp-target-post}    { @include _border-right; }
+    %bp-border-bottom#{$bp-target-post}   { @include _border-bottom; }
+    %bp-border-left#{$bp-target-post}     { @include _border-left; }
+    @each $helper in $border-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
+    }
+  }
+  // radius classes
+  @if $radius-classes {
+    %bp-square#{$bp-target-post}       { @include _square; }
+    %bp-rounded#{$bp-target-post}      { @include _rounded; }
+    %bp-round#{$bp-target-post}        { @include _round; }
+    @each $helper in $radius-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
+    }
+  }
+
+
+  // rotation classes
+  @if $rotation-classes {
+    %bp-rotate-90#{$bp-target-post}       { @include _rotate-90; }
+    %bp-rotate-90-ctr#{$bp-target-post}   { @include _rotate-90-ctr; }
+    %bp-rotate-180#{$bp-target-post}      { @include _rotate-180; }
+    %bp-rotate-180-ctr#{$bp-target-post}  { @include _rotate-180-ctr; }
+    %bp-rotate-270#{$bp-target-post}      { @include _rotate-270; }
+    %bp-rotate-270-ctr#{$bp-target-post}  { @include _rotate-270-ctr; }
+    %bp-rotate-360#{$bp-target-post}      { @include _rotate-360; }
+    %bp-rotate-360-ctr#{$bp-target-post}  { @include _rotate-360-ctr; }
+    @each $helper in $rotation-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
+    }
+  }
+
+  // spacer classes
+  @if $spacer-classes {
+    %bp-padded#{$bp-target-post}               { @include _padded(1); }
+    %bp-half-padded#{$bp-target-post}          { @include _padded(0.5); }
+    %bp-double-padded#{$bp-target-post}        { @include _padded(2); }
+    %bp-triple-padded#{$bp-target-post}        { @include _padded(3); }
+    %bp-no-padded#{$bp-target-post}            { @include _padded(0); }
+
+    %bp-pad-top#{$bp-target-post}              { @include _pad-top; }
+    %bp-half-pad-top#{$bp-target-post}         { @include _pad-top(0.5); }
+    %bp-double-pad-top#{$bp-target-post}       { @include _pad-top(2); }
+    %bp-triple-pad-top#{$bp-target-post}       { @include _pad-top(3); }
+    %bp-no-pad-top#{$bp-target-post}           { @include _pad-top(0); }
+
+    %bp-pad-right#{$bp-target-post}            { @include _pad-right; }
+    %bp-half-pad-right#{$bp-target-post}       { @include _pad-right(0.5); }
+    %bp-double-pad-right#{$bp-target-post}     { @include _pad-right(2); }
+    %bp-triple-pad-right#{$bp-target-post}     { @include _pad-right(3); }
+    %bp-no-pad-right#{$bp-target-post}         { @include _pad-right(0); }
+
+    %bp-pad-bottom#{$bp-target-post}           { @include _pad-bottom; }
+    %bp-half-pad-bottom#{$bp-target-post}      { @include _pad-bottom(0.5); }
+    %bp-double-pad-bottom#{$bp-target-post}    { @include _pad-bottom(2); }
+    %bp-triple-pad-bottom#{$bp-target-post}    { @include _pad-bottom(3); }
+    %bp-no-pad-bottom#{$bp-target-post}        { @include _pad-bottom(0); }
+
+    %bp-pad-left#{$bp-target-post}             { @include _pad-left; }
+    %bp-half-pad-left#{$bp-target-post}        { @include _pad-left(0.5); }
+    %bp-double-pad-left#{$bp-target-post}      { @include _pad-left(2); }
+    %bp-triple-pad-left#{$bp-target-post}      { @include _pad-left(3); }
+    %bp-no-pad-left#{$bp-target-post}          { @include _pad-left(0); }
+
+    %bp-gapped#{$bp-target-post}               { @include _gapped; }
+    %bp-half-gapped#{$bp-target-post}          { @include _gapped(0.5); }
+    %bp-double-gapped#{$bp-target-post}        { @include _gapped(2); }
+    %bp-triple-gapped#{$bp-target-post}        { @include _gapped(3); }
+    %bp-no-gapped#{$bp-target-post}            { @include _gapped(0); }
+
+    %bp-gap-top#{$bp-target-post}              { @include _gap-top; }
+    %bp-half-gap-top#{$bp-target-post}         { @include _gap-top(0.5); }
+    %bp-double-gap-top#{$bp-target-post}       { @include _gap-top(2); }
+    %bp-triple-gap-top#{$bp-target-post}       { @include _gap-top(3); }
+    %bp-no-gap-top#{$bp-target-post}           { @include _gap-top(0); }
+
+    %bp-gap-right#{$bp-target-post}            { @include _gap-right; }
+    %bp-half-gap-right#{$bp-target-post}       { @include _gap-right(0.5); }
+    %bp-double-gap-right#{$bp-target-post}     { @include _gap-right(2); }
+    %bp-triple-gap-right#{$bp-target-post}     { @include _gap-right(3); }
+    %bp-no-gap-right#{$bp-target-post}         { @include _gap-right(0); }
+
+    %bp-gap-bottom#{$bp-target-post}           { @include _gap-bottom; }
+    %bp-half-gap-bottom#{$bp-target-post}      { @include _gap-bottom(0.5); }
+    %bp-double-gap-bottom#{$bp-target-post}    { @include _gap-bottom(2); }
+    %bp-triple-gap-bottom#{$bp-target-post}    { @include _gap-bottom(3); }
+    %bp-no-gap-bottom#{$bp-target-post}        { @include _gap-bottom(0); }
+
+    %bp-gap-left#{$bp-target-post}             { @include _gap-left; }
+    %bp-half-gap-left#{$bp-target-post}        { @include _gap-left(0.5); }
+    %bp-double-gap-left#{$bp-target-post}      { @include _gap-left(2); }
+    %bp-triple-gap-left#{$bp-target-post}      { @include _gap-left(3); }
+    %bp-no-gap-left#{$bp-target-post}          { @include _gap-left(0); }
+
+    %bp-offset#{$bp-target-post}               { @include _offset; }
+    %bp-half-offset#{$bp-target-post}          { @include _offset(0.5); }
+    %bp-double-offset#{$bp-target-post}        { @include _offset(2); }
+    %bp-triple-offset#{$bp-target-post}        { @include _offset(3); }
+    %bp-no-offset#{$bp-target-post}            { @include _offset(0); }
+
+    %bp-offset-top#{$bp-target-post}           { @include _offset-top; }
+    %bp-half-offset-top#{$bp-target-post}      { @include _offset-top(0.5); }
+    %bp-double-offset-top#{$bp-target-post}    { @include _offset-top(2); }
+    %bp-triple-offset-top#{$bp-target-post}    { @include _offset-top(3); }
+    %bp-no-offset-top#{$bp-target-post}        { @include _offset-top(0); }
+
+    %bp-offset-right#{$bp-target-post}         { @include _offset-right; }
+    %bp-half-offset-right#{$bp-target-post}    { @include _offset-right(0.5); }
+    %bp-double-offset-right#{$bp-target-post}  { @include _offset-right(2); }
+    %bp-triple-offset-right#{$bp-target-post}  { @include _offset-right(3); }
+    %bp-no-offset-right#{$bp-target-post}      { @include _offset-right(0); }
+
+    %bp-offset-bottom#{$bp-target-post}        { @include _offset-bottom; }
+    %bp-half-offset-bottom#{$bp-target-post}   { @include _offset-bottom(0.5); }
+    %bp-double-offset-bottom#{$bp-target-post} { @include _offset-bottom(2); }
+    %bp-triple-offset-bottom#{$bp-target-post} { @include _offset-bottom(3); }
+    %bp-no-offset-bottom#{$bp-target-post}     { @include _offset-bottom(0); }
+
+    %bp-offset-left#{$bp-target-post}          { @include _offset-left; }
+    %bp-half-offset-left#{$bp-target-post}     { @include _offset-left(0.5); }
+    %bp-double-offset-left#{$bp-target-post}   { @include _offset-left(2); }
+    %bp-triple-offset-left#{$bp-target-post}   { @include _offset-left(3); }
+    %bp-no-offset-left#{$bp-target-post}       { @include _offset-left(0); }
+
+    @each $helper in $spacer-helpers {
+      .#{$helper + $bp-target-post} { @extend %bp-#{$helper + $bp-target-post}}
+      @if $spacer-mod-classes {
+        @each $mod in $spacer-modifiers {
+          .#{$mod + "-" + $helper + $bp-target-post} { @extend %bp-#{$mod + "-" + $helper + $bp-target-post}}
+        }
       }
     }
   }
-  @if $responsive {
-    @include responsive_spacer_helpers($desktop, "desktop");
-    @include responsive_spacer_helpers($ipad, "ipad");
-    @include responsive_spacer_helpers($small-tablet, "small-tablet");
-    @include responsive_spacer_helpers($mobile, "mobile");
-    @if $spacer-mod-classes {
-      @include responsive_spacer_mods($desktop, "desktop");
-      @include responsive_spacer_mods($ipad, "ipad");
-      @include responsive_spacer_mods($small-tablet, "small-tablet");
-      @include responsive_spacer_mods($mobile, "mobile");
+
+  // conditional content classes
+  @if $conditional-content-classes {
+    @if $bp-index > 1 {
+      // Clear last iteration
+      .#{nth($breakpoints, $bp-index - 1) + "-only"} { display: none !important; }
+      .#{"hide-on-" + nth($breakpoints, $bp-index - 1)} { display: block !important; }
+      @if $inline-conditional-helpers {
+        span.#{nth($breakpoints, $bp-index - 1) + "-only"} { display: none !important; }
+        span.#{"hide-on-" + nth($breakpoints, $bp-index - 1)} { display: inline !important; }        
+      }
+    }@else{
+      // Initialize *-onlys
+      @for $i from 2 to length($breakpoints) + 1 {
+        .#{nth($breakpoints, $i) + "-only"} { display: none !important; }
+        @if $inline-conditional-helpers {
+          span.#{nth($breakpoints, $i) + "-only"} { display: none !important; }
+        }
+      }
+    }
+    // Apply this iteration
+    .#{$bp + "-only"} { display: block !important; }
+    .#{"hide-on-" + $bp} { display: none !important; }
+    @if $inline-conditional-helpers {
+      span.#{$bp + "-only"} { display: inline !important; }
+      span.#{"hide-on-" + $bp} { display: none !important; }      
     }
   }
-}
 
+}
 
 // transition classes
 @if $transition-classes {
@@ -401,51 +494,5 @@
   }
   .no-transition {
     transition: none !important;
-  }
-}
-
-
-// conditional content classes
-@if $responsive and $conditional-content-classes {
-  @media #{$desktop} {
-    .desktop-only { display: block !important; }
-    .ipad-only { display: none !important; }
-    .small-tablet-only { display: none !important; }
-    .mobile-only { display: none !important; }
-    .hide-on-desktop { display: none !important; }
-    @if $inline-conditional-helpers {
-      span.desktop-only { display: inline !important; }
-    }
-  }
-  @media #{$small-tablet} {
-    .desktop-only { display: none !important; }
-    .ipad-only { display: none !important; }
-    .small-tablet-only { display: block !important; }
-    .mobile-only { display: none !important; }
-    .hide-on-small-tablet { display: none !important; }
-    @if $inline-conditional-helpers {
-      span.small-tablet-only { display: inline !important; }
-    }
-  }
-  @media #{$ipad} {
-    .desktop-only { display: none !important; }
-    .ipad-only { display: block !important; }
-    .small-tablet-only { display: none !important; }
-    .mobile-only { display: none !important; }
-    .hide-on-ipad { display: none !important; }
-    @if $inline-conditional-helpers {
-      span.ipad-only { display: inline !important; }
-    }
-  }
-  @media #{$mobile} {
-    .desktop-only { display: none !important; }
-    .ipad-only { display: none !important; }
-    .small-tablet-only { display: none !important; }
-    .mobile-only { display: block !important; }
-    .hide-on-small-tablet { display: block !important; }
-    .hide-on-mobile { display: none !important; }
-    @if $inline-conditional-helpers {
-      span.mobile-only { display: inline !important; }
-    }
   }
 }

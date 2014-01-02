@@ -160,6 +160,10 @@ $ui-states-colors:            $info-color $alert-color $warning-color $error-col
 $ui-states-backgrounds:       $info-background $alert-background $warning-background $error-background $success-background $question-background !default;
 
 
+// helpers
+$helper-base:                 $default-base !default;
+
+
 // responsive conditional content helpers
 $conditional-content-classes: true !default;
 $inline-conditional-helpers:  false !default;
@@ -175,7 +179,7 @@ $spacer-helpers:              "padded" "pad-top" "pad-right" "pad-bottom" "pad-l
                               "gapped" "gap-top" "gap-right" "gap-bottom" "gap-left"
                               "offset" "offset-top" "offset-right" "offset-bottom" "offset-left" !default;
 $spacer-mod-classes:          true !default;
-$spacer-modifiers:            "half" "double" "triple" !default;
+$spacer-modifiers:            "no" "half" "double" "triple" !default;
 
 
 // size helpers
@@ -197,12 +201,13 @@ $typography-classes:          true !default;
 $typography-helpers:          "align-top" "align-right" "align-bottom" "align-left" "align-center" "justify"
                               "truncate" "unstyled" !default;
 
+
 // borders
 $border-thickness:            1px !default;
 $border-style:                solid !default;
 $border:                      #{$border-thickness} #{$border-style} #{$border-color} !default;
 $border-classes:              true !default;
-$border-helpers:              "bordered" "border-right" "border-left" "border-top" "border-bottom" !default;
+$border-helpers:              "no-border" "bordered" "border-right" "border-left" "border-top" "border-bottom" !default;
 
 
 // radius helpers

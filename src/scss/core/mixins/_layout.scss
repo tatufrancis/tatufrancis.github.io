@@ -7,23 +7,19 @@
   column-count: $count;
 }
 @mixin _multi-column-classes($target: false) {
+  @if $target and $target != '' {
+    $target: #{'-' + $target};
+  }@else{
+    $target: '';
+  }
   @each $number in $multi-columns {
     $selector: #{'.' + nth($numbers, $number) + '-column'};
     @if $number > 1 {
       $selector: #{$selector + 's'};
     }
-    @if $target {
-      $selector: #{$selector + '-' + $target};
-    }
+    $selector: $selector + $target;
     #{$selector} {
       @include _multi-column($number);
-    }
-  }
-}
-@mixin responsive_multi-column_helpers($breakpoint: false, $target: false) {
-  @if $breakpoint and $target {
-    @media #{$breakpoint} {
-      @include _multi-column-classes($target);
     }
   }
 }
@@ -108,7 +104,7 @@
 
 // grid adapters
 @mixin grid-adapters($target: false, $selector-types: "%" ".") {
-  @if $target {
+  @if $target and $target != '' {
     $target: #{'-' + $target};
   }@else{
     $target: '';
