@@ -37,7 +37,7 @@
     <header class="charcoal-bg padded">
       <div class="container">
         <div class="row">
-          <div class="one-half collapse-on-small-tablet">
+          <div class="one-half-large-tablet">
             <h2 class="logo museo-slab"><a href="/" target="_parent">
                 <svg version="1.1" id="groundwork-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="49px" viewBox="10 10 3790 498" enable-background="new 10 10 3317 498" xml:space="preserve">
                   <g>
@@ -56,11 +56,11 @@
                   <text fill="#ffffff" transform="matrix(1 0 0 1 600 450)" font-family="URWUrban" font-size="448">Groundwork CSS 3</text>
                 </svg></a></h2>
           </div>
-          <div class="one-half collapse-on-small-tablet">
-            <p class="small double pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 3.0.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+          <div class="one-half-small-large-tablet">
+            <p class="small double pad-top no-pad-small-tablet align-right-large-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 3.0.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
-        <nav role="navigation" class="nav gap-top red">
+        <nav role="navigation" class="nav bar-large-tablet gap-top red">
           <ul role="menubar">
             <li><a href="./home.html"><i class="fa fa-home"></i> Home</a></li>
             <li role="menu">
@@ -103,11 +103,11 @@
     <div class="container">
       <div class="padded">
         <div class="row">
-          <div class="three-fifths collapse-on-small-tablet bounceInRight animated">
+          <div class="three-fifths-large-tablet bounceInRight animated">
             <h1 class="zero museo-slab">Navigation</h1>
             <p class="quicksand">Responsive navigation created by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
-          <div class="two-fifths collapse-on-small-tablet align-right-ipad align-right-desktop flipInX animated">
+          <div class="two-fifths-large-tablet align-right-large-tablet flipInX animated">
             <p class="quicksand">Component Usage Example 4 of 14</p>
             <p><a href="typography.html" rel="prev" class="blue button">Back</a> <a href="buttons.html" rel="next" class="green button">Next: Buttons</a></p>
           </div>
@@ -117,9 +117,10 @@
       <div class="padded">
         <div class="bounceInLeft animated">
           <h4>Target Breakpoints</h4>
+          <p class="small">By default, the navigation is always mobile. The bar selector allows you to target the breakpoint at which the navigation becomes a single "bar".</p>
           <div class="padded">
-            <h4>iPad</h4>
-            <nav title="iPad Menu" role="navigation" class="nav">
+            <h4>No-Bar (default)</h4>
+            <nav role="navigation" title="Menu" class="nav">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -159,7 +160,7 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav&quot; title=&quot;iPad Menu&quot;&gt;
+            <pre data-lang="html">&lt;nav class=&quot;nav&quot; title=&quot;Menu&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;button&gt;Nav Item 1&lt;/button&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button&gt;Nav Menu 1&lt;/button&gt;
@@ -179,52 +180,8 @@
 &lt;/nav&gt;</pre>
           </div>
           <div class="padded">
-            <h4>Small Tablet</h4>
-            <nav title="Small Tablet Menu" role="navigation" class="nav small-tablet">
-              <ul>
-                <li>
-                  <button>Nav Item 1</button>
-                </li>
-                <li>
-                  <button>Nav Menu 1</button>
-                  <ul>
-                    <li>
-                      <button>Menu Item 1</button>
-                    </li>
-                    <li>
-                      <button>Sub Menu 1</button>
-                      <ul>
-                        <li>
-                          <button>Sub Menu Item 1</button>
-                        </li>
-                        <li>
-                          <button>Sub Menu Item 2</button>
-                          <ul>
-                            <li>
-                              <button>Sub Menu Item 1</button>
-                            </li>
-                            <li>
-                              <button>Sub Menu Item 2</button>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <button>Menu Item 2</button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <button>Nav Item 3</button>
-                </li>
-              </ul>
-            </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav small-tablet&quot; title=&quot;Small Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
-          </div>
-          <div class="padded">
             <h4>Mobile</h4>
-            <nav title="Mobile Menu" role="navigation" class="nav mobile">
+            <nav role="navigation" title="Mobile Menu" class="nav bar">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -264,11 +221,11 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav mobile&quot; title=&quot;Mobile Menu&quot;&gt;...&lt;/nav&gt;</pre>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar&quot; title=&quot;Mobile Menu&quot;&gt;...&lt;/nav&gt;</pre>
           </div>
           <div class="padded">
-            <h4>Vegetarian (No Hamburger)</h4>
-            <nav role="navigation" class="nav nocollapse">
+            <h4>Small-Tablet</h4>
+            <nav role="navigation" title="Small-Tablet Menu" class="nav bar-small-tablet">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -308,15 +265,103 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav nocollapse&quot; title=&quot;Vegetarian Menu&quot;&gt;...&lt;/nav&gt;</pre>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar-small-tablet&quot; title=&quot;Small-Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
+          </div>
+          <div class="padded">
+            <h4>Large-Tablet</h4>
+            <nav role="navigation" title="Large-Tablet Menu" class="nav bar-large-tablet">
+              <ul>
+                <li>
+                  <button>Nav Item 1</button>
+                </li>
+                <li>
+                  <button>Nav Menu 1</button>
+                  <ul>
+                    <li>
+                      <button>Menu Item 1</button>
+                    </li>
+                    <li>
+                      <button>Sub Menu 1</button>
+                      <ul>
+                        <li>
+                          <button>Sub Menu Item 1</button>
+                        </li>
+                        <li>
+                          <button>Sub Menu Item 2</button>
+                          <ul>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Menu Item 2</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button>Nav Item 3</button>
+                </li>
+              </ul>
+            </nav><br>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar-large-tablet&quot; title=&quot;Large-Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
+          </div>
+          <div class="padded">
+            <h4>Desktop</h4>
+            <nav role="navigation" title="Desktop Menu" class="nav bar-desktop">
+              <ul>
+                <li>
+                  <button>Nav Item 1</button>
+                </li>
+                <li>
+                  <button>Nav Menu 1</button>
+                  <ul>
+                    <li>
+                      <button>Menu Item 1</button>
+                    </li>
+                    <li>
+                      <button>Sub Menu 1</button>
+                      <ul>
+                        <li>
+                          <button>Sub Menu Item 1</button>
+                        </li>
+                        <li>
+                          <button>Sub Menu Item 2</button>
+                          <ul>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Menu Item 2</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button>Nav Item 3</button>
+                </li>
+              </ul>
+            </nav><br>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar-desktop&quot; title=&quot;Desktop Menu&quot;&gt;...&lt;/nav&gt;</pre>
           </div>
         </div>
         <hr class="triple-gap-bottom">
         <h4>Vertical Orientation</h4>
         <div class="row">
-          <div class="one-half collapse-on-small-tablet padded">
-            <h4>iPad</h4>
-            <nav title="Vertical iPad Menu" role="navigation" class="nav vertical">
+          <div class="one-half-large-tablet padded">
+            <h4>Mobile</h4>
+            <nav role="navigation" class="nav bar vertical">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -356,11 +401,11 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav vertical&quot; title=&quot;Vertical iPad Menu&quot;&gt;...&lt;/nav&gt;</pre>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar vertical&quot;&gt;...&lt;/nav&gt;</pre>
           </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <h4>Small Tablet</h4>
-            <nav title="Vertical Small-Tablet Menu" role="navigation" class="nav small-tablet vertical">
+          <div class="one-half-large-tablet padded">
+            <h4>Small-Tablet</h4>
+            <nav title="Vertical Small-Tablet Menu" role="navigation" class="nav bar-small-tablet vertical">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -400,13 +445,13 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav small-tablet vertical&quot; title=&quot;Vertical Small-Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar-small-tablet vertical&quot; title=&quot;Vertical Small-Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
           </div>
         </div>
         <div class="row">
-          <div class="one-half collapse-on-small-tablet padded">
-            <h4>Mobile</h4>
-            <nav title="Vertical Mobile Menu" role="navigation" class="nav mobile vertical">
+          <div class="one-half-large-tablet padded">
+            <h4>Large-Tablet</h4>
+            <nav title="Vertical Large-Tablet Menu" role="navigation" class="nav bar-large-tablet vertical">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -446,11 +491,11 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav mobile vertical&quot; title=&quot;Vertical Mobile Menu&quot;&gt;...&lt;/nav&gt;</pre>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar-large-tablet vertical&quot; title=&quot;Vertical Large-Tablet Menu&quot;&gt;...&lt;/nav&gt;</pre>
           </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <h4>Vegetarian (No Hamburger)</h4>
-            <nav role="navigation" class="nav nocollapse vertical">
+          <div class="one-half-large-tablet padded">
+            <h4>Desktop</h4>
+            <nav title="Vertical Desktop Menu" role="navigation" class="nav bar-desktop vertical">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -490,14 +535,14 @@
                 </li>
               </ul>
             </nav><br>
-            <pre data-lang="html">&lt;nav class=&quot;nav vertical nocollapse&quot;&gt;...&lt;/nav&gt;</pre>
+            <pre data-lang="html">&lt;nav class=&quot;nav bar-desktop vertical&quot; title=&quot;Vertical Desktop Menu&quot;&gt;...&lt;/nav&gt;</pre>
           </div>
         </div>
         <hr class="triple-gap-bottom">
         <h4>Colors</h4>
         <div class="row">
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav yellow">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet yellow">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -538,94 +583,8 @@
               </ul>
             </nav>
           </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav orange">
-              <ul>
-                <li>
-                  <button>Nav Item 1</button>
-                </li>
-                <li>
-                  <button>Nav Menu 1</button>
-                  <ul>
-                    <li>
-                      <button>Menu Item 1</button>
-                    </li>
-                    <li>
-                      <button>Sub Menu 1</button>
-                      <ul>
-                        <li>
-                          <button>Sub Menu Item 1</button>
-                        </li>
-                        <li>
-                          <button>Sub Menu Item 2</button>
-                          <ul>
-                            <li>
-                              <button>Sub Menu Item 1</button>
-                            </li>
-                            <li>
-                              <button>Sub Menu Item 2</button>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <button>Menu Item 2</button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <button>Nav Item 3</button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="row gap-top">
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav red">
-              <ul>
-                <li>
-                  <button>Nav Item 1</button>
-                </li>
-                <li>
-                  <button>Nav Menu 1</button>
-                  <ul>
-                    <li>
-                      <button>Menu Item 1</button>
-                    </li>
-                    <li>
-                      <button>Sub Menu 1</button>
-                      <ul>
-                        <li>
-                          <button>Sub Menu Item 1</button>
-                        </li>
-                        <li>
-                          <button>Sub Menu Item 2</button>
-                          <ul>
-                            <li>
-                              <button>Sub Menu Item 1</button>
-                            </li>
-                            <li>
-                              <button>Sub Menu Item 2</button>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <button>Menu Item 2</button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <button>Nav Item 3</button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav pink">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet orange">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -668,8 +627,8 @@
           </div>
         </div>
         <div class="row gap-top">
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav purple">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet red">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -710,94 +669,8 @@
               </ul>
             </nav>
           </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav asphalt">
-              <ul>
-                <li>
-                  <button>Nav Item 1</button>
-                </li>
-                <li>
-                  <button>Nav Menu 1</button>
-                  <ul>
-                    <li>
-                      <button>Menu Item 1</button>
-                    </li>
-                    <li>
-                      <button>Sub Menu 1</button>
-                      <ul>
-                        <li>
-                          <button>Sub Menu Item 1</button>
-                        </li>
-                        <li>
-                          <button>Sub Menu Item 2</button>
-                          <ul>
-                            <li>
-                              <button>Sub Menu Item 1</button>
-                            </li>
-                            <li>
-                              <button>Sub Menu Item 2</button>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <button>Menu Item 2</button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <button>Nav Item 3</button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="row gap-top">
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav blue">
-              <ul>
-                <li>
-                  <button>Nav Item 1</button>
-                </li>
-                <li>
-                  <button>Nav Menu 1</button>
-                  <ul>
-                    <li>
-                      <button>Menu Item 1</button>
-                    </li>
-                    <li>
-                      <button>Sub Menu 1</button>
-                      <ul>
-                        <li>
-                          <button>Sub Menu Item 1</button>
-                        </li>
-                        <li>
-                          <button>Sub Menu Item 2</button>
-                          <ul>
-                            <li>
-                              <button>Sub Menu Item 1</button>
-                            </li>
-                            <li>
-                              <button>Sub Menu Item 2</button>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <button>Menu Item 2</button>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <button>Nav Item 3</button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav turquoise">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet pink">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -840,8 +713,8 @@
           </div>
         </div>
         <div class="row gap-top">
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav green">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet purple">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -882,8 +755,180 @@
               </ul>
             </nav>
           </div>
-          <div class="one-half collapse-on-small-tablet padded">
-            <nav role="navigation" class="nav charcoal">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet asphalt">
+              <ul>
+                <li>
+                  <button>Nav Item 1</button>
+                </li>
+                <li>
+                  <button>Nav Menu 1</button>
+                  <ul>
+                    <li>
+                      <button>Menu Item 1</button>
+                    </li>
+                    <li>
+                      <button>Sub Menu 1</button>
+                      <ul>
+                        <li>
+                          <button>Sub Menu Item 1</button>
+                        </li>
+                        <li>
+                          <button>Sub Menu Item 2</button>
+                          <ul>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Menu Item 2</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button>Nav Item 3</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row gap-top">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet blue">
+              <ul>
+                <li>
+                  <button>Nav Item 1</button>
+                </li>
+                <li>
+                  <button>Nav Menu 1</button>
+                  <ul>
+                    <li>
+                      <button>Menu Item 1</button>
+                    </li>
+                    <li>
+                      <button>Sub Menu 1</button>
+                      <ul>
+                        <li>
+                          <button>Sub Menu Item 1</button>
+                        </li>
+                        <li>
+                          <button>Sub Menu Item 2</button>
+                          <ul>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Menu Item 2</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button>Nav Item 3</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet turquoise">
+              <ul>
+                <li>
+                  <button>Nav Item 1</button>
+                </li>
+                <li>
+                  <button>Nav Menu 1</button>
+                  <ul>
+                    <li>
+                      <button>Menu Item 1</button>
+                    </li>
+                    <li>
+                      <button>Sub Menu 1</button>
+                      <ul>
+                        <li>
+                          <button>Sub Menu Item 1</button>
+                        </li>
+                        <li>
+                          <button>Sub Menu Item 2</button>
+                          <ul>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Menu Item 2</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button>Nav Item 3</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row gap-top">
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet green">
+              <ul>
+                <li>
+                  <button>Nav Item 1</button>
+                </li>
+                <li>
+                  <button>Nav Menu 1</button>
+                  <ul>
+                    <li>
+                      <button>Menu Item 1</button>
+                    </li>
+                    <li>
+                      <button>Sub Menu 1</button>
+                      <ul>
+                        <li>
+                          <button>Sub Menu Item 1</button>
+                        </li>
+                        <li>
+                          <button>Sub Menu Item 2</button>
+                          <ul>
+                            <li>
+                              <button>Sub Menu Item 1</button>
+                            </li>
+                            <li>
+                              <button>Sub Menu Item 2</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Menu Item 2</button>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button>Nav Item 3</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="one-half-large-tablet padded">
+            <nav role="navigation" class="nav bar-large-tablet charcoal">
               <ul>
                 <li>
                   <button>Nav Item 1</button>
@@ -931,18 +976,18 @@
       <div class="box square charcoal">
         <div class="container padded">
           <div class="row">
-            <div class="three-tenths two-fifths-small-tablet collapse-on-mobile padded">
+            <div class="three-tenths-desktop two-fifths-small-tablet padded">
               <h5 class="green">Example Layouts</h5>
-              <ul class="unstyled two-columns-mobile">
+              <ul class="unstyled two-columns">
                 <li><a href="./layout-a.html">Web Page</a></li>
                 <li><a href="./layout-b.html">Image Gallery</a></li>
                 <li><a href="./layout-c.html">Ecommerce Page</a></li>
                 <li><a href="./layout-d.html">Contact Page</a></li>
               </ul>
             </div>
-            <div class="seven-tenths three-fifths-small-tablet collapse-on-mobile padded">
+            <div class="seven-tenths-desktop three-fifths-small-tablet padded">
               <h5 class="blue">Documentation</h5>
-              <ul class="unstyled three-columns two-columns-small-tablet two-columns-mobile">
+              <ul class="unstyled two-columns three-columns-desktop">
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
@@ -965,11 +1010,11 @@
       <div class="box square">
         <div class="container padded">
           <div class="row">
-            <div class="one-half collapse-on-small-tablet padded">
+            <div class="one-half-large-tablet padded">
               <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
               <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
-            <div class="one-half collapse-on-small-tablet padded">
+            <div class="one-half-large-tablet padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
             </div>
           </div>
