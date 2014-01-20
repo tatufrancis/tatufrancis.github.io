@@ -4,6 +4,7 @@ $grid-block-classes: false;
 
 @import "test-settings";
 @import "../../../src/scss/core/all-core";
+@import "../../../src/scss/layout/all-layout";
 
 // semantic grid adapters test
 section {
