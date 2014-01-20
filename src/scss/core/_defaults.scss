@@ -45,6 +45,13 @@ $global-tags:                 true !default;
 $background-color:            #ffffff !default;
 
 
+// breakpoints
+$breakpoints:                 "mobile"  "small-tablet"  "large-tablet"  "desktop" !default;
+$breakpoint-sizes:            0         30.125em        48em            64em !default;
+$default-base:                nth($breakpoints, 1) !default;
+$fixed-size:                  false !default;
+
+
 // grid system
 $container-width:             1200px !default;
 $gutter:                      10px !default;
@@ -211,5 +218,4 @@ $rotation-helpers:            "rotate-90" "rotate-90-ctr" "rotate-180" "rotate-1
 // transition helpers
 $transition-classes:          true !default;
 $default-transition-speed:    0.2s !default;
-
 

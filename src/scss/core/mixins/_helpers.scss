@@ -366,3 +366,82 @@
     }
   }
 }
+
+// media query helpers
+@mixin respond-min($width) {
+  @if $fixed-size {
+    @if $fixed-size >= $width {
+      @content;
+    }
+  }
+  @else {
+    @if $width > 0 {
+      @media screen and (min-width: $width) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+}
+@mixin respond-max($width) {
+  @if $fixed-size {
+    @if $fixed-size <= $width {
+      @content;
+    }
+  }
+  @else {
+    @if $width > 0 {
+      @media screen and (max-width: $width) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+}
+$bp: null;
+$bp-index: null;
+$bp-target: null;
+$bp-target-pre: null;
+$bp-target-post: null;
+$bp-target-mid: null;
+@mixin breakpoints($base: $default-breakpoint, $separator: '-') {
+  @if $responsive {
+    @for $breakpoint-index from 1 through length($breakpoints) {
+      $bp-index: $breakpoint-index;
+      $bp: nth($breakpoints, $bp-index);
+      @include respond-min(nth($breakpoint-sizes, $bp-index)) {  
+        @if $bp == $base {
+          $bp-target: '';
+          $bp-target-pre: '';
+          $bp-target-post: '';
+          $bp-target-mid: '';
+          @content;
+        } @else {
+          $bp-target: $bp;
+          $bp-target-pre: #{$bp + $separator};
+          $bp-target-post: #{$separator + $bp};
+          $bp-target-mid: #{$separator + $bp + $separator};
+          @content;
+        }
+      }
+    }
+  } @else {
+    $bp: '';
+    $bp-index: '';
+    $bp-target: '';
+    $bp-target-pre: '';
+    $bp-target-post: '';
+    $bp-target-mid: '';
+    @content;
+  }
+  $bp: null;
+  $bp-index: null;
+  $bp-target: null;
+  $bp-target-pre: null;
+  $bp-target-post: null;
+  $bp-target-mid: null;
+}
