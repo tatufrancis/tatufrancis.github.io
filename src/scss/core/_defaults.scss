@@ -14,7 +14,6 @@ $responsive:                  true !default;
 // variables
 @import "constants";
 @import "palette";
-@import "breakpoints";
 @import "../icons/variables";
 
 
@@ -45,6 +44,13 @@ $global-tags:                 true !default;
 $background-color:            #ffffff !default;
 
 
+// breakpoints
+$breakpoints:                 "mobile"  "small-tablet"  "large-tablet"  "desktop" !default;
+$breakpoint-sizes:            0         30.125em        48em            64em !default;
+$default-base:                nth($breakpoints, 1) !default;
+$fixed-size:                  false !default;
+
+
 // grid system
 $container-width:             1200px !default;
 $gutter:                      10px !default;
@@ -52,6 +58,7 @@ $grid-classes:                true !default;
 $grid-columns:                1 2 3 4 5 6 7 8 9 10 11 12 !default;
 $grid-block-classes:          true !default;
 $grid-blocks:                 1 2 3 4 5 6 7 8 9 10 11 12 !default;
+$grid-base:                   $default-base !default;
 
 
 // multi-columns
@@ -129,6 +136,7 @@ $links-active-underlined:     true !default;
 // navigation
 $navigation-classes:          true !default;
 $navigation-states:           "on" "active" !default;
+$navigation-base:             $default-base !default;
 
 
 // state modifiers
@@ -152,6 +160,10 @@ $ui-states-colors:            $info-color $alert-color $warning-color $error-col
 $ui-states-backgrounds:       $info-background $alert-background $warning-background $error-background $success-background $question-background !default;
 
 
+// helpers
+$helper-base:                 $default-base !default;
+
+
 // responsive conditional content helpers
 $conditional-content-classes: true !default;
 $inline-conditional-helpers:  false !default;
@@ -167,7 +179,7 @@ $spacer-helpers:              "padded" "pad-top" "pad-right" "pad-bottom" "pad-l
                               "gapped" "gap-top" "gap-right" "gap-bottom" "gap-left"
                               "offset" "offset-top" "offset-right" "offset-bottom" "offset-left" !default;
 $spacer-mod-classes:          true !default;
-$spacer-modifiers:            "half" "double" "triple" !default;
+$spacer-modifiers:            "no" "half" "double" "triple" !default;
 
 
 // size helpers
@@ -189,12 +201,13 @@ $typography-classes:          true !default;
 $typography-helpers:          "align-top" "align-right" "align-bottom" "align-left" "align-center" "justify"
                               "truncate" "unstyled" !default;
 
+
 // borders
 $border-thickness:            1px !default;
 $border-style:                solid !default;
 $border:                      #{$border-thickness} #{$border-style} #{$border-color} !default;
 $border-classes:              true !default;
-$border-helpers:              "bordered" "border-right" "border-left" "border-top" "border-bottom" !default;
+$border-helpers:              "no-border" "bordered" "border-right" "border-left" "border-top" "border-bottom" !default;
 
 
 // radius helpers
@@ -211,5 +224,4 @@ $rotation-helpers:            "rotate-90" "rotate-90-ctr" "rotate-180" "rotate-1
 // transition helpers
 $transition-classes:          true !default;
 $default-transition-speed:    0.2s !default;
-
 

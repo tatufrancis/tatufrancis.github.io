@@ -5,8 +5,8 @@ block title
   style(type="text/css").
     .desktop-only,
     .hide-on-desktop,
-    .ipad-only,
-    .hide-on-ipad,
+    .large-tablet-only,
+    .hide-on-large-tablet,
     .small-tablet-only,
     .hide-on-small-tablet,
     .mobile-only,
@@ -29,12 +29,12 @@ block content
   .container
     .padded
       .row
-        .three-fifths.collapse-on-small-tablet.bounceInRight.animated
+        .three-fifths-large-tablet.bounceInRight.animated
           h1.zero.museo-slab Helpers
           p.quicksand
             a(href='breakpoints.html') Breakpoint-targeted
             |  layout, typographic, and conditional helpers for responsive & adaptive layouts
-        .two-fifths.collapse-on-small-tablet.align-right-ipad.align-right-desktop.flipInX.animated
+        .two-fifths-large-tablet.align-right-large-tablet.flipInX.animated
           p.quicksand Component Usage Example 2 of 14
           p
             a.blue.button(href='grid.html', rel='prev')
@@ -50,18 +50,18 @@ block content
           | Conditionally show and hide elements at 
           a(href='breakpoints.html') targeted breakpoints
         .row
-          .one-half.collapse-on-mobile.padded
+          .one-half-small-tablet.padded
             h4 Demonstration
             ol.list.large
               li.green.desktop-only desktop-only
               li.blue.hide-on-desktop hide-on-desktop
-              li.green.ipad-only ipad-only
-              li.blue.hide-on-ipad hide-on-ipad
+              li.green.large-tablet-only large-tablet-only
+              li.blue.hide-on-large-tablet hide-on-large-tablet
               li.green.small-tablet-only small-tablet-only
               li.blue.hide-on-small-tablet hide-on-small-tablet
               li.green.mobile-only mobile-only
               li.blue.hide-on-mobile hide-on-mobile
-          .one-half.collapse-on-mobile.padded
+          .one-half-small-tablet.padded
             h4.double-gap-top-mobile Conditional Display Classes
             ol.list
               li
@@ -69,9 +69,9 @@ block content
               li
                 code.inline .hide-on-desktop
               li
-                code.inline .ipad-only
+                code.inline .large-tablet-only
               li
-                code.inline .hide-on-ipad
+                code.inline .hide-on-large-tablet
               li
                 code.inline .small-tablet-only
               li
@@ -99,7 +99,7 @@ block content
           code.inline .padded-mobile
           | , etc.)
         .row
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Padded
             .demo
               .row
@@ -108,7 +108,7 @@ block content
                 div.pad-right .pad-right
                 div.pad-bottom .pad-bottom
                 div.pad-left .pad-left
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Half
             .demo
               .row
@@ -117,7 +117,7 @@ block content
                 div.half-pad-right .half-pad-right
                 div.half-pad-bottom .half-pad-bottom
                 div.half-pad-left .half-pad-left
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Double
             .demo
               .row
@@ -126,7 +126,7 @@ block content
                 div.double-pad-right .double-pad-right
                 div.double-pad-bottom .double-pad-bottom
                 div.double-pad-left .double-pad-left
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Triple
             .demo
               .row
@@ -136,7 +136,7 @@ block content
                 div.triple-pad-bottom .triple-pad-bottom
                 div.triple-pad-left .triple-pad-left
         .row
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Gapped
             .demo.spacers
               .row
@@ -145,7 +145,7 @@ block content
                 div.gap-right .gap-right
                 div.gap-bottom .gap-bottom
                 div.gap-left .gap-left
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Half
             .demo.spacers
               .row
@@ -154,7 +154,7 @@ block content
                 div.half-gap-right .half-gap-right
                 div.half-gap-bottom .half-gap-bottom
                 div.half-gap-left .half-gap-left
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Double
             .demo.spacers
               .row
@@ -163,7 +163,7 @@ block content
                 div.double-gap-right .double-gap-right
                 div.double-gap-bottom .double-gap-bottom
                 div.double-gap-left .double-gap-left
-          .two-up-small-tablet.four-up-ipad.four-up-desktop.padded
+          .two-up-small-tablet.four-up-large-tablet.four-up-desktop.padded
             h4 Triple
             .demo.spacers
               .row
@@ -186,9 +186,9 @@ block content
           | , 
           code.inline .pull-right-small-tablet
           | , 
-          code.inline .center-ipad
+          code.inline .center-large-tablet
         .row
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Display
             .demo
               .row
@@ -204,7 +204,7 @@ block content
                   button.square .square
                 div
                   button.rounded .rounded
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Floating
             .demo
               .row
@@ -217,7 +217,7 @@ block content
               .row
                 div
                   button.center .center
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Borders
             .demo
               div.bordered .bordered
@@ -250,7 +250,7 @@ block content
                 .absolute-top-center(title='.absolute-top-center') X
                 .absolute-bottom-center(title='.absolute-bottom-center') X
         .row
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Static
             code
               ul.unstyled
@@ -261,7 +261,7 @@ block content
               ul.unstyled
                 li
                   | .relative
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Absolute
             code.block
               ul.unstyled
@@ -293,7 +293,7 @@ block content
                   | .absolute-bottom-center
                 li
                   | .absolute-center
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Fixed
             code.block
               ul.unstyled
@@ -332,7 +332,7 @@ block content
       .padded.bounceInLeft.animated
         h4 Typographic
         .row
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Font Sizing
             p.zero .small
             .demo
@@ -351,7 +351,7 @@ block content
               .row
                 div.large
                   | The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Text Alignment
             p.zero .align-left
             .demo
@@ -376,7 +376,7 @@ block content
               .row
                 div.justify
                   | The quick brown fox jumped over the lazy dog. Oh, how that fox jumped, quick and brown, while the dog never reacted because he was so very lazy.
-          .one-third.collapse-on-small-tablet.padded
+          .one-third-large-tablet.padded
             h4 Text Helpers
             p.zero .truncate 
             p.zero.small (single-line, pure CSS)

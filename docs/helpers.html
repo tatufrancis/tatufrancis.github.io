@@ -18,8 +18,8 @@
     <style type="text/css">
       .desktop-only,
       .hide-on-desktop,
-      .ipad-only,
-      .hide-on-ipad,
+      .large-tablet-only,
+      .hide-on-large-tablet,
       .small-tablet-only,
       .hide-on-small-tablet,
       .mobile-only,
@@ -61,7 +61,7 @@
     <header class="charcoal-bg padded">
       <div class="container">
         <div class="row">
-          <div class="one-half collapse-on-small-tablet">
+          <div class="one-half-large-tablet">
             <h2 class="logo museo-slab"><a href="/" target="_parent">
                 <svg version="1.1" id="groundwork-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="49px" viewBox="10 10 3790 498" enable-background="new 10 10 3317 498" xml:space="preserve">
                   <g>
@@ -80,11 +80,11 @@
                   <text fill="#ffffff" transform="matrix(1 0 0 1 600 450)" font-family="URWUrban" font-size="448">Groundwork CSS 3</text>
                 </svg></a></h2>
           </div>
-          <div class="one-half collapse-on-small-tablet">
-            <p class="small double pad-top no-pad-small-tablet align-right align-left-small-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 3.0.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
+          <div class="one-half-small-large-tablet">
+            <p class="small double pad-top no-pad-small-tablet align-right-large-tablet"><a href="https://github.com/groundworkcss/groundwork" target="_parent">Github Project</a> - Version 3.0.0<br>Created & Maintained by <a href="http://twitter.com/ghepting" target="_blank">Gary Hepting</a></p>
           </div>
         </div>
-        <nav role="navigation" class="nav gap-top red">
+        <nav role="navigation" class="nav bar-large-tablet gap-top red">
           <ul role="menubar">
             <li><a href="./home.html"><i class="fa fa-home"></i> Home</a></li>
             <li role="menu">
@@ -127,11 +127,11 @@
     <div class="container">
       <div class="padded">
         <div class="row">
-          <div class="three-fifths collapse-on-small-tablet bounceInRight animated">
+          <div class="three-fifths-large-tablet bounceInRight animated">
             <h1 class="zero museo-slab">Helpers</h1>
             <p class="quicksand"><a href="breakpoints.html">Breakpoint-targeted</a> layout, typographic, and conditional helpers for responsive & adaptive layouts</p>
           </div>
-          <div class="two-fifths collapse-on-small-tablet align-right-ipad align-right-desktop flipInX animated">
+          <div class="two-fifths-large-tablet align-right-large-tablet flipInX animated">
             <p class="quicksand">Component Usage Example 2 of 14</p>
             <p><a href="grid.html" rel="prev" class="blue button">Back</a> <a href="typography.html" rel="next" class="green button">Next: Typography</a></p>
           </div>
@@ -143,26 +143,26 @@
           <h4 class="zero">Conditional Display Helpers</h4>
           <p class="small">Conditionally show and hide elements at <a href="breakpoints.html">targeted breakpoints</a></p>
           <div class="row">
-            <div class="one-half collapse-on-mobile padded">
+            <div class="one-half-small-tablet padded">
               <h4>Demonstration</h4>
               <ol class="list large">
                 <li class="green desktop-only">desktop-only</li>
                 <li class="blue hide-on-desktop">hide-on-desktop</li>
-                <li class="green ipad-only">ipad-only</li>
-                <li class="blue hide-on-ipad">hide-on-ipad</li>
+                <li class="green large-tablet-only">large-tablet-only</li>
+                <li class="blue hide-on-large-tablet">hide-on-large-tablet</li>
                 <li class="green small-tablet-only">small-tablet-only</li>
                 <li class="blue hide-on-small-tablet">hide-on-small-tablet</li>
                 <li class="green mobile-only">mobile-only</li>
                 <li class="blue hide-on-mobile">hide-on-mobile</li>
               </ol>
             </div>
-            <div class="one-half collapse-on-mobile padded">
+            <div class="one-half-small-tablet padded">
               <h4 class="double-gap-top-mobile">Conditional Display Classes</h4>
               <ol class="list">
                 <li><code class="inline">.desktop-only</code></li>
                 <li><code class="inline">.hide-on-desktop</code></li>
-                <li><code class="inline">.ipad-only</code></li>
-                <li><code class="inline">.hide-on-ipad</code></li>
+                <li><code class="inline">.large-tablet-only</code></li>
+                <li><code class="inline">.hide-on-large-tablet</code></li>
                 <li><code class="inline">.small-tablet-only</code></li>
                 <li><code class="inline">.hide-on-small-tablet</code></li>
                 <li><code class="inline">.mobile-only</code></li>
@@ -178,7 +178,7 @@
           <h4 class="zero">Spacing Helpers</h4>
           <p class="small">With breakpoint-targeted conditional classes and overrides. (i.e. - <code class="inline">.no-pad-mobile</code>,  <code class="inline">.no-gap-desktop</code>,  <code class="inline">.double-gap-top-mobile</code>,  <code class="inline">.padded-small-tablet</code>,  <code class="inline">.padded-mobile</code>, etc.)</p>
           <div class="row">
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Padded</h4>
               <div class="demo">
                 <div class="row">
@@ -190,7 +190,7 @@
                 </div>
               </div>
             </div>
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Half</h4>
               <div class="demo">
                 <div class="row">
@@ -202,7 +202,7 @@
                 </div>
               </div>
             </div>
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Double</h4>
               <div class="demo">
                 <div class="row">
@@ -214,7 +214,7 @@
                 </div>
               </div>
             </div>
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Triple</h4>
               <div class="demo">
                 <div class="row">
@@ -228,7 +228,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Gapped</h4>
               <div class="demo spacers">
                 <div class="row">
@@ -240,7 +240,7 @@
                 </div>
               </div>
             </div>
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Half</h4>
               <div class="demo spacers">
                 <div class="row">
@@ -252,7 +252,7 @@
                 </div>
               </div>
             </div>
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Double</h4>
               <div class="demo spacers">
                 <div class="row">
@@ -264,7 +264,7 @@
                 </div>
               </div>
             </div>
-            <div class="two-up-small-tablet four-up-ipad four-up-desktop padded">
+            <div class="two-up-small-tablet four-up-large-tablet four-up-desktop padded">
               <h4>Triple</h4>
               <div class="demo spacers">
                 <div class="row">
@@ -285,10 +285,10 @@
           <h4 class="zero">Layout</h4>
           <p class="small">
              
-            With breakpoint-targeted conditional classes and overrides. (i.e. - <code class="inline">.block-desktop</code>, <code class="inline">.no-border-small-tablet</code>, <code class="inline">.pull-right-small-tablet</code>, <code class="inline">.center-ipad</code>
+            With breakpoint-targeted conditional classes and overrides. (i.e. - <code class="inline">.block-desktop</code>, <code class="inline">.no-border-small-tablet</code>, <code class="inline">.pull-right-small-tablet</code>, <code class="inline">.center-large-tablet</code>
           </p>
           <div class="row">
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Display</h4>
               <div class="demo">
                 <div class="row">
@@ -310,7 +310,7 @@
                 </div>
               </div>
             </div>
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Floating</h4>
               <div class="demo">
                 <div class="row">
@@ -328,7 +328,7 @@
                 </div>
               </div>
             </div>
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Borders</h4>
               <div class="demo">
                 <div class="bordered">.bordered</div><br>
@@ -364,7 +364,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Static</h4><code>
                 <ul class="unstyled">
                   <li>.static</li>
@@ -374,7 +374,7 @@
                   <li>.relative</li>
                 </ul></code>
             </div>
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Absolute</h4><code class="block">
                 <ul class="unstyled">
                   <li>.absolute</li>
@@ -393,7 +393,7 @@
                   <li>.absolute-center</li>
                 </ul></code>
             </div>
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Fixed</h4><code class="block">
                 <ul class="unstyled">
                   <li>.fixed</li>
@@ -420,7 +420,7 @@
         <div class="padded bounceInLeft animated">
           <h4>Typographic</h4>
           <div class="row">
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Font Sizing</h4>
               <p class="zero">.small</p>
               <div class="demo">
@@ -441,7 +441,7 @@
                 </div>
               </div>
             </div>
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Text Alignment</h4>
               <p class="zero">.align-left</p>
               <div class="demo">
@@ -468,7 +468,7 @@
                 </div>
               </div>
             </div>
-            <div class="one-third collapse-on-small-tablet padded">
+            <div class="one-third-large-tablet padded">
               <h4>Text Helpers</h4>
               <p class="zero">.truncate </p>
               <p class="zero small">(single-line, pure CSS)</p>
@@ -551,18 +551,18 @@
       <div class="box square charcoal">
         <div class="container padded">
           <div class="row">
-            <div class="three-tenths two-fifths-small-tablet collapse-on-mobile padded">
+            <div class="three-tenths-desktop two-fifths-small-tablet padded">
               <h5 class="green">Example Layouts</h5>
-              <ul class="unstyled two-columns-mobile">
+              <ul class="unstyled two-columns">
                 <li><a href="./layout-a.html">Web Page</a></li>
                 <li><a href="./layout-b.html">Image Gallery</a></li>
                 <li><a href="./layout-c.html">Ecommerce Page</a></li>
                 <li><a href="./layout-d.html">Contact Page</a></li>
               </ul>
             </div>
-            <div class="seven-tenths three-fifths-small-tablet collapse-on-mobile padded">
+            <div class="seven-tenths-desktop three-fifths-small-tablet padded">
               <h5 class="blue">Documentation</h5>
-              <ul class="unstyled three-columns two-columns-small-tablet two-columns-mobile">
+              <ul class="unstyled two-columns three-columns-desktop">
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
@@ -585,11 +585,11 @@
       <div class="box square">
         <div class="container padded">
           <div class="row">
-            <div class="one-half collapse-on-small-tablet padded">
+            <div class="one-half-large-tablet padded">
               <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundworkcss@gmail.com">Give a shout out</a> if you have any feedback.</p>
               <p>Find a bug? Help squash it by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank">filing an issue</a> on Github.</p>
             </div>
-            <div class="one-half collapse-on-small-tablet padded">
+            <div class="one-half-large-tablet padded">
               <p class="large padded align-right align-center-small-tablet"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped"></a><a href="mailto:groundworkcss@gmail.com" title="groundworkcss@gmail.com" style="text-decoration:none;" class="large inline gapped"></a></p>
             </div>
           </div>

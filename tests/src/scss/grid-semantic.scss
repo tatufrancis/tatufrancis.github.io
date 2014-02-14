@@ -4,6 +4,7 @@ $grid-classes: false;
 
 @import "test-settings";
 @import "../../../src/scss/core/all-core";
+@import "../../../src/scss/layout/all-layout";
 
 // semantic grid test
 [role="main"] {
@@ -20,41 +21,41 @@ section {
 
 section:nth-child(1) {
   article {
-    @include columns($four-fifths, $three-fourths, $two-thirds, $one-half);
+    @include columns($one-half $two-thirds $three-fourths $four-fifths);
   }
 
   aside {
-    @include columns($one-fifth, $one-fourth, $one-third, $one-half);
+    @include columns($one-half $one-third $one-fourth $one-fifth);
   }
 }
 
 section:nth-child(2) {
   article {
-    @include columns($five-sevenths, $three-fourths, $two-thirds, $one-half);
+    @include columns($one-half $two-thirds $three-fourths $five-sevenths);
   }
 
   aside {
-    @include columns($two-sevenths, $one-fourth, $one-third, $one-half);
+    @include columns($one-half $one-third $one-fourth $two-sevenths);
   }
 }
 
 section:nth-child(3) {
   article {
-    @include columns($eight-fourteenths, $three-fourths, $two-thirds, $one-half);
+    @include columns($one-half $two-thirds $three-fourths $eight-fourteenths);
   }
 
   aside {
-    @include columns($six-fourteenths, $one-fourth, $one-third, $one-half);
+    @include columns($one-half $one-third $one-fourth $six-fourteenths);
   }
 }
 
 section:nth-child(4) {
   article {
-    @include columns($thirteen-twentieths, $three-fourths, $two-thirds, $one-half);
+    @include columns($one-half $two-thirds $three-fourths $thirteen-twentieths);
   }
 
   aside {
-    @include columns($seven-twentieths, $one-fourth, $one-third, $one-half);
+    @include columns($one-half $one-third $one-fourth $seven-twentieths);
   }
 }
 

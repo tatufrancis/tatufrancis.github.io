@@ -4,99 +4,205 @@
 
 @import "../../icons/variables";
 
-@mixin hamburger-mode($filters: "") {
-  .nav:not(.nocollapse)#{$filters} {
+@mixin bar-mode($target: false) {
+  @if $target and $target != '' {
+    $target: #{'.' + $target};
+  }@else{
+    $target: '';
+  }
+  .nav#{$target} {
     &:before {
-      float: left;
-      display: inline-block;
-      content: attr(title);
-      padding: 0.25em 0.5em;
-      font-weight: bold;
-    }
-    button.hamburger {
-      display: inline-block;
-      &:before {
-        @include icon($fa-var-list);
-      }
-      &[aria-expanded="true"] {
-        &:before {
-          content: $fa-var-caret-square-o-up;
-        }
-      }
-    }
-    > ul {
       display: none;
+    }
+
+    > ul {
+      display: block;
       > li {
         > a, > button {
-          border-top-width: $border-thickness;
+          border-top-width: 0;
         }
       }
     }
-    > ul[aria-expanded="true"] {
-      display: block;
-    }
+
     li {
-      float: none;
-      display: block;
-      ul {
-        position: static;
-      }
-      li {
-        a, button {
-          padding-left: 1.5em;
-        }
-        li {
-          a, button {
-            padding-left: 2em;
-          }
-          li {
-            a, button {
-              padding-left: 2.5em;
-            }
-            li {
-              a, button {
-                padding-left: 3em;
-              }
-            }
-          }
-        }
-      }
+      @include _pull-left;
+
       &[role="menu"] {
-        ul {
-          border: 0;
-          > li {
-            &:first-child {
-              > a, > button {
-                border-top-width: $border-thickness;
-              }
+        &[aria-pressed="true"] {
+          > a, > button {
+            &:after {
+              content: $fa-var-caret-down;
             }
           }
         }
         > a, > button {
           &:after {
-            float: none;
-            content: $fa-var-caret-down;
+            @include _pull-right;
+            @include icon($fa-var-caret-down);
           }
         }
-        &[aria-pressed="true"] {
+        ul {
+          border-width: $border-thickness;
+
+          > li {
+            &:first-child {
+              a, button {
+                border-top-width: 0;
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        position: absolute;
+      }
+
+      li {
+        float: none;
+        &:last-child {
+          > {
+            a, button {
+              border-radius: 0 0 $default-radius $default-radius;
+            }
+          }
+        }
+
+        &[role="menu"],
+        &[role="menu"][aria-pressed="true"] {
           > a, > button {
             &:after {
-              content: $fa-var-caret-up;
+              content: $fa-var-caret-right;
+            }
+          }
+        }
+
+        ul {
+          top: 0;
+          left: 100%;
+          min-width: none;
+          border-radius: 0 $default-radius $default-radius $default-radius;
+
+          li {
+            &:first-child {
+              > {
+                a, button {
+                  border-radius: 0 $default-radius 0 0;
+                }
+              }
+            }
+            &:last-child {
+              > {
+                a, button {
+                  border-radius: 0 0 $default-radius $default-radius;
+                }
+              }
+            }
+          }
+        }
+
+        a, button {
+          padding-left: 1em;
+        }
+        li {
+          a, button {
+            padding-left: 1em;
+          }
+          li {
+            a, button {
+              padding-left: 1em;
+            }
+            li {
+              a, button {
+                padding-left: 1em;
+              }
             }
           }
         }
       }
     }
-    a, button:not(.hamburger) {
-      display: block;
-      width: 100%;
-      text-align: left;
+
+    button.hamburger {
+      display: none;
     }
-    @for $i from 1 through length($modifier-name) {
-      &.#{nth($modifier-name, $i)} {
-        li ul a, li[role="menu"] ul a, a,
-        li ul button, li[role="menu"] ul button, button {
+
+    &.vertical {
+      > ul {
+        > li:first-child {
+          > a, > button {
+            border-top-width: 0;
+          }
+        }
+        > li {
+          > a, > button {
+            border-top-width: $border-thickness;
+          }
+        }
+      }
+      li {
+        float: none;
+        &[role="menu"] {
+          > a, > button {
+            &:after {
+              content: $fa-var-caret-down;
+            }
+          }
+          &[aria-pressed="true"] {
+            > a, > button {
+              &:after {
+                content: $fa-var-caret-up;
+              }
+            }
+          }
+          ul {
+            > li {
+              &:first-child {
+                a, button {
+                  border-top-width: $border-thickness;
+                }
+              }
+            }
+          }
+        }
+        ul {
+          position: static;
+          border-width: 0;
+        }
+        li {
           border-radius: 0;
+          &:last-child {
+            a, button {
+              border-radius: 0;
+            }
+          }
+          ul {
+            li {
+              &:first-child {
+                a, button {
+                  border-radius: 0;
+                }
+              }
+            }
+          }
+
+          a, button {
+            padding-left: 1.5em;
+          }
+          li {
+            a, button {
+              padding-left: 2em;
+            }
+            li {
+              a, button {
+                padding-left: 2.5em;
+              }
+              li {
+                a, button {
+                  padding-left: 3em;
+                }
+              }
+            }
+          }
         }
       }
     }

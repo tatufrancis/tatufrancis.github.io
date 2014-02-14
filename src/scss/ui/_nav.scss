@@ -10,6 +10,14 @@
   color: $nav-text;
   border: $border-thickness $border-style $nav-border-color;
   border-radius: $default-radius;
+
+  &:before {
+    float: left;
+    display: inline-block;
+    content: attr(title);
+    padding: 0.25em 0.5em;
+    font-weight: bold;
+  }
 }
 
 %navigation-list {
@@ -17,18 +25,15 @@
 }
 
 %navigation-list-item {
-  @extend %block, %relative, %pull-left;
-}
-
-%vertical-navigation-list-item {
-  @extend %pull-none;
+  @extend %block, %relative;
 }
 
 %navigation-link {
-  @extend %inline-block, %align-center, %strong;
+  @extend %inline-block, %align-left, %strong;
   background: $nav-color;
   color: $nav-text;
   cursor: pointer;
+  width: 100%;
   padding: 0.25em 1em;
   text-decoration: none;
   cursor: pointer;
@@ -41,20 +46,23 @@
   }
 }
 
-%vertical-navigation-link {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-
 %hamburger-button {
   @extend %pull-right;
-  display: none;
+  display: inline-block;
   background: none;
   color: $nav-active-text;
+  width: auto;
   border: 0;
   &:hover, &:focus {
     background: none !important;
+  }
+  &:before {
+    @include icon($fa-var-list);
+  }
+  &[aria-expanded="true"] {
+    &:before {
+      content: $fa-var-caret-square-o-up;
+    }
   }
 }
 
@@ -68,18 +76,10 @@
 
 %navigation-menu {
   display: none;
-  position: absolute;
   z-index: 9;
   min-width: 100%;
   border: $border-thickness $border-style $nav-border-color;
   border-radius: 0 0 $default-radius $default-radius;
-}
-
-%vertical-navigation-menu {
-  position: static;
-  border: 0;
-  border-radius: 0 !important;
-  border-top: $border-thickness $border-style $nav-border-color;
 }
 
 @for $i from 1 through length($modifier-name) {
@@ -120,24 +120,11 @@
   .nav {
     @extend %navigation;
 
-    button.hamburger {
-      @extend %hamburger-button;
-    }
-
     // modifier colors
     @for $i from 1 through length($modifier-name) {
       &.#{nth($modifier-name, $i)} {
         @extend %navigation-#{nth($modifier-name, $i)};
-        button.hamburger {
-          color: #{nth($modifier-text, $i)}
-        }
         li[role="menu"] {
-          ul {
-            @extend %navigation-menu-#{nth($modifier-name, $i)};
-            a, button {
-              @extend %navigation-link-#{nth($modifier-name, $i)};
-            }
-          }
           &[aria-expanded="true"] {
             > a, > button {
               background: darken(nth($modifier-code, $i), 5%);
@@ -145,6 +132,15 @@
               color: nth($modifier-text, $i)
             }
           }
+          ul {
+            @extend %navigation-menu-#{nth($modifier-name, $i)};
+            a, button {
+              @extend %navigation-link-#{nth($modifier-name, $i)};
+            }
+          }
+        }
+        button.hamburger {
+          color: #{nth($modifier-text, $i)}
         }
         a, button {
           @extend %navigation-link-#{nth($modifier-name, $i)};
@@ -152,101 +148,56 @@
       }
     }
 
-    &.vertical {
-      > ul {
-        > li:first-child {
-          > a, > button {
-            border-top-width: 0;
-          }
+    > ul {
+      display: none;
+      > li {
+        > a, > button {
+          border-top-width: $border-thickness;
         }
-        > li {
-          > a, > button {
-            border-top-width: $border-thickness;
-          }
-        }
-      }
-      li {
-        li {
-          a, button {
-            padding-left: 1.5em;
-          }
-          li {
-            a, button {
-              padding-left: 2em;
-            }
-            li {
-              a, button {
-                padding-left: 2.5em;
-              }
-              li {
-                a, button {
-                  padding-left: 3em;
-                }
-              }
-            }
-          }
-        }
-        @extend %vertical-navigation-list-item;
-        &[role="menu"] {
-          > a, > button {
-            &:after {
-              content: $fa-var-caret-down;
-            }
-          }
-          &[aria-pressed="true"] {
-            > a, > button {
-              &:after {
-                content: $fa-var-caret-up;
-              }
-            }
-          }
-        }
-        ul {
-          @extend %vertical-navigation-menu;
-          li {
-          }
-        }
-        li {
-          border-radius: 0;
-          &:last-child {
-            a, button {
-              border-radius: 0;
-            }
-          }
-          ul {
-            li {
-              &:first-child {
-                a, button {
-                  border-radius: 0;
-                }
-              }
-            }
-          }
-        }
-      }
-      a, button:not(.hamburger) {
-        @extend %vertical-navigation-link;
       }
     }
 
     ul {
       @extend %navigation-list;
+
+      &[aria-expanded="true"] {
+        display: block;
+      }
     }
 
     li {
       @extend %navigation-list-item;
 
       &[role="menu"] {
+
+        &[aria-expanded="true"] {
+          > a, > button {
+            @extend %navigation-link-active;
+          }
+        }
+        &[aria-pressed="true"] {
+          > a, > button {
+            &:after {
+              content: $fa-var-caret-up;
+            }
+          }
+        }
+
         > a, > button {
           &:after {
-            @extend %pull-right;
             @include icon($fa-var-caret-down);
             margin-left: 0.5em;
           }
         }
-        &[aria-expanded="true"] {
-          > a, > button {
-            @extend %navigation-link-active;
+
+        ul {
+          border-width: 0;
+          > li {
+            &:first-child {
+              > a, > button {
+                border-top-width: $border-thickness;
+              }
+            }
           }
         }
       }
@@ -261,7 +212,6 @@
           }
         }
         a, button {
-          @extend %align-left;
           display: block;
           width: 100%;
         }
@@ -277,18 +227,7 @@
           }
         }
 
-        &[role="menu"] {
-          > a, > button {
-            &:after {
-              content: $fa-var-caret-right;
-            }
-          }
-        }
-
         ul {
-          top: 0;
-          left: 100%;
-          min-width: none;
           border-radius: 0 $default-radius $default-radius $default-radius;
 
           li {
@@ -308,10 +247,26 @@
             }
           }
         }
+
+        a, button {
+          padding-left: 1.5em;
+        }
+        li {
+          a, button {
+            padding-left: 2em;
+          }
+          li {
+            a, button {
+              padding-left: 2.5em;
+            }
+            li {
+              a, button {
+                padding-left: 3em;
+              }
+            }
+          }
+        }
       }
-    }
-    ul[aria-expanded="true"] {
-      display: block;
     }
 
     a, a:visited, button {
@@ -322,33 +277,14 @@
         }
       }
     }
-    > ul {
-      > li {
-        > a, > button {
-          border-top-width: 0;
-        }
-        &:first-child {
-          > a, > button {
-            border-top-width: 0;
-          }
-        }
-      }
+
+    button.hamburger {
+      @extend %hamburger-button;
     }
   }
 
-  @if $responsive {
-    // ipad hamburger mode
-    @media #{$ipad} {
-      @include hamburger-mode(":not(.small-tablet):not(.mobile)");
-    }
-    // small tablet hamburger mode
-    @media #{$small-tablet} {
-      @include hamburger-mode(":not(.mobile)");
-    }
-    // mobile hamburger mode
-    @media #{$mobile} {
-      @include hamburger-mode();
-    }
+  @include breakpoints($base: $navigation-base) {
+    @include bar-mode("bar" + $bp-target-post);
   }
 }
 

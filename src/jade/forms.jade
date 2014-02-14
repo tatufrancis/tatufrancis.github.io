@@ -7,10 +7,10 @@ block content
   .container
     .padded
       .row
-        .three-fifths.collapse-on-small-tablet.bounceInRight.animated
+        .three-fifths-large-tablet.bounceInRight.animated
           h1.zero.museo-slab Form Elements
           p.quicksand Easy to customize & flexible form elements wrapped in the grid system.
-        .two-fifths.collapse-on-small-tablet.align-right-ipad.align-right-desktop.flipInX.animated
+        .two-fifths-large-tablet.align-right-large-tablet.flipInX.animated
           p.quicksand Component Usage Example 10 of 14
           p
             a.blue.button(href='tables.html', rel='prev')
@@ -26,10 +26,10 @@ block content
           fieldset
             legend Example HTML5 Form
             .row
-              .one-half.collapse-on-mobile.padded
+              .one-half-small-tablet.padded
                 label(for='name') Text Field
                 input#name(type='text', placeholder='First & Last Name')
-              .one-half.collapse-on-mobile.padded
+              .one-half-small-tablet.padded
                 label(for='email') Email Field
                 input#email(type='email', placeholder='you@example.com')
             .row
@@ -37,9 +37,9 @@ block content
                 label(for='address') Address
                 input#address(type='text', placeholder='Street Address')
             .row
-              .two-fourths.collapse-on-mobile.padded
+              .two-fourths-small-tablet.padded
                 input(type='text', placeholder='City')
-              .one-fourth.collapse-on-mobile.padded
+              .one-fourth-small-tablet.padded
                 span.select-wrap
                   select
                     option(value='', disabled='', selected='') State
@@ -121,7 +121,7 @@ block content
                     option(value='QC') Quebec
                     option(value='SK') Saskatchewan
                     option(value='YT') Yukon Territory
-              .one-fourth.collapse-on-mobile.padded
+              .one-fourth-small-tablet.padded
                 input(type='text', placeholder='Zip Code')
             .row
               .one-whole.padded
@@ -131,13 +131,13 @@ block content
               .one-whole.pad-left
                 label(for='twitter') Prefixed & Suffixed
             .row
-              .one-half.collapse-on-mobile.padded
+              .one-half-small-tablet.padded
                 .row
                   .one-sixth
                     span.prefix @
                   .five-sixths
                     input#twitter(type='text', name='twitter', placeholder='twitter handle')
-              .one-half.collapse-on-mobile.padded
+              .one-half-small-tablet.padded
                 .row
                   .three-fifths
                     input(type='text', name='sidereel', placeholder='desired username')
@@ -281,20 +281,20 @@ block content
               |       </div>
               |     </div>
               |     <div class="row">
-              |       <div class="one-half padded">
+              |       <div class="one-half-small-tablet padded">
               |         <div class="row">
-              |           <div class="one mobile sixth"><span class="prefix">@</span></div>
-              |           <div class="five mobile sixths">
+              |           <div class="one-sixth"><span class="prefix">@</span></div>
+              |           <div class="five-sixths">
               |             <input id="twitter" type="text" name="twitter" placeholder="twitter handle">
               |           </div>
               |         </div>
               |       </div>
-              |       <div class="one-half padded">
+              |       <div class="one-half-small-tablet padded">
               |         <div class="row">
-              |           <div class="three mobile fifths">
+              |           <div class="three-fifths">
               |             <input type="text" name="sidereel" placeholder="desired username">
               |           </div>
-              |           <div class="two mobile fifths"><span class="suffix">@example.com</span></div>
+              |           <div class="two-fifths><span class="suffix">@example.com</span></div>
               |         </div>
               |       </div>
               |     </div>
@@ -327,7 +327,7 @@ block content
       .one-whole.padded
         h4 Form Validation
         .row
-          .one-half.collapse-on-mobile.padded
+          .one-half-small-tablet.padded
             p.error Invalid Entry
             p
               input(aria-invalid='true', value='Invalid entry')
@@ -336,7 +336,7 @@ block content
                 span.prefix @
               .nine-tenths
                 input(aria-invalid='true', value='Invalid entry')
-          .one-half.collapse-on-mobile.padded
+          .one-half-small-tablet.padded
             p.success Validated Entry
             p
               input(aria-invalid='false', value='Valid entry')
@@ -346,25 +346,25 @@ block content
               .nine-tenths
                 input(aria-invalid='false', value='Valid entry')
         .row.gap-top
-          .one-half.collapse-on-mobile.padded.pad-left.pad-right
+          .one-half-small-tablet.padded.pad-left.pad-right
             pre(data-lang='html')
               | <p class="invalid">
               |   <input value="Invalid entry">
               | </p>
               | <div class="invalid row">
-              |   <div class="one mobile tenth"><span class="prefix">@</span></div>
-              |   <div class="nine mobile tenths">
+              |   <div class="one-tenth"><span class="prefix">@</span></div>
+              |   <div class="nine-tenths">
               |     <input value="Invalid entry">
               |   </div>
               | </div>
-          .one-half.collapse-on-mobile.padded.pad-left.pad-right
+          .one-half-small-tablet.padded.pad-left.pad-right
             pre(data-lang='html')
               | <p class="valid">
               |   <input value="Valid entry">
               | </p>
               | <div class="valid row">
-              |   <div class="one mobile tenth"><span class="prefix">@</span></div>
-              |   <div class="nine mobile tenths">
+              |   <div class="one-tenth"><span class="prefix">@</span></div>
+              |   <div class="nine-tenths">
               |     <input value="Valid entry">
               |   </div>
               | </div>
