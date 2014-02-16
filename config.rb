@@ -1,7 +1,7 @@
 # Set this to the root of your project
 http_path = "/"
 css_dir = "css"
-sass_dir = "src/scss"
+sass_dir = "src/sass"
 images_dir = "images"
 javascripts_dir = "js"
 fonts_dir = "fonts"
@@ -20,9 +20,8 @@ environment = :development
 line_comments = false
 color_output = false
 
-# If you prefer the indented syntax, you might want to regenerate this
-# project again passing --syntax sass, or you can uncomment this:
-# preferred_syntax = :sass
+# If you prefer the Sassy-CSS (SCSS) syntax, you might want to regenerate this
+# project again passing --syntax scss, or you can change preferred_syntax to ":scss":
+preferred_syntax = :sass
 # and then run:
-# sass-convert -R --from scss --to sass src/scss scss && rm -rf sass && mv scss sass
-preferred_syntax = :scss
+# sass-convert -R --from sass --to scss src/sass src/scss && rm -rf src/sass

@@ -1,6 +1,6 @@
 ![Groundwork Logo](https://0.gravatar.com/avatar/c8ae740c0b5f7dd913308974a07ee02c?s=150)
 
-GroundworkCSS 2.4.0
+GroundworkCSS 2.5.0
 ====
 
 Say hello to responsive design made easy.
@@ -15,7 +15,7 @@ work on virtually any device. Key features that make GroundworkCSS stand out are
 
 * nestable, fractional, responsive, adaptive, fluid grid system
 * works on virtually anything: mobile, tablet, or large screen devices
-* built with modular SCSS and JS components
+* built with modular Sass and CoffeeScript components
 * easy to customize
 * highly configurable
 * supports purely semantic implementations by utilizing Sass @extend, @mixin and 
@@ -70,20 +70,20 @@ All in all, you may end up with markup that looks like the following:
 Custom Build
 ----
 
-If you use SCSS and you want to compile your own build of Groundwork or 
+If you use Sass and you want to compile your own build of Groundwork or 
 integrate it along with your project code.
 
-SCSS source files are located in **src/scss** and **src/coffee**.
+Sass source files are located in **src/sass** and **src/coffee**.
 
 Important files to edit are:
 
-* groundwork.scss: dictates which modules are imported for compilation
+* groundwork.sass: dictates which modules are imported for compilation
 (delete/comment out unneeded modules).
-* _settings.scss: initial settings for Groundwork, including customizable 
+* _settings.sass: initial settings for Groundwork, including customizable 
 colors, options to turn off rapid prototyping classes and much more.
 
-You can then output your own groundwork[.css/.js], or import groundwork.scss 
-as part of your project's SCSS. The latter lets you utilise GroundworkCSS's 
+You can then output your own groundwork[.css/.js], or import groundwork.sass 
+as part of your project's Sass. The latter lets you utilise GroundworkCSS's 
 library through ```@include``` or ```@extend``` for your custom classes.
 
 

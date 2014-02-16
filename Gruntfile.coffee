@@ -8,7 +8,7 @@ module.exports = (grunt) ->
         files: '**/*.jade'
         tasks: ['jade']
       compass:
-        files: '**/*.scss'
+        files: '**/*.sass'
         tasks: ['compass', 'autoprefixer', 'cssmin']
       coffee:
         files: '**/*.coffee'

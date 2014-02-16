@@ -23,9 +23,9 @@ Looking to contribute something to Groundwork? **Here's how you can help.**
 ## Pull requests
 
 - Submit all pull requests against the appropriate `*-wip` branch for easier merging
-- CSS changes must be done in the .scss files first, never the compiled files
+- CSS changes must be done in the .sass files first, never the compiled files
 - HTML changes must be done in the .jade template files first, never the compiled files
-- When modifying any source files (.scss, .jade, coffee, etc.), always recompile and commit the compiled files by using the Grunt tasks `grunt build`
+- When modifying any source files (.sass, .jade, coffee, etc.), always recompile and commit the compiled files by using the Grunt tasks `grunt build`
 - Try not to pollute your pull request with unintended changes -- keep them simple and small (minimize unecessary diffs)
 - Try to share which browsers your code has been tested in before submitting a pull request
 
@@ -46,7 +46,7 @@ Looking to contribute something to Groundwork? **Here's how you can help.**
 - Always a space after a property's colon (.e.g, `display: block;` and not `display:block;`)
 - End all lines with a semi-colon
 - For multiple, comma-separated selectors, place each selector on it's own line
-- Use of .scss comments are okay when necessary ("//"), but do not use CSS comments ("/* */")
+- Use of .sass comments are okay when necessary ("//"), but do not use CSS comments ("/* */")
 - Attribute selectors, like `input[type="text"]` should always wrap the attribute's value in double quotes, for consistency and safety (see this [blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values) that can lead to XSS attacks)
 
 
