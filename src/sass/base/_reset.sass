@@ -65,7 +65,7 @@ $reset-elements: "html" "body" "div" "span" "header" "footer" "aside" "nav" "men
 @if $reset
   *, *:after, *:before
     @extend %everything
-  // reset all $reset-elements (configured in _variables.sass)
+  // reset all $reset-elements (configured in _variables.scss)
   @for $i from 1 through length($reset-elements)
     #{nth($reset-elements, $i)}
       @extend %html5-elements
