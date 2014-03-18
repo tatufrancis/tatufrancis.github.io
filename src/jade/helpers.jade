@@ -3,6 +3,7 @@ extends template
 block title
   title GroundworkCSS &hearts; Helpers
   style(type="text/css").
+    .hidden,
     .desktop-only,
     .hide-on-desktop,
     .ipad-only,
@@ -53,6 +54,7 @@ block content
           .one.half.small-tablet.padded
             h4 Demonstration
             ol.list.large
+              li.red.hidden hidden
               li.green.desktop-only desktop-only
               li.blue.hide-on-desktop hide-on-desktop
               li.green.ipad-only ipad-only
@@ -64,6 +66,9 @@ block content
           .one.half.small-tablet.padded
             h4.double-gap-top-mobile Conditional Display Classes
             ol.list
+              li
+                code.inline .hidden
+                |  (all breakpoints)
               li
                 code.inline .desktop-only
               li
