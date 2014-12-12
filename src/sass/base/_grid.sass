@@ -67,13 +67,14 @@ $selectors: if($grid-classes, "%" ".", "%")
         &#{nth($selectors, $i) + nth($numerators, $width)}
           width: percentage($width / $j)
           @extend %column
-      @for $right-left-skip from 1 through $j - 1
-        &#{nth($selectors, $i) + "right-" + nth($numerators, $right-left-skip)}
-          left: percentage($right-left-skip / $j)
-        &#{nth($selectors, $i) + "left-" + nth($numerators, $right-left-skip)}
-          right: percentage($right-left-skip / $j)
-        &#{nth($selectors, $i) + "skip-" + nth($numerators, $right-left-skip)}
-          margin-left: percentage($right-left-skip / $j)
+      @if $j > 1
+        @for $right-left-skip from 1 through $j - 1
+          &#{nth($selectors, $i) + "right-" + nth($numerators, $right-left-skip)}
+            left: percentage($right-left-skip / $j)
+          &#{nth($selectors, $i) + "left-" + nth($numerators, $right-left-skip)}
+            right: percentage($right-left-skip / $j)
+          &#{nth($selectors, $i) + "skip-" + nth($numerators, $right-left-skip)}
+            margin-left: percentage($right-left-skip / $j)
 
 @if $grid-adapter-classes
   @for $i from 1 through length($grid-adapters)
