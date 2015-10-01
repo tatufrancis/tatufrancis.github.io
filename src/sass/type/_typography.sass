@@ -277,6 +277,9 @@ $placeholderText-fallback: true !default
 %abbr
   border-bottom: 1px dotted
   cursor: help
+  @supports (text-decoration: dotted underline)
+    text-decoration: dotted underline
+    border-bottom: none
 
 %pre
   @extend %monospace
