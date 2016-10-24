@@ -1,0 +1,18 @@
+=generate-alignment-classes($suffix: "")
+  @each $type in $text-alignments-x
+    .text-align-#{$type}#{$suffix}
+      text-align: #{$type} !important
+      // TODO: Should descendants soft inherit, like valign below?
+      // Or is normal text-align propagation good enough for our purposes?
+
+  @each $type in $text-alignments-y
+    .vertical-align-#{$type}#{$suffix}
+      vertical-align: #{$type} !important
+
+@if $text-alignment-classes
+  +generate-alignment-classes
+
+  // Responsive alignment classes
+  @each $breakpoint-name in $breakpoint-names
+    +at($breakpoint-name)
+      +generate-alignment-classes("-at-#{$breakpoint-name}")

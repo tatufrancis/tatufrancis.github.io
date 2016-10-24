@@ -1,0 +1,6 @@
+@if $color-classes
+  @each $color in $color-names
+    .color-#{$color}
+      color: color-value($color) !important
+    .background-color-#{$color}
+      background-color: color-value($color) !important

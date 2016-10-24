@@ -1,0 +1,12 @@
+@if $container-classes
+  .container
+    +center-horizontally($container-xx-small !important)
+
+    @each $breakpoint-name in $breakpoint-names
+      +at($breakpoint-name)
+        max-width: container-value($breakpoint-name) !important
+
+  // Static container classes
+  @each $container-name in $container-names
+    .container-#{$container-name}
+      +center-horizontally(container-value($container-name) !important)

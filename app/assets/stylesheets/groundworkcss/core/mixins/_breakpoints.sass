@@ -1,0 +1,9 @@
+=at($breakpoint-name)
+  @media (min-width: breakpoint-value($breakpoint-name))
+    @content
+
+// Don't use this unless absolutely necessary!
+// Defer to mobile first patterns if at all possible
+=until($breakpoint-name)
+  @media (max-width: breakpoint-value($breakpoint-name) - 1)
+    @content

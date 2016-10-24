@@ -1,0 +1,5 @@
+@function breakpoint-index($breakpoint-name)
+  @return index($breakpoint-names, $breakpoint-name)
+
+@function breakpoint-value($breakpoint-name)
+  @return nth($breakpoint-values, breakpoint-index($breakpoint-name))

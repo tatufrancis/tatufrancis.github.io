@@ -1,0 +1,5 @@
+@function color-index($color-name)
+  @return index($color-names, $color-name)
+
+@function color-value($color-name)
+  @return nth($color-values, color-index($color-name))

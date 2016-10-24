@@ -1,0 +1,70 @@
+---
+
+borders:
+  - all
+  - vert
+  - horz
+  - top
+  - bottom
+  - left
+  - right
+  - none
+
+colors:
+  - purple
+  - blue
+  - teal
+  - green
+  - yellow
+  - orange
+  - red
+  - black
+  - dark-gray
+  - light-gray
+  - white
+
+directions:
+  - ""
+  - vert
+  - horz
+  - top
+  - bottom
+  - left
+  - right
+
+display:
+  - block
+  - inline-block
+  - inline
+  - flex
+  - inline-flex
+  - table
+  - table-row
+  - table-cell
+
+floating:
+  - left
+  - right
+  - none
+
+containers:
+  - xx-small
+  - x-small
+  - small
+  - medium
+  - large
+  - x-large
+  - xx-large
+
+spacing:
+  - xx-small
+  - x-small
+  - small
+  - medium
+  - large
+  - x-large
+  - xx-large
+
+spacing_types:
+  - pad
+  - gap

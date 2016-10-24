@@ -1,0 +1,17 @@
+=generate-floating-classes($suffix: "")
+  .clearfix#{$suffix}
+    +clearfix
+
+  @each $direction in $floating-types
+    .float-#{$direction}#{$suffix}
+      float: #{$direction} !important
+    .clear-#{$direction}#{$suffix}
+      clear: #{$direction} !important
+
+@if $floating-classes
+  +generate-floating-classes
+
+  // breakpoint-targeted float helpers
+  @each $breakpoint-name in $breakpoint-names
+    +at($breakpoint-name)
+      +generate-floating-classes("-at-#{$breakpoint-name}")

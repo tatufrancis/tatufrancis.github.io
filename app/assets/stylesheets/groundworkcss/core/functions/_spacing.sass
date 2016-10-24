@@ -1,0 +1,23 @@
+// spacing lookup functions
+@function spacing-index($spacing-name)
+  @return index($spacing-names, $spacing-name)
+
+@function spacing-value($spacing-name, $spacing-type)
+  $value: nth($spacing-values, spacing-index($spacing-name))
+  @return if($spacing-type == "offset", -$value, $value)
+
+@function spacing-property($spacing-type)
+  // both "gap" and "offset" use margin
+  @return if($spacing-type == "pad", "padding", "margin")
+
+@function spacing-property-list($spacing-prop, $spacing-type)
+  $property: spacing-property($spacing-type)
+
+  @if $spacing-prop == ""
+    @return "#{$property}"
+  @else if $spacing-prop == "vert"
+    @return "#{$property}-top", "#{$property}-bottom"
+  @else if $spacing-prop == "horz"
+    @return "#{$property}-left", "#{$property}-right"
+  @else
+    @return "#{$property}-#{$spacing-prop}"

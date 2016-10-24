@@ -1,0 +1,13 @@
+=border($direction: "all", $border-color: $light-gray)
+  @if $direction == "none"
+    border: none !important
+  @else if $direction == "all"
+    border: 1px solid $border-color !important
+  @else
+    // expand direction list
+    $directions: box-direction-list($direction)
+    // apply borders to each side
+    @each $side in $directions
+      border-#{$side}-width: 1px !important
+      border-#{$side}-style: solid !important
+      border-#{$side}-color: $border-color !important

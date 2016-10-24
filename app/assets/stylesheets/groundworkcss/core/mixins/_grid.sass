@@ -1,0 +1,69 @@
+=flex-grid($wrap: wrap)
+  display: flex
+  flex-wrap: $wrap
+  > *
+    // Enforce correct flex default value in IE10
+    flex: 0 1 auto
+
+=flex-column-width($col-width)
+  > *
+    width: $col-width
+
+=flex-column-gutter($col-gutter: $space-small)
+  $col-padding: $col-gutter / 2
+  margin-left: -$col-padding
+  margin-right: -$col-padding
+
+  > *
+    padding-left: $col-padding
+    padding-right: $col-padding
+
+=flex-row-gutter($row-gutter: $space-small)
+  // override grid negative bottom margin
+  margin-bottom: (-$row-gutter) !important
+
+  // apply row spacing to each column
+  > *
+    margin-bottom: $row-gutter !important
+
+  // override "gap" helper classes to offset the negative margins on rows
+  // only returns truthy if list contains value
+  @if $spacing-classes and index($spacing-types, "gap")
+    @for $i from 1 through length($spacing-names)
+      $spacing-size: nth($spacing-names, $i)
+      $spacing-value: nth($spacing-values, $i)
+
+      &.gap-#{$spacing-size},
+      &.gap-vert-#{$spacing-size},
+      &.gap-bottom-#{$spacing-size}
+        margin-bottom: ($spacing-value - $row-gutter) !important
+
+// flex align on horizontal axis
+=flex-align($alignment, $important: false)
+  display: specificity(flex, $important)
+
+  @if $alignment == "center"
+    justify-content: specificity(center, $important)
+  @else if $alignment == "left"
+    justify-content: specificity(flex-start, $important)
+  @else if $alignment == "right"
+    justify-content: specificity(flex-end, $important)
+  @else if $alignment == "justify"
+    justify-content: specificity(space-between, $important)
+
+// flex align on vertical axis
+=flex-valign($alignment, $important: false)
+  display: specificity(flex, $important)
+
+  @if $alignment == "middle"
+    align-content: specificity(center, $important)
+    align-items: specificity(center, $important)
+  @else if $alignment == "top"
+    align-content: specificity(flex-start, $important)
+    align-items: specificity(flex-start, $important)
+  @else if $alignment == "bottom"
+    align-content: specificity(flex-end, $important)
+    align-items: specificity(flex-end, $important)
+  @else if $alignment == "justify"
+    align-content: specificity(space-between, $important)
+    align-items: specificity(flex-start, $important)

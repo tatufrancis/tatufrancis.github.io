@@ -1,0 +1,10 @@
+// expand box direction shorthand to list of sides
+@function box-direction-list($direction)
+  @if $direction == "all"
+    @return "top", "right", "bottom", "left"
+  @else if $direction == "vert"
+    @return "top", "bottom"
+  @else if $direction == "horz"
+    @return "right", "left"
+  @else
+    @return $direction

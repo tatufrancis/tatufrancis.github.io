@@ -1,0 +1,74 @@
+// Grid class generator
+=generate-grid-classes($suffix: "")
+  // Auto-sized columns
+  .grid-auto#{$suffix},
+  .grid-flex#{$suffix}
+    +flex-column-width(auto)
+
+  // Auto-sized columns that don't wrap
+  .grid-flex#{$suffix}
+    +flex-grid(nowrap)
+
+  // Base grid classes
+  @for $i from 1 through $grid-max-columns
+    $_col-width: 100% / $i
+    .grid-#{$i}#{$suffix}
+      +flex-column-width($_col-width)
+
+  // Grid spacing classes
+  @for $i from 1 through length($spacing-names)
+    $_grid-spacing-class: "grid-space-#{nth($spacing-names, $i)}#{$suffix}"
+    $_grid-col-spacing-class: "grid-col-space-#{nth($spacing-names, $i)}#{$suffix}"
+    $_grid-row-spacing-class: "grid-row-space-#{nth($spacing-names, $i)}#{$suffix}"
+
+    // Grid column spacing modifier classes
+    .#{$_grid-spacing-class},
+    .#{$_grid-col-spacing-class}
+      +flex-column-gutter(nth($spacing-values, $i))
+
+    // Grid row spacing modifier classes
+    .#{$_grid-spacing-class},
+    .#{$_grid-row-spacing-class}
+      +flex-row-gutter(nth($spacing-values, $i))
+
+  // Grid alignment helpers
+  @each $type in $flex-alignments-x
+    .grid-align-#{$type}#{$suffix},
+    .flex-align-#{$type}#{$suffix}
+      +flex-align($type, true)
+  @each $type in $flex-alignments-y
+    .grid-valign-#{$type}#{$suffix},
+    .flex-valign-#{$type}#{$suffix}
+      +flex-valign($type, true)
+
+@if $grid-classes
+  .grid,
+  [class*="grid-"]
+    +flex-grid
+    +flex-column-width(100%)
+    +flex-column-gutter
+    +flex-row-gutter
+
+  // Reverse grid column direction
+  .grid-reverse
+    flex-direction: row-reverse
+
+  // Equal height columns (per row) with flexbox
+  .grid-row-equal-heights
+    // Enable nested flex grid on each cell container
+    > *
+      +flex-grid
+      +flex-column-width(100%)
+
+  // Prevent a grid column from shrinking
+  .no-shrink
+    flex-shrink: 0 !important
+
+  // Base grid classes
+  +generate-grid-classes
+
+  // Responsive grid classes
+  @each $breakpoint-name in $breakpoint-names
+    $suffix: "-at-#{$breakpoint-name}"
+    +at($breakpoint-name)
+      +generate-grid-classes($suffix)

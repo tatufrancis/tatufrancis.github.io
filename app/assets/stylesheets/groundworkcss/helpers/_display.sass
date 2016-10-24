@@ -1,0 +1,20 @@
+// display types can be extended with
+// flex and table display types
+$_all_display_types: $display-types
+@if $flex-display-classes
+  $_all_display_types: join($_all_display_types, $flex-display-types)
+@if $table-display-classes
+  $_all_display_types: join($_all_display_types, $table-display-types)
+
+=generate-display-classes($suffix: "")
+  @each $type in $_all_display-types
+    .display-#{$type}#{$suffix}
+      display: #{$type} !important
+
+@if $display-classes
+  +generate-display-classes
+
+  // Responsive display classes
+  @each $breakpoint-name in $breakpoint-names
+    +at($breakpoint-name)
+      +generate-display-classes("-at-#{$breakpoint-name}")

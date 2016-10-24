@@ -1,0 +1,17 @@
+@if $border-classes
+
+  // Base border helper classes
+  @each $direction in $borders
+    .border-#{$direction}
+      +border($direction: $direction)
+    .border-#{$direction}-none
+      border-#{$direction}-width: 0 !important
+
+  // Responsive border helper classes
+  @each $breakpoint-name in $breakpoint-names
+    +at($breakpoint-name)
+      @each $direction in $borders
+        .border-#{$direction}-at-#{$breakpoint-name}
+          +border($direction: $direction)
+        .border-#{$direction}-none-at-#{$breakpoint-name}
+          border-#{$direction}-width: 0 !important

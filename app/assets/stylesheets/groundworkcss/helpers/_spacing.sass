@@ -1,0 +1,25 @@
+// Spacing class generator
+=generate-spacing-classes($suffix: "")
+  @each $spacing-type in $spacing-types
+    @each $spacing-prop in $spacing-props
+      @each $spacing-name in $spacing-names
+        // Generate classname (w/ optional suffix)
+        $selector: ".#{$spacing-type}-#{$spacing-prop}-#{$spacing-name}#{$suffix}"
+        // Handle weird deviation where "" means "all"
+        @if $spacing-prop == ""
+          $selector: ".#{$spacing-type}-#{$spacing-name}#{$suffix}"
+        // Compute value, & property list
+        $value: spacing-value($spacing-name, $spacing-type)
+        $properties: spacing-property-list($spacing-prop, $spacing-type)
+        // Apply spacing styles
+        #{$selector}
+          @each $property in $properties
+            #{$property}: $value !important
+
+@if $spacing-classes
+  +generate-spacing-classes
+
+  // Responsive fraction classes
+  @each $breakpoint-name in $breakpoint-names
+    +at($breakpoint-name)
+      +generate-spacing-classes("-at-#{$breakpoint-name}")

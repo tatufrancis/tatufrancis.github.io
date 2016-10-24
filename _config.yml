@@ -1,0 +1,23 @@
+title: GroundworkCSS 3
+email: groundworkcss@gmail.com
+description: GroundworkCSS is a fully responsive HTML5, CSS and Javascript toolkit created by @ghepting
+
+baseurl: ""
+url: ""
+
+markdown: kramdown
+
+sass:
+  config: config.rb
+  sass_dir: _sass
+  load_paths:
+    - _sass
+    - app/assets/stylesheets
+
+exclude:
+  - app/*
+  - Gemfile
+  - Gemfile.lock
+  - groundwork.json
+  - package.json
+  - node_modules
